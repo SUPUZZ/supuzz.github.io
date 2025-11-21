@@ -1,27 +1,48 @@
 /* ================== THEME VARIABLES ================== */
 :root {
-    /* Colors */
-    --primary-color: #E63946;
-    --accent-color: #2A9D8F;
-    --highlight-color: #F4A261;
-    --bg-light: #FEF9F3;
-    --bg-alt: #F5F5F5;
-    --text-main: #1a1a1a;
-    --text-secondary: #666;
-    --border-color: #ddd;
+    /* M3 Color System */
+    --primary: #6750A4;
+    --on-primary: #FFFFFF;
+    --primary-container: #EADDFF;
+    --on-primary-container: #21005E;
+    
+    --secondary: #625B71;
+    --on-secondary: #FFFFFF;
+    --secondary-container: #E8DEF8;
+    --on-secondary-container: #1D192B;
+    
+    --tertiary: #7D5260;
+    --on-tertiary: #FFFFFF;
+    --tertiary-container: #FFD8E4;
+    --on-tertiary-container: #31111D;
+    
+    --error: #B3261E;
+    --on-error: #FFFFFF;
+    --error-container: #F9DEDC;
+    --on-error-container: #410E0B;
+    
+    --background: #FFFBFE;
+    --on-background: #1C1B1F;
+    --surface: #FFFBFE;
+    --on-surface: #1C1B1F;
+    --surface-variant: #E7E0EC;
+    --on-surface-variant: #49454E;
+    
+    /* Custom Colors */
     --amazon-btn: #FF9900;
+    --success: #2E7D32;
     
     /* Typography */
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
     
     /* Spacing */
-    --spacing-xs: 8px;
-    --spacing-sm: 16px;
-    --spacing-md: 24px;
-    --spacing-lg: 40px;
-    --spacing-xl: 60px;
-    --spacing-2xl: 100px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
     
     /* Breakpoints */
     --mobile: 480px;
