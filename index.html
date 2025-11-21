@@ -105,6 +105,49 @@
         .footer-col a { color: #999; display: block; margin-bottom: 10px; }
         .footer-col a:hover { color: white; }
 
+        /* Reviews Section */
+        .reviews { padding: 100px 0; background: white; }
+        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; }
+        .review-card { background: #f9f9f9; padding: 30px; border-radius: 12px; border-left: 4px solid var(--primary-color); }
+        .stars { color: #FFB800; font-size: 18px; margin-bottom: 10px; }
+        .review-text { font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 15px; }
+        .reviewer-name { font-weight: 700; color: var(--text-main); font-size: 14px; }
+        .reviewer-info { font-size: 12px; color: #999; }
+
+        /* Why Choose Us */
+        .why-us { padding: 100px 0; background: var(--bg-alt); }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 50px; }
+        .feature-box { text-align: center; }
+        .feature-icon { font-size: 48px; margin-bottom: 15px; }
+        .feature-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 10px; }
+        .feature-desc { font-size: 14px; color: #666; }
+
+        /* FAQ Section */
+        .faq { padding: 100px 0; background: white; }
+        .faq-grid { max-width: 800px; margin: 50px auto 0; }
+        .faq-item { margin-bottom: 20px; border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
+        .faq-question { padding: 20px; background: #f9f9f9; cursor: pointer; font-weight: 700; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
+        .faq-question:hover { background: #f0f0f0; }
+        .faq-question.active { background: var(--primary-color); color: white; }
+        .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: white; }
+        .faq-answer.show { max-height: 300px; padding: 20px; }
+        .faq-toggle { font-size: 20px; }
+
+        /* Comparison Table */
+        .comparison { padding: 100px 0; background: var(--bg-alt); }
+        .table-wrapper { overflow-x: auto; margin-top: 40px; }
+        .comparison-table { width: 100%; border-collapse: collapse; background: white; }
+        .comparison-table th, .comparison-table td { padding: 16px; text-align: center; border: 1px solid #eee; }
+        .comparison-table th { background: var(--text-main); color: white; font-weight: 700; }
+        .comparison-table td:first-child, .comparison-table th:first-child { text-align: left; }
+        .check-icon { color: var(--accent-color); font-weight: 700; font-size: 18px; }
+        .cross-icon { color: #ddd; font-weight: 700; }
+
+        /* CTA Section */
+        .cta-banner { padding: 80px 0; background: linear-gradient(135deg, var(--primary-color), #c92a36); color: white; text-align: center; }
+        .cta-banner h2 { font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-banner p { font-size: 1.1rem; margin-bottom: 30px; }
+
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links { display: none; } 
@@ -112,6 +155,8 @@
             .blog-grid { grid-template-columns: 1fr; }
             .amazon-content { flex-direction: column; text-align: center; gap: 30px; }
             .footer-grid { grid-template-columns: 1fr; }
+            .comparison-table { font-size: 13px; }
+            .comparison-table th, .comparison-table td { padding: 12px; }
         }
     </style>
 </head>
@@ -122,8 +167,9 @@
             <a href="index.html" class="logo">SUPUZZ<span>.</span></a>
             <nav class="nav-links">
                 <a href="#products">Garden Sets</a>
-                <a href="#blog">Parenting Blog</a>
-                <a href="#amazon-store" style="color:var(--primary-color)">Best Sellers</a>
+                <a href="#blog">Blog</a>
+                <a href="about.html">About Us</a>
+                <a href="#amazon-store" style="color:var(--primary-color)">Shop</a>
             </nav>
         </div>
     </header>
@@ -190,6 +236,228 @@
         </div>
     </section>
 
+    <!-- Why Choose SUPUZZ -->
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; color:var(--text-main)">Why Choose SUPUZZ?</h2>
+            <p class="section-desc" style="text-align:center;">Trusted by over 50,000+ families worldwide.</p>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Educational & Fun</h3>
+                    <p class="feature-desc">Develop motor skills, color recognition, and creativity through open-ended play.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">✅</div>
+                    <h3 class="feature-title">100% Safe & Non-Toxic</h3>
+                    <p class="feature-desc">BPA-free, non-toxic ABS plastic with smooth, rounded edges for little hands.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">♻️</div>
+                    <h3 class="feature-title">Eco-Friendly Packaging</h3>
+                    <p class="feature-desc">Recyclable materials and minimal plastic waste in every package.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Fast & Free Shipping</h3>
+                    <p class="feature-desc">Prime eligible on Amazon with delivery in 24 hours.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">💝</div>
+                    <h3 class="feature-title">Perfect Gift</h3>
+                    <p class="feature-desc">Beautiful gift packaging available. Perfect for birthdays and holidays.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="feature-title">Family Approved</h3>
+                    <p class="feature-desc">Rated 4.8★ by parents who love creative toys for their kids.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center;">What Parents Are Saying</h2>
+            <p class="section-desc" style="text-align:center;">Join thousands of happy families.</p>
+            
+            <div class="review-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"My 4-year-old has been playing with this for hours! It's so much better than screen time. She's learning colors and building confidence."</p>
+                    <p class="reviewer-name">Jessica M.</p>
+                    <p class="reviewer-info">Verified Amazon Customer</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"The quality is amazing. All pieces are durable and the colors are so vibrant. Great educational toy that doesn't break the bank."</p>
+                    <p class="reviewer-name">Sarah K.</p>
+                    <p class="reviewer-info">Verified Amazon Customer</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Perfect for developing fine motor skills. Occupational therapist recommended it, and we've seen real improvement in my daughter's hand strength."</p>
+                    <p class="reviewer-name">Emily T.</p>
+                    <p class="reviewer-info">Special Education Teacher</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"The best gift I gave this year! Easy to clean up, safe for toddlers, and promotes imaginative play. 10/10 would recommend."</p>
+                    <p class="reviewer-name">Michael R.</p>
+                    <p class="reviewer-info">Verified Amazon Customer</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"We bought the deluxe set and couldn't be happier. Great for playdates too - kids love building together without conflict."</p>
+                    <p class="reviewer-name">Rachel L.</p>
+                    <p class="reviewer-info">Verified Amazon Customer</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Not just a toy, it's a learning tool. My son's kindergarten teacher asked where we got it because she wants some for the classroom!"</p>
+                    <p class="reviewer-name">David H.</p>
+                    <p class="reviewer-info">Parent & Education Advocate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Comparison -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; color:var(--text-main)">Choose Your Perfect Set</h2>
+            <p class="section-desc" style="text-align:center;">Compare our products to find the right fit for your family.</p>
+            
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Starter Kit</th>
+                            <th>Best Seller<br>(Worlds)</th>
+                            <th>Deluxe Edition<br>(Ultimate)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Number of Flowers</strong></td>
+                            <td>6 Unique Designs</td>
+                            <td>12 Unique Designs</td>
+                            <td>18 Unique Designs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pieces Included</strong></td>
+                            <td>~30 Pieces</td>
+                            <td>~60 Pieces</td>
+                            <td>~120 Pieces</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Storage Box</strong></td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td><span class="check-icon">✓ Premium</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Age Group</strong></td>
+                            <td>3-5 Years</td>
+                            <td>3-7 Years</td>
+                            <td>3-8 Years</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Educational Value</strong></td>
+                            <td>Basic Colors & Motor Skills</td>
+                            <td>Colors, Patterns & Building</td>
+                            <td><span class="check-icon">Advanced STEM Learning</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Best For</strong></td>
+                            <td>Single Child / Gift</td>
+                            <td>Families / Classroom</td>
+                            <td><span class="check-icon">Serious Collectors</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Price Range</strong></td>
+                            <td>$19.99 - $24.99</td>
+                            <td>$24.99 - $29.99</td>
+                            <td>$34.99 - $39.99</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center;">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What age group is SUPUZZ suitable for?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>SUPUZZ Flower Garden Building Toys are designed for children ages 3-8 years old. The starter kit works great for toddlers (3-5), while the deluxe sets offer more complexity for older kids. Always supervise young children during play.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Are SUPUZZ toys safe for toddlers?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All SUPUZZ products are made from 100% non-toxic, BPA-free ABS plastic. Pieces are large enough to prevent choking hazards and have smooth, rounded edges. All products meet or exceed safety standards and are regularly tested.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I clean SUPUZZ toys?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Super easy! Just wipe down with a damp cloth and mild soap. All pieces can be washed and are completely waterproof. Let them air dry. Avoid dishwashers and extreme heat sources.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can pieces from different sets be mixed together?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All SUPUZZ flowers use the same connection system. You can mix and match pieces from the Starter Kit, Worlds, and Ultimate sets to create even more combinations.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What if pieces go missing or break?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Replacement piece packs are available for purchase on Amazon. Our sets are built to last, and pieces rarely break with normal use. We offer a 30-day money-back guarantee on all products.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How quickly will my order arrive?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All SUPUZZ products sold on Amazon are Prime eligible. Standard delivery is 1-2 days with Prime membership. Non-Prime orders typically arrive within 5-7 business days. Check your Amazon order for exact delivery estimates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Amazon Banner -->
     <section class="amazon-banner" id="amazon-store">
         <div class="container amazon-content">
@@ -209,7 +477,7 @@
     <section class="blog" id="blog">
         <div class="container">
             <h2 class="section-title" style="text-align:center; color:var(--text-main)">Garden of Wisdom</h2>
-            <p class="section-desc" style="text-align:center;">Expert tips on creative play, STEM education, and kid-friendly activities.</p>
+            <p class="section-desc" style="text-align:center;">Expert tips on creative play, STEM education, and kid-friendly activities written by educators and parents.</p>
 
             <div class="blog-grid">
                 <!-- Blog 1 -->
@@ -220,7 +488,7 @@
                     <div class="blog-content">
                         <span class="blog-tag">Child Development</span>
                         <h3 class="blog-title">Why Flower Sets are the Ultimate STEM Toy</h3>
-                        <p class="blog-excerpt">Discover how stacking petals boosts fine motor skills and engineering basics...</p>
+                        <p class="blog-excerpt">Discover how stacking petals boosts fine motor skills and engineering basics. Learn what child development experts say about open-ended play...</p>
                         <a href="blog-post.html?id=1" class="read-link">Read Article →</a>
                     </div>
                 </article>
@@ -233,7 +501,7 @@
                     <div class="blog-content">
                         <span class="blog-tag">Activity Ideas</span>
                         <h3 class="blog-title">Indoor Gardening: Create a Nature World</h3>
-                        <p class="blog-excerpt">Raining outside? Here is how to spark your child's love for nature safely indoors...</p>
+                        <p class="blog-excerpt">Raining outside? Here is how to spark your child's love for nature safely indoors. Transform your living room into an adventure...</p>
                         <a href="blog-post.html?id=2" class="read-link">Read Article →</a>
                     </div>
                 </article>
@@ -246,11 +514,20 @@
                     <div class="blog-content">
                         <span class="blog-tag">Gift Guide</span>
                         <h3 class="blog-title">The Best Gift for 4-Year-Old Girls?</h3>
-                        <p class="blog-excerpt">Looking for a birthday gift that isn't a screen? Here's why parents choose SUPUZZ...</p>
+                        <p class="blog-excerpt">Looking for a birthday gift that isn't a screen? Here's why parents and educators choose SUPUZZ for meaningful play...</p>
                         <a href="blog-post.html?id=3" class="read-link">Read Article →</a>
                     </div>
                 </article>
             </div>
+        </div>
+    </section>
+
+    <!-- Special CTA -->
+    <section class="cta-banner" style="padding: 60px 0; background: linear-gradient(135deg, var(--primary-color), #c92a36); color: white; text-align: center;">
+        <div class="container">
+            <h3 style="font-family: var(--font-heading); font-size: 2rem; margin-bottom: 15px;">Ready to Inspire Creativity?</h3>
+            <p style="font-size: 1rem; margin-bottom: 25px; opacity: 0.9;">Join 50,000+ families building memories and skills together.</p>
+            <a href="https://www.amazon.com/supuzz-Flower-Garden-Building-Worlds/dp/B0FHK6RHT9" target="_blank" class="btn" style="background: white; color: var(--primary-color); font-weight: 700;">Shop Best Sellers Now</a>
         </div>
     </section>
 
@@ -262,25 +539,98 @@
                     <h4>SUPUZZ.</h4>
                     <a href="#">About Us</a>
                     <a href="#">Contact</a>
+                    <a href="#">Careers</a>
                 </div>
                 <div class="footer-col">
                     <h4>Products</h4>
-                    <a href="#">Garden Sets</a>
+                    <a href="#products">Garden Sets</a>
                     <a href="#">New Arrivals</a>
+                    <a href="#">Bundles</a>
                 </div>
                 <div class="footer-col">
                     <h4>Support</h4>
-                    <a href="#">Shipping</a>
-                    <a href="#">Returns</a>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns & Refunds</a>
+                    <a href="#">Warranty</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Social</h4>
+                    <h4>Connect</h4>
                     <a href="#">Instagram</a>
                     <a href="#">Facebook</a>
+                    <a href="#">TikTok</a>
                 </div>
             </div>
-            <div style="text-align: center; color: #666;">&copy; 2023 SUPUZZ Toys. All rights reserved.</div>
+            <div style="text-align: center; color: #666; border-top: 1px solid #333; padding-top: 20px;">&copy; 2025 SUPUZZ Toys. All rights reserved. | Privacy Policy | Terms of Service</div>
         </div>
     </footer>
-</body>
-</html>
+
+    <script>
+        // FAQ Toggle Functionality
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            // Close all other FAQs
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('show');
+                }
+            });
+            document.querySelectorAll('.faq-question').forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-toggle').textContent = '+';
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('show');
+            element.classList.toggle('active');
+            toggle.textContent = answer.classList.contains('show') ? '−' : '+';
+        }
+
+        // Smooth Scroll to Sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for elements
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card, .blog-card, .review-card, .feature-box').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about SUPUZZ - We create innovative flower garden building toys that inspire creativity and STEM learning in children worldwide.">
+    <meta name="keywords" content="about SUPUZZ, STEM toys company, educational toys manufacturer">
+    <title>About SUPUZZ | Our Story & Mission</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #E63946;
+            --accent-color: #2A9D8F;
+            --text-main: #1D3557;
+            --text-body: #457B9D;
+            --bg-alt: #FFF9F5;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --container-width: 1240px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--text-body); line-height: 1.6; padding-top: 80px; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        img { max-width: 100%; display: block; }
+        
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header { position: fixed; top: 0; width: 100%; height: 80px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; display: flex; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { font-family: var(--font-heading); font-size: 28px; font-weight: 900; color: var(--text-main); }
+        .logo span { color: var(--primary-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-weight: 700; font-size: 14px; text-transform: uppercase; color: var(--text-main); }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        .hero-section { height: 60vh; background: linear-gradient(135deg, var(--primary-color), #c92a36); color: white; display: flex; align-items: center; text-align: center; }
+        .hero-section h1 { font-size: 3.5rem; font-weight: 900; margin-bottom: 20px; font-family: var(--font-heading); }
+        .hero-section p { font-size: 1.2rem; opacity: 0.9; }
+
+        /* Content Sections */
+        .content-section { padding: 100px 0; }
+        .section-title { font-family: var(--font-heading); font-size: 2.5rem; color: var(--text-main); margin-bottom: 30px; font-weight: 800; }
+        .section-subtitle { font-size: 1.1rem; color: #666; margin-bottom: 40px; }
+
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px; }
+        .about-content.reverse { grid-template-columns: 1fr 1fr; direction: rtl; }
+        .about-content.reverse > * { direction: ltr; }
+        .about-text h3 { font-size: 1.8rem; color: var(--text-main); margin-bottom: 20px; font-weight: 700; }
+        .about-text p { margin-bottom: 15px; line-height: 1.8; }
+        .about-image img { border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+
+        /* Timeline */
+        .timeline { position: relative; padding: 50px 0; }
+        .timeline-item { margin-bottom: 50px; padding-left: 100px; position: relative; }
+        .timeline-item::before { content: ''; position: absolute; left: 20px; top: 0; bottom: -50px; width: 2px; background: var(--accent-color); }
+        .timeline-item::after { content: ''; position: absolute; left: 10px; top: 10px; width: 20px; height: 20px; background: var(--primary-color); border: 4px solid white; border-radius: 50%; box-shadow: 0 0 0 2px var(--primary-color); }
+        .timeline-year { font-size: 20px; font-weight: 900; color: var(--primary-color); font-family: var(--font-heading); }
+        .timeline-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin: 5px 0; }
+        .timeline-desc { color: #666; font-size: 14px; }
+
+        /* Team Section */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
+        .team-member { text-align: center; }
+        .team-member img { width: 200px; height: 200px; object-fit: cover; border-radius: 12px; margin: 0 auto 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .team-member h4 { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 5px; }
+        .team-member .role { color: var(--primary-color); font-weight: 700; font-size: 13px; margin-bottom: 10px; text-transform: uppercase; }
+        .team-member p { font-size: 14px; color: #666; }
+
+        /* Values Section */
+        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 50px; }
+        .value-box { padding: 40px 30px; background: var(--bg-alt); border-radius: 12px; text-align: center; }
+        .value-icon { font-size: 48px; margin-bottom: 15px; }
+        .value-box h4 { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 15px; }
+        .value-box p { color: #666; font-size: 14px; }
+
+        /* CTA Section */
+        .cta-section { padding: 80px 0; background: linear-gradient(135deg, var(--primary-color), #c92a36); color: white; text-align: center; }
+        .cta-section h2 { font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); }
+        .cta-section p { font-size: 1.1rem; margin-bottom: 30px; }
+        .btn { display: inline-block; padding: 12px 32px; font-weight: 700; border-radius: 50px; text-transform: uppercase; cursor: pointer; border: none; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; }
+        .btn-white { background: white; color: var(--primary-color); }
+        .btn-white:hover { background: #f0f0f0; transform: translateY(-2px); }
+
+        /* Footer */
+        footer { background: #111; color: white; padding: 60px 0 30px; font-size: 14px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; border-bottom: 1px solid #333; padding-bottom: 40px; margin-bottom: 20px; }
+        .footer-col h4 { color: white; margin-bottom: 20px; }
+        .footer-col a { color: #999; display: block; margin-bottom: 10px; }
+        .footer-col a:hover { color: white; }
+
+        @media (max-width: 768px) {
+            .hero-section h1 { font-size: 2.5rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .about-content.reverse { grid-template-columns: 1fr; }
+            .team-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">SUPUZZ<span>.</span></a>
+            <nav class="nav-links">
+                <a href="index.html#products">Products</a>
+                <a href="index.html#blog">Blog</a>
+                <a href="about.html" style="color:var(--primary-color)">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Making imagination bloom, one flower at a time.</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="content-section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-subtitle">At SUPUZZ, we believe that play is the foundation of learning.</p>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Inspiring Creativity Through Play</h3>
+                    <p>We created SUPUZZ because we saw a gap in the market for toys that are both educational and genuinely fun. Most educational toys felt like chores to kids. Our flower garden building sets changed that.</p>
+                    <p>Every piece, every color, every connection point has been carefully designed to spark imagination while quietly building essential skills like fine motor coordination, color recognition, and problem-solving.</p>
+                    <p>We're not just selling toys. We're creating moments where a child's eyes light up as they build something they imagined. That's the SUPUZZ difference.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&w=600&q=80" alt="Children Playing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="content-section" style="background: var(--bg-alt);">
+        <div class="container">
+            <h2 class="section-title">Our Journey</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-title">The Beginning</div>
+                    <div class="timeline-desc">A group of educators and parents came together with a shared vision: to create toys that inspire rather than occupy.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-title">First Prototype</div>
+                    <div class="timeline-desc">After months of research and testing with hundreds of children, we launched our first flower garden set with vibrant colors and intuitive design.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-title">Amazon Launch</div>
+                    <div class="timeline-desc">SUPUZZ flower gardens debuted on Amazon, quickly becoming a best-seller with overwhelmingly positive reviews from parents worldwide.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-title">Award Recognition</div>
+                    <div class="timeline-desc">Recognized as one of the top STEM toys for preschoolers by leading parenting and education publications.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-title">Global Expansion</div>
+                    <div class="timeline-desc">Reached over 50,000 families across multiple countries. Launched new deluxe collections and educational partnerships.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-title">Classroom Integration</div>
+                    <div class="timeline-desc">Featured in schools and daycare centers as official curriculum support for STEM and fine motor skill development.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="content-section" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            
+            <div class="values-grid">
+                <div class="value-box">
+                    <div class="value-icon">🎨</div>
+                    <h4>Creativity First</h4>
+                    <p>We design toys that have no "right answer," only endless possibilities for imagination and self-expression.</p>
+                </div>
+
+                <div class="value-box">
+                    <div class="value-icon">✅</div>
+                    <h4>Safety & Quality</h4>
+                    <p>Every SUPUZZ product undergoes rigorous testing and meets international safety standards. Your child's safety is our priority.</p>
+                </div>
+
+                <div class="value-box">
+                    <div class="value-icon">🌍</div>
+                    <h4>Environmental Care</h4>
+                    <p>We use sustainable materials and eco-friendly packaging. Building better toys for kids and a better planet for their future.</p>
+                </div>
+
+                <div class="value-box">
+                    <div class="value-icon">👨‍👩‍👧‍👦</div>
+                    <h4>Family Centered</h4>
+                    <p>We listen to parents and educators. Every product improvement comes from real feedback from the families who use SUPUZZ.</p>
+                </div>
+
+                <div class="value-box">
+                    <div class="value-icon">📚</div>
+                    <h4>Lifelong Learning</h4>
+                    <p>We believe play is learning. Our toys are designed to make children curious about the world around them.</p>
+                </div>
+
+                <div class="value-box">
+                    <div class="value-icon">💖</div>
+                    <h4>Passionate People</h4>
+                    <p>Our team truly loves what we do. We're parents, educators, and designers who care about making a difference.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="content-section" style="background: var(--bg-alt);">
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p class="section-subtitle">Passionate professionals dedicated to inspiring young minds.</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&w=300&q=80" alt="Team Member">
+                    <h4>Jennifer Parker</h4>
+                    <div class="role">Founder & CEO</div>
+                    <p>Early childhood education expert with 15+ years in STEM toy development.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&w=300&q=80" alt="Team Member">
+                    <h4>Marcus Chen</h4>
+                    <div class="role">Lead Designer</div>
+                    <p>Industrial designer passionate about creating intuitive, beautiful products for kids.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&w=300&q=80" alt="Team Member">
+                    <h4>Dr. Sarah Williams</h4>
+                    <div class="role">Child Development Consultant</div>
+                    <p>Child psychologist specializing in developmental play and motor skill acquisition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Building?</h2>
+            <p>Join thousands of families who've discovered the magic of SUPUZZ.</p>
+            <a href="index.html#products" class="btn btn-white">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SUPUZZ.</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Press</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <a href="index.html#products">Garden Sets</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Bundles</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="#">Shipping Info</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Warranty</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+            <div style="text-align: center; color: #666; border-top: 1px solid #333; padding-top: 20px;">&copy; 2025 SUPUZZ Toys. All rights reserved. | Privacy Policy | Terms of Service</div>
+        </div>
+    </footer>
+</body>
+</html>
