@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import ProductsGrid from './components/ProductsGrid'
+import Reviews from './components/Reviews'
+import Footer from './components/Footer'
+import './index.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App(){
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <main>
+        <Hero />
+        <section className="trust-section container">
+          <div className="trust-item">
+            <div className="trust-number">50k+</div>
+            <div className="trust-label">Families</div>
+          </div>
+          <div className="trust-item">
+            <div className="trust-number">4.8</div>
+            <div className="trust-label">Average Rating</div>
+          </div>
+          <div className="trust-item">
+            <div className="trust-number">10+</div>
+            <div className="trust-label">Years of Experience</div>
+          </div>
+        </section>
+        <ProductsGrid />
+        <Reviews />
+        <div className="container">
+          <section className="cta-section">
+            <h3 className="cta-title">Ready to give your child a better play experience?</h3>
+            <p className="cta-description">High-quality toys and furniture designed for learning and safety.</p>
+            <a className="cta-button" href="https://www.amazon.com/stores/Supuzz/page/F8F78FC5-0171-41C7-93DF-ABE20C958710" target="_blank" rel="noreferrer">Shop on Amazon</a>
+          </section>
+        </div>
+      </main>
+      <Footer />
     </>
   )
 }
-
-export default App
