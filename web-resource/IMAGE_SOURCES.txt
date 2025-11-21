@@ -1,0 +1,59 @@
+Image Sources & Attribution
+=============================
+
+1. Product Images (Original Amazon Product Images)
+   - toddler-chair.jpg
+     Source: Amazon Product Listing (ASIN: B0CT9R3PRQ)
+     Usage: Product showcase on official SUPUZZ website
+     License: Used with permission from product publisher
+   
+   - coral-reef.png
+     Source: Amazon Product Listing (ASIN: B0FHK5NP9T)
+     Usage: Product showcase on official SUPUZZ website
+     License: Used with permission from product publisher
+   
+   - forest-set.png
+     Source: Amazon Product Listing (Related SUPUZZ STEM toys)
+     Usage: Product showcase on official SUPUZZ website
+     License: Used with permission from product publisher
+
+2. Blog Article Featured Images (Unsplash - Free License)
+   - STEM Learning: photo-1503454537195-1dcabb73ffb9
+     Source: Unsplash (Credit: Photo ID: 503454537195)
+     License: Unsplash License (Free for commercial use)
+   
+   - Indoor Activities: photo-1470240731273-7821a6eeb6bd
+     Source: Unsplash
+     License: Unsplash License (Free for commercial use)
+   
+   - Gift Guide: photo-1513201099705-a9746e1e201f
+     Source: Unsplash
+     License: Unsplash License (Free for commercial use)
+   
+   - Ergonomics: photo-1516321318423-f06f70e504e3
+     Source: Unsplash
+     License: Unsplash License (Free for commercial use)
+   
+   - Motor Skills: photo-1507842217343-583f7270bfba
+     Source: Unsplash
+     License: Unsplash License (Free for commercial use)
+   
+   - Parenting: photo-1556691616-b6bafb2f6cdc
+     Source: Unsplash
+     License: Unsplash License (Free for commercial use)
+   
+   - Montessori: photo-1503318628374-b5382dbdeb8f
+     Source: Unsplash
+     License: Unsplash License (Free for commercial use)
+   
+   - Classroom: photo-1488366869515-9eaf95e37927
+     Source: Unsplash
+     License: Unsplash License (Free for commercial use)
+
+3. Hero Background Image
+   - photo-1502086223501-7ea6ecd79368
+     Source: Unsplash
+     License: Unsplash License (Free for commercial use)
+     Usage: Hero section background gradient overlay
+
+All images are used in compliance with their respective licenses and are optimized for web use.
