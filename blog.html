@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SUPUZZ Blog - Expert articles on STEM education, fine motor skill development, toddler learning activities, educational toys for kids ages 1-8, cognitive development, and child development tips.">
+    <meta name="keywords" content="STEM education, fine motor skills, toddler learning, toys for children, cognitive development, educational play, montessori toys, building toys, child development, preschool activities, learning toys">
+    <title>SUPUZZ Blog | STEM Education & Child Development Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Copied core styles from index.html for consistent look */
+        :root {
+            --primary-color: #E63946;
+            --accent-color: #2A9D8F;
+            --highlight-color: #F4A261;
+            --bg-alt: #FFF9F5;
+            --text-main: #1D3557;
+            --text-body: #457B9D;
+            --amazon-btn: #FEBD69;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --container-width: 1240px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--text-body); line-height: 1.6; padding-top: 80px; overflow-x: hidden; background: var(--bg-alt); }
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 24px; }
+        .section-title { font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px; font-weight: 800; }
+        .section-desc { font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto 50px; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .blog-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; border-bottom: 4px solid var(--accent-color); }
+        .blog-thumb { height: 220px; overflow: hidden; }
+        .blog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .blog-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-tag { color: var(--primary-color); font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .blog-title { font-size: 18px; margin-bottom: 10px; line-height: 1.4; font-weight: 700; color: var(--text-main); font-family: var(--font-heading); }
+        .blog-excerpt { font-size: 14px; color: #666; margin-bottom: 20px; flex-grow: 1; }
+        .read-link { color: var(--text-main); font-weight: 700; text-transform: uppercase; font-size: 12px; display: flex; align-items: center; gap: 5px; }
+        footer { background: #111; color: white; padding: 60px 0 30px; font-size: 14px; }
+        @media (max-width: 768px) { body { padding-top: 120px; } }
+    </style>
+</head>
+<body>
+    <div id="site-header"></div>
+
+    <main class="container">
+        <h2 class="section-title" style="text-align:center; color:var(--text-main)">Learn & Explore: Child Development Resources</h2>
+        <p class="section-desc" style="text-align:center;">Expert articles on STEM education, fine motor skill development, toddler learning activities, and cognitive development tips. Discover toys for 2-3 year olds, 5+ year olds, and preschoolers.</p>
+
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-thumb"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&w=600&q=80" alt="Girl Playing"></div>
+                <div class="blog-content">
+                    <span class="blog-tag">STEM Education</span>
+                    <h3 class="blog-title">Why Building Toys are Ultimate STEM Learning Tools</h3>
+                    <p class="blog-excerpt">Fine motor skill development through open-ended play. How STEM toys for 3 year olds boost cognitive abilities and problem-solving...</p>
+                    <a href="/blog-post.html?id=1" class="read-link">Read Article →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-thumb"><img src="https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?ixlib=rb-4.0.3&w=600&q=80" alt="Garden"></div>
+                <div class="blog-content">
+                    <span class="blog-tag">Indoor Play Ideas</span>
+                    <h3 class="blog-title">Indoor STEM Activities for Toddlers (Ages 1-8)</h3>
+                    <p class="blog-excerpt">Creative indoor play activities that develop fine motor skills. How building toys and toddler chairs create perfect learning spaces...</p>
+                    <a href="/blog-post.html?id=2" class="read-link">Read Article →</a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-thumb"><img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-4.0.3&w=600&q=80" alt="Gift"></div>
+                <div class="blog-content">
+                    <span class="blog-tag">Gift Guide</span>
+                    <h3 class="blog-title">Best Educational Toys for 3-5 Year Olds & Preschoolers</h3>
+                    <p class="blog-excerpt">Best gift guide for toddlers and preschoolers. STEM toys vs traditional toys. Why coral reef building sets and toddler chairs support child development...</p>
+                    <a href="/blog-post.html?id=3" class="read-link">Read Article →</a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script>
+        // load header & footer partials
+        function loadPartial(path, id) {
+            fetch(path).then(r => r.text()).then(html => { document.getElementById(id).innerHTML = html; }).catch(()=>{});
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+            loadPartial('/includes/header.html', 'site-header');
+            loadPartial('/includes/footer.html', 'site-footer');
+        });
+    </script>
+</body>
+</html>

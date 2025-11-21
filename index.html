@@ -161,18 +161,16 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">SUPUZZ<span>.</span></a>
-            <nav class="nav-links">
-                <a href="#products">Garden Sets</a>
-                <a href="#blog">Blog</a>
-                <a href="about.html">About Us</a>
-                <a href="#amazon-store" style="color:var(--primary-color)">Shop</a>
-            </nav>
-        </div>
-    </header>
+    <div id="site-header"></div>
+    <script>
+        function loadPartial(path, id){
+            fetch(path).then(r=>r.text()).then(html=>{ document.getElementById(id).innerHTML = html; }).catch(()=>{});
+        }
+        document.addEventListener('DOMContentLoaded', function(){
+            loadPartial('/includes/header.html', 'site-header');
+            loadPartial('/includes/footer.html', 'site-footer');
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -341,38 +339,7 @@
 
 
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>SUPUZZ.</h4>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Careers</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Products</h4>
-                    <a href="#products">Garden Sets</a>
-                    <a href="#">New Arrivals</a>
-                    <a href="#">Bundles</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Support</h4>
-                    <a href="#">Shipping Info</a>
-                    <a href="#">Returns & Refunds</a>
-                    <a href="#">Warranty</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">TikTok</a>
-                </div>
-            </div>
-            <div style="text-align: center; color: #666; border-top: 1px solid #333; padding-top: 20px;">&copy; 2025 SUPUZZ Toys. All rights reserved. | Privacy Policy | Terms of Service</div>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
 
     <script>
         // FAQ Toggle Functionality

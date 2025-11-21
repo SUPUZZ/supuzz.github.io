@@ -102,14 +102,11 @@
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">SUPUZZ<span>.</span></a>
-        <nav style="display: flex; gap: 30px;">
-            <a href="index.html" class="back-link">Home</a>
-            <a href="index.html#blog" class="back-link">All Articles</a>
-            <a href="about.html" class="back-link">About</a>
-        </nav>
-    </header>
+    <div id="site-header"></div>
+    <script>
+        function loadPartial(path, id){ fetch(path).then(r=>r.text()).then(html=>{ document.getElementById(id).innerHTML = html; }).catch(()=>{}); }
+        document.addEventListener('DOMContentLoaded', function(){ loadPartial('/includes/header.html','site-header'); loadPartial('/includes/footer.html','site-footer'); });
+    </script>
 
     <div class="article-container">
         <!-- Main Article Content -->
@@ -146,9 +143,7 @@
         </aside>
     </div>
 
-    <footer>
-        <p>&copy; 2023 SUPUZZ Toys. All rights reserved.</p>
-    </footer>
+    <div id="site-footer"></div>
 
     <!-- Javascript: Article Content Database -->
     <script>
