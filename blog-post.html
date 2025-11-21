@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPUZZ Blog | Creative Play Insights</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #E63946;
+            --accent-color: #2A9D8F;
+            --text-main: #1D3557;
+            --text-body: #333;
+            --bg-light: #F8F9FA;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Open Sans', sans-serif; color: var(--text-body); line-height: 1.8; background: #fff; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        img { max-width: 100%; display: block; border-radius: 8px; }
+
+        /* Header */
+        header { padding: 20px 40px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 24px; color: var(--text-main); }
+        .logo span { color: var(--primary-color); }
+        .back-link { font-weight: 700; font-size: 14px; text-transform: uppercase; display: flex; align-items: center; gap: 5px; color: #666; }
+        .back-link:hover { color: var(--primary-color); }
+
+        /* Article Layout */
+        .article-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Left Content, Right Sidebar */
+            gap: 60px;
+        }
+
+        /* Main Content Styling */
+        .article-header { margin-bottom: 40px; }
+        .category-badge { background: var(--accent-color); color: white; padding: 4px 12px; font-size: 12px; font-weight: 700; text-transform: uppercase; border-radius: 4px; display: inline-block; margin-bottom: 15px; }
+        h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; line-height: 1.2; color: var(--text-main); margin-bottom: 20px; font-weight: 900; }
+        .meta { font-size: 14px; color: #777; display: flex; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        
+        .article-body { font-size: 1.1rem; color: #444; }
+        .article-body p { margin-bottom: 25px; }
+        .article-body h2 { font-family: 'Montserrat', sans-serif; font-size: 1.8rem; color: var(--text-main); margin: 40px 0 20px; font-weight: 700; }
+        .article-body ul { margin-bottom: 25px; padding-left: 20px; }
+        .article-body li { margin-bottom: 10px; }
+        
+        /* Designed Elements */
+        .highlight-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--primary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 10px 30px;
+            margin: 40px 0;
+            background: var(--bg-light);
+        }
+
+        .inline-image { margin: 40px 0; }
+        .image-caption { font-size: 13px; color: #888; text-align: center; margin-top: 10px; font-style: italic; }
+
+        /* In-Article Product Ad */
+        .product-callout {
+            background: #FFF9F5;
+            border: 2px dashed var(--accent-color);
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .product-callout h4 { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; margin-bottom: 10px; color: var(--text-main); font-weight: 700; }
+        .shop-btn {
+            background: #FEBD69; color: #111; padding: 10px 25px; font-weight: 700;
+            display: inline-block; margin-top: 10px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .shop-btn:hover { background: #f3a847; }
+
+        /* Sidebar Styling */
+        .sidebar-widget { margin-bottom: 50px; }
+        .widget-title { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 700; text-transform: uppercase; border-bottom: 2px solid var(--text-main); padding-bottom: 10px; margin-bottom: 20px; letter-spacing: 1px; }
+        
+        .author-box { display: flex; align-items: center; gap: 15px; }
+        .author-img { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+
+        /* Footer */
+        footer { background: #111; color: white; text-align: center; padding: 40px; margin-top: 60px; font-size: 14px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .article-container { grid-template-columns: 1fr; }
+            h1 { font-size: 2rem; }
+            .sidebar { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">SUPUZZ<span>.</span></a>
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </header>
+
+    <div class="article-container">
+        <!-- Main Article Content -->
+        <main>
+            <div id="article-content-wrapper">
+                <!-- Content Injected via JS -->
+                <p>Loading article...</p>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Author Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">About SUPUZZ</h3>
+                <div class="author-box">
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c940483706?ixlib=rb-4.0.3&w=100&q=80" alt="Team" class="author-img">
+                    <div>
+                        <p style="font-size:13px; line-height:1.4;"><strong>SUPUZZ Design Team</strong><br>Creating toys that blend nature, education, and endless fun.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Product Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Featured Item</h3>
+                <a href="https://www.amazon.com/supuzz-Flower-Garden-Building-Worlds/dp/B0FHK6RHT9" target="_blank">
+                    <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?ixlib=rb-4.0.3&w=400&q=80" alt="Garden Set">
+                </a>
+                <h4 style="margin-top:15px; font-size:16px; font-weight:700;">Flower Garden World</h4>
+                <p style="font-size:13px; color:#666; margin-bottom:10px;">Best seller for ages 3-7.</p>
+                <a href="https://www.amazon.com/supuzz-Flower-Garden-Building-Worlds/dp/B0FHK6RHT9" target="_blank" style="color:var(--primary-color); font-weight:700; font-size:13px;">Shop Now on Amazon &rarr;</a>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 SUPUZZ Toys. All rights reserved.</p>
+    </footer>
+
+    <!-- Javascript: Article Content Database -->
+    <script>
+        const articles = {
+            "1": {
+                category: "STEM Education",
+                title: "Why Flower Building Sets are the Ultimate STEM Toy for Preschoolers",
+                date: "October 24, 2023",
+                author: "Sarah Mitchell, Child Educator",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&w=1200&q=80" style="width:100%; margin-bottom:30px;">
+                    
+                    <div class="article-body">
+                        <p>When we think of STEM (Science, Technology, Engineering, Math), we often picture complex robots or computer code. But for a 3 or 4-year-old, the foundation of engineering starts with something much simpler: <strong>understanding how things fit together.</strong></p>
+                        
+                        <p>SUPUZZ Flower Garden Building Toys are deceptively simple. To a child, they are making a pretty garden. To an educator, they are learning structural integrity.</p>
+
+                        <blockquote class="highlight-quote">
+                            "Play is the highest form of research." – Albert Einstein
+                        </blockquote>
+
+                        <h2>1. Fine Motor Skills & The Pincer Grasp</h2>
+                        <p>The act of stacking stems, inserting leaves, and carefully placing petals requires precise hand-eye coordination. This strengthens the "pincer grasp" muscles in the fingers, which are essential for holding a pencil later in school.</p>
+
+                        <div class="inline-image">
+                            <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&w=1000&q=80" alt="Child playing">
+                            <div class="image-caption">Children learn balance and structure while creating colorful arrangements.</div>
+                        </div>
+
+                        <h2>2. Understanding Balance</h2>
+                        <p>Kids learn quickly through trial and error. If a flower stem is too tall without enough leaves to support it, it might tip over. If they put too many large petals on one side, it leans.</p>
+                        
+                        <div class="product-callout">
+                            <h4>Start their STEM journey</h4>
+                            <p>Get the Starter Flower Garden Set today.</p>
+                            <a href="https://www.amazon.com/dp/B0CT9R3PRQ" class="shop-btn" target="_blank">View on Amazon</a>
+                        </div>
+
+                        <h2>3. Color Recognition & Patterning</h2>
+                        <p>With vibrant lilies, petunias, and daisies, parents can turn playtime into a lesson. Try asking your child to create a pattern: "Red flower, Blue flower, Red flower... what comes next?"</p>
+                    </div>
+                `
+            },
+            "2": {
+                category: "Indoor Activities",
+                title: "Indoor Gardening: How to Create a Nature World (No Mess!)",
+                date: "November 05, 2023",
+                author: "Emily Chen, Super Mom",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?ixlib=rb-4.0.3&w=1200&q=80" style="width:100%; margin-bottom:30px;">
+                    
+                    <div class="article-body">
+                        <p>Winter is coming, or maybe it's just a rainy Saturday. How do you keep high-energy toddlers entertained indoors without resorting to hours of TV? The answer is a <strong>pretend garden party</strong>.</p>
+
+                        <h2>The "Botany" Lesson</h2>
+                        <p>Use your SUPUZZ Garden Set to teach parts of a plant. Even at age 3, children love learning "grown-up" words. Ask your child to identify the:</p>
+                        <ul>
+                            <li><strong>Stamen</strong> (The center part)</li>
+                            <li><strong>Pistil</strong></li>
+                            <li><strong>Petal</strong></li>
+                            <li><strong>Stem</strong></li>
+                        </ul>
+
+                        <blockquote class="highlight-quote">
+                            "Transform a rainy afternoon into a biology lesson that feels like magic."
+                        </blockquote>
+
+                        <h2>Sensory Bin Integration</h2>
+                        <p>Did you know SUPUZZ flower parts are washable and made of durable ABS plastic? You can use them in kinetic sand, rice bins, or even water tables.</p>
+                        
+                        <div class="product-callout">
+                            <h4>Build a bigger world</h4>
+                            <p>The Deluxe Set includes a storage box for easy cleanup.</p>
+                            <a href="https://www.amazon.com/supuzz-Flower-Garden-Building-Worlds/dp/B0F5PPWYML" class="shop-btn" target="_blank">Check Price on Amazon</a>
+                        </div>
+
+                        <p>"Plant" the plastic stems into the kinetic sand to create a sturdy garden that stands up on its own. It adds a tactile dimension to the visual fun of the colorful flowers.</p>
+                    </div>
+                `
+            },
+            "3": {
+                category: "Gift Guide",
+                title: "The Best Gift for 4-Year-Old Girls? Why Parents Choose SUPUZZ",
+                date: "November 12, 2023",
+                author: "SUPUZZ Editorial",
+                content: `
+                    <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-4.0.3&w=1200&q=80" style="width:100%; margin-bottom:30px;">
+                    
+                    <div class="article-body">
+                        <p>Choosing a birthday or holiday gift for a preschooler can be tough. You want something educational, but they just want something fun. The <strong>SUPUZZ Flower Garden Building World</strong> hits the sweet spot.</p>
+
+                        <h2>Why it Wins "Gift of the Year"</h2>
+                        <p>Unlike a puzzle that has only one solution, this set can be built in a million different ways. It's what experts call "Open-Ended Play."</p>
+
+                        <div class="inline-image">
+                            <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-4.0.3&w=1000&q=80" alt="Gift Box">
+                        </div>
+
+                        <h2>Parent-Approved Features</h2>
+                        <ul>
+                            <li><strong>Easy Clean Up:</strong> Our sets come with a storage box, making it easy to sweep everything away before dinner.</li>
+                            <li><strong>Safety First:</strong> Made from non-toxic, odorless ABS plastic. Smooth edges mean no cuts for little hands.</li>
+                            <li><strong>Social Play:</strong> It's great for siblings to play together without fighting, as there are plenty of pieces to go around.</li>
+                        </ul>
+
+                         <div class="product-callout">
+                            <h4>Ready to surprise her?</h4>
+                            <p>Shop the SUPUZZ collection directly on Amazon.</p>
+                            <a href="https://www.amazon.com/supuzz-Flower-Garden-Building-Worlds/dp/B0FHK6RHT9" class="shop-btn" target="_blank">Shop Now</a>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function loadArticle() {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id') || "1"; 
+            
+            const article = articles[id];
+            const container = document.getElementById('article-content-wrapper');
+
+            if (article) {
+                const html = `
+                    <div class="article-header">
+                        <span class="category-badge">${article.category}</span>
+                        <h1>${article.title}</h1>
+                        <div class="meta">
+                            <span>By ${article.author}</span>
+                            <span>•</span>
+                            <span>${article.date}</span>
+                        </div>
+                    </div>
+                    ${article.content}
+                `;
+                container.innerHTML = html;
+                document.title = article.title + " | SUPUZZ Blog";
+            } else {
+                container.innerHTML = "<h1>Article not found</h1><p>Please return to the <a href='index.html'>homepage</a>.</p>";
+            }
+        }
+
+        window.onload = loadArticle;
+    </script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SUPUZZ Flower Garden Building Toys - The best creative STEM gift for girls ages 3-7. Build your own garden, learn colors, and develop fine motor skills.">
+    <meta name="keywords" content="flower building toy, garden building set, STEM toys for girls, educational toys for toddlers, SUPUZZ">
+    <title>SUPUZZ | Creative Flower Garden Building Toys</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ================= THEME CONFIGURATION ================= */
+        :root {
+            --primary-color: #E63946;      /* Vivid Red */
+            --accent-color: #2A9D8F;       /* Natural Green */
+            --highlight-color: #F4A261;    /* Warm Orange */
+            --bg-alt: #FFF9F5;             /* Light Warm Background */
+            --text-main: #1D3557;          /* Dark Navy */
+            --text-body: #457B9D;          /* Soft Blue-Grey */
+            --amazon-btn: #FEBD69;         /* Amazon Yellow */
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Open Sans', sans-serif;
+            --container-width: 1240px;
+        }
+
+        /* ================= GLOBAL STYLES ================= */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-body); color: var(--text-body); line-height: 1.6; padding-top: 80px; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        img { max-width: 100%; display: block; }
+        
+        .container { max-width: var(--container-width); margin: 0 auto; padding: 0 24px; }
+        
+        .btn { display: inline-block; padding: 12px 32px; font-weight: 700; border-radius: 50px; text-transform: uppercase; cursor: pointer; border: none; font-size: 14px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s; }
+        .btn-primary { background: var(--primary-color); color: white; }
+        .btn-primary:hover { background: #c92a36; transform: translateY(-2px); box-shadow: 0 6px 12px rgba(230, 57, 70, 0.3); }
+
+        /* Header */
+        header { position: fixed; top: 0; width: 100%; height: 80px; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 1000; display: flex; align-items: center; box-shadow: 0 2px 15px rgba(0,0,0,0.05); }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo { font-family: var(--font-heading); font-size: 28px; font-weight: 900; color: var(--text-main); }
+        .logo span { color: var(--primary-color); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-weight: 700; font-size: 14px; text-transform: uppercase; color: var(--text-main); }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* Hero */
+        .hero { height: 88vh; background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3)), url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center; display: flex; align-items: center; position: relative; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.4) 100%); }
+        .hero-content { position: relative; z-index: 2; max-width: 600px; }
+        .hero h1 { font-size: 4rem; color: var(--text-main); font-weight: 900; line-height: 1.1; margin-bottom: 20px; font-family: var(--font-heading); }
+        .hero h1 span { color: var(--primary-color); }
+        .hero p { font-size: 1.3rem; margin-bottom: 35px; font-weight: 600; color: var(--text-body); }
+
+        /* Products */
+        .products { padding: 100px 0; background: white; text-align: center; }
+        .section-title { font-family: var(--font-heading); font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px; font-weight: 800; }
+        .section-desc { font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto 50px; }
+        
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .product-card { border: 1px solid #eee; border-radius: 16px; overflow: hidden; transition: 0.3s; background: white; }
+        .product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .p-img { height: 320px; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .p-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .product-card:hover .p-img img { transform: scale(1.08); }
+        
+        .p-info { padding: 25px; text-align: center; }
+        .p-cat { font-size: 12px; color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 5px; }
+        .p-title { font-size: 20px; margin-bottom: 15px; color: var(--text-main); font-weight: 700; }
+        
+        .btn-buy { width: 100%; background-color: var(--amazon-btn); color: #111; font-weight: 700; padding: 12px; border-radius: 8px; display: flex; justify-content: center; align-items: center; gap: 8px; transition: 0.2s; }
+        .btn-buy:hover { background-color: #f3a847; }
+
+        /* Blog Section */
+        .blog { padding: 100px 0; background: var(--bg-alt); }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .blog-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s; display: flex; flex-direction: column; border-bottom: 4px solid var(--accent-color); }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .blog-thumb { height: 220px; overflow: hidden; }
+        .blog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .blog-card:hover .blog-thumb img { transform: scale(1.1); }
+        .blog-content { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .blog-tag { color: var(--primary-color); font-weight: 800; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .blog-title { font-size: 18px; margin-bottom: 10px; line-height: 1.4; font-weight: 700; color: var(--text-main); font-family: var(--font-heading); }
+        .blog-excerpt { font-size: 14px; color: #666; margin-bottom: 20px; flex-grow: 1; }
+        .read-link { color: var(--text-main); font-weight: 700; text-transform: uppercase; font-size: 12px; display: flex; align-items: center; gap: 5px; }
+        .read-link:hover { color: var(--primary-color); }
+
+        /* Amazon Trust Banner */
+        .amazon-banner { background-color: #232F3E; color: white; padding: 60px 0; margin-top: 0; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23323f4f' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .amazon-content { display: flex; justify-content: space-between; align-items: center; }
+        .amazon-text h2 { font-size: 2.2rem; margin-bottom: 5px; }
+        .stat-box div { font-size: 24px; font-weight: 900; color: var(--amazon-btn); }
+        .stat-box span { font-size: 13px; color: #ccc; text-transform: uppercase; }
+
+        /* Footer */
+        footer { background: #111; color: white; padding: 60px 0 30px; font-size: 14px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; border-bottom: 1px solid #333; padding-bottom: 40px; margin-bottom: 20px; }
+        .footer-col h4 { color: white; margin-bottom: 20px; }
+        .footer-col a { color: #999; display: block; margin-bottom: 10px; }
+        .footer-col a:hover { color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } 
+            .hero h1 { font-size: 2.5rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .amazon-content { flex-direction: column; text-align: center; gap: 30px; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">SUPUZZ<span>.</span></a>
+            <nav class="nav-links">
+                <a href="#products">Garden Sets</a>
+                <a href="#blog">Parenting Blog</a>
+                <a href="#amazon-store" style="color:var(--primary-color)">Best Sellers</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Grow Your <br><span>Imagination</span></h1>
+            <p>The ultimate flower garden building toys. Develop STEM skills, color recognition, and creativity with SUPUZZ.</p>
+            <a href="#products" class="btn btn-primary">Start Building</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Bloom & Build Collection</h2>
+            <p class="section-desc">Discover the top-rated flower building sets parents trust. BPA-free, colorful, and endless fun.</p>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="p-img">
+                        <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&w=600&q=80" alt="Flower Toy">
+                    </div>
+                    <div class="p-info">
+                        <span class="p-cat">Starter Kit</span>
+                        <h3 class="p-title">Flower Garden Building Toy</h3>
+                        <a href="https://www.amazon.com/dp/B0CT9R3PRQ" target="_blank" class="btn-buy">
+                            View on <strong>Amazon</strong>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="p-img">
+                        <img src="https://images.unsplash.com/photo-1585366119957-e9730b6d0f60?ixlib=rb-4.0.3&w=600&q=80" alt="Flower World">
+                    </div>
+                    <div class="p-info">
+                        <span class="p-cat">Best Seller</span>
+                        <h3 class="p-title">Flower Garden Worlds</h3>
+                        <a href="https://www.amazon.com/supuzz-Flower-Garden-Building-Worlds/dp/B0FHK6RHT9" target="_blank" class="btn-buy">
+                            View on <strong>Amazon</strong>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="p-img">
+                        <img src="https://images.unsplash.com/photo-1557672172-298e090bd0f1?ixlib=rb-4.0.3&w=600&q=80" alt="Deluxe Set">
+                    </div>
+                    <div class="p-info">
+                        <span class="p-cat">Deluxe Edition</span>
+                        <h3 class="p-title">Ultimate Garden Set</h3>
+                        <a href="https://www.amazon.com/supuzz-Flower-Garden-Building-Worlds/dp/B0F5PPWYML" target="_blank" class="btn-buy">
+                            View on <strong>Amazon</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amazon Banner -->
+    <section class="amazon-banner" id="amazon-store">
+        <div class="container amazon-content">
+            <div class="amazon-text">
+                <h2>Authorized SUPUZZ Store</h2>
+                <p>Shop with confidence. Fast shipping via Amazon Prime.</p>
+            </div>
+            <div style="display:flex; gap:40px;">
+                <div class="stat-box"><div>4.8★</div><span>Rating</span></div>
+                <div class="stat-box"><div>24h</div><span>Shipping</span></div>
+                <div class="stat-box"><div>100%</div><span>Safe</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; color:var(--text-main)">Garden of Wisdom</h2>
+            <p class="section-desc" style="text-align:center;">Expert tips on creative play, STEM education, and kid-friendly activities.</p>
+
+            <div class="blog-grid">
+                <!-- Blog 1 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&w=600&q=80" alt="Girl Playing">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Child Development</span>
+                        <h3 class="blog-title">Why Flower Sets are the Ultimate STEM Toy</h3>
+                        <p class="blog-excerpt">Discover how stacking petals boosts fine motor skills and engineering basics...</p>
+                        <a href="blog-post.html?id=1" class="read-link">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Blog 2 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?ixlib=rb-4.0.3&w=600&q=80" alt="Garden">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Activity Ideas</span>
+                        <h3 class="blog-title">Indoor Gardening: Create a Nature World</h3>
+                        <p class="blog-excerpt">Raining outside? Here is how to spark your child's love for nature safely indoors...</p>
+                        <a href="blog-post.html?id=2" class="read-link">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article class="blog-card">
+                    <div class="blog-thumb">
+                        <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-4.0.3&w=600&q=80" alt="Gift">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-tag">Gift Guide</span>
+                        <h3 class="blog-title">The Best Gift for 4-Year-Old Girls?</h3>
+                        <p class="blog-excerpt">Looking for a birthday gift that isn't a screen? Here's why parents choose SUPUZZ...</p>
+                        <a href="blog-post.html?id=3" class="read-link">Read Article →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>SUPUZZ.</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <a href="#">Garden Sets</a>
+                    <a href="#">New Arrivals</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                </div>
+            </div>
+            <div style="text-align: center; color: #666;">&copy; 2023 SUPUZZ Toys. All rights reserved.</div>
+        </div>
+    </footer>
+</body>
+</html>
