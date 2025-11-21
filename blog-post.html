@@ -7,6 +7,7 @@
     <meta name="keywords" content="STEM education, fine motor skills, toddler learning, toys for children, cognitive development, educational play, montessori toys, building toys, child development, preschool activities, learning toys">
     <title>SUPUZZ Blog | STEM Education & Child Development Resources</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/site.css">
     
     <style>
         :root {
@@ -521,7 +522,33 @@
                     ${article.content}
                 `;
                 container.innerHTML = html;
-                document.title = article.title + " | SUPUZZ Blog";
+                    document.title = article.title + " | SUPUZZ Blog";
+
+                    // Generate Article JSON-LD and inject into head (remove previous if any)
+                    try {
+                        const firstImg = container.querySelector('img') ? container.querySelector('img').src : null;
+                        const ld = {
+                            "@context": "https://schema.org",
+                            "@type": "Article",
+                            "mainEntityOfPage": { "@type": "WebPage", "@id": window.location.href },
+                            "headline": article.title,
+                            "image": firstImg ? [firstImg] : undefined,
+                            "datePublished": (new Date(article.date)).toISOString(),
+                            "author": { "@type": "Person", "name": article.author },
+                            "publisher": { "@type": "Organization", "name": "SUPUZZ", "logo": { "@type": "ImageObject", "url": "https://supuzz.github.io/assets/logo.png" } },
+                            "description": (container.querySelector('.article-body') && container.querySelector('.article-body').innerText.substring(0, 160)) || ''
+                        };
+
+                        // remove existing injected ld if present
+                        const existing = document.querySelector('script[type="application/ld+json"][data-generated="article"]');
+                        if (existing) existing.remove();
+
+                        const s = document.createElement('script');
+                        s.type = 'application/ld+json';
+                        s.setAttribute('data-generated', 'article');
+                        s.textContent = JSON.stringify(ld);
+                        document.head.appendChild(s);
+                    } catch (e) { console.warn('JSON-LD generation failed', e); }
             } else {
                 container.innerHTML = "<h1>Article not found</h1><p>Please return to the <a href='index.html'>homepage</a>.</p>";
             }
