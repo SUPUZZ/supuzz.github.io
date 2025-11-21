@@ -55,48 +55,67 @@ body {
 
 /* ================== HEADER & NAVIGATION ================== */
 header {
-    background-color: white;
-    border-bottom: 1px solid var(--border-color);
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
     position: sticky;
     top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .nav-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-md) 0;
+    padding: 16px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 2px;
     text-decoration: none;
-    letter-spacing: -1px;
+    font-weight: 900;
+    font-size: 1.3rem;
+    font-family: var(--font-heading);
+    transition: all 0.3s ease;
 }
 
-.logo span {
+.logo-text {
+    color: var(--text-main);
+    letter-spacing: -0.5px;
+}
+
+.logo-dot {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.logo:hover {
     color: var(--primary-color);
 }
 
 .nav-links {
     display: flex;
-    gap: var(--spacing-lg);
+    gap: 32px;
     align-items: center;
 }
 
 .nav-item {
     text-decoration: none;
-    color: var(--text-main);
+    color: #333;
     font-size: 0.95rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    font-weight: 500;
+    transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .nav-item:hover {
@@ -106,12 +125,13 @@ header {
 .nav-item::after {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -8px;
     left: 0;
     width: 0;
-    height: 2px;
+    height: 3px;
     background-color: var(--primary-color);
     transition: width 0.3s ease;
+    border-radius: 2px;
 }
 
 .nav-item:hover::after {
@@ -119,19 +139,31 @@ header {
 }
 
 .nav-cta {
-    background-color: var(--amazon-btn);
+    background: linear-gradient(135deg, #FF9900 0%, #FF8C00 100%);
     color: white !important;
-    padding: var(--spacing-xs) var(--spacing-md);
-    border-radius: 4px;
-    font-size: 0.85rem;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 153, 0, 0.3);
+    background: linear-gradient(135deg, #FFB000 0%, #FF9900 100%);
 }
 
 .nav-cta:hover::after {
     display: none;
 }
 
-.nav-cta:hover {
-    opacity: 0.9;
+.nav-cta svg {
+    width: 16px;
+    height: 16px;
 }
 
 /* ================== HERO SECTION ================== */

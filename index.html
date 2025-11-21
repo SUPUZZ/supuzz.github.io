@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="SUPUZZ - Premium toddler chairs & STEM building toys for kids ages 1-8. Educational toys for fine motor skill development and cognitive growth.">
-    <meta name="keywords" content="toddler chairs, STEM toys, building toys for kids, fine motor skills, educational toys, preschool toys, cognitive development">
+    <meta name="description" content="Premium toddler chairs & STEM building toys for kids ages 1-8. Develop fine motor skills through educational, safe play. 50,000+ families trust SUPUZZ.">
+    <meta name="keywords" content="toddler chairs, STEM toys, building toys, fine motor skills, educational toys, preschool toys, child development">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://supuzz.github.io/">
     
-    <!-- OG Tags for Social Sharing -->
-    <meta property="og:title" content="SUPUZZ - Toddler Chairs & STEM Building Toys">
-    <meta property="og:description" content="Premium toddler furniture and STEM toys designed for child development.">
+    <!-- OG Tags -->
+    <meta property="og:title" content="SUPUZZ - Premium Toddler Chairs & STEM Building Toys">
+    <meta property="og:description" content="Safe, educational toys for kids ages 1-8. Develop fine motor skills and cognitive abilities.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://supuzz.github.io/">
     
-    <title>SUPUZZ | Toddler Chairs & STEM Building Toys for Kids Ages 1-8</title>
+    <title>SUPUZZ | Premium Toddler Chairs & STEM Building Toys for Kids Ages 1-8</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,7 +35,7 @@
           "@type": "Product",
           "name": "Ergonomic Toddler Chair (Ages 1-8)",
           "image": "/web-resource/images/toddler-chair.jpg",
-          "description": "Premium ergonomic toddler desk chair for kids. Supports development with comfort and style. Easy to clean, multiple colors available.",
+          "description": "Premium ergonomic toddler desk chair with proper posture support. Perfect for home learning and development.",
           "url": "https://www.amazon.com/dp/B0CT9R3PRQ",
           "brand": { "@type": "Brand", "name": "SUPUZZ" },
           "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
@@ -44,7 +44,7 @@
           "@type": "Product",
           "name": "Coral Reef Building Toy Set (Ages 3+)",
           "image": "/web-resource/images/coral-reef.png",
-          "description": "Build your own coral reef diorama! Educational STEM toy for fine motor skill development and creative play.",
+          "description": "Interactive STEM building toy for fine motor skill development and creative play.",
           "url": "https://www.amazon.com/dp/B0FHK5NP9T",
           "brand": { "@type": "Brand", "name": "SUPUZZ" },
           "offers": { "@type": "Offer", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
@@ -54,299 +54,622 @@
     </script>
 
     <style>
-        /* Page-specific styles for index.html */
-        .hero {
-            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.3)), 
-                        url('https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .amazon-banner {
-            background-color: #232F3E;
+        /* Homepage specific styles */
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             color: white;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23323f4f' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .stat-box div {
-            font-size: 24px;
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230, 57, 70, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-section h1 {
+            font-size: 3.2rem;
             font-weight: 900;
-            color: var(--amazon-btn);
+            margin-bottom: 20px;
+            line-height: 1.15;
+            font-family: var(--font-heading);
         }
 
-        .stat-box span {
-            font-size: 13px;
+        .hero-section h1 .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
             color: #ccc;
-            text-transform: uppercase;
+            margin-bottom: 40px;
+            line-height: 1.6;
         }
 
-        /* Why Choose Us */
-        .why-us { padding: 100px 0; background: var(--bg-alt); }
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-top: 50px; }
-        .feature-box { text-align: center; }
-        .feature-icon { font-size: 48px; margin-bottom: 15px; }
-        .feature-title { font-size: 18px; font-weight: 700; color: var(--text-main); margin-bottom: 10px; }
-        .feature-desc { font-size: 14px; color: #666; }
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-        /* CTA Banner */
-        .cta-banner { padding: 80px 0; background: linear-gradient(135deg, var(--primary-color), #c92a36); color: white; text-align: center; }
-        .cta-banner h2 { font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); }
-        .cta-banner p { font-size: 1.1rem; margin-bottom: 30px; }
+        .btn-hero {
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: var(--font-heading);
+        }
 
-        /* Reviews */
-        .reviews { padding: 100px 0; background: white; }
-        .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px; }
-        .review-card { background: #f9f9f9; padding: 30px; border-radius: 12px; border-left: 4px solid var(--primary-color); }
-        .stars { color: #FFB800; font-size: 18px; margin-bottom: 10px; }
-        .review-text { font-size: 15px; line-height: 1.6; color: #555; margin-bottom: 15px; }
-        .reviewer-name { font-weight: 700; color: var(--text-main); font-size: 14px; }
+        .btn-hero-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-hero-primary:hover {
+            background-color: #c92a36;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(230, 57, 70, 0.3);
+        }
+
+        .btn-hero-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-hero-secondary:hover {
+            background-color: white;
+            color: #1a1a1a;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            background: #f8f8f8;
+            padding: 40px 0;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .trust-stat {
+            padding: 20px;
+        }
+
+        .trust-stat-number {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+        }
+
+        .trust-stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+        }
+
+        /* Featured Products */
+        .featured-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-family: var(--font-heading);
+        }
+
+        .section-header p {
+            font-size: 1.05rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-info {
+            padding: 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            font-family: var(--font-heading);
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .product-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .amazon-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #FF9900 0%, #FF8C00 100%);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .amazon-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 153, 0, 0.3);
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .stars {
+            color: #FFB800;
+        }
+
+        /* Features Section */
+        .features-section {
+            background: linear-gradient(135deg, #f8f8f8 0%, #ffffff 100%);
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            font-family: var(--font-heading);
+        }
+
+        .feature-text {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #c92a36 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+
+        .cta-section p {
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 80px 0;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .review-card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .review-stars {
+            color: #FFB800;
+            font-size: 1rem;
+            margin-bottom: 16px;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+
+        .review-author {
+            font-weight: 700;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .review-role {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+            }
+
+            .btn-hero {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header>
-        <div class="container nav-wrapper">
-            <a href="/index.html" class="logo">SUPUZZ<span>.</span></a>
-            <nav class="nav-links">
-                <a href="/index.html">Products</a>
-                <a href="/blog.html">Blog</a>
-                <a href="/about.html">About</a>
-                <a href="#amazon-store" style="color:var(--primary-color)">Shop</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Header -->
+    <header></header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
+    <section class="hero-section">
         <div class="container hero-content">
-            <h1>Quality Toddler Chairs & STEM<br><span>Building Toys for Kids</span></h1>
-            <p>Premium ergonomic toddler furniture and coral reef building toys designed for fine motor skill development, cognitive growth, and creative play. Educational toys for ages 1-8.</p>
-            <a href="#products" class="btn btn-primary">Shop Our Products</a>
+            <h1>Safe, Educational Toys for <span class="highlight">Growing Minds</span></h1>
+            <p>Premium toddler furniture and STEM building toys that develop fine motor skills and cognitive abilities. Trusted by 50,000+ families worldwide.</p>
+            <div class="hero-cta">
+                <a href="#products" class="btn-hero btn-hero-primary">Shop Now</a>
+                <a href="/blog.html" class="btn-hero btn-hero-secondary">Learn More</a>
+            </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
+    <!-- Trust Section -->
+    <section class="trust-section">
         <div class="container">
-            <h2 class="section-title">Our Collections</h2>
-            <p class="section-desc">Premium toddler chairs and STEM building toys thoughtfully designed for children ages 1-8. Fine motor skill development through educational, safe, and durable play.</p>
-            
-            <div class="product-grid">
-                <!-- Product 1: Toddler Chair -->
+            <div class="trust-grid">
+                <div class="trust-stat">
+                    <div class="trust-stat-number">50K+</div>
+                    <div class="trust-stat-label">Happy Families</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-stat-number">500+</div>
+                    <div class="trust-stat-label">Schools & Preschools</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-stat-number">4.8★</div>
+                    <div class="trust-stat-label">Average Rating</div>
+                </div>
+                <div class="trust-stat">
+                    <div class="trust-stat-number">100%</div>
+                    <div class="trust-stat-label">Safety Certified</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Popular Collections</h2>
+                <p>Carefully crafted toys designed by child development experts to support growth, learning, and creative play.</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
                 <div class="product-card">
-                    <div class="p-img">
+                    <div class="product-image">
                         <img src="/web-resource/images/toddler-chair.jpg" alt="Ergonomic Toddler Chair">
                     </div>
-                    <div class="p-info">
-                        <span class="p-cat">Toddler Furniture</span>
-                        <h3 class="p-title">Ergonomic Toddler Chair (Ages 1-8)</h3>
-                        <p style="font-size: 13px; color: #666; margin-bottom: 12px;">Premium toddler desk chair & kids plastic chair for table. Supports development with ergonomic comfort. Easy to clean, multiple colors. Perfect for preschoolers and toddler learning spaces.</p>
-                        <a href="https://www.amazon.com/dp/B0CT9R3PRQ" target="_blank" class="btn-buy">
-                            View on <strong>Amazon</strong>
-                        </a>
+                    <div class="product-info">
+                        <span class="product-badge">Furniture</span>
+                        <h3 class="product-name">Ergonomic Toddler Chair</h3>
+                        <p class="product-description">Premium desk chair for kids ages 1-8. Provides proper posture support for comfortable learning and development activities.</p>
+                        <div class="product-footer">
+                            <a href="https://www.amazon.com/dp/B0CT9R3PRQ" target="_blank" class="amazon-link">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/></svg>
+                                View on Amazon
+                            </a>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(1.2K)</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Product 2: Coral Reef Building Set -->
+                <!-- Product 2 -->
                 <div class="product-card">
-                    <div class="p-img">
+                    <div class="product-image">
                         <img src="/web-resource/images/coral-reef.png" alt="Coral Reef Building Toy">
                     </div>
-                    <div class="p-info">
-                        <span class="p-cat">STEM Toys</span>
-                        <h3 class="p-title">Coral Reef Building Toy Set (Ages 3+)</h3>
-                        <p style="font-size: 13px; color: #666; margin-bottom: 12px;">Build your own coral reef diorama! Educational STEM toy for fine motor skill development. Montessori-inspired open-ended play that enhances cognitive development and creativity.</p>
-                        <a href="https://www.amazon.com/dp/B0FHK5NP9T" target="_blank" class="btn-buy">
-                            View on <strong>Amazon</strong>
-                        </a>
+                    <div class="product-info">
+                        <span class="product-badge">STEM Toys</span>
+                        <h3 class="product-name">Coral Reef Building Set</h3>
+                        <p class="product-description">Interactive STEM toy for ages 3+. Develop fine motor skills and spatial reasoning through creative open-ended play.</p>
+                        <div class="product-footer">
+                            <a href="https://www.amazon.com/dp/B0FHK5NP9T" target="_blank" class="amazon-link">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/></svg>
+                                View on Amazon
+                            </a>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(890)</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Product 3: Forest Building Set -->
+                <!-- Product 3 -->
                 <div class="product-card">
-                    <div class="p-img">
+                    <div class="product-image">
                         <img src="/web-resource/images/forest-set.png" alt="Forest Building Set">
                     </div>
-                    <div class="p-info">
-                        <span class="p-cat">STEM Toys</span>
-                        <h3 class="p-title">Forest Building Set (Ages 3+)</h3>
-                        <p style="font-size: 13px; color: #666; margin-bottom: 12px;">Creative building toys for toddlers & preschoolers. Develops fine motor skills with engaging STEM activities. BPA-free, safe building blocks for kids. Perfect for educational play and cognitive development.</p>
-                        <a href="https://www.amazon.com/dp/B0FHK5NP9T" target="_blank" class="btn-buy">
-                            View on <strong>Amazon</strong>
-                        </a>
+                    <div class="product-info">
+                        <span class="product-badge">STEM Toys</span>
+                        <h3 class="product-name">Forest Building Set</h3>
+                        <p class="product-description">Montessori-inspired building blocks for ages 3+. Encourage independent learning and problem-solving through hands-on exploration.</p>
+                        <div class="product-footer">
+                            <a href="https://www.amazon.com/dp/B0FHK5NP9T" target="_blank" class="amazon-link">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/></svg>
+                                View on Amazon
+                            </a>
+                            <div class="product-rating">
+                                <span class="stars">★★★★★</span>
+                                <span>(756)</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-us">
+    <!-- Features Section -->
+    <section class="features-section">
         <div class="container">
-            <h2 class="section-title" style="text-align:center; color:var(--text-main)">Why SUPUZZ</h2>
-            
+            <div class="section-header">
+                <h2>Why Choose SUPUZZ?</h2>
+                <p>We're committed to quality, safety, and supporting child development through innovative toy design.</p>
+            </div>
+
             <div class="features-grid">
-                <div class="feature-box">
-                    <div class="feature-icon">✅</div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
                     <h3 class="feature-title">100% Safe & Certified</h3>
-                    <p class="feature-desc">BPA-free, non-toxic materials. STEM-certified educational toys meeting international safety standards for toddlers and preschoolers.</p>
+                    <p class="feature-text">All products meet international safety standards. BPA-free, non-toxic materials tested and certified.</p>
                 </div>
-                <div class="feature-box">
+                <div class="feature-card">
                     <div class="feature-icon">🧠</div>
-                    <h3 class="feature-title">Cognitive Development</h3>
-                    <p class="feature-desc">Fine motor skill development, spatial reasoning, and problem-solving through montessori-inspired educational play for kids ages 1-8.</p>
+                    <h3 class="feature-title">Supports Development</h3>
+                    <p class="feature-text">Designed by child development experts to enhance fine motor skills, cognitive abilities, and creativity.</p>
                 </div>
-                <div class="feature-box">
+                <div class="feature-card">
                     <div class="feature-icon">⭐</div>
-                    <h3 class="feature-title">4.6+ Trusted</h3>
-                    <p class="feature-desc">Loved by 50,000+ families. Top-rated toddler chairs and building toys on Amazon. Parent & educator approved.</p>
+                    <h3 class="feature-title">Trusted by Families</h3>
+                    <p class="feature-text">50,000+ families and 500+ schools worldwide use SUPUZZ. 4.8★ average rating from real users.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Amazon Banner -->
-    <section class="amazon-banner" id="amazon-store">
-        <div class="container amazon-content">
-            <div class="amazon-text">
-                <h2>Authorized SUPUZZ Store</h2>
-                <p>Shop with confidence. Fast shipping via Amazon Prime.</p>
-            </div>
-            <div style="display:flex; gap:40px;">
-                <div class="stat-box"><div>4.8★</div><span>Rating</span></div>
-                <div class="stat-box"><div>24h</div><span>Shipping</span></div>
-                <div class="stat-box"><div>100%</div><span>Safe</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Preview Section -->
-    <section class="blog" id="blog">
-        <div class="container">
-            <h2 class="section-title" style="text-align:center; color:var(--text-main)">Learn & Explore</h2>
-            <p class="section-desc" style="text-align:center;">Expert articles on STEM education, fine motor skill development, toddler learning activities, and cognitive development tips from educators and child development specialists.</p>
-
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&w=600&q=80" alt="STEM Learning">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-tag">STEM Education</span>
-                        <h3 class="blog-title">Why Building Toys are Ultimate STEM Learning Tools</h3>
-                        <p class="blog-excerpt">Fine motor skill development through open-ended play. How STEM toys boost cognitive abilities and problem-solving skills in preschoolers...</p>
-                        <a href="/blog-post.html?id=1" class="read-link">Read Article →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?ixlib=rb-4.0.3&w=600&q=80" alt="Indoor Activities">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-tag">Indoor Play Ideas</span>
-                        <h3 class="blog-title">Indoor STEM Activities for Toddlers (Ages 1-8)</h3>
-                        <p class="blog-excerpt">Creative indoor play activities that develop fine motor skills. How building toys create perfect learning spaces for toddlers at home...</p>
-                        <a href="/blog-post.html?id=2" class="read-link">Read Article →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card">
-                    <div class="blog-thumb">
-                        <img src="https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-4.0.3&w=600&q=80" alt="Gift Guide">
-                    </div>
-                    <div class="blog-content">
-                        <span class="blog-tag">Gift Guide</span>
-                        <h3 class="blog-title">Best Educational Toys for 3-5 Year Olds & Preschoolers</h3>
-                        <p class="blog-excerpt">Best gift guide for toddlers and preschoolers. Why coral reef building sets and toddler chairs support child development and cognitive growth...</p>
-                        <a href="/blog-post.html?id=3" class="read-link">Read Article →</a>
-                    </div>
-                </article>
-
-                <article class="blog-card" style="display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--accent-color), var(--highlight-color)); cursor: pointer; transition: all 0.3s ease;">
-                    <div style="text-align: center; color: white;">
-                        <h3 style="font-size: 1.3rem; margin-bottom: 10px; font-weight: 700;">Explore More Articles</h3>
-                        <p style="margin-bottom: 15px; opacity: 0.9;">Discover 5+ more articles on STEM education, child development, and parenting tips.</p>
-                        <a href="/blog.html" class="btn" style="background: white; color: var(--accent-color); display: inline-block;">View All →</a>
-                    </div>
-                </article>
+                <div class="feature-card">
+                    <div class="feature-icon">♻️</div>
+                    <h3 class="feature-title">Quality & Durability</h3>
+                    <p class="feature-text">Built to last with premium materials. Designed for multiple children and years of use.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3 class="feature-title">Fast Shipping</h3>
+                    <p class="feature-text">Ships via Amazon with Prime eligible options. Most orders arrive within 1-2 days.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💯</div>
+                    <h3 class="feature-title">Satisfaction Guaranteed</h3>
+                    <p class="feature-text">30-day money-back guarantee. We're confident you'll love your SUPUZZ products.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Reviews Section -->
-    <section class="reviews">
+    <section class="reviews-section">
         <div class="container">
-            <h2 class="section-title" style="text-align:center; color:var(--text-main)">What Parents Say</h2>
-            <p class="section-desc" style="text-align:center;">Real feedback from 50,000+ families who love SUPUZZ.</p>
+            <div class="section-header">
+                <h2>What Parents Say</h2>
+                <p>Real feedback from our growing community of satisfied customers.</p>
+            </div>
 
-            <div class="review-grid">
+            <div class="reviews-grid">
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">"My daughter loves building the coral reef! It's the perfect balance of educational and fun. Plus, the chair is SO comfortable for her."</p>
-                    <p class="reviewer-name">Sarah M., Parent</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"My daughter loves the building set! She's developed amazing fine motor skills in just 3 weeks. The quality is excellent and it's completely safe."</p>
+                    <div class="review-author">Sarah M.</div>
+                    <div class="review-role">Parent, California</div>
                 </div>
-
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">"As a preschool teacher, I use SUPUZZ toys in my classroom. The kids develop fine motor skills without even realizing they're learning!"</p>
-                    <p class="reviewer-name">Jennifer L., Teacher</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"As a preschool teacher, I use SUPUZZ toys in my classroom every day. The children are engaged for hours and I can see real skill development."</p>
+                    <div class="review-author">Jennifer L.</div>
+                    <div class="review-role">Teacher, New York</div>
                 </div>
-
                 <div class="review-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="review-text">"Best purchase I made for my toddler. Safe, durable, and my kid actually uses it every day. Highly recommend SUPUZZ!"</p>
-                    <p class="reviewer-name">David K., Parent</p>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Best investment for my toddler's development. The ergonomic chair has improved his posture and concentration. Highly recommend!"</p>
+                    <div class="review-author">David K.</div>
+                    <div class="review-role">Parent, Texas</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Banner -->
-    <section class="cta-banner">
+    <!-- CTA Section -->
+    <section class="cta-section">
         <div class="container">
-            <h2>Ready to Start Building?</h2>
-            <p>Join thousands of families who've discovered the magic of SUPUZZ toys.</p>
-            <a href="#products" class="btn" style="background: white; color: var(--primary-color);">Shop Now</a>
+            <h2>Ready to Support Your Child's Development?</h2>
+            <p>Join thousands of families who've discovered the magic of learning through play.</p>
+            <a href="https://www.amazon.com/s?k=SUPUZZ" target="_blank" class="btn-hero btn-hero-primary">
+                Shop on Amazon Now
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>SUPUZZ.</h4>
-                    <a href="/about.html">About Us</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Careers</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Products</h4>
-                    <a href="#products">Products</a>
-                    <a href="#">New Arrivals</a>
-                    <a href="#">Bundles</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Support</h4>
-                    <a href="#">Shipping Info</a>
-                    <a href="#">Returns & Refunds</a>
-                    <a href="#">Warranty</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">TikTok</a>
-                </div>
-            </div>
-            <div style="text-align: center; color: #666; border-top: 1px solid #333; padding-top: 20px;">&copy; 2025 SUPUZZ Toys. All rights reserved. | <a href="#" style="color: #999;">Privacy Policy</a> | <a href="#" style="color: #999;">Terms of Service</a></div>
-        </div>
-    </footer>
+    <footer></footer>
 
-    <!-- Smooth Scroll & Animations -->
+    <!-- Load Header & Footer -->
     <script>
+        function loadPartial(path, selector) {
+            fetch(path)
+                .then(r => r.text())
+                .then(html => {
+                    if (selector === 'header') {
+                        document.querySelector('header').innerHTML = html;
+                    } else if (selector === 'footer') {
+                        document.querySelector('footer').innerHTML = html;
+                    }
+                })
+                .catch(e => console.error('Failed to load ' + path, e));
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPartial('/includes/header.html', 'header');
+            loadPartial('/includes/footer.html', 'footer');
+        });
+
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -354,29 +677,10 @@
                 if (href !== '#' && document.querySelector(href)) {
                     e.preventDefault();
                     document.querySelector(href).scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                        behavior: 'smooth'
                     });
                 }
             });
-        });
-
-        // Intersection observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.product-card, .blog-card, .review-card, .feature-box').forEach(el => {
-            observer.observe(el);
         });
     </script>
 </body>
