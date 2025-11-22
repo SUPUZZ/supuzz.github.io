@@ -5,14 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SUPUZZ Journal | Parenting, STEM Toys & Kids Furniture</title>
-    <meta name="description" content="Explore the SUPUZZ blog for parenting tips, Montessori playroom ideas, and guides on STEM toys like coral reefs and flower gardens.">
+    <meta name="description"
+        content="Explore the SUPUZZ blog for parenting tips, Montessori playroom ideas, and guides on STEM toys like coral reefs and flower gardens.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- 浏览器标签栏图标（核心必填） -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- 高分辨率PNG图标（适配现代浏览器） -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <!-- 苹果设备主屏图标（可选，适配iPhone/iPad） -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <!-- PWA配置（可选，适配安卓设备） -->
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#6750A4">
 
     <style>
         /* --- 基础变量 (M3 System) --- */
@@ -32,109 +45,386 @@
         }
 
         /* --- 重置与通用样式 --- */
-        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-        body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
-        a { text-decoration: none; color: inherit; transition: color 0.2s; }
-        img { width: 100%; height: auto; display: block; }
-        ul { list-style: none; }
-        
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
         /* --- Header 导航栏 --- */
         header {
-            position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px); z-index: 1000; height: 64px;
-            border-bottom: 1px solid #f0f0f0; display: flex; align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            height: 64px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
         }
-        nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); display: flex; gap: 6px; letter-spacing: -0.5px; }
-        .nav-links { display: flex; gap: 32px; }
-        .nav-links a { font-weight: 500; color: var(--text-sub); }
-        .nav-links a.active { color: var(--primary); font-weight: 700; }
-        .nav-links a:hover { color: var(--primary); }
-        
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            gap: 6px;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
         /* 移动端菜单按钮 */
-        .menu-btn { display: none; background: none; border: none; color: var(--text-main); cursor: pointer; }
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+        }
 
         /* --- Blog Hero (精选文章) --- */
-        .blog-hero { padding-top: 100px; padding-bottom: 60px; }
-        .featured-card {
-            display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center;
-            background: var(--primary-container); border-radius: 32px; overflow: hidden;
-            transition: transform 0.3s; cursor: pointer;
+        .blog-hero {
+            padding-top: 100px;
+            padding-bottom: 60px;
         }
-        .featured-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(103, 80, 164, 0.2); }
-        .featured-img { height: 100%; min-height: 400px; position: relative; }
-        .featured-img img { height: 100%; width: 100%; object-fit: cover; }
-        .featured-content { padding: 40px; padding-left: 0; }
-        .badge { display: inline-block; background: var(--primary); color: #fff; padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 700; margin-bottom: 16px; text-transform: uppercase; }
-        .featured-content h2 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 16px; color: var(--on-primary-container); }
-        .featured-content p { font-size: 1.1rem; color: var(--text-sub); margin-bottom: 24px; max-width: 90%; }
+
+        .featured-card {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: var(--primary-container);
+            border-radius: 32px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .featured-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(103, 80, 164, 0.2);
+        }
+
+        .featured-img {
+            height: 100%;
+            min-height: 400px;
+            position: relative;
+        }
+
+        .featured-img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .featured-content {
+            padding: 40px;
+            padding-left: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .featured-content h2 {
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            color: var(--on-primary-container);
+        }
+
+        .featured-content p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            margin-bottom: 24px;
+            max-width: 90%;
+        }
 
         /* --- 筛选按钮 --- */
-        .blog-filters { display: flex; gap: 12px; margin-bottom: 40px; overflow-x: auto; padding-bottom: 10px; -webkit-overflow-scrolling: touch; }
-        .filter-btn {
-            padding: 8px 20px; border-radius: 100px; border: 1px solid #ddd;
-            background: transparent; font-weight: 600; cursor: pointer; white-space: nowrap;
-            color: var(--text-sub); transition: all 0.3s ease; font-family: inherit;
+        .blog-filters {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 40px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            -webkit-overflow-scrolling: touch;
         }
-        .filter-btn:hover { border-color: var(--primary); color: var(--primary); }
-        .filter-btn.active { background: var(--text-main); color: #fff; border-color: var(--text-main); }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border-radius: 100px;
+            border: 1px solid #ddd;
+            background: transparent;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+            color: var(--text-sub);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .filter-btn.active {
+            background: var(--text-main);
+            color: #fff;
+            border-color: var(--text-main);
+        }
 
         /* --- 文章网格 --- */
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 32px; padding-bottom: 60px; }
-        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+            padding-bottom: 60px;
+        }
+
         .blog-card {
-            background: var(--surface); border-radius: var(--radius-lg); overflow: hidden;
-            border: 1px solid #eee; transition: transform 0.3s ease, opacity 0.3s ease;
-            display: flex; flex-direction: column;
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid #eee;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
             /* 动画效果 */
             animation: fadeIn 0.5s ease-in-out;
         }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); }
-        .blog-img { height: 220px; background: #f5f5f5; }
-        .blog-img img { height: 100%; width: 100%; object-fit: cover; }
-        .blog-content { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; }
-        .blog-meta { font-size: 0.85rem; color: var(--secondary); font-weight: 600; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
-        .blog-card h3 { font-size: 1.35rem; margin-bottom: 12px; line-height: 1.3; font-weight: 700; }
-        .blog-card p { color: var(--text-sub); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6; flex-grow: 1; }
-        .read-more { font-weight: 700; color: var(--primary); display: inline-flex; align-items: center; gap: 4px; }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-img {
+            height: 220px;
+            background: #f5f5f5;
+        }
+
+        .blog-img img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        .blog-card p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            font-weight: 700;
+            color: var(--primary);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
 
         /* --- 翻页按钮 --- */
-        .pagination { text-align: center; margin-bottom: 80px; }
-        .load-more {
-            background: transparent; border: 1px solid var(--text-main);
-            padding: 12px 32px; border-radius: 100px; font-weight: 600;
-            cursor: pointer; transition: 0.2s; font-family: inherit; font-size: 1rem;
+        .pagination {
+            text-align: center;
+            margin-bottom: 80px;
         }
-        .load-more:hover { background: var(--text-main); color: #fff; }
+
+        .load-more {
+            background: transparent;
+            border: 1px solid var(--text-main);
+            padding: 12px 32px;
+            border-radius: 100px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .load-more:hover {
+            background: var(--text-main);
+            color: #fff;
+        }
 
         /* --- Footer 样式 --- */
-        .footer-col h4 { color: var(--primary); margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700; }
-        .footer-col ul li { margin-bottom: 12px; color: var(--text-sub); font-size: 0.95rem; }
+        .footer-col h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
 
         /* --- Mobile Responsive --- */
         @media (max-width: 768px) {
-            .menu-btn { display: block; }
-            
+            .menu-btn {
+                display: block;
+            }
+
             /* 移动端导航菜单 */
             .nav-links {
-                position: fixed; top: 0; right: 0; width: 100%; height: 100vh;
-                background: #fff; flex-direction: column; justify-content: center;
-                transform: translateY(-100%); transition: 0.3s; z-index: 999;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                justify-content: center;
+                transform: translateY(-100%);
+                transition: 0.3s;
+                z-index: 999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             }
-            .nav-links.active { transform: translateY(0); }
-            .nav-links a { font-size: 1.5rem; }
-            .nav-close-btn { position: absolute; top: 20px; right: 20px; font-size: 2rem; padding: 10px; display: block; }
 
-            .featured-card { grid-template-columns: 1fr; }
-            .featured-img { min-height: 250px; }
-            .featured-content { padding: 24px; }
-            .featured-content h2 { font-size: 1.8rem; }
-            .blog-grid { grid-template-columns: 1fr; }
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .nav-links a {
+                font-size: 1.5rem;
+            }
+
+            .nav-close-btn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 2rem;
+                padding: 10px;
+                display: block;
+            }
+
+            .featured-card {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-img {
+                min-height: 250px;
+            }
+
+            .featured-content {
+                padding: 24px;
+            }
+
+            .featured-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -149,7 +439,7 @@
                     <span class="material-symbols-rounded" style="color:var(--secondary)">extension</span>
                     SUPUZZ
                 </a>
-                
+
                 <button class="menu-btn" onclick="toggleMenu()">
                     <span class="material-symbols-rounded" style="font-size: 32px;">menu</span>
                 </button>
@@ -162,7 +452,8 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="index.html#products">Products</a></li>
                     <li><a href="blog.html" class="active">Journal</a></li>
-                    <li><a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank" style="color:var(--secondary); font-weight:700;">Shop Amazon</a></li>
+                    <li><a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank"
+                            style="color:var(--secondary); font-weight:700;">Shop Amazon</a></li>
                 </ul>
             </nav>
         </div>
@@ -181,8 +472,10 @@
                 <div class="featured-content">
                     <span class="badge">Editors' Pick</span>
                     <h2>Decoding the Level 1-3 Building System</h2>
-                    <p>Not all blocks are the same. Learn how our progressive difficulty system helps your child master STEM skills from beginner to architect.</p>
-                    <div class="read-more">Read Full Story <span class="material-symbols-rounded">arrow_forward</span></div>
+                    <p>Not all blocks are the same. Learn how our progressive difficulty system helps your child master
+                        STEM skills from beginner to architect.</p>
+                    <div class="read-more">Read Full Story <span class="material-symbols-rounded">arrow_forward</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -207,7 +500,8 @@
                     <div class="blog-meta">Gift Guide</div>
                     <h3>Ultimate Gift Guide for Ages 3-6</h3>
                     <p>From rotating gardens to study sets. The best presents for birthdays and holidays.</p>
-                    <a href="article-gift-guide.html" class="read-more">Read Guide <span class="material-symbols-rounded">arrow_forward</span></a>
+                    <a href="article-gift-guide.html" class="read-more">Read Guide <span
+                            class="material-symbols-rounded">arrow_forward</span></a>
                 </div>
             </article>
 
@@ -220,7 +514,8 @@
                     <div class="blog-meta">Winter Toys</div>
                     <h3>Build Your Own Frozen Kingdom</h3>
                     <p>Discover the Ice Series (L1-L3). From simple crystals to a majestic castle.</p>
-                    <a href="article-ice-kingdom.html" class="read-more">Read Article <span class="material-symbols-rounded">arrow_forward</span></a>
+                    <a href="article-ice-kingdom.html" class="read-more">Read Article <span
+                            class="material-symbols-rounded">arrow_forward</span></a>
                 </div>
             </article>
 
@@ -233,7 +528,8 @@
                     <div class="blog-meta">STEM & Nature</div>
                     <h3>Teaching Marine Life with Blocks</h3>
                     <p>Deep dive into the Ocean Series. Build reefs and learn about sea creatures.</p>
-                    <a href="article-ocean-explorer.html" class="read-more">Read Article <span class="material-symbols-rounded">arrow_forward</span></a>
+                    <a href="article-ocean-explorer.html" class="read-more">Read Article <span
+                            class="material-symbols-rounded">arrow_forward</span></a>
                 </div>
             </article>
 
@@ -246,7 +542,8 @@
                     <div class="blog-meta">Furniture</div>
                     <h3>Pink, Blue or Green?</h3>
                     <p>Choosing the right chair color and why ergonomics matter for toddlers.</p>
-                    <a href="article-ergonomics.html" class="read-more">Read Article <span class="material-symbols-rounded">arrow_forward</span></a>
+                    <a href="article-ergonomics.html" class="read-more">Read Article <span
+                            class="material-symbols-rounded">arrow_forward</span></a>
                 </div>
             </article>
 
@@ -260,53 +557,84 @@
     </div>
 
     <!-- 统一底部模块 -->
-    <footer id="about" style="background: #F4F4F4; padding: 60px 0 30px; margin-top: 80px; border-top: 1px solid #EAEAEA;">
+    <footer id="about"
+        style="background: #F4F4F4; padding: 60px 0 30px; margin-top: 80px; border-top: 1px solid #EAEAEA;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;">
-                
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;">
+
                 <!-- 品牌 -->
                 <div class="footer-col">
-                    <div style="font-size: 1.4rem; font-weight: 800; color: #6750A4; display: flex; align-items: center; gap: 6px; margin-bottom: 16px;">
+                    <div
+                        style="font-size: 1.4rem; font-weight: 800; color: #6750A4; display: flex; align-items: center; gap: 6px; margin-bottom: 16px;">
                         <span class="material-symbols-rounded" style="color:#BF4638">extension</span>
                         SUPUZZ
                     </div>
                     <p style="color: #49454F; font-size: 0.95rem; line-height: 1.6;">
-                        Designed in California. Dedicated to creating safe, ergonomic furniture and open-ended STEM toys for the next generation of creators.
+                        Designed in California. Dedicated to creating safe, ergonomic furniture and open-ended STEM toys
+                        for the next generation of creators.
                     </p>
                 </div>
 
                 <!-- 亚马逊 -->
                 <div class="footer-col">
-                    <h4 style="color: #6750A4; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">Shop on Amazon</h4>
+                    <h4
+                        style="color: #6750A4; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        Shop on Amazon</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0CT9R3PRQ?th=1" target="_blank" style="color: #49454F; text-decoration: none; transition: color 0.2s;">Pink/Blue/Green Chair</a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0FLPJ2DMP?th=1" target="_blank" style="color: #49454F; text-decoration: none; transition: color 0.2s;">Table & Chair Set</a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank" style="color: #49454F; text-decoration: none; transition: color 0.2s;">Rotating Garden Toy</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0CT9R3PRQ?th=1"
+                                target="_blank"
+                                style="color: #49454F; text-decoration: none; transition: color 0.2s;">Pink/Blue/Green
+                                Chair</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0FLPJ2DMP?th=1"
+                                target="_blank"
+                                style="color: #49454F; text-decoration: none; transition: color 0.2s;">Table & Chair
+                                Set</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PPWYML?th=1"
+                                target="_blank"
+                                style="color: #49454F; text-decoration: none; transition: color 0.2s;">Rotating Garden
+                                Toy</a></li>
                     </ul>
                 </div>
 
                 <!-- 系列 -->
                 <div class="footer-col">
-                    <h4 style="color: #6750A4; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">Building Series</h4>
+                    <h4
+                        style="color: #6750A4; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        Building Series</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PPQ2T3?th=1" target="_blank" style="color: #49454F; text-decoration: none; transition: color 0.2s;">Ice World (Level 1-3)</a></li>
-                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PNRWJ1?th=1" target="_blank" style="color: #49454F; text-decoration: none; transition: color 0.2s;">Ocean World (Level 1-3)</a></li>
-                        <li style="margin-bottom: 12px;"><a href="article-levels.html" style="color: #BF4638; font-weight: 600; text-decoration: none;">About Level System</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PPQ2T3?th=1"
+                                target="_blank"
+                                style="color: #49454F; text-decoration: none; transition: color 0.2s;">Ice World (Level
+                                1-3)</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PNRWJ1?th=1"
+                                target="_blank"
+                                style="color: #49454F; text-decoration: none; transition: color 0.2s;">Ocean World
+                                (Level 1-3)</a></li>
+                        <li style="margin-bottom: 12px;"><a href="article-levels.html"
+                                style="color: #BF4638; font-weight: 600; text-decoration: none;">About Level System</a>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- 导航 -->
                 <div class="footer-col">
-                    <h4 style="color: #6750A4; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">Explore</h4>
+                    <h4
+                        style="color: #6750A4; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; font-weight: 700;">
+                        Explore</h4>
                     <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 12px;"><a href="index.html" style="color: #49454F; text-decoration: none;">Home</a></li>
-                        <li style="margin-bottom: 12px;"><a href="blog.html" style="color: #49454F; text-decoration: none;">Journal & Blog</a></li>
-                        <li style="margin-bottom: 12px;"><a href="index.html#products" style="color: #49454F; text-decoration: none;">All Products</a></li>
+                        <li style="margin-bottom: 12px;"><a href="index.html"
+                                style="color: #49454F; text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 12px;"><a href="blog.html"
+                                style="color: #49454F; text-decoration: none;">Journal & Blog</a></li>
+                        <li style="margin-bottom: 12px;"><a href="index.html#products"
+                                style="color: #49454F; text-decoration: none;">All Products</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div style="text-align: center; padding-top: 30px; border-top: 1px solid #DDDDDD; color: #888; font-size: 0.85rem;">
+            <div
+                style="text-align: center; padding-top: 30px; border-top: 1px solid #DDDDDD; color: #888; font-size: 0.85rem;">
                 &copy; 2025 SUPUZZ Inc. All rights reserved. | <a href="#" style="color: #888;">Privacy Policy</a>
             </div>
         </div>
@@ -335,24 +663,24 @@
             const blogGrid = document.querySelector('.blog-grid');
             const loadMoreBtn = document.getElementById('loadMoreBtn');
             const noMoreText = document.getElementById('noMoreText');
-            
+
             let currentFilter = 'all';
-            let loadedCount = 0; 
-            const itemsPerLoad = 3; 
-            let allBlogData = []; 
+            let loadedCount = 0;
+            const itemsPerLoad = 3;
+            let allBlogData = [];
 
             // 筛选函数
             function applyFilter(filterValue) {
                 currentFilter = filterValue;
                 const allCards = document.querySelectorAll('.blog-card');
-                
+
                 allCards.forEach(card => {
                     const cardCategory = card.getAttribute('data-category');
                     if (filterValue === 'all' || filterValue === cardCategory) {
                         card.style.display = 'flex';
                         // 动画重置技巧
                         card.style.animation = 'none';
-                        card.offsetHeight; 
+                        card.offsetHeight;
                         card.style.animation = 'fadeIn 0.5s ease-in-out';
                     } else {
                         card.style.display = 'none';
@@ -387,7 +715,7 @@
                     const article = document.createElement('article');
                     article.className = 'blog-card';
                     article.setAttribute('data-category', post.category);
-                    
+
                     if (currentFilter !== 'all' && currentFilter !== post.category) {
                         article.style.display = 'none';
                     }
@@ -418,7 +746,7 @@
                 }
 
                 const nextBatch = allBlogData.slice(loadedCount, loadedCount + itemsPerLoad);
-                
+
                 if (nextBatch.length > 0) {
                     renderPosts(nextBatch);
                     loadedCount += nextBatch.length;
