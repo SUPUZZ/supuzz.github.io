@@ -662,17 +662,22 @@
 
     <!-- Script -->
     <script>
-        // 1. 移动端菜单逻辑
+        // 1. 移动端菜单逻辑 (修复版：解决电脑端点击卡死问题)
         function toggleMenu() {
+            // 如果是电脑端（屏幕宽度大于768px），不执行菜单锁定逻辑
+            if (window.innerWidth > 768) {
+                return;
+            }
+
             const nav = document.getElementById('navLinks');
             const body = document.body;
 
             if (nav.classList.contains('active')) {
                 nav.classList.remove('active');
-                body.style.overflow = 'auto';
+                body.style.overflow = 'auto'; // 恢复滚动
             } else {
                 nav.classList.add('active');
-                body.style.overflow = 'hidden';
+                body.style.overflow = 'hidden'; // 禁止滚动
             }
         }
 
@@ -690,7 +695,7 @@
             if (menuBtn) menuBtn.addEventListener('keydown', handleKeyDown);
             if (closeBtn) closeBtn.addEventListener('keydown', handleKeyDown);
 
-            // 2. 加载 Products JSON (新增部分)
+            // 2. 加载 Products JSON
             const productGrid = document.getElementById('product-grid');
 
             fetch('products.json')
@@ -705,12 +710,12 @@
                         const card = document.createElement('div');
                         card.className = 'product-card';
 
-                        // 动态设置标签样式，如果有 tagStyle 就使用，否则用默认 CSS 类样式
                         const tagStyleAttr = product.tagStyle ? `style="${product.tagStyle}"` : '';
 
                         card.innerHTML = `
                             <div class="card-img">
-                                <img src="${product.image}" alt="${product.title}">
+                                <!-- 懒加载优化 -->
+                                <img src="${product.image}" alt="${product.title}" loading="lazy" width="300" height="300">
                             </div>
                             <span class="tag" ${tagStyleAttr}>${product.tag}</span>
                             <h3>${product.title}</h3>
@@ -729,7 +734,7 @@
                     productGrid.innerHTML = '<div style="text-align:center; width:100%; grid-column: 1/-1;">Unable to load products. <a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" style="text-decoration:underline">Visit our Amazon Store</a></div>';
                 });
 
-            // 3. 加载 Blog JSON (原有逻辑)
+            // 3. 加载 Blog JSON
             const blogGrid = document.getElementById('home-blog-grid');
 
             fetch('blog.json')
@@ -749,7 +754,7 @@
 
                         cardLink.innerHTML = `
                             <div style="height: 180px; overflow:hidden; background:#f5f5f5;">
-                                <img src="${post.image}" style="object-fit:cover; height:100%; width:100%;" alt="${post.title}">
+                                <img src="${post.image}" style="object-fit:cover; height:100%; width:100%;" alt="${post.title}" loading="lazy">
                             </div>
                             <div class="blog-content">
                                 <h3 style="font-size: 1.25rem; margin-bottom: 8px; color:#1C1B1F;">${post.title}</h3>
