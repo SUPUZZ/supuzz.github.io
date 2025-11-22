@@ -1,32 +1,62 @@
 [
     {
-        "id": "chair",
-        "title": "Adjustable Toddler Chair",
-        "description": "Pink, Green, and Blue available.",
-        "image": "images/toddler-chair.png",
-        "price": "$89.99",
-        "link": "https://www.amazon.com/dp/B0CT9R3PRQ?th=1",
+        "id": "chair-pink",
+        "title": "Pink Toddler Chair",
+        "description": "Ergonomic kid chair. Available in Pink, Green, and Blue.",
+        "image": "product-images/toddler-chair-pink.png",
+        "price": "$36.99",
+        "link": "https://www.amazon.com/dp/B0CT9R3PRQ?maas=maas_adg_6E08DEB93CED55464C04979D074D4DE6_afap_abs&ref_=aa_maas&tag=maas",
         "tag": "Best Seller",
-        "tagStyle": ""
-    },
-    {
-        "id": "garden",
-        "title": "Rotating Garden Series",
-        "description": "Build a garden that actually spins!",
-        "image": "images/garden-set.png",
-        "price": "$49.99",
-        "link": "https://www.amazon.com/dp/B0F5PPWYML?th=1",
-        "tag": "Creative",
         "tagStyle": "background:#FFDAD6; color:#410002"
     },
     {
-        "id": "ice",
-        "title": "Ice World Series",
-        "description": "Build a frozen castle. Step-by-step.",
-        "image": "images/ice-series.png",
-        "price": "From $19.99",
-        "link": "https://www.amazon.com/dp/B0F5PPQ2T3?th=1",
-        "tag": "Levels 1-3",
-        "tagStyle": "background:#E8DEF8; color:#1D192B"
+        "id": "table-set",
+        "title": "Kid Table & Chair Set",
+        "description": "PP Plastic Toddler Table for Ages 1 2 3 4, Promoting Focus and Security",
+        "image": "product-images/table-set.png",
+        "price": "$129",
+        "link": "https://www.amazon.com/dp/B0FLPJ2DMP?th=1",
+        "tag": "Furniture",
+        "tagStyle": "background:#EADDFF; color:#21005D"
+    },
+    {
+        "id": "ice-l3",
+        "title": "Ice World: Frozen Castle (L3)",
+        "description": "Level 3 Advanced set. Build a majestic translucent ice palace.",
+        "image": "product-images/ice-series-l3.png",
+        "price": "$49.99",
+        "link": "https://www.amazon.com/dp/B0FHK8V6ZZ?maas=maas_adg_1D6AB051DFE94B25B8E72F6C231C2BC3_afap_abs&ref_=aa_maas&tag=maas",
+        "tag": "Winter Series",
+        "tagStyle": "background:#D0BCFF; color:#381E72"
+    },
+    {
+        "id": "ocean-l3",
+        "title": "Ocean World: Coral Reef (L3)",
+        "description": "Explore marine life and build a giant reef.",
+        "image": "product-images/ocean-series-l3.png",
+        "price": "$49.99",
+        "link": "https://www.amazon.com/dp/B0FHK6RHT9?maas=maas_adg_4093195D4DD7458D580A081C7138D72E_afap_abs&ref_=aa_maas&tag=maas",
+        "tag": "New Arrival",
+        "tagStyle": "background:#C4EED0; color:#005221"
+    },
+    {
+        "id": "ocean-l1",
+        "title": "Ocean World: Sea Creatures (L1)",
+        "description": "Level 1 Starter set. Perfect for beginners to build fish and crabs.",
+        "image": "product-images/ocean-series-l1.png",
+        "price": "$19.99",
+        "link": "https://www.amazon.com/dp/B0F5PNRWJ1?maas=maas_adg_3761AA969BCF44D54107BACE7A1C2565_afap_abs&ref_=aa_maas&tag=maas",
+        "tag": "STEM Starter",
+        "tagStyle": "background:#C4EED0; color:#005221"
+    },
+    {
+        "id": "garden",
+        "title": "Rotating Flower Garden",
+        "description": "Rotating Garden Building Blocks STEM Toys for Kids Ages 3-5, 74 PCS",
+        "image": "product-images/garden-toy.png",
+        "price": "$39.99",
+        "link": "https://www.amazon.com/dp/B0F5PPWYML?th=1",
+        "tag": "Kids Favorite",
+        "tagStyle": "background:#FFD8E4; color:#31111D"
     }
 ]
