@@ -7,71 +7,197 @@
     <title>Deep Dive: Teaching Marine Life with Ocean Blocks | SUPUZZ</title>
     <meta name="description"
         content="Explore the coral reef with SUPUZZ Ocean Series. A STEM building guide to marine biology for kids.">
+
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <!-- 浏览器标签栏图标（核心必填） -->
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <!-- 高分辨率PNG图标（适配现代浏览器） -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <!-- 苹果设备主屏图标（可选，适配iPhone/iPad） -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <!-- PWA配置（可选，适配安卓设备） -->
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#6750A4">
 
     <style>
-        /* 复用样式 */
+        /* --- 全局变量 & 基础样式 (复用 Index) --- */
         :root {
             --primary: #6750A4;
+            --on-primary: #FFFFFF;
+            --primary-container: #EADDFF;
+            --on-primary-container: #21005D;
+            --secondary: #BF4638;
+            --bg: #FFFBFE;
+            --surface: #FFFFFF;
             --text-main: #1C1B1F;
             --text-sub: #49454F;
-            --bg: #FFFBFE;
+            --radius-lg: 16px;
+            --shadow-sm: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             font-family: 'Outfit', sans-serif;
             background: var(--bg);
             color: var(--text-main);
-            margin: 0;
-            line-height: 1.8;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
             color: inherit;
+            transition: color 0.2s;
         }
 
         img {
             width: 100%;
-            border-radius: 16px;
-            margin: 32px 0;
+            height: auto;
+            display: block;
         }
 
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header (统一 Index 样式) --- */
         header {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            height: 72px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
         }
 
-        .back-link {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            gap: 6px;
+            letter-spacing: -0.5px;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a:not(.btn-nav-amazon) {
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        .nav-links a:not(.btn-nav-amazon):hover {
+            color: var(--primary);
+        }
+
+        /* 亚马逊按钮 */
+        .btn-nav-amazon {
+            background-color: #FFD814;
+            color: #0F1111 !important;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-weight: 600 !important;
+            font-size: 0.9rem;
+            border: 1px solid #FCD200;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .btn-nav-amazon:hover {
+            background-color: #F7CA00;
+            border-color: #F2C200;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .nav-close-btn {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* --- Breadcrumb (面包屑导航) --- */
+        .breadcrumb {
+            padding-top: 100px;
+            /* 避开固定 Header */
+            padding-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-sub);
             display: flex;
             align-items: center;
             gap: 8px;
-            color: var(--text-sub);
-            font-weight: 500;
-            margin-bottom: 20px;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .breadcrumb .separator {
+            color: #ccc;
+            font-size: 0.8rem;
+        }
+
+        .breadcrumb .current {
+            color: var(--text-main);
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* --- Article Styles --- */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .article-header {
-            margin: 60px 0 40px;
+            margin: 20px 0 40px;
             text-align: center;
         }
 
@@ -81,75 +207,228 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 12px;
         }
 
-        /* Ocean Blue Tag */
         h1 {
             font-size: 2.5rem;
             line-height: 1.2;
-            margin: 16px 0;
+            margin-bottom: 16px;
+            color: var(--text-main);
         }
 
         .meta {
             color: #777;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+        }
+
+        .featured-img {
+            width: 100%;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-sub);
         }
 
         .content h2 {
             font-size: 1.8rem;
-            margin-top: 40px;
-            margin-bottom: 16px;
+            margin-top: 50px;
+            margin-bottom: 20px;
             color: #006994;
+            /* Ocean Blue for headings */
+            font-weight: 700;
         }
 
+        .content p {
+            margin-bottom: 24px;
+        }
+
+        .content a {
+            color: #006994;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* CTA Box */
         .cta-box {
             background: #E0F7FA;
-            padding: 30px;
-            border-radius: 16px;
+            padding: 40px;
+            border-radius: 24px;
             text-align: center;
-            margin: 40px 0;
+            margin: 60px 0;
             border: 1px solid #B2EBF2;
         }
 
-        .btn {
+        .cta-box h2 {
+            margin-top: 0;
+            color: #006064;
+        }
+
+        .btn-cta {
             background: #006994;
-            color: white;
-            padding: 12px 30px;
+            color: white !important;
+            padding: 14px 36px;
             border-radius: 100px;
             font-weight: 700;
-            display: inline-block;
-            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 20px;
+            text-decoration: none !important;
+            transition: transform 0.2s;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.02);
+            background: #00567a;
+        }
+
+        /* --- Footer (统一 Index 样式) --- */
+        footer {
+            background: #F4F4F4;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            border-top: 1px solid #EAEAEA;
+        }
+
+        .footer-col h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                justify-content: center;
+                transform: translateY(-100%);
+                transition: 0.3s;
+                z-index: 999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 0 20px;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .nav-close-btn {
+                display: block;
+            }
+
+            .nav-links a:not(.btn-nav-amazon) {
+                font-size: 1.5rem;
+            }
+
+            .btn-nav-amazon {
+                margin-top: 10px;
+                padding: 12px 32px;
+                font-size: 1.1rem;
+                width: auto;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <header>
-            <a href="blog.html" class="back-link"><span class="material-symbols-rounded">arrow_back</span> Back to
-                Journal</a>
-        </header>
+    <!-- 1. 统一 Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <span class="material-symbols-rounded" style="color:var(--secondary)">extension</span>
+                    SUPUZZ
+                </a>
 
-        <article>
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <span class="material-symbols-rounded" style="font-size: 32px;">menu</span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li class="nav-close-btn" onclick="toggleMenu()">
+                        <span class="material-symbols-rounded">close</span>
+                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="blog.html">Journal</a></li>
+                    <li>
+                        <a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank" class="btn-nav-amazon"
+                            onclick="toggleMenu()">
+                            Shop on Amazon
+                            <span class="material-symbols-rounded" style="font-size: 18px;">shopping_cart</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 2. 面包屑导航 (Breadcrumb) -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="material-symbols-rounded separator" style="font-size:16px">chevron_right</span>
+            <a href="blog.html">Journal</a>
+            <span class="material-symbols-rounded separator" style="font-size:16px">chevron_right</span>
+            <span class="current">Ocean Series Guide</span>
+        </div>
+
+        <!-- 文章主体 -->
+        <article class="article-container">
             <div class="article-header">
                 <span class="tag">Ocean STEM</span>
                 <h1>Deep Dive: Teaching Marine Life with Blocks</h1>
-                <p class="meta">By SUPUZZ Education</p>
+                <p class="meta">By SUPUZZ Education &bull; 4 min read</p>
             </div>
 
-            <img src="images/ocean-l1.png" alt="Ocean building blocks">
+            <img src="images/ocean-l1.png" alt="Ocean building blocks" class="featured-img">
 
             <div class="content">
                 <p>The ocean is a mysterious place. What better way to explore it than by building it? The SUPUZZ
-                    <strong>Ocean Series</strong> isn't just a toy; it's a biology lesson in a box.</p>
+                    <strong>Ocean Series</strong> isn't just a toy; it's a biology lesson in a box.
+                </p>
 
                 <h2>Start Small: Sea Creatures (Level 1)</h2>
                 <p>Our <strong>Level 1</strong> set introduces children to individual inhabitants of the reef. Kids can
                     build small fish, crabs, and sea stars. It's a great conversation starter about what these animals
                     eat and how they swim.</p>
-                <p><a href="https://www.amazon.com/dp/B0F5PNRWJ1?th=1"
-                        style="text-decoration:underline; color:#006994; font-weight:700;">See Level 1 on Amazon
+                <p><a href="https://www.amazon.com/dp/B0F5PNRWJ1?th=1" target="_blank">See Level 1 on Amazon
                         &rarr;</a></p>
 
                 <h2>Build the Ecosystem (Level 2 & 3)</h2>
@@ -160,20 +439,97 @@
 
                 <h2>Why Ocean Themes?</h2>
                 <p>Blue colors are calming, and the variety of shapes in a coral reef stimulates visual processing. It's
-                    the perfect rainy-day activity.</p>
+                    the perfect rainy-day activity that combines art, science, and motor skills.</p>
 
                 <div class="cta-box">
                     <h2>Create Your Aquarium</h2>
                     <p>Collect all 3 levels to build a massive underwater scene.</p>
-                    <a href="https://www.amazon.com/dp/B0FHK6RHT9?th=1" target="_blank" class="btn">Shop Complete Ocean
-                        Collection</a>
+                    <a href="https://www.amazon.com/dp/B0FHK6RHT9?th=1" target="_blank" class="btn-cta">
+                        Shop Complete Collection
+                        <span class="material-symbols-rounded" style="margin-left:8px">open_in_new</span>
+                    </a>
                 </div>
             </div>
         </article>
-
-        <!-- 插入统一底部代码 -->
-        <footer>...</footer>
     </div>
+
+    <!-- 3. 统一 Footer -->
+    <footer id="about">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;">
+
+                <!-- Brand -->
+                <div class="footer-col">
+                    <div
+                        style="font-size: 1.4rem; font-weight: 800; color: #6750A4; display: flex; align-items: center; gap: 6px; margin-bottom: 16px;">
+                        <span class="material-symbols-rounded" style="color:#BF4638">extension</span>
+                        SUPUZZ
+                    </div>
+                    <p style="color: #49454F; font-size: 0.95rem; line-height: 1.6;">
+                        Designed in California. Dedicated to creating safe, ergonomic furniture and open-ended STEM toys
+                        for the next generation of creators.
+                    </p>
+                </div>
+
+                <!-- Amazon Links -->
+                <div class="footer-col">
+                    <h4 style="color: #6750A4; margin-bottom: 20px;">Shop on Amazon</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0CT9R3PRQ?th=1"
+                                target="_blank">Pink/Blue/Green Chair</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0FLPJ2DMP?th=1"
+                                target="_blank">Table & Chair Set</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PPWYML?th=1"
+                                target="_blank">Rotating Garden Toy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Series -->
+                <div class="footer-col">
+                    <h4 style="color: #6750A4; margin-bottom: 20px;">Building Series</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PPQ2T3?th=1"
+                                target="_blank">Ice World (Level 1-3)</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PNRWJ1?th=1"
+                                target="_blank">Ocean World (Level 1-3)</a></li>
+                        <li style="margin-bottom: 12px;"><a href="article-levels.html"
+                                style="color: #BF4638; font-weight: 600;">About Level System</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div class="footer-col">
+                    <h4 style="color: #6750A4; margin-bottom: 20px;">Explore</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="index.html">Home</a></li>
+                        <li style="margin-bottom: 12px;"><a href="blog.html">Journal & Blog</a></li>
+                        <li style="margin-bottom: 12px;"><a href="index.html#products">All Products</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; padding-top: 30px; border-top: 1px solid #DDDDDD; color: #888; font-size: 0.85rem;">
+                &copy; 2025 SUPUZZ Inc. All rights reserved. | <a href="#" style="color: #888;">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 菜单逻辑脚本 -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            } else {
+                nav.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+    </script>
+
 </body>
 
 </html>

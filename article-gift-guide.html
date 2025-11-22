@@ -7,167 +7,538 @@
     <title>The Ultimate Gift Guide for 3-6 Year Olds | SUPUZZ</title>
     <meta name="description"
         content="Struggling to find the perfect gift? From pink toddler chairs to rotating flower gardens, here are the best SUPUZZ gifts for every child.">
+
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <!-- 浏览器标签栏图标（核心必填） -->
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <!-- 高分辨率PNG图标（适配现代浏览器） -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <!-- 苹果设备主屏图标（可选，适配iPhone/iPad） -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <!-- PWA配置（可选，适配安卓设备） -->
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#6750A4">
 
-
     <style>
-        /* 复用样式 */
+        /* --- 全局变量 & 基础样式 --- */
         :root {
             --primary: #6750A4;
+            --on-primary: #FFFFFF;
+            --primary-container: #EADDFF;
+            --on-primary-container: #21005D;
+            --secondary: #BF4638;
+            --bg: #FFFBFE;
+            --surface: #FFFFFF;
             --text-main: #1C1B1F;
             --text-sub: #49454F;
-            --bg: #FFFBFE;
+            --radius-lg: 16px;
+            --shadow-sm: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
             font-family: 'Outfit', sans-serif;
             background: var(--bg);
             color: var(--text-main);
-            margin: 0;
-            line-height: 1.8;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
         a {
             text-decoration: none;
             color: inherit;
+            transition: color 0.2s;
         }
 
         img {
             width: 100%;
-            border-radius: 16px;
-            margin: 32px 0;
+            height: auto;
+            display: block;
         }
 
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header (统一样式) --- */
         header {
-            padding: 20px 0;
-            border-bottom: 1px solid #eee;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            height: 72px;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: center;
         }
 
-        .back-link {
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary);
+            display: flex;
+            gap: 6px;
+            letter-spacing: -0.5px;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a:not(.btn-nav-amazon) {
+            font-weight: 500;
+            color: var(--text-sub);
+        }
+
+        .nav-links a:not(.btn-nav-amazon):hover {
+            color: var(--primary);
+        }
+
+        /* 亚马逊按钮 */
+        .btn-nav-amazon {
+            background-color: #FFD814;
+            color: #0F1111 !important;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-weight: 600 !important;
+            font-size: 0.9rem;
+            border: 1px solid #FCD200;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+
+        .btn-nav-amazon:hover {
+            background-color: #F7CA00;
+            border-color: #F2C200;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        .nav-close-btn {
+            display: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* --- Breadcrumb (面包屑) --- */
+        .breadcrumb {
+            padding-top: 100px;
+            padding-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--text-sub);
             display: flex;
             align-items: center;
             gap: 8px;
-            color: var(--text-sub);
-            font-weight: 500;
-            margin-bottom: 20px;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        .breadcrumb .separator {
+            color: #ccc;
+            font-size: 0.8rem;
+        }
+
+        .breadcrumb .current {
+            color: var(--text-main);
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* --- Article Styles --- */
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .article-header {
-            margin: 60px 0 40px;
+            margin: 20px 0 40px;
             text-align: center;
         }
 
         .tag {
             color: #E27429;
+            /* 橙色标签，适合礼物主题 */
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 12px;
         }
 
         h1 {
             font-size: 2.5rem;
             line-height: 1.2;
-            margin: 16px 0;
+            margin-bottom: 16px;
+            color: var(--text-main);
         }
 
-        .gift-section {
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
+        .meta {
+            color: #777;
+            font-size: 0.95rem;
         }
 
-        .gift-section h2 {
-            font-size: 1.6rem;
+        .featured-img {
+            width: 100%;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-sub);
+        }
+
+        .content p {
+            margin-bottom: 24px;
+        }
+
+        /* --- Gift Card Styles (优化版) --- */
+        .gift-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.2s;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .gift-card h2 {
+            font-size: 1.5rem;
             color: var(--primary);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            margin-top: 0;
         }
 
-        .shop-link {
-            color: #BF4638;
+        .btn-shop {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #F5F5F5;
+            color: var(--text-main);
+            padding: 10px 24px;
+            border-radius: 100px;
             font-weight: 700;
-            text-decoration: underline;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+
+        .btn-shop:hover {
+            background: #E0E0E0;
+            color: var(--primary);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #F4F4F4;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+            border-top: 1px solid #EAEAEA;
+        }
+
+        .footer-col h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
+
+        /* --- Mobile Responsive --- */
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100vh;
+                background: #fff;
+                flex-direction: column;
+                justify-content: center;
+                transform: translateY(-100%);
+                transition: 0.3s;
+                z-index: 999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 0 20px;
+            }
+
+            .nav-links.active {
+                transform: translateY(0);
+            }
+
+            .nav-close-btn {
+                display: block;
+            }
+
+            .nav-links a:not(.btn-nav-amazon) {
+                font-size: 1.5rem;
+            }
+
+            .btn-nav-amazon {
+                margin-top: 10px;
+                padding: 12px 32px;
+                font-size: 1.1rem;
+                width: auto;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
-        <header>
-            <a href="blog.html" class="back-link"><span class="material-symbols-rounded">arrow_back</span> Back to
-                Journal</a>
-        </header>
+    <!-- 1. 统一 Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <span class="material-symbols-rounded" style="color:var(--secondary)">extension</span>
+                    SUPUZZ
+                </a>
 
-        <article>
+                <button class="menu-btn" onclick="toggleMenu()">
+                    <span class="material-symbols-rounded" style="font-size: 32px;">menu</span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li class="nav-close-btn" onclick="toggleMenu()">
+                        <span class="material-symbols-rounded">close</span>
+                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="blog.html">Journal</a></li>
+                    <li>
+                        <a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank" class="btn-nav-amazon"
+                            onclick="toggleMenu()">
+                            Shop on Amazon
+                            <span class="material-symbols-rounded" style="font-size: 18px;">shopping_cart</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 2. 面包屑导航 -->
+        <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="material-symbols-rounded separator" style="font-size:16px">chevron_right</span>
+            <a href="blog.html">Journal</a>
+            <span class="material-symbols-rounded separator" style="font-size:16px">chevron_right</span>
+            <span class="current">Gift Guide 2025</span>
+        </div>
+
+        <!-- 文章主体 -->
+        <article class="article-container">
             <div class="article-header">
                 <span class="tag">Gift Guide 2025</span>
                 <h1>The Ultimate Gift Guide for 3-6 Year Olds</h1>
-                <p class="meta">Top picks for Birthdays & Holidays</p>
+                <p class="meta">Top picks for Birthdays & Holidays &bull; 3 min read</p>
             </div>
 
-            <img src="images/garden-set.png" alt="Best gifts for toddlers">
+            <img src="images/garden-set.png" alt="Best gifts for toddlers" class="featured-img">
 
             <div class="content">
                 <p>Finding the perfect gift is hard. You want something they will actually play with, but also something
-                    that lasts. Here are our top picks based on personality.</p>
+                    that lasts. Here are our top picks based on personality and play style.</p>
 
-                <div class="gift-section">
+                <!-- 礼物卡片 1 -->
+                <div class="gift-card">
                     <h2>1. For the Dreamer: Rotating Flower Garden</h2>
                     <p>This isn't your average block set. The flowers are colorful, customizable, and best of all—the
-                        base rotates! It creates a magical moving garden that girls absolutely love.</p>
-                    <a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank" class="shop-link">Shop Rotating
-                        Garden &rarr;</a>
+                        base rotates! It creates a magical moving garden that children absolutely love. Great for
+                        developing aesthetic sense and fine motor skills.</p>
+                    <a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank" class="btn-shop">
+                        Shop Rotating Garden
+                        <span class="material-symbols-rounded" style="font-size:18px">arrow_forward</span>
+                    </a>
                 </div>
 
-                <div class="gift-section">
+                <!-- 礼物卡片 2 -->
+                <div class="gift-card">
                     <h2>2. For the Little Student: Table & Chair Set</h2>
-                    <p>Give them a space of their own. Our <strong>Table and Chair Kit</strong> is the perfect setup for
-                        drawing, snacking, and homework. It's a gift that parents appreciate too!</p>
-                    <a href="https://www.amazon.com/dp/B0FLPJ2DMP?th=1" target="_blank" class="shop-link">Shop Furniture
-                        Set &rarr;</a>
+                    <p>Give them a space of their own. Our <strong>Table and Chair Kit</strong> is the perfect ergonomic
+                        setup for
+                        drawing, snacking, and homework. It's a gift that parents appreciate too because it keeps the
+                        mess in one place!</p>
+                    <a href="https://www.amazon.com/dp/B0FLPJ2DMP?th=1" target="_blank" class="btn-shop">
+                        Shop Furniture Set
+                        <span class="material-symbols-rounded" style="font-size:18px">arrow_forward</span>
+                    </a>
                 </div>
 
-                <div class="gift-section">
+                <!-- 礼物卡片 3 -->
+                <div class="gift-card">
                     <h2>3. For the Storyteller: Ice World Series</h2>
-                    <p>If they love fairy tales, they need the Ice Series. Start them with Level 1 and watch them build
-                        their way up to the grand castle.</p>
-                    <a href="https://www.amazon.com/dp/B0F5PPQ2T3?th=1" target="_blank" class="shop-link">Shop Ice
-                        Series &rarr;</a>
+                    <p>If they love fairy tales and winter magic, they need the Ice Series. Start them with Level 1 for
+                        quick wins, and watch them build their way up to the grand castle in Level 3.</p>
+                    <a href="https://www.amazon.com/dp/B0F5PPQ2T3?th=1" target="_blank" class="btn-shop">
+                        Shop Ice Series
+                        <span class="material-symbols-rounded" style="font-size:18px">arrow_forward</span>
+                    </a>
                 </div>
 
-                <div class="gift-section">
+                <!-- 礼物卡片 4 -->
+                <div class="gift-card">
                     <h2>4. For the Scientist: Ocean Series</h2>
-                    <p>Colorful, intricate, and educational. The Ocean series is perfect for kids who love animals and
-                        nature.</p>
-                    <a href="https://www.amazon.com/dp/B0FHK6RHT9?th=1" target="_blank" class="shop-link">Shop Ocean
-                        Series &rarr;</a>
+                    <p>Colorful, intricate, and educational. The Ocean series allows kids to build their own coral
+                        reefs. It's perfect for kids who love animals, nature, and learning how ecosystems work.</p>
+                    <a href="https://www.amazon.com/dp/B0FHK6RHT9?th=1" target="_blank" class="btn-shop">
+                        Shop Ocean Series
+                        <span class="material-symbols-rounded" style="font-size:18px">arrow_forward</span>
+                    </a>
                 </div>
             </div>
         </article>
-
-        <!-- 插入统一底部代码 -->
-        <footer>...</footer>
     </div>
+
+    <!-- 3. 统一 Footer -->
+    <footer id="about">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px;">
+
+                <!-- Brand -->
+                <div class="footer-col">
+                    <div
+                        style="font-size: 1.4rem; font-weight: 800; color: #6750A4; display: flex; align-items: center; gap: 6px; margin-bottom: 16px;">
+                        <span class="material-symbols-rounded" style="color:#BF4638">extension</span>
+                        SUPUZZ
+                    </div>
+                    <p style="color: #49454F; font-size: 0.95rem; line-height: 1.6;">
+                        Designed in California. Dedicated to creating safe, ergonomic furniture and open-ended STEM toys
+                        for the next generation of creators.
+                    </p>
+                </div>
+
+                <!-- Amazon Links -->
+                <div class="footer-col">
+                    <h4 style="color: #6750A4; margin-bottom: 20px;">Shop on Amazon</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0CT9R3PRQ?th=1"
+                                target="_blank">Pink/Blue/Green Chair</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0FLPJ2DMP?th=1"
+                                target="_blank">Table & Chair Set</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PPWYML?th=1"
+                                target="_blank">Rotating Garden Toy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Series -->
+                <div class="footer-col">
+                    <h4 style="color: #6750A4; margin-bottom: 20px;">Building Series</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PPQ2T3?th=1"
+                                target="_blank">Ice World (Level 1-3)</a></li>
+                        <li style="margin-bottom: 12px;"><a href="https://www.amazon.com/dp/B0F5PNRWJ1?th=1"
+                                target="_blank">Ocean World (Level 1-3)</a></li>
+                        <li style="margin-bottom: 12px;"><a href="article-levels.html"
+                                style="color: #BF4638; font-weight: 600;">About Level System</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links -->
+                <div class="footer-col">
+                    <h4 style="color: #6750A4; margin-bottom: 20px;">Explore</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 12px;"><a href="index.html">Home</a></li>
+                        <li style="margin-bottom: 12px;"><a href="blog.html">Journal & Blog</a></li>
+                        <li style="margin-bottom: 12px;"><a href="index.html#products">All Products</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; padding-top: 30px; border-top: 1px solid #DDDDDD; color: #888; font-size: 0.85rem;">
+                &copy; 2025 SUPUZZ Inc. All rights reserved. | <a href="#" style="color: #888;">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 菜单逻辑脚本 -->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            } else {
+                nav.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+    </script>
+
 </body>
 
 </html>

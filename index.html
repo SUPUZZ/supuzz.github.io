@@ -18,14 +18,11 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <!-- 浏览器标签栏图标（核心必填） -->
+    <!-- 浏览器标签栏图标 -->
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <!-- 高分辨率PNG图标（适配现代浏览器） -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <!-- 苹果设备主屏图标（可选，适配iPhone/iPad） -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <!-- PWA配置（可选，适配安卓设备） -->
     <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#6750A4">
 
@@ -97,7 +94,8 @@
             z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            height: 64px;
+            height: 72px;
+            /*稍微增加高度以容纳按钮*/
             border-bottom: 1px solid #f0f0f0;
             display: flex;
             align-items: center;
@@ -123,11 +121,49 @@
         .nav-links {
             display: flex;
             gap: 32px;
+            align-items: center;
+            /* 确保文字和按钮垂直居中 */
         }
 
-        .nav-links a {
+        .nav-links a:not(.btn-nav-amazon) {
             font-weight: 500;
             color: var(--text-sub);
+        }
+
+        /* --- 【新增】导航栏亚马逊按钮样式 --- */
+        .btn-nav-amazon {
+            background-color: #FFD814;
+            /* 亚马逊经典黄 */
+            color: #0F1111 !important;
+            /* 强制文字黑色 */
+            padding: 8px 20px;
+            border-radius: 24px;
+            /* 胶囊形状 */
+            font-weight: 600 !important;
+            font-size: 0.9rem;
+            border: 1px solid #FCD200;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            /* 图标和文字的间距 */
+            white-space: nowrap;
+        }
+
+        .btn-nav-amazon:hover {
+            background-color: #F7CA00;
+            /* 悬停时变深 */
+            border-color: #F2C200;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            opacity: 1;
+            /* 覆盖默认a标签的opacity变化 */
+        }
+
+        .btn-nav-amazon:active {
+            transform: translateY(1px);
+            box-shadow: none;
         }
 
         .menu-btn {
@@ -136,10 +172,9 @@
             border: none;
             color: var(--text-main);
             cursor: pointer;
-            font-size: 0; /* 消除按钮默认尺寸 */
+            font-size: 0;
         }
 
-        /* --- 【修复】将关闭按钮的样式移到CSS，避免行内样式冲突 --- */
         .nav-close-btn {
             position: absolute;
             top: 20px;
@@ -147,7 +182,7 @@
             font-size: 2rem;
             padding: 10px;
             cursor: pointer;
-            display: none; /* 默认隐藏 */
+            display: none;
             background: none;
             border: none;
             color: var(--text-main);
@@ -184,7 +219,7 @@
             box-shadow: var(--shadow-sm);
         }
 
-        /* --- Buttons 核心优化：统一按钮样式，增加容器类 --- */
+        /* --- Buttons (Hero区域) --- */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -199,7 +234,6 @@
             gap: 8px;
             transition: transform 0.2s;
             box-sizing: border-box;
-            /* 强制盒模型 */
         }
 
         .btn:active {
@@ -222,17 +256,14 @@
             color: var(--primary);
             font-weight: 700;
             border: 1px solid #eee;
-            /* 增加边框，提升辨识度 */
         }
 
         .btn-white:hover {
             background: #f9f9f9;
         }
 
-        /* 按钮容器：用于移动端控制外边距，避免按钮溢出 */
         .btn-container {
             padding: 0 20px;
-            /* 移动端左右间距 */
             width: 100%;
             box-sizing: border-box;
         }
@@ -318,7 +349,7 @@
             font-size: 1.2rem;
         }
 
-        /* --- 首页博客样式 (紫色区域) --- */
+        /* --- Blog --- */
         .blog-section {
             background: var(--primary-container);
             padding: 80px 0;
@@ -394,7 +425,7 @@
             color: var(--text-sub);
         }
 
-        /* --- 移动端媒体查询 优化 --- */
+        /* --- 移动端媒体查询 --- */
         @media (max-width: 768px) {
             .menu-btn {
                 display: block;
@@ -413,24 +444,31 @@
                 transition: 0.3s;
                 z-index: 999;
                 padding: 0 20px;
-                /* 增加内边距，避免菜单贴边 */
             }
 
             .nav-links.active {
                 transform: translateY(0);
             }
 
-            /* 【修复】菜单激活时显示关闭按钮 */
             .nav-links.active .nav-close-btn {
                 display: block;
             }
 
-            .nav-links a {
+            .nav-links a:not(.btn-nav-amazon) {
                 font-size: 1.5rem;
             }
 
+            /* 【新增】移动端菜单中的亚马逊按钮适配 */
+            .btn-nav-amazon {
+                margin-top: 10px;
+                padding: 12px 32px;
+                font-size: 1.1rem;
+                width: auto;
+                justify-content: center;
+            }
+
             .hero {
-                padding-top: 80px;
+                padding-top: 100px;
                 text-align: center;
             }
 
@@ -455,12 +493,9 @@
                 grid-template-columns: 1fr;
             }
 
-            /* 移动端按钮：宽度100%，但通过容器控制外边距 */
             .btn {
                 width: 100%;
             }
-
-            /* 移除直接给按钮加的margin，改用容器控制 */
         }
     </style>
 </head>
@@ -478,16 +513,24 @@
                     <span class="material-symbols-rounded" style="font-size: 32px;">menu</span>
                 </button>
                 <ul class="nav-links" id="navLinks">
-                    <!-- 【修复】移除行内样式，改为CSS控制显示 -->
+                    <!-- 关闭按钮 -->
                     <li class="nav-close-btn" aria-label="Close menu" onclick="toggleMenu()">
                         <span class="material-symbols-rounded">close</span>
                     </li>
-                    <!-- 【新增】为所有菜单选项添加收起菜单的点击事件 -->
+
+                    <!-- 导航链接 -->
                     <li><a href="#home" onclick="toggleMenu()">Home</a></li>
                     <li><a href="#products" onclick="toggleMenu()">Products</a></li>
                     <li><a href="blog.html" onclick="toggleMenu()">Journal</a></li>
-                    <li><a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank"
-                            style="color:var(--secondary); font-weight:700;" onclick="toggleMenu()">Shop Amazon</a></li>
+
+                    <!-- 【修改】亚马逊风格按钮 -->
+                    <li>
+                        <a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank" class="btn-nav-amazon"
+                            onclick="toggleMenu()">
+                            Shop on Amazon
+                            <span class="material-symbols-rounded" style="font-size: 18px;">shopping_cart</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -577,19 +620,18 @@
         </div>
     </section>
 
-    <!-- 博客区域：优化按钮容器 -->
+    <!-- 博客区域 -->
     <div class="container" id="journal">
         <div class="blog-section">
             <h2>Latest from the Journal</h2>
 
             <!-- 空容器，等待 JS 填充 -->
             <div class="grid" id="home-blog-grid" style="padding: 0 20px;">
-                <!-- 内容将通过 blog.json 动态加载 -->
                 <div style="text-align:center; width:100%; grid-column: 1/-1; color: var(--on-primary-container);">
                     Loading updates...</div>
             </div>
 
-            <!-- 查看更多按钮：新增 btn-container 容器控制移动端间距 -->
+            <!-- 查看更多按钮 -->
             <div style="text-align: center; margin-top: 40px;" class="btn-container">
                 <a href="blog.html" class="btn btn-white">
                     View All Articles
@@ -599,7 +641,7 @@
         </div>
     </div>
 
-    <!-- 统一底部模块 -->
+    <!-- Footer -->
     <footer id="about"
         style="background: #F4F4F4; padding: 60px 0 30px; margin-top: 80px; border-top: 1px solid #EAEAEA;">
         <div class="container">
@@ -679,43 +721,38 @@
         </div>
     </footer>
 
-    <!-- Script: 移动端菜单 + 动态加载博客 -->
+    <!-- Script -->
     <script>
         // 1. 移动端菜单逻辑
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
-            const closeBtn = document.querySelector('.nav-close-btn');
             const body = document.body;
 
             if (nav.classList.contains('active')) {
-                // 收起菜单
                 nav.classList.remove('active');
                 body.style.overflow = 'auto';
             } else {
-                // 展开菜单
                 nav.classList.add('active');
                 body.style.overflow = 'hidden';
             }
         }
 
-        // 【新增】适配键盘操作：为菜单按钮和关闭按钮添加回车/空格触发
         document.addEventListener('DOMContentLoaded', () => {
             const menuBtn = document.querySelector('.menu-btn');
             const closeBtn = document.querySelector('.nav-close-btn');
 
-            // 键盘事件处理函数
+            // 键盘事件
             const handleKeyDown = (e) => {
                 if (e.key === 'Enter' || e.key === 'Space') {
-                    e.preventDefault(); // 阻止默认行为（如页面滚动）
+                    e.preventDefault();
                     toggleMenu();
                 }
             };
 
-            // 为按钮绑定键盘事件
             if (menuBtn) menuBtn.addEventListener('keydown', handleKeyDown);
             if (closeBtn) closeBtn.addEventListener('keydown', handleKeyDown);
 
-            // 2. 动态加载博客逻辑 (从 blog.json 读取前 3 篇)
+            // 2. 动态加载博客逻辑
             const blogGrid = document.getElementById('home-blog-grid');
 
             fetch('blog.json')
@@ -724,18 +761,14 @@
                     return response.json();
                 })
                 .then(data => {
-                    // 截取最新的 3 篇文章
                     const latestPosts = data.slice(0, 3);
-
-                    // 清空 "Loading..." 提示
                     blogGrid.innerHTML = '';
 
                     latestPosts.forEach(post => {
-                        // 创建链接卡片
                         const cardLink = document.createElement('a');
                         cardLink.href = post.link;
-                        cardLink.className = 'blog-card'; // 复用 CSS 类
-                        cardLink.style.textDecoration = 'none'; // 去掉下划线
+                        cardLink.className = 'blog-card';
+                        cardLink.style.textDecoration = 'none';
 
                         cardLink.innerHTML = `
                             <div style="height: 180px; overflow:hidden; background:#f5f5f5;">
