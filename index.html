@@ -135,6 +135,22 @@
             background: none;
             border: none;
             color: var(--text-main);
+            cursor: pointer;
+            font-size: 0; /* 消除按钮默认尺寸 */
+        }
+
+        /* --- 【修复】将关闭按钮的样式移到CSS，避免行内样式冲突 --- */
+        .nav-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            padding: 10px;
+            cursor: pointer;
+            display: none; /* 默认隐藏 */
+            background: none;
+            border: none;
+            color: var(--text-main);
         }
 
         /* --- Hero --- */
@@ -404,18 +420,13 @@
                 transform: translateY(0);
             }
 
-            .nav-links a {
-                font-size: 1.5rem;
+            /* 【修复】菜单激活时显示关闭按钮 */
+            .nav-links.active .nav-close-btn {
+                display: block;
             }
 
-            .nav-close-btn {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                font-size: 2rem;
-                padding: 10px;
-                display: block;
-                cursor: pointer;
+            .nav-links a {
+                font-size: 1.5rem;
             }
 
             .hero {
@@ -463,18 +474,20 @@
                     <span class="material-symbols-rounded" style="color:var(--secondary)">extension</span>
                     SUPUZZ
                 </div>
-                <button class="menu-btn" onclick="toggleMenu()">
+                <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">
                     <span class="material-symbols-rounded" style="font-size: 32px;">menu</span>
                 </button>
                 <ul class="nav-links" id="navLinks">
-                    <li class="nav-close-btn" onclick="toggleMenu()" style="display:none;">
+                    <!-- 【修复】移除行内样式，改为CSS控制显示 -->
+                    <li class="nav-close-btn" aria-label="Close menu" onclick="toggleMenu()">
                         <span class="material-symbols-rounded">close</span>
                     </li>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="blog.html">Journal</a></li>
+                    <!-- 【新增】为所有菜单选项添加收起菜单的点击事件 -->
+                    <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="#products" onclick="toggleMenu()">Products</a></li>
+                    <li><a href="blog.html" onclick="toggleMenu()">Journal</a></li>
                     <li><a href="https://www.amazon.com/dp/B0F5PPWYML?th=1" target="_blank"
-                            style="color:var(--secondary); font-weight:700;">Shop Amazon</a></li>
+                            style="color:var(--secondary); font-weight:700;" onclick="toggleMenu()">Shop Amazon</a></li>
                 </ul>
             </nav>
         </div>
@@ -672,19 +685,37 @@
         function toggleMenu() {
             const nav = document.getElementById('navLinks');
             const closeBtn = document.querySelector('.nav-close-btn');
+            const body = document.body;
+
             if (nav.classList.contains('active')) {
+                // 收起菜单
                 nav.classList.remove('active');
-                closeBtn.style.display = 'none';
-                document.body.style.overflow = 'auto';
+                body.style.overflow = 'auto';
             } else {
+                // 展开菜单
                 nav.classList.add('active');
-                closeBtn.style.display = 'block';
-                document.body.style.overflow = 'hidden';
+                body.style.overflow = 'hidden';
             }
         }
 
-        // 2. 动态加载博客逻辑 (从 blog.json 读取前 3 篇)
+        // 【新增】适配键盘操作：为菜单按钮和关闭按钮添加回车/空格触发
         document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.querySelector('.menu-btn');
+            const closeBtn = document.querySelector('.nav-close-btn');
+
+            // 键盘事件处理函数
+            const handleKeyDown = (e) => {
+                if (e.key === 'Enter' || e.key === 'Space') {
+                    e.preventDefault(); // 阻止默认行为（如页面滚动）
+                    toggleMenu();
+                }
+            };
+
+            // 为按钮绑定键盘事件
+            if (menuBtn) menuBtn.addEventListener('keydown', handleKeyDown);
+            if (closeBtn) closeBtn.addEventListener('keydown', handleKeyDown);
+
+            // 2. 动态加载博客逻辑 (从 blog.json 读取前 3 篇)
             const blogGrid = document.getElementById('home-blog-grid');
 
             fetch('blog.json')
