@@ -1,0 +1,50 @@
+[
+    {
+        "title": "The Power of Open-Ended Play",
+        "category": "parenting",
+        "tag": "Parenting Tips",
+        "image": "images/garden-set.png",
+        "description": "Why unstructured play with rotating gardens builds confidence and resilience in toddlers better than screens.",
+        "link": "article-creativity.html"
+    },
+    {
+        "title": "Table Height: The Hidden Factor in Focus",
+        "category": "furniture",
+        "tag": "Ergonomics",
+        "image": "images/toddler-chair.png",
+        "description": "Is your child fidgeting? The table might be too high. A quick guide to matching chair and table heights.",
+        "link": "article-ergonomics.html"
+    },
+    {
+        "title": "Are SUPUZZ Blocks Compatible with Major Brands?",
+        "category": "stem",
+        "tag": "Toy Guide",
+        "image": "images/ice-series.png",
+        "description": "Yes! Learn how to mix our Ice and Ocean series with your existing block collection for endless fun.",
+        "link": "article-levels.html"
+    },
+    {
+        "title": "5 Signs Your Child is Ready for 'Level 2' Blocks",
+        "category": "stem",
+        "tag": "Education",
+        "image": "images/ocean-l1.png",
+        "description": "How to tell if your little builder is ready to move from simple stacking to complex structural engineering.",
+        "link": "article-levels.html"
+    },
+    {
+        "title": "Creating a 'Yes' Space at Home",
+        "category": "parenting",
+        "tag": "Montessori",
+        "image": "images/table-set.png",
+        "description": "How to arrange furniture so you don't have to say 'No' constantly. Promoting independence with accessible design.",
+        "link": "article-ergonomics.html"
+    },
+    {
+        "title": "Winter Activity Ideas: Indoor Ice Castle Building",
+        "category": "stem",
+        "tag": "Seasonal Fun",
+        "image": "images/ice-series.png",
+        "description": "Too cold to go outside? Here is how to stage a Frozen-themed playdate right in your living room.",
+        "link": "article-ice-kingdom.html"
+    }
+]
