@@ -1,10 +1,18 @@
 [
     {
-        "title": "The Power of Open-Ended Play",
-        "category": "parenting",
-        "tag": "Parenting Tips",
-        "image": "images/garden-set.png",
-        "description": "Why unstructured play with rotating gardens builds confidence and resilience in toddlers better than screens.",
-        "link": "article-creativity.html"
+        "title": "Icy World Building Toys: L1-L3 Sets for Creative STEM Play",
+        "category": "STEM Toys",
+        "tag": "Gift Guide",
+        "image": "product-images/icy-world-blocks.webp",
+        "description": "SUPUZZ's Icy World L1-L3 building sets (3-5+ years) feature Arctic animals, large blocks & storage buckets (L2/L3). The perfect Christmas gift for kids' STEM learning and imaginative play!",
+        "link": "article-icy-world-en.html"
+    },
+    {
+        "title": "Unlimited Play: Mix Ocean, Ice & Forest Building Sets",
+        "category": "creative play",
+        "tag": "Play Ideas",
+        "image": "product-images/main-open-end-play.webp",
+        "description": "SUPUZZ's detachable building blocks let kids mix Ocean, Ice & Forest series to build coral trees, fish on branches and their own magical garden—no rules, just creativity!",
+        "link": "article-mix-play-en.html"
     }
 ]
