@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Sturdy, Ergonomic Upgrade from IKEA-Style Plastic Chairs",
+        "category": "Kids Furniture",
+        "tag": "Parenting Essentials",
+        "image": "product-images/kids-chair-side.webp",
+        "description": "SUPUZZ's upgraded kids plastic chair fixes IKEA-style flaws—no wobbly backrest, optimized size for toddlers & kids. Sturdy, safe, and perfect for playtime & study.",
+        "link": "article-kids-chair-en.html"
+    },
+    {
+        "title": "Icy World Building Toys: L1-L3 Sets for Creative STEM Play",
+        "category": "STEM Toys",
+        "tag": "Gift Guide",
+        "image": "product-images/icy-world-blocks.webp",
+        "description": "SUPUZZ's Icy World L1-L3 building sets (3-5+ years) feature Arctic animals, large blocks & storage buckets (L2/L3). The perfect Christmas gift for kids' STEM learning and imaginative play!",
+        "link": "article-icy-world-en.html"
+    },
+    {
+        "title": "Unlimited Play: Mix Ocean, Ice & Forest Building Sets",
+        "category": "creative play",
+        "tag": "Play Ideas",
+        "image": "product-images/main-open-end-play.webp",
+        "description": "SUPUZZ's detachable building blocks let kids mix Ocean, Ice & Forest series to build coral trees, fish on branches and their own magical garden—no rules, just creativity!",
+        "link": "article-mix-play-en.html"
+    }
+]
