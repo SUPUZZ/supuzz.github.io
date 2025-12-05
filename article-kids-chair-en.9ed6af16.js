@@ -207,11 +207,11 @@
       });
     }
   }
-})({"7KZg6":[function(require,module,exports,__globalThis) {
+})({"gJELD":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 63373;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
@@ -715,6 +715,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"7MW21":[function(require,module,exports,__globalThis) {
 
-},{}]},["7KZg6","7MW21"], "7MW21", "parcelRequirec720", {})
+},{}]},["gJELD","7MW21"], "7MW21", "parcelRequirec720", {})
 
 //# sourceMappingURL=article-kids-chair-en.9ed6af16.js.map
