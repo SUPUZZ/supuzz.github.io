@@ -207,7 +207,7 @@
       });
     }
   }
-})({"hwFW9":[function(require,module,exports,__globalThis) {
+})({"kQnTf":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -215,7 +215,7 @@ var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
-module.bundle.HMR_BUNDLE_ID = "a9674e99aea3d3b7";
+module.bundle.HMR_BUNDLE_ID = "edea5fff9dc5bd1a";
 "use strict";
 /* global HMR_HOST, HMR_PORT, HMR_SERVER_PORT, HMR_ENV_HASH, HMR_SECURE, HMR_USE_SSE, chrome, browser, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
@@ -713,8 +713,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
     }
 }
 
-},{}],"c9ZzB":[function(require,module,exports,__globalThis) {
+},{}],"3Vbno":[function(require,module,exports,__globalThis) {
 
-},{}]},["hwFW9","c9ZzB"], "c9ZzB", "parcelRequirec720", {})
+},{}]},["kQnTf","3Vbno"], "3Vbno", "parcelRequirec720", {})
 
-//# sourceMappingURL=article-kids-chair-gift-en.aea3d3b7.js.map
+//# sourceMappingURL=article-funny-snow-world-diy-toys-en.9dc5bd1a.js.map
