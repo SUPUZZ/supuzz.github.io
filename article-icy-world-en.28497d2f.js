@@ -207,11 +207,11 @@
       });
     }
   }
-})({"7kuxg":[function(require,module,exports,__globalThis) {
+})({"b5U6W":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 51446;
+var HMR_SERVER_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
@@ -715,6 +715,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"fgEHA":[function(require,module,exports,__globalThis) {
 
-},{}]},["7kuxg","fgEHA"], "fgEHA", "parcelRequirec720", {})
+},{}]},["b5U6W","fgEHA"], "fgEHA", "parcelRequirec720", {})
 
 //# sourceMappingURL=article-icy-world-en.28497d2f.js.map
