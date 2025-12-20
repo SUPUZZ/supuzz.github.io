@@ -207,11 +207,11 @@
       });
     }
   }
-})({"hwFW9":[function(require,module,exports,__globalThis) {
+})({"8bpbj":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 50806;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
@@ -715,6 +715,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"c9ZzB":[function(require,module,exports,__globalThis) {
 
-},{}]},["hwFW9","c9ZzB"], "c9ZzB", "parcelRequirec720", {})
+},{}]},["8bpbj","c9ZzB"], "c9ZzB", "parcelRequirec720", {})
 
 //# sourceMappingURL=article-kids-chair-gift-en.aea3d3b7.js.map
