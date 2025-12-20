@@ -207,11 +207,11 @@
       });
     }
   }
-})({"kQnTf":[function(require,module,exports,__globalThis) {
+})({"2g6zN":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 51446;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
 var HMR_USE_SSE = false;
@@ -715,6 +715,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"3Vbno":[function(require,module,exports,__globalThis) {
 
-},{}]},["kQnTf","3Vbno"], "3Vbno", "parcelRequirec720", {})
+},{}]},["2g6zN","3Vbno"], "3Vbno", "parcelRequirec720", {})
 
 //# sourceMappingURL=article-funny-snow-world-diy-toys-en.9dc5bd1a.js.map
