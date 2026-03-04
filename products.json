@@ -1,5 +1,15 @@
 [
     {
+        "id": "rainbow-blocks",
+        "title": "Rainbow Building Blocks",
+        "description": "Waffle-Style Interlocking Construction Toy with Locking Storage Case, Ages 2-8",
+        "image": "product-images/滚动展示-电脑端-兄妹一起玩.webp",
+        "price": "$54.99",
+        "link": "https://www.amazon.com/dp/B0GD6G6SBT",
+        "tag": "New Arrival",
+        "tagStyle": "background:#EADDFF; color:#21005D"
+    },
+    {
         "id": "chair-pink",
         "title": "Pink Toddler Chair",
         "description": "Ergonomic kid chair. Available in Pink, Green, and Blue.",
@@ -8,16 +18,6 @@
         "link": "https://www.amazon.com/dp/B0CT9R3PRQ?maas=maas_adg_6E08DEB93CED55464C04979D074D4DE6_afap_abs&ref_=aa_maas&tag=maas",
         "tag": "Best Seller",
         "tagStyle": "background:#FFDAD6; color:#410002"
-    },
-    {
-        "id": "table-set",
-        "title": "Kid Table & Chair Set",
-        "description": "PP Plastic Toddler Table for Ages 1 2 3 4, Promoting Focus and Security",
-        "image": "product-images/table-set.webp",
-        "price": "$129",
-        "link": "https://www.amazon.com/dp/B0FLPJ2DMP?th=1",
-        "tag": "Furniture",
-        "tagStyle": "background:#EADDFF; color:#21005D"
     },
     {
         "id": "ice-l3",

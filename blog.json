@@ -1,5 +1,13 @@
 [
     {
+        "title": "Premium Rainbow Building Blocks: Waffle-Style Construction Toy Set",
+        "category": "STEM Toys",
+        "tag": "New Arrival",
+        "image": "product-images/滚动展示-电脑端-兄妹一起玩.webp",
+        "description": "Interlocking building blocks for kids with locking storage case. Waffle-style STEAM educational blocks for toddlers & children ages 2-8. Features progressive learning, durable easy-snap design & sensory play benefits. Shop now on Amazon!",
+        "link": "article-building-blocks-premium.html"
+    },
+    {
         "title": "Funny Snow World DIY Toys: L1-L3 Building Sets for Creative Kids",
         "category": "STEM Toys",
         "tag": "Christmas Gift",
@@ -46,13 +54,5 @@
         "image": "product-images/main-open-end-play.webp",
         "description": "SUPUZZ's detachable building blocks let kids mix Ocean, Ice & Forest series to build coral trees, fish on branches and their own magical garden—no rules, just creativity!",
         "link": "article-mix-play-en.html"
-    },
-    {
-        "title": "SUPUZZ Premium Rainbow Building Blocks: Creative Learning for Ages 2-6",
-        "category": "STEM Toys",
-        "tag": "New Product",
-        "image": "product-images/rainbow-building-blocks-thumb.webp",
-        "description": "Discover the SUPUZZ Premium Rainbow Building Blocks Set - large, soft interlocking construction toys that promote STEAM learning and creative development for children ages 2-6.",
-        "link": "article-building-blocks-premium.html"
     }
 ]
