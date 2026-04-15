@@ -1,0 +1,37 @@
+<header>
+    <div class="container">
+        <nav>
+            <!-- 核心修改：给logo包裹a标签，添加跳转链接 -->
+            <div class="logo">
+                <a href="/index.html"
+                    style="display: flex; align-items: center; color: #FEDD00; text-decoration: none;">
+                    <img src="images/icon_supuzz.svg" alt="SUPUZZ Logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                    SUPUZZ
+                </a>
+            </div>
+            <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">
+                <span class="material-symbols-rounded" style="font-size: 32px;">menu</span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-close-btn" aria-label="Close menu" onclick="toggleMenu()">
+                    <span class="material-symbols-rounded">close</span>
+                </li>
+
+                <!-- 链接顺序已调整：Home -> Journal -> Products -->
+                <li><a href="/index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="/blog.html" onclick="toggleMenu()">Journal</a></li>
+                <li><a href="/index.html#products" onclick="toggleMenu()">Products</a></li>
+                <!-- <li><a href="user-manual.html">User Manual</a></li> -->
+                <li><a href="/about.html" onclick="toggleMenu()">About Us</a></li>
+
+                <li>
+                    <a href="https://www.amazon.com/stores/Supuzz/page/F8F78FC5-0171-41C7-93DF-ABE20C958710"
+                        target="_blank" class="btn-nav-amazon" onclick="toggleMenu()">
+                        Shop on Amazon
+                        <span class="material-symbols-rounded" style="font-size: 18px;">shopping_cart</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
