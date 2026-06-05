@@ -1,0 +1,105 @@
+<footer id="about">
+    <div class="container">
+        <!-- 使用 style.css 中定义的 footer-grid 类 -->
+        <div class="footer-grid">
+
+            <!-- 第一列：品牌信息 -->
+            <div class="footer-col brand-col">
+                <div class="footer-logo" style="display: flex; align-items: center;">
+                    <img src="images/icon_supuzz.svg" alt="SUPUZZ Logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                    <span style="color: #FEDD00;">SUPUZZ</span>
+                </div>
+                <p>
+                    A Chinese-owned brand dedicated to creating safe, ergonomic furniture and open-ended STEM toys for the global market. We offer wholesale, OEM, and custom packaging solutions for retailers and distributors worldwide.
+                </p>
+            </div>
+
+            <!-- 第二列：产品系列 -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;">Product Series</h4>
+                <ul>
+                    <li><a href="index.html#products">Rainbow Building Blocks</a></li>
+                    <li><a href="index.html#products">Ice World Series</a></li>
+                    <li><a href="index.html#products">Ocean World Series</a></li>
+                    <li><a href="index.html#products">Rotating Forest</a></li>
+                    <li><a href="index.html#products">Kids Furniture</a></li>
+                </ul>
+            </div>
+
+            <!-- 第三列：商业合作 -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;">Business Cooperation</h4>
+                <ul>
+                    <li><a href="contact.html">Wholesale Inquiry</a></li>
+                    <li><a href="contact.html">OEM / Custom Manufacturing</a></li>
+                    <li><a href="contact.html">Custom Packaging</a></li>
+                    <li><a href="contact.html">Distribution Partnership</a></li>
+                </ul>
+            </div>
+
+            <!-- 第四列：订阅 -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;">Newsletter</h4>
+                <p style="margin-bottom: 12px; font-size: 0.875rem; color: #9CA3AF;">Subscribe for updates on new products and special offers.</p>
+                <div id="subscribe-container">
+                    <input type="email" id="subscribe-email" placeholder="Your email" required
+                        style="width: 100%; padding: 10px 14px; border: 1px solid #CAC4D0; border-radius: 6px; font-size: 0.875rem; font-family: inherit; box-sizing: border-box; margin-bottom: 8px;">
+                    <button id="subscribe-btn" type="button"
+                        style="width: 100%; padding: 10px 16px; background-color: #6750A4; color: white; border: none; border-radius: 6px; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: background-color 0.2s;">
+                        Subscribe
+                    </button>
+                    <p id="subscribe-success" style="display: none; margin-top: 8px; font-size: 0.75rem; color: #34D399;">✓ Subscription successful!</p>
+                    <p id="subscribe-error" style="display: none; margin-top: 8px; font-size: 0.75rem; color: #F87171;">Failed to subscribe. Please try again.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部版权栏 -->
+        <div class="footer-copyright">
+            &copy; 2025 SUPUZZ Inc. All rights reserved. | <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+
+    <script type="module">
+        import { apiService } from './static/api-service.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.getElementById('subscribe-email');
+            const subscribeBtn = document.getElementById('subscribe-btn');
+            const successMsg = document.getElementById('subscribe-success');
+            const errorMsg = document.getElementById('subscribe-error');
+
+            subscribeBtn.addEventListener('click', async () => {
+                const email = emailInput.value.trim();
+                
+                if (!email) {
+                    alert('Please enter your email address');
+                    return;
+                }
+
+                subscribeBtn.disabled = true;
+                subscribeBtn.textContent = 'Subscribing...';
+                successMsg.style.display = 'none';
+                errorMsg.style.display = 'none';
+
+                try {
+                    await apiService.subscribe(email);
+                    successMsg.style.display = 'block';
+                    emailInput.value = '';
+                } catch (error) {
+                    errorMsg.style.display = 'block';
+                    console.error('Subscription failed:', error);
+                } finally {
+                    subscribeBtn.disabled = false;
+                    subscribeBtn.textContent = 'Subscribe';
+                }
+            });
+
+            emailInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    subscribeBtn.click();
+                }
+            });
+        });
+    </script>
+</footer>

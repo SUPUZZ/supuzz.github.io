@@ -1,0 +1,62 @@
+[
+    {
+        "id": "rainbow-blocks",
+        "title": "Rainbow Building Blocks",
+        "description": "Waffle-Style Interlocking Construction Toy with Locking Storage Case, Ages 2-8",
+        "image": "product-images/rainbow-building-blocks-robot-hero.png",
+        "price": "$80.00",
+        "link": "contact.html",
+        "tag": "New Arrival",
+        "tagStyle": "background:#EADDFF; color:#21005D"
+    },
+    {
+        "id": "chair-pink",
+        "title": "Pink Toddler Chair",
+        "description": "Ergonomic kid chair. Available in Pink, Green, and Blue.",
+        "image": "product-images/toddler-chair-pink.webp",
+        "price": "$40.69",
+        "link": "contact.html",
+        "tag": "Best Seller",
+        "tagStyle": "background:#FFDAD6; color:#410002"
+    },
+    {
+        "id": "ice-l3",
+        "title": "Ice World: Frozen Castle (L3)",
+        "description": "Level 3 Advanced set. Build a majestic translucent ice palace.",
+        "image": "product-images/ice-series-l3.webp",
+        "price": "$54.99",
+        "link": "contact.html",
+        "tag": "Winter Series",
+        "tagStyle": "background:#D0BCFF; color:#381E72"
+    },
+    {
+        "id": "ocean-l3",
+        "title": "Ocean World: Coral Reef (L3)",
+        "description": "Explore marine life and build a giant reef.",
+        "image": "product-images/ocean-series-l3.webp",
+        "price": "$54.99",
+        "link": "contact.html",
+        "tag": "New Arrival",
+        "tagStyle": "background:#C4EED0; color:#005221"
+    },
+    {
+        "id": "ocean-l1",
+        "title": "Ocean World: Sea Creatures (L1)",
+        "description": "Level 1 Starter set. Perfect for beginners to build fish and crabs.",
+        "image": "product-images/ocean-series-l1.webp",
+        "price": "$21.99",
+        "link": "contact.html",
+        "tag": "STEM Starter",
+        "tagStyle": "background:#C4EED0; color:#005221"
+    },
+    {
+        "id": "garden",
+        "title": "Rotating Flower Garden",
+        "description": "Rotating Garden Building Blocks STEM Toys for Kids Ages 3-5, 74 PCS",
+        "image": "product-images/garden-toy.webp",
+        "price": "$43.99",
+        "link": "contact.html",
+        "tag": "Kids Favorite",
+        "tagStyle": "background:#FFD8E4; color:#31111D"
+    }
+]
