@@ -9,23 +9,59 @@
                     SUPUZZ
                 </a>
             </div>
-            <button class="menu-btn" aria-label="Toggle menu" onclick="toggleMenu()">
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
                 <span class="material-symbols-rounded" style="font-size: 32px;">menu</span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li class="nav-close-btn" aria-label="Close menu" onclick="toggleMenu()">
+                <li class="nav-close-btn" id="navCloseBtn" aria-label="Close menu">
                     <span class="material-symbols-rounded">close</span>
                 </li>
 
                 <!-- 链接顺序已调整：Home -> Journal -> Products -->
-                <li><a href="/index.html" onclick="toggleMenu()">Home</a></li>
-                <li><a href="/blog.html" onclick="toggleMenu()">Journal</a></li>
-                <li><a href="/index.html#products" onclick="toggleMenu()">Products</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/blog.html">Journal</a></li>
+                <li><a href="/index.html#products">Products</a></li>
                 <!-- <li><a href="user-manual.html">User Manual</a></li> -->
-                <li><a href="/about.html" onclick="toggleMenu()">About Us</a></li>
+                <li><a href="/about.html">About Us</a></li>
 
-                <li><a href="/contact.html" onclick="toggleMenu()">Contact</a></li>
+                <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
+    <script>
+        (function() {
+            function toggleMenu() {
+                if (window.innerWidth > 768) return;
+                var nav = document.getElementById('navLinks');
+                var body = document.body;
+                if (nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                    body.style.overflow = 'auto';
+                } else {
+                    nav.classList.add('active');
+                    body.style.overflow = 'hidden';
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                var menuBtn = document.getElementById('menuBtn');
+                var closeBtn = document.getElementById('navCloseBtn');
+                var navLinks = document.querySelectorAll('#navLinks a');
+                if (menuBtn) {
+                    menuBtn.addEventListener('click', toggleMenu);
+                    menuBtn.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+                    });
+                }
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', toggleMenu);
+                    closeBtn.addEventListener('keydown', function(e) {
+                        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleMenu(); }
+                    });
+                }
+                navLinks.forEach(function(link) {
+                    link.addEventListener('click', toggleMenu);
+                });
+            });
+        })();
+    </script>
 </header>

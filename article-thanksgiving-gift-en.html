@@ -468,28 +468,7 @@
     <script type="module">
         import { apiService } from './static/api-service.js';
 
-        function toggleMenu() {
-            if (window.innerWidth > 768) return;
-            const nav = document.getElementById('navLinks');
-            const body = document.body;
-            nav.classList.toggle('active');
-            body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.querySelector('.menu-btn');
-            const closeBtn = document.querySelector('.nav-close-btn');
-
-            const handleKeyTrigger = (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleMenu();
-                }
-            };
-
-            if (menuBtn) menuBtn.addEventListener('keydown', handleKeyTrigger);
-            if (closeBtn) closeBtn.addEventListener('keydown', handleKeyTrigger);
-
             apiService.pageview(window.location.pathname, document.referrer);
         });
     </script>

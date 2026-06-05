@@ -657,17 +657,6 @@
     <script type="module">
         import { apiService } from './static/api-service.js';
 
-        function toggleMenu() {
-            const nav = document.getElementById('navLinks');
-            if (nav.classList.contains('active')) {
-                nav.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            } else {
-                nav.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             apiService.pageview(window.location.pathname, document.referrer);
         });

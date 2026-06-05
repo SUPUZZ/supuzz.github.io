@@ -221,25 +221,7 @@
     <script type="module">
         import { apiService } from './static/api-service.js';
 
-        function toggleMenu() {
-            if (window.innerWidth > 768) return;
-            const nav = document.getElementById('navLinks');
-            const body = document.body;
-            nav.classList.toggle('active');
-            body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.querySelector('.menu-btn');
-            if (menuBtn) {
-                menuBtn.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === 'Space') {
-                        e.preventDefault();
-                        toggleMenu();
-                    }
-                });
-            }
-
             apiService.pageview(window.location.pathname, document.referrer);
         });
     </script>

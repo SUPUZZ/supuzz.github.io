@@ -370,30 +370,7 @@
     <script type="module">
         import { apiService } from './static/api-service.js';
 
-        function toggleMenu() {
-            if (window.innerWidth > 768) return;
-            const nav = document.getElementById('navLinks');
-            const body = document.body;
-            if (nav.classList.contains('active')) {
-                nav.classList.remove('active');
-                body.style.overflow = 'auto';
-            } else {
-                nav.classList.add('active');
-                body.style.overflow = 'hidden';
-            }
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
-            const menuBtn = document.querySelector('.menu-btn');
-            if (menuBtn) {
-                menuBtn.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === 'Space') {
-                        e.preventDefault();
-                        toggleMenu();
-                    }
-                });
-            }
-
             apiService.pageview(window.location.pathname, document.referrer);
         });
     </script>
