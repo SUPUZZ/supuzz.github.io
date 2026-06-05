@@ -35,6 +35,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Copy SEO files to dist root
+        run: |
+          cp static/robots.txt dist/robots.txt
+          cp static/sitemap.xml dist/sitemap.xml
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
