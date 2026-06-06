@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- SEO Title -->
+    <title>Diario SUPUZZ | Blog de Juguetes Educativos y STEM para Niños</title>
+    <meta name="description" content="Descubre consejos, historias y guías sobre juguetes educativos, aprendizaje STEM y desarrollo infantil en el Diario SUPUZZ.">
+    <meta name="keywords" content="blog de juguetes, juguetes STEM, educación infantil, bloques de construcción, desarrollo cognitivo">
+    <meta name="author" content="SUPUZZ">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="blog">
+    <meta property="og:url" content="https://www.supuzz.com/blog-es.html">
+    <meta property="og:title" content="Diario SUPUZZ | Blog de Juguetes Educativos y STEM">
+    <meta property="og:description" content="Consejos, historias y guías sobre juguetes educativos y aprendizaje STEM para niños">
+    <meta property="og:image" content="https://www.supuzz.com/static/product-images/waffle-blocks-amusement-park.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- 全局样式 -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#6750A4">
+
+    <style>
+        .blog-page-header {
+            padding: 100px 0 40px;
+            text-align: center;
+        }
+        .blog-page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+        .blog-page-header p {
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 24px;
+            border-radius: 25px;
+            border: 2px solid var(--border);
+            background: white;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding-bottom: 60px;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .blog-info {
+            padding: 20px;
+        }
+        .blog-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .blog-info h3 {
+            margin: 0 0 10px;
+            color: var(--text-main);
+        }
+        .blog-info p {
+            margin: 0 0 16px;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .blog-info a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .blog-info a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .blog-page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Component -->
+    <include src="components/header-es.html"></include>
+
+    <!-- Blog Page Header -->
+    <div class="container">
+        <div class="blog-page-header">
+            <h1>Diario SUPUZZ</h1>
+            <p>Explora consejos, historias y guías sobre juguetes educativos, aprendizaje STEM y desarrollo infantil</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">Todas las Historias</button>
+            <button class="filter-btn" data-filter="stem">Educación STEM</button>
+            <button class="filter-btn" data-filter="gift">Guía de Regalos</button>
+            <button class="filter-btn" data-filter="story">Historias</button>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+            <article class="blog-card" data-category="gift">
+                <img src="static/product-images/waffle-blocks-amusement-park.jpg" alt="Juguetes de construcción abiertos" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Guía de Regalos</span>
+                    <h3>Juguetes de Construcción Abiertos: Lista de Verificación para Padres</h3>
+                    <p>Antes de comprar juguetes de construcción para edades 2-8, utiliza esta lista de verificación...</p>
+                    <a href="article-rainbow-blocks-gift-checklist-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="stem">
+                <img src="static/product-images/waffle-blocks-mechanical.jpg" alt="Bloques Waffle STEM" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Educación STEM</span>
+                    <h3>Bloques Waffle: El Juguete STEM Perfecto para Niños Pequeños</h3>
+                    <p>Descubre cómo los bloques waffle fomentan el aprendizaje STEM en niños de 2-5 años...</p>
+                    <a href="article-waffle-blocks-stem-toddler-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="story">
+                <img src="static/product-images/kids-chair-gift.webp" alt="Regalo de Acción de Gracias" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Historias</span>
+                    <h3>30 Días a Través de Océanos: Un Regalo que Definió la Amistad</h3>
+                    <p>Un cliente estadounidense esperó 30 días para enviar un set de mesa a Nigeria...</p>
+                    <a href="article-thanksgiving-gift-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="gift">
+                <img src="static/product-images/kids-chair-gift.webp" alt="Silla para niños" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Guía de Regalos</span>
+                    <h3>El Regalo que Durará: ¿Por Qué una Silla para Niños Premium?</h3>
+                    <p>Olvídate de los juguetes ruidosos. Una silla ergonómica es el regalo práctico perfecto...</p>
+                    <a href="article-kids-chair-gift-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="stem">
+                <img src="static/product-images/funny-snow-world-main.webp" alt="Funny Snow World" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Educación STEM</span>
+                    <h3>Juguetes DIY Funny Snow World: Sets L1-L3 para Niños Creativos</h3>
+                    <p>Conoce la colección de juguetes temáticos de mundo de nieve con 11 adorables personajes...</p>
+                    <a href="article-funny-snow-world-diy-toys-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="stem">
+                <img src="static/product-images/icy-world-blocks.webp" alt="Icy World" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Educación STEM</span>
+                    <h3>Icy World: Juguetes de Construcción Temáticos de Mundo de Hielo</h3>
+                    <p>Sumérgete en un mundo de aventuras heladas con animales árticos...</p>
+                    <a href="article-icy-world-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="stem">
+                <img src="static/product-images/202511232021-open-end-play-mix.webp" alt="Juego Mixto" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Nueva Innovación</span>
+                    <h3>Juego Mixto: La Revolución en Juguetes de Construcción</h3>
+                    <p>Descubre Mix Play, un sistema que combina bloques con elementos temáticos...</p>
+                    <a href="article-mix-play-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="stem">
+                <img src="static/product-images/waffle-blocks-scene.jpg" alt="Bloques de construcción premium" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Educación STEM</span>
+                    <h3>Bloques de Construcción Arcoíris Premium: Más que un Juguete</h3>
+                    <p>Descubre por qué los Bloques de Construcción Arcoíris Premium son la elección perfecta...</p>
+                    <a href="article-building-blocks-premium-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+
+            <article class="blog-card" data-category="gift">
+                <img src="static/product-images/kids-chair-play.webp" alt="Silla ergonómica" loading="lazy">
+                <div class="blog-info">
+                    <span class="blog-tag">Productos</span>
+                    <h3>Silla Ergonómica para Niños: Diseño Seguro y Duradero</h3>
+                    <p>La Silla Ergonómica SUPUZZ está diseñada para durabilidad y seguridad...</p>
+                    <a href="article-kids-chair-es.html">Leer Más <span class="material-symbols-rounded" style="font-size:16px;">arrow_forward</span></a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer Component -->
+    <include src="components/footer-es.html"></include>
+
+    <!-- Scripts -->
+    <script type="module">
+        import { apiService } from './static/api-service.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            apiService.pageview(window.location.pathname, document.referrer);
+            
+            // Filter functionality
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const blogCards = document.querySelectorAll('.blog-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filter = btn.dataset.filter;
+                    blogCards.forEach(card => {
+                        if (filter === 'all' || card.dataset.category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
