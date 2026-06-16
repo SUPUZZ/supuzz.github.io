@@ -1,0 +1,104 @@
+<footer id="about">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- 第一列：品牌信息 -->
+            <div class="footer-col brand-col">
+                <div class="footer-logo" style="display: flex; align-items: center;">
+                    <img src="../images/icon_supuzz.svg" alt="SUPUZZ ロゴ" style="width: 24px; height: 24px; margin-right: 8px;">
+                    <span style="color: #FEDD00;">SUPUZZ</span>
+                </div>
+                <p>
+                    安全で人間工学に基づいた家具と、オープンエンドな STEM おもちゃをグローバル市場へ提供することに専念する中国資本のブランドです。世界中の小売業者・流通業者向けに、卸売り・OEM・カスタムパッケージのソリューションを提供しています。
+                </p>
+            </div>
+
+            <!-- 第二列：产品系列 -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;">製品シリーズ</h4>
+                <ul>
+                    <li><a href="index.html#products">レインボービルディングブロック</a></li>
+                    <li><a href="index.html#products">アイスワールドシリーズ</a></li>
+                    <li><a href="index.html#products">オーシャンワールドシリーズ</a></li>
+                    <li><a href="index.html#products">ローテーティングフォレスト</a></li>
+                    <li><a href="index.html#products">キッズ家具</a></li>
+                </ul>
+            </div>
+
+            <!-- 第三列：商业合作 -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;">ビジネス協力</h4>
+                <ul>
+                    <li><a href="contact.html">卸売り問い合わせ</a></li>
+                    <li><a href="contact.html">OEM・カスタム製造</a></li>
+                    <li><a href="contact.html">カスタムパッケージ</a></li>
+                    <li><a href="contact.html">ディストリビューター提携</a></li>
+                </ul>
+            </div>
+
+            <!-- 第四列：订阅 -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;">ニュースレター</h4>
+                <p style="margin-bottom: 12px; font-size: 0.875rem; color: #9CA3AF;">新製品や特別オファーの最新情報を購読しましょう。</p>
+                <div id="subscribe-container">
+                    <input type="email" id="subscribe-email" placeholder="メールアドレス" required
+                        style="width: 100%; padding: 10px 14px; border: 1px solid #CAC4D0; border-radius: 6px; font-size: 0.875rem; font-family: inherit; box-sizing: border-box; margin-bottom: 8px;">
+                    <button id="subscribe-btn" type="button"
+                        style="width: 100%; padding: 10px 16px; background-color: #6750A4; color: white; border: none; border-radius: 6px; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: background-color 0.2s;">
+                        購読する
+                    </button>
+                    <p id="subscribe-success" style="display: none; margin-top: 8px; font-size: 0.75rem; color: #34D399;">&#10003; 購読が完了しました！</p>
+                    <p id="subscribe-error" style="display: none; margin-top: 8px; font-size: 0.75rem; color: #F87171;">購読に失敗しました。もう一度お試しください。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部版权栏 -->
+        <div class="footer-copyright">
+            &copy; 2025 SUPUZZ Inc. 全著作権所有。 | <a href="#">プライバシーポリシー</a>
+        </div>
+    </div>
+
+    <script type="module">
+        import { apiService } from '../api-service.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.getElementById('subscribe-email');
+            const subscribeBtn = document.getElementById('subscribe-btn');
+            const successMsg = document.getElementById('subscribe-success');
+            const errorMsg = document.getElementById('subscribe-error');
+
+            subscribeBtn.addEventListener('click', async () => {
+                const email = emailInput.value.trim();
+
+                if (!email) {
+                    alert('メールアドレスを入力してください');
+                    return;
+                }
+
+                subscribeBtn.disabled = true;
+                subscribeBtn.textContent = '購読中...';
+                successMsg.style.display = 'none';
+                errorMsg.style.display = 'none';
+
+                try {
+                    await apiService.subscribe(email);
+                    successMsg.style.display = 'block';
+                    emailInput.value = '';
+                } catch (error) {
+                    errorMsg.style.display = 'block';
+                    console.error('購読に失敗しました:', error);
+                } finally {
+                    subscribeBtn.disabled = false;
+                    subscribeBtn.textContent = '購読する';
+                }
+            });
+
+            emailInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    subscribeBtn.click();
+                }
+            });
+        });
+    </script>
+</footer>

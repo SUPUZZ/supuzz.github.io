@@ -3,165 +3,310 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- English Pages -->
   <url>
-    <loc>https://www.supuzz.com/index.html</loc>
+    <loc>https://www.supuzz.com/en/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/index-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/index.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/blog.html</loc>
+    <loc>https://www.supuzz.com/en/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/blog-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/blog.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/about.html</loc>
+    <loc>https://www.supuzz.com/en/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/about-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/about.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/contact.html</loc>
+    <loc>https://www.supuzz.com/en/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/contact-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/contact.html"/>
   </url>
   
   <!-- English Blog Articles -->
   <url>
-    <loc>https://www.supuzz.com/article-building-blocks-premium-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-building-blocks-premium.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-building-blocks-premium-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-building-blocks-premium.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-building-blocks-premium.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-waffle-blocks-stem-toddler-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-waffle-blocks-stem-toddler.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-waffle-blocks-stem-toddler-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-waffle-blocks-stem-toddler.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-waffle-blocks-stem-toddler.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-rainbow-blocks-gift-checklist-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-rainbow-blocks-gift-checklist.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-rainbow-blocks-gift-checklist-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-rainbow-blocks-gift-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-rainbow-blocks-gift-checklist.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-funny-snow-world-diy-toys-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-funny-snow-world-diy-toys.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-funny-snow-world-diy-toys-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-funny-snow-world-diy-toys.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-funny-snow-world-diy-toys.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-thanksgiving-gift-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-thanksgiving-gift.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-thanksgiving-gift-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-thanksgiving-gift.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-thanksgiving-gift.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-kids-chair-gift-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-kids-chair-gift.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-kids-chair-gift-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-kids-chair-gift.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-kids-chair-gift.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-kids-chair-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-kids-chair.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-kids-chair-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-kids-chair.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-kids-chair.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-icy-world-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-icy-world.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-icy-world-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-icy-world.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-icy-world.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-mix-play-en.html</loc>
+    <loc>https://www.supuzz.com/en/article-mix-play.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/article-mix-play-es.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-mix-play.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-mix-play.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/en/article-creativity.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-creativity.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/en/article-levels.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-levels.html"/>
   </url>
 
   <!-- Spanish Pages -->
   <url>
-    <loc>https://www.supuzz.com/index-es.html</loc>
+    <loc>https://www.supuzz.com/es/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/index.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/blog-es.html</loc>
+    <loc>https://www.supuzz.com/es/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/blog.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/about-es.html</loc>
+    <loc>https://www.supuzz.com/es/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/about.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/contact-es.html</loc>
+    <loc>https://www.supuzz.com/es/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/contact.html"/>
   </url>
   
   <!-- Spanish Blog Articles -->
   <url>
-    <loc>https://www.supuzz.com/article-building-blocks-premium-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-building-blocks-premium.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-building-blocks-premium-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-building-blocks-premium.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-building-blocks-premium.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-waffle-blocks-stem-toddler-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-waffle-blocks-stem-toddler.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-waffle-blocks-stem-toddler-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-waffle-blocks-stem-toddler.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-waffle-blocks-stem-toddler.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-rainbow-blocks-gift-checklist-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-rainbow-blocks-gift-checklist.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-rainbow-blocks-gift-checklist-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-rainbow-blocks-gift-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-rainbow-blocks-gift-checklist.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-funny-snow-world-diy-toys-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-funny-snow-world-diy-toys.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-funny-snow-world-diy-toys-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-funny-snow-world-diy-toys.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-funny-snow-world-diy-toys.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-thanksgiving-gift-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-thanksgiving-gift.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-thanksgiving-gift-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-thanksgiving-gift.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-thanksgiving-gift.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-kids-chair-gift-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-kids-chair-gift.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-kids-chair-gift-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-kids-chair-gift.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-kids-chair-gift.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-kids-chair-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-kids-chair.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-kids-chair-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-kids-chair.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-kids-chair.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-icy-world-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-icy-world.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-icy-world-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-icy-world.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-icy-world.html"/>
   </url>
   <url>
-    <loc>https://www.supuzz.com/article-mix-play-es.html</loc>
+    <loc>https://www.supuzz.com/es/article-mix-play.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/article-mix-play-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-mix-play.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://www.supuzz.com/ja/article-mix-play.html"/>
+  </url>
+
+  <!-- Japanese Pages -->
+  <url>
+    <loc>https://www.supuzz.com/ja/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/index.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/index.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/blog.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/blog.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/about.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/contact.html"/>
+  </url>
+  
+  <!-- Japanese Blog Articles -->
+  <url>
+    <loc>https://www.supuzz.com/ja/article-building-blocks-premium.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-building-blocks-premium.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-building-blocks-premium.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-waffle-blocks-stem-toddler.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-waffle-blocks-stem-toddler.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-waffle-blocks-stem-toddler.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-rainbow-blocks-gift-checklist.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-rainbow-blocks-gift-checklist.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-rainbow-blocks-gift-checklist.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-funny-snow-world-diy-toys.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-funny-snow-world-diy-toys.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-funny-snow-world-diy-toys.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-thanksgiving-gift.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-thanksgiving-gift.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-thanksgiving-gift.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-kids-chair-gift.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-kids-chair-gift.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-kids-chair-gift.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-kids-chair.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-kids-chair.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-kids-chair.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-icy-world.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-icy-world.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-icy-world.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-mix-play.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-mix-play.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.supuzz.com/es/article-mix-play.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-creativity.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-creativity.html"/>
+  </url>
+  <url>
+    <loc>https://www.supuzz.com/ja/article-levels.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.supuzz.com/en/article-levels.html"/>
   </url>
 </urlset>
