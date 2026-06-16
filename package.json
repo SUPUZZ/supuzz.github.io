@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel en/*.html es/*.html ja/*.html",
-    "build": "parcel build ./index.html en/*.html es/*.html ja/*.html --public-url /supuzz.github.io/ --dist-dir ./dist && cp style.css dist/"
+    "build": "parcel build *.html en/*.html es/*.html ja/*.html --public-url /supuzz.github.io/ --dist-dir ./dist && cp style.css dist/"
   },
   "keywords": [],
   "author": "",
