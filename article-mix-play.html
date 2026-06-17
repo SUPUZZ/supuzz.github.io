@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPUZZ</title>
     <script>
-        window.location.replace('/en/article-mix-play.html');
+        var m = document.cookie.match(/(^| )lang_pref=([^;]+)/);
+        var p = m ? m[2] : 'en';
+        window.location.replace('/' + p + '/article-mix-play.html');
     </script>
     <meta http-equiv="refresh" content="0;url=/en/article-mix-play.html">
 </head>

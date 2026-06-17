@@ -1,0 +1,206 @@
+<footer id="about">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Brand Info -->
+            <div class="footer-col brand-col">
+                <div class="footer-logo" style="display: flex; align-items: center;">
+                    <img src="../images/icon_supuzz.svg" alt="SUPUZZ Logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                    <span style="color: #FEDD00;">SUPUZZ</span>
+                </div>
+                <p data-i18n="brandDesc">A Chinese-owned brand dedicated to creating safe, ergonomic furniture and open-ended STEM toys for the global market. We offer wholesale, OEM, and custom packaging solutions for retailers and distributors worldwide.</p>
+            </div>
+
+            <!-- Product Series -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;" data-i18n="productSeries">Product Series</h4>
+                <ul>
+                    <li><a href="index.html#products" data-i18n="product1">Rainbow Building Blocks</a></li>
+                    <li><a href="index.html#products" data-i18n="product2">Ice World Series</a></li>
+                    <li><a href="index.html#products" data-i18n="product3">Ocean World Series</a></li>
+                    <li><a href="index.html#products" data-i18n="product4">Rotating Forest</a></li>
+                    <li><a href="index.html#products" data-i18n="product5">Kids Furniture</a></li>
+                </ul>
+            </div>
+
+            <!-- Business Cooperation -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;" data-i18n="bizCooperation">Business Cooperation</h4>
+                <ul>
+                    <li><a href="contact.html" data-i18n="biz1">Wholesale Inquiry</a></li>
+                    <li><a href="contact.html" data-i18n="biz2">OEM / Custom Manufacturing</a></li>
+                    <li><a href="contact.html" data-i18n="biz3">Custom Packaging</a></li>
+                    <li><a href="contact.html" data-i18n="biz4">Distribution Partnership</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-col">
+                <h4 style="color: #FEDD00;" data-i18n="newsletter">Newsletter</h4>
+                <p style="margin-bottom: 12px; font-size: 0.875rem; color: #9CA3AF;" data-i18n="newsletterDesc">Subscribe for updates on new products and special offers.</p>
+                <div id="subscribe-container">
+                    <input type="email" id="subscribe-email" placeholder="Your email" data-i18n-attr="placeholder|emailPlaceholder" required
+                        style="width: 100%; padding: 10px 14px; border: 1px solid #CAC4D0; border-radius: 6px; font-size: 0.875rem; font-family: inherit; box-sizing: border-box; margin-bottom: 8px;">
+                    <button id="subscribe-btn" type="button" data-i18n="subscribeBtn"
+                        style="width: 100%; padding: 10px 16px; background-color: #6750A4; color: white; border: none; border-radius: 6px; font-size: 0.875rem; font-weight: 500; cursor: pointer; transition: background-color 0.2s;">
+                        Subscribe
+                    </button>
+                    <p id="subscribe-success" style="display: none; margin-top: 8px; font-size: 0.75rem; color: #34D399;" data-i18n="subscribeSuccess">&#10003; Subscription successful!</p>
+                    <p id="subscribe-error" style="display: none; margin-top: 8px; font-size: 0.75rem; color: #F87171;" data-i18n="subscribeError">Failed to subscribe. Please try again.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+            <span data-i18n="copyright">&copy; 2025 SUPUZZ Inc. All rights reserved.</span> | <a href="#" data-i18n="privacyPolicy">Privacy Policy</a>
+        </div>
+    </div>
+
+    <script type="module">
+        import { apiService } from '../api-service.js';
+
+        const t = {
+            en: {
+                brandDesc: 'A Chinese-owned brand dedicated to creating safe, ergonomic furniture and open-ended STEM toys for the global market. We offer wholesale, OEM, and custom packaging solutions for retailers and distributors worldwide.',
+                productSeries: 'Product Series',
+                product1: 'Rainbow Building Blocks',
+                product2: 'Ice World Series',
+                product3: 'Ocean World Series',
+                product4: 'Rotating Forest',
+                product5: 'Kids Furniture',
+                bizCooperation: 'Business Cooperation',
+                biz1: 'Wholesale Inquiry',
+                biz2: 'OEM / Custom Manufacturing',
+                biz3: 'Custom Packaging',
+                biz4: 'Distribution Partnership',
+                newsletter: 'Newsletter',
+                newsletterDesc: 'Subscribe for updates on new products and special offers.',
+                emailPlaceholder: 'Your email',
+                subscribeBtn: 'Subscribe',
+                subscribing: 'Subscribing...',
+                subscribeSuccess: '\u2713 Subscription successful!',
+                subscribeError: 'Failed to subscribe. Please try again.',
+                copyright: '\u00a9 2025 SUPUZZ Inc. All rights reserved.',
+                privacyPolicy: 'Privacy Policy',
+                emptyEmail: 'Please enter your email address'
+            },
+            es: {
+                brandDesc: 'Una marca china dedicada a crear muebles ergon\u00f3micos seguros y juguetes STEM abiertos para el mercado global. Ofrecemos soluciones de mayorista, OEM y empaque personalizado para minoristas y distribuidores de todo el mundo.',
+                productSeries: 'Series de Productos',
+                product1: 'Bloques de Construcci\u00f3n Arco\u00edris',
+                product2: 'Serie Ice World',
+                product3: 'Serie Ocean World',
+                product4: 'Bosque Giratorio',
+                product5: 'Muebles para Ni\u00f1os',
+                bizCooperation: 'Cooperaci\u00f3n Comercial',
+                biz1: 'Consulta Mayorista',
+                biz2: 'OEM / Fabricaci\u00f3n Personalizada',
+                biz3: 'Empaque Personalizado',
+                biz4: 'Alianza de Distribuci\u00f3n',
+                newsletter: 'Newsletter',
+                newsletterDesc: 'Suscr\u00edbete para recibir actualizaciones sobre nuevos productos y ofertas especiales.',
+                emailPlaceholder: 'Tu correo electr\u00f3nico',
+                subscribeBtn: 'Suscribirse',
+                subscribing: 'Suscribiendo...',
+                subscribeSuccess: '\u2713 \u00a1Suscripci\u00f3n exitosa!',
+                subscribeError: 'Error al suscribirse. Por favor intenta nuevamente.',
+                copyright: '\u00a9 2025 SUPUZZ Inc. Todos los derechos reservados.',
+                privacyPolicy: 'Pol\u00edtica de Privacidad',
+                emptyEmail: 'Por favor ingresa tu correo electr\u00f3nico'
+            },
+            ja: {
+                brandDesc: '安全で人間工学に基づいた家具と、オープンエンドな STEM おもちゃをグローバル市場へ提供することに専念する中国資本のブランドです。世界中の小売業者・流通業者向けに、卸売り・OEM・カスタムパッケージのソリューションを提供しています。',
+                productSeries: '製品シリーズ',
+                product1: 'レインボービルディングブロック',
+                product2: 'アイスワールドシリーズ',
+                product3: 'オーシャンワールドシリーズ',
+                product4: 'ローテーティングフォレスト',
+                product5: 'キッズ家具',
+                bizCooperation: 'ビジネス協力',
+                biz1: '卸売り問い合わせ',
+                biz2: 'OEM・カスタム製造',
+                biz3: 'カスタムパッケージ',
+                biz4: 'ディストリビューター提携',
+                newsletter: 'ニュースレター',
+                newsletterDesc: '新製品や特別オファーの最新情報を購読しましょう。',
+                emailPlaceholder: 'メールアドレス',
+                subscribeBtn: '購読する',
+                subscribing: '購読中...',
+                subscribeSuccess: '\u2713 購読が完了しました！',
+                subscribeError: '購読に失敗しました。もう一度お試しください。',
+                copyright: '\u00a9 2025 SUPUZZ Inc. 全著作権所有。',
+                privacyPolicy: 'プライバシーポリシー',
+                emptyEmail: 'メールアドレスを入力してください'
+            }
+        };
+
+        function getLang() {
+            var path = window.location.pathname;
+            if (path.indexOf('/es/') !== -1) return 'es';
+            if (path.indexOf('/ja/') !== -1) return 'ja';
+            return 'en';
+        }
+
+        function applyI18n() {
+            var lang = getLang();
+            var texts = t[lang];
+
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (texts[key]) el.textContent = texts[key];
+            });
+
+            document.querySelectorAll('[data-i18n-attr]').forEach(function(el) {
+                var parts = el.getAttribute('data-i18n-attr').split('|');
+                var attr = parts[0];
+                var key = parts[1];
+                if (texts[key]) el.setAttribute(attr, texts[key]);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applyI18n();
+
+            var lang = getLang();
+            var texts = t[lang];
+
+            const emailInput = document.getElementById('subscribe-email');
+            const subscribeBtn = document.getElementById('subscribe-btn');
+            const successMsg = document.getElementById('subscribe-success');
+            const errorMsg = document.getElementById('subscribe-error');
+
+            subscribeBtn.addEventListener('click', async () => {
+                const email = emailInput.value.trim();
+
+                if (!email) {
+                    alert(texts.emptyEmail);
+                    return;
+                }
+
+                subscribeBtn.disabled = true;
+                subscribeBtn.textContent = texts.subscribing;
+                successMsg.style.display = 'none';
+                errorMsg.style.display = 'none';
+
+                try {
+                    await apiService.subscribe(email);
+                    successMsg.style.display = 'block';
+                    emailInput.value = '';
+                } catch (error) {
+                    errorMsg.style.display = 'block';
+                    console.error('Subscription failed:', error);
+                } finally {
+                    subscribeBtn.disabled = false;
+                    subscribeBtn.textContent = texts.subscribeBtn;
+                }
+            });
+
+            emailInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    subscribeBtn.click();
+                }
+            });
+        });
+    </script>
+</footer>

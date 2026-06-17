@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUPUZZ</title>
     <script>
-        window.location.replace('/en/article-kids-chair-gift.html');
+        var m = document.cookie.match(/(^| )lang_pref=([^;]+)/);
+        var p = m ? m[2] : 'en';
+        window.location.replace('/' + p + '/article-kids-chair-gift.html');
     </script>
     <meta http-equiv="refresh" content="0;url=/en/article-kids-chair-gift.html">
 </head>

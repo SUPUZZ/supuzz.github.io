@@ -8,24 +8,24 @@
                     SUPUZZ
                 </a>
             </div>
-            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" data-i18n-attr="aria-label|menuToggle">
                 <span class="material-symbols-rounded" style="font-size: 32px;">menu</span>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li class="nav-close-btn" id="navCloseBtn" aria-label="Close menu">
+                <li class="nav-close-btn" id="navCloseBtn" aria-label="Close menu" data-i18n-attr="aria-label|menuClose">
                     <span class="material-symbols-rounded">close</span>
                 </li>
 
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Journal</a></li>
-                <li><a href="index.html#products">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" data-i18n="home">Home</a></li>
+                <li><a href="blog.html" data-i18n="journal">Journal</a></li>
+                <li><a href="index.html#products" data-i18n="products">Products</a></li>
+                <li><a href="about.html" data-i18n="about">About Us</a></li>
+                <li><a href="contact.html" data-i18n="contact">Contact</a></li>
                 <li class="lang-switch-item">
                     <div class="lang-dropdown" id="langDropdown">
-                        <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language">
+                        <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language" data-i18n-attr="aria-label|langSelect">
                             <span class="material-symbols-rounded">globe</span>
-                            <span>EN</span>
+                            <span data-i18n="langCode">EN</span>
                             <span class="material-symbols-rounded lang-arrow">expand_more</span>
                         </button>
                         <ul class="lang-menu" role="menu">
@@ -40,6 +40,66 @@
     </div>
     <script>
         (function() {
+            const t = {
+                en: {
+                    menuToggle: 'Toggle menu',
+                    menuClose: 'Close menu',
+                    home: 'Home',
+                    journal: 'Journal',
+                    products: 'Products',
+                    about: 'About Us',
+                    contact: 'Contact',
+                    langSelect: 'Select language',
+                    langCode: 'EN'
+                },
+                es: {
+                    menuToggle: 'Toggle menu',
+                    menuClose: 'Close menu',
+                    home: 'Inicio',
+                    journal: 'Diario',
+                    products: 'Productos',
+                    about: 'Sobre Nosotros',
+                    contact: 'Contacto',
+                    langSelect: 'Seleccionar idioma',
+                    langCode: 'ES'
+                },
+                ja: {
+                    menuToggle: 'メニューを切り替え',
+                    menuClose: 'メニューを閉じる',
+                    home: 'ホーム',
+                    journal: 'ジャーナル',
+                    products: '製品',
+                    about: '会社概要',
+                    contact: 'お問い合わせ',
+                    langSelect: '言語を選択',
+                    langCode: 'JA'
+                }
+            };
+
+            function getLang() {
+                var path = window.location.pathname;
+                if (path.indexOf('/es/') !== -1) return 'es';
+                if (path.indexOf('/ja/') !== -1) return 'ja';
+                return 'en';
+            }
+
+            function applyI18n() {
+                var lang = getLang();
+                var texts = t[lang];
+
+                document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                    var key = el.getAttribute('data-i18n');
+                    if (texts[key]) el.textContent = texts[key];
+                });
+
+                document.querySelectorAll('[data-i18n-attr]').forEach(function(el) {
+                    var parts = el.getAttribute('data-i18n-attr').split('|');
+                    var attr = parts[0];
+                    var key = parts[1];
+                    if (texts[key]) el.setAttribute(attr, texts[key]);
+                });
+            }
+
             function toggleMenu() {
                 if (window.innerWidth > 768) return;
                 var nav = document.getElementById('navLinks');
@@ -81,7 +141,40 @@
                 window.location.href = targetPath;
             }
 
+            function detectBrowserLang() {
+                var supported = ['es', 'ja'];
+                var langs = navigator.languages || [navigator.language || ''];
+                for (var i = 0; i < langs.length; i++) {
+                    var code = langs[i].split('-')[0].toLowerCase();
+                    if (supported.indexOf(code) !== -1) return code;
+                }
+                return 'en';
+            }
+
+            function getCookie(name) {
+                var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+                return match ? match[2] : null;
+            }
+
+            function setCookie(name, value, days) {
+                var d = new Date();
+                d.setTime(d.getTime() + (days || 365) * 24 * 60 * 60 * 1000);
+                document.cookie = name + '=' + value + ';path=/;expires=' + d.toUTCString();
+            }
+
+            (function autoRedirect() {
+                if (getCookie('lang_pref')) return;
+                var currentLang = getLanguageFromPath(window.location.pathname);
+                var browserLang = detectBrowserLang();
+                if (browserLang !== 'en' && browserLang !== currentLang) {
+                    setCookie('lang_pref', browserLang, 365);
+                    switchLanguage(browserLang);
+                }
+            })();
+
             document.addEventListener('DOMContentLoaded', function() {
+                applyI18n();
+
                 var menuBtn = document.getElementById('menuBtn');
                 var closeBtn = document.getElementById('navCloseBtn');
                 var navLinks = document.querySelectorAll('#navLinks a');
@@ -123,20 +216,18 @@
                     option.addEventListener('click', function(e) {
                         e.preventDefault();
                         var targetLang = this.getAttribute('data-lang');
+                        setCookie('lang_pref', targetLang, 365);
                         switchLanguage(targetLang);
                     });
                 });
 
                 var currentLang = getLanguageFromPath(window.location.pathname);
-                var langCode = langToggle && langToggle.querySelector('span:nth-child(2)');
-                if (langCode) {
-                    langCode.textContent = currentLang.toUpperCase();
-                }
-
                 langOptions.forEach(function(option) {
                     option.classList.remove('active');
+                    option.removeAttribute('aria-current');
                     if (option.getAttribute('data-lang') === currentLang) {
                         option.classList.add('active');
+                        option.setAttribute('aria-current', 'true');
                     }
                 });
             });

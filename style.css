@@ -588,11 +588,14 @@ footer {
         height: 100vh;
         background: #fff;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
+        align-items: center;
         transform: translateY(-100%);
         transition: 0.3s;
         z-index: 999;
-        padding: 0 20px;
+        padding: 80px 24px 40px;
+        gap: 0;
+        overflow-y: auto;
     }
 
     .nav-links.active {
@@ -600,15 +603,77 @@ footer {
     }
 
     .nav-links.active .nav-close-btn {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
     }
 
-    .nav-links a:not(.btn-nav-amazon) {
-        font-size: 1.5rem;
+    .nav-links > li {
+        width: 100%;
+    }
+
+    .nav-links > li > a:not(.btn-nav-amazon):not(.lang-option) {
+        display: block;
+        padding: 14px 0;
+        font-size: 1.25rem;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: center;
+    }
+
+    .lang-switch-item {
+        width: 100%;
+        margin-top: 8px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .lang-dropdown {
+        width: 100%;
+    }
+
+    .lang-toggle {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 0;
+        font-size: 1.25rem;
+        border-radius: 0;
+    }
+
+    .lang-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        min-width: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .lang-dropdown.open .lang-menu {
+        max-height: 200px;
+    }
+
+    .lang-option {
+        display: block;
+        padding: 12px 0;
+        font-size: 1.1rem;
+        border-radius: 0;
+        border-top: 1px solid #f5f5f5;
+        text-align: center;
+    }
+
+    .lang-option.active {
+        background-color: #f8f5ff;
     }
 
     .btn-nav-amazon {
-        margin-top: 10px;
+        margin-top: 16px;
         padding: 12px 32px;
         font-size: 1.1rem;
         width: auto;
