@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /components/
 
-Sitemap: https://www.supuzz.com/sitemap.xml
+Sitemap: https://supuzz.com/sitemap.xml
