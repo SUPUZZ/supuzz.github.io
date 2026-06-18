@@ -2,8 +2,11 @@ const API_BASE_URL = 'https://api.supuzz.cn';
 const BRAND_NAME = 'supuzz-us';
 const DOMAIN = 'supuzz.com';
 
+const isLocal = /^localhost$|^127\.|^192\.168\.|^10\.|^172\.(1[6-9]|2\d|3[01])\./.test(window.location.hostname);
+
 export const apiService = {
   async feedback(data) {
+    if (isLocal) return null;
     try {
       const response = await fetch(`${API_BASE_URL}/api/feedback`, {
         method: 'POST',
@@ -30,6 +33,7 @@ export const apiService = {
   },
 
   async subscribe(email) {
+    if (isLocal) return null;
     try {
       const response = await fetch(`${API_BASE_URL}/api/subscribe`, {
         method: 'POST',
@@ -56,6 +60,7 @@ export const apiService = {
   },
 
   async pageview(pageUrl, referrer = '') {
+    if (isLocal) return null;
     const payload = {
       brandName: BRAND_NAME,
       domain: DOMAIN,
