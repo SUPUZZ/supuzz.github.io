@@ -114,7 +114,7 @@
         <!-- Hero -->
         <section style="padding: clamp(50px, 8vw, 90px) 0 clamp(20px, 4vw, 40px); text-align: center;">
             <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 16px; color:#1C1B1F;">SUPUZZにお問い合わせ</h1>
-            <p style="font-size: 1.05rem; color: #49454F; max-width: 720px; margin: 0 auto; line-height: 1.6;">卸売り、OEM、カスタムパッケージ、ディストリビューター提携のご相談をお待ちしています。営業日中は24時間以内にご返信いたします。</p>
+            <p style="font-size: 1.05rem; color: #49454F; max-width: 720px; margin: 0 auto; line-height: 1.6;">卸売り、OEM、カスタムパッケージ、ディストリビューター提携のご相談をお待ちしています。営業日中は8時間以内にご返信いたします。</p>
         </section>
 
         <!-- 3 Contact Cards -->
@@ -150,7 +150,7 @@
         <section style="padding: clamp(20px, 4vw, 40px) 0; max-width: 800px; margin: 0 auto;">
             <div style="background: #fff; border-radius: 16px; padding: clamp(30px, 5vw, 50px); box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
                 <h2 style="font-size: 1.5rem; margin-bottom: 8px; color:#1C1B1F; text-align: center;">お問い合わせフォーム</h2>
-                <p style="font-size: 0.95rem; color: #49454F; margin-bottom: 24px; text-align: center; line-height: 1.6;">以下のフォームにご記入ください。24時間以内にご返信いたします。</p>
+                <p style="font-size: 0.95rem; color: #49454F; margin-bottom: 24px; text-align: center; line-height: 1.6;">以下のフォームにご記入ください。8時間以内にご返信いたします。</p>
 
                 <form id="contactForm" style="display: grid; gap: 20px;">
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
@@ -207,7 +207,7 @@
             <p style="font-size: 1rem; color: #49454F; line-height: 1.75; margin-bottom: 14px;">会社名、所在地、ご関心のある製品やサービスを明記の上、メールをお送りください。リードタイム、最小ロット数（MOQ）、サンプルのご用意など、詳細をご案内いたします。</p>
             <p style="font-size: 1rem; color: #49454F; line-height: 1.75;">私たちは、小さなブティックストアから大規模な複数国流通ネットワークまで、世界中の小売業者・流通業者・パートナーの皆さまと協働しています。</p>
             <div style="margin-top: 24px; font-size: 0.95rem; color: #49454F;">
-                <p><strong>返答時間：</strong>営業日中は24時間以内（月曜～金曜）</p>
+                <p><strong>返答時間：</strong>営業日中は8時間以内（月曜～金曜）</p>
                 <p><strong>対応言語：</strong>日本語・English・中国語</p>
                 <p><strong>主なメール：</strong> <a href="mailto:atmanpro@163.com" style="color:#6750A4; text-decoration:none;">atmanpro@163.com</a></p>
             </div>
@@ -231,26 +231,37 @@
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                const formData = {
-                    name: document.getElementById('name').value.trim(),
-                    company: document.getElementById('company').value.trim(),
-                    email: document.getElementById('email').value.trim(),
-                    phone: document.getElementById('phone').value.trim(),
-                    inquiryType: document.getElementById('inquiryType').value,
-                    message: document.getElementById('message').value.trim(),
-                };
+                const name = document.getElementById('name').value.trim();
+                const company = document.getElementById('company').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const inquiryType = document.getElementById('inquiryType').value;
+                const detail = document.getElementById('message').value.trim();
 
-                if (!formData.name || !formData.email || !formData.inquiryType || !formData.message) {
+                if (!name || !email || !inquiryType || !detail) {
                     showMessage('必須項目をすべて入力してください。', 'error');
                     return;
                 }
+
+                const message = [
+                    `【お名前】${name}`,
+                    `【会社名】${company || '未記入'}`,
+                    `【電話番号】${phone || '未記入'}`,
+                    `【お問い合わせ種類】${inquiryType}`,
+                    `【内容】${detail}`,
+                ].join('\n');
 
                 submitBtn.disabled = true;
                 submitBtn.textContent = '送信中...';
 
                 try {
-                    await apiService.feedback(formData);
-                    showMessage('ありがとうございます。お問い合わせが正常に送信されました。24時間以内にご返信いたします。', 'success');
+                    await apiService.feedback({
+                        email,
+                        message,
+                        source: 'contact-ja',
+                        metadata: { lang: 'ja', page: window.location.pathname },
+                    });
+                    showMessage('送信成功！8時間以内にご返信いたします。', 'success');
                     form.reset();
                 } catch (error) {
                     showMessage('送信に失敗しました。もう一度お試しいただくか、メールで直接お問い合わせください。', 'error');
