@@ -6,7 +6,11 @@ const isLocal = /^localhost$|^127\.|^192\.168\.|^10\.|^172\.(1[6-9]|2\d|3[01])\.
 
 export const apiService = {
   async feedback(data) {
-    if (isLocal) return null;
+    if (isLocal) {
+      console.log('[Local] Feedback data:', data);
+      // 本地环境模拟成功
+      return { success: true, message: 'Local test - no API call' };
+    }
     try {
       const response = await fetch(`${API_BASE_URL}/api/feedback`, {
         method: 'POST',

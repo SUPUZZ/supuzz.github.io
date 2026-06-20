@@ -145,6 +145,61 @@
             </div>
         </section>
 
+        <!-- Contact Form -->
+        <section style="padding: clamp(20px, 4vw, 40px) 0; max-width: 800px; margin: 0 auto;">
+            <div style="background: #fff; border-radius: 16px; padding: clamp(30px, 5vw, 50px); box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <h2 style="font-size: 1.5rem; margin-bottom: 8px; color:#1C1B1F; text-align: center;">提交咨詢</h2>
+                <p style="font-size: 0.95rem; color: #49454F; margin-bottom: 24px; text-align: center; line-height: 1.6;">填寫下方表單，我們會在 24 小時內回覆您。</p>
+
+                <form id="contactForm" style="display: grid; gap: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                        <div>
+                            <label for="name" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">姓名 *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="您的姓名">
+                        </div>
+                        <div>
+                            <label for="company" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">公司</label>
+                            <input type="text" id="company" name="company" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="公司名稱">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                        <div>
+                            <label for="email" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">電子郵件 *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="phone" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">電話</label>
+                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="+886 123 456 7890">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="inquiryType" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">咨詢類型 *</label>
+                        <select id="inquiryType" name="inquiryType" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit; background: #fff;">
+                            <option value="">選擇咨詢類型</option>
+                            <option value="wholesale">批發咨詢</option>
+                            <option value="oem">OEM / 客製化製造</option>
+                            <option value="partnership">合作 / 經銷</option>
+                            <option value="product">產品信息</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">消息 *</label>
+                        <textarea id="message" name="message" required rows="5" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit; resize: vertical;" placeholder="告訴我們您的咨詢內容..."></textarea>
+                    </div>
+
+                    <div id="formMessage" style="display: none; padding: 12px 16px; border-radius: 8px; font-size: 0.95rem;"></div>
+
+                    <button type="submit" id="submitBtn" style="padding: 14px 28px; background: #6750A4; color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: background 0.2s;">
+                        提交咨詢
+                    </button>
+                </form>
+            </div>
+        </section>
+
         <!-- Info Section -->
         <section style="padding: clamp(30px, 5vw, 60px) 0 clamp(60px, 10vw, 110px); max-width: 800px; margin: 0 auto; text-align: center;">
             <h2 style="font-size: 1.75rem; margin-bottom: 16px; color:#1C1B1F;">我們期待您的來信</h2>
@@ -162,10 +217,53 @@
     <include src="components/footer.html"></include>
 
     <script type="module">
-        import { apiService } from '../api-service.js';
+        import { apiService } from '../api/api-service.js';
 
         document.addEventListener('DOMContentLoaded', () => {
             apiService.pageview(window.location.pathname, document.referrer);
+
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = {
+                    name: document.getElementById('name').value.trim(),
+                    company: document.getElementById('company').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    inquiryType: document.getElementById('inquiryType').value,
+                    message: document.getElementById('message').value.trim(),
+                };
+
+                if (!formData.name || !formData.email || !formData.inquiryType || !formData.message) {
+                    showMessage('請填寫所有必填字段。', 'error');
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = '提交中...';
+
+                try {
+                    await apiService.feedback(formData);
+                    showMessage('感謝您的咨詢！您的信息已成功提交。我們會在 24 小時內與您聯繫。', 'success');
+                    form.reset();
+                } catch (error) {
+                    showMessage('提交失敗，請稍後再試或直接透過電子郵件聯繫我們。', 'error');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '提交咨詢';
+                }
+            });
+
+            function showMessage(text, type) {
+                formMessage.textContent = text;
+                formMessage.style.display = 'block';
+                formMessage.style.background = type === 'success' ? '#C4EED0' : '#F9DEDC';
+                formMessage.style.color = type === 'success' ? '#005221' : '#B3261E';
+            }
         });
     </script>
 </body>
