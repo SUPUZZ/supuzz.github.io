@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel en/*.html es/*.html ja/*.html",
-    "build": "parcel build *.html en/*.html es/*.html ja/*.html --public-url /supuzz.github.io/ --dist-dir ./dist && cp style.css dist/"
+    "start": "parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html",
+    "build": "parcel build *.html en/*.html es/*.html ja/*.html zh-Hant/*.html --public-url /supuzz.github.io/ --dist-dir ./dist"
   },
   "keywords": [],
   "author": "",

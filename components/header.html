@@ -4,7 +4,7 @@
             <div class="logo">
                 <a href="index.html"
                     style="display: flex; align-items: center; color: #FEDD00; text-decoration: none;">
-                    <img src="../images/icon_supuzz.svg" alt="SUPUZZ Logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                    <img src="/images/icon_supuzz.svg" alt="SUPUZZ Logo" style="width: 24px; height: 24px; margin-right: 8px;">
                     SUPUZZ
                 </a>
             </div>
@@ -32,6 +32,7 @@
                             <li role="none"><a href="#" class="lang-option active" data-lang="en" role="menuitem" aria-current="true">English</a></li>
                             <li role="none"><a href="#" class="lang-option" data-lang="es" role="menuitem">Español</a></li>
                             <li role="none"><a href="#" class="lang-option" data-lang="ja" role="menuitem">日本語</a></li>
+                            <li role="none"><a href="#" class="lang-option" data-lang="zh-Hant" role="menuitem">繁體中文</a></li>
                         </ul>
                     </div>
                 </li>
@@ -73,6 +74,17 @@
                     contact: 'お問い合わせ',
                     langSelect: '言語を選択',
                     langCode: 'JA'
+                },
+                'zh-Hant': {
+                    menuToggle: '切換選單',
+                    menuClose: '關閉選單',
+                    home: '首頁',
+                    journal: '部落格',
+                    products: '產品',
+                    about: '關於我們',
+                    contact: '聯絡我們',
+                    langSelect: '選擇語言',
+                    langCode: '繁'
                 }
             };
 
@@ -80,6 +92,7 @@
                 var path = window.location.pathname;
                 if (path.indexOf('/es/') !== -1) return 'es';
                 if (path.indexOf('/ja/') !== -1) return 'ja';
+                if (path.indexOf('/zh-Hant/') !== -1) return 'zh-Hant';
                 return 'en';
             }
 
@@ -120,6 +133,7 @@
             function getLanguageFromPath(path) {
                 if (path.startsWith('/es/')) return 'es';
                 if (path.startsWith('/ja/')) return 'ja';
+                if (path.startsWith('/zh-Hant/')) return 'zh-Hant';
                 return 'en';
             }
 
@@ -142,10 +156,13 @@
             }
 
             function detectBrowserLang() {
-                var supported = ['es', 'ja'];
+                var supported = ['es', 'ja', 'zh-Hant'];
                 var langs = navigator.languages || [navigator.language || ''];
                 for (var i = 0; i < langs.length; i++) {
-                    var code = langs[i].split('-')[0].toLowerCase();
+                    var full = langs[i].toLowerCase();
+                    // zh-TW, zh-HK → zh-Hant (Traditional Chinese)
+                    if (full.indexOf('zh-tw') !== -1 || full.indexOf('zh-hk') !== -1 || full.indexOf('zh-hant') !== -1) return 'zh-Hant';
+                    var code = full.split('-')[0];
                     if (supported.indexOf(code) !== -1) return code;
                 }
                 return 'en';

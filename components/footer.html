@@ -5,7 +5,7 @@
             <!-- Brand Info -->
             <div class="footer-col brand-col">
                 <div class="footer-logo" style="display: flex; align-items: center;">
-                    <img src="../images/icon_supuzz.svg" alt="SUPUZZ Logo" style="width: 24px; height: 24px; margin-right: 8px;">
+                    <img src="/images/icon_supuzz.svg" alt="SUPUZZ Logo" style="width: 24px; height: 24px; margin-right: 8px;">
                     <span style="color: #FEDD00;">SUPUZZ</span>
                 </div>
                 <p data-i18n="brandDesc">A Chinese-owned brand dedicated to creating safe, ergonomic furniture and open-ended STEM toys for the global market. We offer wholesale, OEM, and custom packaging solutions for retailers and distributors worldwide.</p>
@@ -132,6 +132,30 @@
                 copyright: '\u00a9 2025 SUPUZZ Inc. 全著作権所有。',
                 privacyPolicy: 'プライバシーポリシー',
                 emptyEmail: 'メールアドレスを入力してください'
+            },
+            'zh-Hant': {
+                brandDesc: '一個致力於為全球市場打造安全、人體工學家具和開放式 STEM 玩具的中國品牌。我們為全球零售商和經銷商提供批發、OEM 和客製化包裝解決方案。',
+                productSeries: '產品系列',
+                product1: '彩虹積木',
+                product2: '冰雪世界系列',
+                product3: '海洋世界系列',
+                product4: '旋轉森林',
+                product5: '兒童家具',
+                bizCooperation: '商業合作',
+                biz1: '批發諮詢',
+                biz2: 'OEM / 客製化製造',
+                biz3: '客製化包裝',
+                biz4: '經銷合作',
+                newsletter: '電子報',
+                newsletterDesc: '訂閱以獲取新產品和特別優惠的最新資訊。',
+                emailPlaceholder: '您的電子郵件',
+                subscribeBtn: '訂閱',
+                subscribing: '訂閱中...',
+                subscribeSuccess: '\u2713 訂閱成功！',
+                subscribeError: '訂閱失敗，請再試一次。',
+                copyright: '\u00a9 2025 SUPUZZ Inc. 版權所有。',
+                privacyPolicy: '隱私政策',
+                emptyEmail: '請輸入您的電子郵件地址'
             }
         };
 
@@ -139,6 +163,7 @@
             var path = window.location.pathname;
             if (path.indexOf('/es/') !== -1) return 'es';
             if (path.indexOf('/ja/') !== -1) return 'ja';
+            if (path.indexOf('/zh-Hant/') !== -1) return 'zh-Hant';
             return 'en';
         }
 

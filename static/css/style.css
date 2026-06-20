@@ -406,19 +406,6 @@ nav {
     color: var(--on-primary-container);
 }
 
-.price-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-    padding-top: 16px;
-}
-
-.price {
-    font-weight: 800;
-    font-size: 1.2rem;
-}
-
 /* =========================================
    6. 博客区域 (Blog / Journal)
    ========================================= */
