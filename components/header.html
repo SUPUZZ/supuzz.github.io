@@ -1,4 +1,28 @@
 <header>
+    <style>
+        /* 防止i18n闪烁 - 初始隐藏需要翻译的元素 */
+        [data-i18n], [data-i18n-attr] {
+            visibility: hidden;
+        }
+        /* 翻译完成后显示 */
+        [data-i18n].i18n-ready, [data-i18n-attr].i18n-ready {
+            visibility: visible;
+        }
+        /* 导航链接容器 */
+        #navLinks li:not(.lang-switch-item):not(.nav-close-btn) a {
+            visibility: hidden;
+        }
+        #navLinks.i18n-ready li:not(.lang-switch-item):not(.nav-close-btn) a {
+            visibility: visible;
+        }
+        /* 语言切换按钮 */
+        .lang-toggle {
+            visibility: hidden;
+        }
+        .lang-toggle.i18n-ready {
+            visibility: visible;
+        }
+    </style>
     <div class="container">
         <nav>
             <div class="logo">
@@ -111,6 +135,17 @@
                     var key = parts[1];
                     if (texts[key]) el.setAttribute(attr, texts[key]);
                 });
+
+                // 翻译完成后显示元素，防止闪烁
+                document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                    el.classList.add('i18n-ready');
+                });
+                document.querySelectorAll('[data-i18n-attr]').forEach(function(el) {
+                    el.classList.add('i18n-ready');
+                });
+                document.getElementById('navLinks').classList.add('i18n-ready');
+                var langToggle = document.querySelector('.lang-toggle');
+                if (langToggle) langToggle.classList.add('i18n-ready');
             }
 
             function toggleMenu() {
