@@ -145,6 +145,62 @@
             </div>
         </section>
 
+        
+        <!-- Contact Form -->
+        <section style="padding: clamp(20px, 4vw, 40px) 0; max-width: 800px; margin: 0 auto;">
+            <div style="background: #fff; border-radius: 16px; padding: clamp(30px, 5vw, 50px); box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <h2 style="font-size: 1.5rem; margin-bottom: 8px; color:#1C1B1F; text-align: center;">お問い合わせフォーム</h2>
+                <p style="font-size: 0.95rem; color: #49454F; margin-bottom: 24px; text-align: center; line-height: 1.6;">以下のフォームにご記入ください。24時間以内にご返信いたします。</p>
+
+                <form id="contactForm" style="display: grid; gap: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                        <div>
+                            <label for="name" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">お名前 *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="お名前">
+                        </div>
+                        <div>
+                            <label for="company" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">会社名</label>
+                            <input type="text" id="company" name="company" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="会社名">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                        <div>
+                            <label for="email" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">メールアドレス *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="phone" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">電話番号</label>
+                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="+1 234 567 8900">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="inquiryType" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">お問い合わせ種類 *</label>
+                        <select id="inquiryType" name="inquiryType" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit; background: #fff;">
+                            <option value="">種類を選択</option>
+                            <option value="wholesale">卸売に関するお問い合わせ</option>
+                            <option value="oem">OEM / カスタム製造</option>
+                            <option value="partnership">パートナーシップ / ディストリビューション</option>
+                            <option value="product">製品情報</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">メッセージ *</label>
+                        <textarea id="message" name="message" required rows="5" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit; resize: vertical;" placeholder="お問い合わせ内容をご記入ください..."></textarea>
+                    </div>
+
+                    <div id="formMessage" style="display: none; padding: 12px 16px; border-radius: 8px; font-size: 0.95rem;"></div>
+
+                    <button type="submit" id="submitBtn" style="padding: 14px 28px; background: #6750A4; color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: background 0.2s;">
+                        送信
+                    </button>
+                </form>
+            </div>
+        </section>
+
         <!-- Info Section -->
         <section style="padding: clamp(30px, 5vw, 60px) 0 clamp(60px, 10vw, 110px); max-width: 800px; margin: 0 auto; text-align: center;">
             <h2 style="font-size: 1.75rem; margin-bottom: 16px; color:#1C1B1F;">お客様からのご連絡をお待ちしております</h2>
@@ -161,11 +217,55 @@
 
     <include src="components/footer.html"></include>
 
+    
     <script type="module">
         import { apiService } from '../api-service.js';
 
         document.addEventListener('DOMContentLoaded', () => {
             apiService.pageview(window.location.pathname, document.referrer);
+
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = {
+                    name: document.getElementById('name').value.trim(),
+                    company: document.getElementById('company').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    inquiryType: document.getElementById('inquiryType').value,
+                    message: document.getElementById('message').value.trim(),
+                };
+
+                if (!formData.name || !formData.email || !formData.inquiryType || !formData.message) {
+                    showMessage('必須項目をすべて入力してください。', 'error');
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = '送信中...';
+
+                try {
+                    await apiService.feedback(formData);
+                    showMessage('ありがとうございます。お問い合わせが正常に送信されました。24時間以内にご返信いたします。', 'success');
+                    form.reset();
+                } catch (error) {
+                    showMessage('送信に失敗しました。もう一度お試しいただくか、メールで直接お問い合わせください。', 'error');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '送信';
+                }
+            });
+
+            function showMessage(text, type) {
+                formMessage.textContent = text;
+                formMessage.style.display = 'block';
+                formMessage.style.background = type === 'success' ? '#C4EED0' : '#F9DEDC';
+                formMessage.style.color = type === 'success' ? '#005221' : '#B3261E';
+            }
         });
     </script>
 </body>

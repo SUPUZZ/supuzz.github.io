@@ -311,11 +311,55 @@
 
     <include src="components/footer.html"></include>
 
+    
     <script type="module">
         import { apiService } from '../api-service.js';
 
         document.addEventListener('DOMContentLoaded', () => {
             apiService.pageview(window.location.pathname, document.referrer);
+
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = {
+                    name: document.getElementById('name').value.trim(),
+                    company: document.getElementById('company').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    inquiryType: document.getElementById('inquiryType').value,
+                    message: document.getElementById('message').value.trim(),
+                };
+
+                if (!formData.name || !formData.email || !formData.inquiryType || !formData.message) {
+                    showMessage('Por favor complete todos los campos requeridos.', 'error');
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+
+                try {
+                    await apiService.feedback(formData);
+                    showMessage('¡Gracias! Su consulta ha sido enviada exitosamente. Le responderemos en un plazo de 24 horas.', 'success');
+                    form.reset();
+                } catch (error) {
+                    showMessage('Error al enviar la consulta. Por favor intente de nuevo o contáctenos directamente por correo electrónico.', 'error');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar Consulta';
+                }
+            });
+
+            function showMessage(text, type) {
+                formMessage.textContent = text;
+                formMessage.style.display = 'block';
+                formMessage.style.background = type === 'success' ? '#C4EED0' : '#F9DEDC';
+                formMessage.style.color = type === 'success' ? '#005221' : '#B3261E';
+            }
         });
     </script>
 </body>

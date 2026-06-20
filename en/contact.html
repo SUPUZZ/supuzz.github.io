@@ -145,6 +145,61 @@
             </div>
         </section>
 
+        <!-- Contact Form -->
+        <section style="padding: clamp(20px, 4vw, 40px) 0; max-width: 800px; margin: 0 auto;">
+            <div style="background: #fff; border-radius: 16px; padding: clamp(30px, 5vw, 50px); box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                <h2 style="font-size: 1.5rem; margin-bottom: 8px; color:#1C1B1F; text-align: center;">Submit an Inquiry</h2>
+                <p style="font-size: 0.95rem; color: #49454F; margin-bottom: 24px; text-align: center; line-height: 1.6;">Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                <form id="contactForm" style="display: grid; gap: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                        <div>
+                            <label for="name" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">Name *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="company" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">Company</label>
+                            <input type="text" id="company" name="company" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="Company name">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+                        <div>
+                            <label for="email" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">Email *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="your@email.com">
+                        </div>
+                        <div>
+                            <label for="phone" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">Phone</label>
+                            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit;" placeholder="+1 234 567 8900">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="inquiryType" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">Inquiry Type *</label>
+                        <select id="inquiryType" name="inquiryType" required style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit; background: #fff;">
+                            <option value="">Select inquiry type</option>
+                            <option value="wholesale">Wholesale Inquiry</option>
+                            <option value="oem">OEM / Custom Manufacturing</option>
+                            <option value="partnership">Partnership / Distribution</option>
+                            <option value="product">Product Information</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" style="display: block; font-size: 0.9rem; color: #1C1B1F; margin-bottom: 6px; font-weight: 500;">Message *</label>
+                        <textarea id="message" name="message" required rows="5" style="width: 100%; padding: 12px 16px; border: 1px solid #CAC4D0; border-radius: 8px; font-size: 1rem; font-family: inherit; resize: vertical;" placeholder="Tell us about your inquiry..."></textarea>
+                    </div>
+
+                    <div id="formMessage" style="display: none; padding: 12px 16px; border-radius: 8px; font-size: 0.95rem;"></div>
+
+                    <button type="submit" id="submitBtn" style="padding: 14px 28px; background: #6750A4; color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: background 0.2s;">
+                        Submit Inquiry
+                    </button>
+                </form>
+            </div>
+        </section>
+
         <!-- Info Section -->
         <section style="padding: clamp(30px, 5vw, 60px) 0 clamp(60px, 10vw, 110px); max-width: 800px; margin: 0 auto; text-align: center;">
             <h2 style="font-size: 1.75rem; margin-bottom: 16px; color:#1C1B1F;">We'd Love to Hear From You</h2>
@@ -166,6 +221,52 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             apiService.pageview(window.location.pathname, document.referrer);
+
+            const form = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // Get form data
+                const formData = {
+                    name: document.getElementById('name').value.trim(),
+                    company: document.getElementById('company').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    inquiryType: document.getElementById('inquiryType').value,
+                    message: document.getElementById('message').value.trim(),
+                };
+
+                // Validate
+                if (!formData.name || !formData.email || !formData.inquiryType || !formData.message) {
+                    showMessage('Please fill in all required fields.', 'error');
+                    return;
+                }
+
+                // Submit
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+
+                try {
+                    await apiService.feedback(formData);
+                    showMessage('Thank you! Your inquiry has been submitted successfully. We will get back to you within 24 hours.', 'success');
+                    form.reset();
+                } catch (error) {
+                    showMessage('Failed to submit inquiry. Please try again or contact us directly via email.', 'error');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Inquiry';
+                }
+            });
+
+            function showMessage(text, type) {
+                formMessage.textContent = text;
+                formMessage.style.display = 'block';
+                formMessage.style.background = type === 'success' ? '#C4EED0' : '#F9DEDC';
+                formMessage.style.color = type === 'success' ? '#005221' : '#B3261E';
+            }
         });
     </script>
 </body>
