@@ -5,23 +5,23 @@ const DOMAIN = 'supuzz.com';
 const isLocal = /^localhost$|^127\.|^192\.168\.|^10\.|^172\.(1[6-9]|2\d|3[01])\./.test(window.location.hostname);
 
 export const apiService = {
-  async feedback(data) {
-    if (isLocal) {
-      console.log('[Local] Feedback data:', data);
-      // 本地环境模拟成功
-      return { success: true, message: 'Local test - no API call' };
-    }
+  async feedback({ email, message, source, metadata } = {}) {
     try {
+      const body = {
+        brandName: BRAND_NAME,
+        domain: DOMAIN,
+        message,
+      };
+      if (email) body.email = email;
+      if (source) body.source = source;
+      if (metadata) body.metadata = metadata;
+
       const response = await fetch(`${API_BASE_URL}/api/feedback`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          brandName: BRAND_NAME,
-          domain: DOMAIN,
-          ...data,
-        }),
+        body: JSON.stringify(body),
         credentials: 'omit',
       });
       

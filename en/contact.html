@@ -229,28 +229,37 @@
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                // Get form data
-                const formData = {
-                    name: document.getElementById('name').value.trim(),
-                    company: document.getElementById('company').value.trim(),
-                    email: document.getElementById('email').value.trim(),
-                    phone: document.getElementById('phone').value.trim(),
-                    inquiryType: document.getElementById('inquiryType').value,
-                    message: document.getElementById('message').value.trim(),
-                };
+                const name = document.getElementById('name').value.trim();
+                const company = document.getElementById('company').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const inquiryType = document.getElementById('inquiryType').value;
+                const detail = document.getElementById('message').value.trim();
 
-                // Validate
-                if (!formData.name || !formData.email || !formData.inquiryType || !formData.message) {
+                if (!name || !email || !inquiryType || !detail) {
                     showMessage('Please fill in all required fields.', 'error');
                     return;
                 }
 
-                // Submit
+                // Assemble structured message
+                const message = [
+                    `[Name] ${name}`,
+                    `[Company] ${company || 'N/A'}`,
+                    `[Phone] ${phone || 'N/A'}`,
+                    `[Inquiry Type] ${inquiryType}`,
+                    `[Message] ${detail}`,
+                ].join('\n');
+
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Submitting...';
 
                 try {
-                    await apiService.feedback(formData);
+                    await apiService.feedback({
+                        email,
+                        message,
+                        source: 'contact-en',
+                        metadata: { lang: 'en', page: window.location.pathname },
+                    });
                     showMessage('Thank you! Your inquiry has been submitted successfully. We will get back to you within 24 hours.', 'success');
                     form.reset();
                 } catch (error) {

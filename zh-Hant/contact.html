@@ -229,25 +229,37 @@
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
-                const formData = {
-                    name: document.getElementById('name').value.trim(),
-                    company: document.getElementById('company').value.trim(),
-                    email: document.getElementById('email').value.trim(),
-                    phone: document.getElementById('phone').value.trim(),
-                    inquiryType: document.getElementById('inquiryType').value,
-                    message: document.getElementById('message').value.trim(),
-                };
+                const name = document.getElementById('name').value.trim();
+                const company = document.getElementById('company').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const inquiryType = document.getElementById('inquiryType').value;
+                const detail = document.getElementById('message').value.trim();
 
-                if (!formData.name || !formData.email || !formData.inquiryType || !formData.message) {
+                if (!name || !email || !inquiryType || !detail) {
                     showMessage('請填寫所有必填字段。', 'error');
                     return;
                 }
+
+                // 拼装结构化 message
+                const message = [
+                    `【姓名】${name}`,
+                    `【公司】${company || '未填寫'}`,
+                    `【電話】${phone || '未填寫'}`,
+                    `【咨詢類型】${inquiryType}`,
+                    `【內容】${detail}`,
+                ].join('\n');
 
                 submitBtn.disabled = true;
                 submitBtn.textContent = '提交中...';
 
                 try {
-                    await apiService.feedback(formData);
+                    await apiService.feedback({
+                        email,
+                        message,
+                        source: 'contact-zh-Hant',
+                        metadata: { lang: 'zh-Hant', page: window.location.pathname },
+                    });
                     showMessage('感謝您的咨詢！您的信息已成功提交。我們會在 24 小時內與您聯繫。', 'success');
                     form.reset();
                 } catch (error) {
