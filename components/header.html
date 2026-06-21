@@ -36,10 +36,13 @@
                 <li><a href="index.html#products" data-i18n="products">Products</a></li>
                 <li><a href="about.html" data-i18n="about">About Us</a></li>
                 <li><a href="contact.html" data-i18n="contact">Contact</a></li>
-                <li><a href="#" class="lang-switch-link" id="langSwitchLink" data-i18n="switchLang" data-i18n-attr="aria-label|switchLang">
-                    <span class="material-symbols-rounded">translate</span>
-                    <span data-i18n="langLabel">Language</span>
-                </a></li>
+                <li class="lang-switch-item">
+                    <a href="#" class="lang-toggle" id="langSwitchLink" aria-label="Switch language" data-i18n-attr="aria-label|langSelect">
+                        <span class="material-symbols-rounded">globe</span>
+                        <span data-i18n="langCode">EN</span>
+                        <span class="material-symbols-rounded lang-arrow">expand_more</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -54,8 +57,8 @@
                     products: 'Products',
                     about: 'About Us',
                     contact: 'Contact',
-                    switchLang: 'Switch Language',
-                    langLabel: 'Language'
+                    langSelect: 'Switch language',
+                    langCode: 'EN'
                 },
                 es: {
                     menuToggle: 'Toggle menu',
@@ -65,8 +68,8 @@
                     products: 'Productos',
                     about: 'Sobre Nosotros',
                     contact: 'Contacto',
-                    switchLang: 'Cambiar idioma',
-                    langLabel: 'Idioma'
+                    langSelect: 'Cambiar idioma',
+                    langCode: 'ES'
                 },
                 ja: {
                     menuToggle: 'メニューを切り替え',
@@ -76,8 +79,8 @@
                     products: '製品',
                     about: '会社概要',
                     contact: 'お問い合わせ',
-                    switchLang: '言語を切り替え',
-                    langLabel: '言語'
+                    langSelect: '言語を切り替え',
+                    langCode: 'JA'
                 },
                 'zh-Hant': {
                     menuToggle: '切換選單',
@@ -87,8 +90,8 @@
                     products: '產品',
                     about: '關於我們',
                     contact: '聯絡我們',
-                    switchLang: '切換語言',
-                    langLabel: '語言'
+                    langSelect: '切換語言',
+                    langCode: '繁'
                 }
             };
 
