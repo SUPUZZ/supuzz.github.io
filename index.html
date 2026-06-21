@@ -18,11 +18,11 @@
 
         // Check saved language first (from previous manual switch or auto-detect)
         var savedLang = getCookie('lang_pref');
-        if (savedLang === 'es' || savedLang === 'ja' || savedLang === 'zh-Hant') {
+        if (savedLang === 'es' || savedLang === 'ja' || savedLang === 'zh-Hant' || savedLang === 'de') {
             window.location.replace('/' + savedLang + '/');
         } else if (!savedLang) {
             // First visit: detect from browser
-            var supported = { es: true, ja: true };
+            var supported = { es: true, ja: true, de: true };
             var langs = navigator.languages || [navigator.language || ''];
             var detected = 'en';
             for (var i = 0; i < langs.length; i++) {
@@ -30,6 +30,10 @@
                 // zh-TW, zh-HK, zh-Hant → Traditional Chinese
                 if (full.indexOf('zh-tw') !== -1 || full.indexOf('zh-hk') !== -1 || full.indexOf('zh-hant') !== -1) {
                     detected = 'zh-Hant'; break;
+                }
+                // de → German
+                if (full.indexOf('de') !== -1) {
+                    detected = 'de'; break;
                 }
                 var code = full.substring(0, 2);
                 if (supported[code]) { detected = code; break; }

@@ -124,6 +124,10 @@
                 繁體中文
                 <span class="native">Traditional Chinese</span>
             </a>
+            <a href="#" data-lang="de">
+                Deutsch
+                <span class="native">German</span>
+            </a>
         </div>
 
         <a href="javascript:history.back()" class="back-link">
@@ -163,6 +167,7 @@
                 if (path.indexOf('/es/') !== -1) return 'es';
                 if (path.indexOf('/ja/') !== -1) return 'ja';
                 if (path.indexOf('/zh-Hant/') !== -1) return 'zh-Hant';
+                if (path.indexOf('/de/') !== -1) return 'de';
                 return 'en';
             }
             var currentLang = getLanguageFromPath(fromPath);

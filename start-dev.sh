@@ -24,15 +24,17 @@ fi
 
 # 清理缓存
 echo "[2/3] 清理缓存..."
-rm -rf .parcel-cache dist 2>/dev/null
-true
+rm -rf .parcel-cache dist 2>/dev/null || true
+
+# 如果指定端口被占用则先释放
+lsof -ti :"$PORT" | xargs kill -9 2>/dev/null || true
 
 # 启动开发服务器 (包含中文页面)
 echo "[3/3] 启动 Parcel 开发服务器..."
 echo ""
 
 # 后台启动 parcel 并捕获 URL
-npx parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html --port "$PORT" 2>&1 &
+npx parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html --port "$PORT" 2>&1 &
 PARCEL_PID=$!
 
 # 等待服务器就绪并捕获地址
@@ -49,6 +51,7 @@ echo "  服务器已就绪!"
 echo ""
 echo "  👉 http://localhost:$PORT"
 echo ""
+echo "  Deutsch:  http://localhost:$PORT/de/"
 echo "  繁體中文: http://localhost:$PORT/zh-Hant/"
 echo "  英文首页: http://localhost:$PORT/en/"
 echo "========================================"

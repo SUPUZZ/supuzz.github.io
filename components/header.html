@@ -92,6 +92,17 @@
                     contact: '聯絡我們',
                     langSelect: '切換語言',
                     langCode: '繁'
+                },
+                de: {
+                    menuToggle: 'Menü umschalten',
+                    menuClose: 'Menü schließen',
+                    home: 'Startseite',
+                    journal: 'Journal',
+                    products: 'Produkte',
+                    about: 'Über uns',
+                    contact: 'Kontakt',
+                    langSelect: 'Sprache wechseln',
+                    langCode: 'DE'
                 }
             };
 
@@ -147,6 +158,7 @@
                 if (path.startsWith('/es/')) return 'es';
                 if (path.startsWith('/ja/')) return 'ja';
                 if (path.startsWith('/zh-Hant/')) return 'zh-Hant';
+                if (path.startsWith('/de/')) return 'de';
                 return 'en';
             }
 
@@ -169,12 +181,14 @@
             }
 
             function detectBrowserLang() {
-                var supported = ['es', 'ja', 'zh-Hant'];
+                var supported = ['es', 'ja', 'zh-Hant', 'de'];
                 var langs = navigator.languages || [navigator.language || ''];
                 for (var i = 0; i < langs.length; i++) {
                     var full = langs[i].toLowerCase();
                     // zh-TW, zh-HK → zh-Hant (Traditional Chinese)
                     if (full.indexOf('zh-tw') !== -1 || full.indexOf('zh-hk') !== -1 || full.indexOf('zh-hant') !== -1) return 'zh-Hant';
+                    // de → German
+                    if (full.indexOf('de') !== -1) return 'de';
                     var code = full.split('-')[0];
                     if (supported.indexOf(code) !== -1) return code;
                 }
