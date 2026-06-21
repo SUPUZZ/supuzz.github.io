@@ -80,6 +80,11 @@
             font-size: 0.85rem;
             color: #888;
         }
+        .lang-list a.active {
+            background-color: #F3EFFF;
+            color: #6750A4;
+            font-weight: 700;
+        }
         .back-link {
             margin-top: 24px;
             font-size: 0.875rem;
@@ -152,6 +157,20 @@
 
             var params = new URLSearchParams(window.location.search);
             var fromPath = params.get('from') || '/index.html';
+
+            // 检测当前语言并高亮
+            function getLanguageFromPath(path) {
+                if (path.indexOf('/es/') !== -1) return 'es';
+                if (path.indexOf('/ja/') !== -1) return 'ja';
+                if (path.indexOf('/zh-Hant/') !== -1) return 'zh-Hant';
+                return 'en';
+            }
+            var currentLang = getLanguageFromPath(fromPath);
+            document.querySelectorAll('.lang-list a').forEach(function(link) {
+                if (link.getAttribute('data-lang') === currentLang) {
+                    link.classList.add('active');
+                }
+            });
 
             document.querySelectorAll('.lang-list a').forEach(function(link) {
                 link.addEventListener('click', function(e) {
