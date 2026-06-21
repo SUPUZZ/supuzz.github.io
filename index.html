@@ -18,7 +18,7 @@
 
         // Check saved language first (from previous manual switch or auto-detect)
         var savedLang = getCookie('lang_pref');
-        if (savedLang === 'es' || savedLang === 'ja' || savedLang === 'zh-Hant' || savedLang === 'de') {
+        if (savedLang === 'es' || savedLang === 'ja' || savedLang === 'zh-Hant' || savedLang === 'de' || savedLang === 'pt') {
             window.location.replace('/' + savedLang + '/');
         } else if (!savedLang) {
             // First visit: detect from browser

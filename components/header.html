@@ -103,6 +103,17 @@
                     contact: 'Kontakt',
                     langSelect: 'Sprache wechseln',
                     langCode: 'DE'
+                },
+                pt: {
+                    menuToggle: 'Alternar menu',
+                    menuClose: 'Fechar menu',
+                    home: 'Início',
+                    journal: 'Blog',
+                    products: 'Produtos',
+                    about: 'Sobre nós',
+                    contact: 'Contato',
+                    langSelect: 'Mudar idioma',
+                    langCode: 'PT'
                 }
             };
 
@@ -111,6 +122,8 @@
                 if (path.indexOf('/es/') !== -1) return 'es';
                 if (path.indexOf('/ja/') !== -1) return 'ja';
                 if (path.indexOf('/zh-Hant/') !== -1) return 'zh-Hant';
+                if (path.indexOf('/de/') !== -1) return 'de';
+                if (path.indexOf('/pt/') !== -1) return 'pt';
                 return 'en';
             }
 
@@ -159,6 +172,7 @@
                 if (path.startsWith('/ja/')) return 'ja';
                 if (path.startsWith('/zh-Hant/')) return 'zh-Hant';
                 if (path.startsWith('/de/')) return 'de';
+                if (path.startsWith('/pt/')) return 'pt';
                 return 'en';
             }
 
@@ -181,7 +195,7 @@
             }
 
             function detectBrowserLang() {
-                var supported = ['es', 'ja', 'zh-Hant', 'de'];
+                var supported = ['es', 'ja', 'zh-Hant', 'de', 'pt'];
                 var langs = navigator.languages || [navigator.language || ''];
                 for (var i = 0; i < langs.length; i++) {
                     var full = langs[i].toLowerCase();
@@ -189,6 +203,8 @@
                     if (full.indexOf('zh-tw') !== -1 || full.indexOf('zh-hk') !== -1 || full.indexOf('zh-hant') !== -1) return 'zh-Hant';
                     // de → German
                     if (full.indexOf('de') !== -1) return 'de';
+                    // pt → Portuguese
+                    if (full.indexOf('pt') !== -1) return 'pt';
                     var code = full.split('-')[0];
                     if (supported.indexOf(code) !== -1) return code;
                 }
