@@ -34,7 +34,7 @@ echo "[3/3] 启动 Parcel 开发服务器..."
 echo ""
 
 # 后台启动 parcel 并捕获 URL
-npx parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html --port "$PORT" 2>&1 &
+npx parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html --port "$PORT" 2>&1 &
 PARCEL_PID=$!
 
 # 等待服务器就绪并捕获地址
@@ -51,6 +51,7 @@ echo "  服务器已就绪!"
 echo ""
 echo "  👉 http://localhost:$PORT"
 echo ""
+echo "  Français: http://localhost:$PORT/fr/"
 echo "  Português: http://localhost:$PORT/pt/"
 echo "  Deutsch:  http://localhost:$PORT/de/"
 echo "  繁體中文: http://localhost:$PORT/zh-Hant/"

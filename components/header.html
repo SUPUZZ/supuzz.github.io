@@ -114,6 +114,17 @@
                     contact: 'Contato',
                     langSelect: 'Mudar idioma',
                     langCode: 'PT'
+                },
+                fr: {
+                    menuToggle: 'Basculer le menu',
+                    menuClose: 'Fermer le menu',
+                    home: 'Accueil',
+                    journal: 'Journal',
+                    products: 'Produits',
+                    about: 'À propos',
+                    contact: 'Contact',
+                    langSelect: 'Changer de langue',
+                    langCode: 'FR'
                 }
             };
 
@@ -124,6 +135,7 @@
                 if (path.indexOf('/zh-Hant/') !== -1) return 'zh-Hant';
                 if (path.indexOf('/de/') !== -1) return 'de';
                 if (path.indexOf('/pt/') !== -1) return 'pt';
+                if (path.indexOf('/fr/') !== -1) return 'fr';
                 return 'en';
             }
 
@@ -173,6 +185,7 @@
                 if (path.startsWith('/zh-Hant/')) return 'zh-Hant';
                 if (path.startsWith('/de/')) return 'de';
                 if (path.startsWith('/pt/')) return 'pt';
+                if (path.startsWith('/fr/')) return 'fr';
                 return 'en';
             }
 
@@ -195,7 +208,7 @@
             }
 
             function detectBrowserLang() {
-                var supported = ['es', 'ja', 'zh-Hant', 'de', 'pt'];
+                var supported = ['es', 'ja', 'zh-Hant', 'de', 'pt', 'fr'];
                 var langs = navigator.languages || [navigator.language || ''];
                 for (var i = 0; i < langs.length; i++) {
                     var full = langs[i].toLowerCase();
@@ -205,6 +218,8 @@
                     if (full.indexOf('de') !== -1) return 'de';
                     // pt → Portuguese
                     if (full.indexOf('pt') !== -1) return 'pt';
+                    // fr → French
+                    if (full.indexOf('fr') !== -1) return 'fr';
                     var code = full.split('-')[0];
                     if (supported.indexOf(code) !== -1) return code;
                 }

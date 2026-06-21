@@ -110,27 +110,31 @@
         <div class="lang-list">
             <a href="#" data-lang="en">
                 English
-                <span class="native">English</span>
+                <span class="native">EN</span>
             </a>
             <a href="#" data-lang="es">
                 Español
-                <span class="native">Spanish</span>
+                <span class="native">ES</span>
             </a>
             <a href="#" data-lang="ja">
                 日本語
-                <span class="native">Japanese</span>
+                <span class="native">JA</span>
             </a>
             <a href="#" data-lang="zh-Hant">
                 繁體中文
-                <span class="native">Traditional Chinese</span>
+                <span class="native">ZH</span>
             </a>
             <a href="#" data-lang="de">
                 Deutsch
-                <span class="native">German</span>
+                <span class="native">DE</span>
             </a>
             <a href="#" data-lang="pt">
                 Português
-                <span class="native">Portuguese</span>
+                <span class="native">PT</span>
+            </a>
+            <a href="#" data-lang="fr">
+                Français
+                <span class="native">FR</span>
             </a>
         </div>
 
@@ -173,6 +177,7 @@
                 if (path.indexOf('/zh-Hant/') !== -1) return 'zh-Hant';
                 if (path.indexOf('/de/') !== -1) return 'de';
                 if (path.indexOf('/pt/') !== -1) return 'pt';
+                if (path.indexOf('/fr/') !== -1) return 'fr';
                 return 'en';
             }
             var currentLang = getLanguageFromPath(fromPath);

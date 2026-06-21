@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html",
-    "build": "parcel build *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html --public-url /supuzz.github.io/ --dist-dir ./dist && cp -r api dist/"
+    "start": "parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html",
+    "build": "parcel build *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html --public-url /supuzz.github.io/ --dist-dir ./dist && cp -r api dist/"
   },
   "keywords": [],
   "author": "",
