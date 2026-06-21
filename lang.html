@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Choose Language | SUPUZZ</title>
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#6750A4">
+
+    <style>
+        .lang-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #F3EFFF 0%, #FFF8E1 50%, #C4EED0 100%);
+        }
+        .lang-page .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .lang-page .logo img {
+            width: 36px;
+            height: 36px;
+        }
+        .lang-page .logo span {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #6750A4;
+        }
+        .lang-page h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1C1B1F;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .lang-page .subtitle {
+            font-size: 0.95rem;
+            color: #49454F;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .lang-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 600px;
+            width: 100%;
+        }
+        .lang-card {
+            background: #fff;
+            border: 2px solid #EFE9F6;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+        .lang-card:hover {
+            transform: translateY(-4px);
+            border-color: #6750A4;
+            box-shadow: 0 8px 24px rgba(103, 80, 164, 0.15);
+        }
+        .lang-card .lang-flag {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        .lang-card .lang-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1C1B1F;
+            margin-bottom: 4px;
+        }
+        .lang-card .lang-native {
+            font-size: 0.85rem;
+            color: #6750A4;
+        }
+        .back-link {
+            margin-top: 32px;
+            font-size: 0.9rem;
+            color: #6750A4;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lang-page">
+        <div class="logo">
+            <img src="images/icon_supuzz.svg" alt="SUPUZZ Logo">
+            <span>SUPUZZ</span>
+        </div>
+        <h1>Choose Your Language</h1>
+        <p class="subtitle">Select your preferred language to continue</p>
+
+        <div class="lang-grid">
+            <a href="#" class="lang-card" data-lang="en">
+                <div class="lang-flag">🌐</div>
+                <div class="lang-name">English</div>
+                <div class="lang-native">English</div>
+            </a>
+            <a href="#" class="lang-card" data-lang="es">
+                <div class="lang-flag">🌐</div>
+                <div class="lang-name">Spanish</div>
+                <div class="lang-native">Español</div>
+            </a>
+            <a href="#" class="lang-card" data-lang="ja">
+                <div class="lang-flag">🌐</div>
+                <div class="lang-name">Japanese</div>
+                <div class="lang-native">日本語</div>
+            </a>
+            <a href="#" class="lang-card" data-lang="zh-Hant">
+                <div class="lang-flag">🌐</div>
+                <div class="lang-name">Traditional Chinese</div>
+                <div class="lang-native">繁體中文</div>
+            </a>
+        </div>
+
+        <a href="javascript:history.back()" class="back-link">
+            <span class="material-symbols-rounded" style="font-size:16px;">arrow_back</span>
+            Go back
+        </a>
+    </div>
+
+    <script>
+        (function() {
+            function getPageFilename(path) {
+                var parts = path.split('/');
+                var filename = parts[parts.length - 1] || 'index.html';
+                if (!filename || filename.indexOf('.') === -1) filename = 'index.html';
+                return filename;
+            }
+
+            function switchToLang(targetLang, fromPath) {
+                var filename = getPageFilename(fromPath || '/index.html');
+                var targetPath;
+                if (targetLang === 'en') {
+                    targetPath = '/' + filename;
+                } else {
+                    targetPath = '/' + targetLang + '/' + filename;
+                }
+                // 存储语言偏好
+                var d = new Date();
+                d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
+                document.cookie = 'lang_pref=' + targetLang + ';path=/;expires=' + d.toUTCString();
+                // 跳转
+                window.location.href = targetPath;
+            }
+
+            // 从URL参数获取来源页面
+            var params = new URLSearchParams(window.location.search);
+            var fromPath = params.get('from') || '/index.html';
+
+            document.querySelectorAll('.lang-card').forEach(function(card) {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var lang = this.getAttribute('data-lang');
+                    switchToLang(lang, fromPath);
+                });
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,25 +1,16 @@
 <header>
     <style>
         /* 防止i18n闪烁 - 初始隐藏需要翻译的元素 */
-        [data-i18n], [data-i18n-attr] {
+        [data-i18n] {
             visibility: hidden;
         }
-        /* 翻译完成后显示 */
-        [data-i18n].i18n-ready, [data-i18n-attr].i18n-ready {
+        [data-i18n].i18n-ready {
             visibility: visible;
         }
-        /* 导航链接容器 */
-        #navLinks li:not(.lang-switch-item):not(.nav-close-btn) a {
+        #navLinks li a[data-i18n] {
             visibility: hidden;
         }
-        #navLinks.i18n-ready li:not(.lang-switch-item):not(.nav-close-btn) a {
-            visibility: visible;
-        }
-        /* 语言切换按钮 */
-        .lang-toggle {
-            visibility: hidden;
-        }
-        .lang-toggle.i18n-ready {
+        #navLinks.i18n-ready li a[data-i18n] {
             visibility: visible;
         }
     </style>
@@ -45,21 +36,10 @@
                 <li><a href="index.html#products" data-i18n="products">Products</a></li>
                 <li><a href="about.html" data-i18n="about">About Us</a></li>
                 <li><a href="contact.html" data-i18n="contact">Contact</a></li>
-                <li class="lang-switch-item">
-                    <div class="lang-dropdown" id="langDropdown">
-                        <button class="lang-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Select language" data-i18n-attr="aria-label|langSelect">
-                            <span class="material-symbols-rounded">globe</span>
-                            <span data-i18n="langCode">EN</span>
-                            <span class="material-symbols-rounded lang-arrow">expand_more</span>
-                        </button>
-                        <ul class="lang-menu" role="menu">
-                            <li role="none"><a href="#" class="lang-option active" data-lang="en" role="menuitem" aria-current="true">English</a></li>
-                            <li role="none"><a href="#" class="lang-option" data-lang="es" role="menuitem">Español</a></li>
-                            <li role="none"><a href="#" class="lang-option" data-lang="ja" role="menuitem">日本語</a></li>
-                            <li role="none"><a href="#" class="lang-option" data-lang="zh-Hant" role="menuitem">繁體中文</a></li>
-                        </ul>
-                    </div>
-                </li>
+                <li><a href="#" class="lang-switch-link" id="langSwitchLink" data-i18n="switchLang" data-i18n-attr="aria-label|switchLang">
+                    <span class="material-symbols-rounded">translate</span>
+                    <span data-i18n="langLabel">Language</span>
+                </a></li>
             </ul>
         </nav>
     </div>
@@ -74,8 +54,8 @@
                     products: 'Products',
                     about: 'About Us',
                     contact: 'Contact',
-                    langSelect: 'Select language',
-                    langCode: 'EN'
+                    switchLang: 'Switch Language',
+                    langLabel: 'Language'
                 },
                 es: {
                     menuToggle: 'Toggle menu',
@@ -85,8 +65,8 @@
                     products: 'Productos',
                     about: 'Sobre Nosotros',
                     contact: 'Contacto',
-                    langSelect: 'Seleccionar idioma',
-                    langCode: 'ES'
+                    switchLang: 'Cambiar idioma',
+                    langLabel: 'Idioma'
                 },
                 ja: {
                     menuToggle: 'メニューを切り替え',
@@ -96,8 +76,8 @@
                     products: '製品',
                     about: '会社概要',
                     contact: 'お問い合わせ',
-                    langSelect: '言語を選択',
-                    langCode: 'JA'
+                    switchLang: '言語を切り替え',
+                    langLabel: '言語'
                 },
                 'zh-Hant': {
                     menuToggle: '切換選單',
@@ -107,8 +87,8 @@
                     products: '產品',
                     about: '關於我們',
                     contact: '聯絡我們',
-                    langSelect: '選擇語言',
-                    langCode: '繁'
+                    switchLang: '切換語言',
+                    langLabel: '語言'
                 }
             };
 
@@ -140,12 +120,7 @@
                 document.querySelectorAll('[data-i18n]').forEach(function(el) {
                     el.classList.add('i18n-ready');
                 });
-                document.querySelectorAll('[data-i18n-attr]').forEach(function(el) {
-                    el.classList.add('i18n-ready');
-                });
                 document.getElementById('navLinks').classList.add('i18n-ready');
-                var langToggle = document.querySelector('.lang-toggle');
-                if (langToggle) langToggle.classList.add('i18n-ready');
             }
 
             function toggleMenu() {
@@ -227,6 +202,12 @@
             document.addEventListener('DOMContentLoaded', function() {
                 applyI18n();
 
+                // 设置语言切换链接
+                var langLink = document.getElementById('langSwitchLink');
+                if (langLink) {
+                    langLink.href = '/lang.html?from=' + encodeURIComponent(getCurrentPagePath());
+                }
+
                 var menuBtn = document.getElementById('menuBtn');
                 var closeBtn = document.getElementById('navCloseBtn');
                 var navLinks = document.querySelectorAll('#navLinks a');
@@ -245,42 +226,6 @@
                 }
                 navLinks.forEach(function(link) {
                     link.addEventListener('click', toggleMenu);
-                });
-
-                var langDropdown = document.getElementById('langDropdown');
-                var langToggle = document.querySelector('.lang-toggle');
-                var langOptions = document.querySelectorAll('.lang-option');
-
-                if (langToggle) {
-                    langToggle.addEventListener('click', function(e) {
-                        e.stopPropagation();
-                        var isOpen = langDropdown.classList.contains('open');
-                        langDropdown.classList.toggle('open');
-                        langToggle.setAttribute('aria-expanded', !isOpen);
-                    });
-                    document.addEventListener('click', function() {
-                        langDropdown.classList.remove('open');
-                        langToggle.setAttribute('aria-expanded', 'false');
-                    });
-                }
-
-                langOptions.forEach(function(option) {
-                    option.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        var targetLang = this.getAttribute('data-lang');
-                        setCookie('lang_pref', targetLang, 365);
-                        switchLanguage(targetLang);
-                    });
-                });
-
-                var currentLang = getLanguageFromPath(window.location.pathname);
-                langOptions.forEach(function(option) {
-                    option.classList.remove('active');
-                    option.removeAttribute('aria-current');
-                    if (option.getAttribute('data-lang') === currentLang) {
-                        option.classList.add('active');
-                        option.setAttribute('aria-current', 'true');
-                    }
                 });
             });
         })();
