@@ -4,6 +4,8 @@
   "description": "",
   "scripts": {
     "start": "parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html",
+    "seo:prepare": "node scripts/prepare-seo.js",
+    "prebuild": "npm run seo:prepare",
     "build": "parcel build *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html --public-url /supuzz.github.io/ --dist-dir ./dist && cp -r api dist/"
   },
   "keywords": [],
