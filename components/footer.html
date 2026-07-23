@@ -66,9 +66,8 @@
         </div>
     </div>
 
-    <script type="module">
-        import { apiService } from '../api/api-service.js';
-
+    <script>
+        (function() {
         const t = {
             en: {
                 brandDesc: 'SUPUZZ creates colorful building toys and kids furniture for imaginative, open-ended play at home.',
@@ -291,7 +290,79 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             applyI18n();
+        });
 
+        })();
+    </script>
+
+    <script type="module">
+        import { apiService } from '/api/api-service.js';
+
+        (function() {
+        function getLang() {
+            var path = window.location.pathname;
+            if (path.indexOf('/es/') !== -1) return 'es';
+            if (path.indexOf('/ja/') !== -1) return 'ja';
+            if (path.indexOf('/zh-Hant/') !== -1) return 'zh-Hant';
+            if (path.indexOf('/de/') !== -1) return 'de';
+            if (path.indexOf('/pt/') !== -1) return 'pt';
+            if (path.indexOf('/fr/') !== -1) return 'fr';
+            return 'en';
+        }
+
+        const t = {
+            en: {
+                emptyEmail: 'Please enter your email address',
+                subscribing: 'Subscribing...',
+                subscribeSuccess: '\u2713 Subscription successful!',
+                subscribeError: 'Failed to subscribe. Please try again.',
+                subscribeBtn: 'Subscribe'
+            },
+            es: {
+                emptyEmail: 'Por favor ingresa tu correo electrónico',
+                subscribing: 'Suscribiendo...',
+                subscribeSuccess: '\u2713 \u00a1Suscripción exitosa!',
+                subscribeError: 'Error al suscribirse. Por favor intenta nuevamente.',
+                subscribeBtn: 'Suscribirse'
+            },
+            ja: {
+                emptyEmail: 'メールアドレスを入力してください',
+                subscribing: '購読中...',
+                subscribeSuccess: '\u2713 購読が完了しました！',
+                subscribeError: '購読に失敗しました。もう一度お試しください。',
+                subscribeBtn: '購読する'
+            },
+            'zh-Hant': {
+                emptyEmail: '請輸入您的電子郵件地址',
+                subscribing: '訂閱中...',
+                subscribeSuccess: '\u2713 訂閱成功！',
+                subscribeError: '訂閱失敗，請再試一次。',
+                subscribeBtn: '訂閱'
+            },
+            de: {
+                emptyEmail: 'Bitte geben Sie Ihre E-Mail-Adresse ein',
+                subscribing: 'Abonniert...',
+                subscribeSuccess: '\u2713 Abonnement erfolgreich!',
+                subscribeError: 'Abonnement fehlgeschlagen. Bitte versuchen Sie es erneut.',
+                subscribeBtn: 'Abonnieren'
+            },
+            pt: {
+                emptyEmail: 'Por favor, insira seu endereço de e-mail',
+                subscribing: 'Inscrevendo...',
+                subscribeSuccess: '\u2713 Inscrição realizada com sucesso!',
+                subscribeError: 'Falha na inscrição. Por favor, tente novamente.',
+                subscribeBtn: 'Inscrever-se'
+            },
+            fr: {
+                emptyEmail: 'Veuillez saisir votre adresse email',
+                subscribing: 'Abonnement...',
+                subscribeSuccess: '\u2713 Abonnement réussi !',
+                subscribeError: 'Échec de l\'abonnement. Veuillez réessayer.',
+                subscribeBtn: 'S\'abonner'
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
             var lang = getLang();
             var texts = t[lang];
 
@@ -299,6 +370,8 @@
             const subscribeBtn = document.getElementById('subscribe-btn');
             const successMsg = document.getElementById('subscribe-success');
             const errorMsg = document.getElementById('subscribe-error');
+
+            if (!subscribeBtn) return;
 
             subscribeBtn.addEventListener('click', async () => {
                 const email = emailInput.value.trim();
@@ -332,5 +405,6 @@
                 }
             });
         });
+        })();
     </script>
 </footer>

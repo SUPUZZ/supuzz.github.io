@@ -155,12 +155,7 @@
 
             function switchToLang(targetLang, fromPath) {
                 var filename = getPageFilename(fromPath || '/index.html');
-                var targetPath;
-                if (targetLang === 'en') {
-                    targetPath = '/' + filename;
-                } else {
-                    targetPath = '/' + targetLang + '/' + filename;
-                }
+                var targetPath = '/' + targetLang + '/' + filename;
                 var d = new Date();
                 d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
                 document.cookie = 'lang_pref=' + targetLang + ';path=/;expires=' + d.toUTCString();

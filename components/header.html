@@ -198,12 +198,7 @@
 
             function switchLanguage(targetLang) {
                 var filename = getPageFilename(getCurrentPagePath());
-                var targetPath;
-                if (targetLang === 'en') {
-                    targetPath = '/' + filename;
-                } else {
-                    targetPath = '/' + targetLang + '/' + filename;
-                }
+                var targetPath = '/' + targetLang + '/' + filename;
                 window.location.href = targetPath;
             }
 
