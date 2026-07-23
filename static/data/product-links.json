@@ -1,0 +1,36 @@
+{
+  "storefrontUrl": "https://www.amazon.com/stores/Supuzz/page/F8F78FC5-0171-41C7-93DF-ABE20C958710?maas=maas_adg_9F48B7189EDFBD67E9439619752165B8_afap_abs&ref_=aa_maas&tag=maas",
+  "products": {
+    "ocean-l1": { "asin": "B0F5PNRWJ1", "url": "https://www.amazon.com/dp/B0F5PNRWJ1?th=1" },
+    "ocean-l2": { "asin": "B0FHK6BW37", "url": "https://www.amazon.com/dp/B0FHK6BW37?th=1" },
+    "ocean-l3": { "asin": "B0FHK6RHT9", "url": "https://www.amazon.com/dp/B0FHK6RHT9?th=1" },
+    "ice-l1": { "asin": "B0F5PPQ2T3", "url": "https://www.amazon.com/dp/B0F5PPQ2T3?th=1" },
+    "ice-l2": { "asin": "B0FHK5NP9T", "url": "https://www.amazon.com/dp/B0FHK5NP9T?th=1" },
+    "ice-l3": { "asin": "B0FHK8V6ZZ", "url": "https://www.amazon.com/dp/B0FHK8V6ZZ?th=1" },
+    "soft-blocks-l3": { "asin": "B0GD6G6SBT", "url": "https://www.amazon.com/dp/B0GD6G6SBT?th=1" },
+    "soft-blocks-l2": { "asin": "B0GYQ19GG4", "url": "https://www.amazon.com/dp/B0GYQ19GG4?th=1" },
+    "soft-blocks-l1": { "asin": null, "url": null },
+    "dinosaur-l1": { "asin": "B0H6C6XGJ9", "url": "https://www.amazon.com/dp/B0H6C6XGJ9?th=1" },
+    "dinosaur-l2": { "asin": "B0H6C64K2K", "url": "https://www.amazon.com/dp/B0H6C64K2K?th=1" },
+    "dinosaur-l3": { "asin": "B0H6C5SCCL", "url": "https://www.amazon.com/dp/B0H6C5SCCL?th=1" },
+    "kids-table-chairs": { "asin": "B0FLPJ2DMP", "url": "https://www.amazon.com/dp/B0FLPJ2DMP?th=1" },
+    "rotating-forest": { "asin": "B0F5PPWYML", "url": "https://www.amazon.com/dp/B0F5PPWYML?th=1" }
+  },
+  "homeCardMappings": [
+    { "imageToken": "rainbow-building-blocks-robot-hero.png", "product": "soft-blocks-l3" },
+    { "imageToken": "table-set.webp", "product": "kids-table-chairs" },
+    { "imageToken": "ice-series-l3.webp", "product": "ice-l3" },
+    { "imageToken": "ocean-series-l3.webp", "product": "ocean-l3" },
+    { "imageToken": "ocean-series-l1.webp", "product": "ocean-l1" },
+    { "imageToken": "garden-toy.webp", "product": "rotating-forest" }
+  ],
+  "purchaseLabels": {
+    "en": "Shop on Amazon",
+    "es": "Comprar en Amazon",
+    "ja": "Amazon\u3067\u8cfc\u5165",
+    "zh-Hant": "\u524d\u5f80 Amazon \u8cfc\u8cb7",
+    "de": "Bei Amazon kaufen",
+    "pt": "Comprar na Amazon",
+    "fr": "Acheter sur Amazon"
+  }
+}
