@@ -923,6 +923,15 @@ footer {
 
 /* 博客页面响应式调整 */
 @media (max-width: 768px) {
+    /* Keep regular page content below the fixed mobile toolbar. */
+    body > header + .container,
+    body > header + .about-wrapper,
+    body > header + .contact-wrapper,
+    body > header + .article-shell,
+    body > header + .ocean-article {
+        margin-top: 72px;
+    }
+
     .featured-card {
         grid-template-columns: 1fr;
     }
