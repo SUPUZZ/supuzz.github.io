@@ -4,6 +4,39 @@ const DOMAIN = 'supuzz.com';
 
 const isLocal = /^localhost$|^127\.|^192\.168\.|^10\.|^172\.(1[6-9]|2\d|3[01])\./.test(window.location.hostname);
 
+// ── 访客标识 & 停留时长 ──
+let enterTime = Date.now();
+let pageViewId = null;
+
+function getVisitorId() {
+  const KEY = '_supuzz_vid';
+  try {
+    let id = localStorage.getItem(KEY);
+    if (!id) {
+      id = crypto.randomUUID();
+      localStorage.setItem(KEY, id);
+    }
+    return id;
+  } catch (e) {
+    // localStorage 不可用时（如隐私模式），每次生成临时 id
+    return crypto.randomUUID();
+  }
+}
+
+function reportDuration() {
+  if (!pageViewId) return;
+  const duration = Math.round((Date.now() - enterTime) / 1000);
+  navigator.sendBeacon(
+    `${API_BASE_URL}/api/pageview/${pageViewId}/duration`,
+    JSON.stringify({ duration })
+  );
+}
+
+// 页面隐藏 / 关闭时上报停留时长
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'hidden') reportDuration();
+});
+
 export const apiService = {
   async feedback({ email, message, source, metadata } = {}) {
     try {
@@ -68,9 +101,9 @@ export const apiService = {
     const payload = {
       brandName: BRAND_NAME,
       domain: DOMAIN,
-      pageUrl: window.location.href,
-      referrer: referrer || document.referrer,
-      userAgent: navigator.userAgent,
+      pageUrl: pageUrl || window.location.href,
+      referrer: referrer || document.referrer || undefined,
+      visitorId: getVisitorId(),
     };
 
     try {
@@ -81,10 +114,11 @@ export const apiService = {
         },
         body: JSON.stringify(payload),
         credentials: 'omit',
-        keepalive: true,
       });
-      
-      return response.json();
+
+      const data = await response.json();
+      pageViewId = data.id;  // 保存 id，用于后续停留时长上报
+      return data;
     } catch (error) {
       console.debug('Pageview tracking unavailable:', error.message);
       return null;
