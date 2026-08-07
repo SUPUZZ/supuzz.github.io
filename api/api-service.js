@@ -7,6 +7,8 @@ const isLocal = /^localhost$|^127\.|^192\.168\.|^10\.|^172\.(1[6-9]|2\d|3[01])\.
 // ── 访客标识 & 停留时长 ──
 let enterTime = Date.now();
 let pageViewId = null;
+let durationReportPending = false;
+let lastReportedDuration = 0;
 
 function getVisitorId() {
   const KEY = '_supuzz_vid';
@@ -24,18 +26,41 @@ function getVisitorId() {
 }
 
 function reportDuration() {
-  if (!pageViewId) return;
-  const duration = Math.round((Date.now() - enterTime) / 1000);
-  navigator.sendBeacon(
-    `${API_BASE_URL}/api/pageview/${pageViewId}/duration`,
-    JSON.stringify({ duration })
-  );
+  if (!pageViewId) {
+    durationReportPending = true;
+    return;
+  }
+
+  // A string payload is sent as text/plain, which JSON API handlers do not parse.
+  const duration = Math.max(1, Math.round((Date.now() - enterTime) / 1000));
+  if (duration <= lastReportedDuration) return;
+
+  const payload = new Blob([JSON.stringify({ duration })], {
+    type: 'application/json',
+  });
+  const endpoint = `${API_BASE_URL}/api/pageview/${pageViewId}/duration`;
+
+  if (navigator.sendBeacon(endpoint, payload)) {
+    lastReportedDuration = duration;
+    return;
+  }
+
+  // Keep the request eligible to complete while the page is being unloaded.
+  fetch(endpoint, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ duration }),
+    credentials: 'omit',
+    keepalive: true,
+  }).catch(() => {});
+  lastReportedDuration = duration;
 }
 
 // 页面隐藏 / 关闭时上报停留时长
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden') reportDuration();
 });
+window.addEventListener('pagehide', reportDuration);
 
 export const apiService = {
   async feedback({ email, message, source, metadata } = {}) {
@@ -118,6 +143,9 @@ export const apiService = {
 
       const data = await response.json();
       pageViewId = data.id;  // 保存 id，用于后续停留时长上报
+      if (durationReportPending || document.visibilityState === 'hidden') {
+        reportDuration();
+      }
       return data;
     } catch (error) {
       console.debug('Pageview tracking unavailable:', error.message);
