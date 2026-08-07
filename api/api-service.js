@@ -31,23 +31,14 @@ function reportDuration() {
     return;
   }
 
-  // A string payload is sent as text/plain, which JSON API handlers do not parse.
   const duration = Math.max(1, Math.round((Date.now() - enterTime) / 1000));
   if (duration <= lastReportedDuration) return;
 
-  const payload = new Blob([JSON.stringify({ duration })], {
-    type: 'application/json',
-  });
   const endpoint = `${API_BASE_URL}/api/pageview/${pageViewId}/duration`;
 
-  if (navigator.sendBeacon(endpoint, payload)) {
-    lastReportedDuration = duration;
-    return;
-  }
-
-  // Keep the request eligible to complete while the page is being unloaded.
+  // The API accepts PATCH. sendBeacon always sends POST, so it cannot be used here.
   fetch(endpoint, {
-    method: 'POST',
+    method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ duration }),
     credentials: 'omit',
