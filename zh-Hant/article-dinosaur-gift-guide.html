@@ -218,5 +218,11 @@
         </article>
     </main>
     <include src="components/footer.html"></include>
-</body>
+    <script type="module">
+        import { apiService } from '/api/api-service.js';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            apiService.pageview(window.location.pathname, document.referrer);
+        });
+    </script></body>
 </html>
