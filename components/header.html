@@ -234,6 +234,8 @@
 
             (function autoRedirect() {
                 if (getCookie('lang_pref')) return;
+                // 只对首页做语言自动跳转，深链文章页避免被重定向到不存在的语言版本
+                if (getPageFilename(getCurrentPagePath()) !== 'index.html') return;
                 var currentLang = getLanguageFromPath(window.location.pathname);
                 var browserLang = detectBrowserLang();
                 if (browserLang !== 'en' && browserLang !== currentLang) {
