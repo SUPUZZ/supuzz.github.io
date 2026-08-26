@@ -31,19 +31,13 @@ function reportDuration() {
     return;
   }
 
-  const duration = Math.max(1, Math.round((Date.now() - enterTime) / 1000));
+  const duration = Math.min(86400, Math.max(1, Math.round((Date.now() - enterTime) / 1000)));
   if (duration <= lastReportedDuration) return;
 
   const endpoint = `${API_BASE_URL}/api/pageview/${pageViewId}/duration`;
 
-  // The API accepts PATCH. sendBeacon always sends POST, so it cannot be used here.
-  fetch(endpoint, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ duration }),
-    credentials: 'omit',
-    keepalive: true,
-  }).catch(() => {});
+  // 统一用 sendBeacon（POST + text/plain）：CORS 简单请求、无需预检，页面卸载时更可靠。
+  navigator.sendBeacon(endpoint, JSON.stringify({ duration }));
   lastReportedDuration = duration;
 }
 
