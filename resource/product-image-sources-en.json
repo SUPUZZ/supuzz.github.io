@@ -201,5 +201,284 @@
     "key": "ocean-l3",
     "checkedOn": "2026-09-12",
     "derivation": "Component inventory cropped from the Amazon package-content image. Original quantity labels retained."
+  },
+  {
+    "key": "dinosaur-l1",
+    "asin": "B0H6C6XGJ9",
+    "source": "https://m.media-amazon.com/images/I/71Mllcz45OL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l1-main.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l1-main-480.webp",
+    "width": 1372,
+    "height": 1400,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "dinosaur-l1",
+    "asin": "B0H6C6XGJ9",
+    "source": "https://m.media-amazon.com/images/I/71lKFve6ByL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l1-package.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l1-package-480.webp",
+    "width": 1351,
+    "height": 1400,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "dinosaur-l1",
+    "asin": "B0H6C6XGJ9",
+    "source": "https://m.media-amazon.com/images/I/81gR6w-nxxL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l1-connections.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l1-connections-480.webp",
+    "width": 1400,
+    "height": 1400,
+    "checkedOn": "2026-09-12",
+    "note": "Shared dinosaur-series illustration; selected-version contents are shown in the package image."
+  },
+  {
+    "key": "dinosaur-l1",
+    "asin": "B0H6C6XGJ9",
+    "source": "https://m.media-amazon.com/images/I/815-ItOkUWL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l1-play.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l1-play-480.webp",
+    "width": 1400,
+    "height": 1399,
+    "checkedOn": "2026-09-12",
+    "note": "Shared dinosaur-series illustration; selected-version contents are shown in the package image."
+  },
+  {
+    "key": "dinosaur-l2",
+    "asin": "B0H6C64K2K",
+    "source": "https://m.media-amazon.com/images/I/71IWelvIajL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l2-main.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l2-main-480.webp",
+    "width": 1104,
+    "height": 1400,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "dinosaur-l2",
+    "asin": "B0H6C64K2K",
+    "source": "https://m.media-amazon.com/images/I/71kgxeQXJSL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l2-package.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l2-package-480.webp",
+    "width": 1348,
+    "height": 1400,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "dinosaur-l2",
+    "asin": "B0H6C64K2K",
+    "source": "https://m.media-amazon.com/images/I/81gR6w-nxxL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l2-connections.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l2-connections-480.webp",
+    "width": 1400,
+    "height": 1400,
+    "checkedOn": "2026-09-12",
+    "note": "Shared dinosaur-series illustration; selected-version contents are shown in the package image."
+  },
+  {
+    "key": "dinosaur-l2",
+    "asin": "B0H6C64K2K",
+    "source": "https://m.media-amazon.com/images/I/815-ItOkUWL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l2-play.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l2-play-480.webp",
+    "width": 1400,
+    "height": 1399,
+    "checkedOn": "2026-09-12",
+    "note": "Shared dinosaur-series illustration; selected-version contents are shown in the package image."
+  },
+  {
+    "key": "dinosaur-l3",
+    "asin": "B0H6C5SCCL",
+    "source": "https://m.media-amazon.com/images/I/813chvgxQIL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l3-main.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l3-main-480.webp",
+    "width": 1386,
+    "height": 1400,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "dinosaur-l3",
+    "asin": "B0H6C5SCCL",
+    "source": "https://m.media-amazon.com/images/I/71UJWjUi4nL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l3-package.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l3-package-480.webp",
+    "width": 1344,
+    "height": 1400,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "dinosaur-l3",
+    "asin": "B0H6C5SCCL",
+    "source": "https://m.media-amazon.com/images/I/81gR6w-nxxL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l3-connections.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l3-connections-480.webp",
+    "width": 1400,
+    "height": 1400,
+    "checkedOn": "2026-09-12",
+    "note": "Shared dinosaur-series illustration; selected-version contents are shown in the package image."
+  },
+  {
+    "key": "dinosaur-l3",
+    "asin": "B0H6C5SCCL",
+    "source": "https://m.media-amazon.com/images/I/815-ItOkUWL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-dinosaur-jungle-l3-play.webp",
+    "thumb": "/product-images/supuzz-dinosaur-jungle-l3-play-480.webp",
+    "width": 1400,
+    "height": 1399,
+    "checkedOn": "2026-09-12",
+    "note": "Shared dinosaur-series illustration; selected-version contents are shown in the package image."
+  },
+  {
+    "key": "ocean-l2",
+    "asin": "B0FHK6BW37",
+    "source": "https://m.media-amazon.com/images/I/71P2bzBZ0LL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-coral-reef-l2-main.webp",
+    "thumb": "/product-images/supuzz-coral-reef-l2-main-480.webp",
+    "width": 1400,
+    "height": 1011,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "ocean-l2",
+    "asin": "B0FHK6BW37",
+    "source": "https://m.media-amazon.com/images/I/81H+X6Do2BL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-coral-reef-l2-contents.webp",
+    "thumb": "/product-images/supuzz-coral-reef-l2-contents-480.webp",
+    "width": 1400,
+    "height": 442,
+    "checkedOn": "2026-09-12",
+    "derivation": {
+      "crop": {
+        "left": 0,
+        "top": 1030,
+        "width": 1489,
+        "height": 470
+      }
+    },
+    "notes": "Component inventory crop; original quantities preserved."
+  },
+  {
+    "key": "ocean-l2",
+    "asin": "B0FHK6BW37",
+    "source": "https://m.media-amazon.com/images/I/81yUu3RiiOL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-coral-reef-l2-mixed.webp",
+    "thumb": "/product-images/supuzz-coral-reef-l2-mixed-480.webp",
+    "width": 1400,
+    "height": 1400,
+    "checkedOn": "2026-09-12",
+    "notes": "Shared nature-series illustration; additional sets are sold separately."
+  },
+  {
+    "key": "ice-l1",
+    "asin": "B0F5PPQ2T3",
+    "source": "https://m.media-amazon.com/images/I/71K0k2HZvpL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-icy-world-l1-main.webp",
+    "thumb": "/product-images/supuzz-icy-world-l1-main-480.webp",
+    "width": 1100,
+    "height": 1025,
+    "checkedOn": "2026-09-12",
+    "derivation": {
+      "crop": {
+        "left": 170,
+        "top": 175,
+        "width": 1100,
+        "height": 1025
+      }
+    },
+    "notes": "Complete matching build cropped from the explicitly labelled 40-piece package image."
+  },
+  {
+    "key": "ice-l1",
+    "asin": "B0F5PPQ2T3",
+    "source": "https://m.media-amazon.com/images/I/71K0k2HZvpL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-icy-world-l1-contents.webp",
+    "thumb": "/product-images/supuzz-icy-world-l1-contents-480.webp",
+    "width": 1400,
+    "height": 273,
+    "checkedOn": "2026-09-12",
+    "derivation": {
+      "crop": {
+        "left": 0,
+        "top": 1210,
+        "width": 1485,
+        "height": 290
+      }
+    },
+    "notes": "Component inventory crop; original quantities preserved."
+  },
+  {
+    "key": "ice-l1",
+    "asin": "B0F5PPQ2T3",
+    "source": "https://m.media-amazon.com/images/I/81GfiJZuedL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-icy-world-l1-mixed.webp",
+    "thumb": "/product-images/supuzz-icy-world-l1-mixed-480.webp",
+    "width": 1400,
+    "height": 1400,
+    "checkedOn": "2026-09-12",
+    "notes": "Shared nature-series illustration; additional sets are sold separately."
+  },
+  {
+    "key": "ice-l2",
+    "asin": "B0FHK5NP9T",
+    "source": "https://m.media-amazon.com/images/I/71eO255TwmL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-icy-world-l2-main.webp",
+    "thumb": "/product-images/supuzz-icy-world-l2-main-480.webp",
+    "width": 1400,
+    "height": 1192,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "ice-l2",
+    "asin": "B0FHK5NP9T",
+    "source": "https://m.media-amazon.com/images/I/81sTER7sNaL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-icy-world-l2-package.webp",
+    "thumb": "/product-images/supuzz-icy-world-l2-package-480.webp",
+    "width": 1400,
+    "height": 1390,
+    "checkedOn": "2026-09-12"
+  },
+  {
+    "key": "ice-l2",
+    "asin": "B0FHK5NP9T",
+    "source": "https://m.media-amazon.com/images/I/81yUu3RiiOL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-icy-world-l2-mixed.webp",
+    "thumb": "/product-images/supuzz-icy-world-l2-mixed-480.webp",
+    "width": 1400,
+    "height": 1400,
+    "checkedOn": "2026-09-12",
+    "notes": "Shared nature-series illustration; additional sets are sold separately."
+  },
+  {
+    "key": "soft-blocks-l2",
+    "asin": "B0GYQ19GG4",
+    "source": "https://m.media-amazon.com/images/I/71XjFHDcpdL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-waffle-building-blocks-80-main.webp",
+    "thumb": "/product-images/supuzz-waffle-building-blocks-80-main-480.webp",
+    "width": 1022,
+    "height": 1400,
+    "checkedOn": "2026-09-12",
+    "notes": "Selected from the verified 80-piece listing. Shared waffle-series illustration, not an exact 80-piece inventory; captioned accordingly. The conflicting 122-piece graphic is excluded."
+  },
+  {
+    "key": "soft-blocks-l2",
+    "asin": "B0GYQ19GG4",
+    "source": "https://m.media-amazon.com/images/I/71iaPC-hcLL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-waffle-building-blocks-80-connections.webp",
+    "thumb": "/product-images/supuzz-waffle-building-blocks-80-connections-480.webp",
+    "width": 1400,
+    "height": 1393,
+    "checkedOn": "2026-09-12",
+    "notes": "Selected from the verified 80-piece listing. Shared waffle-series illustration, not an exact 80-piece inventory; captioned accordingly. The conflicting 122-piece graphic is excluded."
+  },
+  {
+    "key": "soft-blocks-l2",
+    "asin": "B0GYQ19GG4",
+    "source": "https://m.media-amazon.com/images/I/71W6hROR7CL._AC_SL1500_.jpg",
+    "file": "/product-images/supuzz-waffle-building-blocks-80-play.webp",
+    "thumb": "/product-images/supuzz-waffle-building-blocks-80-play-480.webp",
+    "width": 1400,
+    "height": 1400,
+    "checkedOn": "2026-09-12",
+    "notes": "Selected from the verified 80-piece listing. Shared waffle-series illustration, not an exact 80-piece inventory; captioned accordingly. The conflicting 122-piece graphic is excluded."
   }
 ]

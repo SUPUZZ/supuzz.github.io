@@ -7,7 +7,7 @@
 .collection-heading h2 { font-size:clamp(2.5rem,4.6vw,4rem); font-weight:500; line-height:1.04; letter-spacing:-.055em; }
 .collection-heading h2 em { font-style:normal; color:#74786a; }
 .product-store-link { display:inline-flex; align-items:center; gap:20px; font-size:.85rem; font-weight:500; border-bottom:1px solid #9eaa8b; padding-bottom:4px; }
-.product-filters { display:flex; gap:32px; border-bottom:1px solid var(--line); margin-bottom:28px; }
+.product-filters { display:flex; flex-wrap:wrap; gap:12px 32px; border-bottom:1px solid var(--line); margin-bottom:28px; }
 .product-filters[hidden] { display:none; }
 .product-filters button { font:inherit; font-size:.85rem; padding:0 0 14px; background:none; border:0; border-bottom:2px solid transparent; margin-bottom:-1px; color:var(--muted); cursor:pointer; }
 .product-filters button[aria-pressed="true"] { color:var(--ink); border-color:var(--ink); font-weight:700; }
@@ -17,9 +17,10 @@
 .product-collection .product-card:hover { transform:none; box-shadow:none; }
 .product-collection .product-card[hidden] { display:none; }
 .product-card[data-product-theme="kids-chair-pink"] { --stage:#f8edeb; }
-.product-card[data-product-theme="ice-l3"] { --stage:#eef3f5; }
-.product-card[data-product-theme="ocean-l3"] { --stage:#eef2ed; }
+.product-card[data-product-theme^="ice-"] { --stage:#eef3f5; }
+.product-card[data-product-theme^="ocean-"] { --stage:#eef2ed; }
 .product-card[data-product-theme="ocean-l1"] { --stage:#f1eff7; }
+.product-card[data-product-theme^="dinosaur-"] { --stage:#f0f4e7; }
 .product-collection .card-img { display:flex; align-items:center; justify-content:center; position:relative; height:auto; aspect-ratio:1.42; background:var(--stage,#f6f5ec); border-radius:14px; padding:30px; margin:0; overflow:hidden; }
 .product-collection .card-img img { height:100%; width:100%; object-fit:contain; mix-blend-mode:multiply; transition:transform .4s ease; }
 .product-collection .card-img:hover img { transform:scale(1.035); }
@@ -34,15 +35,6 @@
 .product-actions .product-details-button { background:var(--ink); color:#fff; border:1px solid var(--ink); }
 .product-actions .amazon-button { background:#fedd00; color:#24251f; border:1px solid #fedd00; }
 .product-actions .btn:hover { filter:brightness(.96); opacity:1; }
-.product-collection .product-featured { grid-column:1/-1; display:grid; grid-template-columns:1.2fr 1fr; gap:0; background:#f4f4e9; border-radius:16px; overflow:hidden; }
-.product-collection .product-featured .card-img { aspect-ratio:auto; min-height:430px; border-radius:0; background:#eeefdf; padding:50px 65px 30px; }
-.product-featured .card-img img { max-height:380px; object-fit:contain; }
-.product-image-label { position:absolute; top:24px; left:28px; font-size:.65rem; letter-spacing:.11em; color:#6f735b; }
-.product-featured .product-card-body { padding:48px 42px; justify-content:center; }
-.product-featured .product-card-body h3 { font-size:clamp(2rem,3.2vw,3rem); line-height:1.02; max-width:340px; margin-bottom:15px; }
-.product-featured .product-card-copy { font-size:1rem; max-width:350px; margin-bottom:18px; }
-.product-feature-line { font-size:.85rem; color:var(--muted); margin-bottom:30px; line-height:1.8; }
-.product-featured .product-actions { margin-top:0; }
 .product-store-note { border-top:1px solid var(--line); margin-top:50px; padding-top:25px; display:flex; justify-content:space-between; gap:20px; font-size:.88rem; color:var(--muted); }
 .product-page { background:white; }
 .product-detail { padding-top:104px; }
@@ -128,19 +120,12 @@
   .product-overview { gap:30px; }
   .product-gallery-main img { height:400px; }
   .product-feature-row, .product-information { gap:35px; }
-  .product-featured .product-card-body { padding:30px; }
-  .product-featured .product-actions .btn { padding:10px 14px; gap:8px; }
   .product-package { padding:30px; gap:30px; }
 }
 @media (max-width:760px) {
   .product-collection { padding:52px 0; }
   .collection-heading { gap:24px; align-items:start; flex-direction:column; }
   .collection-heading h2 { font-size:3rem; }
-  .product-collection .product-featured { grid-template-columns:1fr; }
-  .product-collection .product-featured .card-img { min-height:330px; height:330px; }
-  .product-featured .product-card-body { padding:28px; }
-  .product-feature-line { display:none; }
-  .product-featured .product-card-body h3 { max-width:none; }
   .product-actions .btn { width:auto; }
   .product-collection .grid { gap:34px 18px; }
   .product-collection .card-img { padding:22px; }

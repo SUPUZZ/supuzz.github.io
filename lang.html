@@ -156,10 +156,6 @@
             function switchToLang(targetLang, fromPath) {
                 var filename = getPageFilename(fromPath || '/index.html');
                 var targetPath = '/' + targetLang + '/' + filename;
-                // Product detail pages currently exist only in English.
-                if (filename.indexOf('product-') === 0 && targetLang !== 'en') {
-                    targetPath = '/' + targetLang + '/index.html#products';
-                }
                 var d = new Date();
                 d.setTime(d.getTime() + 365 * 24 * 60 * 60 * 1000);
                 document.cookie = 'lang_pref=' + targetLang + ';path=/;expires=' + d.toUTCString();

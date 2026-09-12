@@ -31,7 +31,7 @@ if (filters) {
         card.hidden = button.dataset.filter !== 'all' && card.dataset.category !== button.dataset.filter;
       });
       const visible = cards.filter((card) => !card.hidden).length;
-      count.textContent = `${visible} ${visible === 1 ? 'product' : 'products'}`;
+      count.textContent = `${visible} ${visible === 1 ? count.dataset.singular : count.dataset.plural}`;
     });
   });
 }

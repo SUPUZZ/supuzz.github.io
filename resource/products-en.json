@@ -2,10 +2,10 @@
   {
     "key": "soft-blocks-l3",
     "slug": "waffle-building-blocks-128",
-    "name": "Rainbow Waffle Blocks",
-    "title": "128-Piece Waffle Building Blocks with Storage Case | SUPUZZ",
+    "name": "Rainbow Waffle Blocks · L3",
+    "title": "Waffle Blocks L3: 128-Piece Set with Storage Case | SUPUZZ",
     "category": "blocks",
-    "label": "BUILDING BLOCKS",
+    "label": "WAFFLE BLOCKS / LEVEL 3",
     "asin": "B0GD6G6SBT",
     "facts": [
       "128 pieces",
@@ -44,6 +44,10 @@
       [
         "What can children build first?",
         "Start with a simple shape from the project guide, then try a vehicle or character. The guide includes different levels of projects."
+      ],
+      [
+        "What is the difference between L2 and L3?",
+        "L2 contains 80 pieces and L3 contains 128. Both listings include a storage case and a project guide."
       ]
     ],
     "imageAlts": [
@@ -52,9 +56,9 @@
       "Amazon feature comparison for SUPUZZ waffle building blocks"
     ],
     "related": [
-      "ocean-l1",
-      "ocean-l3",
-      "ice-l3"
+      "soft-blocks-l2",
+      "dinosaur-l2",
+      "ocean-l1"
     ],
     "subtitle": "128-piece construction set with locking storage case",
     "cardCopy": "Colorful connections. Robots, vehicles and everything in between.",
@@ -123,7 +127,1197 @@
       "Project guide with different levels of builds"
     ],
     "packageImage": "detail-1",
-    "packageCaption": "Example constructions made with the waffle block collection."
+    "packageCaption": "Example constructions made with the waffle block collection.",
+    "variantGroup": "waffle",
+    "variantOrder": 3,
+    "variantLabel": "L3 · 128 pieces"
+  },
+  {
+    "key": "soft-blocks-l2",
+    "asin": "B0GYQ19GG4",
+    "slug": "waffle-building-blocks-80",
+    "name": "Rainbow Waffle Blocks · L2",
+    "title": "Waffle Blocks L2: 80-Piece Set with Storage Case | SUPUZZ",
+    "label": "WAFFLE BLOCKS / LEVEL 2",
+    "category": "blocks",
+    "variantGroup": "waffle",
+    "variantOrder": 2,
+    "variantLabel": "L2 · 80 pieces",
+    "facts": [
+      "80 pieces",
+      "Ages 2–8",
+      "Storage case"
+    ],
+    "subtitle": "80-piece waffle construction set with locking storage case",
+    "intro": "Start with a shape, then give it height, color and character. The 80-piece L2 set offers a smaller entry into the Rainbow Waffle collection, with interlocking pieces, a project guide and a case for packing away.",
+    "cardCopy": "80 pieces to connect, take apart and turn into the next idea.",
+    "description": "Explore SUPUZZ Rainbow Waffle Blocks L2, an 80-piece construction set with a storage case and project guide. View play examples and shop on Amazon.",
+    "metrics": [
+      [
+        "80",
+        "pieces"
+      ],
+      [
+        "2–8",
+        "years"
+      ],
+      [
+        "L2",
+        "level"
+      ]
+    ],
+    "highlights": [
+      "80-piece waffle construction set.",
+      "Interlocking pieces for flat shapes and standing builds.",
+      "Project guide and locking storage case included."
+    ],
+    "gallery": [
+      [
+        "main",
+        "Example robot built from the SUPUZZ waffle collection; shared series photo"
+      ],
+      [
+        "connections",
+        "Examples of different connections in the SUPUZZ waffle block collection"
+      ],
+      [
+        "play",
+        "Child building with SUPUZZ waffle blocks; shared series play example"
+      ]
+    ],
+    "galleryNote": "Photos illustrate the waffle collection. Builds shown are examples, not an exact inventory of the 80-piece L2 set.",
+    "features": [
+      {
+        "image": "connections",
+        "eyebrow": "EXPLORE THE CONNECTIONS",
+        "title": "Turn a flat shape into a standing build.",
+        "body": "Try joining pieces in a row, then change direction and build upwards. The illustrated connections offer starting points for experimenting with shape and balance.",
+        "points": [
+          "Try a small build before adding another section.",
+          "Take pieces apart and reuse them in a new arrangement."
+        ],
+        "caption": "Waffle-series connection examples. Component selection varies by set."
+      },
+      {
+        "image": "play",
+        "eyebrow": "ONE IDEA LEADS TO ANOTHER",
+        "title": "Follow a project. Then make it your own.",
+        "body": "Choose an idea from the guide, build it together and think of something to change. A different color, a longer section or a new shape can turn the same starting point into another project.",
+        "points": [
+          "Guide includes beginner, intermediate and advanced ideas.",
+          "Store the pieces together between building sessions."
+        ],
+        "caption": "Shared waffle-series play example; the build shown is not an inventory of L2."
+      }
+    ],
+    "includedTitle": "An 80-piece set, ready for the next build.",
+    "included": [
+      "80-piece waffle building collection",
+      "Locking storage case",
+      "Project guide"
+    ],
+    "packageImage": "main",
+    "packageCaption": "Example construction from the waffle collection. See the selected Amazon option for exact component details.",
+    "specs": {
+      "Collection": "Rainbow Waffle Blocks",
+      "Level": "L2",
+      "Set size": "80 pieces",
+      "Suggested age": "2–8 years",
+      "Connections": "Interlocking waffle-style pieces",
+      "Storage": "Locking case included",
+      "Project guide": "Included"
+    },
+    "faq": [
+      [
+        "How does L2 compare with L3?",
+        "L2 contains 80 pieces; L3 contains 128. Both listings include a storage case and a project guide."
+      ],
+      [
+        "Does L2 include the storage case?",
+        "Yes. The 80-piece listing includes a locking storage case."
+      ],
+      [
+        "Do the photos show the exact 80 pieces?",
+        "The Amazon listing shares photos across the waffle collection. They show building ideas and connection methods; check the selected 80-piece option for its exact component selection."
+      ]
+    ],
+    "related": [
+      "soft-blocks-l3",
+      "dinosaur-l1",
+      "ice-l1"
+    ]
+  },
+  {
+    "key": "dinosaur-l1",
+    "slug": "dinosaur-jungle-l1",
+    "name": "Dinosaur Jungle · L1",
+    "title": "Dinosaur Jungle L1: 41-Piece Building Set | SUPUZZ",
+    "category": "dinosaurs",
+    "label": "DINOSAUR SERIES / LEVEL 1",
+    "asin": "B0H6C6XGJ9",
+    "variantGroup": "dinosaur",
+    "variantOrder": 1,
+    "variantLabel": "L1 · 41 pieces",
+    "facts": [
+      "41 pieces",
+      "Ages 3+",
+      "L1 set"
+    ],
+    "subtitle": "41-piece starter set with dinosaur figures and jungle scenery",
+    "intro": "Create a first dinosaur habitat with 41 interlocking pieces. Join the bright green base tiles, add branching stems and flowers, and give the dinosaur characters a small jungle of their own.",
+    "cardCopy": "A compact first dinosaur park, with 41 pieces to arrange and rebuild.",
+    "description": "Explore SUPUZZ Dinosaur Jungle L1, a 41-piece building set for ages 3+ with dinosaur figures, plants and puzzle bases. View photos and shop on Amazon.",
+    "metrics": [
+      [
+        "41",
+        "pieces"
+      ],
+      [
+        "3+",
+        "years"
+      ],
+      [
+        "L1",
+        "level"
+      ]
+    ],
+    "highlights": [
+      "41 total pieces for dinosaur-themed construction and pretend play.",
+      "Puzzle-style base tiles connect into different park layouts.",
+      "Hard plastic pieces with reinforced structural walls."
+    ],
+    "gallery": [
+      [
+        "main",
+        "SUPUZZ 41-piece Dinosaur Jungle L1 building set"
+      ],
+      [
+        "package",
+        "Package contents for the 41-piece SUPUZZ Dinosaur Jungle L1 set"
+      ],
+      [
+        "connections",
+        "Dinosaur-series illustration showing puzzle base layouts and example habitats"
+      ],
+      [
+        "play",
+        "Child playing with a SUPUZZ dinosaur-series scene; set contents vary"
+      ]
+    ],
+    "galleryNote": "Connection and play photos illustrate the dinosaur series. The package image shows this version’s exact contents.",
+    "features": [
+      {
+        "image": "main",
+        "eyebrow": "YOUR DINOSAUR JUNGLE / L1",
+        "title": "A first habitat, one piece at a time.",
+        "body": "The 41-piece L1 collection starts with a compact scene. Arrange the bases close together for a small park, then change the stems, flowers and character positions to tell another dinosaur story.",
+        "points": [
+          "41 pieces in this selected version.",
+          "Dinosaurs, flowers and jungle elements combine into a three-dimensional scene."
+        ]
+      },
+      {
+        "image": "connections",
+        "eyebrow": "CHANGE THE SHAPE OF THE PARK",
+        "title": "A new layout starts at the base.",
+        "body": "The green puzzle-style tiles snap together to form different footprints. Change the shape of the ground first, then stack stems and add scenery to create paths, islands or a connected dinosaur habitat.",
+        "points": [
+          "Connect and rearrange the base tiles.",
+          "Series illustrations demonstrate layout ideas; accessories vary by set."
+        ],
+        "caption": "Dinosaur-series connection examples. See the package image for the selected set’s contents."
+      }
+    ],
+    "includedTitle": "The 41-piece jungle starter.",
+    "included": [
+      "41 total building pieces",
+      "Dinosaur figures and jungle decorations within the set",
+      "Flowers, plants and connecting stems",
+      "Green puzzle-style base tiles"
+    ],
+    "packageImage": "package",
+    "packageCaption": "Amazon package-content image for the 41-piece L1 dinosaur set.",
+    "specs": {
+      "Series": "Funny Jungle Dinosaur",
+      "Level": "L1",
+      "Set size": "41 pieces",
+      "Suggested age": "3 years and up",
+      "Material": "Hard plastic",
+      "Base design": "Connectable puzzle-style tiles",
+      "Theme": "Dinosaurs, jungle plants and flowers"
+    },
+    "faq": [
+      [
+        "How does this version compare with the other sets?",
+        "L1 is the smallest set in this series, with 41 pieces. L2 has 99 pieces and L3 has 129 for larger landscapes."
+      ],
+      [
+        "Can the base tiles be rearranged?",
+        "Yes. The puzzle-style base tiles connect to each other so the park can be rebuilt in different shapes."
+      ],
+      [
+        "Does this set include a carry case?",
+        "The listing distinguishes basic color-box packaging from upgraded packaging with a carry case. Piece count alone does not identify the packaging option; check the selected option on Amazon."
+      ]
+    ],
+    "related": [
+      "dinosaur-l2",
+      "dinosaur-l3",
+      "soft-blocks-l3"
+    ]
+  },
+  {
+    "key": "dinosaur-l2",
+    "slug": "dinosaur-jungle-l2",
+    "name": "Dinosaur Jungle · L2",
+    "title": "Dinosaur Jungle L2: 99-Piece Building Set | SUPUZZ",
+    "category": "dinosaurs",
+    "label": "DINOSAUR SERIES / LEVEL 2",
+    "asin": "B0H6C64K2K",
+    "variantGroup": "dinosaur",
+    "variantOrder": 2,
+    "variantLabel": "L2 · 99 pieces",
+    "facts": [
+      "99 pieces",
+      "Ages 3+",
+      "L2 set"
+    ],
+    "subtitle": "99-piece dinosaur building set with plants, flowers and puzzle bases",
+    "intro": "Arrange a taller, fuller dinosaur park with 99 colorful pieces. Dinosaur characters, tropical plants and flowers sit on puzzle-style bases that can be joined in different shapes for each new build.",
+    "cardCopy": "99 pieces for a fuller jungle, taller builds and more dinosaur stories.",
+    "description": "Explore SUPUZZ Dinosaur Jungle L2, a 99-piece building set for ages 3+ with dinosaur figures, plants and puzzle bases. View photos and shop on Amazon.",
+    "metrics": [
+      [
+        "99",
+        "pieces"
+      ],
+      [
+        "3+",
+        "years"
+      ],
+      [
+        "L2",
+        "level"
+      ]
+    ],
+    "highlights": [
+      "99 total pieces for dinosaur-themed construction and pretend play.",
+      "Puzzle-style base tiles connect into different park layouts.",
+      "Hard plastic pieces with reinforced structural walls."
+    ],
+    "gallery": [
+      [
+        "main",
+        "SUPUZZ 99-piece Dinosaur Jungle L2 building set"
+      ],
+      [
+        "package",
+        "Package contents for the 99-piece SUPUZZ Dinosaur Jungle L2 set"
+      ],
+      [
+        "connections",
+        "Dinosaur-series illustration showing puzzle base layouts and example habitats"
+      ],
+      [
+        "play",
+        "Child playing with a SUPUZZ dinosaur-series scene; set contents vary"
+      ]
+    ],
+    "galleryNote": "Connection and play photos illustrate the dinosaur series. The package image shows this version’s exact contents.",
+    "features": [
+      {
+        "image": "main",
+        "eyebrow": "YOUR DINOSAUR JUNGLE / L2",
+        "title": "More pieces. More places for dinosaurs.",
+        "body": "The 99-piece L2 collection expands the jungle with more components than the 41-piece starter. Build at different heights, give the characters separate areas to explore or bring the pieces together into one busy habitat.",
+        "points": [
+          "99 pieces in this selected version.",
+          "Dinosaurs, flowers and jungle elements combine into a three-dimensional scene."
+        ]
+      },
+      {
+        "image": "connections",
+        "eyebrow": "CHANGE THE SHAPE OF THE PARK",
+        "title": "A new layout starts at the base.",
+        "body": "The green puzzle-style tiles snap together to form different footprints. Change the shape of the ground first, then stack stems and add scenery to create paths, islands or a connected dinosaur habitat.",
+        "points": [
+          "Connect and rearrange the base tiles.",
+          "Series illustrations demonstrate layout ideas; accessories vary by set."
+        ],
+        "caption": "Dinosaur-series connection examples. See the package image for the selected set’s contents."
+      }
+    ],
+    "includedTitle": "Inside the 99-piece dinosaur park.",
+    "included": [
+      "99 total building pieces",
+      "Dinosaur figures and jungle decorations within the set",
+      "Flowers, plants and connecting stems",
+      "Green puzzle-style base tiles"
+    ],
+    "packageImage": "package",
+    "packageCaption": "Amazon package-content image for the 99-piece L2 dinosaur set.",
+    "specs": {
+      "Series": "Funny Jungle Dinosaur",
+      "Level": "L2",
+      "Set size": "99 pieces",
+      "Suggested age": "3 years and up",
+      "Material": "Hard plastic",
+      "Base design": "Connectable puzzle-style tiles",
+      "Theme": "Dinosaurs, jungle plants and flowers"
+    },
+    "faq": [
+      [
+        "How does this version compare with the other sets?",
+        "L2 contains 99 pieces, between the 41-piece L1 starter and the 129-piece L3 collection."
+      ],
+      [
+        "Can the base tiles be rearranged?",
+        "Yes. The puzzle-style base tiles connect to each other so the park can be rebuilt in different shapes."
+      ],
+      [
+        "Does this set include a carry case?",
+        "The listing distinguishes basic color-box packaging from upgraded packaging with a carry case. Piece count alone does not identify the packaging option; check the selected option on Amazon."
+      ]
+    ],
+    "related": [
+      "dinosaur-l1",
+      "dinosaur-l3",
+      "soft-blocks-l3"
+    ]
+  },
+  {
+    "key": "dinosaur-l3",
+    "slug": "dinosaur-jungle-l3",
+    "name": "Dinosaur Jungle · L3",
+    "title": "Dinosaur Jungle L3: 129-Piece Building Set | SUPUZZ",
+    "category": "dinosaurs",
+    "label": "DINOSAUR SERIES / LEVEL 3",
+    "asin": "B0H6C5SCCL",
+    "variantGroup": "dinosaur",
+    "variantOrder": 3,
+    "variantLabel": "L3 · 129 pieces",
+    "facts": [
+      "129 pieces",
+      "Ages 3+",
+      "L3 set"
+    ],
+    "subtitle": "129-piece dinosaur jungle collection for larger prehistoric scenes",
+    "intro": "Build the largest dinosaur scene in the L1–L3 collection. With 129 pieces, the L3 set combines dinosaur characters, jungle decorations and connectable base tiles for a wide park or several smaller habitats.",
+    "cardCopy": "The 129-piece collection for a wide park or several mini habitats.",
+    "description": "Explore SUPUZZ Dinosaur Jungle L3, a 129-piece building set for ages 3+ with dinosaur figures, plants and puzzle bases. View photos and shop on Amazon.",
+    "metrics": [
+      [
+        "129",
+        "pieces"
+      ],
+      [
+        "3+",
+        "years"
+      ],
+      [
+        "L3",
+        "level"
+      ]
+    ],
+    "highlights": [
+      "129 total pieces for dinosaur-themed construction and pretend play.",
+      "Puzzle-style base tiles connect into different park layouts.",
+      "Hard plastic pieces with reinforced structural walls."
+    ],
+    "gallery": [
+      [
+        "main",
+        "SUPUZZ 129-piece Dinosaur Jungle L3 building set"
+      ],
+      [
+        "package",
+        "Package contents for the 129-piece SUPUZZ Dinosaur Jungle L3 set"
+      ],
+      [
+        "connections",
+        "Dinosaur-series illustration showing puzzle base layouts and example habitats"
+      ],
+      [
+        "play",
+        "Child playing with a SUPUZZ dinosaur-series scene; set contents vary"
+      ]
+    ],
+    "galleryNote": "Connection and play photos illustrate the dinosaur series. The package image shows this version’s exact contents.",
+    "features": [
+      {
+        "image": "main",
+        "eyebrow": "YOUR DINOSAUR JUNGLE / L3",
+        "title": "Give every corner a different story.",
+        "body": "The 129-piece L3 collection offers the most components in this series. Connect the bases into a broad prehistoric park or separate them into smaller scenes, then decide where each dinosaur and jungle decoration belongs.",
+        "points": [
+          "129 pieces in this selected version.",
+          "Dinosaurs, flowers and jungle elements combine into a three-dimensional scene."
+        ]
+      },
+      {
+        "image": "connections",
+        "eyebrow": "CHANGE THE SHAPE OF THE PARK",
+        "title": "A new layout starts at the base.",
+        "body": "The green puzzle-style tiles snap together to form different footprints. Change the shape of the ground first, then stack stems and add scenery to create paths, islands or a connected dinosaur habitat.",
+        "points": [
+          "Connect and rearrange the base tiles.",
+          "Series illustrations demonstrate layout ideas; accessories vary by set."
+        ],
+        "caption": "Dinosaur-series connection examples. See the package image for the selected set’s contents."
+      }
+    ],
+    "includedTitle": "The complete 129-piece L3 collection.",
+    "included": [
+      "129 total building pieces",
+      "Dinosaur figures and jungle decorations within the set",
+      "Flowers, plants and connecting stems",
+      "Green puzzle-style base tiles"
+    ],
+    "packageImage": "package",
+    "packageCaption": "Amazon package-content image for the 129-piece L3 dinosaur set.",
+    "specs": {
+      "Series": "Funny Jungle Dinosaur",
+      "Level": "L3",
+      "Set size": "129 pieces",
+      "Suggested age": "3 years and up",
+      "Material": "Hard plastic",
+      "Base design": "Connectable puzzle-style tiles",
+      "Theme": "Dinosaurs, jungle plants and flowers"
+    },
+    "faq": [
+      [
+        "How does this version compare with the other sets?",
+        "L3 is the largest of these three sets, with 129 pieces. L2 contains 99 pieces and L1 contains 41."
+      ],
+      [
+        "Can the base tiles be rearranged?",
+        "Yes. The puzzle-style base tiles connect to each other so the park can be rebuilt in different shapes."
+      ],
+      [
+        "Does this set include a carry case?",
+        "The listing distinguishes basic color-box packaging from upgraded packaging with a carry case. Piece count alone does not identify the packaging option; check the selected option on Amazon."
+      ]
+    ],
+    "related": [
+      "dinosaur-l1",
+      "dinosaur-l2",
+      "soft-blocks-l3"
+    ]
+  },
+  {
+    "key": "ocean-l1",
+    "slug": "ocean-building-blocks-l1",
+    "name": "Coral Reef · L1",
+    "title": "Ocean World L1: 38-Piece Coral Reef Building Blocks | SUPUZZ",
+    "category": "ocean",
+    "label": "CORAL REEF / LEVEL 1",
+    "asin": "B0F5PNRWJ1",
+    "facts": [
+      "38 pieces",
+      "Ages 3–5",
+      "L1 starter set"
+    ],
+    "intro": "Build a first coral reef with 38 colorful pieces. Connect the blue bases, stack the stems and add coral shapes and an octopus to make a compact underwater scene.",
+    "description": "Meet SUPUZZ Ocean World L1: 38-piece coral reef building blocks with an octopus for ages 3–5. Explore product photos, details and the Amazon listing.",
+    "highlights": [
+      "38-piece starter set with an octopus character.",
+      "Connecting bases, upright stems and colorful coral-shaped elements.",
+      "Part of SUPUZZ’s compatible nature-themed building collection."
+    ],
+    "storyTitle": "A little reef to call their own.",
+    "story": [
+      "Connect a first reef, introduce the octopus and imagine where it might go. The L1 collection is a compact introduction to the SUPUZZ ocean theme.",
+      "Rearrange the pieces together and talk about the shapes and colors in each scene. Every new layout offers a fresh starting point for a story."
+    ],
+    "specs": {
+      "Series": "Ocean World / Coral Reef",
+      "Level": "L1",
+      "Set size": "38 pieces",
+      "Suggested age": "3–5 years",
+      "Theme": "Coral reef with octopus",
+      "Storage": "Storage box not listed for this version"
+    },
+    "faq": [
+      [
+        "How do the three levels compare?",
+        "Coral Reef L1 has 38 pieces, L2 has 76 and L3 has 136. The L2 and L3 sets include storage boxes."
+      ],
+      [
+        "Does this version include a storage box?",
+        "A storage box is not listed for L1. The 76-piece L2 and 136-piece L3 sets include one."
+      ],
+      [
+        "Can I add to the set later?",
+        "Yes. It belongs to SUPUZZ’s compatible nature-themed building collection. Additional ocean, ice and forest sets are sold separately."
+      ]
+    ],
+    "imageAlts": [
+      "SUPUZZ Ocean World L1 38-piece coral reef building blocks with octopus",
+      "SUPUZZ ocean, ice and forest collections shown together for mixed play",
+      "SUPUZZ Ocean World L1 octopus and themed building pieces"
+    ],
+    "related": [
+      "ocean-l2",
+      "ocean-l3",
+      "ice-l1"
+    ],
+    "subtitle": "38-piece ocean building set with octopus",
+    "cardCopy": "A 38-piece first reef, with an octopus ready to move in.",
+    "metrics": [
+      [
+        "38",
+        "pieces"
+      ],
+      [
+        "3–5",
+        "years"
+      ],
+      [
+        "L1",
+        "level"
+      ]
+    ],
+    "gallery": [
+      [
+        "set",
+        "Complete 38-piece Coral Reef L1 build with octopus, cropped from its package-content image"
+      ],
+      [
+        "contents",
+        "Component inventory for the 38-piece L1 coral reef set"
+      ],
+      [
+        "detail-1",
+        "SUPUZZ ocean, ice and forest collections combined; extra sets sold separately"
+      ]
+    ],
+    "features": [
+      {
+        "image": "set",
+        "eyebrow": "A FIRST REEF, PIECE BY PIECE",
+        "title": "Start with the base. See where it grows.",
+        "body": "Join the blue base pieces, build upwards with the stems and choose where to place each coral shape. The compact L1 set offers a manageable starting point for trying different combinations.",
+        "points": [
+          "An octopus brings a character into the scene.",
+          "38 pieces for a smaller ocean arrangement."
+        ]
+      },
+      {
+        "image": "detail-1",
+        "eyebrow": "MORE WAYS TO KEEP BUILDING",
+        "title": "A small world that can grow.",
+        "body": "The L1 pieces use the SUPUZZ nature collection’s connecting format. Add another ocean set or mix with ice and forest pieces to create a different scene as the collection grows.",
+        "points": [
+          "Additional collections are sold separately.",
+          "Choose L2 or L3 for a larger ocean set with storage."
+        ]
+      }
+    ],
+    "includedTitle": "Inside the 38-piece starter set.",
+    "included": [
+      "38 ocean-themed building pieces",
+      "Octopus character",
+      "Blue connecting bases",
+      "Stems and coral-shaped decorative elements"
+    ],
+    "packageImage": "contents",
+    "packageCaption": "Component inventory from the 38-piece L1 Amazon package-content image.",
+    "variantGroup": "ocean",
+    "variantOrder": 1,
+    "variantLabel": "L1 · 38 pieces"
+  },
+  {
+    "key": "ocean-l2",
+    "slug": "coral-reef-l2",
+    "name": "Coral Reef · L2",
+    "title": "Coral Reef L2: 76-Piece Building Set | SUPUZZ",
+    "category": "ocean",
+    "label": "CORAL REEF / LEVEL 2",
+    "asin": "B0FHK6BW37",
+    "variantGroup": "ocean",
+    "variantOrder": 2,
+    "variantLabel": "L2 · 76 pieces",
+    "facts": [
+      "76 pieces",
+      "Storage box"
+    ],
+    "subtitle": "76-piece ocean building set with storage box",
+    "intro": "Build a reef with room for a whole cast of sea creatures. The 76-piece L2 set brings together colorful coral, branching stems and blue bases, with a storage box for the next adventure.",
+    "cardCopy": "A 76-piece reef with sea creatures, branching coral and a storage box.",
+    "description": "Explore SUPUZZ Coral Reef L2, a 76-piece coral reef building set. See matching product photos, package contents and the Amazon listing.",
+    "metrics": [
+      [
+        "76",
+        "pieces"
+      ],
+      [
+        "Included",
+        "storage box"
+      ],
+      [
+        "L2",
+        "level"
+      ]
+    ],
+    "highlights": [
+      "76 pieces for arranging and rebuilding a coral reef.",
+      "Connecting bases, upright stems and themed decorations.",
+      "Storage box included."
+    ],
+    "gallery": [
+      [
+        "main",
+        "SUPUZZ 76-piece Coral Reef L2 building set"
+      ],
+      [
+        "contents",
+        "Component contents for the 76-piece Coral Reef L2 set"
+      ],
+      [
+        "mixed",
+        "SUPUZZ ocean, ice and forest sets combined; additional sets sold separately"
+      ]
+    ],
+    "galleryNote": "Mixed-world photos show combinations with additional sets, sold separately.",
+    "features": [
+      {
+        "image": "main",
+        "eyebrow": "BUILD AN UNDERWATER SCENE",
+        "title": "Give every sea creature a place to explore.",
+        "body": "Try a low, wide reef with paths between the coral, or stack the stems to make a taller underwater scene. Move the octopus and fish to new spots and imagine what happens next.",
+        "points": [
+          "Change the layout by rearranging bases and stems.",
+          "Use the package image to explore the pieces in this version."
+        ]
+      },
+      {
+        "image": "mixed",
+        "eyebrow": "A COLLECTION THAT CONNECTS",
+        "title": "Let one world grow into another.",
+        "body": "The SUPUZZ nature collection uses compatible stems, decorations and bases across its ocean, ice and forest sets. Try a coral garden in the snow or give a penguin a new place to explore.",
+        "points": [
+          "Additional collections are sold separately.",
+          "L1, L2 and L3 offer different set sizes."
+        ],
+        "caption": "Mixed collection shown. Additional sets sold separately."
+      }
+    ],
+    "includedTitle": "Inside the 76-piece reef.",
+    "included": [
+      "76-piece ocean building collection",
+      "Sea creature figures, coral shapes and connecting stems",
+      "Blue connecting bases",
+      "Storage box"
+    ],
+    "packageImage": "contents",
+    "packageCaption": "Component contents from the 76-piece L2 Amazon package image.",
+    "specs": {
+      "Series": "Coral Reef",
+      "Level": "L2",
+      "Set size": "76 pieces",
+      "Theme": "Coral reef and sea creatures",
+      "Storage": "Box included"
+    },
+    "faq": [
+      [
+        "How do the three levels compare?",
+        "Coral Reef L1 has 38 pieces, L2 has 76 and L3 has 136. The L2 and L3 sets include storage boxes."
+      ],
+      [
+        "Does this set include a storage box?",
+        "Yes. The package-content image lists a storage box for this L2 set."
+      ],
+      [
+        "Can I combine it with other SUPUZZ sets?",
+        "Yes. The ocean, ice and forest nature collections use compatible connections. Other sets shown in mixed-world photos are sold separately."
+      ]
+    ],
+    "related": [
+      "ocean-l1",
+      "ocean-l3",
+      "ice-l2"
+    ]
+  },
+  {
+    "key": "ocean-l3",
+    "slug": "coral-reef-l3",
+    "name": "Coral Reef · L3",
+    "title": "Coral Reef L3: 136-Piece STEM Building Set | SUPUZZ",
+    "category": "ocean",
+    "label": "CORAL REEF / LEVEL 3",
+    "asin": "B0FHK6RHT9",
+    "facts": [
+      "136 pieces",
+      "Ages 3–6",
+      "Storage box"
+    ],
+    "intro": "Fill an underwater landscape with colorful coral, branching stems and sea creatures. The 136-piece L3 collection gives young builders a larger reef to arrange, take apart and build again.",
+    "description": "Discover SUPUZZ Coral Reef L3, a 136-piece ocean STEM building set with sea creatures and a storage box. Browse photos, details and shop on Amazon.",
+    "highlights": [
+      "136 ocean-themed pieces, including bases, stems and coral elements.",
+      "Sea creatures add characters for underwater pretend play.",
+      "Includes a storage box to gather the collection after building."
+    ],
+    "storyTitle": "An ocean of building ideas.",
+    "story": [
+      "Arrange the reef, add the sea creatures and imagine life below the surface. The larger L3 collection gives young builders more pieces for creating an ocean scene.",
+      "Use the set for a shared building activity or a new underwater story. The included box gives the pieces a place to go when the adventure is over."
+    ],
+    "specs": {
+      "Series": "Ocean World / Coral Reef",
+      "Level": "L3",
+      "Set size": "136 pieces",
+      "Suggested age": "3–6 years",
+      "Theme": "Coral reef and sea creatures",
+      "Storage": "Box included"
+    },
+    "faq": [
+      [
+        "How do the three levels compare?",
+        "Coral Reef L1 has 38 pieces, L2 has 76 and L3 has 136. The L2 and L3 sets include storage boxes."
+      ],
+      [
+        "Does L3 include a box?",
+        "Yes. A storage box is included with the 136-piece L3 set."
+      ],
+      [
+        "Are all the sets in the mixed-world photos included?",
+        "No. Photos combining ocean, ice and forest themes show possible arrangements with additional sets, which are sold separately."
+      ]
+    ],
+    "imageAlts": [
+      "SUPUZZ Coral Reef L3 136-piece ocean building set with storage box",
+      "SUPUZZ Coral Reef L3 package contents with 136 pieces and storage box",
+      "SUPUZZ ocean, ice and forest themed building sets shown together"
+    ],
+    "related": [
+      "ocean-l1",
+      "ocean-l2",
+      "ice-l3"
+    ],
+    "subtitle": "136-piece ocean building set with storage box",
+    "cardCopy": "A full coral reef, colorful sea creatures and room for bigger builds.",
+    "metrics": [
+      [
+        "136",
+        "pieces"
+      ],
+      [
+        "3–6",
+        "years"
+      ],
+      [
+        "L3",
+        "level"
+      ]
+    ],
+    "gallery": [
+      [
+        "main",
+        "SUPUZZ Coral Reef L3 136-piece ocean scene"
+      ],
+      [
+        "contents",
+        "Component inventory for the 136-piece L3 coral reef set"
+      ],
+      [
+        "amazon-3",
+        "SUPUZZ ocean, ice and forest sets mixed together; additional sets sold separately"
+      ],
+      [
+        "detail-2",
+        "Different SUPUZZ nature-themed building collections displayed together"
+      ]
+    ],
+    "features": [
+      {
+        "image": "main",
+        "eyebrow": "BUILD AN UNDERWATER HABITAT",
+        "title": "Layers of coral. A cast of sea creatures.",
+        "body": "Arrange branching stems and coral shapes at different heights, then introduce the sea creatures. The colorful components make the reef a setting for stories as well as a construction to explore.",
+        "points": [
+          "Octopus and fish characters appear in the collection.",
+          "Build a wide reef or experiment with taller arrangements."
+        ]
+      },
+      {
+        "image": "amazon-3",
+        "eyebrow": "A COLLECTION THAT CONNECTS",
+        "title": "Take the ocean beyond the reef.",
+        "body": "The nature-themed connection system also works with SUPUZZ’s ice and forest collections. Combine pieces to imagine an ocean garden or a landscape that brings different worlds together.",
+        "points": [
+          "Compatible nature collections are sold separately.",
+          "Mixed-set photos are examples of expanded play."
+        ]
+      }
+    ],
+    "includedTitle": "More pieces for a bigger underwater world.",
+    "included": [
+      "136-piece ocean building collection",
+      "Sea creature characters",
+      "Connecting bases, stems and coral elements",
+      "Storage box"
+    ],
+    "packageImage": "contents",
+    "packageCaption": "Component inventory from the 136-piece L3 Amazon package-content image.",
+    "variantGroup": "ocean",
+    "variantOrder": 3,
+    "variantLabel": "L3 · 136 pieces"
+  },
+  {
+    "key": "ice-l1",
+    "slug": "icy-world-l1",
+    "name": "Icy World · L1",
+    "title": "Icy World L1: 40-Piece Building Set | SUPUZZ",
+    "category": "ice",
+    "label": "ICY WORLD / LEVEL 1",
+    "asin": "B0F5PPQ2T3",
+    "variantGroup": "ice",
+    "variantOrder": 1,
+    "variantLabel": "L1 · 40 pieces",
+    "facts": [
+      "40 pieces",
+      "Ages 3+",
+      "L1 starter set"
+    ],
+    "subtitle": "40-piece snow garden starter with a penguin",
+    "intro": "Make a small snowy garden for a penguin. Connect the blue bases, stack the colorful stems and add snowflakes, crystal shapes and a snow-covered tree to build a first winter scene.",
+    "cardCopy": "A 40-piece first snow garden, with a penguin ready to move in.",
+    "description": "Explore SUPUZZ Icy World L1, a 40-piece snow-themed building set. See matching product photos, package contents and the Amazon listing.",
+    "metrics": [
+      [
+        "40",
+        "pieces"
+      ],
+      [
+        "3+",
+        "years"
+      ],
+      [
+        "L1",
+        "level"
+      ]
+    ],
+    "highlights": [
+      "40 pieces for arranging and rebuilding a winter scene.",
+      "Connecting bases, upright stems and themed decorations.",
+      "Penguin character adds a starting point for pretend play."
+    ],
+    "gallery": [
+      [
+        "main",
+        "SUPUZZ 40-piece Icy World L1 building set"
+      ],
+      [
+        "contents",
+        "Component contents for the 40-piece Icy World L1 set"
+      ],
+      [
+        "mixed",
+        "SUPUZZ ocean, ice and forest sets combined; additional sets sold separately"
+      ]
+    ],
+    "galleryNote": "Mixed-world photos show combinations with additional sets, sold separately.",
+    "features": [
+      {
+        "image": "main",
+        "eyebrow": "BUILD A WINTER SCENE",
+        "title": "A little winter world, built from the ground up.",
+        "body": "Begin with the blue bases, then choose where the snow-covered tree and penguin will go. Try placing the snowflake at the top of a tall stem, or build a lower scene with room around each character.",
+        "points": [
+          "Change the layout by rearranging bases and stems.",
+          "Use the package image to explore the pieces in this version."
+        ]
+      },
+      {
+        "image": "mixed",
+        "eyebrow": "A COLLECTION THAT CONNECTS",
+        "title": "Let one world grow into another.",
+        "body": "The SUPUZZ nature collection uses compatible stems, decorations and bases across its ocean, ice and forest sets. Try a coral garden in the snow or give a penguin a new place to explore.",
+        "points": [
+          "Additional collections are sold separately.",
+          "L1, L2 and L3 offer different set sizes."
+        ],
+        "caption": "Mixed collection shown. Additional sets sold separately."
+      }
+    ],
+    "includedTitle": "Inside the 40-piece winter set.",
+    "included": [
+      "40-piece snow-themed building collection",
+      "Penguin character within the set",
+      "Blue connecting bases and stems",
+      "Snowflake, crystal and snowy-tree decorations"
+    ],
+    "packageImage": "contents",
+    "packageCaption": "Component contents from the 40-piece L1 Amazon package image.",
+    "specs": {
+      "Series": "Icy World",
+      "Level": "L1",
+      "Set size": "40 pieces",
+      "Suggested age": "3+ years",
+      "Theme": "Snow garden with penguin",
+      "Storage": "Storage box not listed for this version"
+    },
+    "faq": [
+      [
+        "How do the three levels compare?",
+        "Icy World L1 has 40 pieces, L2 has 79 and L3 has 136. The L2 and L3 sets include storage boxes."
+      ],
+      [
+        "Does this set include a storage box?",
+        "A storage box is not listed for L1. The L2 and L3 versions include one."
+      ],
+      [
+        "Can I combine it with other SUPUZZ sets?",
+        "Yes. The ocean, ice and forest nature collections use compatible connections. Other sets shown in mixed-world photos are sold separately."
+      ]
+    ],
+    "related": [
+      "ice-l2",
+      "ice-l3",
+      "ocean-l1"
+    ]
+  },
+  {
+    "key": "ice-l2",
+    "slug": "icy-world-l2",
+    "name": "Icy World · L2",
+    "title": "Icy World L2: 79-Piece Building Set | SUPUZZ",
+    "category": "ice",
+    "label": "ICY WORLD / LEVEL 2",
+    "asin": "B0FHK5NP9T",
+    "variantGroup": "ice",
+    "variantOrder": 2,
+    "variantLabel": "L2 · 79 pieces",
+    "facts": [
+      "79 pieces",
+      "Ages 3–5",
+      "Storage box"
+    ],
+    "subtitle": "79-piece winter building set with storage box",
+    "intro": "Create a snow park with animal characters, a snowman and frosty decorations. The 79-piece L2 collection offers more pieces than the starter set and includes a box to gather them after play.",
+    "cardCopy": "A 79-piece snow park with animal characters and a storage box.",
+    "description": "Explore SUPUZZ Icy World L2, a 79-piece snow-themed building set. See matching product photos, package contents and the Amazon listing.",
+    "metrics": [
+      [
+        "79",
+        "pieces"
+      ],
+      [
+        "3–5",
+        "years"
+      ],
+      [
+        "L2",
+        "level"
+      ]
+    ],
+    "highlights": [
+      "79 pieces for arranging and rebuilding a winter scene.",
+      "Connecting bases, upright stems and themed decorations.",
+      "Storage box included."
+    ],
+    "gallery": [
+      [
+        "main",
+        "SUPUZZ 79-piece Icy World L2 building set"
+      ],
+      [
+        "package",
+        "Component contents for the 79-piece Icy World L2 set"
+      ],
+      [
+        "mixed",
+        "SUPUZZ ocean, ice and forest sets combined; additional sets sold separately"
+      ]
+    ],
+    "galleryNote": "Mixed-world photos show combinations with additional sets, sold separately.",
+    "features": [
+      {
+        "image": "main",
+        "eyebrow": "BUILD A WINTER SCENE",
+        "title": "More characters. More winter stories.",
+        "body": "Build a snowy meeting place for the animals, then rearrange the branches and platforms around them. A snowman and snow-park sign help set the scene for a new story each time.",
+        "points": [
+          "Change the layout by rearranging bases and stems.",
+          "Use the package image to explore the pieces in this version."
+        ]
+      },
+      {
+        "image": "mixed",
+        "eyebrow": "A COLLECTION THAT CONNECTS",
+        "title": "Let one world grow into another.",
+        "body": "The SUPUZZ nature collection uses compatible stems, decorations and bases across its ocean, ice and forest sets. Try a coral garden in the snow or give a penguin a new place to explore.",
+        "points": [
+          "Additional collections are sold separately.",
+          "L1, L2 and L3 offer different set sizes."
+        ],
+        "caption": "Mixed collection shown. Additional sets sold separately."
+      }
+    ],
+    "includedTitle": "Inside the 79-piece winter set.",
+    "included": [
+      "79-piece snow-themed building collection",
+      "Animal characters and a snowman within the set",
+      "Connecting bases, stems and winter decorations",
+      "Storage box"
+    ],
+    "packageImage": "package",
+    "packageCaption": "Component contents from the 79-piece L2 Amazon package image.",
+    "specs": {
+      "Series": "Icy World",
+      "Level": "L2",
+      "Set size": "79 pieces",
+      "Suggested age": "3–5 years",
+      "Theme": "Snow park and animal characters",
+      "Storage": "Box included"
+    },
+    "faq": [
+      [
+        "How do the three levels compare?",
+        "Icy World L1 has 40 pieces, L2 has 79 and L3 has 136. The L2 and L3 sets include storage boxes."
+      ],
+      [
+        "Does this set include a storage box?",
+        "Yes. The package-content image lists a storage box for this L2 set."
+      ],
+      [
+        "Can I combine it with other SUPUZZ sets?",
+        "Yes. The ocean, ice and forest nature collections use compatible connections. Other sets shown in mixed-world photos are sold separately."
+      ]
+    ],
+    "related": [
+      "ice-l1",
+      "ice-l3",
+      "ocean-l2"
+    ]
+  },
+  {
+    "key": "ice-l3",
+    "slug": "icy-world-l3",
+    "name": "Icy World · L3",
+    "title": "Icy World L3: 136-Piece Snow Building Set | SUPUZZ",
+    "category": "ice",
+    "label": "ICY WORLD / LEVEL 3",
+    "asin": "B0FHK8V6ZZ",
+    "facts": [
+      "136 pieces",
+      "Ages 4–8",
+      "L3 set"
+    ],
+    "intro": "Stack ice-blue stems, arrange snowy trees and add animal characters to a winter landscape. This larger L3 set combines 136 pieces, 10 figures and a storage box for building a complete scene.",
+    "description": "Explore SUPUZZ Icy World L3, a 136-piece snow-themed building set with Arctic animal figures. View product photos, features and its Amazon listing.",
+    "highlights": [
+      "Ice-themed stems, decorative pieces and connecting bases.",
+      "10 figures to add characters to a winter scene.",
+      "Storage box included for the 136-piece collection."
+    ],
+    "storyTitle": "Their own winter wonderland.",
+    "story": [
+      "Arrange an icy garden, add animal characters and let a story unfold. The snow theme creates a starting point for building and pretend play.",
+      "Try a new layout each time. Sorting, stacking and changing the scene give children different ways to explore the same collection of pieces."
+    ],
+    "specs": {
+      "Series": "Icy World",
+      "Level": "L3",
+      "Set size": "136 pieces",
+      "Figures": "10",
+      "Suggested age": "4–8 years",
+      "Theme": "Snow garden and Arctic animals",
+      "Storage": "Box included"
+    },
+    "faq": [
+      [
+        "How do the three levels compare?",
+        "Icy World L1 has 40 pieces, L2 has 79 and L3 has 136. The L2 and L3 sets include storage boxes."
+      ],
+      [
+        "Does it include the storage box?",
+        "Yes. The L3 package-content image shows the storage box as part of the set."
+      ],
+      [
+        "Can it be combined with the ocean collection?",
+        "Yes. SUPUZZ’s nature-themed stems, decorative pieces and bases are designed to mix across the forest, ocean and ice collections. Additional sets are sold separately."
+      ]
+    ],
+    "imageAlts": [
+      "SUPUZZ Icy World L3 136-piece snow-themed building set and Arctic figures",
+      "SUPUZZ Icy World L3 animal figures and ice-themed pieces",
+      "SUPUZZ Icy World L3 package contents with 136 pieces and storage box"
+    ],
+    "related": [
+      "ice-l1",
+      "ice-l2",
+      "ocean-l3"
+    ],
+    "subtitle": "136-piece snow garden with Arctic animal figures",
+    "cardCopy": "Snowy trees, Arctic characters and a winter world to rebuild.",
+    "metrics": [
+      [
+        "136",
+        "pieces"
+      ],
+      [
+        "4–8",
+        "years"
+      ],
+      [
+        "L3",
+        "level"
+      ]
+    ],
+    "gallery": [
+      [
+        "main",
+        "SUPUZZ 136-piece Icy World L3 snow garden"
+      ],
+      [
+        "detail-1",
+        "Icy World animal figures and snow-themed building pieces"
+      ],
+      [
+        "detail-2",
+        "Icy World L3 package contents and storage box"
+      ],
+      [
+        "amazon-5",
+        "Icy World building scenes assembled on a play surface"
+      ]
+    ],
+    "features": [
+      {
+        "image": "detail-1",
+        "eyebrow": "MEET THE WINTER CHARACTERS",
+        "title": "A snowy setting for their next story.",
+        "body": "Animal figures and snow-inspired decorations turn the build into a setting for pretend play. Place a character beside a tree, change its surroundings or make a new path through the scene.",
+        "points": [
+          "10 figures in the L3 collection.",
+          "Cool blue, purple and white pieces build a winter palette."
+        ]
+      },
+      {
+        "image": "amazon-5",
+        "eyebrow": "CONNECT, STACK & REARRANGE",
+        "title": "Let the landscape keep changing.",
+        "body": "Start with the bases, add stems at different heights and finish with decorative pieces. The connecting format lets children move elements around instead of keeping to one fixed layout.",
+        "points": [
+          "Mix with SUPUZZ’s compatible nature-themed building collections.",
+          "Other collections are sold separately."
+        ]
+      }
+    ],
+    "includedTitle": "The complete L3 snow collection.",
+    "included": [
+      "136 snow-themed building pieces",
+      "10 figures as part of the collection",
+      "Connecting bases, stems and decorative elements",
+      "Storage box"
+    ],
+    "packageImage": "detail-2",
+    "packageCaption": "Amazon package-content image for the 136-piece Icy World L3 set.",
+    "variantGroup": "ice",
+    "variantOrder": 3,
+    "variantLabel": "L3 · 136 pieces"
   },
   {
     "key": "kids-chair-pink",
@@ -249,372 +1443,6 @@
     ],
     "packageImage": "main",
     "packageCaption": "The individual pink chair supplied by this listing."
-  },
-  {
-    "key": "ice-l3",
-    "slug": "icy-world-l3",
-    "name": "Icy World",
-    "title": "Icy World L3: 136-Piece Snow Building Set | SUPUZZ",
-    "category": "nature",
-    "label": "NATURE WORLDS / LEVEL 3",
-    "asin": "B0FHK8V6ZZ",
-    "facts": [
-      "136 pieces",
-      "Ages 4–8",
-      "L3 set"
-    ],
-    "intro": "Stack ice-blue stems, arrange snowy trees and add animal characters to a winter landscape. This larger L3 set combines 136 pieces, 10 figures and a storage box for building a complete scene.",
-    "description": "Explore SUPUZZ Icy World L3, a 136-piece snow-themed building set with Arctic animal figures. View product photos, features and its Amazon listing.",
-    "highlights": [
-      "Ice-themed stems, decorative pieces and connecting bases.",
-      "10 figures to add characters to a winter scene.",
-      "Storage box included for the 136-piece collection."
-    ],
-    "storyTitle": "Their own winter wonderland.",
-    "story": [
-      "Arrange an icy garden, add animal characters and let a story unfold. The snow theme creates a starting point for building and pretend play.",
-      "Try a new layout each time. Sorting, stacking and changing the scene give children different ways to explore the same collection of pieces."
-    ],
-    "specs": {
-      "Series": "Icy World",
-      "Level": "L3",
-      "Set size": "136 pieces",
-      "Figures": "10",
-      "Suggested age": "4–8 years",
-      "Theme": "Snow garden and Arctic animals",
-      "Storage": "Box included"
-    },
-    "faq": [
-      [
-        "Is this the L1, L2 or L3 set?",
-        "This is the 136-piece L3 Icy World set. Choose the matching L3 version on Amazon."
-      ],
-      [
-        "Does it include the storage box?",
-        "Yes. The L3 package-content image shows the storage box as part of the set."
-      ],
-      [
-        "Can it be combined with the ocean collection?",
-        "Yes. SUPUZZ’s nature-themed stems, decorative pieces and bases are designed to mix across the forest, ocean and ice collections. Additional sets are sold separately."
-      ]
-    ],
-    "imageAlts": [
-      "SUPUZZ Icy World L3 136-piece snow-themed building set and Arctic figures",
-      "SUPUZZ Icy World L3 animal figures and ice-themed pieces",
-      "SUPUZZ Icy World L3 package contents with 136 pieces and storage box"
-    ],
-    "related": [
-      "ocean-l3",
-      "ocean-l1",
-      "soft-blocks-l3"
-    ],
-    "subtitle": "136-piece snow garden with Arctic animal figures",
-    "cardCopy": "Snowy trees, Arctic characters and a winter world to rebuild.",
-    "metrics": [
-      [
-        "136",
-        "pieces"
-      ],
-      [
-        "4–8",
-        "years"
-      ],
-      [
-        "L3",
-        "level"
-      ]
-    ],
-    "gallery": [
-      [
-        "main",
-        "SUPUZZ 136-piece Icy World L3 snow garden"
-      ],
-      [
-        "detail-1",
-        "Icy World animal figures and snow-themed building pieces"
-      ],
-      [
-        "detail-2",
-        "Icy World L3 package contents and storage box"
-      ],
-      [
-        "amazon-5",
-        "Icy World building scenes assembled on a play surface"
-      ]
-    ],
-    "features": [
-      {
-        "image": "detail-1",
-        "eyebrow": "MEET THE WINTER CHARACTERS",
-        "title": "A snowy setting for their next story.",
-        "body": "Animal figures and snow-inspired decorations turn the build into a setting for pretend play. Place a character beside a tree, change its surroundings or make a new path through the scene.",
-        "points": [
-          "10 figures in the L3 collection.",
-          "Cool blue, purple and white pieces build a winter palette."
-        ]
-      },
-      {
-        "image": "amazon-5",
-        "eyebrow": "CONNECT, STACK & REARRANGE",
-        "title": "Let the landscape keep changing.",
-        "body": "Start with the bases, add stems at different heights and finish with decorative pieces. The connecting format lets children move elements around instead of keeping to one fixed layout.",
-        "points": [
-          "Mix with SUPUZZ’s compatible nature-themed building collections.",
-          "Other collections are sold separately."
-        ]
-      }
-    ],
-    "includedTitle": "The complete L3 snow collection.",
-    "included": [
-      "136 snow-themed building pieces",
-      "10 figures as part of the collection",
-      "Connecting bases, stems and decorative elements",
-      "Storage box"
-    ],
-    "packageImage": "detail-2",
-    "packageCaption": "Amazon package-content image for the 136-piece Icy World L3 set."
-  },
-  {
-    "key": "ocean-l3",
-    "slug": "coral-reef-l3",
-    "name": "Coral Reef",
-    "title": "Coral Reef L3: 136-Piece STEM Building Set | SUPUZZ",
-    "category": "nature",
-    "label": "NATURE WORLDS / LEVEL 3",
-    "asin": "B0FHK6RHT9",
-    "facts": [
-      "136 pieces",
-      "Ages 3–6",
-      "Storage box"
-    ],
-    "intro": "Fill an underwater landscape with colorful coral, branching stems and sea creatures. The 136-piece L3 collection gives young builders a larger reef to arrange, take apart and build again.",
-    "description": "Discover SUPUZZ Coral Reef L3, a 136-piece ocean STEM building set with sea creatures and a storage box. Browse photos, details and shop on Amazon.",
-    "highlights": [
-      "136 ocean-themed pieces, including bases, stems and coral elements.",
-      "Sea creatures add characters for underwater pretend play.",
-      "Includes a storage box to gather the collection after building."
-    ],
-    "storyTitle": "An ocean of building ideas.",
-    "story": [
-      "Arrange the reef, add the sea creatures and imagine life below the surface. The larger L3 collection gives young builders more pieces for creating an ocean scene.",
-      "Use the set for a shared building activity or a new underwater story. The included box gives the pieces a place to go when the adventure is over."
-    ],
-    "specs": {
-      "Series": "Ocean World / Coral Reef",
-      "Level": "L3",
-      "Set size": "136 pieces",
-      "Suggested age": "3–6 years",
-      "Theme": "Coral reef and sea creatures",
-      "Storage": "Box included"
-    },
-    "faq": [
-      [
-        "What is the difference between L1 and L3?",
-        "L1 contains 38 pieces for a smaller starter scene. L3 expands to 136 pieces and includes a storage box. Both belong to the ocean building collection."
-      ],
-      [
-        "Does L3 include a box?",
-        "Yes. A storage box is included with the 136-piece L3 set."
-      ],
-      [
-        "Are all the sets in the mixed-world photos included?",
-        "No. Photos combining ocean, ice and forest themes show possible arrangements with additional sets, which are sold separately."
-      ]
-    ],
-    "imageAlts": [
-      "SUPUZZ Coral Reef L3 136-piece ocean building set with storage box",
-      "SUPUZZ Coral Reef L3 package contents with 136 pieces and storage box",
-      "SUPUZZ ocean, ice and forest themed building sets shown together"
-    ],
-    "related": [
-      "ocean-l1",
-      "ice-l3",
-      "soft-blocks-l3"
-    ],
-    "subtitle": "136-piece ocean building set with storage box",
-    "cardCopy": "A full coral reef, colorful sea creatures and room for bigger builds.",
-    "metrics": [
-      [
-        "136",
-        "pieces"
-      ],
-      [
-        "3–6",
-        "years"
-      ],
-      [
-        "L3",
-        "level"
-      ]
-    ],
-    "gallery": [
-      [
-        "main",
-        "SUPUZZ Coral Reef L3 136-piece ocean scene"
-      ],
-      [
-        "contents",
-        "Component inventory for the 136-piece L3 coral reef set"
-      ],
-      [
-        "amazon-3",
-        "SUPUZZ ocean, ice and forest sets mixed together; additional sets sold separately"
-      ],
-      [
-        "detail-2",
-        "Different SUPUZZ nature-themed building collections displayed together"
-      ]
-    ],
-    "features": [
-      {
-        "image": "main",
-        "eyebrow": "BUILD AN UNDERWATER HABITAT",
-        "title": "Layers of coral. A cast of sea creatures.",
-        "body": "Arrange branching stems and coral shapes at different heights, then introduce the sea creatures. The colorful components make the reef a setting for stories as well as a construction to explore.",
-        "points": [
-          "Octopus and fish characters appear in the collection.",
-          "Build a wide reef or experiment with taller arrangements."
-        ]
-      },
-      {
-        "image": "amazon-3",
-        "eyebrow": "A COLLECTION THAT CONNECTS",
-        "title": "Take the ocean beyond the reef.",
-        "body": "The nature-themed connection system also works with SUPUZZ’s ice and forest collections. Combine pieces to imagine an ocean garden or a landscape that brings different worlds together.",
-        "points": [
-          "Compatible nature collections are sold separately.",
-          "Mixed-set photos are examples of expanded play."
-        ]
-      }
-    ],
-    "includedTitle": "More pieces for a bigger underwater world.",
-    "included": [
-      "136-piece ocean building collection",
-      "Sea creature characters",
-      "Connecting bases, stems and coral elements",
-      "Storage box"
-    ],
-    "packageImage": "contents",
-    "packageCaption": "Component inventory from the 136-piece L3 Amazon package-content image."
-  },
-  {
-    "key": "ocean-l1",
-    "slug": "ocean-building-blocks-l1",
-    "name": "Coral Reef Starter",
-    "title": "Ocean World L1: 38-Piece Coral Reef Building Blocks | SUPUZZ",
-    "category": "nature",
-    "label": "NATURE WORLDS / LEVEL 1",
-    "asin": "B0F5PNRWJ1",
-    "facts": [
-      "38 pieces",
-      "Ages 3–5",
-      "L1 starter set"
-    ],
-    "intro": "Build a first coral reef with 38 colorful pieces. Connect the blue bases, stack the stems and add coral shapes and an octopus to make a compact underwater scene.",
-    "description": "Meet SUPUZZ Ocean World L1: 38-piece coral reef building blocks with an octopus for ages 3–5. Explore product photos, details and the Amazon listing.",
-    "highlights": [
-      "38-piece starter set with an octopus character.",
-      "Connecting bases, upright stems and colorful coral-shaped elements.",
-      "Part of SUPUZZ’s compatible nature-themed building collection."
-    ],
-    "storyTitle": "A little reef to call their own.",
-    "story": [
-      "Connect a first reef, introduce the octopus and imagine where it might go. The L1 collection is a compact introduction to the SUPUZZ ocean theme.",
-      "Rearrange the pieces together and talk about the shapes and colors in each scene. Every new layout offers a fresh starting point for a story."
-    ],
-    "specs": {
-      "Series": "Ocean World / Coral Reef",
-      "Level": "L1",
-      "Set size": "38 pieces",
-      "Suggested age": "3–5 years",
-      "Theme": "Coral reef with octopus",
-      "Storage": "Storage box not listed for this version"
-    },
-    "faq": [
-      [
-        "How many pieces are in the starter set?",
-        "The L1 set contains 38 pieces. Its package-content image shows the bases, stems, decorative elements and octopus."
-      ],
-      [
-        "Does this version include a storage box?",
-        "A storage box is not listed for the L1 version. The larger 136-piece L3 set includes one."
-      ],
-      [
-        "Can I add to the set later?",
-        "Yes. It belongs to SUPUZZ’s compatible nature-themed building collection. Additional ocean, ice and forest sets are sold separately."
-      ]
-    ],
-    "imageAlts": [
-      "SUPUZZ Ocean World L1 38-piece coral reef building blocks with octopus",
-      "SUPUZZ ocean, ice and forest collections shown together for mixed play",
-      "SUPUZZ Ocean World L1 octopus and themed building pieces"
-    ],
-    "related": [
-      "ocean-l3",
-      "ice-l3",
-      "soft-blocks-l3"
-    ],
-    "subtitle": "38-piece ocean building set with octopus",
-    "cardCopy": "A 38-piece first reef, with an octopus ready to move in.",
-    "metrics": [
-      [
-        "38",
-        "pieces"
-      ],
-      [
-        "3–5",
-        "years"
-      ],
-      [
-        "L1",
-        "level"
-      ]
-    ],
-    "gallery": [
-      [
-        "set",
-        "Complete 38-piece Coral Reef L1 build with octopus, cropped from its package-content image"
-      ],
-      [
-        "contents",
-        "Component inventory for the 38-piece L1 coral reef set"
-      ],
-      [
-        "detail-1",
-        "SUPUZZ ocean, ice and forest collections combined; extra sets sold separately"
-      ]
-    ],
-    "features": [
-      {
-        "image": "set",
-        "eyebrow": "A FIRST REEF, PIECE BY PIECE",
-        "title": "Start with the base. See where it grows.",
-        "body": "Join the blue base pieces, build upwards with the stems and choose where to place each coral shape. The compact L1 set offers a manageable starting point for trying different combinations.",
-        "points": [
-          "An octopus brings a character into the scene.",
-          "38 pieces for a smaller ocean arrangement."
-        ]
-      },
-      {
-        "image": "detail-1",
-        "eyebrow": "MORE WAYS TO KEEP BUILDING",
-        "title": "A small world that can grow.",
-        "body": "The L1 pieces use the SUPUZZ nature collection’s connecting format. Add another ocean set or mix with ice and forest pieces to create a different scene as the collection grows.",
-        "points": [
-          "Additional collections are sold separately.",
-          "Choose L3 for a 136-piece ocean set with storage."
-        ]
-      }
-    ],
-    "includedTitle": "Inside the 38-piece starter set.",
-    "included": [
-      "38 ocean-themed building pieces",
-      "Octopus character",
-      "Blue connecting bases",
-      "Stems and coral-shaped decorative elements"
-    ],
-    "packageImage": "contents",
-    "packageCaption": "Component inventory from the 38-piece L1 Amazon package-content image."
   },
   {
     "key": "rotating-forest",
