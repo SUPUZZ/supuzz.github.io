@@ -47,6 +47,8 @@ function upsertMeta(html, attribute, value, content) {
 }
 
 function alternateLinks(fileName, pageSets) {
+  const available = locales.filter((locale) => pageSets.get(locale.directory).has(fileName));
+  if (!available.length) return '';
   const links = locales
     .filter((locale) => pageSets.get(locale.directory).has(fileName))
     .map((locale) => `    <link rel="alternate" hreflang="${locale.hreflang}" href="${pageUrl(locale, fileName)}">`);
@@ -74,39 +76,69 @@ function normalizePage(filePath, locale, fileName, pageSets) {
     html = html.replaceAll(`${siteUrl}/blog.html`, pageUrl(locale, 'blog.html'));
   }
 
-  const seoLinks = `\n    <link rel="canonical" href="${canonical}">\n${alternateLinks(fileName, pageSets)}\n`;
+  const alternates = pageSets.get(locale.directory).has(fileName) ? alternateLinks(fileName, pageSets) : '';
+  const seoLinks = `\n    <link rel="canonical" href="${canonical}">\n${alternates}\n`;
   html = html.replace(/<\/head>/i, `${seoLinks}</head>`);
   fs.writeFileSync(filePath, html, 'utf8');
 }
 
-function buildSitemap(pageSets) {
+function buildSitemap(pageSets, baseDir = rootDir) {
   const urls = locales.flatMap((locale) =>
     [...pageSets.get(locale.directory)]
       .sort((left, right) => left.localeCompare(right))
       .map((fileName) => pageUrl(locale, fileName))
   );
-  const entries = urls.map((url) => `  <url>\n    <loc>${url}</loc>\n  </url>`).join('\n');
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>\n`;
-  fs.writeFileSync(path.join(rootDir, 'static', 'sitemap.xml'), sitemap, 'utf8');
+  const destination = path.join(baseDir, 'static', 'sitemap.xml');
+  const existing = fs.existsSync(destination) ? fs.readFileSync(destination, 'utf8') : '';
+  const allowed = new Set(urls);
+  const seen = new Set();
+  // Retain existing order and metadata such as genuine lastmod dates.
+  const entries = [...existing.matchAll(/<url\b[^>]*>[\s\S]*?<\/url>/g)]
+    .map(([entry]) => entry)
+    .filter((entry) => {
+      const url = entry.match(/<loc>\s*([^<]+)\s*<\/loc>/)?.[1].trim();
+      if (!allowed.has(url) || seen.has(url)) return false;
+      seen.add(url);
+      return true;
+    });
+  for (const url of urls) if (!seen.has(url)) entries.push(`<url>\n    <loc>${url}</loc>\n  </url>`);
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.map(entry => `  ${entry}`).join('\n')}\n</urlset>\n`;
+  fs.writeFileSync(destination, sitemap, 'utf8');
   return urls.length;
 }
 
-const pageSets = new Map(
-  locales.map((locale) => {
-    const directory = path.join(rootDir, locale.directory);
-    const pages = fs.readdirSync(directory)
-      .filter((fileName) => fileName.endsWith('.html'));
-    return [locale.directory, new Set(pages)];
-  })
-);
-
-let pageCount = 0;
-for (const locale of locales) {
-  for (const fileName of pageSets.get(locale.directory)) {
-    normalizePage(path.join(rootDir, locale.directory, fileName), locale, fileName, pageSets);
-    pageCount += 1;
-  }
+function isIndexable(filePath) {
+  const html = fs.readFileSync(filePath, 'utf8');
+  const tags = html.match(/<meta\b[^>]*>/gi) || [];
+  return !tags.some(tag => /\bname\s*=\s*(["'])(robots|googlebot)\1/i.test(tag)
+    && /\bcontent\s*=\s*(["'])[^"']*\b(noindex|none)\b[^"']*\1/i.test(tag));
 }
 
-const sitemapCount = buildSitemap(pageSets);
-console.log(`Normalized ${pageCount} localized pages and generated ${sitemapCount} sitemap URLs.`);
+function run(baseDir = rootDir, requestedPages = []) {
+  const pageSets = new Map(
+    locales.map((locale) => {
+      const directory = path.join(baseDir, locale.directory);
+      const pages = fs.readdirSync(directory)
+        .filter((fileName) => fileName.endsWith('.html'));
+      return [locale.directory, new Set(pages)];
+    })
+  );
+  const indexableSets = new Map(locales.map(locale => [locale.directory, new Set(
+    [...pageSets.get(locale.directory)].filter(fileName => isIndexable(path.join(baseDir, locale.directory, fileName)))
+  )]));
+
+  let pageCount = 0;
+  for (const locale of locales) {
+    for (const fileName of pageSets.get(locale.directory)) {
+      if (requestedPages.length && !requestedPages.includes(`${locale.directory}/${fileName}`)) continue;
+      normalizePage(path.join(baseDir, locale.directory, fileName), locale, fileName, indexableSets);
+      pageCount += 1;
+    }
+  }
+
+  const sitemapCount = buildSitemap(indexableSets, baseDir);
+  console.log(`Normalized ${pageCount} localized pages and generated ${sitemapCount} sitemap URLs.`);
+}
+
+if (require.main === module) run(rootDir, process.argv.slice(2));
+module.exports = { run };

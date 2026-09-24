@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f4f3ec">
+  <title>SUPUZZ FUTURE — 拼出下一個世界</title>
+  <meta name="description" content="探索 SUPUZZ Future 概念首頁：珊瑚、冰雪、多維與恐龍，四個世界，無限想像。">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Material+Symbols+Rounded&display=swap">
+  <link rel="stylesheet" href="/css/future.css">
+</head>
+<body>
+  <include src="components/header.html"></include>
+  <main class="future" id="future" data-world="coral">
+    <section class="f-hero" aria-labelledby="hero-title">
+      <div class="f-edition"><span><i></i> FUTURE / PLAY COLLECTION</span><span>INTERACTIVE EDITION — 02</span></div>
+      <div class="f-hero-grid">
+        <div class="f-intro">
+          <p class="f-kicker">小小雙手，下一個大世界。</p>
+          <h1 id="hero-title">讓想像<br>突破<span>平面。</span><svg viewBox="0 0 90 90" aria-hidden="true"><path d="M45 0v90M0 45h90M13 13l64 64M13 77l64-64"/></svg></h1>
+          <p class="f-lead">從一塊積木開始，<br>把腦海裡的奇妙，拼成眼前的世界。</p>
+          <a class="f-cta" href="#collections">探索四大系列 <span>↗</span></a>
+          <div class="f-hero-note"><span class="f-mini-block" aria-hidden="true">✳</span><span>沒有標準答案。<br><strong>只有下一個新點子。</strong></span></div>
+        </div>
+        <div class="f-showroom">
+          <div class="f-scene" id="scene" aria-label="珊瑚系列立體展示">
+            <div class="f-world-tag"><span id="world-number">01 / 04</span><span id="world-features">小丑魚 / 珊瑚</span></div>
+            <div id="stage" class="f-webgl-stage">
+              <img id="hero-product" class="f-3d-fallback" src="/product-images/future/coral.webp" alt="珊瑚系列展示圖" width="1100" height="931">
+            </div>
+            <p id="scene-status" class="f-render-status" role="status">正在搭建你的世界…</p>
+            <div class="f-view-controls" role="group" aria-label="立體場景控制">
+              <button id="explode-toggle" type="button" aria-pressed="false">拆解看看</button>
+              <button id="zoom-in" type="button" aria-label="放大場景">＋</button>
+              <button id="zoom-out" type="button" aria-label="縮小場景">−</button>
+              <button id="reset-view" type="button" aria-label="重設視角">↺</button>
+            </div>
+            <div class="f-scene-caption" aria-live="polite"><div><p id="world-label">THE CORAL COLLECTION</p><h2 id="world-title">珊瑚奇境</h2></div><a id="world-link" href="product-coral-reef-l3.html" aria-label="探索珊瑚系列">↗</a></div>
+            <div class="f-scene-tools"><span>拖曳旋轉 · 雙指縮放</span><button id="motion-toggle" type="button" aria-pressed="false">暫停動態 Ⅱ</button></div>
+          </div>
+        </div>
+      </div>
+      <div class="f-worlds" role="group" aria-label="切換展示系列">
+        <button type="button" data-select="coral" aria-pressed="true"><span class="f-world-icon">✳</span><span><small>01 / CORAL</small>珊瑚系列</span><b>↗</b></button>
+        <button type="button" data-select="ice" aria-pressed="false"><span class="f-world-icon">❄</span><span><small>02 / ICE</small>冰雪系列</span><b>↗</b></button>
+        <button type="button" data-select="multi" aria-pressed="false"><span class="f-world-icon">▧</span><span><small>03 / MULTI</small>多維系列</span><b>↗</b></button>
+        <button type="button" data-select="dino" aria-pressed="false"><span class="f-world-icon">✦</span><span><small>04 / DINO</small>恐龍系列</span><b>↗</b></button>
+      </div>
+    </section>
+    <div class="f-ticker" aria-hidden="true"><span>SMALL PIECES.</span><span class="f-ticker-star">✳</span><span>BIG POSSIBILITIES.</span><span class="f-ticker-star">✳</span><span>LET'S PLAY.</span><span class="f-ticker-star">✳</span></div>
+    <section class="f-collections" id="collections" aria-labelledby="collections-title">
+      <div class="f-section-heading"><div><p class="f-kicker">FOUR WORLDS. ONE IMAGINATION.</p><h2 id="collections-title">四個世界，<br>都由你創造。</h2></div><p>潛入海底，走進冰雪，跨越維度，回到叢林。<br>選一個起點，剩下的交給想像力。</p></div>
+      <div class="f-cards">
+        <a class="f-card f-card-coral" href="product-coral-reef-l3.html"><div class="f-card-top"><span>01 — CORAL REEF</span><span>海底探險</span></div><div class="f-card-art"><span aria-hidden="true">CORAL</span><img src="/product-images/future/coral.webp" alt="珊瑚系列的繽紛海底世界" width="1200" height="1000" loading="lazy"></div><div class="f-card-bottom"><div><h3>珊瑚系列</h3><p>跟著小丑魚，探索繽紛珊瑚。</p></div><span class="f-card-arrow">↗</span></div></a>
+        <a class="f-card f-card-ice" href="product-icy-world-l3.html"><div class="f-card-top"><span>02 — ICY WORLD</span><span>極地奇遇</span></div><div class="f-card-art"><span aria-hidden="true">FROST</span><img src="/product-images/future/ice.webp" alt="冰雪系列的極地動物與冰雪拼搭場景" width="1200" height="882" loading="lazy"></div><div class="f-card-bottom"><div><h3>冰雪系列</h3><p>與企鵝和鹿，走進冰雪奇境。</p></div><span class="f-card-arrow">↗</span></div></a>
+        <a class="f-card f-card-multi" href="product-waffle-building-blocks-128.html"><div class="f-card-top"><span>03 — MULTIDIMENSIONAL</span><span>自由構築</span></div><div class="f-card-art"><span aria-hidden="true">BEYOND</span><img src="/product-images/future/multi.webp" alt="多維系列彩虹鬆餅積木拼成的機器人" width="876" height="1200" loading="lazy"></div><div class="f-card-bottom"><div><h3>多維系列</h3><p>從一塊井字形積木，拼出更多維度。</p></div><span class="f-card-arrow">↗</span></div></a>
+        <a class="f-card f-card-dino" href="product-dinosaur-jungle-l3.html"><div class="f-card-top"><span>04 — DINOSAUR JUNGLE</span><span>遠古冒險</span></div><div class="f-card-art"><span aria-hidden="true">ROAR!</span><img src="/product-images/future/dino.webp" alt="恐龍系列的恐龍角色和綠色叢林拼搭場景" width="1200" height="1000" loading="lazy"></div><div class="f-card-bottom"><div><h3>恐龍系列</h3><p>翼龍、霸王龍、恐龍寶寶，一起出發。</p></div><span class="f-card-arrow">↗</span></div></a>
+      </div>
+    </section>
+    <section class="f-manifesto"><p class="f-kicker">BUILT BY LITTLE HANDS. POWERED BY BIG IDEAS.</p><h2>未來不是想出來的。<br>是<span>玩出來的。</span></h2><p>拆開、重組，再試一次。每一種新玩法，都是成長的形狀。</p><a class="f-cta" href="#collections">開始你的下一個世界 <span>↗</span></a><span class="f-manifesto-star" aria-hidden="true">✳</span><div class="f-signoff"><span>SUPUZZ / FUTURE EDITION</span><span>KEEP BUILDING. KEEP WONDERING.</span></div></section>
+  </main>
+  <include src="components/footer.html"></include>
+  <script type="module" src="/js/future.js"></script>
+</body>
+</html>
