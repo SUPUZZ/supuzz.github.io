@@ -1,0 +1,21 @@
+.thanksgiving-story .breadcrumb { display: block; padding: 100px 0 20px; font-size: .9rem; color: var(--text-sub); }
+.thanksgiving-story .article-container { max-width: 860px; margin: auto; padding-bottom: 64px; }
+.thanksgiving-story .article-header { text-align: center; margin: 20px 0 32px; }
+.thanksgiving-story .tag { display: inline-block; color: var(--primary); background: var(--primary-container); padding: 6px 14px; border-radius: 999px; font-weight: 700; }
+.thanksgiving-story h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; margin: 20px 0; }
+.thanksgiving-story .meta, .thanksgiving-story figcaption { color: var(--text-sub); font-size: .9rem; }
+.thanksgiving-story .featured-img { display: block; width: 100%; height: auto; border-radius: 20px; }
+.thanksgiving-story figure { margin: 24px 0; }
+.thanksgiving-story figcaption { margin-top: 10px; }
+.thanksgiving-story .content { font-size: 1.08rem; line-height: 1.8; color: var(--text-sub); }
+.thanksgiving-story .content p, .thanksgiving-story .content ul, .thanksgiving-story .content ol { margin-bottom: 20px; }
+.thanksgiving-story .content ul, .thanksgiving-story .content ol { padding-left: 24px; }
+.thanksgiving-story .content ul { list-style: disc; }
+.thanksgiving-story .content li { margin-bottom: 8px; }
+.thanksgiving-story .content h2 { color: var(--text-main); font-size: 1.7rem; line-height: 1.35; margin: 36px 0 16px; scroll-margin-top: 100px; }
+.thanksgiving-story .content h3 { color: var(--text-main); font-size: 1.2rem; margin: 22px 0 10px; }
+.thanksgiving-story a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+.thanksgiving-story .article-toc, .thanksgiving-story .giving-note { background: #F8F5FF; border-radius: 16px; padding: 22px; margin: 24px 0; }
+.thanksgiving-story .article-toc ol { margin: 8px 0 0; }
+.thanksgiving-story a:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+@media (max-width: 600px) { .thanksgiving-story .breadcrumb { padding-top: 90px; } }
