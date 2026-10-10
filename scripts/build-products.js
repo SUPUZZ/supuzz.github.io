@@ -25,6 +25,9 @@ function generateLocale(locale) {
     return 'aria-label="' + escape(translated.replace('(opens in a new tab)', '(' + t('opens in a new tab') + ')')) + '"';
   });
   const availableCatalog = catalog.filter((product) => !product.storeOnly);
+  const collectionOrder = ['dinosaurs', 'ocean', 'ice', 'blocks', 'furniture'];
+  const homepageCatalog = [...availableCatalog].sort((left, right) =>
+    collectionOrder.indexOf(left.category) - collectionOrder.indexOf(right.category));
   const links = require('../static/data/product-links.json');
   const images = require('../resource/product-image-sources-en.json');
   const site = 'https://supuzz.com';
@@ -174,9 +177,9 @@ function generateLocale(locale) {
       <section id="products" class="section product-collection" aria-labelledby="products-title">
         <div class="container">
           <div class="collection-heading"><div><p class="product-eyebrow">${t('THE SUPUZZ COLLECTION')} / ${availableCatalog.length} ${t('products')}</p><h2 id="products-title">Build their<br><em>next adventure.</em></h2></div></div>
-          <div class="product-filters" data-product-filters aria-label="Filter products" hidden><button type="button" data-filter="all" aria-pressed="true">All products</button><button type="button" data-filter="blocks" aria-pressed="false">Waffle blocks</button><button type="button" data-filter="ocean" aria-pressed="false">Coral Reef</button><button type="button" data-filter="ice" aria-pressed="false">Icy World</button><button type="button" data-filter="dinosaurs" aria-pressed="false">Dinosaurs</button><button type="button" data-filter="furniture" aria-pressed="false">Kids furniture</button></div>
+          <div class="product-filters" data-product-filters aria-label="Filter products" hidden><button type="button" data-filter="all" aria-pressed="true">All products</button><button type="button" data-filter="dinosaurs" aria-pressed="false">Dinosaurs</button><button type="button" data-filter="ocean" aria-pressed="false">Coral Reef</button><button type="button" data-filter="ice" aria-pressed="false">Icy World</button><button type="button" data-filter="blocks" aria-pressed="false">Waffle blocks</button><button type="button" data-filter="furniture" aria-pressed="false">Kids furniture</button></div>
           <p class="product-result-count" data-product-count data-singular="${escape(t('product'))}" data-plural="${escape(t('products'))}" role="status">${availableCatalog.length} ${t('products')}</p>
-          <div class="grid" id="product-grid">${availableCatalog.map((product) => card(product)).join('\n')}</div>
+          <div class="grid" id="product-grid">${homepageCatalog.map((product) => card(product)).join('\n')}</div>
           <div class="product-store-note"><span>Looking for Rotating Forest or another SUPUZZ set?</span><a class="product-store-link" href="${escape(links.storefrontUrl)}" target="_blank" rel="noopener noreferrer">Explore the Amazon Store ↗</a></div>
         </div>
       </section>
@@ -195,7 +198,7 @@ function generateLocale(locale) {
     home = home.replace(/\s*<!-- Localized product collection:[\s\S]*?<!-- End Localized product collection -->/, '');
     home = home.replace(/(<section id="home"[\s\S]*?<\/section>)/, '$1\n\n    ' + localizeUi(collection));
   }
-  const listSchema = { '@context': 'https://schema.org', '@type': 'ItemList', '@id': `${site}/${locale.directory}/index.html#products`, name: t('THE SUPUZZ COLLECTION'), inLanguage: locale.htmlLang, numberOfItems: availableCatalog.length, itemListElement: availableCatalog.map((product, index) => ({ '@type': 'ListItem', position: index + 1, name: `SUPUZZ ${product.name}`, url: pageUrl(product) })) };
+  const listSchema = { '@context': 'https://schema.org', '@type': 'ItemList', '@id': `${site}/${locale.directory}/index.html#products`, name: t('THE SUPUZZ COLLECTION'), inLanguage: locale.htmlLang, numberOfItems: homepageCatalog.length, itemListElement: homepageCatalog.map((product, index) => ({ '@type': 'ListItem', position: index + 1, name: `SUPUZZ ${product.name}`, url: pageUrl(product) })) };
   home = home.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g, (script) => {
     const data = JSON.parse(script.replace(/<[^>]+>/g, ''));
     if (['Product', 'ItemList'].includes(data['@type'])) return '';

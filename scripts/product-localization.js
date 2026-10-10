@@ -20,8 +20,8 @@ const uiKeys = [
 
 const locales = [{
   directory: 'en', htmlLang: 'en-US', ogLocale: 'en_US',
-  homeTitle: 'SUPUZZ | Waffle Blocks, Dinosaur & Nature Building Sets',
-  homeDescription: 'Explore SUPUZZ waffle blocks, dinosaur jungles, coral reefs, icy worlds and kids chairs. Compare sets, view product details and shop on Amazon.'
+  homeTitle: 'SUPUZZ | Coral Reef Building Set & Nature Building Blocks',
+  homeDescription: 'Explore the SUPUZZ Coral Reef Building Set, flower and dinosaur building blocks, Icy World garden sets and multi-dimensional waffle blocks for creative play.'
 }, ...['es', 'ja', 'zh-Hant', 'de', 'pt', 'fr'].map(directory => {
   const data = require(`../resource/product-locales/${directory}.json`);
   if (data.ui.length !== uiKeys.length) throw new Error(`UI translation count: ${directory}: ${data.ui.length}/${uiKeys.length}`);
