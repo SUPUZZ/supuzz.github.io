@@ -78,7 +78,7 @@ function normalizePage(filePath, locale, fileName, pageSets) {
 
   const alternates = pageSets.get(locale.directory).has(fileName) ? alternateLinks(fileName, pageSets) : '';
   const seoLinks = `\n    <link rel="canonical" href="${canonical}">\n${alternates}\n`;
-  html = html.replace(/<\/head>/i, `${seoLinks}</head>`);
+  html = html.replace(/[ \t]*<\/head>/i, `${seoLinks}</head>`);
   fs.writeFileSync(filePath, html, 'utf8');
 }
 

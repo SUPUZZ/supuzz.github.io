@@ -5,7 +5,12 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const sourceCatalog = require('../resource/products-en.json');
 const { locales, localizedCatalog } = require('./product-localization');
-for (const locale of locales) generateLocale(locale);
+const localeArgument = process.argv.find(argument => argument.startsWith('--locale='));
+const selectedLocales = localeArgument
+  ? locales.filter(locale => locale.directory === localeArgument.slice('--locale='.length))
+  : locales;
+if (!selectedLocales.length) throw new Error(`Unknown locale: ${localeArgument}`);
+for (const locale of selectedLocales) generateLocale(locale);
 
 function generateLocale(locale) {
   const catalog = localizedCatalog(sourceCatalog, locale);
@@ -83,6 +88,37 @@ function generateLocale(locale) {
     <section class="product-package" id="in-the-box" aria-labelledby="package-title"><div><p class="product-eyebrow">${product.category === 'furniture' ? 'THE SIZE & THE DETAILS' : 'WHAT’S INCLUDED'}</p><h2 id="package-title">${escape(product.includedTitle)}</h2><ul>${product.included.map((item) => `<li><span aria-hidden="true">✓</span>${escape(item)}</li>`).join('')}</ul></div><figure>${img(photoFor(product, product.packageImage), photoFor(product, product.packageImage).alt)}<figcaption>${escape(product.packageCaption)}</figcaption></figure></section>`;
   }
 
+  function playGuides(product) {
+    if (locale.directory !== 'en') return '';
+    const guides = {
+      blocks: [
+        ['article-waffle-blocks-stem-toddler.html', 'Waffle blocks for toddlers: first builds and choosing a set'],
+        ['article-waffle-blocks-early-education.html', 'Waffle blocks for shared play and early education']
+      ],
+      ocean: [
+        ['coral-reef-building-toy-play-ideas.html', 'Five coral reef building and ocean play ideas'],
+        ['article-levels.html', 'Compare Coral Reef and Icy World set sizes']
+      ],
+      dinosaurs: [
+        ['article-dinosaur-gift-guide.html', 'Choosing a dinosaur building gift'],
+        ['article-dinosaur-building-blocks-ocean-inspired.html', 'Dinosaur building blocks and nature-inspired play']
+      ],
+      ice: [
+        ['article-levels.html', 'Compare Icy World and Coral Reef set sizes'],
+        ['article-mix-play.html', 'Ideas for mixing ocean, ice and forest building play']
+      ],
+      furniture: [
+        ['toddler-chairs-for-table.html', 'How to choose a toddler chair for your table'],
+        ['article-kids-chair-gift.html', 'Planning a children’s chair gift']
+      ]
+    }[product.category];
+    if (!guides) return '';
+    for (const [file] of guides) {
+      if (!fs.existsSync(path.join(root, locale.directory, file))) throw new Error(`Missing play guide: ${file}`);
+    }
+    return `<section class="product-story" aria-labelledby="play-guides-title"><h2 id="play-guides-title">Choosing and using your set</h2><p>${product.category === 'furniture' ? 'Check the fit of your table and plan a space for drawing, building and everyday activities.' : 'Find a starting activity, compare your options and plan your next shared building session.'}</p><ul>${guides.map(([file, label]) => `<li><a href="${file}">${escape(label)}</a></li>`).join('')}</ul></section>`;
+  }
+
   function productPage(product) {
     const photos = productImages(product);
     if (!photos.length) throw new Error(`Missing photos: ${product.key}`);
@@ -156,7 +192,7 @@ function generateLocale(locale) {
         </div>
       </div>
       <nav class="product-detail-nav" aria-label="Product information"><a href="#description">Explore the product</a>${product.included ? '<a href="#in-the-box">What’s included</a>' : ''}<a href="#specifications">Specifications</a><a href="#questions">FAQs</a></nav>
-      ${featureSections(product)}
+      ${featureSections(product)}${locale.directory === 'en' ? '\n      ' + playGuides(product) : ''}
       <div class="product-information"><section class="product-specs" id="specifications" aria-labelledby="spec-title"><p class="product-eyebrow">THE FACTS AT A GLANCE</p><h2 id="spec-title">Product specifications</h2><dl>${Object.entries(product.specs).map(([label, value]) => `<div><dt>${escape(label)}</dt><dd>${escape(value)}</dd></div>`).join('')}</dl></section>
       <section class="product-faq" id="questions" aria-labelledby="faq-title"><p class="product-eyebrow">BEFORE YOU CHOOSE</p><h2 id="faq-title">A few useful answers.</h2>${product.faq.map(([question, answer]) => `<details><summary>${escape(question)}</summary><p>${escape(answer)}</p></details>`).join('')}</section></div>
       <section class="product-collection product-related" aria-labelledby="related-title"><div class="collection-heading"><div><p class="product-eyebrow">THERE’S MORE TO EXPLORE</p><h2 id="related-title">Find their next favorite.</h2></div><a class="product-store-link" href="index.html#products">All products <span aria-hidden="true">↗</span></a></div><div class="grid">${product.related.map((key) => card(catalog.find((item) => item.key === key))).join('\n')}</div></section>
