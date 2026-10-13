@@ -45,6 +45,7 @@
     <!-- External stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/products-en.css">
+    <link rel="stylesheet" href="../css/customer-reviews.css">
 
     <!-- Favicons & manifest -->
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
@@ -352,30 +353,51 @@
       </section>
       <!-- End Localized product collection -->
 
-    <!-- 博客预览区 -->
-    <section class="section" aria-labelledby="building-guides-title">
+    <!-- Selected excerpts captured from Amazon on October 13, 2026. See resource/amazon-reviews-en.json. -->
+    <section class="section customer-reviews" aria-labelledby="customer-reviews-title">
         <div class="container">
-            <h2 id="building-guides-title">Choose a set. Find a first build.</h2>
-            <p>Start with the kind of play your child enjoys, then explore a guide before choosing your collection.</p>
-            <div class="grid">
+            <div class="reviews-heading">
                 <div>
-                    <h3>Waffle blocks and open-ended builds</h3>
-                    <p>Try simple flat shapes, then move to a freestanding construction.</p>
-                    <p><a href="article-waffle-blocks-stem-toddler.html">Waffle blocks for toddlers: play ideas and set guide</a></p>
+                    <p class="product-eyebrow">FROM THE AMAZON COMMUNITY</p>
+                    <h2 id="customer-reviews-title">Little builds.<br><em>Real stories.</em></h2>
+                    <p class="reviews-intro">Selected customer review excerpts from Amazon.</p>
                 </div>
-                <div>
-                    <h3>Coral reefs, dinosaurs and icy worlds</h3>
-                    <p>Choose a setting for a story and compare the pieces you want to build with.</p>
-                    <p><a href="article-levels.html">Compare ocean and ice building set sizes</a></p>
-                    <p><a href="coral-reef-building-toy-play-ideas.html">Five coral reef building activities</a></p>
-                    <p><a href="article-dinosaur-gift-guide.html">Choose a dinosaur building gift</a></p>
-                </div>
-                <div>
-                    <h3>A place to sit and create</h3>
-                    <p>Check your table and chair fit before setting up an activity corner.</p>
-                    <p><a href="toddler-chairs-for-table.html">How to choose a toddler chair for your table</a></p>
+                <div class="review-controls" hidden>
+                    <button type="button" data-review-prev aria-label="Previous customer review" aria-controls="review-track"><span aria-hidden="true">←</span></button>
+                    <button type="button" data-review-next aria-label="Next customer review" aria-controls="review-track"><span aria-hidden="true">→</span></button>
                 </div>
             </div>
+            <div class="review-track" id="review-track" tabindex="0" role="region" aria-label="Customer reviews; scroll horizontally to browse">
+                <article class="review-card">
+                    <div class="review-card-top"><span class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</span><span class="review-verified">Verified purchase</span></div>
+                    <h3>Great stacking toy</h3>
+                    <blockquote>“It comes in a good quality box that fits all pieces well and makes it easy to store.”</blockquote>
+                    <div class="review-author"><span class="review-avatar" aria-hidden="true">AB</span><div><strong>Amber Bird</strong><p>Icy World · L3 / <time datetime="2026-01-05">Jan 5, 2026</time></p></div></div>
+                    <a class="review-source" href="https://www.amazon.com/portal/customer-reviews/srp/-/R1Q3OT9E3ZWHZA" target="_blank" rel="noopener noreferrer">Read full review on Amazon <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="review-card">
+                    <div class="review-card-top"><span class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</span><span class="review-verified">Verified purchase</span></div>
+                    <h3>Students favorite toy.</h3>
+                    <blockquote>“The pieces are high quality unlike others. My kids love all the winter animals”</blockquote>
+                    <div class="review-author"><span class="review-avatar" aria-hidden="true">D</span><div><strong>DrBertling</strong><p>Icy World · L2 / <time datetime="2026-02-22">Feb 22, 2026</time></p></div></div>
+                    <a class="review-source" href="https://www.amazon.com/portal/customer-reviews/srp/-/R2WZ7URLKD0V2M" target="_blank" rel="noopener noreferrer">Read full review on Amazon <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="review-card">
+                    <div class="review-card-top"><span class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</span><span class="review-verified">Verified purchase</span></div>
+                    <h3>Nice quality</h3>
+                    <blockquote>“The children love playing with it. Nice quality and durable. I would buy this again.”</blockquote>
+                    <div class="review-author"><span class="review-avatar" aria-hidden="true">C</span><div><strong>Cheryl</strong><p>Icy World · L1 / <time datetime="2026-01-19">Jan 19, 2026</time></p></div></div>
+                    <a class="review-source" href="https://www.amazon.com/portal/customer-reviews/srp/-/R3DI4HGSM10ETB" target="_blank" rel="noopener noreferrer">Read full review on Amazon <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="review-card">
+                    <div class="review-card-top"><span class="review-stars" role="img" aria-label="5 out of 5 stars">★★★★★</span><span class="review-verified">Verified purchase</span></div>
+                    <h3>Not sure what to say</h3>
+                    <blockquote>“It's a cute toy and the kids seemed to enjoy playing with it.”</blockquote>
+                    <div class="review-author"><span class="review-avatar" aria-hidden="true">R</span><div><strong>rita</strong><p>Coral Reef · L1 / <time datetime="2026-10-07">Oct 7, 2026</time></p></div></div>
+                    <a class="review-source" href="https://www.amazon.com/portal/customer-reviews/srp/-/RAXF4ROK6K3ZQ" target="_blank" rel="noopener noreferrer">Read full review on Amazon <span aria-hidden="true">↗</span></a>
+                </article>
+            </div>
+            <div class="reviews-footer"><p>Review excerpts · Checked Oct 13, 2026</p><a href="https://www.amazon.com/dp/B0FHK6RHT9#customerReviews" target="_blank" rel="noopener noreferrer">See all reviews on Amazon <span aria-hidden="true">↗</span></a></div>
         </div>
     </section>
 
@@ -557,6 +579,7 @@
         });
     </script>
     <script type="module" src="/js/products-en.js"></script>
+    <script type="module" src="/js/customer-reviews.js"></script>
 </body>
 
 </html>
