@@ -15,7 +15,7 @@ function withBlogCardStyles(page) {
 }
 
 function blogCardInclude(post) {
-  const data = { category: '', label: '', date: '', dateText: '', ...post };
+  const data = { category: '', categoryLabel: '', label: '', date: '', dateText: '', ...post };
   for (const key of ['href', 'image', 'width', 'height', 'alt', 'title', 'excerpt']) {
     if (!data[key]) throw new Error(`Missing blog card ${key}: ${data.href || 'unknown article'}`);
   }

@@ -1,6 +1,7 @@
 // Display the linked article's publication date on every localized blog card.
 const fs = require('fs');
 const path = require('path');
+const { decodeHTML } = require('entities');
 const { blogCardInclude, withBlogCardStyles } = require('./blog-card');
 const root = path.resolve(__dirname, '..');
 const labels = {
@@ -29,16 +30,20 @@ for (const [directory, label] of Object.entries(labels)) {
   let page = fs.readFileSync(pagePath, 'utf8');
   const language = page.match(/<html\b[^>]*lang="([^"]+)"/)[1];
   const formatter = new Intl.DateTimeFormat(language, {year:'numeric', month:'short', day:'numeric', timeZone:'UTC'});
+  const categoryLabels = new Map([...page.matchAll(/<button\b[^>]*data-filter="([^"]+)"[^>]*>([\s\S]*?)<\/button>/g)]
+    .map(([, category, text]) => [category, decodeHTML(text.replace(/<[^>]*>/g, '').trim())]));
   let count = 0;
   page = page.replace(/<include src="components\/blog-card\.html">([\s\S]*?)<\/include>/g, (include, json) => {
     const card = JSON.parse(json);
     const { href } = card;
+    const categoryLabel = categoryLabels.get(card.category);
+    if (!categoryLabel) throw new Error(`Missing card category label: ${directory}/${href}`);
     if (!/^[\w-]+\.html$/.test(href)) throw new Error(`Expected a local article link: ${directory}/${href}`);
     const date = publicationDate(path.join(root, directory, href));
     const text = formatter.format(new Date(`${date}T12:00:00Z`));
     const separator = /[：:]$/.test(label) ? '' : ' ';
     count += 1;
-    return blogCardInclude({ ...card, label:label + separator, date, dateText:text });
+    return blogCardInclude({ ...card, categoryLabel, label:label + separator, date, dateText:text });
   });
   if (!count) throw new Error(`No blog cards found: ${directory}`);
   if (!page.includes('href="../css/blog-list.css"')) page = page.replace('</head>', '    <link rel="stylesheet" href="../css/blog-list.css">\n</head>');

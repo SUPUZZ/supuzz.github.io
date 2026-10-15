@@ -88,7 +88,7 @@ ${head}
 </html>
 `);
     blogCards.push(blogCardInclude({
-      href:`article-${slug}.html`, category:'halloween-gifts', image:im.thumb,
+      href:`article-${slug}.html`, category:'halloween-gifts', categoryLabel:data.category, image:im.thumb,
       width:im.width, height:im.height, alt:im.alt, title:a.title, excerpt:a.description,
       date:'2026-09-22', dateText:data.date
     }));
