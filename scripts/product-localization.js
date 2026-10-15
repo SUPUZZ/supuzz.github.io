@@ -20,8 +20,9 @@ const uiKeys = [
 
 const locales = [{
   directory: 'en', htmlLang: 'en-US', ogLocale: 'en_US',
-  homeTitle: 'SUPUZZ | Coral Reef Building Set & Nature Building Blocks',
-  homeDescription: 'Explore the SUPUZZ Coral Reef Building Set, flower and dinosaur building blocks, Icy World garden sets and multi-dimensional waffle blocks for creative play.'
+  homeTitle: "SUPUZZ | New Coral STEM Building Blocks for Kids – Coral, Icy World & Dinosaur Series",
+  homeDescription: "Discover SUPUZZ's new coral STEM building blocks for kids. Explore Coral Reef, Icy World and Dinosaur series, multi-dimensional building play and Christmas gift ideas.",
+  homeKeywords: "SUPUZZ, BeiDiOu, new coral STEM building blocks for kids, coral building blocks, icy world building blocks, dinosaur building blocks, multi-dimensional building blocks, STEM toys for kids, Christmas gifts for kids"
 }, ...['es', 'ja', 'zh-Hant', 'de', 'pt', 'fr'].map(directory => {
   const data = require(`../resource/product-locales/${directory}.json`);
   if (data.ui.length !== uiKeys.length) throw new Error(`UI translation count: ${directory}: ${data.ui.length}/${uiKeys.length}`);

@@ -66,7 +66,7 @@ function generateLocale(locale) {
     return `<div class="product-variants"><span>Choose your set</span>${variants.map((item) => `<a href="${pageName(item)}" ${item.key === product.key ? 'aria-current="page"' : ''}>${escape(item.variantLabel)}</a>`).join('')}</div>`;
   }
 
-  function card(product) {
+  function card(product, { showPurchase = true } = {}) {
     return `<article class="product-card" data-category="${product.category}" data-product-theme="${product.key}">
       <a class="card-img" href="${pageName(product)}" aria-label="View details: ${escape(product.name)}">${img(productImages(product)[0], productImages(product)[0].alt, { card: true })}<span class="product-image-arrow" aria-hidden="true">↗</span></a>
       <div class="product-card-body">
@@ -74,7 +74,7 @@ function generateLocale(locale) {
         <h3><a href="${pageName(product)}">${escape(product.name)}</a></h3>
         <div class="product-card-facts">${product.facts.map(escape).join(' · ')}</div>
         <p class="product-card-copy">${escape(product.cardCopy || product.intro)}</p>
-        <div class="product-actions"><a href="${pageName(product)}" class="btn product-details-button" aria-label="View details: ${escape(product.name)}">View details <span aria-hidden="true">→</span></a>${amazonButton(product)}</div>
+        <div class="product-actions"><a href="${pageName(product)}" class="btn product-details-button" aria-label="View details: ${escape(product.name)}">View details <span aria-hidden="true">→</span></a>${showPurchase ? amazonButton(product) : ''}</div>
       </div>
     </article>`.replace(/[ \t]+$/gm, '');
   }
@@ -215,8 +215,7 @@ function generateLocale(locale) {
           <div class="collection-heading"><div><p class="product-eyebrow">${t('THE SUPUZZ COLLECTION')} / ${availableCatalog.length} ${t('products')}</p><h2 id="products-title">Build their<br><em>next adventure.</em></h2></div></div>
           <div class="product-filters" data-product-filters aria-label="Filter products" hidden><button type="button" data-filter="all" aria-pressed="true">All products</button><button type="button" data-filter="dinosaurs" aria-pressed="false">Dinosaurs</button><button type="button" data-filter="ocean" aria-pressed="false">Coral Reef</button><button type="button" data-filter="ice" aria-pressed="false">Icy World</button><button type="button" data-filter="blocks" aria-pressed="false">Waffle blocks</button><button type="button" data-filter="furniture" aria-pressed="false">Kids furniture</button></div>
           <p class="product-result-count" data-product-count data-singular="${escape(t('product'))}" data-plural="${escape(t('products'))}" role="status">${availableCatalog.length} ${t('products')}</p>
-          <div class="grid" id="product-grid">${homepageCatalog.map((product) => card(product)).join('\n')}</div>
-          <div class="product-store-note"><span>Looking for Rotating Forest or another SUPUZZ set?</span><a class="product-store-link" href="${escape(links.storefrontUrl)}" target="_blank" rel="noopener noreferrer">Explore the Amazon Store ↗</a></div>
+          <div class="grid" id="product-grid">${homepageCatalog.map((product) => card(product, { showPurchase: false })).join('\n')}</div>
         </div>
       </section>
       <!-- End Localized product collection -->`;
@@ -244,7 +243,7 @@ function generateLocale(locale) {
   });
   home = home.replace('</head>', jsonLd(listSchema) + '\n</head>');
   home = home.replace(/<title>[\s\S]*?<\/title>/, '<title>' + escape(locale.homeTitle) + '</title>');
-  const homeMeta = { description:locale.homeDescription, 'og:title':locale.homeTitle, 'og:description':locale.homeDescription, 'twitter:title':locale.homeTitle, 'twitter:description':locale.homeDescription, 'og:image':site + productImages(availableCatalog[0])[0].file, 'twitter:image':site + productImages(availableCatalog[0])[0].file, 'og:image:width':String(productImages(availableCatalog[0])[0].width), 'og:image:height':String(productImages(availableCatalog[0])[0].height), 'og:locale':locale.ogLocale, 'og:image:alt':locale.homeTitle, 'twitter:image:alt':locale.homeTitle };
+  const homeMeta = { description:locale.homeDescription, keywords:locale.homeKeywords, 'og:title':locale.homeTitle, 'og:description':locale.homeDescription, 'twitter:title':locale.homeTitle, 'twitter:description':locale.homeDescription, 'og:image':site + productImages(availableCatalog[0])[0].file, 'twitter:image':site + productImages(availableCatalog[0])[0].file, 'og:image:width':String(productImages(availableCatalog[0])[0].width), 'og:image:height':String(productImages(availableCatalog[0])[0].height), 'og:locale':locale.ogLocale, 'og:image:alt':locale.homeTitle, 'twitter:image:alt':locale.homeTitle };
   home = home.replace(/<meta\b[^>]*>/g, tag => { const key=tag.match(/(?:name|property)="([^"]+)"/)?.[1]; return Object.hasOwn(homeMeta,key) ? tag.replace(/content="[^"]*"/, 'content="' + escape(homeMeta[key]) + '"') : tag; });
   home = home.replace(/\s*<link\b[^>]*(?:rel="canonical"|hreflang=)[^>]*>/g, '');
   home = home.replace('</head>', '<link rel="canonical" href="' + site + '/' + locale.directory + '/index.html">\n' + alternates('index.html') + '\n</head>');

@@ -5,7 +5,10 @@
   "scripts": {
     "start": "parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html",
     "seo:prepare": "node scripts/prepare-seo.js",
-    "prebuild": "npm run products:build && npm run reviews:build && npm run seo:prepare",
+    "prebuild": "npm run products:build && npm run homepage:build && npm run reviews:build && npm run journal:build && npm run blog:dates && npm run seo:prepare",
+    "blog:dates": "node scripts/build-blog-dates.js",
+    "homepage:build": "node scripts/build-localized-homepages.js",
+    "journal:build": "node scripts/build-home-journal.js",
     "reviews:build": "node scripts/build-customer-reviews.js",
     "build": "parcel build *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html --public-url /supuzz.github.io/ --dist-dir ./dist && cp -r api dist/",
     "products:build": "node scripts/build-products.js",

@@ -1,0 +1,101 @@
+/* Homepage palette and composition. Shared navigation and footer retain their site styles. */
+.home-page { --home-ink:#203e38; --home-muted:#626f67; --home-teal:#346e61; --home-paper:#faf8f1; --home-line:#e0e3d9; --home-yellow:#f5d958; }
+.home-page .hero, .home-page .product-collection, .home-page .customer-reviews, .home-page .home-journal { color:var(--home-ink); }
+.home-page:lang(zh-Hant) > section { font-family:'Outfit','PingFang TC','Microsoft JhengHei','Noto Sans TC',sans-serif; }
+.home-page:lang(ja) > section { font-family:'Outfit','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo','Noto Sans JP',sans-serif; }
+.home-page:lang(zh-Hant) .hero-content h1, .home-page:lang(ja) .hero-content h1 { line-height:1.2; letter-spacing:-.035em; }
+.home-page:lang(zh-Hant) .collection-heading h2, .home-page:lang(zh-Hant) .reviews-heading h2, .home-page:lang(zh-Hant) .journal-heading h2,
+.home-page:lang(ja) .collection-heading h2, .home-page:lang(ja) .reviews-heading h2, .home-page:lang(ja) .journal-heading h2 { line-height:1.25; letter-spacing:-.025em; }
+.home-page .hero > .container, .home-page .product-collection > .container, .home-page .customer-reviews > .container, .home-page .home-journal > .container { max-width:1240px; padding-inline:32px; }
+.home-page .home-eyebrow, .home-page .product-eyebrow { font-size:.67rem; line-height:1.6; font-weight:600; letter-spacing:.16em; color:var(--home-teal); }
+.home-page .hero { background:var(--home-paper); padding:132px 0 0; text-align:left; }
+.home-page .hero-grid { grid-template-columns:1fr 1.08fr; gap:56px; padding-bottom:56px; }
+.home-page .hero-content { order:initial; }
+.home-page .hero-content .home-eyebrow { margin:0 0 22px; }
+.home-page .hero-content h1 { color:var(--home-ink); font-size:clamp(3.3rem,5.3vw,4.7rem); letter-spacing:-.065em; line-height:1.04; font-weight:500; margin-bottom:24px; }
+.home-page .hero-content h1 span { color:var(--home-teal); }
+.home-page .hero-description { font-size:1rem; line-height:1.85; color:var(--home-muted); max-width:420px; margin-bottom:0; }
+.home-page .hero-future { display:inline-flex; align-items:center; gap:14px; font-size:.77rem; color:var(--home-muted); margin-top:23px; }
+.home-page .hero-future:hover { color:var(--home-teal); text-decoration:underline; text-underline-offset:4px; }
+.home-page .hero-img { position:relative; order:initial; background:#e6eee5; border:1px solid #dce6d9; border-radius:24px 80px 24px 24px; padding:28px 25px 100px; overflow:hidden; }
+.home-page .hero-image-label { position:relative; display:block; color:#4d6e5a; font-size:.58rem; letter-spacing:.14em; font-weight:600; margin-bottom:25px; }
+.home-page .hero-img img { position:relative; width:100%; height:auto; aspect-ratio:1200/1016; object-fit:contain; border-radius:0; box-shadow:none; mix-blend-mode:multiply; }
+.home-page .hero-img figcaption { position:absolute; left:25px; right:25px; bottom:24px; display:flex; flex-direction:column; gap:5px; border-top:1px solid #cad8c8; padding-top:17px; padding-right:45px; }
+.home-page .hero-img figcaption > span:first-child { font-size:.57rem; color:#4d6e5a; letter-spacing:.13em; }
+.home-page .hero-img figcaption strong { font-size:1.07rem; font-weight:500; letter-spacing:-.02em; }
+.home-page .hero-image-spark { position:absolute; right:0; bottom:-5px; font-size:2.9rem; line-height:1; color:var(--home-teal); }
+.home-page .hero-worlds { border-top:1px solid var(--home-line); display:flex; align-items:center; justify-content:space-between; gap:24px; padding:25px 0; }
+.home-page .hero-worlds > span { font-size:.58rem; font-weight:600; color:var(--home-muted); letter-spacing:.13em; }
+.home-page .hero-worlds > div { display:flex; flex-wrap:wrap; gap:16px 32px; }
+.home-page .hero-worlds a { display:flex; align-items:center; gap:17px; font-size:.8rem; }
+.home-page .hero-worlds a span { color:#7d9181; }
+.home-page .hero-worlds a:hover { color:var(--home-teal); }
+.home-page .product-collection { --ink:var(--home-ink); --muted:var(--home-muted); --line:var(--home-line); background:#fffef9; padding:80px 0; }
+.home-page .collection-heading { margin-bottom:30px; }
+.home-page .collection-heading h2, .home-page .reviews-heading h2, .home-page .journal-heading h2 { font-size:clamp(2.5rem,4.3vw,3.5rem); font-weight:500; line-height:1.08; letter-spacing:-.05em; }
+.home-page .collection-heading h2 em, .home-page .reviews-heading h2 em { color:var(--home-teal); }
+.home-page .product-filters { gap:8px; border:0; margin-bottom:30px; }
+.home-page .product-filters button { padding:10px 17px; margin:0; border:1px solid var(--home-line); border-radius:30px; font-size:.76rem; color:var(--home-muted); }
+.home-page .product-filters button[aria-pressed="true"] { background:var(--home-ink); border-color:var(--home-ink); color:white; font-weight:500; }
+.home-page .product-filters button:hover { border-color:var(--home-teal); }
+.home-page .product-collection .grid { gap:28px 22px; }
+.home-page .product-collection .product-card { border:1px solid var(--home-line); border-radius:18px; overflow:hidden; background:white; }
+.home-page .product-card[data-product-theme^="ocean-"] { --stage:#edf4ee; }
+.home-page .product-card[data-product-theme^="dinosaur-"] { --stage:#f0f2e6; }
+.home-page .product-card[data-product-theme^="ice-"] { --stage:#edf2f5; }
+.home-page .product-collection .card-img { border-radius:0; aspect-ratio:1.35; padding:28px; }
+.home-page .product-image-arrow { border-color:#ffffffc9; background:#ffffffb3; color:var(--home-ink); }
+.home-page .product-card-body { padding:22px; }
+.home-page .product-card-body h3 { font-size:1.35rem; margin-bottom:10px; letter-spacing:-.03em; }
+.home-page .product-card-body .product-eyebrow { color:#68775f; font-size:.58rem; letter-spacing:.1em; }
+.home-page .product-card-facts { font-size:.72rem; margin-bottom:12px; }
+.home-page .product-card-copy { font-size:.85rem; line-height:1.7; margin-bottom:22px; }
+.home-page .product-actions { gap:10px; }
+.home-page .product-actions .btn { flex:1; min-height:42px; padding:10px 12px; font-size:.72rem; gap:8px; border-radius:8px; }
+.home-page .product-actions .product-details-button { background:var(--home-ink); border-color:var(--home-ink); }
+.home-page .customer-reviews { --ink:var(--home-ink); --muted:var(--home-muted); --line:#d9dfd2; background:#edf1e7; padding:80px 0; border-block:1px solid #e1e7d9; }
+.home-page .reviews-heading .product-eyebrow { color:var(--home-teal); }
+.home-page .reviews-intro { font-size:.93rem; }
+.home-page .review-filters button[aria-pressed="true"] { background:var(--home-ink); border-color:var(--home-ink); }
+.home-page .review-card { border-radius:18px; }
+.home-page .review-stars { color:#98702a; }
+.home-page .review-card h3 { color:var(--home-ink); }
+.home-page .review-product { border-radius:8px; }
+.home-page .home-journal { background:var(--home-paper); padding:80px 0; }
+.home-page .journal-heading { align-items:flex-end; margin-bottom:32px; }
+.home-page .journal-heading .home-eyebrow { margin-bottom:15px; }
+.home-page .journal-intro { margin:16px 0 0; font-size:.93rem; line-height:1.7; color:var(--home-muted); }
+.home-page .journal-grid { gap:26px; }
+.home-page .journal-post { border:1px solid var(--home-line); border-radius:18px; }
+.home-page .journal-post-body { padding:25px 26px 28px; }
+.home-page .journal-post-body .journal-category { color:var(--home-teal); font-size:.67rem; letter-spacing:.08em; text-transform:uppercase; font-weight:600; margin-bottom:12px; }
+.home-page .journal-post-body h3 { color:var(--home-ink); font-size:1.35rem; line-height:1.4; margin-bottom:14px; }
+.home-page .journal-post-body .journal-excerpt { font-size:.86rem; color:var(--home-muted); }
+.home-page .journal-read { color:var(--home-teal); }
+.home-page .journal-all { font-size:.8rem; color:var(--home-ink); }
+.home-page .hero :focus-visible, .home-page .product-collection :focus-visible, .home-page .customer-reviews :focus-visible, .home-page .home-journal :focus-visible { outline:3px solid var(--home-teal); outline-offset:4px; }
+@media(min-width:1100px) { .home-page .product-collection .grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:1000px) { .home-page .hero-grid { gap:32px; } .home-page .hero-content h1 { font-size:3.5rem; } .home-page .hero-worlds > div { gap:18px; } .home-page .journal-heading { gap:22px; } }
+@media(max-width:760px) {
+  .home-page .hero > .container, .home-page .product-collection > .container, .home-page .customer-reviews > .container, .home-page .home-journal > .container { padding-inline:22px; }
+  .home-page .hero { padding-top:108px; }
+  .home-page .hero-grid { grid-template-columns:1fr; gap:32px; padding-bottom:32px; }
+  .home-page .hero-content h1 { font-size:clamp(2.9rem,9vw,4rem); }
+  .home-page .hero-content .home-eyebrow { margin-bottom:16px; }
+  .home-page .hero-description { max-width:510px; font-size:.94rem; line-height:1.75; margin-bottom:0; }
+  .home-page .hero-future { margin-top:18px; }
+  .home-page .hero-img { border-radius:20px 64px 20px 20px; padding:24px 25px 95px; }
+  .home-page .hero-img img { max-height:380px; }
+  .home-page .hero-worlds { display:block; padding:24px 0; }
+  .home-page .hero-worlds > span { display:block; margin-bottom:14px; }
+  .home-page .hero-worlds > div { display:grid; grid-template-columns:1fr 1fr; gap:14px 24px; }
+  .home-page .hero-worlds a { justify-content:space-between; font-size:.76rem; }
+  .home-page .product-collection, .home-page .customer-reviews, .home-page .home-journal { padding:52px 0; }
+  .home-page .product-filters { gap:8px; }
+  .home-page .product-filters button { padding:8px 12px; font-size:.7rem; }
+  .home-page .product-card-body { padding:20px; }
+  .home-page .journal-heading { flex-direction:column; align-items:flex-start; gap:24px; }
+  .home-page .journal-heading h2 { font-size:2.5rem; padding:0; }
+  .home-page .journal-post-body { padding:22px; }
+}
+@media(max-width:480px) { .home-page .hero-img { padding-inline:18px; } .home-page .hero-img figcaption { left:18px; right:18px; } .home-page .hero-image-label { font-size:.53rem; } .home-page .product-actions .btn { font-size:.73rem; } .home-page .review-content { padding:22px; } }

@@ -56,6 +56,8 @@ for (const locale of locales) {
     } else {
       const section = html.match(/<section id="products"[\s\S]*?<\/section>/)[0];
       check((section.match(/class="product-card"/g) || []).length === catalog.length, 'all product cards');
+      check(!/class="btn amazon-button"|href="https?:\/\//.test(section), 'homepage collection keeps navigation on site');
+      check((section.match(/class="btn product-details-button"/g) || []).length === catalog.length, 'every homepage card opens product details');
       check(data.filter(item => item['@type'] === 'ItemList').length === 1, 'one collection schema');
       const list = data.find(item => item['@type'] === 'ItemList');
       check(list.numberOfItems === catalog.length && list.itemListElement.every(item => item.url.startsWith(`https://supuzz.com/${locale.directory}/`)), 'localized collection schema');
