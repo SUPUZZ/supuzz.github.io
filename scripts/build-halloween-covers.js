@@ -32,5 +32,5 @@ for (const directory of ['en', 'es', 'ja', 'zh-Hant', 'de', 'pt', 'fr']) {
     html = html.replace(figure, `<figure><img class="featured-img" src="${cover.src}" width="${cover.width}" height="${cover.height}" alt="${escape(cover.alt)}" fetchpriority="high" decoding="async"><figcaption>${escape(cover.caption)}</figcaption></figure>`);
     fs.writeFileSync(file, html);
   }
-  console.log(`Updated six distinct article covers for ${directory}.`);
+  console.log(`Updated the Halloween guide cover for ${directory}.`);
 }

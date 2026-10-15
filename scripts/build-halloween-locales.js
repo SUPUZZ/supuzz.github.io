@@ -1,4 +1,4 @@
-// Authored translations; only the Halloween cluster and its discovery links are updated.
+// Authored translations for the single Halloween guide in each language.
 const fs = require('fs');
 const path = require('path');
 const { parser } = require('posthtml-parser');
@@ -10,7 +10,7 @@ const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const write = (file, text) => fs.writeFileSync(path.join(root, file), text.replace(/[ \t]+$/gm, '').trimEnd() + '\n', 'utf8');
 const source = require('../resource/products-en.json');
-const slugs = ['halloween-toy-gifts-for-kids', 'halloween-boo-basket-ideas-kids', 'non-candy-halloween-gifts-kids', 'halloween-dinosaur-gifts-kids', 'halloween-building-block-activities', 'halloween-classroom-party-gifts'];
+const slugs = ['halloween-toy-gifts-for-kids'];
 const escape = text => String(text).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const url = (locale, slug) => `https://supuzz.com/${locale}/article-${slug}.html`;
 const alternatives = slug => [...locales.map(l => ` <link rel="alternate" hreflang="${l.directory}" href="${url(l.directory, slug)}">`), ` <link rel="alternate" hreflang="x-default" href="${url('en', slug)}">`].join('\n');
@@ -36,7 +36,7 @@ for (const locale of locales) {
     continue;
   }
   const data = require(`../resource/halloween-locales/${directory}.cjs`);
-  if (data.articles.length !== 6) throw new Error(`Expected six articles: ${directory}`);
+  if (data.articles.length !== 1) throw new Error(`Expected one Halloween guide: ${directory}`);
   const products = localizedCatalog(source, locale);
   const findProduct = key => { const p = products.find(p => p.key === key); if (!p) throw new Error(key); return p; };
   const card = key => {
@@ -72,7 +72,6 @@ for (const locale of locales) {
     enSchema[1].itemListElement = [[data.home, `https://supuzz.com/${directory}/index.html`], [data.journal, `https://supuzz.com/${directory}/blog.html`], [a.title, pageUrl]].map(([name,item],j) => ({'@type':'ListItem',position:j+1,name,item}));
     head = head.replace('</head>', enSchema.map(s => `<script type="application/ld+json">${JSON.stringify(s, null, 2)}</script>`).join('\n') + '\n</head>');
     const sectionHtml = a.sections.map(([title, body],j) => `<section aria-labelledby="section-${j}"><h2 id="section-${j}">${escape(title)}</h2>\n${render(body)}\n</section>`).join('\n');
-    const related = data.articles.map((b,j) => j === i ? '' : `<li><a href="article-${slugs[j]}.html">${escape(b.title)}</a></li>`).join('\n');
     write(`${directory}/article-${slug}.html`, `<!DOCTYPE html>
 <html lang="${locale.htmlLang}">
 ${head}
@@ -88,7 +87,7 @@ ${head}
  ${sectionHtml}
  <section aria-labelledby="shopping"><h2 id="shopping">${escape(data.shoppingTitle)}</h2><p>${escape(data.shopping)}</p></section>
  <section aria-labelledby="questions"><h2 id="questions">${escape(data.faq)}</h2>${a.faq.map(([q,answer]) => `<h3>${escape(q)}</h3><p>${escape(answer)}</p>`).join('\n')}</section>
- <aside aria-labelledby="related"><h2 id="related">${escape(data.related)}</h2><ul>${related}</ul><p><a href="index.html#products">${escape(data.collection)}</a> · <a href="blog.html">${escape(data.back)}</a></p></aside>
+ <p><a href="index.html#products">${escape(data.collection)}</a> · <a href="blog.html">${escape(data.back)}</a></p>
  </div></article></main>
  <include src="components/footer.html"></include>
  <script type="module">import { apiService } from '../api/api-service.js'; document.addEventListener('DOMContentLoaded', () => { apiService.pageview(window.location.pathname, document.referrer); });</script>
@@ -112,4 +111,4 @@ ${head}
   write(`${directory}/blog.html`, blog);
 }
 write('static/sitemap.xml', sitemap);
-console.log(selectedLocale ? `Updated Halloween articles and discovery links for ${selectedLocale}.` : 'Updated 36 translated articles, six blog indexes, all 42 reciprocal language clusters and the sitemap.');
+console.log(selectedLocale ? `Updated the Halloween guide for ${selectedLocale}.` : 'Updated one Halloween guide per language and its discovery links.');

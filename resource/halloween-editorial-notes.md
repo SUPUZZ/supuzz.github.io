@@ -1,4 +1,18 @@
-# Multilingual Halloween gift cluster — September 22, 2026
+# Holiday guide consolidation — October 15, 2026
+
+Current scope: one Halloween guide and one Christmas guide per language (English, Spanish, Japanese, Traditional Chinese, German, Portuguese and French). Retained URLs: `article-halloween-toy-gifts-for-kids.html` and `article-icy-world.html`. Five Halloween sub-guides and the duplicate Funny Snow World article have been removed in each locale: 42 redundant article sources and cards. Basket preparation, non-food options and teacher coordination now live inside the Halloween guide. The Christmas guide combines winter set comparison, wrapping and shared play.
+
+The retired URL map is `resource/retired-holiday-articles.json`. Internal links and sitemap entries point to retained articles. `scripts/build-christmas-guide.js` creates noindex static redirects for old bookmarks/search results; these compatibility pages are excluded from the sitemap. The two legacy root Funny Snow World redirects go directly to the retained guide. These are HTML refresh redirects, not HTTP 301 responses.
+
+Edit the single Halloween article in each `resource/halloween-locales/*.cjs` and regenerate with `node scripts/build-halloween-locales.js`. The English Halloween source remains its HTML file. Christmas translations live in `resource/christmas-guide-locales.cjs`; run `npm run christmas:build` (also in prebuild). Product facts/images reuse the reviewed localized catalog. Original publication dates are preserved; revision dates are October 15, 2026. The existing 16:9 Halloween cover is retained.
+
+Validation: `scripts/check-holiday-guides.js --dist` checks retired sources/links, redirects, sitemap exclusions, Christmas cards, schema, language alternates, images and compiled page shells. Existing Halloween and blog-card checks also run in postbuild and expect one Halloween article.
+
+## Historical implementation and image provenance
+
+The following notes describe the former six-article cluster and its image sources. The consolidation above supersedes its article counts and generation scope.
+
+### Multilingual Halloween gift cluster — September 22, 2026
 
 ## Traditional Chinese cover update — October 15, 2026
 

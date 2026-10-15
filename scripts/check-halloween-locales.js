@@ -7,7 +7,7 @@ const { locales } = require('./product-localization');
 const { halloweenHeroCover } = require('./halloween-card-cover');
 const { createHash } = require('crypto');
 const root = path.resolve(__dirname, '..');
-const slugs = ['halloween-toy-gifts-for-kids', 'halloween-boo-basket-ideas-kids', 'non-candy-halloween-gifts-kids', 'halloween-dinosaur-gifts-kids', 'halloween-building-block-activities', 'halloween-classroom-party-gifts'];
+const slugs = ['halloween-toy-gifts-for-kids'];
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const nodes = html => {
   const flatten = children => children.flatMap(n => typeof n === 'object' ? [n, ...flatten(n.content || [])] : []);
@@ -24,7 +24,7 @@ for (const locale of locales) {
   const blogCards = [...read(`${dir}/blog.html`).matchAll(/<include src="components\/blog-card\.html">([\s\S]*?)<\/include>/g)].map(match => JSON.parse(match[1]));
   const coverHashes = new Set();
   assert.equal(blog.filter(n => n.attrs?.['data-filter'] === 'halloween-gifts').length, 1, `${dir}: filter`);
-  assert.equal(blogCards.filter(card => card.category === 'halloween-gifts').length, 6, `${dir}: cards`);
+  assert.equal(blogCards.filter(card => card.category === 'halloween-gifts').length, 1, `${dir}: cards`);
   httpPaths.add(`/${dir}/blog.html`);
   for (const slug of slugs) {
     const file = `${dir}/article-${slug}.html`, html = read(file), n = nodes(html);
@@ -109,8 +109,8 @@ for (const locale of locales) {
     }
     httpPaths.add('/' + file);
   }
-  assert.equal(coverHashes.size, 6, `${dir}: six visually distinct source images`);
-  console.log(`PASS ${dir}: six distinct covers, complete articles, metadata, local product links and discovery entries`);
+  assert.equal(coverHashes.size, 1, `${dir}: one Halloween cover`);
+  console.log(`PASS ${dir}: one Halloween guide, metadata, local product links and discovery entry`);
 }
 async function checkHttp() {
   const baseArg = process.argv.find(x => x.startsWith('--http='));
