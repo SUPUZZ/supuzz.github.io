@@ -1,0 +1,15 @@
+<a class="blog-card" href="{{ href }}" data-category="{{ category }}" aria-label="{{ title }}">
+    <div class="blog-card-image">
+        <img src="{{ image }}" alt="{{ alt }}" width="{{ width }}" height="{{ height }}" loading="lazy" decoding="async">
+    </div>
+    <div class="blog-card-body">
+        <if condition="date">
+            <p class="blog-published">{{ label }}<time datetime="{{ date }}">{{ dateText }}</time></p>
+        </if>
+        <else>
+            <p class="blog-card-category">{{ label }}</p>
+        </else>
+        <h3 class="blog-card-title">{{ title }}</h3>
+        <p class="blog-card-excerpt">{{ excerpt }}</p>
+    </div>
+</a>

@@ -563,18 +563,36 @@ You can build simple trees all the way up to tall, elaborate trees. Other parts 
         <div class="container">
             <div class="journal-heading"><div><p class="home-eyebrow">OUR WORLD</p><h2 id="journal-title">Inside SUPUZZ.</h2><p class="journal-intro">Meet the ideas behind our toys, and discover new ways to play.</p></div><a class="journal-all" href="blog.html">Explore all articles <span aria-hidden="true">↗</span></a></div>
             <div class="journal-grid" id="home-blog-grid">
-                <article class="journal-post">
-                    <a class="journal-post-link" href="article-how-supuzz-designs-building-toys.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/supuzz-brand-story-family-building-cover.webp" alt="A mother and daughter building a colorful toy garden together" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">Our story</p><h3>How SUPUZZ Designs Toys: From Kids’ Stools to Connected Worlds</h3><p class="journal-excerpt">Discover how flower-stem building grew into coral reefs, icy worlds and dinosaur jungles.</p><span class="journal-read">Read our story <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
-                <article class="journal-post">
-                    <a class="journal-post-link" href="coral-reef-building-toy-play-ideas.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp" alt="A child and grandparent playing together with a SUPUZZ coral reef building set" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">Play ideas</p><h3>Coral Reef Building Toy: 5 Ways to Build and Play</h3><p class="journal-excerpt">Create your own reef with building challenges, sea creature stories, color patterns, and shared play.</p><span class="journal-read">Find your next play idea <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
+<include src="components/blog-card.html">
+{
+    "category": "our-story",
+    "label": "Our story",
+    "date": "",
+    "dateText": "",
+    "href": "article-how-supuzz-designs-building-toys.html",
+    "image": "/product-images/journal/supuzz-brand-story-family-building-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "A mother and daughter building a colorful toy garden together",
+    "title": "How SUPUZZ Designs Toys: From Kids’ Stools to Connected Worlds",
+    "excerpt": "Discover how flower-stem building grew into coral reefs, icy worlds and dinosaur jungles."
+}
+</include>
+<include src="components/blog-card.html">
+{
+    "category": "play-ideas",
+    "label": "Play ideas",
+    "date": "",
+    "dateText": "",
+    "href": "coral-reef-building-toy-play-ideas.html",
+    "image": "/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "A child and grandparent playing together with a SUPUZZ coral reef building set",
+    "title": "Coral Reef Building Toy: 5 Ways to Build and Play",
+    "excerpt": "Create your own reef with building challenges, sea creature stories, color patterns, and shared play."
+}
+</include>
             </div>
         </div>
     </section>

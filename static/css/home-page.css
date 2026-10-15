@@ -66,12 +66,6 @@
 .home-page .journal-heading .home-eyebrow { margin-bottom:15px; }
 .home-page .journal-intro { margin:16px 0 0; font-size:.93rem; line-height:1.7; color:var(--home-muted); }
 .home-page .journal-grid { gap:26px; }
-.home-page .journal-post { border:1px solid var(--home-line); border-radius:18px; }
-.home-page .journal-post-body { padding:25px 26px 28px; }
-.home-page .journal-post-body .journal-category { color:var(--home-teal); font-size:.67rem; letter-spacing:.08em; text-transform:uppercase; font-weight:600; margin-bottom:12px; }
-.home-page .journal-post-body h3 { color:var(--home-ink); font-size:1.35rem; line-height:1.4; margin-bottom:14px; }
-.home-page .journal-post-body .journal-excerpt { font-size:.86rem; color:var(--home-muted); }
-.home-page .journal-read { color:var(--home-teal); }
 .home-page .journal-all { font-size:.8rem; color:var(--home-ink); }
 .home-page .hero :focus-visible, .home-page .product-collection :focus-visible, .home-page .customer-reviews :focus-visible, .home-page .home-journal :focus-visible { outline:3px solid var(--home-teal); outline-offset:4px; }
 @media(min-width:1100px) { .home-page .product-collection .grid { grid-template-columns:repeat(3,minmax(0,1fr)); } }
@@ -96,6 +90,5 @@
   .home-page .product-card-body { padding:20px; }
   .home-page .journal-heading { flex-direction:column; align-items:flex-start; gap:24px; }
   .home-page .journal-heading h2 { font-size:2.5rem; padding:0; }
-  .home-page .journal-post-body { padding:22px; }
 }
 @media(max-width:480px) { .home-page .hero-img { padding-inline:18px; } .home-page .hero-img figcaption { left:18px; right:18px; } .home-page .hero-image-label { font-size:.53rem; } .home-page .product-actions .btn { font-size:.73rem; } .home-page .review-content { padding:22px; } }

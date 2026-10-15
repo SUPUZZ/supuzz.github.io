@@ -549,18 +549,36 @@ You can build simple trees all the way up to tall, elaborate trees. Other parts 
         <div class="container">
             <div class="journal-heading"><div><p class="home-eyebrow">NUESTRO MUNDO</p><h2 id="journal-title">Dentro de SUPUZZ.</h2><p class="journal-intro">Conoce las ideas detrás de nuestros juguetes y descubre nuevas formas de jugar.</p></div><a class="journal-all" href="blog.html">Explorar todos los artículos <span aria-hidden="true">↗</span></a></div>
             <div class="journal-grid" id="home-blog-grid">
-                <article class="journal-post">
-                    <a class="journal-post-link" href="article-how-supuzz-designs-building-toys.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/supuzz-brand-story-family-building-cover.webp" alt="Una madre y su hija construyen juntas un colorido jardín con bloques" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">Nuestra historia</p><h3>Cómo diseña SUPUZZ: de los taburetes infantiles a mundos conectados</h3><p class="journal-excerpt">Del taburete infantil a los bloques de coral, hielo y dinosaurios: descubre el diseño de tallos de SUPUZZ, sus bases compatibles y las ideas para la playa y las mesas de agua.</p><span class="journal-read">Leer nuestra historia <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
-                <article class="journal-post">
-                    <a class="journal-post-link" href="coral-reef-building-toy-play-ideas.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp" alt="Una niña y su abuelo juegan con un set de arrecife de coral SUPUZZ" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">Ideas para jugar</p><h3>Arrecife de coral: 5 ideas para construir y jugar</h3><p class="journal-excerpt">Crea tu arrecife con cinco ideas de construcción y juego. Inventa historias marinas, patrones de colores y juegos compartidos con SUPUZZ desde los 3 años.</p><span class="journal-read">Descubrir ideas para jugar <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
+<include src="components/blog-card.html">
+{
+    "category": "our-story",
+    "label": "Nuestra historia",
+    "date": "",
+    "dateText": "",
+    "href": "article-how-supuzz-designs-building-toys.html",
+    "image": "/product-images/journal/supuzz-brand-story-family-building-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Una madre y su hija construyen juntas un colorido jardín con bloques",
+    "title": "Cómo diseña SUPUZZ: de los taburetes infantiles a mundos conectados",
+    "excerpt": "Del taburete infantil a los bloques de coral, hielo y dinosaurios: descubre el diseño de tallos de SUPUZZ, sus bases compatibles y las ideas para la playa y las mesas de agua."
+}
+</include>
+<include src="components/blog-card.html">
+{
+    "category": "play-ideas",
+    "label": "Ideas para jugar",
+    "date": "",
+    "dateText": "",
+    "href": "coral-reef-building-toy-play-ideas.html",
+    "image": "/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Una niña y su abuelo juegan con un set de arrecife de coral SUPUZZ",
+    "title": "Arrecife de coral: 5 ideas para construir y jugar",
+    "excerpt": "Crea tu arrecife con cinco ideas de construcción y juego. Inventa historias marinas, patrones de colores y juegos compartidos con SUPUZZ desde los 3 años."
+}
+</include>
             </div>
         </div>
     </section>

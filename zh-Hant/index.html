@@ -570,18 +570,36 @@ You can build simple trees all the way up to tall, elaborate trees. Other parts 
         <div class="container">
             <div class="journal-heading"><div><p class="home-eyebrow">我們的世界</p><h2 id="journal-title">走進 SUPUZZ。</h2><p class="journal-intro">認識玩具背後的設計故事，發現更多一起玩的靈感。</p></div><a class="journal-all" href="blog.html">探索所有文章 <span aria-hidden="true">↗</span></a></div>
             <div class="journal-grid" id="home-blog-grid">
-                <article class="journal-post">
-                    <a class="journal-post-link" href="article-how-supuzz-designs-building-toys.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/supuzz-brand-story-family-building-cover.webp" alt="媽媽與女兒一起用繽紛積木搭建玩具花園" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">品牌故事</p><h3>SUPUZZ 的設計故事：從兒童凳到相互連接的積木世界</h3><p class="journal-excerpt">從兒童凳到珊瑚、冰雪和恐龍積木，了解 SUPUZZ 如何拓展花莖積木設計，運用通用花莖與可配對底座，延伸沙灘和玩水桌的遊戲方式。</p><span class="journal-read">閱讀品牌故事 <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
-                <article class="journal-post">
-                    <a class="journal-post-link" href="coral-reef-building-toy-play-ideas.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp" alt="孩子和祖父一起玩 SUPUZZ 珊瑚礁積木" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">玩法靈感</p><h3>珊瑚礁積木的 5 種玩法：搭建、說故事，一起玩</h3><p class="journal-excerpt">用 5 種珊瑚礁積木玩法打造自己的海底世界：設計路線、比較結構、編海洋故事、排列顏色，再輪流合作搭建。認識適合 3 歲以上的 SUPUZZ Ocean World。</p><span class="journal-read">尋找下一個玩法 <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
+<include src="components/blog-card.html">
+{
+    "category": "our-story",
+    "label": "品牌故事",
+    "date": "",
+    "dateText": "",
+    "href": "article-how-supuzz-designs-building-toys.html",
+    "image": "/product-images/journal/supuzz-brand-story-family-building-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "媽媽與女兒一起用繽紛積木搭建玩具花園",
+    "title": "SUPUZZ 的設計故事：從兒童凳到相互連接的積木世界",
+    "excerpt": "從兒童凳到珊瑚、冰雪和恐龍積木，了解 SUPUZZ 如何拓展花莖積木設計，運用通用花莖與可配對底座，延伸沙灘和玩水桌的遊戲方式。"
+}
+</include>
+<include src="components/blog-card.html">
+{
+    "category": "play-ideas",
+    "label": "玩法靈感",
+    "date": "",
+    "dateText": "",
+    "href": "coral-reef-building-toy-play-ideas.html",
+    "image": "/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "孩子和祖父一起玩 SUPUZZ 珊瑚礁積木",
+    "title": "珊瑚礁積木的 5 種玩法：搭建、說故事，一起玩",
+    "excerpt": "用 5 種珊瑚礁積木玩法打造自己的海底世界：設計路線、比較結構、編海洋故事、排列顏色，再輪流合作搭建。認識適合 3 歲以上的 SUPUZZ Ocean World。"
+}
+</include>
             </div>
         </div>
     </section>

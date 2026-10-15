@@ -570,18 +570,36 @@ You can build simple trees all the way up to tall, elaborate trees. Other parts 
         <div class="container">
             <div class="journal-heading"><div><p class="home-eyebrow">私たちの世界</p><h2 id="journal-title">SUPUZZのものづくり。</h2><p class="journal-intro">おもちゃに込めたアイデアと、新しい遊び方をご紹介します。</p></div><a class="journal-all" href="blog.html">すべての記事を見る <span aria-hidden="true">↗</span></a></div>
             <div class="journal-grid" id="home-blog-grid">
-                <article class="journal-post">
-                    <a class="journal-post-link" href="article-how-supuzz-designs-building-toys.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/supuzz-brand-story-family-building-cover.webp" alt="母と娘がカラフルなブロックで庭を一緒につくる様子" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">ブランドストーリー</p><h3>SUPUZZのものづくり：スツールからつながるブロックの世界へ</h3><p class="journal-excerpt">子ども用スツールからサンゴ・氷・恐竜のブロックへ。花の茎を組み立てる発想を広げたSUPUZZの設計と、共通パーツ、つながる土台、砂浜やウォーターテーブルでの遊びを紹介します。</p><span class="journal-read">私たちのストーリーを読む <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
-                <article class="journal-post">
-                    <a class="journal-post-link" href="coral-reef-building-toy-play-ideas.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp" alt="SUPUZZのサンゴ礁ブロックで一緒に遊ぶ子どもと祖父" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">遊びのアイデア</p><h3>サンゴ礁ブロック：親子で楽しむ5つの遊び方</h3><p class="journal-excerpt">サンゴ礁ブロックで道や海の物語を作ってみませんか。形の比較、色のパターン、交代での組み立てなど、3歳以上向けのSUPUZZ Ocean Worldで楽しめる5つの遊びを紹介します。</p><span class="journal-read">次の遊びを見つける <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
+<include src="components/blog-card.html">
+{
+    "category": "our-story",
+    "label": "ブランドストーリー",
+    "date": "",
+    "dateText": "",
+    "href": "article-how-supuzz-designs-building-toys.html",
+    "image": "/product-images/journal/supuzz-brand-story-family-building-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "母と娘がカラフルなブロックで庭を一緒につくる様子",
+    "title": "SUPUZZのものづくり：スツールからつながるブロックの世界へ",
+    "excerpt": "子ども用スツールからサンゴ・氷・恐竜のブロックへ。花の茎を組み立てる発想を広げたSUPUZZの設計と、共通パーツ、つながる土台、砂浜やウォーターテーブルでの遊びを紹介します。"
+}
+</include>
+<include src="components/blog-card.html">
+{
+    "category": "play-ideas",
+    "label": "遊びのアイデア",
+    "date": "",
+    "dateText": "",
+    "href": "coral-reef-building-toy-play-ideas.html",
+    "image": "/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "SUPUZZのサンゴ礁ブロックで一緒に遊ぶ子どもと祖父",
+    "title": "サンゴ礁ブロック：親子で楽しむ5つの遊び方",
+    "excerpt": "サンゴ礁ブロックで道や海の物語を作ってみませんか。形の比較、色のパターン、交代での組み立てなど、3歳以上向けのSUPUZZ Ocean Worldで楽しめる5つの遊びを紹介します。"
+}
+</include>
             </div>
         </div>
     </section>

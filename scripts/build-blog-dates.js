@@ -1,12 +1,12 @@
 // Display the linked article's publication date on every localized blog card.
 const fs = require('fs');
 const path = require('path');
+const { blogCardInclude } = require('./blog-card');
 const root = path.resolve(__dirname, '..');
 const labels = {
   en: 'Published', es: 'Publicado el', ja: '公開日：', 'zh-Hant': '發布日期：',
   de: 'Veröffentlicht am', pt: 'Publicado em', fr: 'Publié le'
 };
-const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 
 function publicationDate(articlePath) {
   const article = fs.readFileSync(articlePath, 'utf8');
@@ -30,17 +30,15 @@ for (const [directory, label] of Object.entries(labels)) {
   const language = page.match(/<html\b[^>]*lang="([^"]+)"/)[1];
   const formatter = new Intl.DateTimeFormat(language, {year:'numeric', month:'short', day:'numeric', timeZone:'UTC'});
   let count = 0;
-  page = page.replace(/<(a|article)\b(?=[^>]*\bclass="[^"]*\bblog-card\b)[^>]*>[\s\S]*?<\/\1>/g, card => {
-    const href = card.match(/\bhref="([^"]+)"/)[1];
+  page = page.replace(/<include src="components\/blog-card\.html">([\s\S]*?)<\/include>/g, (include, json) => {
+    const card = JSON.parse(json);
+    const { href } = card;
     if (!/^[\w-]+\.html$/.test(href)) throw new Error(`Expected a local article link: ${directory}/${href}`);
     const date = publicationDate(path.join(root, directory, href));
     const text = formatter.format(new Date(`${date}T12:00:00Z`));
     const separator = /[：:]$/.test(label) ? '' : ' ';
-    const markup = `<p class="blog-published">${escape(label)}${separator}<time datetime="${date}">${escape(text)}</time></p>`;
-    const cleaned = card.replace(/<p class="blog-published">[\s\S]*?<\/p>/g, '');
-    if (!/<h3\b/.test(cleaned)) throw new Error(`Missing card title: ${directory}/${href}`);
     count += 1;
-    return cleaned.replace(/<h3\b/, `${markup}<h3`);
+    return blogCardInclude({ ...card, label:label + separator, date, dateText:text });
   });
   if (!count) throw new Error(`No blog cards found: ${directory}`);
   if (!page.includes('href="../css/blog-list.css"')) page = page.replace('</head>', '    <link rel="stylesheet" href="../css/blog-list.css">\n</head>');

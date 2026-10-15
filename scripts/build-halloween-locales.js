@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { parser } = require('posthtml-parser');
+const { blogCardInclude } = require('./blog-card');
 const { locales, localizedCatalog } = require('./product-localization');
 const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
@@ -86,7 +87,11 @@ ${head}
 </body>
 </html>
 `);
-    blogCards.push(`<a href="article-${slug}.html" class="blog-card" data-halloween-article="${slug}" data-category="halloween-gifts" style="text-decoration:none; display:block; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.04);"><div class="blog-img" style="height:180px; overflow:hidden; background:#fff;"><img src="${im.thumb}" width="${im.width}" height="${im.height}" loading="lazy" alt="${escape(im.alt)}" style="object-fit:contain; height:100%; width:100%;"></div><div class="blog-content" style="padding:18px;"><h3 style="font-size:1.1rem; margin-bottom:8px; color:#1C1B1F;">${escape(a.title)}</h3><p style="font-size:.9rem; color:#49454F; margin-bottom:12px;">${escape(a.description)}</p><span class="read-link" style="color:#6750A4; font-weight:500;">${escape(data.read)} →</span></div></a>`);
+    blogCards.push(blogCardInclude({
+      href:`article-${slug}.html`, category:'halloween-gifts', image:im.thumb,
+      width:im.width, height:im.height, alt:im.alt, title:a.title, excerpt:a.description,
+      date:'2026-09-22', dateText:data.date
+    }));
     if (!sitemap.includes(`<loc>${pageUrl}</loc>`)) sitemap = sitemap.replace('</urlset>', `  <url>\n    <loc>${pageUrl}</loc>\n    <lastmod>2026-09-22</lastmod>\n  </url>\n</urlset>`);
   }
   let blog = read(`${directory}/blog.html`);

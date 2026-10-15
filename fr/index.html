@@ -557,18 +557,36 @@ You can build simple trees all the way up to tall, elaborate trees. Other parts 
         <div class="container">
             <div class="journal-heading"><div><p class="home-eyebrow">NOTRE UNIVERS</p><h2 id="journal-title">Dans l’univers SUPUZZ.</h2><p class="journal-intro">Découvrez les idées derrière nos jouets et de nouvelles façons de jouer.</p></div><a class="journal-all" href="blog.html">Découvrir tous les articles <span aria-hidden="true">↗</span></a></div>
             <div class="journal-grid" id="home-blog-grid">
-                <article class="journal-post">
-                    <a class="journal-post-link" href="article-how-supuzz-designs-building-toys.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/supuzz-brand-story-family-building-cover.webp" alt="Une mère et sa fille construisent ensemble un jardin coloré avec des blocs" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">Notre histoire</p><h3>Comment SUPUZZ crée ses jouets : du tabouret aux mondes connectés</h3><p class="journal-excerpt">Du tabouret pour enfant aux blocs de corail, de glace et de dinosaures : découvrez les tiges interchangeables SUPUZZ, les bases compatibles et le jeu à la plage ou à une table à eau.</p><span class="journal-read">Lire notre histoire <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
-                <article class="journal-post">
-                    <a class="journal-post-link" href="coral-reef-building-toy-play-ideas.html">
-                        <div class="journal-post-image"><img src="/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp" alt="Une enfant et son grand-père jouent avec un coffret de récif de corail SUPUZZ" width="1200" height="675" loading="lazy" decoding="async"></div>
-                        <div class="journal-post-body"><p class="journal-category">Idées de jeu</p><h3>Récif de corail : 5 idées pour construire et jouer</h3><p class="journal-excerpt">Créez votre récif avec cinq idées de jeu : parcours, histoires marines, motifs de couleurs et construction à plusieurs avec SUPUZZ Ocean World, dès 3 ans.</p><span class="journal-read">Trouver une nouvelle idée de jeu <span aria-hidden="true">→</span></span></div>
-                    </a>
-                </article>
+<include src="components/blog-card.html">
+{
+    "category": "our-story",
+    "label": "Notre histoire",
+    "date": "",
+    "dateText": "",
+    "href": "article-how-supuzz-designs-building-toys.html",
+    "image": "/product-images/journal/supuzz-brand-story-family-building-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Une mère et sa fille construisent ensemble un jardin coloré avec des blocs",
+    "title": "Comment SUPUZZ crée ses jouets : du tabouret aux mondes connectés",
+    "excerpt": "Du tabouret pour enfant aux blocs de corail, de glace et de dinosaures : découvrez les tiges interchangeables SUPUZZ, les bases compatibles et le jeu à la plage ou à une table à eau."
+}
+</include>
+<include src="components/blog-card.html">
+{
+    "category": "play-ideas",
+    "label": "Idées de jeu",
+    "date": "",
+    "dateText": "",
+    "href": "coral-reef-building-toy-play-ideas.html",
+    "image": "/product-images/journal/coral-reef-building-toy-play-ideas-cover.webp",
+    "width": 1200,
+    "height": 675,
+    "alt": "Une enfant et son grand-père jouent avec un coffret de récif de corail SUPUZZ",
+    "title": "Récif de corail : 5 idées pour construire et jouer",
+    "excerpt": "Créez votre récif avec cinq idées de jeu : parcours, histoires marines, motifs de couleurs et construction à plusieurs avec SUPUZZ Ocean World, dès 3 ans."
+}
+</include>
             </div>
         </div>
     </section>

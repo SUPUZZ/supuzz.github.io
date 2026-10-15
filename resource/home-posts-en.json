@@ -15,17 +15,11 @@
     "category": "gifts-family",
     "title": "Thanksgiving Giving 2026: Lisa’s Toys to Kenya",
     "excerpt": "Lisa worked in Kenya. Now she sends toys from America. Explore her story and thoughtful giving ideas for families.",
-    "image": "/product-images/journal/article-thanksgiving-toys-to-kenya-cover.webp",
-    "alt": "Illustration of a gift box and building blocks for Thanksgiving giving",
+    "image": "/product-images/journal/thanksgiving-gift-box-cover.webp",
+    "alt": "Illustration of a golden gift box with a green ribbon on a cream background",
     "width": 1200,
     "height": 675,
-    "imageSource": "/product-images/thanksgiving-toys-to-kenya.webp",
-    "imageCrop": {
-      "left": 40,
-      "top": 0,
-      "width": 1120,
-      "height": 630
-    }
+    "imageSource": "/product-images/journal/thanksgiving-gift-box-cover.svg"
   },
   {
     "file": "article-dinosaur-building-blocks-ocean-inspired.html",
