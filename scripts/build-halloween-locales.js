@@ -3,6 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const { parser } = require('posthtml-parser');
 const { blogCardInclude } = require('./blog-card');
+const { halloweenCardCover } = require('./halloween-card-cover');
+const { publicationMetadata } = require('./article-publication');
 const { locales, localizedCatalog } = require('./product-localization');
 const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
@@ -95,9 +97,9 @@ ${head}
 </html>
 `);
     blogCards.push(blogCardInclude({
-      href:`article-${slug}.html`, category:'halloween-gifts', categoryLabel:data.category, image:im.thumb,
-      width:im.thumbWidth || im.width, height:im.thumbHeight || im.height, alt:im.alt, title:a.title, excerpt:a.description,
-      label:data.dateLabel || '', date:'2026-09-22', dateText:data.cardDate || data.date
+      href:`article-${slug}.html`, category:'halloween-gifts', categoryLabel:data.category,
+      ...halloweenCardCover(directory), title:a.title, excerpt:a.description,
+      ...publicationMetadata(path.join(root, directory, `article-${slug}.html`), directory)
     }));
     if (!sitemap.includes(`<loc>${pageUrl}</loc>`)) sitemap = sitemap.replace('</urlset>', `  <url>\n    <loc>${pageUrl}</loc>\n    <lastmod>2026-09-22</lastmod>\n  </url>\n</urlset>`);
   }
