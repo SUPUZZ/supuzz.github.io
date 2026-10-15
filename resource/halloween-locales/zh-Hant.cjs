@@ -1,4 +1,12 @@
 module.exports = {
+dateLabel: '發布日期：', cardDate: '2026年9月22日',
+hero: {
+  src: '/product-images/journal/halloween-gifts-pumpkins-cover.webp',
+  thumb: '/product-images/journal/halloween-gifts-pumpkins-cover-480.webp',
+  width: 1280, height: 720, thumbWidth: 480, thumbHeight: 270,
+  alt: '發光南瓜燈、紫色蝴蝶結與黑金禮盒組成的萬聖節送禮佈置',
+  caption: '南瓜燈與節日禮盒，為萬聖節送禮增添驚喜。圖片：Vera Kratochvil／Public Domain Pictures（CC0）。'
+},
 home:'首頁', journal:'部落格', breadcrumb:'麵包屑導覽', category:'萬聖節送禮', author:'SUPUZZ 團隊', date:'2026 年 9 月 22 日', contents:'本文目錄', faq:'常見問題', related:'更多萬聖節送禮與遊戲靈感', collection:'瀏覽 SUPUZZ 商品', back:'返回部落格', read:'閱讀指南', details:'查看照片與套組內容',
 caption:'商品實拍圖；文中的萬聖節故事與額外裝飾是玩法建議，不屬於套組內容。',
 shoppingTitle:'在美國或加拿大購買前', shopping:'請依所選包裝的適用年齡挑選，並核對實際配件。商品頁連向 Amazon.com；加拿大買家應確認收件地址是否可配送、結算幣別、運費及可能的進口費用，美國商品頁不代表保證配送加拿大。請按實際活動日期查看預計到貨時間，不要只看 10 月 31 日。價格、庫存與到貨日期都可能變動。',

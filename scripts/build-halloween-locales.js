@@ -19,8 +19,12 @@ const imageFor = (directory, p) => {
   return { ...n.attrs, thumb: n.attrs.src.replace('.webp', '-480.webp') };
 };
 let sitemap = read('static/sitemap.xml');
+const localeArg = process.argv.find(arg => arg.startsWith('--locale='));
+const selectedLocale = localeArg?.slice('--locale='.length);
+if (selectedLocale && !locales.some(locale => locale.directory === selectedLocale)) throw new Error(`Unknown locale: ${selectedLocale}`);
 for (const locale of locales) {
   const directory = locale.directory;
+  if (selectedLocale && directory !== selectedLocale) continue;
   if (directory === 'en') {
     for (const slug of slugs) {
       const file = `en/article-${slug}.html`;
@@ -44,7 +48,7 @@ for (const locale of locales) {
     .replace(/\{\{cards:([^}]+)\}\}/g, (_, keys) => `<div class="product-picks">${keys.split(',').map(card).join('\n')}</div>`);
   const blogCards = [];
   for (const [i, a] of data.articles.entries()) {
-    const slug = slugs[i], pageUrl = url(directory, slug), p = findProduct(heroKeys[i]), im = imageFor(directory, p);
+    const slug = slugs[i], pageUrl = url(directory, slug), p = findProduct(heroKeys[i]), im = a.hero || data.hero || imageFor(directory, p);
     const english = read(`en/article-${slug}.html`);
     let head = english.slice(english.indexOf('<head>'), english.indexOf('</head>') + 7);
     const enSchema = [...head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
@@ -54,11 +58,14 @@ for (const locale of locales) {
     for (const [attr, name, value] of [
       ['name','description',a.description], ['name','author',data.author], ['property','og:locale',locale.ogLocale],
       ['property','og:url',pageUrl], ['property','og:title',`${a.title} | SUPUZZ`], ['property','og:description',a.description],
+      ['property','og:image',`https://supuzz.com${im.src}`], ['property','og:image:width',im.width], ['property','og:image:height',im.height],
+      ['name','twitter:image',`https://supuzz.com${im.src}`],
       ['property','og:image:alt',im.alt], ['property','article:section',data.category], ['name','twitter:url',pageUrl],
       ['name','twitter:title',a.title], ['name','twitter:description',a.description], ['name','twitter:image:alt',im.alt]
     ]) meta(attr, name, value);
     head = head.replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${pageUrl}">`);
     enSchema[0] = { ...enSchema[0], headline: a.title, description: a.description, inLanguage: locale.htmlLang, articleSection: data.category,
+      image: { '@type': 'ImageObject', url: `https://supuzz.com${im.src}`, width: Number(im.width), height: Number(im.height) },
       author: { '@type': 'Organization', name: data.author, url: `https://supuzz.com/${directory}/about.html` },
       mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl } };
     enSchema[1].itemListElement = [[data.home, `https://supuzz.com/${directory}/index.html`], [data.journal, `https://supuzz.com/${directory}/blog.html`], [a.title, pageUrl]].map(([name,item],j) => ({'@type':'ListItem',position:j+1,name,item}));
@@ -74,7 +81,7 @@ ${head}
  <nav class="breadcrumb" aria-label="${escape(data.breadcrumb)}"><a href="index.html">${escape(data.home)}</a> / <a href="blog.html">${escape(data.journal)}</a> / <span aria-current="page">${escape(data.category)}</span></nav>
  <article class="article-container">
  <div class="article-header"><span class="tag">${escape(data.category)}</span><h1>${escape(a.title)}</h1><p class="meta">${escape(data.author)} · <time datetime="2026-09-22">${escape(data.date)}</time></p></div>
- <figure><img class="featured-img" src="${im.src}" width="${im.width}" height="${im.height}" alt="${escape(im.alt)}" fetchpriority="high" decoding="async"><figcaption>${escape(p.name)}. ${escape(data.caption)}</figcaption></figure>
+ <figure><img class="featured-img" src="${im.src}" width="${im.width}" height="${im.height}" alt="${escape(im.alt)}" fetchpriority="high" decoding="async"><figcaption>${im.caption ? escape(im.caption) : `${escape(p.name)}. ${escape(data.caption)}`}</figcaption></figure>
  <div class="content"><p>${escape(a.intro)}</p>
  <nav class="article-toc" aria-label="${escape(data.contents)}"><strong>${escape(data.contents)}</strong><ol>${a.sections.map(([title],j) => `<li><a href="#section-${j}">${escape(title)}</a></li>`).join('')}<li><a href="#questions">${escape(data.faq)}</a></li></ol></nav>
  ${sectionHtml}
@@ -89,18 +96,19 @@ ${head}
 `);
     blogCards.push(blogCardInclude({
       href:`article-${slug}.html`, category:'halloween-gifts', categoryLabel:data.category, image:im.thumb,
-      width:im.width, height:im.height, alt:im.alt, title:a.title, excerpt:a.description,
-      date:'2026-09-22', dateText:data.date
+      width:im.thumbWidth || im.width, height:im.thumbHeight || im.height, alt:im.alt, title:a.title, excerpt:a.description,
+      label:data.dateLabel || '', date:'2026-09-22', dateText:data.cardDate || data.date
     }));
     if (!sitemap.includes(`<loc>${pageUrl}</loc>`)) sitemap = sitemap.replace('</urlset>', `  <url>\n    <loc>${pageUrl}</loc>\n    <lastmod>2026-09-22</lastmod>\n  </url>\n</urlset>`);
   }
   let blog = read(`${directory}/blog.html`);
-  blog = blog.replace(/\n?<!-- halloween-cards:start -->[\s\S]*?<!-- halloween-cards:end -->\n?/g, '');
-  blog = blog.replace(/(<div class="blog-grid"[^>]*>)/, `$1\n<!-- halloween-cards:start -->\n${blogCards.join('\n')}\n<!-- halloween-cards:end -->\n`);
+  const cardBlock = `<!-- halloween-cards:start -->\n${blogCards.join('\n')}\n<!-- halloween-cards:end -->`;
+  if (blog.includes('<!-- halloween-cards:start -->')) blog = blog.replace(/<!-- halloween-cards:start -->[\s\S]*?<!-- halloween-cards:end -->/, cardBlock);
+  else blog = blog.replace(/(<div class="blog-grid"[^>]*>)/, `$1\n${cardBlock}\n`);
   const button = `<button class="filter-btn" data-filter="halloween-gifts" style="padding:8px 18px; border-radius:999px; border:1px solid #CAC4D0; background:#fff; cursor:pointer; font-size:.9rem;">${escape(data.category)}</button>`;
   if (blog.includes('data-filter="halloween-gifts"')) blog = blog.replace(/<button[^>]*data-filter="halloween-gifts"[^>]*>[\s\S]*?<\/button>/, button);
   else blog = blog.replace(/(<button[^>]*data-filter="all"[^>]*>[\s\S]*?<\/button>)/, `$1\n${button}`);
   write(`${directory}/blog.html`, blog);
 }
 write('static/sitemap.xml', sitemap);
-console.log('Updated 36 translated articles, six blog indexes, all 42 reciprocal language clusters and the sitemap.');
+console.log(selectedLocale ? `Updated Halloween articles and discovery links for ${selectedLocale}.` : 'Updated 36 translated articles, six blog indexes, all 42 reciprocal language clusters and the sitemap.');
