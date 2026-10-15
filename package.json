@@ -11,6 +11,7 @@
     "journal:build": "node scripts/build-home-journal.js",
     "reviews:build": "node scripts/build-customer-reviews.js",
     "build": "parcel build *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html --public-url /supuzz.github.io/ --dist-dir ./dist && cp -r api dist/",
+    "postbuild": "node scripts/check-blog-cards.js",
     "products:build": "node scripts/build-products.js",
     "products:check": "node scripts/check-products.js"
   },

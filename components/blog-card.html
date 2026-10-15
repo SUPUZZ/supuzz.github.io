@@ -6,7 +6,7 @@
         <div class="blog-card-meta">
             <if condition="date">
                 <p class="blog-published">
-                    <svg class="blog-card-calendar" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 11h18"></path></svg>
+                    <span class="blog-card-calendar" aria-hidden="true"></span>
                     <span class="blog-card-sr-only">{{ label }}</span><time datetime="{{ date }}">{{ dateText }}</time>
                 </p>
             </if>

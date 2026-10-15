@@ -21,7 +21,7 @@
 .blog-card .blog-card-body { display:flex; flex-direction:column; flex:1; min-width:0; padding:22px; }
 .blog-card .blog-card-meta { display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:24px; margin:0 0 12px; }
 .blog-card .blog-published { display:inline-flex; align-items:center; gap:6px; flex:0 1 auto; min-width:0; margin:0; color:#626f67; font-size:.72rem; font-weight:400; line-height:1.5; letter-spacing:normal; }
-.blog-card .blog-card-calendar { display:block; flex:none; }
+.blog-card .blog-card-calendar { display:block; flex:none; width:14px; height:14px; background:center/contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23626f67' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='16' rx='2'/%3E%3Cpath d='M16 3v4M8 3v4M3 11h18'/%3E%3C/svg%3E"); }
 .blog-card .blog-published time { white-space:nowrap; font-variant-numeric:tabular-nums; }
 .blog-card .blog-card-category { flex:0 1 auto; max-width:55%; margin-left:auto; padding:3px 8px; border-radius:999px; background:#eef3ee; color:#346e61; font-size:.65rem; font-weight:500; line-height:1.5; letter-spacing:normal; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .blog-card .blog-card-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
