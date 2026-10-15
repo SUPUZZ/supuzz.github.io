@@ -20,6 +20,8 @@ for (const directory of ['en', 'es', 'ja', 'zh-Hant', 'de', 'pt', 'fr']) {
     const cards = nodes.filter(node => hasClass(node, 'blog-card'));
     assert(expected.length > 0, `${file}: missing source cards`);
     assert.equal(cards.length, expected.length, `${file}: card count`);
+    const seasonal = expected.filter(post => post.category === 'halloween-gifts');
+    assert.equal(new Set(seasonal.map(post => post.image)).size, seasonal.length, `${file}: Halloween articles must have distinct covers`);
     for (const [index, card] of cards.entries()) {
       const post = expected[index];
       const children = flatten(card.content || []);
@@ -39,7 +41,7 @@ for (const directory of ['en', 'es', 'ja', 'zh-Hant', 'de', 'pt', 'fr']) {
       assert(image, `${file}: missing cover for ${post.href}`);
       assert.equal(image.attrs.src, post.image, `${file}: production cover for ${post.href}`);
       if (post.category === 'halloween-gifts') {
-        const cover = halloweenCardCover(directory);
+        const cover = halloweenCardCover(directory, post.href);
         for (const key of ['image', 'width', 'height', 'alt']) assert.equal(post[key], cover[key], `${file}: Halloween cover ${key}`);
         assert.equal(+image.attrs.width, cover.width, `${file}: Halloween image width`);
         assert.equal(+image.attrs.height, cover.height, `${file}: Halloween image height`);

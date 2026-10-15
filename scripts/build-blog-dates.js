@@ -22,7 +22,7 @@ for (const directory of ['en', 'es', 'ja', 'zh-Hant', 'de', 'pt', 'fr']) {
     return blogCardInclude({
       ...card, categoryLabel,
       ...publicationMetadata(path.join(root, directory, href), directory),
-      ...(card.category === 'halloween-gifts' ? halloweenCardCover(directory) : {})
+      ...(card.category === 'halloween-gifts' ? halloweenCardCover(directory, href) : {})
     });
   });
   if (!count) throw new Error(`No blog cards found: ${directory}`);

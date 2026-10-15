@@ -4,6 +4,8 @@ const path = require('path');
 const assert = require('node:assert/strict');
 const { parser } = require('posthtml-parser');
 const { locales } = require('./product-localization');
+const { halloweenHeroCover } = require('./halloween-card-cover');
+const { createHash } = require('crypto');
 const root = path.resolve(__dirname, '..');
 const slugs = ['halloween-toy-gifts-for-kids', 'halloween-boo-basket-ideas-kids', 'non-candy-halloween-gifts-kids', 'halloween-dinosaur-gifts-kids', 'halloween-building-block-activities', 'halloween-classroom-party-gifts'];
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
@@ -19,8 +21,10 @@ const httpPaths = new Set(['/css/halloween-guides.css', '/sitemap.xml']);
 for (const locale of locales) {
   const dir = locale.directory, titles = new Set(), descriptions = new Set();
   const blog = nodes(read(`${dir}/blog.html`));
+  const blogCards = [...read(`${dir}/blog.html`).matchAll(/<include src="components\/blog-card\.html">([\s\S]*?)<\/include>/g)].map(match => JSON.parse(match[1]));
+  const coverHashes = new Set();
   assert.equal(blog.filter(n => n.attrs?.['data-filter'] === 'halloween-gifts').length, 1, `${dir}: filter`);
-  assert.equal(blog.filter(n => n.attrs?.['data-category'] === 'halloween-gifts').length, 6, `${dir}: cards`);
+  assert.equal(blogCards.filter(card => card.category === 'halloween-gifts').length, 6, `${dir}: cards`);
   httpPaths.add(`/${dir}/blog.html`);
   for (const slug of slugs) {
     const file = `${dir}/article-${slug}.html`, html = read(file), n = nodes(html);
@@ -58,7 +62,16 @@ for (const locale of locales) {
     assert.equal(article.datePublished.slice(0, 10), n.find(x => x.tag === 'time').attrs.datetime);
     assert.equal(schemas.find(x => x['@type'] === 'BreadcrumbList').itemListElement.at(-1).item, publicUrl);
     assert.equal(sitemapUrls.filter(u => u === publicUrl).length, 1, `${file}: sitemap`);
-    assert.equal(blog.filter(x => x.attrs?.href === `article-${slug}.html`).length, 1, `${file}: blog entry`);
+    assert.equal(blogCards.filter(card => card.href === `article-${slug}.html`).length, 1, `${file}: blog entry`);
+    const cover = halloweenHeroCover(dir, `article-${slug}.html`);
+    const hero = n.find(x => (x.attrs?.class || '').split(/\s+/).includes('featured-img'));
+    assert.equal(hero.attrs.src, cover.src, `${file}: article cover`);
+    assert.equal(hero.attrs.alt, cover.alt, `${file}: cover description`);
+    assert.equal(+hero.attrs.width, 1280); assert.equal(+hero.attrs.height, 720);
+    assert.equal(meta('og:image'), `https://supuzz.com${cover.src}`, `${file}: sharing cover`);
+    assert.equal(meta('twitter:image'), meta('og:image'));
+    assert.equal(article.image.url, meta('og:image'));
+    coverHashes.add(createHash('sha256').update(fs.readFileSync(path.join(root, 'static', cover.src))).digest('hex'));
     const ids = n.filter(x => x.attrs?.id).map(x => x.attrs.id);
     assert.equal(new Set(ids).size, ids.length, `${file}: duplicate ids`);
     const bodyNodes = nodes(require('posthtml-render').render(n.find(x => x.tag === 'body').content));
@@ -91,11 +104,13 @@ for (const locale of locales) {
       assert.equal(count(built,'footer'),1, `${file}: compiled footer`);
       assert.equal(count(built,'include'),0, `${file}: unresolved includes`);
       assert.equal(built.filter(x => x.attrs?.hreflang).length,8);
+      assert.equal(built.find(x => (x.attrs?.class || '').split(/\s+/).includes('featured-img')).attrs.src, cover.src, `${file}: production cover`);
       for (const s of built.filter(x => x.attrs?.type === 'application/ld+json')) JSON.parse(value(s));
     }
     httpPaths.add('/' + file);
   }
-  console.log(`PASS ${dir}: six complete articles, metadata, reciprocal alternatives, local product links and discovery entries`);
+  assert.equal(coverHashes.size, 6, `${dir}: six visually distinct source images`);
+  console.log(`PASS ${dir}: six distinct covers, complete articles, metadata, local product links and discovery entries`);
 }
 async function checkHttp() {
   const baseArg = process.argv.find(x => x.startsWith('--http='));

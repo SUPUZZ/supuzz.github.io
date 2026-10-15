@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { parser } = require('posthtml-parser');
 const { blogCardInclude } = require('./blog-card');
-const { halloweenCardCover } = require('./halloween-card-cover');
+const { halloweenCardCover, halloweenHeroCover } = require('./halloween-card-cover');
 const { publicationMetadata } = require('./article-publication');
 const { locales, localizedCatalog } = require('./product-localization');
 const root = path.resolve(__dirname, '..');
@@ -11,7 +11,6 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const write = (file, text) => fs.writeFileSync(path.join(root, file), text.replace(/[ \t]+$/gm, '').trimEnd() + '\n', 'utf8');
 const source = require('../resource/products-en.json');
 const slugs = ['halloween-toy-gifts-for-kids', 'halloween-boo-basket-ideas-kids', 'non-candy-halloween-gifts-kids', 'halloween-dinosaur-gifts-kids', 'halloween-building-block-activities', 'halloween-classroom-party-gifts'];
-const heroKeys = ['dinosaur-l3', 'soft-blocks-l3', 'ocean-l1', 'dinosaur-l2', 'soft-blocks-l3', 'ocean-l2'];
 const escape = text => String(text).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const url = (locale, slug) => `https://supuzz.com/${locale}/article-${slug}.html`;
 const alternatives = slug => [...locales.map(l => ` <link rel="alternate" hreflang="${l.directory}" href="${url(l.directory, slug)}">`), ` <link rel="alternate" hreflang="x-default" href="${url('en', slug)}">`].join('\n');
@@ -50,7 +49,7 @@ for (const locale of locales) {
     .replace(/\{\{cards:([^}]+)\}\}/g, (_, keys) => `<div class="product-picks">${keys.split(',').map(card).join('\n')}</div>`);
   const blogCards = [];
   for (const [i, a] of data.articles.entries()) {
-    const slug = slugs[i], pageUrl = url(directory, slug), p = findProduct(heroKeys[i]), im = a.hero || data.hero || imageFor(directory, p);
+    const slug = slugs[i], pageUrl = url(directory, slug), im = halloweenHeroCover(directory, `article-${slug}.html`);
     const english = read(`en/article-${slug}.html`);
     let head = english.slice(english.indexOf('<head>'), english.indexOf('</head>') + 7);
     const enSchema = [...head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
@@ -83,7 +82,7 @@ ${head}
  <nav class="breadcrumb" aria-label="${escape(data.breadcrumb)}"><a href="index.html">${escape(data.home)}</a> / <a href="blog.html">${escape(data.journal)}</a> / <span aria-current="page">${escape(data.category)}</span></nav>
  <article class="article-container">
  <div class="article-header"><span class="tag">${escape(data.category)}</span><h1>${escape(a.title)}</h1><p class="meta">${escape(data.author)} · <time datetime="2026-09-22">${escape(data.date)}</time></p></div>
- <figure><img class="featured-img" src="${im.src}" width="${im.width}" height="${im.height}" alt="${escape(im.alt)}" fetchpriority="high" decoding="async"><figcaption>${im.caption ? escape(im.caption) : `${escape(p.name)}. ${escape(data.caption)}`}</figcaption></figure>
+ <figure><img class="featured-img" src="${im.src}" width="${im.width}" height="${im.height}" alt="${escape(im.alt)}" fetchpriority="high" decoding="async"><figcaption>${escape(im.caption)}</figcaption></figure>
  <div class="content"><p>${escape(a.intro)}</p>
  <nav class="article-toc" aria-label="${escape(data.contents)}"><strong>${escape(data.contents)}</strong><ol>${a.sections.map(([title],j) => `<li><a href="#section-${j}">${escape(title)}</a></li>`).join('')}<li><a href="#questions">${escape(data.faq)}</a></li></ol></nav>
  ${sectionHtml}
@@ -98,7 +97,7 @@ ${head}
 `);
     blogCards.push(blogCardInclude({
       href:`article-${slug}.html`, category:'halloween-gifts', categoryLabel:data.category,
-      ...halloweenCardCover(directory), title:a.title, excerpt:a.description,
+      ...halloweenCardCover(directory, `article-${slug}.html`), title:a.title, excerpt:a.description,
       ...publicationMetadata(path.join(root, directory, `article-${slug}.html`), directory)
     }));
     if (!sitemap.includes(`<loc>${pageUrl}</loc>`)) sitemap = sitemap.replace('</urlset>', `  <url>\n    <loc>${pageUrl}</loc>\n    <lastmod>2026-09-22</lastmod>\n  </url>\n</urlset>`);
