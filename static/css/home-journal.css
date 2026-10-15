@@ -1,5 +1,3 @@
-@import './blog-card.css';
-
 .home-journal { background:#f6f7f6; padding:72px 0 64px; color:#25312b; scroll-margin-top:80px; }
 .home-journal > .container { max-width:1240px; }
 .journal-heading { display:flex; justify-content:space-between; align-items:center; gap:24px; margin-bottom:32px; }

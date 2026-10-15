@@ -1,7 +1,7 @@
 // Display the linked article's publication date on every localized blog card.
 const fs = require('fs');
 const path = require('path');
-const { blogCardInclude } = require('./blog-card');
+const { blogCardInclude, withBlogCardStyles } = require('./blog-card');
 const root = path.resolve(__dirname, '..');
 const labels = {
   en: 'Published', es: 'Publicado el', ja: '公開日：', 'zh-Hant': '發布日期：',
@@ -42,6 +42,6 @@ for (const [directory, label] of Object.entries(labels)) {
   });
   if (!count) throw new Error(`No blog cards found: ${directory}`);
   if (!page.includes('href="../css/blog-list.css"')) page = page.replace('</head>', '    <link rel="stylesheet" href="../css/blog-list.css">\n</head>');
-  fs.writeFileSync(pagePath, page);
+  fs.writeFileSync(pagePath, withBlogCardStyles(page));
   console.log(`Added article publication dates to ${count} ${directory} blog cards.`);
 }

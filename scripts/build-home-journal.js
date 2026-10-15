@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const { decodeHTML } = require('entities');
-const { blogCardInclude } = require('./blog-card');
+const { blogCardInclude, withBlogCardStyles } = require('./blog-card');
 const root = path.resolve(__dirname, '..');
 const translations = require('../resource/homepage-locales.json');
 const posts = require('../resource/home-posts-en.json');
@@ -60,6 +60,6 @@ else {
   if (start < 0 || end < 0) throw new Error('Homepage journal marker not found');
   home = home.slice(0,start) + section + '\n\n' + home.slice(end);
 }
-fs.writeFileSync(homePath,home);
+fs.writeFileSync(homePath,withBlogCardStyles(home));
 console.log(`Rendered ${items.length} curated homepage stories for ${directory}.`);
 }
