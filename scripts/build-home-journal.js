@@ -29,14 +29,7 @@ const localizedItems = items.map(post => {
   const article = fs.readFileSync(path.join(root, directory, post.file), 'utf8');
   const excerpt = article.match(/<meta name="description"\s+content="([^"]*)"/)[1];
   const story = post.category === 'our-story';
-  let image = post.image, width = post.width, height = post.height;
-  if (story) {
-    const schema = [...article.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
-      .map(match => JSON.parse(match[1])).find(data => data['@type'] === 'BlogPosting');
-    image = new URL(schema.image.url).pathname;
-    width = schema.image.width;
-    height = schema.image.height;
-  }
+  const { image, width, height } = post;
   if (!fs.existsSync(path.join(root, 'static', image))) throw new Error(`Missing localized cover: ${directory}/${image}`);
   return {...post, image, width, height, excerpt, title:story ? copy.storyTitle : copy.playTitle, alt:story ? copy.storyAlt : copy.playAlt};
 });

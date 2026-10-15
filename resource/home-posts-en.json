@@ -4,17 +4,11 @@
     "category": "our-story",
     "title": "How SUPUZZ Designs Toys: From Kids’ Stools to Connected Worlds",
     "excerpt": "Discover how flower-stem building grew into coral reefs, icy worlds and dinosaur jungles.",
-    "image": "/product-images/journal/article-how-supuzz-designs-building-toys-cover.webp",
-    "alt": "SUPUZZ furniture and coral, ice and dinosaur building toy collections",
+    "image": "/product-images/journal/supuzz-brand-story-family-building-cover.webp",
+    "alt": "A mother and daughter building a colorful toy garden together",
     "width": 1200,
     "height": 675,
-    "imageSource": "/product-images/supuzz-toy-design-story.webp",
-    "imageCrop": {
-      "left": 40,
-      "top": 0,
-      "width": 1120,
-      "height": 630
-    }
+    "imageSource": "User-provided family building photo"
   },
   {
     "file": "article-thanksgiving-toys-to-kenya.html",
