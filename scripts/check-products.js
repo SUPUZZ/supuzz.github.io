@@ -4,10 +4,12 @@ const path = require('path');
 const assert = require('assert/strict');
 const { locales } = require('./product-localization');
 const catalog = require('../resource/products-en.json').filter(p => !p.storeOnly);
+const productOffers = require('../resource/product-offers.json');
+const offerTranslations = require('../resource/product-offer-locales.json');
 const root = path.resolve(__dirname, '..');
 const sitemap = fs.readFileSync(path.join(root, 'static/sitemap.xml'), 'utf8');
 const built = process.argv.includes('--dist');
-const jsonLd = html => [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m => JSON.parse(m[1]));
+const jsonLd = html => [...html.matchAll(/<script\b[^>]*type=["']?application\/ld\+json["']?[^>]*>([\s\S]*?)<\/script>/gi)].map(m => JSON.parse(m[1]));
 let checked = 0;
 
 for (const locale of locales) {
@@ -39,6 +41,18 @@ for (const locale of locales) {
       const graph = data.flatMap(item => item['@graph'] || [item]);
       const entity = graph.find(item => item['@type'] === 'Product');
       check(entity?.identifier.value === product.asin && entity.url === url, 'correct product identity');
+      const offer = productOffers.products[product.key];
+      check(offer, 'every indexed product requires a verified offer for product snippets');
+      check(offer.asin === product.asin && offer.url === `https://www.amazon.com/dp/${product.asin}`, 'offer matches selected variant');
+      check(/^\d+\.\d{2}$/.test(offer.price) && Number(offer.price) > 0 && offer.priceCurrency === 'USD', 'verified USD price');
+      check(/^\d{4}-\d{2}-\d{2}$/.test(productOffers.checkedAt) && !Number.isNaN(Date.parse(productOffers.checkedAt)), 'offer verification date');
+      check(entity.offers?.['@type'] === 'Offer' && ['url', 'price', 'priceCurrency', 'availability'].every(key => entity.offers[key] === offer[key]), 'complete product offer schema');
+      const note = html.match(/<p class="product-purchase-note">([\s\S]*?)<\/p>/)?.[1] || '';
+      const price = new Intl.NumberFormat(locale.htmlLang, {style:'currency', currency:'USD', currencyDisplay:'code'}).format(Number(offer.price));
+      const stock = offerTranslations[locale.directory]?.availability[offer.availability];
+      check(note.includes(price) && note.includes('USD') && note.includes('Amazon.com') && note.includes(`datetime="${productOffers.checkedAt}"`), 'visible USD price, marketplace and verification date');
+      check(stock && note.includes(stock), 'visible localized stock agrees with schema');
+      check(note.includes(offerTranslations[locale.directory].disclaimer), 'localized price and delivery explanation');
       check(graph.find(item => item['@type'] === 'WebPage')?.inLanguage === locale.htmlLang, 'schema language');
       const crumbs = graph.find(item => item['@type'] === 'BreadcrumbList');
       check(crumbs.itemListElement.every(item => item.item.startsWith(`https://supuzz.com/${locale.directory}/`)), 'localized breadcrumbs');
@@ -73,8 +87,42 @@ for (const locale of locales) {
       const output = fs.readFileSync(path.join(root, 'dist', relative), 'utf8');
       check((output.match(/<header[\s>]/g) || []).length === 1 && (output.match(/<footer[\s>]/g) || []).length === 1, 'one built header/footer');
       check(!output.includes('<include '), 'resolved includes');
+      if (product) {
+        const sourceEntity = data.flatMap(item => item['@graph'] || [item]).find(item => item['@type'] === 'Product');
+        const outputEntity = jsonLd(output).flatMap(item => item['@graph'] || [item]).find(item => item['@type'] === 'Product');
+        assert.deepEqual(outputEntity?.offers, sourceEntity.offers, `${relative}: compiled product offer preserved`);
+      }
     }
     checked++;
   }
 }
+// Catch incomplete Product markup in articles and other entry pages as well.
+// Ordinary editorial pages should keep their article schema, not a bare Product.
+let productEntities = 0;
+const schemaRoot = built ? path.join(root, 'dist') : root;
+for (const directory of ['', 'static', ...locales.map(locale => locale.directory)]) {
+  const folder = path.join(schemaRoot, directory);
+  if (!fs.existsSync(folder)) continue;
+  for (const filename of fs.readdirSync(folder).filter(file => file.endsWith('.html'))) {
+    const relative = path.join(directory, filename);
+    // Parcel can leave files from earlier builds with different entry roots.
+    // Only audit output corresponding to an actual site entry or static page.
+    if (built && !fs.existsSync(path.join(root, relative)) && !fs.existsSync(path.join(root, 'static', relative))) continue;
+    const visit = value => {
+      if (!value || typeof value !== 'object') return;
+      if ([].concat(value['@type'] || []).includes('Product')) {
+        productEntities++;
+        assert(value.name && (value.offers || value.review || value.aggregateRating), `${relative}: Product requires name and offers, review or aggregateRating`);
+        for (const offer of [].concat(value.offers || [])) {
+          const price = offer['@type'] === 'AggregateOffer' ? offer.lowPrice : offer.price ?? offer.priceSpecification?.price;
+          assert(price !== undefined && price !== null && price !== '' && Number.isFinite(Number(price)) && Number(price) >= 0, `${relative}: product offer requires a numeric price`);
+          assert(/^[A-Z]{3}$/.test(offer.priceCurrency || offer.priceSpecification?.priceCurrency), `${relative}: product offer requires an explicit currency`);
+        }
+      }
+      for (const child of Object.values(value)) if (child && typeof child === 'object') visit(child);
+    };
+    for (const data of jsonLd(fs.readFileSync(path.join(folder, filename), 'utf8'))) visit(data);
+  }
+}
+console.log(`Audited ${productEntities} Product entities across site HTML: none missing offers, review or aggregateRating.`);
 console.log(`Passed ${checked} localized pages: catalog, metadata, reciprocal language links, schemas, images and navigation${built ? ', plus compiled shells' : ''}.`);

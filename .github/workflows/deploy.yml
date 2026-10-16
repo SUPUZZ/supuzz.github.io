@@ -35,6 +35,9 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Check product structured data
+        run: npm run products:check -- --dist
+
       - name: Copy SEO files to dist root
         run: |
           cp static/robots.txt dist/robots.txt

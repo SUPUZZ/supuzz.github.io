@@ -1,0 +1,89 @@
+{
+  "checkedAt": "2026-10-16",
+  "products": {
+    "soft-blocks-l3": {
+      "asin": "B0GD6G6SBT",
+      "url": "https://www.amazon.com/dp/B0GD6G6SBT",
+      "price": "56.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "soft-blocks-l2": {
+      "asin": "B0GYQ19GG4",
+      "url": "https://www.amazon.com/dp/B0GYQ19GG4",
+      "price": "36.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "dinosaur-l1": {
+      "asin": "B0H6C6XGJ9",
+      "url": "https://www.amazon.com/dp/B0H6C6XGJ9",
+      "price": "19.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "dinosaur-l2": {
+      "asin": "B0H6C64K2K",
+      "url": "https://www.amazon.com/dp/B0H6C64K2K",
+      "price": "39.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "dinosaur-l3": {
+      "asin": "B0H6C5SCCL",
+      "url": "https://www.amazon.com/dp/B0H6C5SCCL",
+      "price": "49.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "ocean-l1": {
+      "asin": "B0F5PNRWJ1",
+      "url": "https://www.amazon.com/dp/B0F5PNRWJ1",
+      "price": "19.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "ocean-l2": {
+      "asin": "B0FHK6BW37",
+      "url": "https://www.amazon.com/dp/B0FHK6BW37",
+      "price": "28.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "ocean-l3": {
+      "asin": "B0FHK6RHT9",
+      "url": "https://www.amazon.com/dp/B0FHK6RHT9",
+      "price": "49.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "ice-l1": {
+      "asin": "B0F5PPQ2T3",
+      "url": "https://www.amazon.com/dp/B0F5PPQ2T3",
+      "price": "19.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "ice-l2": {
+      "asin": "B0FHK5NP9T",
+      "url": "https://www.amazon.com/dp/B0FHK5NP9T",
+      "price": "39.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "ice-l3": {
+      "asin": "B0FHK8V6ZZ",
+      "url": "https://www.amazon.com/dp/B0FHK8V6ZZ",
+      "price": "49.99",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "kids-chair-pink": {
+      "asin": "B0CT9R3PRQ",
+      "url": "https://www.amazon.com/dp/B0CT9R3PRQ",
+      "price": "30.00",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+}

@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const root = path.resolve(__dirname, '..');
 const sourceCatalog = require('../resource/products-en.json');
+const productOffers = require('../resource/product-offers.json');
+const offerTranslations = require('../resource/product-offer-locales.json');
 const { locales, localizedCatalog } = require('./product-localization');
 const localeArgument = process.argv.find(argument => argument.startsWith('--locale='));
 const selectedLocales = localeArgument
@@ -122,10 +124,24 @@ function generateLocale(locale) {
   function productPage(product) {
     const photos = productImages(product);
     if (!photos.length) throw new Error(`Missing photos: ${product.key}`);
+    // All locale purchase links lead to these verified Amazon.com offers in USD.
+    // Identify the US marketplace in the visible, translated purchase note.
+    const offer = productOffers.products[product.key];
+    if (!offer) throw new Error(`Missing verified offer: ${product.key}`);
+    if (offer.asin !== product.asin || offer.url !== `https://www.amazon.com/dp/${product.asin}`) {
+      throw new Error(`Offer does not match product: ${product.key}`);
+    }
+    const offerCopy = offerTranslations[locale.directory];
+    const stock = offerCopy?.availability[offer.availability];
+    if (!stock) throw new Error(`Missing offer translation: ${locale.directory}/${offer.availability}`);
+    const offerDate = new Intl.DateTimeFormat(locale.htmlLang, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })
+      .format(new Date(`${productOffers.checkedAt}T00:00:00Z`));
+    const price = new Intl.NumberFormat(locale.htmlLang, { style: 'currency', currency: offer.priceCurrency, currencyDisplay: 'code' }).format(Number(offer.price));
+    const purchaseNote = `<strong>${escape(price)}</strong> · ${escape(stock)}<br>${escape(offerCopy.checked)} <time datetime="${escape(productOffers.checkedAt)}">${escape(offerDate)}</time>. ${escape(offerCopy.disclaimer)}`;
     const schema = {
       '@context': 'https://schema.org', '@graph': [
         { '@type': 'WebPage', '@id': pageUrl(product), url: pageUrl(product), name: product.title, description: product.description, inLanguage: locale.htmlLang, mainEntity: { '@id': `${pageUrl(product)}#product` } },
-        { '@type': 'Product', '@id': `${pageUrl(product)}#product`, name: `SUPUZZ ${product.name}`, description: product.description, url: pageUrl(product), image: photos.map((photo) => site + photo.file), brand: { '@type': 'Brand', name: 'SUPUZZ' }, category: t(product.category === 'furniture' ? 'Kids Chairs' : 'Building Toys'), ...(product.asin ? { identifier: { '@type': 'PropertyValue', propertyID: 'ASIN', value: product.asin }, sameAs: `https://www.amazon.com/dp/${product.asin}` } : {}) },
+        { '@type': 'Product', '@id': `${pageUrl(product)}#product`, name: `SUPUZZ ${product.name}`, description: product.description, url: pageUrl(product), image: photos.map((photo) => site + photo.file), brand: { '@type': 'Brand', name: 'SUPUZZ' }, category: t(product.category === 'furniture' ? 'Kids Chairs' : 'Building Toys'), ...(product.asin ? { identifier: { '@type': 'PropertyValue', propertyID: 'ASIN', value: product.asin }, sameAs: `https://www.amazon.com/dp/${product.asin}` } : {}), ...(offer ? { offers: { '@type': 'Offer', url: offer.url, price: offer.price, priceCurrency: offer.priceCurrency, availability: offer.availability } } : {}) },
         { '@type': 'BreadcrumbList', itemListElement: [
           { '@type': 'ListItem', position: 1, name: t('Home'), item: `${site}/${locale.directory}/index.html` },
           { '@type': 'ListItem', position: 2, name: t('Products'), item: `${site}/${locale.directory}/index.html#products` },
@@ -188,7 +204,7 @@ function generateLocale(locale) {
           ${variantChoices(product)}
           <ul class="product-highlights">${product.highlights.map((fact) => `<li>${escape(fact)}</li>`).join('')}</ul>
           <div class="product-actions">${amazonButton(product)}</div>
-          <p class="product-purchase-note">${product.storeOnly ? 'Find current garden collections in the SUPUZZ Amazon Store.' : 'Checkout, current pricing and delivery on Amazon.'}</p>
+          <p class="product-purchase-note">${purchaseNote}</p>
         </div>
       </div>
       <nav class="product-detail-nav" aria-label="Product information"><a href="#description">Explore the product</a>${product.included ? '<a href="#in-the-box">What’s included</a>' : ''}<a href="#specifications">Specifications</a><a href="#questions">FAQs</a></nav>

@@ -1,0 +1,58 @@
+{
+  "en": {
+    "availability": {
+      "https://schema.org/InStock": "In stock on Amazon.com (US store).",
+      "https://schema.org/OutOfStock": "Out of stock on Amazon.com (US store)."
+    },
+    "checked": "Price and availability checked",
+    "disclaimer": "Final price and delivery to your destination are confirmed on Amazon."
+  },
+  "es": {
+    "availability": {
+      "https://schema.org/InStock": "Disponible en Amazon.com (tienda de EE. UU.).",
+      "https://schema.org/OutOfStock": "Agotado en Amazon.com (tienda de EE. UU.)."
+    },
+    "checked": "Precio y disponibilidad comprobados el",
+    "disclaimer": "El precio final y el envío a tu destino se confirman en Amazon."
+  },
+  "ja": {
+    "availability": {
+      "https://schema.org/InStock": "Amazon.com（米国ストア）で在庫あり。",
+      "https://schema.org/OutOfStock": "Amazon.com（米国ストア）で在庫切れ。"
+    },
+    "checked": "価格・在庫の確認日：",
+    "disclaimer": "最終価格とお届け先への配送条件はAmazonでご確認ください。"
+  },
+  "zh-Hant": {
+    "availability": {
+      "https://schema.org/InStock": "Amazon.com（美國站）有庫存。",
+      "https://schema.org/OutOfStock": "Amazon.com（美國站）暫時缺貨。"
+    },
+    "checked": "價格與庫存核對日期：",
+    "disclaimer": "最終價格及送往您所在地的配送條件，請以 Amazon 顯示為準。"
+  },
+  "de": {
+    "availability": {
+      "https://schema.org/InStock": "Auf Amazon.com (US-Shop) auf Lager.",
+      "https://schema.org/OutOfStock": "Auf Amazon.com (US-Shop) nicht auf Lager."
+    },
+    "checked": "Preis und Verfügbarkeit geprüft am",
+    "disclaimer": "Der endgültige Preis und die Lieferung an dein Ziel werden auf Amazon bestätigt."
+  },
+  "pt": {
+    "availability": {
+      "https://schema.org/InStock": "Em estoque na Amazon.com (loja dos EUA).",
+      "https://schema.org/OutOfStock": "Esgotado na Amazon.com (loja dos EUA)."
+    },
+    "checked": "Preço e disponibilidade verificados em",
+    "disclaimer": "O preço final e a entrega ao seu destino são confirmados na Amazon."
+  },
+  "fr": {
+    "availability": {
+      "https://schema.org/InStock": "En stock sur Amazon.com (boutique américaine).",
+      "https://schema.org/OutOfStock": "Épuisé sur Amazon.com (boutique américaine)."
+    },
+    "checked": "Prix et disponibilité vérifiés le",
+    "disclaimer": "Le prix final et la livraison à votre destination sont confirmés sur Amazon."
+  }
+}
