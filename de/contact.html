@@ -67,6 +67,8 @@
             <select id="inquiryType" name="inquiryType" required>
                 <option value="">Thema auswählen</option>
                 <option value="feedback">Produktsupport &amp; Feedback</option>
+                <option value="education">Bildungsbedarf — 10% Rabatt</option>
+                <option value="gifts">Festtagsgeschenke &amp; gemeinsame Aktionen</option>
                 <option value="bulk">Großbestellung</option>
                 <option value="other">Sonstiges</option>
             </select>
@@ -81,7 +83,7 @@
 
     <p class="contact-email">Oder per E-Mail an <a href="mailto:atmanpro@163.com">atmanpro@163.com</a></p>
 </main>
-<script type="application/json" id="contactMessages">{"required":"Bitte füllen Sie alle Pflichtfelder aus.","submitting":"Wird gesendet...","success":"Nachricht gesendet. Wir antworten per E-Mail.","error":"Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.","fields":{"name":"[Name] ","inquiryType":"[Anfragetyp] ","message":"[Nachricht] "},"submit":"Nachricht senden","messagePrompts":{"feedback":"Beschreiben Sie das Problem. Nennen Sie das Produkt und, falls vorhanden, die Bestellnummer.","bulk":"Welche Produkte, welche Mengen und welcher Lieferort?","other":"Beschreiben Sie Ihr Anliegen."},"defaultPrompt":"Wie können wir helfen?"}</script>
+<script type="application/json" id="contactMessages">{"required":"Bitte füllen Sie alle Pflichtfelder aus.","submitting":"Wird gesendet...","success":"Nachricht gesendet. Wir antworten per E-Mail.","error":"Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.","fields":{"name":"[Name] ","inquiryType":"[Anfragetyp] ","message":"[Nachricht] "},"submit":"Nachricht senden","messagePrompts":{"feedback":"Beschreiben Sie das Problem. Nennen Sie das Produkt und, falls vorhanden, die Bestellnummer.","bulk":"Welche Produkte, welche Mengen und welcher Lieferort?","other":"Beschreiben Sie Ihr Anliegen.","education":"Einrichtung, Alter der Kinder, Produkte, Mengen, Budget, Postleitzahl des Lieferorts und gewünschtes Ankunftsdatum.","gifts":"Anlass, Anzahl der Geschenke, Budget pro Geschenk, Postleitzahl des Lieferorts und Veranstaltungstermin."},"defaultPrompt":"Wie können wir helfen?","educationOffer":{"id":"EDUCATION_10","discountPercent":10}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/contact.js"></script>

@@ -8,6 +8,7 @@
     "pages:build": "node scripts/build-pages.js",
     "contact:build": "node builders/ContactBuilder.js",
     "about:build": "node builders/AboutBuilder.js",
+    "procurement:build": "node builders/ProcurementBuilder.js",
     "pages:test": "node --test scripts/build-pages.test.js",
     "seo:prepare": "node scripts/prepare-seo.js",
     "prebuild": "npm run products:build && npm run pages:build && npm run homepage:build && npm run reviews:build && npm run journal:build && npm run christmas:build && npm run halloween:covers && npm run blog:dates && npm run seo:prepare",

@@ -11,9 +11,11 @@ class ContactBuilder {
     }
 
     render({ text, shared, locale, escape, content }) {
+        const educationOffer = require(path.join(this.rootDir, 'resource/education-offer.json'));
+        const optionText = topic => text('form.options.' + topic).replaceAll('{discount}', String(educationOffer.discountPercent));
         const messageKeys = ['required', 'submitting', 'success', 'error'];
         const fieldKeys = ['name', 'inquiryType', 'message'];
-        const topics = ['feedback', 'bulk', 'other'];
+        const topics = ['feedback', 'education', 'gifts', 'bulk', 'other'];
         for (const key of messageKeys) text('feedback.' + key);
         for (const key of fieldKeys) text('feedback.fields.' + key);
         for (const key of topics) text('form.messagePrompts.' + key);
@@ -22,7 +24,8 @@ class ContactBuilder {
             fields: content.feedback.fields,
             submit: content.form.submit,
             messagePrompts: content.form.messagePrompts,
-            defaultPrompt: content.form.placeholders.message
+            defaultPrompt: content.form.placeholders.message,
+            educationOffer
         };
         return `
 <main class="contact-page">
@@ -44,7 +47,7 @@ class ContactBuilder {
             <label for="inquiryType">${text('form.labels.inquiryType')}</label>
             <select id="inquiryType" name="inquiryType" required>
                 <option value="">${text('form.options.select')}</option>
-                ${topics.map(topic => `<option value="${topic}">${text('form.options.' + topic)}</option>`).join('\n                ')}
+                ${topics.map(topic => `<option value="${topic}">${optionText(topic)}</option>`).join('\n                ')}
             </select>
         </div>
         <div class="contact-field">

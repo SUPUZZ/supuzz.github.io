@@ -1,0 +1,33 @@
+{
+  "title": "Education & Bulk Orders",
+  "documentTitle": "Education, Holiday Gifts & Bulk Orders | SUPUZZ",
+  "description": "Plan SUPUZZ orders for preschool and Pre-K classrooms, child care programs, holiday gifts and community events. Share your quantities, budget and delivery needs.",
+  "intro": "More ways to play together. Plan a SUPUZZ order for your classroom, organization or next celebration.",
+  "scenariosLabel": "Ways to order",
+  "education": {
+    "title": "Preschools & early learning",
+    "body": "For preschool, Pre-K and child care teams planning building centers, small-group play or a classroom refresh.",
+    "detail": "Tell us the children’s ages and how you plan to use the products. Choose each item according to its listed age recommendation.",
+    "offer": "{discount}% off education orders",
+    "cta": "Ask about education pricing"
+  },
+  "gifts": {
+    "title": "Holiday gifts & group giving",
+    "body": "For holiday gifting, school celebrations, community toy drives and employee family gifts.",
+    "detail": "Share the number of recipients, your budget per gift and the event date so we can discuss suitable order options.",
+    "cta": "Plan a gift order"
+  },
+  "request": {
+    "title": "Let’s plan your order",
+    "intro": "Send a few details to get started:",
+    "details": {
+      "organization": "School or organization, intended use and children’s ages.",
+      "products": "Products you’re interested in, estimated quantities and budget.",
+      "delivery": "Delivery ZIP code and the date you need the order to arrive."
+    },
+    "paperwork": "Need a formal quote, purchase order review or vendor paperwork? Include your requirements so we can confirm what we can support.",
+    "cta": "Request education pricing",
+    "products": "Explore SUPUZZ products",
+    "next": "Our team will confirm availability, pricing, shipping and timing with you before you order."
+  }
+}

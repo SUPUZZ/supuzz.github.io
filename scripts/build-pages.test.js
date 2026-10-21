@@ -114,6 +114,7 @@ test('ContactBuilder generates complete localized forms and safely embeds runtim
   fs.mkdirSync(path.join(root, 'resource/pages'), { recursive: true });
   fs.mkdirSync(path.join(root, 'builders'), { recursive: true });
   fs.cpSync(path.join(projectRoot, 'resource/pages/contact'), path.join(root, 'resource/pages/contact'), { recursive: true });
+  fs.copyFileSync(path.join(projectRoot, 'resource/education-offer.json'), path.join(root, 'resource/education-offer.json'));
   fs.copyFileSync(path.join(projectRoot, 'builders/ContactBuilder.js'), path.join(root, 'builders/ContactBuilder.js'));
   const ContactBuilder = require('../builders/ContactBuilder');
   const builder = new ContactBuilder({ rootDir: root });
@@ -124,6 +125,9 @@ test('ContactBuilder generates complete localized forms and safely embeds runtim
     const messages = JSON.parse(html.match(/<script type="application\/json" id="contactMessages">([\s\S]*?)<\/script>/)[1]);
     assert.equal(messages.success, copy.feedback.success);
     assert.equal(messages.submit, copy.form.submit);
+    assert.deepEqual(messages.educationOffer, { id: 'EDUCATION_10', discountPercent: 10 });
+    assert.match(html, /value="education">[^<]*10%/);
+    assert.match(html, /value="gifts"/);
     assert(html.includes(`data-language="${language}"`));
     assert.match(html, /name="inquiryType" required/);
     assert.match(html, /name="email"[^>]*\brequired\b/);

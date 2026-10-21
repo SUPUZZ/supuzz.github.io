@@ -1,0 +1,33 @@
+{
+  "title": "Achats éducatifs et commandes groupées",
+  "documentTitle": "Achats éducatifs, cadeaux de fêtes et commandes groupées | SUPUZZ",
+  "description": "Préparez vos commandes SUPUZZ pour les classes de maternelle et de Pre-K, les structures d’accueil, les cadeaux de fêtes et les événements associatifs. Précisez quantités, budget et livraison.",
+  "intro": "Plus d’occasions de jouer ensemble. Préparez une commande SUPUZZ pour votre classe, votre organisation ou votre prochaine fête.",
+  "scenariosLabel": "Usages de votre commande",
+  "education": {
+    "title": "Maternelle et petite enfance",
+    "body": "Pour les équipes de maternelle, de Pre-K et d’accueil des jeunes enfants qui préparent des espaces de construction, des jeux en petits groupes ou renouvellent le matériel de classe.",
+    "detail": "Indiquez l’âge des enfants et l’utilisation prévue. Choisissez chaque produit selon l’âge recommandé sur son étiquette.",
+    "offer": "{discount}% de remise sur les achats éducatifs",
+    "cta": "Se renseigner sur la remise éducative"
+  },
+  "gifts": {
+    "title": "Cadeaux de fêtes et dons collectifs",
+    "body": "Pour les cadeaux de fêtes, les célébrations scolaires, les collectes associatives de jouets et les cadeaux aux enfants des salariés.",
+    "detail": "Précisez le nombre de bénéficiaires, le budget par cadeau et la date de l’événement pour discuter des possibilités de commande.",
+    "cta": "Préparer une commande de cadeaux"
+  },
+  "request": {
+    "title": "Préparons votre commande",
+    "intro": "Pour commencer, envoyez-nous ces informations :",
+    "details": {
+      "organization": "École ou organisation, utilisation prévue et âge des enfants.",
+      "products": "Produits souhaités, quantités estimées et budget.",
+      "delivery": "Code postal de livraison (ZIP aux États-Unis) et date de réception souhaitée."
+    },
+    "paperwork": "Besoin d’un devis formel, de l’examen d’un bon de commande ou de documents fournisseur ? Précisez vos exigences pour que nous confirmions les possibilités.",
+    "cta": "Demander les tarifs éducatifs",
+    "products": "Découvrir les produits SUPUZZ",
+    "next": "Notre équipe confirmera avec vous la disponibilité, les prix, la livraison et les délais avant votre commande."
+  }
+}

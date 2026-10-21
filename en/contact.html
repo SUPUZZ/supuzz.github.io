@@ -67,6 +67,8 @@
             <select id="inquiryType" name="inquiryType" required>
                 <option value="">Select a topic</option>
                 <option value="feedback">Product support &amp; feedback</option>
+                <option value="education">Education order — 10% off</option>
+                <option value="gifts">Holiday &amp; group gifts</option>
                 <option value="bulk">Bulk order</option>
                 <option value="other">Other</option>
             </select>
@@ -81,7 +83,7 @@
 
     <p class="contact-email">Or email <a href="mailto:atmanpro@163.com">atmanpro@163.com</a></p>
 </main>
-<script type="application/json" id="contactMessages">{"required":"Please fill in all required fields.","submitting":"Submitting...","success":"Message sent. We’ll reply by email.","error":"Failed to submit inquiry. Please try again or contact us directly via email.","fields":{"name":"[Name] ","inquiryType":"[Inquiry Type] ","message":"[Message] "},"submit":"Send message","messagePrompts":{"feedback":"Describe the issue. Include the product and order number, if available.","bulk":"Which products, how many, and where should they be delivered?","other":"Tell us what you need."},"defaultPrompt":"How can we help?"}</script>
+<script type="application/json" id="contactMessages">{"required":"Please fill in all required fields.","submitting":"Submitting...","success":"Message sent. We’ll reply by email.","error":"Failed to submit inquiry. Please try again or contact us directly via email.","fields":{"name":"[Name] ","inquiryType":"[Inquiry Type] ","message":"[Message] "},"submit":"Send message","messagePrompts":{"feedback":"Describe the issue. Include the product and order number, if available.","bulk":"Which products, how many, and where should they be delivered?","other":"Tell us what you need.","education":"School or program name, children’s ages, products, quantities, budget, delivery ZIP code and need-by date.","gifts":"Occasion, number of gifts, budget per gift, delivery ZIP code and event date."},"defaultPrompt":"How can we help?","educationOffer":{"id":"EDUCATION_10","discountPercent":10}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/contact.js"></script>

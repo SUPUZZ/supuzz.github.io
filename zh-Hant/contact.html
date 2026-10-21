@@ -67,6 +67,8 @@
             <select id="inquiryType" name="inquiryType" required>
                 <option value="">請選擇主題</option>
                 <option value="feedback">產品支援與問題回饋</option>
+                <option value="education">教育採購 — 10% 折扣</option>
+                <option value="gifts">節日禮品與團體贈禮</option>
                 <option value="bulk">大量訂購</option>
                 <option value="other">其他</option>
             </select>
@@ -81,7 +83,7 @@
 
     <p class="contact-email">或寄信至 <a href="mailto:atmanpro@163.com">atmanpro@163.com</a></p>
 </main>
-<script type="application/json" id="contactMessages">{"required":"請填寫所有必填字段。","submitting":"提交中...","success":"訊息已送出，我們會透過電子郵件回覆。","error":"提交失敗，請稍後再試或直接透過電子郵件聯繫我們。","fields":{"name":"【姓名】","inquiryType":"【聯絡主題】","message":"【內容】"},"submit":"送出訊息","messagePrompts":{"feedback":"請說明遇到的問題，並提供產品名稱與訂單編號（如有）。","bulk":"請提供產品名稱、預估數量與收貨地點。","other":"請說明您的需求。"},"defaultPrompt":"請告訴我們您的需求。"}</script>
+<script type="application/json" id="contactMessages">{"required":"請填寫所有必填字段。","submitting":"提交中...","success":"訊息已送出，我們會透過電子郵件回覆。","error":"提交失敗，請稍後再試或直接透過電子郵件聯繫我們。","fields":{"name":"【姓名】","inquiryType":"【聯絡主題】","message":"【內容】"},"submit":"送出訊息","messagePrompts":{"feedback":"請說明遇到的問題，並提供產品名稱與訂單編號（如有）。","bulk":"請提供產品名稱、預估數量與收貨地點。","other":"請說明您的需求。","education":"請提供學校或機構名稱、孩子年齡、產品、數量、預算、收貨郵遞區號與希望到貨日期。","gifts":"請提供活動用途、禮品數量、每份預算、收貨郵遞區號與活動日期。"},"defaultPrompt":"請告訴我們您的需求。","educationOffer":{"id":"EDUCATION_10","discountPercent":10}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/contact.js"></script>

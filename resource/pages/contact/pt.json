@@ -19,12 +19,16 @@
       "select": "Selecione um assunto",
       "feedback": "Suporte a produtos e sugestões",
       "bulk": "Pedido em grande quantidade",
-      "other": "Outro"
+      "other": "Outro",
+      "education": "Compra educativa — {discount}% de desconto",
+      "gifts": "Presentes e ações coletivas"
     },
     "messagePrompts": {
       "feedback": "Descreva o problema. Informe o produto e o número do pedido, se disponível.",
       "bulk": "Quais produtos, em quais quantidades e para qual local de entrega?",
-      "other": "Conte-nos o que você precisa."
+      "other": "Conte-nos o que você precisa.",
+      "education": "Nome da escola ou programa, idade das crianças, produtos, quantidades, orçamento, código postal de entrega e data desejada de recebimento.",
+      "gifts": "Ocasião, número de presentes, orçamento por presente, código postal de entrega e data do evento."
     },
     "submit": "Enviar mensagem"
   },

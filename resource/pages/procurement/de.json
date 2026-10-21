@@ -1,0 +1,33 @@
+{
+  "title": "Bildungsbedarf & Großbestellungen",
+  "documentTitle": "Bildungsbedarf, Festtagsgeschenke & Großbestellungen | SUPUZZ",
+  "description": "Planen Sie SUPUZZ-Bestellungen für Vorschulen, Pre-K-Gruppen, Betreuungseinrichtungen, Festtagsgeschenke und Gemeinschaftsaktionen. Teilen Sie uns Mengen, Budget und Lieferwünsche mit.",
+  "intro": "Mehr Möglichkeiten, gemeinsam zu spielen. Planen Sie eine SUPUZZ-Bestellung für Ihre Einrichtung, Organisation oder die nächste Feier.",
+  "scenariosLabel": "Anlässe für Ihre Bestellung",
+  "education": {
+    "title": "Vorschule & frühkindliche Bildung",
+    "body": "Für Vorschulen, Pre-K-Gruppen und Betreuungsteams, die Baubereiche, Spiele in kleinen Gruppen oder neue Materialien für den Gruppenraum planen.",
+    "detail": "Nennen Sie uns das Alter der Kinder und den geplanten Einsatz. Beachten Sie bei jedem Produkt die angegebene Altersempfehlung.",
+    "offer": "{discount}% Rabatt auf Bestellungen für Bildungseinrichtungen",
+    "cta": "Bildungsrabatt anfragen"
+  },
+  "gifts": {
+    "title": "Festtagsgeschenke & gemeinsame Aktionen",
+    "body": "Für Geschenke zu Feiertagen, Schulfeste, gemeinnützige Spielzeugsammlungen und Geschenke für Kinder von Mitarbeitenden.",
+    "detail": "Teilen Sie uns die Anzahl der Beschenkten, das Budget pro Geschenk und den Veranstaltungstermin mit, damit wir Bestellmöglichkeiten besprechen können.",
+    "cta": "Geschenkbestellung anfragen"
+  },
+  "request": {
+    "title": "Planen wir Ihre Bestellung",
+    "intro": "Senden Sie uns zum Einstieg folgende Angaben:",
+    "details": {
+      "organization": "Einrichtung oder Organisation, Verwendungszweck und Alter der Kinder.",
+      "products": "Gewünschte Produkte, ungefähre Mengen und Budget.",
+      "delivery": "Postleitzahl des Lieferorts (US-ZIP-Code) und gewünschtes Ankunftsdatum."
+    },
+    "paperwork": "Benötigen Sie ein formelles Angebot, die Prüfung einer Bestellung (PO) oder Lieferantenunterlagen? Nennen Sie Ihre Anforderungen, damit wir die Möglichkeiten bestätigen können.",
+    "cta": "Preise für Bildungseinrichtungen anfragen",
+    "products": "SUPUZZ-Produkte entdecken",
+    "next": "Unser Team bestätigt mit Ihnen vor der Bestellung Verfügbarkeit, Preise, Versand und Zeitplan."
+  }
+}

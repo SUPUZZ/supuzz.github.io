@@ -1,0 +1,13 @@
+{
+  "file": "procurement.html",
+  "builder": "ProcurementBuilder.js",
+  "type": "page",
+  "locales": ["en", "es", "ja", "zh-Hant", "de", "pt", "fr"],
+  "styles": ["/css/procurement.css"],
+  "shared": {
+    "contactUrl": "contact.html?topic=education#contactForm",
+    "educationContactUrl": "contact.html?topic=education#contactForm",
+    "giftsContactUrl": "contact.html?topic=gifts#contactForm",
+    "productsUrl": "index.html#products"
+  }
+}

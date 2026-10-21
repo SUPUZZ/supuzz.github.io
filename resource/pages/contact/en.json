@@ -19,12 +19,16 @@
       "select": "Select a topic",
       "feedback": "Product support & feedback",
       "bulk": "Bulk order",
-      "other": "Other"
+      "other": "Other",
+      "education": "Education order — {discount}% off",
+      "gifts": "Holiday & group gifts"
     },
     "messagePrompts": {
       "feedback": "Describe the issue. Include the product and order number, if available.",
       "bulk": "Which products, how many, and where should they be delivered?",
-      "other": "Tell us what you need."
+      "other": "Tell us what you need.",
+      "education": "School or program name, children’s ages, products, quantities, budget, delivery ZIP code and need-by date.",
+      "gifts": "Occasion, number of gifts, budget per gift, delivery ZIP code and event date."
     },
     "submit": "Send message"
   },

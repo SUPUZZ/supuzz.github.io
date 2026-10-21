@@ -129,6 +129,8 @@ if (require.main === module) new OceanPlayBuilder().build();
 
 普通页面可设置 `schemaType: "ContactPage"` 或 `"AboutPage"`（默认 `WebPage`），译文可通过 `documentTitle` 保留完整的搜索标题。Builder 可提供 `structuredData(context)` 方法，返回附加结构化数据对象数组；例如联系页面的 Organization 和联系邮箱。页面运行时需要的提示也须从译文生成，嵌入 JSON 时将 `<` 转为 `\\u003c`，由共用 JS 读取，避免七份重复交互代码。
 
+教育与大量采购入口位于公共页脚，链接到各语言的 `procurement.html`。`builders/ProcurementBuilder.js` 和 `resource/pages/procurement/` 共用一份布局，覆盖美国学前班、Pre-K、托育机构、节日及团体赠礼场景；运行 `npm run procurement:build` 可重新生成。教育采购享 10% 折扣，优惠配置统一保存于 `resource/education-offer.json`，由采购页和联系表单共用。教育询价通过 `?topic=education` 预选独立主题，礼品询价通过 `?topic=gifts`；不另设重复表单。沿用现有反馈接口，在正文首行加入 `【教育采购｜10%折扣｜EDUCATION_10】` 或 `【节日礼品采购｜GIFT_PROCUREMENT】`，后台直接查看反馈文本即可区分，无须调整接口。标识按提交时的当前主题生成，切换到普通咨询不会保留教育优惠。节日礼品和普通大单不自动附加教育折扣。采购单、报价及供应商文件需求须由团队确认，不在页面中承诺账期、免税资格、送达时效或教育认证。
+
 `templates/pages/document.cjs` 自动提供公共头尾组件、页面语言、canonical、双向 hreflang、社交分享标记和页面/文章结构化数据。内容模板不要重复输出文档头、公共头尾或 include；可通过 JS 模块复用内部渲染函数。复用已有页面模式和样式，文章标题区必须是 `div.article-header`。
 
 生成的 HTML 带来源注释，只修改源文件；Builder 和译文修改后重新运行构建命令，本地预览不会自动监听这些源文件并重新生成。生成器也兼容已有 `template` 配置指向 `templates/pages/*.cjs` 的函数模板；新页面优先使用 Builder 类。新增文章须沿用 `scripts/blog-card.js` 加入对应语言博客列表。删去一个页面或语言时，需要明确移除对应的旧生成 HTML，生成器不会自动删除文件。

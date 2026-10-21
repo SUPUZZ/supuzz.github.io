@@ -1,0 +1,33 @@
+{
+  "title": "Compras educativas y al por mayor",
+  "documentTitle": "Compras educativas, regalos y pedidos al por mayor | SUPUZZ",
+  "description": "Planifica pedidos SUPUZZ para aulas de preescolar y Pre-K, centros infantiles, regalos festivos y eventos comunitarios. Comparte cantidades, presupuesto y necesidades de entrega.",
+  "intro": "Más formas de jugar juntos. Planifica un pedido SUPUZZ para tu aula, organización o próxima celebración.",
+  "scenariosLabel": "Usos del pedido",
+  "education": {
+    "title": "Preescolar y primera infancia",
+    "body": "Para equipos de preescolar, Pre-K y centros infantiles que preparan rincones de construcción, juegos en grupos pequeños o renuevan el aula.",
+    "detail": "Cuéntanos las edades de los niños y el uso previsto. Elige cada producto según la edad recomendada en su etiqueta.",
+    "offer": "{discount}% de descuento en compras educativas",
+    "cta": "Consultar precios educativos"
+  },
+  "gifts": {
+    "title": "Regalos festivos y colectivos",
+    "body": "Para regalos de temporada, celebraciones escolares, campañas comunitarias de juguetes y regalos para hijos de empleados.",
+    "detail": "Indica el número de destinatarios, el presupuesto por regalo y la fecha del evento para comentar las opciones de pedido.",
+    "cta": "Consultar pedido de regalos"
+  },
+  "request": {
+    "title": "Planifiquemos tu pedido",
+    "intro": "Para empezar, envíanos estos datos:",
+    "details": {
+      "organization": "Escuela u organización, uso previsto y edades de los niños.",
+      "products": "Productos de interés, cantidades estimadas y presupuesto.",
+      "delivery": "Código postal de entrega (ZIP en EE. UU.) y fecha límite de recepción."
+    },
+    "paperwork": "¿Necesitas un presupuesto formal, revisión de una orden de compra o documentación del proveedor? Indica tus requisitos para que confirmemos qué podemos ofrecer.",
+    "cta": "Solicitar precios educativos",
+    "products": "Explorar productos SUPUZZ",
+    "next": "Antes de hacer el pedido, nuestro equipo confirmará contigo la disponibilidad, el precio, el envío y los plazos."
+  }
+}

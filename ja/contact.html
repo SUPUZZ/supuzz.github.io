@@ -67,6 +67,8 @@
             <select id="inquiryType" name="inquiryType" required>
                 <option value="">種類を選択</option>
                 <option value="feedback">製品サポート・ご意見</option>
+                <option value="education">教育機関向け購入 — 10% OFF</option>
+                <option value="gifts">季節のギフト・団体での贈り物</option>
                 <option value="bulk">大口注文</option>
                 <option value="other">その他</option>
             </select>
@@ -81,7 +83,7 @@
 
     <p class="contact-email">メールでのお問い合わせ： <a href="mailto:atmanpro@163.com">atmanpro@163.com</a></p>
 </main>
-<script type="application/json" id="contactMessages">{"required":"必須項目をすべて入力してください。","submitting":"送信中...","success":"送信しました。メールでご返信いたします。","error":"送信に失敗しました。もう一度お試しいただくか、メールで直接お問い合わせください。","fields":{"name":"【お名前】","inquiryType":"【お問い合わせ種類】","message":"【内容】"},"submit":"送信する","messagePrompts":{"feedback":"問題の内容と製品名、注文番号（お分かりの場合）をご記入ください。","bulk":"製品名、ご希望の数量、お届け先の地域をご記入ください。","other":"ご希望やご質問をご記入ください。"},"defaultPrompt":"お問い合わせ内容をご記入ください。"}</script>
+<script type="application/json" id="contactMessages">{"required":"必須項目をすべて入力してください。","submitting":"送信中...","success":"送信しました。メールでご返信いたします。","error":"送信に失敗しました。もう一度お試しいただくか、メールで直接お問い合わせください。","fields":{"name":"【お名前】","inquiryType":"【お問い合わせ種類】","message":"【内容】"},"submit":"送信する","messagePrompts":{"feedback":"問題の内容と製品名、注文番号（お分かりの場合）をご記入ください。","bulk":"製品名、ご希望の数量、お届け先の地域をご記入ください。","other":"ご希望やご質問をご記入ください。","education":"学校・施設名、子どもたちの年齢、ご希望の製品・数量・予算、配送先の郵便番号、希望到着日をお知らせください。","gifts":"用途、ギフトの数量、1人あたりの予算、配送先の郵便番号、イベントの日程をお知らせください。"},"defaultPrompt":"お問い合わせ内容をご記入ください。","educationOffer":{"id":"EDUCATION_10","discountPercent":10}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/contact.js"></script>

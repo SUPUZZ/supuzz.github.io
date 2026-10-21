@@ -10,6 +10,12 @@ function initContactForm() {
     const topicInput = document.getElementById('inquiryType');
     const messageInput = document.getElementById('message');
 
+    // Only known topics can be selected by procurement links.
+    const requestedTopic = new URLSearchParams(window.location.search).get('topic');
+    if (['education', 'gifts', 'bulk'].includes(requestedTopic)) {
+        topicInput.value = requestedTopic;
+    }
+
     function updateMessagePrompt() {
         messageInput.placeholder = messages.messagePrompts[topicInput.value] || messages.defaultPrompt;
     }
@@ -34,7 +40,15 @@ function initContactForm() {
             return;
         }
 
+        // These readable markers remain visible in the existing feedback inbox.
+        // Derive them from the current selection so changing topics cannot retain an offer.
+        const marker = inquiryType === 'education'
+            ? `【教育采购｜${messages.educationOffer.discountPercent}%折扣｜${messages.educationOffer.id}】 Education order — ${messages.educationOffer.discountPercent}% OFF`
+            : inquiryType === 'gifts'
+                ? '【节日礼品采购｜GIFT_PROCUREMENT】 Holiday & group gifts'
+                : '';
         const message = [
+            ...(marker ? [marker] : []),
             `${messages.fields.name}${name}`,
             `${messages.fields.inquiryType}${inquiryType}`,
             `${messages.fields.message}${detail}`,

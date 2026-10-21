@@ -19,12 +19,16 @@
       "select": "Thema auswählen",
       "feedback": "Produktsupport & Feedback",
       "bulk": "Großbestellung",
-      "other": "Sonstiges"
+      "other": "Sonstiges",
+      "education": "Bildungsbedarf — {discount}% Rabatt",
+      "gifts": "Festtagsgeschenke & gemeinsame Aktionen"
     },
     "messagePrompts": {
       "feedback": "Beschreiben Sie das Problem. Nennen Sie das Produkt und, falls vorhanden, die Bestellnummer.",
       "bulk": "Welche Produkte, welche Mengen und welcher Lieferort?",
-      "other": "Beschreiben Sie Ihr Anliegen."
+      "other": "Beschreiben Sie Ihr Anliegen.",
+      "education": "Einrichtung, Alter der Kinder, Produkte, Mengen, Budget, Postleitzahl des Lieferorts und gewünschtes Ankunftsdatum.",
+      "gifts": "Anlass, Anzahl der Geschenke, Budget pro Geschenk, Postleitzahl des Lieferorts und Veranstaltungstermin."
     },
     "submit": "Nachricht senden"
   },

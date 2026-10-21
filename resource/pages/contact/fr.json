@@ -19,12 +19,16 @@
       "select": "Choisissez un sujet",
       "feedback": "Assistance produits et avis",
       "bulk": "Commande en quantité",
-      "other": "Autre"
+      "other": "Autre",
+      "education": "Achat éducatif — {discount}% de remise",
+      "gifts": "Cadeaux de fêtes et dons collectifs"
     },
     "messagePrompts": {
       "feedback": "Décrivez le problème. Précisez le produit et le numéro de commande, si vous le connaissez.",
       "bulk": "Quels produits, en quelles quantités et pour quel lieu de livraison ?",
-      "other": "Décrivez votre demande."
+      "other": "Décrivez votre demande.",
+      "education": "École ou structure, âge des enfants, produits, quantités, budget, code postal de livraison et date de réception souhaitée.",
+      "gifts": "Occasion, nombre de cadeaux, budget par cadeau, code postal de livraison et date de l’événement."
     },
     "submit": "Envoyer le message"
   },

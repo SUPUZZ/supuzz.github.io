@@ -1,0 +1,33 @@
+{
+  "title": "Compras educativas e em quantidade",
+  "documentTitle": "Compras educativas, presentes e pedidos em quantidade | SUPUZZ",
+  "description": "Planeje pedidos SUPUZZ para pré-escolas, turmas de Pre-K, creches, presentes de fim de ano e eventos comunitários. Informe quantidades, orçamento e necessidades de entrega.",
+  "intro": "Mais formas de brincar juntos. Planeje um pedido SUPUZZ para sua turma, organização ou próxima celebração.",
+  "scenariosLabel": "Finalidades do pedido",
+  "education": {
+    "title": "Pré-escola e educação infantil",
+    "body": "Para equipes de pré-escola, Pre-K e creches que planejam cantinhos de construção, brincadeiras em pequenos grupos ou a renovação dos materiais da sala.",
+    "detail": "Conte-nos a idade das crianças e como pretende usar os produtos. Escolha cada item conforme a faixa etária indicada.",
+    "offer": "{discount}% de desconto em compras educativas",
+    "cta": "Consultar desconto educativo"
+  },
+  "gifts": {
+    "title": "Presentes e ações coletivas",
+    "body": "Para presentes em datas comemorativas, celebrações escolares, campanhas comunitárias de brinquedos e presentes para filhos de funcionários.",
+    "detail": "Informe o número de pessoas, o orçamento por presente e a data do evento para conversarmos sobre as opções de pedido.",
+    "cta": "Planejar pedido de presentes"
+  },
+  "request": {
+    "title": "Vamos planejar seu pedido",
+    "intro": "Para começar, envie estas informações:",
+    "details": {
+      "organization": "Escola ou organização, finalidade e idade das crianças.",
+      "products": "Produtos de interesse, quantidades estimadas e orçamento.",
+      "delivery": "Código postal de entrega (ZIP nos EUA) e data desejada de recebimento."
+    },
+    "paperwork": "Precisa de orçamento formal, análise de ordem de compra ou documentação do fornecedor? Informe os requisitos para confirmarmos o que podemos atender.",
+    "cta": "Consultar preços educativos",
+    "products": "Explorar produtos SUPUZZ",
+    "next": "Antes do pedido, nossa equipe confirmará com você a disponibilidade, os preços, o envio e os prazos."
+  }
+}
