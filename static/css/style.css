@@ -505,6 +505,41 @@ footer {
     line-height: 1.6;
 }
 
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #CAC4D0;
+    border-radius: 50%;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.footer-socials a:hover {
+    color: var(--primary);
+    background: var(--primary-container);
+    border-color: var(--primary);
+    opacity: 1;
+}
+
+.footer-socials a:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+.footer-socials svg {
+    display: block;
+    flex-shrink: 0;
+}
+
 /* 特殊高亮链接 (对应 highlight-link) */
 .highlight-link {
     color: var(--secondary) !important;
