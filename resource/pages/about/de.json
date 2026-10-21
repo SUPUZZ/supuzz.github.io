@@ -1,0 +1,37 @@
+{
+  "title": "Über SUPUZZ",
+  "documentTitle": "Über SUPUZZ | PLAY WITH ALL KIDS.",
+  "description": "PLAY WITH ALL KIDS. SUPUZZ glaubt, dass Spielen die universelle Sprache des Entdeckens ist. Unsere Produkte bringen alle Kinder zusammen, um gemeinsam zu träumen, zu bauen und sich zu verbinden.",
+  "imageAlt": "Ein Kind lächelt im Freien",
+  "intro": "SUPUZZ entwickelt Bauspielzeug und Kindermöbel für gemeinsames Spielen.",
+  "offerings": {
+    "title": "Was wir bieten",
+    "paragraphs": [],
+    "cards": {
+      "blocks": {
+        "title": "Bausteine",
+        "body": "Waffel-Style Verbinderbausteine mit abschließbaren Aufbewahrungskoffern, designed für progressives Lernen und sensorisches Spielen für 2–8 Jährige."
+      },
+      "furniture": {
+        "title": "Kinder möbel",
+        "body": "Ergonomische Kleinkindstühle und Kinder tisch & Stühle Sets — robust, sicher und dimensioniert für wachsende Kinder von 1–4 Jahren."
+      },
+      "play": {
+        "title": "Offenes Spielen",
+        "body": "Themen-Sets wie Funny Snow World, Icy World, Ocean World, Rotating Forest — kombinierbar und abnehmbar, lassen Kinder ohne Grenzen bauen."
+      }
+    }
+  },
+  "cta": {
+    "title": "Größere Bestellungen und Geschäftsanfragen",
+    "body": "Neben Einzelkäufen unterstützen wir größere Bestellungen von SUPUZZ-Markenprodukten für Händler, Einrichtungen und andere Geschäftskunden. Kontaktieren Sie uns, um Produkte, Mengen und Lieferanforderungen zu besprechen.",
+    "label": "Kontaktieren Sie uns"
+  },
+  "philosophy": {
+    "paragraphs": [
+      "Wir glauben, dass Spielen die universelle Sprache des Entdeckens ist.",
+      "Deshalb entwickeln wir Produkte, die alle Kinder zusammenbringen, um gemeinsam ihrer Fantasie freien Lauf zu lassen, zu bauen und Verbindungen zu knüpfen.",
+      "Denn die größten Abenteuer beginnen, wenn wir gemeinsam spielen."
+    ]
+  }
+}

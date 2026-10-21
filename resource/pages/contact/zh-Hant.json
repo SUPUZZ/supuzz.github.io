@@ -1,0 +1,42 @@
+{
+  "title": "聯絡 SUPUZZ",
+  "documentTitle": "聯絡 SUPUZZ | 客戶支援、問題回饋與大量訂購",
+  "description": "聯絡 SUPUZZ 品牌團隊，諮詢產品與訂單問題、回報使用問題或分享建議，也歡迎洽詢 SUPUZZ 品牌產品的大量訂購。",
+  "imageAlt": "聯絡 SUPUZZ",
+  "intro": "產品問題、意見回饋或大量訂購，歡迎留言。",
+  "emailAlternative": "或寄信至",
+  "form": {
+    "labels": {
+      "name": "姓名 *",
+      "email": "電子郵件 *",
+      "inquiryType": "主題 *",
+      "message": "內容 *"
+    },
+    "placeholders": {
+      "message": "請告訴我們您的需求。"
+    },
+    "options": {
+      "select": "請選擇主題",
+      "feedback": "產品支援與問題回饋",
+      "bulk": "大量訂購",
+      "other": "其他"
+    },
+    "messagePrompts": {
+      "feedback": "請說明遇到的問題，並提供產品名稱與訂單編號（如有）。",
+      "bulk": "請提供產品名稱、預估數量與收貨地點。",
+      "other": "請說明您的需求。"
+    },
+    "submit": "送出訊息"
+  },
+  "feedback": {
+    "required": "請填寫所有必填字段。",
+    "submitting": "提交中...",
+    "success": "訊息已送出，我們會透過電子郵件回覆。",
+    "error": "提交失敗，請稍後再試或直接透過電子郵件聯繫我們。",
+    "fields": {
+      "name": "【姓名】",
+      "inquiryType": "【聯絡主題】",
+      "message": "【內容】"
+    }
+  }
+}

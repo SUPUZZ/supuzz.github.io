@@ -1,0 +1,119 @@
+// New pages: one shared template + shared facts + explicit locale content.
+const fs = require('node:fs');
+const path = require('node:path');
+const { locales } = require('./product-localization');
+const document = require('../templates/pages/document.cjs');
+const rootDir = path.resolve(__dirname, '..');
+const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
+const jsonLd = value => `<script type="application/ld+json">${JSON.stringify(value).replaceAll('<', '\\u003c')}</script>`;
+
+function requiredText(value, name) {
+  if (typeof value !== 'string' || !value.trim()) throw new Error(`Missing text: ${name}`);
+}
+
+function run(baseDir = rootDir, requestedIds = []) {
+  const source = path.join(baseDir, 'resource', 'pages');
+  if (!fs.existsSync(source)) throw new Error(`Missing page source directory: ${source}`);
+  const outputs = new Map();
+  const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8'));
+  const entries = fs.readdirSync(source, { withFileTypes: true }).filter(entry => entry.isDirectory());
+  for (const id of requestedIds) {
+    if (!entries.some(entry => entry.name === id)) throw new Error(`Unknown page id: ${id}`);
+  }
+  for (const entry of entries.filter(entry => !requestedIds.length || requestedIds.includes(entry.name)).sort((a, b) => a.name.localeCompare(b.name))) {
+    const id = entry.name;
+    if (!/^[a-z0-9][a-z0-9-]*$/.test(id)) throw new Error(`Invalid page id: ${id}`);
+    const directory = path.join(source, id);
+    const definition = readJson(path.join(directory, 'page.json'));
+    if (!/^[a-z0-9][a-z0-9-]*\.html$/.test(definition.file)) throw new Error(`Invalid page filename: ${id}`);
+    if (Boolean(definition.builder) === Boolean(definition.template)) {
+      throw new Error(`Specify one builder or template: ${id}`);
+    }
+    if (definition.builder && !/^[A-Z][A-Za-z0-9]*Builder\.js$/.test(definition.builder)) {
+      throw new Error(`Invalid page builder: ${id}`);
+    }
+    if (definition.template && (!/^[a-z0-9][a-z0-9-]*\.cjs$/.test(definition.template) || definition.template === 'document.cjs')) {
+      throw new Error(`Invalid shared template: ${id}`);
+    }
+    if (!['page', 'article'].includes(definition.type)) throw new Error(`Invalid page type: ${id}`);
+    if (definition.schemaType !== undefined && (definition.type !== 'page' || !['WebPage', 'ContactPage', 'AboutPage'].includes(definition.schemaType))) {
+      throw new Error(`Invalid page schema type: ${id}`);
+    }
+    if (!Array.isArray(definition.locales) || !definition.locales.length || new Set(definition.locales).size !== definition.locales.length) {
+      throw new Error(`Specify unique page locales: ${id}`);
+    }
+    const selected = definition.locales.map(directory => {
+      const locale = locales.find(item => item.directory === directory);
+      if (!locale) throw new Error(`Unknown locale: ${id}/${directory}`);
+      return locale;
+    });
+    const shared = definition.shared || {};
+    if (definition.type === 'article') {
+      requiredText(shared.datePublished, `${id}/datePublished`);
+      if (!shared.image) throw new Error(`Missing article image: ${id}`);
+      for (const field of ['datePublished', 'dateModified']) {
+        if (shared[field] !== undefined && (typeof shared[field] !== 'string' || !/^\d{4}-\d{2}-\d{2}T/.test(shared[field]) || Number.isNaN(Date.parse(shared[field])))) {
+          throw new Error(`Invalid article date: ${id}/${field}`);
+        }
+      }
+    }
+    if (shared.image && (typeof shared.image !== 'string' || !/^\/(?!\/)/.test(shared.image)
+      || !Number.isInteger(shared.imageWidth) || shared.imageWidth <= 0
+      || !Number.isInteger(shared.imageHeight) || shared.imageHeight <= 0)) throw new Error(`Invalid shared image: ${id}`);
+    for (const field of ['styles', 'scripts']) {
+      if (definition[field] !== undefined && (!Array.isArray(definition[field]) || definition[field].some(value => typeof value !== 'string' || !value.trim()))) {
+        throw new Error(`Invalid asset list: ${id}/${field}`);
+      }
+    }
+    const rendererPath = definition.builder
+      ? path.join(baseDir, 'builders', definition.builder)
+      : path.join(baseDir, 'templates', 'pages', definition.template);
+    delete require.cache[require.resolve(rendererPath)];
+    const Renderer = require(rendererPath);
+    const renderer = definition.builder ? new Renderer({ rootDir: baseDir }) : { render: Renderer, structuredData: Renderer.structuredData };
+    if (typeof renderer.render !== 'function') throw new Error(`Page must provide a render function: ${id}`);
+    const pageUrl = locale => `https://supuzz.com/${locale.directory}/${definition.file}`;
+    const alternates = selected.map(locale => [locale.directory, pageUrl(locale)]);
+    alternates.push(['x-default', pageUrl(selected.find(locale => locale.directory === 'en') || selected[0])]);
+    const marker = `<!-- Generated by scripts/build-pages.js from resource/pages/${id}/page.json; edit sources, not this HTML. -->`;
+    for (const locale of selected) {
+      const content = readJson(path.join(directory, `${locale.directory}.json`));
+      for (const field of ['title', 'description', ...(shared.image ? ['imageAlt'] : []), ...(definition.type === 'article' ? ['homeLabel', 'blogLabel'] : [])]) {
+        requiredText(content[field], `${id}/${locale.directory}/${field}`);
+      }
+      const text = key => {
+        const value = key.split('.').reduce((value, part) => value?.[part], content);
+        requiredText(value, `${id}/${locale.directory}/${key}`);
+        return escape(value);
+      };
+      const context = { definition, locale, shared, content, url: pageUrl(locale), alternates, escape, jsonLd, text };
+      const body = renderer.render(context);
+      if (typeof body !== 'string' || !body.trim() || /<\/?(?:html|head|body|header|footer)\b|<include\b/i.test(body)) {
+        throw new Error(`Template must render page content using the shared document shell: ${id}/${locale.directory}`);
+      }
+      const structuredData = renderer.structuredData ? renderer.structuredData(context) : [];
+      if (!Array.isArray(structuredData) || structuredData.some(value => !value || typeof value !== 'object' || Array.isArray(value))) {
+        throw new Error(`Template structured data must be an array of objects: ${id}/${locale.directory}`);
+      }
+      const destination = path.join(baseDir, locale.directory, definition.file);
+      if (outputs.has(destination)) throw new Error(`Duplicate generated page: ${locale.directory}/${definition.file}`);
+      if (fs.existsSync(destination) && !fs.readFileSync(destination, 'utf8').includes(marker)) {
+        throw new Error(`Refusing to overwrite an existing page; migrate it explicitly: ${locale.directory}/${definition.file}`);
+      }
+      const builderMarker = definition.builder ? `\n<!-- Builder: builders/${definition.builder} -->` : '';
+      outputs.set(destination, document({ ...context, body, structuredData })
+        .replace('<body>', `<body>\n${marker}${builderMarker}`).replace(/[ \t]+$/gm, ''));
+    }
+  }
+  // Validate every page and translation before modifying any generated HTML.
+  for (const [file, html] of outputs) {
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    if (!fs.existsSync(file) || fs.readFileSync(file, 'utf8') !== html) fs.writeFileSync(file, html, 'utf8');
+  }
+  console.log(`Generated ${outputs.size} localized pages from shared templates.`);
+  return outputs.size;
+}
+
+if (require.main === module) run();
+module.exports = { run };

@@ -1,0 +1,42 @@
+{
+  "title": "SUPUZZにお問い合わせ",
+  "documentTitle": "SUPUZZにお問い合わせ | サポート・ご意見・大口注文",
+  "description": "SUPUZZ製品やご注文に関するご質問、不具合のご報告、ご意見・ご要望、SUPUZZブランド製品の大口注文について、お気軽にお問い合わせください。",
+  "imageAlt": "SUPUZZにお問い合わせ",
+  "intro": "製品のご質問、ご意見、大口注文はこちらから。",
+  "emailAlternative": "メールでのお問い合わせ：",
+  "form": {
+    "labels": {
+      "name": "お名前 *",
+      "email": "メールアドレス *",
+      "inquiryType": "お問い合わせの種類 *",
+      "message": "メッセージ *"
+    },
+    "placeholders": {
+      "message": "お問い合わせ内容をご記入ください。"
+    },
+    "options": {
+      "select": "種類を選択",
+      "feedback": "製品サポート・ご意見",
+      "bulk": "大口注文",
+      "other": "その他"
+    },
+    "messagePrompts": {
+      "feedback": "問題の内容と製品名、注文番号（お分かりの場合）をご記入ください。",
+      "bulk": "製品名、ご希望の数量、お届け先の地域をご記入ください。",
+      "other": "ご希望やご質問をご記入ください。"
+    },
+    "submit": "送信する"
+  },
+  "feedback": {
+    "required": "必須項目をすべて入力してください。",
+    "submitting": "送信中...",
+    "success": "送信しました。メールでご返信いたします。",
+    "error": "送信に失敗しました。もう一度お試しいただくか、メールで直接お問い合わせください。",
+    "fields": {
+      "name": "【お名前】",
+      "inquiryType": "【お問い合わせ種類】",
+      "message": "【内容】"
+    }
+  }
+}

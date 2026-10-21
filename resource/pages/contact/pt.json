@@ -1,0 +1,42 @@
+{
+  "title": "Contate a SUPUZZ",
+  "documentTitle": "Contato SUPUZZ | Suporte, comentários e pedidos em grandes quantidades",
+  "description": "Fale com a equipe SUPUZZ para tirar dúvidas sobre produtos e pedidos, relatar um problema, compartilhar sugestões ou consultar pedidos de produtos SUPUZZ em grandes quantidades.",
+  "imageAlt": "Contate a SUPUZZ",
+  "intro": "Dúvidas sobre produtos, sugestões ou pedidos em grandes quantidades: fale conosco.",
+  "emailAlternative": "Ou envie um e-mail para",
+  "form": {
+    "labels": {
+      "name": "Nome *",
+      "email": "Email *",
+      "inquiryType": "Assunto *",
+      "message": "Mensagem *"
+    },
+    "placeholders": {
+      "message": "Como podemos ajudar?"
+    },
+    "options": {
+      "select": "Selecione um assunto",
+      "feedback": "Suporte a produtos e sugestões",
+      "bulk": "Pedido em grande quantidade",
+      "other": "Outro"
+    },
+    "messagePrompts": {
+      "feedback": "Descreva o problema. Informe o produto e o número do pedido, se disponível.",
+      "bulk": "Quais produtos, em quais quantidades e para qual local de entrega?",
+      "other": "Conte-nos o que você precisa."
+    },
+    "submit": "Enviar mensagem"
+  },
+  "feedback": {
+    "required": "Por favor, preencha todos os campos obrigatórios.",
+    "submitting": "Enviando...",
+    "success": "Mensagem enviada. Responderemos por e-mail.",
+    "error": "Falha ao enviar consulta. Por favor, tente novamente ou contate-nos diretamente por email.",
+    "fields": {
+      "name": "[Nome] ",
+      "inquiryType": "[Tipo de Consulta] ",
+      "message": "[Mensagem] "
+    }
+  }
+}

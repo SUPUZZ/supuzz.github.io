@@ -1,0 +1,37 @@
+{
+  "title": "À propos de SUPUZZ",
+  "documentTitle": "À propos de SUPUZZ | PLAY WITH ALL KIDS.",
+  "description": "PLAY WITH ALL KIDS. SUPUZZ croit que le jeu est le langage universel de la découverte. Nos produits réunissent tous les enfants pour imaginer, construire et créer des liens.",
+  "imageAlt": "Un enfant souriant en plein air",
+  "intro": "SUPUZZ crée des jeux de construction et des meubles pour enfants pour jouer ensemble.",
+  "offerings": {
+    "title": "Ce que nous proposons",
+    "paragraphs": [],
+    "cards": {
+      "blocks": {
+        "title": "Blocs de Construction",
+        "body": "Blocs de construction à clipser en forme de gaufrette avec étuis de rangement verrouillables, conçus pour l'apprentissage progressif et le jeu sensoriel pour les 2–8 ans."
+      },
+      "furniture": {
+        "title": "Meubles pour Enfants",
+        "body": "Chaises ergonomiques pour tout-petits et ensembles de table & chaises pour enfants — robustes, sûrs et dimensionnés pour les enfants en croissance de 1–4 ans."
+      },
+      "play": {
+        "title": "Jeu Ouvert",
+        "body": "Ensembles thématiques comme Funny Snow World, Icy World, Ocean World, Rotating Forest — combinables et détachables, permettant aux enfants de construire sans limites."
+      }
+    }
+  },
+  "cta": {
+    "title": "Commandes en volume et demandes professionnelles",
+    "body": "En plus des achats individuels, nous accompagnons les commandes en volume de produits de la marque SUPUZZ pour les détaillants, les organisations et les autres clients professionnels. Contactez-nous pour discuter des produits, des quantités et de la livraison.",
+    "label": "Contactez-nous"
+  },
+  "philosophy": {
+    "paragraphs": [
+      "Nous croyons que le jeu est le langage universel de la découverte.",
+      "C’est pourquoi nous créons des produits qui réunissent tous les enfants pour imaginer, construire et créer des liens.",
+      "Parce que les plus grandes aventures commencent quand nous jouons ensemble."
+    ]
+  }
+}

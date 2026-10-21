@@ -1,0 +1,37 @@
+{
+  "title": "Sobre a SUPUZZ",
+  "documentTitle": "Sobre a SUPUZZ | PLAY WITH ALL KIDS.",
+  "description": "PLAY WITH ALL KIDS. A SUPUZZ acredita que brincar é a linguagem universal da descoberta. Criamos produtos que reúnem todas as crianças para imaginar, construir e se conectar.",
+  "imageAlt": "Uma criança sorrindo ao ar livre",
+  "intro": "A SUPUZZ cria brinquedos de construção e móveis infantis para brincar juntos.",
+  "offerings": {
+    "title": "O Que Oferecemos",
+    "paragraphs": [],
+    "cards": {
+      "blocks": {
+        "title": "Blocos de Construção",
+        "body": "Blocos de construção interconectáveis estilo waffle com cases de armazenamento com travamento, projetados para aprendizado progressivo e brincadeira sensorial para idades 2–8."
+      },
+      "furniture": {
+        "title": "Móveis Infantis",
+        "body": "Cadeiras ergonômicas para toddlers e conjuntos de mesa & cadeiras — robustos, seguros e dimensionados para crianças em crescimento de 1–4 anos."
+      },
+      "play": {
+        "title": "Brincadeira Aberta",
+        "body": "Conjuntos temáticos como Funny Snow World, Icy World, Ocean World, Rotating Forest — mixáveis e destacáveis, deixando as crianças construírem sem limites."
+      }
+    }
+  },
+  "cta": {
+    "title": "Pedidos de grande volume e consultas comerciais",
+    "body": "Além das compras individuais, atendemos pedidos de maior volume de produtos da marca SUPUZZ para lojas, organizações e outros clientes empresariais. Entre em contato para conversar sobre produtos, quantidades e necessidades de entrega.",
+    "label": "Contate-nos Hoje"
+  },
+  "philosophy": {
+    "paragraphs": [
+      "Acreditamos que brincar é a linguagem universal da descoberta.",
+      "Por isso, criamos produtos que reúnem todas as crianças para imaginar, construir e se conectar.",
+      "Porque as maiores aventuras começam quando brincamos juntos."
+    ]
+  }
+}

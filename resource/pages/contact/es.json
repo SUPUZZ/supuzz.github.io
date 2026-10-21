@@ -1,0 +1,42 @@
+{
+  "title": "Contacta con SUPUZZ",
+  "documentTitle": "Contacta con SUPUZZ | Ayuda, comentarios y pedidos al por mayor",
+  "description": "Contacta con el equipo de SUPUZZ para consultar sobre productos y pedidos, informar de un problema, compartir sugerencias o solicitar productos SUPUZZ en grandes cantidades.",
+  "imageAlt": "Contacta con SUPUZZ",
+  "intro": "Consultas sobre productos, comentarios o pedidos al por mayor: escríbenos.",
+  "emailAlternative": "O escríbenos a",
+  "form": {
+    "labels": {
+      "name": "Nombre *",
+      "email": "Correo Electrónico *",
+      "inquiryType": "Asunto *",
+      "message": "Mensaje *"
+    },
+    "placeholders": {
+      "message": "¿Cómo podemos ayudarte?"
+    },
+    "options": {
+      "select": "Selecciona un asunto",
+      "feedback": "Ayuda con productos y comentarios",
+      "bulk": "Pedido al por mayor",
+      "other": "Otro"
+    },
+    "messagePrompts": {
+      "feedback": "Describe el problema. Indica el producto y el número de pedido, si lo tienes.",
+      "bulk": "¿Qué productos necesitas, en qué cantidades y dónde se entregarán?",
+      "other": "Cuéntanos qué necesitas."
+    },
+    "submit": "Enviar mensaje"
+  },
+  "feedback": {
+    "required": "Por favor complete todos los campos requeridos.",
+    "submitting": "Enviando...",
+    "success": "Mensaje enviado. Te responderemos por correo electrónico.",
+    "error": "Error al enviar. Intenta de nuevo o contáctanos directamente por correo.",
+    "fields": {
+      "name": "[Nombre] ",
+      "inquiryType": "[Tipo] ",
+      "message": "[Mensaje] "
+    }
+  }
+}

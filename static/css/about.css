@@ -1,0 +1,136 @@
+.about-page {
+    padding-top: 72px;
+}
+
+body > header + main.about-page {
+    margin-top: 0;
+}
+
+.about-hero {
+    padding: clamp(50px, 8vw, 90px) 0 clamp(30px, 5vw, 50px);
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 16px;
+}
+
+.about-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.about-section {
+    padding: clamp(30px, 5vw, 60px) 0;
+}
+
+.about-page h2 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+}
+
+.about-page p {
+    color: #49454F;
+}
+
+.about-copy {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.about-copy p {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 14px;
+}
+
+.about-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.about-philosophy {
+    display: grid;
+    gap: 30px;
+}
+
+.about-philosophy img {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.about-philosophy .about-copy p:last-child {
+    color: #1C1B1F;
+    font-weight: 600;
+}
+
+.about-offerings {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.about-offerings > h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-offerings > p {
+    margin-bottom: 24px;
+    line-height: 1.75;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    gap: 24px;
+}
+
+.about-card {
+    min-width: 0;
+    background: #fff;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border-top: 4px solid;
+}
+
+.about-card > .material-symbols-rounded {
+    font-size: 40px;
+}
+
+.about-card h3 {
+    font-size: 1.25rem;
+    margin: 12px 0 10px;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.about-cta {
+    padding: clamp(40px, 6vw, 70px) 0 clamp(50px, 8vw, 90px);
+    text-align: center;
+}
+
+.about-cta h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+.about-cta p {
+    margin-bottom: 24px;
+}
+
+.about-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 32px;
+    max-width: 100%;
+}

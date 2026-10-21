@@ -1,0 +1,32 @@
+{
+  "file": "contact.html",
+  "builder": "ContactBuilder.js",
+  "type": "page",
+  "schemaType": "ContactPage",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/contact.css"
+  ],
+  "scripts": [
+    "/js/contact.js"
+  ],
+  "shared": {
+    "email": "atmanpro@163.com",
+    "image": "/product-images/main-open-end-play.webp",
+    "imageWidth": 1200,
+    "imageHeight": 630,
+    "logo": "/images/android-chrome-512x512.png",
+    "availableLanguages": [
+      "English",
+      "Chinese"
+    ]
+  }
+}

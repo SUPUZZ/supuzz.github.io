@@ -1,0 +1,42 @@
+{
+  "title": "Contact SUPUZZ",
+  "documentTitle": "Contact SUPUZZ | Assistance, avis et commandes en quantité",
+  "description": "Contactez l’équipe SUPUZZ pour vos questions sur les produits et commandes, signaler un problème, partager vos suggestions ou demander des produits SUPUZZ en grande quantité.",
+  "imageAlt": "Contact SUPUZZ",
+  "intro": "Questions sur les produits, suggestions ou commandes en quantité : écrivez-nous.",
+  "emailAlternative": "Ou par e-mail à",
+  "form": {
+    "labels": {
+      "name": "Nom *",
+      "email": "E-mail *",
+      "inquiryType": "Sujet *",
+      "message": "Message *"
+    },
+    "placeholders": {
+      "message": "Comment pouvons-nous vous aider ?"
+    },
+    "options": {
+      "select": "Choisissez un sujet",
+      "feedback": "Assistance produits et avis",
+      "bulk": "Commande en quantité",
+      "other": "Autre"
+    },
+    "messagePrompts": {
+      "feedback": "Décrivez le problème. Précisez le produit et le numéro de commande, si vous le connaissez.",
+      "bulk": "Quels produits, en quelles quantités et pour quel lieu de livraison ?",
+      "other": "Décrivez votre demande."
+    },
+    "submit": "Envoyer le message"
+  },
+  "feedback": {
+    "required": "Veuillez remplir tous les champs obligatoires.",
+    "submitting": "Envoi...",
+    "success": "Message envoyé. Nous vous répondrons par e-mail.",
+    "error": "La demande n'a pas pu être envoyée. Veuillez réessayer ou nous contacter directement par e-mail.",
+    "fields": {
+      "name": "[Nom] ",
+      "inquiryType": "[Type de demande] ",
+      "message": "[Message] "
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "file": "about.html",
+  "builder": "AboutBuilder.js",
+  "type": "page",
+  "schemaType": "AboutPage",
+  "locales": ["en", "es", "ja", "zh-Hant", "de", "pt", "fr"],
+  "styles": ["/css/about.css"],
+  "scripts": ["/js/about.js"],
+  "shared": {
+    "slogan": "PLAY WITH ALL KIDS.",
+    "image": "/about-images/supuzz-minimal-story.webp",
+    "imageWidth": 2969,
+    "imageHeight": 2226,
+    "logo": "/images/android-chrome-512x512.png",
+    "contactUrl": "contact.html",
+    "addressCountry": "CN",
+    "sameAs": ["https://twitter.com/SupuzzBrand"]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "關於 SUPUZZ",
+  "documentTitle": "關於 SUPUZZ | PLAY WITH ALL KIDS.",
+  "description": "PLAY WITH ALL KIDS. SUPUZZ 相信，遊戲是探索世界的共通語言。我們創造讓所有孩子一起想像、拼搭、建立連結的產品。",
+  "imageAlt": "一位在戶外開懷微笑的孩子",
+  "intro": "SUPUZZ 打造積木玩具與兒童家具，讓孩子一起玩。",
+  "offerings": {
+    "title": "我們提供什麼",
+    "paragraphs": [],
+    "cards": {
+      "blocks": {
+        "title": "積木",
+        "body": "華夫格互鎖積木，附帶鎖定收納盒，專為 2-8 歲兒童的漸進式學習和感統遊戲而設計。"
+      },
+      "furniture": {
+        "title": "兒童家具",
+        "body": "人體工學幼兒椅和兒童桌椅套裝 — 堅固、安全，尺寸適合 1-4 歲成長中的兒童。"
+      },
+      "play": {
+        "title": "開放式遊戲",
+        "body": "Funny Snow World、Icy World、Ocean World、旋轉森林等主題套裝，可混搭與拆解，讓孩子自由拼搭。"
+      }
+    }
+  },
+  "cta": {
+    "title": "大客戶訂單與商務洽詢",
+    "body": "除了個人選購，我們也支持零售商、機構及其他企業客戶訂購較大數量的 SUPUZZ 品牌產品。歡迎聯絡我們，討論產品選擇、訂購數量與配送需求。",
+    "label": "立即聯絡我們"
+  },
+  "philosophy": {
+    "paragraphs": [
+      "我們相信，遊戲是探索世界的共通語言。",
+      "因此，我們創造讓所有孩子聚在一起，共同想像、拼搭、建立連結的產品。",
+      "因為，最精彩的冒險，始於我們一起玩。"
+    ]
+  }
+}

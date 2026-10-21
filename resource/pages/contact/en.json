@@ -1,0 +1,42 @@
+{
+  "title": "Contact SUPUZZ",
+  "documentTitle": "Contact SUPUZZ | Customer Support, Feedback & Bulk Orders",
+  "description": "Contact the SUPUZZ team for product and order support, to report a problem or share feedback, or to ask about bulk orders of SUPUZZ products.",
+  "imageAlt": "Contact SUPUZZ",
+  "intro": "Product questions, feedback or bulk orders — get in touch.",
+  "emailAlternative": "Or email",
+  "form": {
+    "labels": {
+      "name": "Name *",
+      "email": "Email *",
+      "inquiryType": "Topic *",
+      "message": "Message *"
+    },
+    "placeholders": {
+      "message": "How can we help?"
+    },
+    "options": {
+      "select": "Select a topic",
+      "feedback": "Product support & feedback",
+      "bulk": "Bulk order",
+      "other": "Other"
+    },
+    "messagePrompts": {
+      "feedback": "Describe the issue. Include the product and order number, if available.",
+      "bulk": "Which products, how many, and where should they be delivered?",
+      "other": "Tell us what you need."
+    },
+    "submit": "Send message"
+  },
+  "feedback": {
+    "required": "Please fill in all required fields.",
+    "submitting": "Submitting...",
+    "success": "Message sent. We’ll reply by email.",
+    "error": "Failed to submit inquiry. Please try again or contact us directly via email.",
+    "fields": {
+      "name": "[Name] ",
+      "inquiryType": "[Inquiry Type] ",
+      "message": "[Message] "
+    }
+  }
+}

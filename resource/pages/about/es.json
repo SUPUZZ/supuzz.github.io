@@ -1,0 +1,39 @@
+{
+  "title": "Sobre SUPUZZ",
+  "documentTitle": "Sobre SUPUZZ | PLAY WITH ALL KIDS.",
+  "description": "PLAY WITH ALL KIDS. SUPUZZ cree que el juego es el lenguaje universal del descubrimiento. Creamos productos que reúnen a todos los niños para imaginar, construir y conectar.",
+  "imageAlt": "Un niño sonriendo al aire libre",
+  "intro": "SUPUZZ crea juguetes de construcción y muebles infantiles para jugar juntos.",
+  "offerings": {
+    "title": "Qué Ofrecemos",
+    "paragraphs": [
+      "Nuestras colecciones están pensadas para el juego y la vida cotidiana en familia. Descubre nuestros tres pilares:"
+    ],
+    "cards": {
+      "blocks": {
+        "title": "Bloques de Construcción",
+        "body": "Sets interlocking estilo waffle, serie Icy World, Ocean World y Bosque Giratorio. Juego abierto y creativo para edades 2-8."
+      },
+      "furniture": {
+        "title": "Muebles Infantiles",
+        "body": "Sillas y mesas ergonómicas y resistentes para niños pequeños. Sin respaldo tambaleante, dimensiones optimizadas para edades 1-4."
+      },
+      "play": {
+        "title": "Juego Abierto y STEM",
+        "body": "Juguetes que combinan diversión y aprendizaje. Bloques separables y sistemas que permiten combinar series entre sí."
+      }
+    }
+  },
+  "cta": {
+    "title": "Pedidos de gran volumen y consultas comerciales",
+    "body": "Además de las compras individuales, admitimos pedidos de mayor volumen de productos de la marca SUPUZZ para tiendas, organizaciones y otros clientes empresariales. Contáctanos para hablar de productos, cantidades y necesidades de entrega.",
+    "label": "Contacta con Nosotros"
+  },
+  "philosophy": {
+    "paragraphs": [
+      "Creemos que el juego es el lenguaje universal del descubrimiento.",
+      "Por eso creamos productos que reúnen a todos los niños para imaginar, construir y conectar.",
+      "Porque las mejores aventuras comienzan cuando jugamos juntos."
+    ]
+  }
+}

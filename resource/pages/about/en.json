@@ -1,0 +1,37 @@
+{
+  "title": "About SUPUZZ",
+  "documentTitle": "About SUPUZZ | PLAY WITH ALL KIDS.",
+  "description": "PLAY WITH ALL KIDS. SUPUZZ believes play is the universal language of discovery. We create products that bring all kids together to imagine, build, and connect.",
+  "imageAlt": "A child smiling outdoors",
+  "intro": "SUPUZZ creates building toys and kids furniture for shared play.",
+  "offerings": {
+    "title": "What We Offer",
+    "paragraphs": [],
+    "cards": {
+      "blocks": {
+        "title": "Building Blocks",
+        "body": "Waffle-style interlocking building blocks with locking storage cases, designed for progressive learning and sensory play for ages 2–8."
+      },
+      "furniture": {
+        "title": "Kids Furniture",
+        "body": "Ergonomic toddler chairs and kids table & chair sets — sturdy, safe, and sized for growing children ages 1–4."
+      },
+      "play": {
+        "title": "Open-Ended Play",
+        "body": "Theme sets like Funny Snow World, Icy World, Ocean World, Rotating Forest — mixable and detachable, letting kids build without limits."
+      }
+    }
+  },
+  "cta": {
+    "title": "Large Orders & Business Enquiries",
+    "body": "Alongside individual purchases, we support larger orders of SUPUZZ-branded products for retailers, organisations and other business customers. Contact us to discuss products, quantities and delivery requirements.",
+    "label": "Contact Us Today"
+  },
+  "philosophy": {
+    "paragraphs": [
+      "We believe that play is the universal language of discovery.",
+      "That's why we create products that bring all kids together to imagine, build, and connect.",
+      "Because the greatest adventures begin when we play together."
+    ]
+  }
+}

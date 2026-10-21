@@ -1,0 +1,42 @@
+{
+  "title": "Kontakt SUPUZZ",
+  "documentTitle": "Kontakt SUPUZZ | Kundenservice, Feedback & Großbestellungen",
+  "description": "Kontaktieren Sie das SUPUZZ-Team bei Fragen zu Produkten und Bestellungen, melden Sie ein Problem, teilen Sie Feedback oder fragen Sie größere Mengen von SUPUZZ-Produkten an.",
+  "imageAlt": "Kontakt SUPUZZ",
+  "intro": "Produktfragen, Feedback oder Großbestellungen — schreiben Sie uns.",
+  "emailAlternative": "Oder per E-Mail an",
+  "form": {
+    "labels": {
+      "name": "Name *",
+      "email": "E-Mail *",
+      "inquiryType": "Thema *",
+      "message": "Nachricht *"
+    },
+    "placeholders": {
+      "message": "Wie können wir helfen?"
+    },
+    "options": {
+      "select": "Thema auswählen",
+      "feedback": "Produktsupport & Feedback",
+      "bulk": "Großbestellung",
+      "other": "Sonstiges"
+    },
+    "messagePrompts": {
+      "feedback": "Beschreiben Sie das Problem. Nennen Sie das Produkt und, falls vorhanden, die Bestellnummer.",
+      "bulk": "Welche Produkte, welche Mengen und welcher Lieferort?",
+      "other": "Beschreiben Sie Ihr Anliegen."
+    },
+    "submit": "Nachricht senden"
+  },
+  "feedback": {
+    "required": "Bitte füllen Sie alle Pflichtfelder aus.",
+    "submitting": "Wird gesendet...",
+    "success": "Nachricht gesendet. Wir antworten per E-Mail.",
+    "error": "Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.",
+    "fields": {
+      "name": "[Name] ",
+      "inquiryType": "[Anfragetyp] ",
+      "message": "[Nachricht] "
+    }
+  }
+}
