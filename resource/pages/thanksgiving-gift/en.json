@@ -1,0 +1,77 @@
+{
+  "homeLabel": "Home",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Editorial Team",
+  "publishedLabel": "Published ",
+  "backLabel": "Back to the blog",
+  "title": "Thirty days across an ocean: a Thanksgiving gift and a friendship",
+  "description": "A SUPUZZ gift story about Mark, his friend Amara and a child’s table: remembering the care behind a gift and the everyday moments that follow.",
+  "shortTitle": "A Thanksgiving gift story",
+  "categoryLabel": "Our story",
+  "imageAlt": "A girl enjoying drawing at a children’s table",
+  "hero": {
+    "caption": "An everyday drawing moment. Illustrative photo for the story."
+  },
+  "intro": "Some gifts carry more than a box can hold. In a story previously shared by SUPUZZ, Mark, living in the United States, sent a children’s table and chairs to his friend Amara and her daughter in Lagos, Nigeria. His care included the time he was willing to wait.",
+  "sections": {
+    "everyday": {
+      "title": "Thinking of a friend’s everyday life",
+      "paragraphs": [
+        "Mark and Amara had worked together through demanding projects and deadlines. Distance had not erased that connection. He chose a place for her young daughter to draw and play as a way to remember the whole family."
+      ]
+    },
+    "contents": {
+      "title": "I’ll wait. She matters to me.",
+      "paragraphs": [
+        "In the story, the furniture was on preorder, and preparation and international transport would take time. The team explained the delay and alternatives. Mark chose to wait for the gift he had picked for his friend."
+      ]
+    },
+    "message": {
+      "title": "A photo on day thirty-one",
+      "paragraphs": [
+        "After thirty-one days, news arrived with a photo of a child drawing at the table. Mark shared it with the SUPUZZ team. The meaningful part was more than the furniture: a friend had kept the family in mind throughout a busy season."
+      ],
+      "image": {
+        "alt": "Seasonal gift wrapping shown as an illustration",
+        "caption": "Illustrative wrapping. It does not indicate included gift packaging."
+      }
+    },
+    "delivery": {
+      "title": "A gift becomes part of daily life",
+      "paragraphs": [
+        "Drawing, reading and playing together are the moments that follow a gift. Thinking about the recipient’s life is a useful place to begin. This story is about connection rather than the size or price of a present."
+      ]
+    },
+    "together": {
+      "title": "For anyone choosing a gift today",
+      "paragraphs": [
+        "This is a previously shared gift story. Check current products, included items, destinations and delivery estimates when ordering; a historical journey is not a delivery promise. For furniture, confirm dimensions and whether a table or chairs are included with the recipient."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Are tables and chairs always sold together?",
+        "answer": "No. Check the selling unit and contents of the selected product rather than relying on a lifestyle photo."
+      },
+      {
+        "question": "Can an order be sent overseas?",
+        "answer": "It depends on the destination and product. Confirm the destination on the selling page or ask our team."
+      },
+      {
+        "question": "Can I ask about gifts for several families?",
+        "answer": "Yes. Share quantities, destination regions and preferred dates so the team can review the request."
+      }
+    ]
+  },
+  "related": {
+    "title": "Keep exploring",
+    "links": {
+      "chair": "Choosing a kids chair",
+      "gift": "Building toy gift checklist",
+      "inquiry": "Seasonal and group gift inquiries"
+    }
+  }
+}

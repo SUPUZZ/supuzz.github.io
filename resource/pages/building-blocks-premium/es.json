@@ -1,0 +1,111 @@
+{
+  "homeLabel": "Inicio",
+  "blogLabel": "Blog",
+  "author": "Equipo editorial de SUPUZZ",
+  "publishedLabel": "Publicado el ",
+  "backLabel": "Volver al blog",
+  "title": "Conectar, imaginar y jugar juntos con los bloques arcoíris de SUPUZZ",
+  "description": "Descubre los bloques tipo gofre de SUPUZZ: primeras construcciones, colores, formas, juego compartido e ideas para guardar las piezas en casa o en el aula.",
+  "shortTitle": "Bloques arcoíris tipo gofre",
+  "categoryLabel": "Guía de producto",
+  "imageAlt": "Dos hermanos juegan juntos con bloques arcoíris SUPUZZ",
+  "readingTime": "4 min de lectura",
+  "intro": "¿Qué construimos? Las piezas de colores son un punto de partida. Se puede seguir un ejemplo, cambiar de idea o inventar algo nuevo. El proceso también forma parte del juego.",
+  "hero": {
+    "alt": "Dos hermanos juegan juntos con bloques arcoíris SUPUZZ",
+    "caption": "Una idea se encuentra con otra: construir juntos es parte de la aventura."
+  },
+  "connect": {
+    "title": "De las formas planas al mundo en tres dimensiones",
+    "paragraphs": [
+      "Conecta las piezas hacia los lados y después hacia arriba. Empieza con una pared o un recinto y conviértelo en una casa o un vehículo. Desmontar y probar otra disposición también es jugar."
+    ]
+  },
+  "learning": {
+    "title": "Descubrir colores, formas y equilibrio",
+    "paragraphs": [
+      "STEAM reúne ciencia, tecnología, ingeniería, arte y matemáticas. Preguntas como «¿se mantendrá en pie?» invitan a observar y volver a probar. Deja tiempo para explicar las ideas."
+    ],
+    "ideas": [
+      "Clasificar por colores y crear una secuencia.",
+      "Transformar una forma plana en una construcción de pie.",
+      "Ampliar la base cuando una torre se cae.",
+      "Dar nombre e historia a una creación."
+    ]
+  },
+  "models": {
+    "title": "Más de una cosa que construir",
+    "paragraphs": [
+      "Vehículos, cámaras y pequeños parques son solo puntos de partida. Pregunta qué se podría cambiar y crea una versión propia."
+    ],
+    "images": {
+      "tank": {
+        "alt": "Vehículo con forma de tanque hecho con bloques arcoíris",
+        "caption": "Imaginar un vehículo."
+      },
+      "playground": {
+        "alt": "Parque para mascotas construido con bloques SUPUZZ",
+        "caption": "Crear un pequeño mundo."
+      },
+      "claw": {
+        "alt": "Pinza mecánica hecha con bloques tipo gofre",
+        "caption": "Explorar un mecanismo."
+      },
+      "camera": {
+        "alt": "Cámara construida con bloques de colores",
+        "caption": "Recrear algo cotidiano."
+      }
+    }
+  },
+  "together": {
+    "title": "Las ideas crecen cuando jugamos juntos",
+    "paragraphs": [
+      "Una persona construye la base y otra elige los colores. Cada niño puede participar con un papel y un ritmo diferentes.",
+      "PLAY WITH ALL KIDS. Creemos que el juego es un lenguaje universal de descubrimiento para imaginar, construir y conectar."
+    ]
+  },
+  "family": {
+    "alt": "Un abuelo y su nieto construyen con bloques SUPUZZ",
+    "caption": "¿Qué haremos después? Compartir ideas entre generaciones."
+  },
+  "storage": {
+    "title": "Recoger para empezar la próxima aventura",
+    "paragraphs": [
+      "Agrupad las piezas al terminar. Clasificarlas puede formar parte de recoger; una foto conserva una creación antes de desmontarla. Los estuches y accesorios varían: comprueba el conjunto elegido."
+    ]
+  },
+  "choosing": {
+    "title": "En casa o en el aula",
+    "paragraphs": [
+      "Probad un proyecto compartido, como un puente, o empezad con construcción libre. Para regalos y actividades de grupo, revisa la edad indicada, el tamaño de las piezas, el contenido y las instrucciones del producto."
+    ]
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Qué construimos primero?",
+        "answer": "Un recinto pequeño o una casa sencilla; después se pueden cambiar la altura y los colores."
+      },
+      {
+        "question": "¿Incluye un estuche?",
+        "answer": "Algunos conjuntos lo incluyen. Revisa el contenido de la versión elegida."
+      },
+      {
+        "question": "¿Encaja con otras marcas?",
+        "answer": "Las formas similares no garantizan conectores iguales. No se garantiza la compatibilidad con otras marcas."
+      },
+      {
+        "question": "¿Pueden comprar los centros educativos por cantidad?",
+        "answer": "Sí. Indica el uso y la cantidad en la consulta de compras educativas."
+      }
+    ]
+  },
+  "cta": {
+    "title": "¿Qué construirás ahora?",
+    "body": "Descubre los conjuntos, consulta sobre un producto o habla con nosotros sobre compras educativas y para grupos.",
+    "productsLabel": "Explorar productos",
+    "contactLabel": "Consultar sobre un producto",
+    "procurementLabel": "Compras educativas y para grupos"
+  }
+}

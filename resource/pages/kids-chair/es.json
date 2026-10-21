@@ -1,0 +1,86 @@
+{
+  "homeLabel": "Inicio",
+  "blogLabel": "Blog",
+  "author": "Equipo editorial de SUPUZZ",
+  "publishedLabel": "Publicado el ",
+  "backLabel": "Volver al blog",
+  "title": "Un sitio para dibujar y leer: elegir una silla infantil SUPUZZ",
+  "description": "Conoce la silla infantil rosa SUPUZZ: venta por unidad, dimensiones, combinación con la mesa y ubicación para el día a día.",
+  "shortTitle": "Elegir una silla infantil",
+  "categoryLabel": "Guía de producto",
+  "imageAlt": "Silla infantil rosa SUPUZZ",
+  "hero": {
+    "caption": "Una silla rosa. No incluye mesa, juguetes ni accesorios."
+  },
+  "intro": "Un lugar propio para dibujar, leer y jugar en la mesa. Antes de elegir la silla rosa SUPUZZ, piensa en la postura del niño, la mesa y el espacio disponible.",
+  "sections": {
+    "size": {
+      "title": "Comprobar dimensiones y ajuste, no solo edad",
+      "paragraphs": [
+        "Compara las dimensiones con la habitación y la mesa. La altura total no es la altura del asiento. Considera los pies y la posición frente a la mesa; no se puede asumir que una silla sirva para todos."
+      ],
+      "image": {
+        "alt": "Vista lateral de la silla infantil SUPUZZ",
+        "caption": "Consulta las dimensiones actuales en la página del producto."
+      }
+    },
+    "single": {
+      "title": "Este producto es una silla",
+      "paragraphs": [
+        "La silla rosa se vende individualmente. Mesas y accesorios de las fotos no están incluidos. Si buscas un conjunto, revisa el nombre y el contenido."
+      ]
+    },
+    "place": {
+      "title": "Elegir el lugar según la actividad",
+      "paragraphs": [
+        "Un rincón de dibujo, lectura o construcción ayuda a decidir dónde colocarla."
+      ],
+      "items": [
+        "Dejar espacio suficiente para sentarse y salir.",
+        "Seguir las instrucciones de suelo e instalación.",
+        "Supervisar el uso y evitar ponerse de pie o sentarse de forma inestable."
+      ],
+      "image": {
+        "alt": "Silla SUPUZZ junto a una mesa de actividades",
+        "caption": "Ejemplo de uso. Mesa y juguetes se venden por separado."
+      }
+    },
+    "care": {
+      "title": "Seguir las instrucciones de cuidado",
+      "paragraphs": [
+        "Consulta limpieza, almacenamiento y montaje. Comprueba los productos de limpieza adecuados antes de tratar manchas. Deja de usar una silla dañada y contacta con soporte."
+      ]
+    },
+    "choose": {
+      "title": "Elegir para tu hogar",
+      "paragraphs": [
+        "Compara unidad de venta, especificaciones, dimensiones y entorno. Consulta la información actual para carga máxima, certificaciones y medidas del asiento; no las deduzcas de descripciones generales."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Incluye una mesa?",
+        "answer": "No. Es una silla rosa, sin mesa, juguetes ni accesorios."
+      },
+      {
+        "question": "¿Hasta qué edad se puede usar?",
+        "answer": "La edad por sí sola no determina el ajuste. Comprueba las condiciones del producto, la talla y la mesa."
+      },
+      {
+        "question": "¿Pueden los centros educativos comprar varias?",
+        "answer": "Sí. Indica cantidad y uso en la consulta de compras educativas."
+      }
+    ]
+  },
+  "related": {
+    "title": "Sigue descubriendo",
+    "links": {
+      "product": "Ver la silla rosa",
+      "products": "Ver productos SUPUZZ",
+      "education": "Compras educativas · 10% de descuento"
+    }
+  }
+}

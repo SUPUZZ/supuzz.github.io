@@ -1,0 +1,74 @@
+{
+  "homeLabel": "Inicio",
+  "blogLabel": "Blog",
+  "author": "Equipo editorial de SUPUZZ",
+  "publishedLabel": "Publicado el ",
+  "backLabel": "Volver al blog",
+  "title": "Océano, hielo y bosque en un mismo mundo imaginario",
+  "description": "Ideas con las colecciones de naturaleza SUPUZZ: combinar paisajes, inventar historias y jugar juntos comprobando las conexiones de cada conjunto.",
+  "shortTitle": "Juego de combinaciones",
+  "categoryLabel": "Ideas de juego",
+  "imageAlt": "Escena que combina piezas SUPUZZ de océano, hielo y bosque",
+  "hero": {
+    "caption": "Ejemplo con varias colecciones. Los conjuntos adicionales se venden por separado."
+  },
+  "intro": "Un árbol lleno de peces o un jardín helado bajo el mar: la imaginación no tiene que copiar la realidad. Empieza con una idea del niño y construid una historia.",
+  "sections": {
+    "connections": {
+      "title": "Empezar por conexiones compatibles",
+      "paragraphs": [
+        "Las colecciones de océano, hielo y bosque incluyen conectores compatibles de la serie de naturaleza. Cambia bases, tallos y adornos para crear otro paisaje. No todos los productos ni todas las piezas usan el mismo sistema: revisa el conjunto y no fuerces una unión."
+      ]
+    },
+    "ideas": {
+      "title": "Tres escenas para probar",
+      "paragraphs": [
+        "Los niños pueden elegir el nombre del lugar y quién vive allí."
+      ],
+      "items": [
+        "Bosque marino: imaginar corales y ramas como árboles donde viven peces.",
+        "Jardín helado: combinar adornos invernales, flores y animales sobre bases azules.",
+        "Camino entre mundos: colocar el océano junto al hielo e inventar un viaje."
+      ]
+    },
+    "questions": {
+      "title": "Hacer preguntas que abran una historia",
+      "paragraphs": [
+        "¿Quién vive aquí? ¿De dónde viene ese pez? Pregunta por la idea antes de corregir la forma. Así queda espacio para explicar y añadir algo nuevo."
+      ]
+    },
+    "together": {
+      "title": "Un papel para cada persona",
+      "paragraphs": [
+        "Una persona organiza el suelo, otra elige adornos y otra pone nombre a los personajes. Se puede construir una escena común o reunir pequeños mundos al final."
+      ]
+    },
+    "start": {
+      "title": "Explorar lo que ya tienes",
+      "paragraphs": [
+        "No necesitas varios conjuntos para empezar. Imaginar un uso diferente para una pieza cambia el juego. Antes de ampliar, comprueba contenido y ejemplos de conexión."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Las piezas de naturaleza conectan con bloques tipo gofre?",
+        "answer": "Son sistemas diferentes. Consulta cada producto; las construcciones separadas también pueden compartir una historia."
+      },
+      {
+        "question": "¿Hay que seguir un ejemplo?",
+        "answer": "No. Puedes inventar una disposición respetando las instrucciones de uso. No fuerces las piezas que no encajen."
+      }
+    ]
+  },
+  "related": {
+    "title": "Sigue descubriendo",
+    "links": {
+      "products": "Descubrir productos SUPUZZ",
+      "levels": "Comparar los conjuntos L1, L2 y L3",
+      "education": "Compras educativas · 10% de descuento"
+    }
+  }
+}

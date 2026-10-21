@@ -1,0 +1,86 @@
+{
+  "homeLabel": "Startseite",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Redaktion",
+  "publishedLabel": "Veröffentlicht am ",
+  "backLabel": "Zurück zum Blog",
+  "title": "Ein Platz zum Malen und Lesen: einen SUPUZZ Kinderstuhl auswählen",
+  "description": "Der rosa SUPUZZ Kinderstuhl im Überblick: Einzelstuhl, Maße, passende Tischkombination und Platz im Alltag.",
+  "shortTitle": "Einen Kinderstuhl auswählen",
+  "categoryLabel": "Produktratgeber",
+  "imageAlt": "Der rosa SUPUZZ Kinderstuhl",
+  "hero": {
+    "caption": "Ein rosa Kinderstuhl. Tisch, Spielzeug und Zubehör sind nicht enthalten."
+  },
+  "intro": "Ein eigener Platz zum Malen, Lesen und Spielen am Tisch. Denke vor der Auswahl an Sitzposition, Tisch und verfügbaren Platz.",
+  "sections": {
+    "size": {
+      "title": "Maße und Sitzposition statt nur Alter prüfen",
+      "paragraphs": [
+        "Vergleiche die Produktmaße mit Raum und Tisch. Gesamthöhe ist nicht Sitzhöhe. Beachte Füße und Position am Tisch; ein Stuhl passt nicht automatisch zu jedem Kind und Tisch."
+      ],
+      "image": {
+        "alt": "Seitenansicht des SUPUZZ Kinderstuhls",
+        "caption": "Aktuelle Maße stehen auf der Produktseite."
+      }
+    },
+    "single": {
+      "title": "Dieses Produkt ist ein einzelner Stuhl",
+      "paragraphs": [
+        "Der rosa Stuhl wird einzeln verkauft. Tische und Spielzubehör auf Fotos sind nicht enthalten. Prüfe für ein Set Produktname und Lieferumfang."
+      ]
+    },
+    "place": {
+      "title": "Den Platz nach der Aktivität wählen",
+      "paragraphs": [
+        "Malecke, Leseplatz oder Bautisch helfen bei der Platzwahl."
+      ],
+      "items": [
+        "Genug Raum zum Hinsetzen und Aufstehen lassen.",
+        "Hinweise zu Boden und Aufstellung beachten.",
+        "Die Nutzung begleiten und Stehen auf dem Stuhl oder instabiles Sitzen vermeiden."
+      ],
+      "image": {
+        "alt": "SUPUZZ Stuhl neben einem Kindertisch",
+        "caption": "Anwendungsbeispiel. Tisch und Spielzeug separat erhältlich."
+      }
+    },
+    "care": {
+      "title": "Pflegehinweise des Produkts beachten",
+      "paragraphs": [
+        "Prüfe Reinigung, Lagerung und Aufbau. Kläre geeignete Reiniger vor der Fleckenbehandlung. Einen beschädigten Stuhl nicht weiter nutzen und den Support kontaktieren."
+      ]
+    },
+    "choose": {
+      "title": "Für das eigene Zuhause auswählen",
+      "paragraphs": [
+        "Vergleiche Verkaufseinheit, Angaben, Maße und Einsatzort. Belastbarkeit, Zertifizierungen und Sitzmaße sind den aktuellen Produktinformationen zu entnehmen, nicht allgemeinen Beschreibungen."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Ist ein Tisch enthalten?",
+        "answer": "Nein. Ein rosa Stuhl, ohne Tisch, Spielzeug und Zubehör."
+      },
+      {
+        "question": "Bis zu welchem Alter lässt er sich nutzen?",
+        "answer": "Alter allein bestimmt die Passform nicht. Prüfe Produktbedingungen, Körpergröße und Tischkombination."
+      },
+      {
+        "question": "Können Kitas oder Schulen mehrere bestellen?",
+        "answer": "Ja. Nenne Menge und Einsatzort über die Anfrage für Bildungseinkäufe."
+      }
+    ]
+  },
+  "related": {
+    "title": "Weiter entdecken",
+    "links": {
+      "product": "Rosa Kinderstuhl ansehen",
+      "products": "SUPUZZ Produkte ansehen",
+      "education": "Bildungseinkäufe · 10 % Rabatt"
+    }
+  }
+}

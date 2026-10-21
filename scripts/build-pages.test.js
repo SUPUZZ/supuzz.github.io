@@ -158,6 +158,145 @@ test('ContactBuilder generates complete localized forms and safely embeds runtim
   assert.match(fs.readFileSync(path.join(root, 'en/contact.html'), 'utf8'), /Builder: builders\/ContactBuilder\.js/);
 });
 
+test('BuildingBlocksPremiumBuilder generates seven localized articles and rejects incomplete copy', t => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'supuzz-blocks-article-'));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  const projectRoot = path.resolve(__dirname, '..');
+  fs.mkdirSync(path.join(root, 'resource/pages'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'builders'), { recursive: true });
+  fs.cpSync(path.join(projectRoot, 'resource/pages/building-blocks-premium'), path.join(root, 'resource/pages/building-blocks-premium'), { recursive: true });
+  fs.copyFileSync(path.join(projectRoot, 'builders/BuildingBlocksPremiumBuilder.js'), path.join(root, 'builders/BuildingBlocksPremiumBuilder.js'));
+  const Builder = require('../builders/BuildingBlocksPremiumBuilder');
+  const builder = new Builder({ rootDir: root });
+  assert.equal(builder.build(), 7);
+  for (const language of languages) {
+    const html = fs.readFileSync(path.join(root, language, 'article-building-blocks-premium.html'), 'utf8');
+    const copy = JSON.parse(fs.readFileSync(path.join(root, 'resource/pages/building-blocks-premium', `${language}.json`), 'utf8'));
+    const schema = JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+    assert.equal(schema.headline, copy.title);
+    assert.equal((html.match(/hreflang=/g) || []).length, 8);
+    assert.match(html, /<time datetime="2025-11-20">[^<]+<\/time>/);
+    assert(html.includes(`rel="canonical" href="https://supuzz.com/${language}/article-building-blocks-premium.html"`));
+  }
+  const file = path.join(root, 'ja/article-building-blocks-premium.html');
+  const before = fs.readFileSync(file, 'utf8');
+  const copyPath = path.join(root, 'resource/pages/building-blocks-premium/ja.json');
+  const copy = JSON.parse(fs.readFileSync(copyPath, 'utf8'));
+  assert(before.includes(`<h1>${copy.title}</h1>`));
+  assert.match(before, /<html lang="ja-JP">/);
+  assert.match(before, /property="og:locale" content="ja_JP"/);
+  assert.match(before, /rel="canonical" href="https:\/\/supuzz.com\/ja\/article-building-blocks-premium.html"/);
+  assert.equal((before.match(/<include /g) || []).length, 2);
+  assert.doesNotMatch(before, /<header\b|Wholesale|OEM|Introducing the|undefined/);
+  const schema = JSON.parse(before.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
+  assert.equal(schema.headline, copy.title);
+  assert.equal(schema.inLanguage, 'ja-JP');
+  assert.equal(schema.datePublished, '2025-11-20T00:00:00+00:00');
+  delete copy.models.images.camera.alt;
+  fs.writeFileSync(copyPath, JSON.stringify(copy));
+  assert.throws(() => builder.build(), /models.images.camera.alt/);
+  assert.equal(fs.readFileSync(file, 'utf8'), before);
+  copy.models.images.camera.alt = 'カメラ';
+  copy.faq.items = [];
+  fs.writeFileSync(copyPath, JSON.stringify(copy));
+  assert.throws(() => builder.build(), /faq.items/);
+  assert.equal(fs.readFileSync(file, 'utf8'), before);
+});
+
+test('seven migrated guides generate all 49 locale pages and reject incomplete translations atomically', t => {
+  const ids = ['icy-world', 'mix-play', 'waffle-blocks-stem-toddler', 'rainbow-blocks-gift-checklist', 'thanksgiving-gift', 'kids-chair', 'levels'];
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'supuzz-japanese-guides-'));
+  t.after(() => fs.rmSync(root, { recursive: true, force: true }));
+  const projectRoot = path.resolve(__dirname, '..');
+  fs.mkdirSync(path.join(root, 'resource/pages'), { recursive: true });
+  fs.mkdirSync(path.join(root, 'builders'), { recursive: true });
+  fs.copyFileSync(path.join(projectRoot, 'builders/ArticleBuilder.js'), path.join(root, 'builders/ArticleBuilder.js'));
+  for (const id of ids) {
+    fs.cpSync(path.join(projectRoot, 'resource/pages', id), path.join(root, 'resource/pages', id), { recursive: true });
+    const definition = JSON.parse(fs.readFileSync(path.join(root, 'resource/pages', id, 'page.json'), 'utf8'));
+    fs.copyFileSync(path.join(projectRoot, 'builders', definition.builder), path.join(root, 'builders', definition.builder));
+  }
+  assert.equal(run(root), 49);
+  const before = new Map();
+  for (const id of ids) {
+    for (const language of languages) {
+      const locale = require('./product-localization').locales.find(locale => locale.directory === language);
+      const file = path.join(root, `${language}/article-${id}.html`);
+      const html = fs.readFileSync(file, 'utf8');
+      before.set(file, html);
+      const copy = JSON.parse(fs.readFileSync(path.join(root, `resource/pages/${id}/${language}.json`), 'utf8'));
+      assert.equal(require('entities').decodeHTML(html.match(/<h1>(.*?)<\/h1>/)[1]), copy.title);
+      if (language === 'ja') assert.match(copy.title, /[\u3040-\u30ff]/);
+      assert(html.includes(`<html lang="${locale.htmlLang}">`));
+      assert(html.includes(`property="og:locale" content="${locale.ogLocale}"`));
+      assert(html.includes(`rel="canonical" href="https://supuzz.com/${language}/article-${id}.html"`));
+      for (const alternate of languages) assert(html.includes(`hreflang="${alternate}" href="https://supuzz.com/${alternate}/article-${id}.html"`));
+      assert.equal((html.match(/hreflang=/g) || []).length, 8);
+      assert.equal((html.match(/<include /g) || []).length, 2);
+      assert.doesNotMatch(html, /<header\b|undefined|Wholesale|OEM|IKEA/);
+      const schemas = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(match => JSON.parse(match[1]));
+      assert.equal(schemas[0].headline, copy.title);
+      assert.equal(schemas[0].inLanguage, locale.htmlLang);
+      assert.equal(schemas[1].itemListElement[1].name, copy.blogLabel);
+    }
+  }
+  const file = path.join(root, 'resource/pages/icy-world/ja.json');
+  const copy = JSON.parse(fs.readFileSync(file, 'utf8'));
+  copy.title = 'Changed title';
+  delete copy.sections.levelOne.image.alt;
+  fs.writeFileSync(file, JSON.stringify(copy));
+  assert.throws(() => run(root), /sections.levelOne.image.alt/);
+  for (const [file, html] of before) assert.equal(fs.readFileSync(file, 'utf8'), html);
+  copy.sections.levelOne.image.alt = '氷の世界';
+  fs.writeFileSync(file, JSON.stringify(copy));
+  fs.unlinkSync(path.join(root, 'resource/pages/levels/ja.json'));
+  assert.throws(() => run(root), /ja\.json/);
+  for (const [file, html] of before) assert.equal(fs.readFileSync(file, 'utf8'), html);
+});
+
+test('article blog sync follows locale resources, inserts missing cards once and rejects duplicates atomically', t => {
+  const { root, definition, writeJson } = fixture(t);
+  const { run: syncBlog } = require('./build-article-blog');
+  const { blogCardInclude } = require('./blog-card');
+  const card = blogCardInclude({ href: 'unrelated.html', category: 'building-blocks', image: '/other.webp', width: 100, height: 100, alt: 'Other', title: 'Other', excerpt: 'Other' });
+  for (const language of languages) {
+    fs.writeFileSync(path.join(root, language, 'blog.html'), `<head></head><button data-filter="building-blocks">${language} category</button><div class="blog-grid">${card}</div>`);
+  }
+  run(root);
+  assert.equal(syncBlog(root), 7);
+  const before = new Map();
+  for (const language of languages) {
+    const file = path.join(root, language, 'blog.html');
+    const html = fs.readFileSync(file, 'utf8');
+    before.set(file, html);
+    const cards = [...html.matchAll(/<include src="components\/blog-card\.html">([\s\S]*?)<\/include>/g)].map(match => JSON.parse(match[1]));
+    assert.equal(cards.length, 2);
+    const article = cards.find(card => card.href === definition.file);
+    assert.equal(article.title, `${language} <Title> & "quoted"`);
+    assert.equal(article.excerpt, `${language} description`);
+    assert.equal(article.categoryLabel, `${language} category`);
+    assert.equal(article.image, definition.shared.image);
+    assert.equal(article.date, '2026-10-20');
+    assert.equal(article.alt, `${language} image`);
+  }
+  syncBlog(root);
+  for (const [file, html] of before) assert.equal(fs.readFileSync(file, 'utf8'), html);
+  const englishCopy = JSON.parse(fs.readFileSync(path.join(root, 'resource/pages/sample/en.json'), 'utf8'));
+  writeJson('resource/pages/sample/en.json', { ...englishCopy, title: 'Updated English title', description: 'Updated excerpt' });
+  run(root);
+  syncBlog(root);
+  const english = fs.readFileSync(path.join(root, 'en/blog.html'), 'utf8');
+  assert.match(english, /Updated English title/);
+  assert.match(english, /Updated excerpt/);
+  const frenchFile = path.join(root, 'fr/blog.html');
+  const french = fs.readFileSync(frenchFile, 'utf8');
+  const duplicate = [...french.matchAll(/<include src="components\/blog-card\.html">([\s\S]*?)<\/include>/g)].find(match => JSON.parse(match[1]).href === definition.file)[0];
+  fs.writeFileSync(frenchFile, french + duplicate);
+  writeJson('resource/pages/sample/en.json', { ...englishCopy, title: 'Should not update blog' });
+  assert.throws(() => syncBlog(root), /Duplicate article card/);
+  assert.equal(fs.readFileSync(path.join(root, 'en/blog.html'), 'utf8'), english);
+});
+
 test('AboutBuilder preserves locale content and rejects incomplete sections before writing', t => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'supuzz-about-'));
   t.after(() => fs.rmSync(root, { recursive: true, force: true }));

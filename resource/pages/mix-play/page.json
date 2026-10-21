@@ -1,0 +1,60 @@
+{
+  "file": "article-mix-play.html",
+  "builder": "MixPlayBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/article-guide.css"
+  ],
+  "scripts": [
+    "/js/article-pageview.js"
+  ],
+  "shared": {
+    "datePublished": "2025-11-20T00:00:00+00:00",
+    "dateModified": "2026-10-21T00:00:00+08:00",
+    "image": "/product-images/main-open-end-play.webp",
+    "imageWidth": 1000,
+    "imageHeight": 800,
+    "sections": [
+      {
+        "key": "connections"
+      },
+      {
+        "key": "ideas",
+        "list": true,
+        "ordered": false
+      },
+      {
+        "key": "questions"
+      },
+      {
+        "key": "together"
+      },
+      {
+        "key": "start"
+      }
+    ],
+    "related": [
+      {
+        "key": "products",
+        "href": "index.html#products"
+      },
+      {
+        "key": "levels",
+        "href": "article-levels.html"
+      },
+      {
+        "key": "education",
+        "href": "procurement.html"
+      }
+    ]
+  }
+}

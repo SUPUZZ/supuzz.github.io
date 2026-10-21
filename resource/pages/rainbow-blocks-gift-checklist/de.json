@@ -1,0 +1,84 @@
+{
+  "homeLabel": "Startseite",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Redaktion",
+  "publishedLabel": "Veröffentlicht am ",
+  "backLabel": "Zurück zum Blog",
+  "title": "Bausteine verschenken: fünf Punkte für Familien",
+  "description": "Ein Baugeschenk nach Altersangabe, Interessen, Platz, Aufbewahrung und tatsächlichem Set-Inhalt auswählen.",
+  "shortTitle": "Checkliste für Bausteingeschenke",
+  "categoryLabel": "Geschenke und Familie",
+  "imageAlt": "Bunter Freizeitpark aus SUPUZZ Waffelbausteinen",
+  "hero": {
+    "caption": "Zeit zum Erfinden schenken. Das Foto zeigt ein Baubeispiel."
+  },
+  "intro": "Ein Baugeschenk sollte in den Alltag passen, nicht nur beim Auspacken Freude machen. Schau über Kartongröße und Teilezahl hinaus auf Interessen und Platz.",
+  "sections": {
+    "checklist": {
+      "title": "Fünf Fragen vor der Bestellung",
+      "paragraphs": [
+        "Sprich nach Möglichkeit mit Eltern oder Betreuungspersonen."
+      ],
+      "items": [
+        "Alter: Passen das konkrete Produkt und die Hinweise zum Kind?",
+        "Interessen: Passt es zu beliebten Fahrzeugen, Tieren oder Farbspielen?",
+        "Spielfläche: Gibt es Platz zum Ausbreiten und Bauen?",
+        "Aufbewahrung: Ist ein Koffer dabei und wohin kommt er?",
+        "Inhalt: Lassen sich Beispielbilder von enthaltenen Teilen und Zubehör unterscheiden?"
+      ]
+    },
+    "storage": {
+      "title": "Aufräumen gehört zum Geschenk",
+      "paragraphs": [
+        "Ein Platz für die Teile erleichtert den nächsten Spielbeginn. Prüfe Koffer und Stauraum; die Verpackung hängt von Produkt und Variante ab."
+      ],
+      "image": {
+        "alt": "Kran- und Fahrzeugideen aus Waffelbausteinen",
+        "caption": "Beispiele helfen, Lieblingsspiele des beschenkten Kindes vorzustellen."
+      }
+    },
+    "give": {
+      "title": "Eine Einladung zum gemeinsamen Bauen beilegen",
+      "paragraphs": [
+        "Lass uns ein Haus für dein Auto bauen. Eine einfache Einladung kann mehr bringen als ein perfektes erstes Modell. Setz dich dazu und lass Raum für eigene Ideen."
+      ]
+    },
+    "versions": {
+      "title": "Ein Levelname ersetzt keine Altersangabe",
+      "paragraphs": [
+        "L1, L2 und L3 bezeichnen Varianten. Inhalt und Altersangaben unterscheiden sich zwischen Serien. Prüfe das gewählte Produkt statt einer allgemeinen Alterstabelle."
+      ]
+    },
+    "group": {
+      "title": "Saisonale und Gruppengeschenke planen",
+      "paragraphs": [
+        "Nenne Menge, Budget und gewünschten Zeitraum bei der Anfrage. Prüfe aktuelle Preise, Bestand und Lieferung beim Kauf. Geschenkbestellungen erhalten nicht automatisch einen Bildungsrabatt."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Sind Bausteine zum zweiten Geburtstag geeignet?",
+        "answer": "Prüfe Altersangabe und Teile des konkreten Produkts. Auch innerhalb einer Marke gibt es unterschiedliche Empfehlungen."
+      },
+      {
+        "question": "Ist die größte Teilezahl immer am besten?",
+        "answer": "Nein. Thema, Platz und Aufräumen zählen ebenfalls."
+      },
+      {
+        "question": "Wo kann ich Gruppengeschenke anfragen?",
+        "answer": "Nutze die Anfrage für saisonale Geschenke und Gruppenbestellungen mit Menge und Anlass."
+      }
+    ]
+  },
+  "related": {
+    "title": "Weiter entdecken",
+    "links": {
+      "overview": "Regenbogenbausteine kennenlernen",
+      "products": "Produkte ansehen",
+      "inquiry": "Anfragen zu saisonalen Geschenken und Gruppenbestellungen"
+    }
+  }
+}

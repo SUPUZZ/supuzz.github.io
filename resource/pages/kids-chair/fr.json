@@ -1,0 +1,86 @@
+{
+  "homeLabel": "Accueil",
+  "blogLabel": "Blog",
+  "author": "Équipe éditoriale SUPUZZ",
+  "publishedLabel": "Publié le ",
+  "backLabel": "Retour aux articles",
+  "title": "Une place pour dessiner et lire : choisir une chaise enfant SUPUZZ",
+  "description": "Découvrez la chaise enfant rose SUPUZZ : vente à l’unité, dimensions, association à la table et emplacement au quotidien.",
+  "shortTitle": "Choisir une chaise enfant",
+  "categoryLabel": "Guide produit",
+  "imageAlt": "Chaise enfant rose SUPUZZ",
+  "hero": {
+    "caption": "Une chaise rose. Table, jouets et accessoires non inclus."
+  },
+  "intro": "Une place à soi pour dessiner, lire et jouer à table. Avant de choisir la chaise rose SUPUZZ, pensez à la position de l’enfant, à la table et à l’espace disponible.",
+  "sections": {
+    "size": {
+      "title": "Vérifier les dimensions, pas seulement l’âge",
+      "paragraphs": [
+        "Comparez les dimensions avec la pièce et la table. Hauteur totale et hauteur d’assise sont différentes. Regardez aussi la position des pieds et à table : une chaise ne convient pas nécessairement à tous."
+      ],
+      "image": {
+        "alt": "Vue de côté de la chaise SUPUZZ",
+        "caption": "Les dimensions actuelles figurent sur la page produit."
+      }
+    },
+    "single": {
+      "title": "Ce produit est une seule chaise",
+      "paragraphs": [
+        "La chaise rose est vendue à l’unité. Tables et accessoires des photos ne sont pas inclus. Pour un ensemble, vérifiez le nom et le contenu du produit."
+      ]
+    },
+    "place": {
+      "title": "Choisir l’endroit selon l’activité",
+      "paragraphs": [
+        "Coin dessin, lecture ou construction : l’activité aide à choisir l’emplacement."
+      ],
+      "items": [
+        "Laisser assez de place pour s’asseoir et sortir.",
+        "Suivre les consignes concernant le sol et l’installation.",
+        "Surveiller l’usage et éviter de se tenir debout ou en position instable."
+      ],
+      "image": {
+        "alt": "Chaise SUPUZZ près d’une table d’activités",
+        "caption": "Exemple d’usage. Table et jouets vendus séparément."
+      }
+    },
+    "care": {
+      "title": "Suivre les consignes d’entretien",
+      "paragraphs": [
+        "Consultez nettoyage, rangement et montage. Vérifiez les nettoyants adaptés avant de traiter une tache. Cessez d’utiliser une chaise endommagée et contactez l’assistance."
+      ]
+    },
+    "choose": {
+      "title": "Choisir pour votre intérieur",
+      "paragraphs": [
+        "Comparez unité de vente, caractéristiques, dimensions et lieu d’usage. Consultez les informations actuelles pour charge maximale, certifications et mesures d’assise plutôt que de les supposer."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Une table est-elle incluse ?",
+        "answer": "Non. Il s’agit d’une chaise rose, sans table, jouets ni accessoires."
+      },
+      {
+        "question": "Jusqu’à quel âge peut-on l’utiliser ?",
+        "answer": "L’âge seul ne détermine pas l’adaptation. Vérifiez les conditions du produit, la taille de l’enfant et la table."
+      },
+      {
+        "question": "Une école peut-elle en acheter plusieurs ?",
+        "answer": "Oui. Indiquez quantité et contexte dans la demande d’achat éducatif."
+      }
+    ]
+  },
+  "related": {
+    "title": "Pour aller plus loin",
+    "links": {
+      "product": "Voir la chaise rose",
+      "products": "Voir les produits SUPUZZ",
+      "education": "Achats éducatifs · 10 % de réduction"
+    }
+  }
+}

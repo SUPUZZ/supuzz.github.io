@@ -1,0 +1,87 @@
+{
+  "homeLabel": "Startseite",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Redaktion",
+  "publishedLabel": "Veröffentlicht am ",
+  "backLabel": "Zurück zum Blog",
+  "title": "Erste MINT-Entdeckungen: mit Waffelbausteinen verbinden und ausprobieren",
+  "description": "Einfache Bauideen für kleine Kinder: Farben sortieren, Gleichgewicht erkunden, Beobachtungen teilen und ein passendes Set auswählen.",
+  "shortTitle": "Waffelbausteine und MINT",
+  "categoryLabel": "MINT und Spielen",
+  "imageAlt": "Fahrzeuge und Kran aus SUPUZZ Waffelbausteinen",
+  "hero": {
+    "caption": "Baubeispiele. Die Fotos zeigen nicht den vollständigen Inhalt jedes Sets."
+  },
+  "intro": "Ein Teil verbinden, abnehmen und neu versuchen. Kinder entdecken Formen und Gleichgewicht, bevor sie das Wort MINT kennen. Neugier ist ein guter Anfang – ein Unterrichtsplan ist nicht nötig.",
+  "sections": {
+    "first": {
+      "title": "Mit wenigen Teilen beginnen",
+      "paragraphs": [
+        "Baut eine kleine Fläche oder Umzäunung. Gib Zeit, eine Verbindung zu finden und das Teil zu drehen. Ein überschaubarer Anfang zählt mehr als ein kompliziertes Modell."
+      ]
+    },
+    "experiments": {
+      "title": "Ein kleines Experiment versuchen",
+      "paragraphs": [
+        "Ergänze das aktuelle Bauwerk um eine Frage."
+      ],
+      "items": [
+        "Farbe: gleiche Teile sortieren oder zwei Farben abwechseln.",
+        "Gleichgewicht: die Basis verbreitern, wenn das Bauwerk kippt.",
+        "Raum: oben, unten, daneben und dazwischen verwenden.",
+        "Veränderung: aus denselben Teilen Wand, Fahrzeug oder Tier bauen."
+      ],
+      "image": {
+        "alt": "Windrad und Spielplatz aus Waffelbausteinen",
+        "caption": "Eine Anordnung führt zur nächsten Idee."
+      }
+    },
+    "voice": {
+      "title": "Fragen, bevor die Antwort kommt",
+      "paragraphs": [
+        "Was könnte es stabiler machen? Passt das Auto hindurch? Überlegt gemeinsam den nächsten Schritt und versucht bei Bedarf eine andere Verbindung."
+      ]
+    },
+    "open": {
+      "title": "Nachbauen oder selbst erfinden",
+      "paragraphs": [
+        "Angeleitetes und freies Bauen haben beide ihren Platz. Namen, Reiseziele und Figuren führen vom Modell zum Rollenspiel."
+      ],
+      "image": {
+        "alt": "Bausteinstadt mit Wegen, Türmen und Fahrzeugen",
+        "caption": "Bauwerke zu einer gemeinsamen Geschichtenwelt verbinden."
+      }
+    },
+    "choose": {
+      "title": "Das konkrete Produkt prüfen",
+      "paragraphs": [
+        "Beachte Altersangabe, Teilegröße, Warnhinweise und Inhalt. Koffer und Anleitungen variieren. Folgt dem Tempo des Kindes; ein bestimmter Entwicklungserfolg wird nicht versprochen."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Brauchen Erwachsene MINT-Fachwissen?",
+        "answer": "Nein. Fragt, was passieren könnte, probiert es gemeinsam aus und beschreibt die Beobachtungen."
+      },
+      {
+        "question": "Sind die Teile für Kinder unter drei geeignet?",
+        "answer": "Prüfe Altersangabe und Anleitung des konkreten Produkts. Nicht jedes Set eignet sich für unter Dreijährige."
+      },
+      {
+        "question": "Wie lange sollte gespielt werden?",
+        "answer": "Es gibt keine Zielzeit. Folgt dem Interesse des Kindes, macht Pausen oder wechselt die Aktivität."
+      }
+    ]
+  },
+  "related": {
+    "title": "Weiter entdecken",
+    "links": {
+      "overview": "Regenbogenbausteine kennenlernen",
+      "gift": "Checkliste für Bausteingeschenke",
+      "education": "Bildungseinkäufe · 10 % Rabatt"
+    }
+  }
+}

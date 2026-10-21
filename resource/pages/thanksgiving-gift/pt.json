@@ -1,0 +1,77 @@
+{
+  "homeLabel": "Início",
+  "blogLabel": "Blog",
+  "author": "Equipe editorial SUPUZZ",
+  "publishedLabel": "Publicado em ",
+  "backLabel": "Voltar ao blog",
+  "title": "Trinta dias pelo oceano: um presente e uma amizade",
+  "description": "Uma história SUPUZZ sobre Mark, sua amiga Amara e uma mesa infantil: o cuidado por trás de um presente e os momentos cotidianos que vêm depois.",
+  "shortTitle": "Um presente de Ação de Graças",
+  "categoryLabel": "Nossa história",
+  "imageAlt": "Uma menina desenha em uma mesa infantil",
+  "hero": {
+    "caption": "Um momento de desenho no dia a dia. Foto ilustrativa da história."
+  },
+  "intro": "Alguns presentes levam mais do que cabe na caixa. Em uma história compartilhada pela SUPUZZ, Mark, nos Estados Unidos, enviou mesa e cadeiras infantis à amiga Amara e à filha dela em Lagos, na Nigéria. O tempo que escolheu esperar também demonstrava seu cuidado.",
+  "sections": {
+    "everyday": {
+      "title": "Pensar no dia a dia de uma amiga",
+      "paragraphs": [
+        "Mark e Amara haviam dividido projetos exigentes e prazos difíceis. A distância não apagou essa conexão. Escolher um lugar para a filha desenhar e brincar era uma forma de lembrar de toda a família."
+      ]
+    },
+    "contents": {
+      "title": "Eu espero. Ela é importante para mim.",
+      "paragraphs": [
+        "Na história, os móveis estavam em pré-venda e a preparação e o transporte internacional levariam tempo. A equipe explicou o atraso e as alternativas. Mark preferiu esperar pelo presente escolhido para a amiga."
+      ]
+    },
+    "message": {
+      "title": "Uma foto no trigésimo primeiro dia",
+      "paragraphs": [
+        "Depois de trinta e um dias, chegou a notícia com uma foto da criança desenhando na mesa. Mark a compartilhou com a SUPUZZ. Mais que o móvel, importava ter lembrado da família durante toda aquela época movimentada."
+      ],
+      "image": {
+        "alt": "Embalagem sazonal de presente como ilustração",
+        "caption": "Ilustração; não indica que a embalagem de presente esteja incluída."
+      }
+    },
+    "delivery": {
+      "title": "Um presente entra na rotina",
+      "paragraphs": [
+        "Desenhar, ler e brincar juntos são momentos que continuam depois do presente. Pensar na vida de quem recebe é um bom começo. Esta história fala de conexão, não do tamanho ou preço da caixa."
+      ]
+    },
+    "together": {
+      "title": "Para quem escolhe um presente hoje",
+      "paragraphs": [
+        "Esta é uma história compartilhada anteriormente. Confira produtos atuais, conteúdo, destinos e prazos ao comprar; uma entrega passada não garante a próxima. Para móveis, confirme dimensões e se mesa ou cadeiras estão incluídas com a família."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "items": [
+      {
+        "question": "Mesa e cadeiras são sempre vendidas juntas?",
+        "answer": "Não. Confira a unidade de venda e o conteúdo do produto, não apenas a foto de ambiente."
+      },
+      {
+        "question": "É possível enviar para outro país?",
+        "answer": "Depende do produto e do destino. Confira na página de venda ou fale com a equipe."
+      },
+      {
+        "question": "Posso consultar presentes para várias famílias?",
+        "answer": "Sim. Informe quantidades, regiões de destino e datas desejadas."
+      }
+    ]
+  },
+  "related": {
+    "title": "Continue explorando",
+    "links": {
+      "chair": "Como escolher uma cadeira infantil",
+      "gift": "Lista para presentear com blocos",
+      "inquiry": "Consultas sobre presentes sazonais e para grupos"
+    }
+  }
+}

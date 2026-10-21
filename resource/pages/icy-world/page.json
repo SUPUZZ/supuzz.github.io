@@ -1,0 +1,97 @@
+{
+  "file": "article-icy-world.html",
+  "builder": "IcyWorldBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/article-guide.css"
+  ],
+  "scripts": [
+    "/js/article-pageview.js"
+  ],
+  "shared": {
+    "datePublished": "2025-11-20T00:00:00+00:00",
+    "dateModified": "2026-10-21T00:00:00+08:00",
+    "image": "/product-images/journal/article-icy-world-cover.webp",
+    "imageWidth": 1200,
+    "imageHeight": 675,
+    "sections": [
+      {
+        "key": "choose"
+      },
+      {
+        "key": "levelOne",
+        "image": {
+          "src": "/product-images/supuzz-icy-world-l1-main-480.webp",
+          "width": 480,
+          "height": 447
+        },
+        "links": [
+          {
+            "key": "product",
+            "href": "product-icy-world-l1.html"
+          }
+        ]
+      },
+      {
+        "key": "levelTwo",
+        "image": {
+          "src": "/product-images/supuzz-icy-world-l2-main-480.webp",
+          "width": 480,
+          "height": 409
+        },
+        "links": [
+          {
+            "key": "product",
+            "href": "product-icy-world-l2.html"
+          }
+        ]
+      },
+      {
+        "key": "levelThree",
+        "image": {
+          "src": "/product-images/supuzz-icy-world-l3-main-480.webp",
+          "width": 480,
+          "height": 353
+        },
+        "links": [
+          {
+            "key": "product",
+            "href": "product-icy-world-l3.html"
+          }
+        ]
+      },
+      {
+        "key": "wrapping"
+      },
+      {
+        "key": "play"
+      },
+      {
+        "key": "shopping"
+      }
+    ],
+    "related": [
+      {
+        "key": "levels",
+        "href": "article-levels.html"
+      },
+      {
+        "key": "gifts",
+        "href": "article-rainbow-blocks-gift-checklist.html"
+      },
+      {
+        "key": "inquiry",
+        "href": "contact.html?topic=gifts"
+      }
+    ]
+  }
+}

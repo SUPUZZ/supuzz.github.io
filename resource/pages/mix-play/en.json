@@ -1,0 +1,74 @@
+{
+  "homeLabel": "Home",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Editorial Team",
+  "publishedLabel": "Published ",
+  "backLabel": "Back to the blog",
+  "title": "Bring ocean, ice and forest together in one imaginative world",
+  "description": "Try SUPUZZ nature-themed building play: combine scenes, invent stories and share ideas while checking the connections of your selected sets.",
+  "shortTitle": "Mix and match play",
+  "categoryLabel": "Play ideas",
+  "imageAlt": "SUPUZZ ocean, ice and forest pieces arranged in a mixed scene",
+  "hero": {
+    "caption": "A mixed-series play example. Additional sets are sold separately."
+  },
+  "intro": "A tree full of fish or an icy garden beneath the sea: an imaginary scene does not have to follow the real world. Start with a child’s idea and build a story around it.",
+  "sections": {
+    "connections": {
+      "title": "Start with connections that fit",
+      "paragraphs": [
+        "SUPUZZ ocean, ice and forest collections include compatible nature-series connectors. Rearrange bases, stems and decorations to imagine another landscape. Not every SUPUZZ product or piece uses the same system; check the selected set and never force a connection."
+      ]
+    },
+    "ideas": {
+      "title": "Three scenes to try",
+      "paragraphs": [
+        "Let children name the place and decide who lives there."
+      ],
+      "items": [
+        "An ocean forest: imagine coral and branches as trees where fish live.",
+        "An icy garden: arrange winter decorations, flowers and creatures on blue bases.",
+        "A path between worlds: put ocean and ice scenes side by side and invent a journey."
+      ]
+    },
+    "questions": {
+      "title": "Ask a question that opens a story",
+      "paragraphs": [
+        "Who lives here? Where did that fish come from? Ask about the idea before correcting a shape. A story question gives children room to explain and add something new."
+      ]
+    },
+    "together": {
+      "title": "Find a role for everyone",
+      "paragraphs": [
+        "One person arranges the ground, another chooses decorations and another names the characters. Build one shared scene or connect separate small worlds at the end."
+      ]
+    },
+    "start": {
+      "title": "Explore what you already have",
+      "paragraphs": [
+        "You do not need several sets to begin. Reimagining a familiar piece can change the game. Before adding another set, check its contents and connection examples."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Do nature-series pieces connect directly to waffle blocks?",
+        "answer": "The systems differ. Check each product’s instructions; separate builds can still share a story side by side."
+      },
+      {
+        "question": "Must we follow an example?",
+        "answer": "No. Follow the product instructions for use while inventing your own arrangement. Do not force pieces that do not fit."
+      }
+    ]
+  },
+  "related": {
+    "title": "Keep exploring",
+    "links": {
+      "products": "Explore SUPUZZ products",
+      "levels": "Compare L1, L2 and L3 sets",
+      "education": "Education purchasing · 10% discount"
+    }
+  }
+}

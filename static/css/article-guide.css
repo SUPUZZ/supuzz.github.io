@@ -1,0 +1,28 @@
+/* Reuse the site's article pattern without changing its shared shell. */
+.article-guide .breadcrumb { padding: 100px 0 20px; font-size: .9rem; color: var(--text-sub); overflow-wrap: anywhere; }
+.article-guide .article-container { max-width: 860px; margin: auto; padding-bottom: 64px; overflow-wrap: anywhere; }
+.article-guide .article-header { text-align: center; margin: 20px 0 32px; }
+.article-guide .tag { display: inline-block; color: var(--primary); background: var(--primary-container); padding: 6px 14px; border-radius: 999px; font-weight: 700; }
+.article-guide h1 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); line-height: 1.5; margin: 20px 0; }
+.article-guide .meta, .article-guide figcaption { color: var(--text-sub); font-size: .9rem; }
+.article-guide figure { margin: 28px 0; }
+.article-guide .featured-img, .article-guide .detail-img { width: 100%; height: auto; border-radius: 16px; }
+.article-guide .detail-img { max-width: 680px; margin: auto; }
+.article-guide figcaption { margin-top: 10px; }
+.article-guide .content { font-size: 1.05rem; line-height: 1.9; color: var(--text-sub); overflow-wrap: anywhere; }
+.article-guide .content p, .article-guide .content ul, .article-guide .content ol { margin-bottom: 20px; }
+.article-guide .content ul, .article-guide .content ol { padding-left: 24px; }
+.article-guide .content ul { list-style: disc; }
+.article-guide .content li { margin-bottom: 10px; }
+.article-guide .content h2 { color: var(--text-main); font-size: clamp(1.35rem, 3vw, 1.7rem); line-height: 1.6; margin: 40px 0 16px; }
+.article-guide .content h3 { color: var(--text-main); font-size: 1.1rem; margin: 24px 0 8px; }
+.article-guide .link-box { background: #F8F5FF; border-radius: 16px; padding: 24px; margin-top: 40px; }
+.article-guide .link-box h2 { margin-top: 0; }
+.article-guide .link-box ul { margin-bottom: 0; }
+.article-guide .back-link { margin-top: 28px; }
+.article-guide a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
+.article-guide a:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+@media (max-width: 600px) {
+    .article-guide .breadcrumb { padding-top: 90px; }
+    .article-guide .link-box { padding: 20px; }
+}

@@ -1,0 +1,63 @@
+{
+  "file": "article-thanksgiving-gift.html",
+  "builder": "ThanksgivingGiftBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/article-guide.css"
+  ],
+  "scripts": [
+    "/js/article-pageview.js"
+  ],
+  "shared": {
+    "datePublished": "2025-12-05T00:00:00+00:00",
+    "dateModified": "2026-10-21T00:00:00+08:00",
+    "image": "/product-images/girl-coloring-thanksgiving-gift.webp",
+    "imageWidth": 1310,
+    "imageHeight": 728,
+    "sections": [
+      {
+        "key": "everyday"
+      },
+      {
+        "key": "contents"
+      },
+      {
+        "key": "message",
+        "image": {
+          "src": "/product-images/thanksgiving-gift-wrapped.webp",
+          "width": 1310,
+          "height": 728
+        }
+      },
+      {
+        "key": "delivery"
+      },
+      {
+        "key": "together"
+      }
+    ],
+    "related": [
+      {
+        "key": "chair",
+        "href": "article-kids-chair.html"
+      },
+      {
+        "key": "gift",
+        "href": "article-rainbow-blocks-gift-checklist.html"
+      },
+      {
+        "key": "inquiry",
+        "href": "contact.html?topic=gifts"
+      }
+    ]
+  }
+}

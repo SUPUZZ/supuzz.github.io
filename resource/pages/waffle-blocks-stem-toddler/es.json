@@ -1,0 +1,87 @@
+{
+  "homeLabel": "Inicio",
+  "blogLabel": "Blog",
+  "author": "Equipo editorial de SUPUZZ",
+  "publishedLabel": "Publicado el ",
+  "backLabel": "Volver al blog",
+  "title": "Primeros descubrimientos STEM: conectar, probar y repensar con bloques",
+  "description": "Juego con bloques tipo gofre para los pequeños: clasificar colores, explorar el equilibrio, compartir observaciones y elegir un conjunto adecuado.",
+  "shortTitle": "Bloques y STEM",
+  "categoryLabel": "STEM y juego",
+  "imageAlt": "Vehículos y una grúa construidos con bloques SUPUZZ",
+  "hero": {
+    "caption": "Construcciones de ejemplo; las fotos no representan el contenido completo de todos los conjuntos."
+  },
+  "intro": "Conectar una pieza, quitarla y volver a probar. Los niños pueden descubrir formas y equilibrio antes de conocer la palabra STEM. Empieza por la curiosidad, no por una clase.",
+  "sections": {
+    "first": {
+      "title": "Comenzar con pocas piezas",
+      "paragraphs": [
+        "Cread una forma plana o un recinto pequeño. Deja tiempo para encontrar una conexión y girar la pieza. Poder empezar importa más que acabar un modelo complicado."
+      ]
+    },
+    "experiments": {
+      "title": "Un pequeño experimento",
+      "paragraphs": [
+        "Añade una pregunta a lo que ya están construyendo."
+      ],
+      "items": [
+        "Color: agrupar piezas iguales o alternar dos colores.",
+        "Equilibrio: ampliar la base si la construcción se cae.",
+        "Espacio: usar arriba, abajo, al lado y entre.",
+        "Cambio: convertir las mismas piezas en pared, vehículo o animal."
+      ],
+      "image": {
+        "alt": "Molino y parque hechos con bloques tipo gofre",
+        "caption": "Una disposición puede llevar a una idea nueva."
+      }
+    },
+    "voice": {
+      "title": "Preguntar antes de dar la respuesta",
+      "paragraphs": [
+        "¿Qué lo haría más estable? ¿Cabe el coche? Pensad juntos el siguiente paso y probad otra unión si no funciona."
+      ]
+    },
+    "open": {
+      "title": "Seguir un ejemplo o inventar",
+      "paragraphs": [
+        "La construcción guiada y la libre tienen su lugar. Añade nombres, destinos y personajes para continuar con juego simbólico."
+      ],
+      "image": {
+        "alt": "Ciudad de bloques con caminos, torres y vehículos",
+        "caption": "Reunir las creaciones para compartir una historia."
+      }
+    },
+    "choose": {
+      "title": "Comprobar el producto concreto",
+      "paragraphs": [
+        "Revisa edad indicada, tamaño de piezas, advertencias y contenido. Los estuches y guías varían. Sigue el ritmo del niño; la actividad no garantiza un resultado de desarrollo concreto."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Hace falta saber de STEM?",
+        "answer": "No. Preguntad qué podría pasar, probadlo y poned palabras a las observaciones."
+      },
+      {
+        "question": "¿Pueden usarlos menores de tres años?",
+        "answer": "Depende del producto. Revisa su edad e instrucciones; no todos los conjuntos son adecuados."
+      },
+      {
+        "question": "¿Cuánto debe durar el juego?",
+        "answer": "No hay una duración objetivo. Sigue el interés del niño y descansad o cambiad de actividad cuando haga falta."
+      }
+    ]
+  },
+  "related": {
+    "title": "Sigue descubriendo",
+    "links": {
+      "overview": "Conocer los bloques arcoíris",
+      "gift": "Lista para regalar bloques",
+      "education": "Compras educativas · 10% de descuento"
+    }
+  }
+}

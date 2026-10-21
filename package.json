@@ -5,10 +5,11 @@
   "scripts": {
     "prestart": "npm run pages:build",
     "start": "parcel *.html en/*.html es/*.html ja/*.html zh-Hant/*.html de/*.html pt/*.html fr/*.html",
-    "pages:build": "node scripts/build-pages.js",
+    "pages:build": "node scripts/build-pages.js && node scripts/build-article-blog.js",
     "contact:build": "node builders/ContactBuilder.js",
     "about:build": "node builders/AboutBuilder.js",
     "procurement:build": "node builders/ProcurementBuilder.js",
+    "building-blocks-premium:build": "node builders/BuildingBlocksPremiumBuilder.js",
     "pages:test": "node --test scripts/build-pages.test.js",
     "seo:prepare": "node scripts/prepare-seo.js",
     "prebuild": "npm run products:build && npm run pages:build && npm run homepage:build && npm run reviews:build && npm run journal:build && npm run christmas:build && npm run halloween:covers && npm run blog:dates && npm run seo:prepare",

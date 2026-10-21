@@ -1,0 +1,77 @@
+{
+  "homeLabel": "Accueil",
+  "blogLabel": "Blog",
+  "author": "Équipe éditoriale SUPUZZ",
+  "publishedLabel": "Publié le ",
+  "backLabel": "Retour aux articles",
+  "title": "Trente jours par-delà l’océan : un cadeau et une amitié",
+  "description": "Une histoire SUPUZZ autour de Mark, de son amie Amara et d’une table pour enfant : l’attention derrière un cadeau et les moments qui suivent.",
+  "shortTitle": "Un cadeau de Thanksgiving",
+  "categoryLabel": "Notre histoire",
+  "imageAlt": "Une petite fille dessine à une table pour enfant",
+  "hero": {
+    "caption": "Un moment de dessin quotidien. Photo d’illustration de l’histoire."
+  },
+  "intro": "Certains cadeaux transportent plus qu’une boîte. Dans une histoire partagée par SUPUZZ, Mark, aux États-Unis, envoyait une table et des chaises pour enfant à son amie Amara et à sa fille, à Lagos au Nigeria. Son attention passait aussi par le temps qu’il acceptait d’attendre.",
+  "sections": {
+    "everyday": {
+      "title": "Penser au quotidien d’une amie",
+      "paragraphs": [
+        "Mark et Amara avaient traversé ensemble projets exigeants et délais serrés. La distance n’avait pas effacé ce lien. Il choisissait un endroit pour dessiner et jouer, en pensant à toute la famille."
+      ]
+    },
+    "contents": {
+      "title": "J’attendrai. Elle compte pour moi.",
+      "paragraphs": [
+        "Dans le récit, les meubles étaient en précommande et la préparation puis le transport international demandaient du temps. L’équipe expliqua le retard et les alternatives. Mark préféra attendre le cadeau choisi pour son amie."
+      ]
+    },
+    "message": {
+      "title": "Une photo au trente et unième jour",
+      "paragraphs": [
+        "Après trente et un jours arriva une nouvelle accompagnée d’une photo de l’enfant dessinant à la table. Mark la partagea avec SUPUZZ. Au-delà du meuble, il avait gardé cette famille à l’esprit pendant toute cette période."
+      ],
+      "image": {
+        "alt": "Emballage de cadeau de saison présenté en illustration",
+        "caption": "Illustration : cet emballage cadeau n’est pas nécessairement inclus."
+      }
+    },
+    "delivery": {
+      "title": "Un cadeau rejoint la vie quotidienne",
+      "paragraphs": [
+        "Dessiner, lire, jouer ensemble : ces moments continuent après le cadeau. Penser à la vie du destinataire est un bon départ. L’histoire parle de lien, plutôt que du prix ou du volume du présent."
+      ]
+    },
+    "together": {
+      "title": "Pour choisir un cadeau aujourd’hui",
+      "paragraphs": [
+        "Il s’agit d’une histoire déjà partagée. Vérifiez produits actuels, contenu, destinations et délais lors de la commande ; ce trajet passé ne promet pas une livraison. Pour les meubles, confirmez dimensions et éléments inclus avec la famille."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Tables et chaises sont-elles toujours vendues ensemble ?",
+        "answer": "Non. Vérifiez l’unité de vente et le contenu du produit, pas seulement une photo d’ambiance."
+      },
+      {
+        "question": "Une livraison à l’étranger est-elle possible ?",
+        "answer": "Cela dépend du produit et de la destination. Consultez la page de vente ou notre équipe."
+      },
+      {
+        "question": "Puis-je demander des cadeaux pour plusieurs familles ?",
+        "answer": "Oui. Indiquez quantités, régions de destination et dates souhaitées."
+      }
+    ]
+  },
+  "related": {
+    "title": "Pour aller plus loin",
+    "links": {
+      "chair": "Choisir une chaise enfant",
+      "gift": "La liste pour offrir des blocs",
+      "inquiry": "Demande pour des cadeaux de saison ou de groupe"
+    }
+  }
+}

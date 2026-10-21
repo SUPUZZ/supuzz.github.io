@@ -1,0 +1,111 @@
+{
+  "homeLabel": "Startseite",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Redaktion",
+  "publishedLabel": "Veröffentlicht am ",
+  "backLabel": "Zurück zum Blog",
+  "title": "Verbinden, erfinden und gemeinsam spielen mit SUPUZZ Regenbogenbausteinen",
+  "description": "SUPUZZ Waffelbausteine entdecken: erste Bauideen, Farben, Formen, gemeinsames Spielen und Aufräumen zu Hause oder in der Kita.",
+  "shortTitle": "Regenbogen-Waffelbausteine",
+  "categoryLabel": "Produktratgeber",
+  "imageAlt": "Geschwister spielen gemeinsam mit SUPUZZ Regenbogenbausteinen",
+  "readingTime": "4 Minuten Lesezeit",
+  "intro": "Was bauen wir? Die bunten Verbindungsteile geben einen Anfang vor. Ein Beispiel nachbauen, unterwegs umplanen oder etwas Neues erfinden: Auch der Weg gehört zum Spiel.",
+  "hero": {
+    "alt": "Geschwister spielen gemeinsam mit SUPUZZ Regenbogenbausteinen",
+    "caption": "Eine Idee trifft auf die nächste. Gemeinsam bauen gehört zum Abenteuer."
+  },
+  "connect": {
+    "title": "Von flachen Formen zu räumlichen Welten",
+    "paragraphs": [
+      "Verbinde die Teile seitlich und baue dann nach oben. Aus einer kleinen Wand oder Umzäunung wird ein Haus oder Fahrzeug. Auseinandernehmen und anders anordnen ist ebenfalls Spielen."
+    ]
+  },
+  "learning": {
+    "title": "Farben, Formen und Gleichgewicht entdecken",
+    "paragraphs": [
+      "STEAM verbindet Naturwissenschaft, Technik, Ingenieurwesen, Kunst und Mathematik. „Bleibt das stehen?“ lädt zum Beobachten und Ausprobieren ein. Lass Kindern Zeit, ihre Ideen zu erklären."
+    ],
+    "ideas": [
+      "Farben sortieren und eine eigene Folge legen.",
+      "Eine flache Form zu einem stehenden Bauwerk machen.",
+      "Die Basis verbreitern, wenn ein Turm umfällt.",
+      "Einem fertigen Bauwerk einen Namen und eine Geschichte geben."
+    ]
+  },
+  "models": {
+    "title": "Mehr als eine Bauidee",
+    "paragraphs": [
+      "Fahrzeuge, Kameras und kleine Spielplätze sind Ausgangspunkte. Fragt, was sich verändern lässt, und entwickelt eine eigene Variante."
+    ],
+    "images": {
+      "tank": {
+        "alt": "Panzerförmiges Fahrzeug aus Regenbogenbausteinen",
+        "caption": "Ein Fahrzeug erfinden."
+      },
+      "playground": {
+        "alt": "Spielplatz für Haustiere aus SUPUZZ Bausteinen",
+        "caption": "Eine kleine Welt bauen."
+      },
+      "claw": {
+        "alt": "Mechanischer Greifer aus Waffelbausteinen",
+        "caption": "Einen Mechanismus erkunden."
+      },
+      "camera": {
+        "alt": "Kamera aus bunten Bausteinen",
+        "caption": "Etwas Vertrautes nachbauen."
+      }
+    }
+  },
+  "together": {
+    "title": "Gemeinsames Spielen bringt neue Ideen",
+    "paragraphs": [
+      "Eine Person baut die Basis, eine andere wählt Farben. Kinder können unterschiedliche Aufgaben übernehmen und in ihrem Tempo mitmachen.",
+      "PLAY WITH ALL KIDS. Wir glauben, dass Spielen eine universelle Sprache des Entdeckens ist: gemeinsam erfinden, bauen und Verbindungen schaffen."
+    ]
+  },
+  "family": {
+    "alt": "Großelternteil und Enkelkind bauen mit SUPUZZ Bausteinen",
+    "caption": "Was bauen wir als Nächstes? Ideen zwischen Generationen teilen."
+  },
+  "storage": {
+    "title": "Aufräumen für das nächste Abenteuer",
+    "paragraphs": [
+      "Sammelt nach dem Spielen die Teile. Sortieren kann zum Aufräumen gehören; ein Foto hält eine Lieblingsidee vor dem Umbauen fest. Koffer und Zubehör unterscheiden sich je nach Set. Prüfe die gewählte Variante."
+    ]
+  },
+  "choosing": {
+    "title": "Zu Hause oder in der Kita",
+    "paragraphs": [
+      "Baut gemeinsam eine Brücke oder beginnt mit freiem Bauen. Prüfe bei Geschenken und Gruppenaktivitäten die Altersangabe, Teilegröße, den Inhalt und die Anleitung des konkreten Produkts."
+    ]
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Womit beginnen wir?",
+        "answer": "Mit einer kleinen Umzäunung oder einem einfachen Haus. Danach lassen sich Höhe und Farben verändern."
+      },
+      {
+        "question": "Ist ein Aufbewahrungskoffer dabei?",
+        "answer": "Einige Sets enthalten einen Koffer. Prüfe den Inhalt der gewählten Variante."
+      },
+      {
+        "question": "Passen die Teile zu anderen Marken?",
+        "answer": "Ähnliche Formen bedeuten nicht gleiche Anschlüsse. Die Kompatibilität mit anderen Marken wird nicht zugesichert."
+      },
+      {
+        "question": "Können Bildungseinrichtungen größere Mengen bestellen?",
+        "answer": "Ja. Nenne Einsatzort und Menge über die Anfrage für Bildungseinkäufe."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Was baust du als Nächstes?",
+    "body": "Entdecke die Sets, stelle eine Produktfrage oder sprich mit uns über Bildungs- und Gruppenbestellungen.",
+    "productsLabel": "Produkte entdecken",
+    "contactLabel": "Produktfrage stellen",
+    "procurementLabel": "Bildungs- und Gruppenbestellungen"
+  }
+}

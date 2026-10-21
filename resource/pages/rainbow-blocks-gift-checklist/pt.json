@@ -1,0 +1,84 @@
+{
+  "homeLabel": "Início",
+  "blogLabel": "Blog",
+  "author": "Equipe editorial SUPUZZ",
+  "publishedLabel": "Publicado em ",
+  "backLabel": "Voltar ao blog",
+  "title": "Antes de presentear com blocos: cinco pontos para a família",
+  "description": "Escolha um presente considerando idade indicada, interesses, espaço para brincar, organização e conteúdo real do conjunto.",
+  "shortTitle": "Lista para presentear com blocos",
+  "categoryLabel": "Presentes e família",
+  "imageAlt": "Parque de diversões feito com blocos SUPUZZ",
+  "hero": {
+    "caption": "Presenteie com tempo para criar. A foto mostra uma construção de exemplo."
+  },
+  "intro": "Um presente de construção deve combinar com o dia a dia, não só com a abertura da caixa. Olhe além do tamanho da embalagem e do número de peças.",
+  "sections": {
+    "checklist": {
+      "title": "Cinco verificações antes de comprar",
+      "paragraphs": [
+        "Se possível, converse com a família ou com quem cuida da criança."
+      ],
+      "items": [
+        "Idade: o produto e as instruções são adequados?",
+        "Interesses: combina com veículos, animais ou cores favoritos?",
+        "Espaço: há lugar para espalhar peças e construir?",
+        "Organização: inclui caixa e existe onde guardá-la?",
+        "Conteúdo: é possível distinguir os exemplos das peças e acessórios incluídos?"
+      ]
+    },
+    "storage": {
+      "title": "Guardar também faz parte do presente",
+      "paragraphs": [
+        "Um lugar para reunir as peças facilita a próxima brincadeira. Confira a caixa e o espaço disponível: a embalagem varia entre produtos e versões."
+      ],
+      "image": {
+        "alt": "Guindaste e veículos feitos com blocos",
+        "caption": "Os exemplos ajudam a imaginar a brincadeira favorita de quem recebe."
+      }
+    },
+    "give": {
+      "title": "Incluir um convite para construir juntos",
+      "paragraphs": [
+        "Vamos fazer uma casa para seu carro. Um convite simples pode valer mais que um primeiro modelo perfeito. Sente ao lado e deixe espaço para as ideias da criança."
+      ]
+    },
+    "versions": {
+      "title": "Um nível não substitui a indicação de idade",
+      "paragraphs": [
+        "L1, L2 e L3 identificam versões. Conteúdo e idade variam entre coleções. Confira o produto, em vez de aplicar uma tabela única."
+      ]
+    },
+    "group": {
+      "title": "Planejar presentes sazonais e para grupos",
+      "paragraphs": [
+        "Na consulta, informe quantidade, orçamento e datas desejadas. Confira preço, estoque e entrega ao comprar. Pedidos de presentes não recebem automaticamente desconto educacional."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "items": [
+      {
+        "question": "Posso dar blocos no aniversário de dois anos?",
+        "answer": "Confira idade e peças do produto específico; itens da mesma marca podem ter recomendações diferentes."
+      },
+      {
+        "question": "Mais peças é sempre melhor?",
+        "answer": "Não. Considere também tema, espaço e organização."
+      },
+      {
+        "question": "Onde consultar um presente para um grupo?",
+        "answer": "Use a consulta de presentes sazonais e para grupos, informando quantidade e ocasião."
+      }
+    ]
+  },
+  "related": {
+    "title": "Continue explorando",
+    "links": {
+      "overview": "Conhecer os blocos arco-íris",
+      "products": "Ver produtos",
+      "inquiry": "Consultas sobre presentes sazonais e para grupos"
+    }
+  }
+}

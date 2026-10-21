@@ -1,0 +1,102 @@
+{
+  "homeLabel": "Startseite",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Redaktion",
+  "publishedLabel": "Veröffentlicht am ",
+  "backLabel": "Zurück zum Blog",
+  "title": "Weihnachtsgeschenke für Kinder: Icy World passend auswählen",
+  "description": "Ein Baugeschenk nach Alter, Interessen und Platz auswählen. Icy World L1, L2 und L3 vergleichen und Ideen zum Verpacken und gemeinsamen Spielen entdecken.",
+  "shortTitle": "Icy World als Geschenk auswählen",
+  "categoryLabel": "Geschenke und Familie",
+  "imageAlt": "SUPUZZ Icy World Tierfiguren und verzweigte Bausteine in einer Winterlandschaft",
+  "intro": "Ein Weihnachtsgeschenk kann eine Geschichte beginnen, die nach Dezember weitergeht. Für Kinder, die Tiere und Bauen mögen, bietet Icy World eine Winterlandschaft zum gemeinsamen Umgestalten. Ein passendes Set genügt.",
+  "hero": {
+    "caption": "Icy World Bausteine und Tiere; den genauen Inhalt zeigt die jeweilige Produktseite."
+  },
+  "sections": {
+    "choose": {
+      "title": "Vom Kind ausgehen, nicht von der Kartongröße",
+      "paragraphs": [
+        "Prüfe die Altersangabe der konkreten Packung, die Interessen des Kindes sowie Spiel- und Stauraum. L1, L2 und L3 sind Produktversionen, keine allgemeine Fähigkeitsskala. Vergleiche die Inhaltsfotos jeder Version; mehr Teile sind nicht automatisch das bessere Geschenk."
+      ]
+    },
+    "levelOne": {
+      "title": "Eiswelt · L1",
+      "paragraphs": [
+        "Gestalte einen Schneegarten mit blauen Grundplatten, Stängeln und winterlichen Elementen. Platziere die Figuren und baue die Landschaft für jede Geschichte um."
+      ],
+      "image": {
+        "alt": "Eiswelt · L1",
+        "caption": "Icy World Bausteine und Tiere; den genauen Inhalt zeigt die jeweilige Produktseite."
+      },
+      "links": {
+        "product": "Set ansehen · Eiswelt · L1"
+      }
+    },
+    "levelTwo": {
+      "title": "Eiswelt · L2",
+      "paragraphs": [
+        "Gestalte einen Schneegarten mit blauen Grundplatten, Stängeln und winterlichen Elementen. Platziere die Figuren und baue die Landschaft für jede Geschichte um."
+      ],
+      "image": {
+        "alt": "Eiswelt · L2",
+        "caption": "Icy World Bausteine und Tiere; den genauen Inhalt zeigt die jeweilige Produktseite."
+      },
+      "links": {
+        "product": "Set ansehen · Eiswelt · L2"
+      }
+    },
+    "levelThree": {
+      "title": "Eiswelt · L3",
+      "paragraphs": [
+        "Gestalte einen Schneegarten mit blauen Grundplatten, Stängeln und winterlichen Elementen. Platziere die Figuren und baue die Landschaft für jede Geschichte um."
+      ],
+      "image": {
+        "alt": "Eiswelt · L3",
+        "caption": "Icy World Bausteine und Tiere; den genauen Inhalt zeigt die jeweilige Produktseite."
+      },
+      "links": {
+        "product": "Set ansehen · Eiswelt · L3"
+      }
+    },
+    "wrapping": {
+      "title": "Ein vollständiges Geschenk mit persönlicher Einladung",
+      "paragraphs": [
+        "Lass Originalverpackung, Altersangabe und Anleitung zusammen. Eine wiederverwendete Geschenktüte und eine Karte reichen: „Lass uns ein Winterhaus für die Tiere bauen.“ Weihnachtspapier und Dekoration kommen von dir hinzu; die Bausteine sind Spielzeug für das ganze Jahr."
+      ]
+    },
+    "play": {
+      "title": "Zeit für den ersten gemeinsamen Aufbau einplanen",
+      "paragraphs": [
+        "Bereite eine ebene Fläche vor und lass das Kind die erste Szene wählen. Ergänzt abwechselnd einen Weg oder Treffpunkt und erfindet einen Besuch im Schnee. Pausiert oder wechselt das Spiel nach Wunsch des Kindes und räumt zusammen auf. Im Januar wird aus denselben Teilen ein neues Abenteuer."
+      ]
+    },
+    "shopping": {
+      "title": "Vor der Bestellung prüfen",
+      "paragraphs": [
+        "Bestätige auf der Produktseite die gewählte Packung, Altersangabe und enthaltenen Teile. Bei Amazon.com können sich Preis, Bestand, Lieferdatum und Liefergebiete ändern. Für Kanada auch Währung, Versand und mögliche Einfuhrkosten für die Empfängeradresse prüfen."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Brauche ich alle drei Sets?",
+        "answer": "Nein. Wähle eine Version, die zum Kind und zum Budget passt. Die Geschichte und gemeinsame Zeit zählen mehr als eine vollständige Sammlung."
+      },
+      {
+        "question": "Sind L1, L2 und L3 Altersgruppen?",
+        "answer": "Nein, keine serienübergreifenden Altersgruppen. Lies Altersangabe und Inhalt des konkreten Produkts."
+      }
+    ]
+  },
+  "related": {
+    "title": "Weiter entdecken",
+    "links": {
+      "levels": "L1, L2 und L3 vergleichen",
+      "gifts": "Checkliste für Bausteingeschenke",
+      "inquiry": "Anfragen zu saisonalen Geschenken und Gruppenbestellungen"
+    }
+  }
+}

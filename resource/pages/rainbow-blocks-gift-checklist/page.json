@@ -1,0 +1,65 @@
+{
+  "file": "article-rainbow-blocks-gift-checklist.html",
+  "builder": "RainbowBlocksGiftChecklistBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/article-guide.css"
+  ],
+  "scripts": [
+    "/js/article-pageview.js"
+  ],
+  "shared": {
+    "datePublished": "2026-04-17T12:00:00+00:00",
+    "dateModified": "2026-10-21T00:00:00+08:00",
+    "image": "/product-images/waffle-blocks-amusement-park.jpg",
+    "imageWidth": 2364,
+    "imageHeight": 1773,
+    "sections": [
+      {
+        "key": "checklist",
+        "list": true,
+        "ordered": true
+      },
+      {
+        "key": "storage",
+        "image": {
+          "src": "/product-images/waffle-blocks-mechanical.jpg",
+          "width": 2364,
+          "height": 1773
+        }
+      },
+      {
+        "key": "give"
+      },
+      {
+        "key": "versions"
+      },
+      {
+        "key": "group"
+      }
+    ],
+    "related": [
+      {
+        "key": "overview",
+        "href": "article-building-blocks-premium.html"
+      },
+      {
+        "key": "products",
+        "href": "index.html#products"
+      },
+      {
+        "key": "inquiry",
+        "href": "contact.html?topic=gifts"
+      }
+    ]
+  }
+}

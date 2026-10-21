@@ -1,0 +1,87 @@
+{
+  "homeLabel": "Início",
+  "blogLabel": "Blog",
+  "author": "Equipe editorial SUPUZZ",
+  "publishedLabel": "Publicado em ",
+  "backLabel": "Voltar ao blog",
+  "title": "Primeiras descobertas STEM: conectar, testar e repensar com blocos",
+  "description": "Ideias com blocos waffle para crianças pequenas: separar cores, explorar equilíbrio, compartilhar observações e escolher um conjunto adequado.",
+  "shortTitle": "Blocos waffle e STEM",
+  "categoryLabel": "STEM e brincadeira",
+  "imageAlt": "Veículos e guindaste construídos com blocos SUPUZZ",
+  "hero": {
+    "caption": "Construções de exemplo. As fotos não mostram o conteúdo completo de todos os conjuntos."
+  },
+  "intro": "Conectar uma peça, retirar e tentar de novo. As crianças percebem formas e equilíbrio antes de conhecer a palavra STEM. Comece pela curiosidade, não por uma aula.",
+  "sections": {
+    "first": {
+      "title": "Começar com poucas peças",
+      "paragraphs": [
+        "Monte uma forma plana ou um pequeno cercado. Dê tempo para encontrar um encaixe e girar a peça. Um início possível importa mais que um modelo complicado."
+      ]
+    },
+    "experiments": {
+      "title": "Um pequeno experimento",
+      "paragraphs": [
+        "Acrescente uma pergunta à construção que já está acontecendo."
+      ],
+      "items": [
+        "Cor: separar peças iguais ou alternar duas cores.",
+        "Equilíbrio: ampliar a base se a construção cair.",
+        "Espaço: usar acima, abaixo, ao lado e entre.",
+        "Mudança: transformar as mesmas peças em parede, veículo ou animal."
+      ],
+      "image": {
+        "alt": "Moinho e parque feitos com blocos waffle",
+        "caption": "Uma disposição pode levar a outra ideia."
+      }
+    },
+    "voice": {
+      "title": "Perguntar antes de dar a resposta",
+      "paragraphs": [
+        "O que deixaria mais firme? O carro consegue passar? Pensem juntos no próximo passo e tentem outro encaixe se necessário."
+      ]
+    },
+    "open": {
+      "title": "Seguir um exemplo ou inventar",
+      "paragraphs": [
+        "A construção guiada e a livre têm espaço. Acrescente nomes, destinos e personagens para continuar no faz de conta."
+      ],
+      "image": {
+        "alt": "Cidade de blocos com caminhos, torres e veículos",
+        "caption": "Reunir as criações para uma história compartilhada."
+      }
+    },
+    "choose": {
+      "title": "Conferir o produto específico",
+      "paragraphs": [
+        "Verifique idade indicada, tamanho das peças, avisos e conteúdo. Caixas e guias variam. Respeite o ritmo da criança; a atividade não garante um resultado específico de desenvolvimento."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "items": [
+      {
+        "question": "Adultos precisam conhecer STEM?",
+        "answer": "Não. Perguntem o que pode acontecer, testem juntos e descrevam as observações."
+      },
+      {
+        "question": "Crianças menores de três anos podem usar?",
+        "answer": "Confira a idade e as instruções do produto específico. Nem todos os conjuntos são adequados."
+      },
+      {
+        "question": "Quanto tempo deve durar a brincadeira?",
+        "answer": "Não existe duração obrigatória. Acompanhe o interesse da criança e faça pausas ou troque de atividade quando necessário."
+      }
+    ]
+  },
+  "related": {
+    "title": "Continue explorando",
+    "links": {
+      "overview": "Conhecer os blocos arco-íris",
+      "gift": "Lista para presentear com blocos",
+      "education": "Compras educacionais · 10% de desconto"
+    }
+  }
+}

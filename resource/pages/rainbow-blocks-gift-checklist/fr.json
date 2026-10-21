@@ -1,0 +1,84 @@
+{
+  "homeLabel": "Accueil",
+  "blogLabel": "Blog",
+  "author": "Équipe éditoriale SUPUZZ",
+  "publishedLabel": "Publié le ",
+  "backLabel": "Retour aux articles",
+  "title": "Avant d’offrir des blocs : cinq points à vérifier en famille",
+  "description": "Choisir un cadeau de construction selon l’âge conseillé, les intérêts, la place, le rangement et le contenu réel du coffret.",
+  "shortTitle": "La liste pour offrir des blocs",
+  "categoryLabel": "Cadeaux et famille",
+  "imageAlt": "Parc d’attractions construit avec les blocs SUPUZZ",
+  "hero": {
+    "caption": "Offrir du temps pour créer. La photo montre une construction d’exemple."
+  },
+  "intro": "Un cadeau de construction doit trouver sa place dans le quotidien, pas seulement lors de l’ouverture. Regardez au-delà du volume de la boîte et du nombre de pièces.",
+  "sections": {
+    "checklist": {
+      "title": "Cinq vérifications avant de commander",
+      "paragraphs": [
+        "Si possible, échangez avec un parent ou la personne qui s’occupe de l’enfant."
+      ],
+      "items": [
+        "Âge : le produit et ses consignes sont-ils adaptés ?",
+        "Intérêts : correspond-il à ses véhicules, animaux ou couleurs préférés ?",
+        "Espace : peut-on étaler les pièces et construire ?",
+        "Rangement : une boîte est-elle incluse et où la mettre ?",
+        "Contenu : distingue-t-on les exemples des pièces et accessoires fournis ?"
+      ]
+    },
+    "storage": {
+      "title": "Le rangement fait partie du cadeau",
+      "paragraphs": [
+        "Un endroit pour rassembler les pièces facilite la prochaine séance. Vérifiez boîte et espace disponible ; les emballages diffèrent selon les produits et versions."
+      ],
+      "image": {
+        "alt": "Grue et véhicules en blocs",
+        "caption": "Les exemples aident à imaginer les jeux du destinataire."
+      }
+    },
+    "give": {
+      "title": "Ajouter une invitation à construire ensemble",
+      "paragraphs": [
+        "Construisons une maison pour ta voiture. Une invitation simple compte plus qu’un premier modèle parfait. Installez-vous à côté de l’enfant et laissez de la place à ses idées."
+      ]
+    },
+    "versions": {
+      "title": "Un niveau ne remplace pas un âge",
+      "paragraphs": [
+        "L1, L2 et L3 désignent des versions. Contenu et âge conseillé varient entre collections : vérifiez le produit, sans appliquer un tableau universel."
+      ]
+    },
+    "group": {
+      "title": "Préparer les cadeaux de saison et de groupe",
+      "paragraphs": [
+        "Précisez quantité, budget et dates souhaitées lors de la demande. Confirmez prix, stock et livraison à l’achat. Une commande de cadeaux ne bénéficie pas automatiquement d’une réduction éducative."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Puis-je offrir des blocs pour deux ans ?",
+        "answer": "Vérifiez l’âge et les pièces du produit précis ; une marque peut proposer des recommandations différentes."
+      },
+      {
+        "question": "Le plus grand nombre de pièces est-il toujours préférable ?",
+        "answer": "Non. Pensez aussi au thème, à la place et au rangement."
+      },
+      {
+        "question": "Où parler d’un cadeau pour un groupe ?",
+        "answer": "Utilisez la demande de cadeaux de saison ou de groupe en indiquant quantité et occasion."
+      }
+    ]
+  },
+  "related": {
+    "title": "Pour aller plus loin",
+    "links": {
+      "overview": "Découvrir les blocs arc-en-ciel",
+      "products": "Voir les produits",
+      "inquiry": "Demande pour des cadeaux de saison ou de groupe"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "homeLabel": "Início",
+  "blogLabel": "Blog",
+  "author": "Equipe editorial SUPUZZ",
+  "publishedLabel": "Publicado em ",
+  "backLabel": "Voltar ao blog",
+  "title": "Presentes de Natal para crianças: como escolher Icy World",
+  "description": "Escolha um presente de construção por idade, interesses e espaço. Compare Icy World L1, L2 e L3 e veja ideias de embalagem e brincadeiras em família.",
+  "shortTitle": "Como presentear com Icy World",
+  "categoryLabel": "Presentes e família",
+  "imageAlt": "Animais e peças ramificadas SUPUZZ Icy World em um cenário de inverno",
+  "intro": "Um presente de Natal pode começar uma história que continua depois de dezembro. Para crianças que gostam de animais e construções, Icy World oferece um cenário de inverno para transformar em conjunto. Basta escolher um conjunto adequado.",
+  "hero": {
+    "caption": "Peças e animais Icy World; veja o conteúdo exato na página da versão escolhida."
+  },
+  "sections": {
+    "choose": {
+      "title": "Comece pela criança, não pelo tamanho da caixa",
+      "paragraphs": [
+        "Confira a idade indicada na embalagem exata, os interesses e o espaço para brincar e guardar. L1, L2 e L3 são versões do produto, não uma escala universal de capacidade. Compare as fotos do conteúdo; mais peças não significam necessariamente um presente melhor."
+      ]
+    },
+    "levelOne": {
+      "title": "Mundo de gelo · L1",
+      "paragraphs": [
+        "Crie um jardim de neve com bases azuis, hastes e enfeites de inverno. Posicione os personagens e reconstrua a paisagem a cada nova história."
+      ],
+      "image": {
+        "alt": "Mundo de gelo · L1",
+        "caption": "Peças e animais Icy World; veja o conteúdo exato na página da versão escolhida."
+      },
+      "links": {
+        "product": "Ver o conjunto · Mundo de gelo · L1"
+      }
+    },
+    "levelTwo": {
+      "title": "Mundo de gelo · L2",
+      "paragraphs": [
+        "Crie um jardim de neve com bases azuis, hastes e enfeites de inverno. Posicione os personagens e reconstrua a paisagem a cada nova história."
+      ],
+      "image": {
+        "alt": "Mundo de gelo · L2",
+        "caption": "Peças e animais Icy World; veja o conteúdo exato na página da versão escolhida."
+      },
+      "links": {
+        "product": "Ver o conjunto · Mundo de gelo · L2"
+      }
+    },
+    "levelThree": {
+      "title": "Mundo de gelo · L3",
+      "paragraphs": [
+        "Crie um jardim de neve com bases azuis, hastes e enfeites de inverno. Posicione os personagens e reconstrua a paisagem a cada nova história."
+      ],
+      "image": {
+        "alt": "Mundo de gelo · L3",
+        "caption": "Peças e animais Icy World; veja o conteúdo exato na página da versão escolhida."
+      },
+      "links": {
+        "product": "Ver o conjunto · Mundo de gelo · L3"
+      }
+    },
+    "wrapping": {
+      "title": "Um presente completo com um convite pessoal",
+      "paragraphs": [
+        "Mantenha juntas a embalagem original, a indicação etária e as instruções. Reutilize uma sacola e escreva um cartão: «Vamos construir uma casa de inverno para os animais». A embalagem natalina e os enfeites são acrescentados por você; os blocos podem ser usados o ano todo."
+      ]
+    },
+    "play": {
+      "title": "Reserve tempo para a primeira construção",
+      "paragraphs": [
+        "Prepare uma superfície plana e deixe a criança escolher o cenário inicial. Acrescentem caminhos ou um ponto de encontro por turnos e inventem uma visita na neve. Parem ou mudem de atividade quando ela quiser e guardem as peças juntos. Em janeiro, o mesmo conjunto pode iniciar outra aventura."
+      ]
+    },
+    "shopping": {
+      "title": "Confira antes de comprar",
+      "paragraphs": [
+        "Nas páginas dos produtos, confirme a embalagem selecionada, a idade e os acessórios incluídos. Preços, estoque, entrega e destinos disponíveis na Amazon.com podem mudar. Para o Canadá, confira também moeda, frete e possíveis custos de importação conforme o endereço."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "items": [
+      {
+        "question": "Preciso comprar os três conjuntos?",
+        "answer": "Não. Escolha uma versão adequada à criança e ao orçamento. A história e o tempo em família importam mais que colecionar todos os níveis."
+      },
+      {
+        "question": "L1, L2 e L3 são faixas etárias?",
+        "answer": "Não são faixas comuns a todas as coleções. Leia idade e conteúdo do produto escolhido."
+      }
+    ]
+  },
+  "related": {
+    "title": "Continue explorando",
+    "links": {
+      "levels": "Comparar os conjuntos L1, L2 e L3",
+      "gifts": "Lista para presentear com blocos",
+      "inquiry": "Consultas sobre presentes sazonais e para grupos"
+    }
+  }
+}

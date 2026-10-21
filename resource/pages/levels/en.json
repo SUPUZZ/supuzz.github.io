@@ -1,0 +1,91 @@
+{
+  "homeLabel": "Home",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Editorial Team",
+  "publishedLabel": "Published ",
+  "backLabel": "Back to the blog",
+  "title": "What do L1, L2 and L3 mean? A SUPUZZ set-selection guide",
+  "description": "Compare Icy World and Coral Reef versions using the actual age guidance, contents and storage details, without treating level names as universal age bands.",
+  "shortTitle": "Choosing L1, L2 or L3",
+  "categoryLabel": "Product guide",
+  "imageAlt": "SUPUZZ ice and ocean themed building pieces",
+  "hero": {
+    "caption": "Collection example. Check each product page for its included pieces."
+  },
+  "intro": "L1, L2 and L3 identify SUPUZZ set versions. They are not a universal age or ability scale. Use Icy World and Coral Reef as examples of what to compare before choosing.",
+  "sections": {
+    "before": {
+      "title": "Start with the selected product",
+      "paragraphs": [
+        "Two L2 sets from different collections can contain different pieces. Compare characters, case availability and age guidance as well as piece count. Look for the contents photo of the actual version."
+      ]
+    },
+    "levelOne": {
+      "title": "L1: one way to explore a theme",
+      "paragraphs": [
+        "Look at L1 contents if you would like to begin with a small scene. Choose between a winter landscape and an underwater world based on interest and the actual included pieces."
+      ],
+      "links": {
+        "ice": "View Icy World L1",
+        "ocean": "View Coral Reef L1"
+      }
+    },
+    "levelTwo": {
+      "title": "L2: compare the scene you want to create",
+      "paragraphs": [
+        "Consider the creatures and decorations you would like to use and where the set will be played with. The L2 name alone does not measure a child’s ability."
+      ],
+      "links": {
+        "ice": "View Icy World L2",
+        "ocean": "View Coral Reef L2"
+      }
+    },
+    "levelThree": {
+      "title": "L3: think about play space and cleanup",
+      "paragraphs": [
+        "Compare L3 contents for shared landscapes or several builds. Consider storage and available space rather than choosing by piece count alone."
+      ],
+      "links": {
+        "ice": "View Icy World L3",
+        "ocean": "View Coral Reef L3"
+      }
+    },
+    "choose": {
+      "title": "Choose for today, not a required sequence",
+      "paragraphs": [
+        "You do not need to own L1 before L2 or L3. They are independent products. Start with a set that suits the child’s interests, the stated age guidance, your budget and your space."
+      ]
+    },
+    "mix": {
+      "title": "Check connections before adding another theme",
+      "paragraphs": [
+        "Nature-themed ocean, ice and forest sets include compatible pieces. Other collections, such as waffle blocks, use different structures. Check the actual product information rather than assuming compatibility from the brand or level name."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Are L1, L2 and L3 age groups?",
+        "answer": "No. They are not common age groups across all collections. Read the selected product’s age guidance and contents."
+      },
+      {
+        "question": "Must I collect every level?",
+        "answer": "No. Each version is an independent set and there is no required buying order."
+      },
+      {
+        "question": "Does one level always include the same storage case?",
+        "answer": "No. Check storage and packaging for the selected product."
+      }
+    ]
+  },
+  "related": {
+    "title": "Keep exploring",
+    "links": {
+      "ice": "Icy World gift guide",
+      "mix": "Ocean, ice and forest play ideas",
+      "products": "Compare all products"
+    }
+  }
+}

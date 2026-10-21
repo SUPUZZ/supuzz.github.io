@@ -1,0 +1,87 @@
+{
+  "homeLabel": "Accueil",
+  "blogLabel": "Blog",
+  "author": "Équipe éditoriale SUPUZZ",
+  "publishedLabel": "Publié le ",
+  "backLabel": "Retour aux articles",
+  "title": "Premières découvertes STEM : assembler, essayer et repenser",
+  "description": "Jeux de blocs gaufrés pour les petits : trier les couleurs, explorer l’équilibre, partager ses observations et choisir un coffret adapté.",
+  "shortTitle": "Blocs gaufrés et STEM",
+  "categoryLabel": "STEM et jeu",
+  "imageAlt": "Véhicules et grue construits avec des blocs SUPUZZ",
+  "hero": {
+    "caption": "Exemples de constructions. Les photos ne montrent pas le contenu complet de chaque coffret."
+  },
+  "intro": "Assembler une pièce, l’enlever et réessayer. Les enfants découvrent formes et équilibre avant de connaître le mot STEM. Commencez par la curiosité plutôt que par un cours.",
+  "sections": {
+    "first": {
+      "title": "Commencer avec quelques pièces",
+      "paragraphs": [
+        "Créez une petite forme plate ou un enclos. Laissez le temps de trouver une connexion et tourner la pièce. Un départ accessible compte plus qu’un modèle compliqué."
+      ]
+    },
+    "experiments": {
+      "title": "Une petite expérience",
+      "paragraphs": [
+        "Ajoutez une question à la construction en cours."
+      ],
+      "items": [
+        "Couleurs : trier les pièces ou alterner deux couleurs.",
+        "Équilibre : élargir la base si la construction tombe.",
+        "Espace : utiliser dessus, dessous, à côté et entre.",
+        "Transformation : refaire un mur, un véhicule ou un animal avec les mêmes pièces."
+      ],
+      "image": {
+        "alt": "Moulin et terrain de jeu en blocs gaufrés",
+        "caption": "Une disposition peut mener à une nouvelle idée."
+      }
+    },
+    "voice": {
+      "title": "Questionner avant de donner la réponse",
+      "paragraphs": [
+        "Comment le rendre plus stable ? La voiture peut-elle passer ? Réfléchissez à la suite ensemble et changez de connexion si nécessaire."
+      ]
+    },
+    "open": {
+      "title": "Suivre un exemple ou inventer",
+      "paragraphs": [
+        "Construction guidée et création libre ont chacune leur place. Ajoutez noms, destinations et personnages pour poursuivre en jeu d’imagination."
+      ],
+      "image": {
+        "alt": "Ville de blocs avec chemins, tours et véhicules",
+        "caption": "Réunir les créations dans une histoire commune."
+      }
+    },
+    "choose": {
+      "title": "Vérifier le produit précis",
+      "paragraphs": [
+        "Consultez âge conseillé, taille des pièces, avertissements et contenu. Boîtes et guides varient. Suivez le rythme de l’enfant ; le jeu ne garantit pas un résultat particulier de développement."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Faut-il connaître les STEM ?",
+        "answer": "Non. Demandez ce qui pourrait arriver, essayez ensemble et mettez des mots sur les observations."
+      },
+      {
+        "question": "Ces blocs conviennent-ils avant trois ans ?",
+        "answer": "Vérifiez l’âge et les consignes du produit précis. Tous les coffrets ne conviennent pas aux moins de trois ans."
+      },
+      {
+        "question": "Combien de temps jouer ?",
+        "answer": "Aucune durée à atteindre. Suivez l’intérêt de l’enfant et faites une pause ou changez d’activité au besoin."
+      }
+    ]
+  },
+  "related": {
+    "title": "Pour aller plus loin",
+    "links": {
+      "overview": "Découvrir les blocs arc-en-ciel",
+      "gift": "La liste pour offrir des blocs",
+      "education": "Achats éducatifs · 10 % de réduction"
+    }
+  }
+}

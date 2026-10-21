@@ -1,0 +1,61 @@
+{
+  "file": "article-building-blocks-premium.html",
+  "builder": "BuildingBlocksPremiumBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/building-blocks-premium.css"
+  ],
+  "scripts": [
+    "/js/article-pageview.js"
+  ],
+  "shared": {
+    "datePublished": "2025-11-20T00:00:00+00:00",
+    "dateModified": "2026-10-21T00:00:00+08:00",
+    "image": "/product-images/banner-desktop-siblings-blocks.webp",
+    "imageWidth": 1464,
+    "imageHeight": 600,
+    "models": [
+      {
+        "key": "tank",
+        "src": "/product-images/four-panel-tank.webp",
+        "width": 600,
+        "height": 450
+      },
+      {
+        "key": "playground",
+        "src": "/product-images/four-panel-pet-playground.webp",
+        "width": 600,
+        "height": 450
+      },
+      {
+        "key": "claw",
+        "src": "/product-images/four-panel-mechanical-claw.webp",
+        "width": 600,
+        "height": 450
+      },
+      {
+        "key": "camera",
+        "src": "/product-images/four-panel-camera.webp",
+        "width": 600,
+        "height": 450
+      }
+    ],
+    "familyImage": {
+      "src": "/product-images/banner-desktop-grandparent-grandchild-blocks.webp",
+      "width": 1464,
+      "height": 600
+    },
+    "productsUrl": "index.html#products",
+    "contactUrl": "contact.html",
+    "procurementUrl": "procurement.html?topic=education"
+  }
+}

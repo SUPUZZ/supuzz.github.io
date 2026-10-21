@@ -1,0 +1,91 @@
+{
+  "homeLabel": "Startseite",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Redaktion",
+  "publishedLabel": "Veröffentlicht am ",
+  "backLabel": "Zurück zum Blog",
+  "title": "Was bedeuten L1, L2 und L3? SUPUZZ Sets passend auswählen",
+  "description": "Icy World und Coral Reef nach Altersangabe, Inhalt und Aufbewahrung vergleichen, ohne Levelnamen als allgemeine Altersstufen zu behandeln.",
+  "shortTitle": "L1, L2 oder L3 auswählen",
+  "categoryLabel": "Produktratgeber",
+  "imageAlt": "SUPUZZ Bauteile zu Eis- und Ozeanthemen",
+  "hero": {
+    "caption": "Serienbeispiel. Den Lieferumfang findest du auf der jeweiligen Produktseite."
+  },
+  "intro": "L1, L2 und L3 kennzeichnen Set-Varianten. Sie sind keine allgemeine Alters- oder Fähigkeitsskala. Icy World und Coral Reef zeigen, was sich vor dem Kauf vergleichen lässt.",
+  "sections": {
+    "before": {
+      "title": "Beim gewählten Produkt beginnen",
+      "paragraphs": [
+        "Zwei L2-Sets verschiedener Serien können andere Teile enthalten. Vergleiche Figuren, Koffer, Altersangabe und Teilezahl. Suche das Inhaltsfoto der konkreten Variante."
+      ]
+    },
+    "levelOne": {
+      "title": "L1: eine Möglichkeit, ein Thema kennenzulernen",
+      "paragraphs": [
+        "Schau für eine kleine Szene zunächst den L1-Inhalt an. Wähle Winterlandschaft oder Unterwasserwelt nach Interesse und enthaltenen Teilen."
+      ],
+      "links": {
+        "ice": "Icy World L1 ansehen",
+        "ocean": "Coral Reef L1 ansehen"
+      }
+    },
+    "levelTwo": {
+      "title": "L2: die gewünschte Szene vergleichen",
+      "paragraphs": [
+        "Welche Tiere und Dekorationen sollen mitspielen, und wo? L2 allein misst nicht die Fähigkeiten eines Kindes."
+      ],
+      "links": {
+        "ice": "Icy World L2 ansehen",
+        "ocean": "Coral Reef L2 ansehen"
+      }
+    },
+    "levelThree": {
+      "title": "L3: Spielraum und Aufräumen mitdenken",
+      "paragraphs": [
+        "Vergleiche L3 für gemeinsame Landschaften oder mehrere Bauwerke. Berücksichtige Platz und Lagerung statt nur die Teilezahl."
+      ],
+      "links": {
+        "ice": "Icy World L3 ansehen",
+        "ocean": "Coral Reef L3 ansehen"
+      }
+    },
+    "choose": {
+      "title": "Für heute wählen, ohne feste Reihenfolge",
+      "paragraphs": [
+        "L1 ist keine Voraussetzung für L2 oder L3. Es sind eigenständige Produkte. Wähle nach Interesse, Altersangabe, Budget und Platz."
+      ]
+    },
+    "mix": {
+      "title": "Verbindungen vor einer Erweiterung prüfen",
+      "paragraphs": [
+        "Ozean-, Eis- und Wald-Natursets enthalten kompatible Teile. Andere Serien wie Waffelbausteine sind anders aufgebaut. Prüfe Produktinformationen statt nur Marke oder Level."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Sind L1, L2 und L3 Altersgruppen?",
+        "answer": "Nein, keine serienübergreifenden Altersgruppen. Lies Altersangabe und Inhalt des konkreten Produkts."
+      },
+      {
+        "question": "Muss ich alle Level sammeln?",
+        "answer": "Nein. Jede Variante ist eigenständig, ohne vorgeschriebene Kaufreihenfolge."
+      },
+      {
+        "question": "Enthält ein Level immer denselben Koffer?",
+        "answer": "Nein. Prüfe Aufbewahrung und Verpackung der gewählten Variante."
+      }
+    ]
+  },
+  "related": {
+    "title": "Weiter entdecken",
+    "links": {
+      "ice": "Icy World als Geschenk auswählen",
+      "mix": "Spielideen mit Ozean, Eis und Wald",
+      "products": "Alle Produkte vergleichen"
+    }
+  }
+}

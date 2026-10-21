@@ -1,0 +1,74 @@
+{
+  "homeLabel": "Accueil",
+  "blogLabel": "Blog",
+  "author": "Équipe éditoriale SUPUZZ",
+  "publishedLabel": "Publié le ",
+  "backLabel": "Retour aux articles",
+  "title": "Réunir océan, glace et forêt dans un monde imaginaire",
+  "description": "Des idées avec les collections nature SUPUZZ : combiner des paysages, inventer des histoires et partager le jeu en vérifiant les connexions.",
+  "shortTitle": "Jeu de combinaisons",
+  "categoryLabel": "Idées de jeu",
+  "imageAlt": "Scène associant des pièces SUPUZZ d’océan, de glace et de forêt",
+  "hero": {
+    "caption": "Exemple associant plusieurs collections. Coffrets supplémentaires vendus séparément."
+  },
+  "intro": "Un arbre rempli de poissons ou un jardin glacé sous la mer : un paysage imaginaire ne suit pas forcément le réel. Partez d’une idée de l’enfant pour construire une histoire.",
+  "sections": {
+    "connections": {
+      "title": "Commencer par les connexions adaptées",
+      "paragraphs": [
+        "Les collections océan, glace et forêt comprennent des connecteurs compatibles de la série nature. Déplacez bases, tiges et décors pour inventer un paysage. Tous les produits et toutes les pièces ne partagent pas le même système : vérifiez le coffret et ne forcez pas."
+      ]
+    },
+    "ideas": {
+      "title": "Trois scènes à essayer",
+      "paragraphs": [
+        "Les enfants peuvent nommer le lieu et choisir ses habitants."
+      ],
+      "items": [
+        "Forêt marine : imaginer coraux et branches comme des arbres habités par des poissons.",
+        "Jardin de glace : disposer décors d’hiver, fleurs et animaux sur des bases bleues.",
+        "Chemin entre deux mondes : placer océan et glace côte à côte pour inventer un voyage."
+      ]
+    },
+    "questions": {
+      "title": "Poser une question qui ouvre une histoire",
+      "paragraphs": [
+        "Qui habite ici ? D’où vient ce poisson ? Demandez l’idée avant de corriger la forme. Une question laisse la place à l’explication et à une nouvelle invention."
+      ]
+    },
+    "together": {
+      "title": "Trouver un rôle pour chacun",
+      "paragraphs": [
+        "Une personne prépare le sol, une autre choisit les décors et une autre nomme les personnages. Construisez une scène commune ou reliez de petits mondes à la fin."
+      ]
+    },
+    "start": {
+      "title": "Explorer ce que vous avez déjà",
+      "paragraphs": [
+        "Plusieurs coffrets ne sont pas nécessaires pour commencer. Imaginer une autre fonction à une pièce renouvelle le jeu. Avant un ajout, vérifiez contenu et exemples de connexion."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Les pièces nature se connectent-elles aux blocs gaufrés ?",
+        "answer": "Les systèmes diffèrent. Consultez chaque produit ; des constructions séparées peuvent partager la même histoire."
+      },
+      {
+        "question": "Faut-il suivre un exemple ?",
+        "answer": "Non. Inventez votre disposition en respectant les consignes d’utilisation. Ne forcez pas les pièces incompatibles."
+      }
+    ]
+  },
+  "related": {
+    "title": "Pour aller plus loin",
+    "links": {
+      "products": "Découvrir les produits SUPUZZ",
+      "levels": "Comparer les coffrets L1, L2 et L3",
+      "education": "Achats éducatifs · 10 % de réduction"
+    }
+  }
+}

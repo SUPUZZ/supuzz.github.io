@@ -1,0 +1,74 @@
+{
+  "homeLabel": "Startseite",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Redaktion",
+  "publishedLabel": "Veröffentlicht am ",
+  "backLabel": "Zurück zum Blog",
+  "title": "Ozean, Eis und Wald in einer Fantasiewelt verbinden",
+  "description": "Spielideen mit SUPUZZ Naturwelten: Landschaften kombinieren, Geschichten erfinden und gemeinsam bauen – mit passenden Verbindungen.",
+  "shortTitle": "Welten kombinieren",
+  "categoryLabel": "Spielideen",
+  "imageAlt": "Szene mit SUPUZZ Teilen aus Ozean-, Eis- und Waldwelten",
+  "hero": {
+    "caption": "Spielbeispiel mit mehreren Serien. Zusätzliche Sets sind separat erhältlich."
+  },
+  "intro": "Ein Baum voller Fische oder ein Eisgarten unter Wasser: Eine Fantasielandschaft muss nicht der Wirklichkeit folgen. Beginnt mit der Idee eines Kindes und baut eine Geschichte darum.",
+  "sections": {
+    "connections": {
+      "title": "Mit passenden Verbindungen beginnen",
+      "paragraphs": [
+        "Die Ozean-, Eis- und Waldserien enthalten kompatible Verbindungen der Naturkollektion. Ordnet Basen, Stiele und Dekorationen neu an. Nicht jedes SUPUZZ Produkt und Teil nutzt dasselbe System. Prüft das konkrete Set und erzwingt keine Verbindung."
+      ]
+    },
+    "ideas": {
+      "title": "Drei Landschaften zum Ausprobieren",
+      "paragraphs": [
+        "Kinder können den Ort benennen und seine Bewohner auswählen."
+      ],
+      "items": [
+        "Meereswald: Korallen und Äste als Bäume für Fische vorstellen.",
+        "Eisgarten: Winterdekorationen, Blumen und Tiere auf blauen Basen anordnen.",
+        "Weg zwischen Welten: Ozean und Eis nebeneinanderstellen und eine Reise erfinden."
+      ]
+    },
+    "questions": {
+      "title": "Fragen stellen, die Geschichten öffnen",
+      "paragraphs": [
+        "Wer wohnt hier? Woher kommt der Fisch? Frage nach der Idee, bevor du eine Form korrigierst. So bleibt Raum zum Erklären und Weitererfinden."
+      ]
+    },
+    "together": {
+      "title": "Eine Aufgabe für jede Person",
+      "paragraphs": [
+        "Eine Person gestaltet den Boden, eine wählt Dekorationen, eine benennt Figuren. Baut eine gemeinsame Szene oder verbindet kleine Einzelwelten zum Schluss."
+      ]
+    },
+    "start": {
+      "title": "Vorhandene Teile neu entdecken",
+      "paragraphs": [
+        "Mehrere Sets sind zum Einstieg nicht nötig. Eine vertraute Form anders zu deuten verändert das Spiel. Prüfe vor einer Ergänzung Inhalt und Verbindungsbeispiele."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Passen Naturteile direkt an Waffelbausteine?",
+        "answer": "Die Systeme unterscheiden sich. Beachte die Produktangaben; getrennte Bauwerke können nebeneinander eine Geschichte teilen."
+      },
+      {
+        "question": "Müssen wir einem Beispiel folgen?",
+        "answer": "Nein. Eigene Anordnungen sind möglich, solange die Nutzungshinweise beachtet werden. Unpassende Teile nicht mit Kraft verbinden."
+      }
+    ]
+  },
+  "related": {
+    "title": "Weiter entdecken",
+    "links": {
+      "products": "SUPUZZ Produkte entdecken",
+      "levels": "L1, L2 und L3 vergleichen",
+      "education": "Bildungseinkäufe · 10 % Rabatt"
+    }
+  }
+}

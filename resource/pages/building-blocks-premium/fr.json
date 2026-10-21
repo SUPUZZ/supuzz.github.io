@@ -1,0 +1,111 @@
+{
+  "homeLabel": "Accueil",
+  "blogLabel": "Blog",
+  "author": "Équipe éditoriale SUPUZZ",
+  "publishedLabel": "Publié le ",
+  "backLabel": "Retour aux articles",
+  "title": "Assembler, imaginer et jouer ensemble avec les blocs arc-en-ciel SUPUZZ",
+  "description": "Découvrez les blocs gaufrés SUPUZZ : premières constructions, couleurs, formes, jeu partagé et rangement à la maison ou en classe.",
+  "shortTitle": "Blocs gaufrés arc-en-ciel",
+  "categoryLabel": "Guide produit",
+  "imageAlt": "Un frère et une sœur jouent avec les blocs arc-en-ciel SUPUZZ",
+  "readingTime": "4 min de lecture",
+  "intro": "Que va-t-on construire ? Les pièces colorées offrent un point de départ. Suivre un exemple, changer d’idée ou inventer une autre forme : le chemin fait aussi partie du jeu.",
+  "hero": {
+    "alt": "Un frère et une sœur jouent avec les blocs arc-en-ciel SUPUZZ",
+    "caption": "Une idée en rencontre une autre. Construire ensemble fait partie de l’aventure."
+  },
+  "connect": {
+    "title": "Des formes plates à un monde en volume",
+    "paragraphs": [
+      "Assemblez les pièces sur les côtés, puis en hauteur. Un petit mur ou un enclos devient une maison ou un véhicule. Démonter et essayer une autre disposition est aussi une façon de jouer."
+    ]
+  },
+  "learning": {
+    "title": "Découvrir couleurs, formes et équilibre",
+    "paragraphs": [
+      "STEAM réunit sciences, technologie, ingénierie, arts et mathématiques. « Est-ce que cela tient ? » invite à observer puis réessayer. Laissez aux enfants le temps d’expliquer leurs idées."
+    ],
+    "ideas": [
+      "Trier les couleurs et inventer une suite.",
+      "Transformer une forme plate en construction debout.",
+      "Élargir la base quand une tour tombe.",
+      "Donner un nom et une histoire à une création."
+    ]
+  },
+  "models": {
+    "title": "Plus d’une chose à construire",
+    "paragraphs": [
+      "Véhicules, appareils photo et petits terrains de jeu sont des points de départ. Demandez ce qui pourrait changer, puis inventez votre version."
+    ],
+    "images": {
+      "tank": {
+        "alt": "Véhicule en forme de char réalisé avec des blocs arc-en-ciel",
+        "caption": "Imaginer un véhicule."
+      },
+      "playground": {
+        "alt": "Terrain de jeu pour animaux construit en blocs SUPUZZ",
+        "caption": "Créer un petit monde."
+      },
+      "claw": {
+        "alt": "Pince mécanique réalisée en blocs gaufrés",
+        "caption": "Explorer un mécanisme."
+      },
+      "camera": {
+        "alt": "Appareil photo en blocs colorés",
+        "caption": "Recréer un objet familier."
+      }
+    }
+  },
+  "together": {
+    "title": "Les idées grandissent quand on joue ensemble",
+    "paragraphs": [
+      "Une personne construit la base, une autre choisit les couleurs. Chacun peut prendre un rôle et participer à son rythme.",
+      "PLAY WITH ALL KIDS. Nous croyons que le jeu est un langage universel de découverte pour imaginer, construire et créer des liens."
+    ]
+  },
+  "family": {
+    "alt": "Un grand-parent et son petit-enfant construisent avec SUPUZZ",
+    "caption": "Et ensuite ? Partager les idées entre générations."
+  },
+  "storage": {
+    "title": "Ranger pour préparer la prochaine aventure",
+    "paragraphs": [
+      "Rassemblez les pièces après le jeu. Trier peut faire partie du rangement ; une photo garde le souvenir avant de reconstruire. Boîtes et accessoires varient selon le coffret : vérifiez la version choisie."
+    ]
+  },
+  "choosing": {
+    "title": "À la maison ou en classe",
+    "paragraphs": [
+      "Essayez un pont à plusieurs ou commencez par une construction libre. Pour un cadeau ou une activité de groupe, vérifiez âge conseillé, taille des pièces, contenu et consignes du produit."
+    ]
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Par quoi commencer ?",
+        "answer": "Un petit enclos ou une maison simple, puis on peut changer la hauteur ou les couleurs."
+      },
+      {
+        "question": "Une boîte est-elle incluse ?",
+        "answer": "Certains coffrets en comprennent une. Vérifiez le contenu de la version choisie."
+      },
+      {
+        "question": "Les blocs conviennent-ils à d’autres marques ?",
+        "answer": "Des formes similaires ne garantissent pas des connecteurs identiques. La compatibilité avec les autres marques n’est pas garantie."
+      },
+      {
+        "question": "Les écoles peuvent-elles commander en quantité ?",
+        "answer": "Oui. Indiquez le contexte et la quantité dans la demande d’achat éducatif."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Que construirez-vous ensuite ?",
+    "body": "Découvrez les coffrets, posez une question produit ou échangez sur un achat éducatif ou de groupe.",
+    "productsLabel": "Découvrir les produits",
+    "contactLabel": "Poser une question produit",
+    "procurementLabel": "Achats éducatifs et de groupe"
+  }
+}

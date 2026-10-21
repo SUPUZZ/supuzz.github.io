@@ -1,0 +1,86 @@
+{
+  "homeLabel": "Início",
+  "blogLabel": "Blog",
+  "author": "Equipe editorial SUPUZZ",
+  "publishedLabel": "Publicado em ",
+  "backLabel": "Voltar ao blog",
+  "title": "Um lugar para desenhar e ler: escolher uma cadeira infantil SUPUZZ",
+  "description": "Conheça a cadeira infantil rosa SUPUZZ: venda por unidade, dimensões, combinação com a mesa e espaço para o dia a dia.",
+  "shortTitle": "Escolher uma cadeira infantil",
+  "categoryLabel": "Guia de produto",
+  "imageAlt": "Cadeira infantil rosa SUPUZZ",
+  "hero": {
+    "caption": "Uma cadeira rosa. Mesa, brinquedos e acessórios não incluídos."
+  },
+  "intro": "Um lugar próprio para desenhar, ler e brincar à mesa. Antes de escolher a cadeira rosa SUPUZZ, considere a postura da criança, a mesa e o espaço disponível.",
+  "sections": {
+    "size": {
+      "title": "Verificar medidas e ajuste, não só idade",
+      "paragraphs": [
+        "Compare as dimensões com o cômodo e a mesa. Altura total não é altura do assento. Considere os pés e a posição à mesa; uma cadeira não serve necessariamente para todas as crianças."
+      ],
+      "image": {
+        "alt": "Vista lateral da cadeira SUPUZZ",
+        "caption": "Confira as dimensões atuais na página do produto."
+      }
+    },
+    "single": {
+      "title": "Este produto é uma cadeira",
+      "paragraphs": [
+        "A cadeira rosa é vendida individualmente. Mesas e acessórios nas fotos não estão incluídos. Se procura um conjunto, confira nome e conteúdo."
+      ]
+    },
+    "place": {
+      "title": "Escolher o local conforme a atividade",
+      "paragraphs": [
+        "Um canto de desenho, leitura ou construção ajuda a decidir a posição."
+      ],
+      "items": [
+        "Deixar espaço para sentar e sair.",
+        "Seguir as instruções para o piso e a instalação.",
+        "Acompanhar o uso e evitar ficar em pé na cadeira ou sentar de forma instável."
+      ],
+      "image": {
+        "alt": "Cadeira SUPUZZ ao lado de uma mesa de atividades",
+        "caption": "Exemplo de uso. Mesa e brinquedos vendidos separadamente."
+      }
+    },
+    "care": {
+      "title": "Seguir as instruções de cuidado",
+      "paragraphs": [
+        "Confira limpeza, armazenamento e montagem. Verifique os produtos adequados antes de remover manchas. Pare de usar uma cadeira danificada e entre em contato com o suporte."
+      ]
+    },
+    "choose": {
+      "title": "Escolher para sua casa",
+      "paragraphs": [
+        "Compare unidade de venda, especificações, dimensões e ambiente. Consulte as informações atuais para limite de peso, certificações e medidas do assento, sem deduzi-las de descrições gerais."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Perguntas frequentes",
+    "items": [
+      {
+        "question": "Acompanha mesa?",
+        "answer": "Não. É uma cadeira rosa, sem mesa, brinquedos ou acessórios."
+      },
+      {
+        "question": "Até que idade pode ser usada?",
+        "answer": "A idade sozinha não determina o ajuste. Confira as condições do produto, o tamanho da criança e a mesa."
+      },
+      {
+        "question": "Escolas podem comprar várias cadeiras?",
+        "answer": "Sim. Informe quantidade e uso na consulta de compras educacionais."
+      }
+    ]
+  },
+  "related": {
+    "title": "Continue explorando",
+    "links": {
+      "product": "Ver a cadeira rosa",
+      "products": "Ver produtos SUPUZZ",
+      "education": "Compras educacionais · 10% de desconto"
+    }
+  }
+}

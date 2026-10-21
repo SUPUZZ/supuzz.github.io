@@ -1,0 +1,111 @@
+{
+  "homeLabel": "Home",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Editorial Team",
+  "publishedLabel": "Published ",
+  "backLabel": "Back to the blog",
+  "title": "Connect, imagine and play together with SUPUZZ Rainbow Waffle Blocks",
+  "description": "Explore SUPUZZ Rainbow Waffle Blocks: first builds, color and shape activities, shared play and storage ideas for home or the classroom.",
+  "shortTitle": "Rainbow Waffle Blocks",
+  "categoryLabel": "Product guide",
+  "imageAlt": "Siblings playing together with SUPUZZ Rainbow Waffle Blocks",
+  "readingTime": "4 min read",
+  "intro": "What shall we build? Colorful interlocking pieces give children a place to start. Follow an example, change it halfway through or invent something new. The process is part of the play.",
+  "hero": {
+    "alt": "Siblings playing together with SUPUZZ Rainbow Waffle Blocks",
+    "caption": "One idea meets another. Building together is part of the adventure."
+  },
+  "connect": {
+    "title": "From flat shapes to a world in three dimensions",
+    "paragraphs": [
+      "Connect pieces sideways, then build upward. Start with a small wall or enclosure and turn it into a house or vehicle. Take it apart and try a different arrangement; finishing a model is only one way to play."
+    ]
+  },
+  "learning": {
+    "title": "Discover color, shape and balance",
+    "paragraphs": [
+      "STEAM brings science, technology, engineering, art and mathematics together. Everyday questions such as “Will it stand?” invite children to observe and try again. Give them time to explain their ideas."
+    ],
+    "ideas": [
+      "Sort pieces by color and arrange a favorite sequence.",
+      "Turn a flat shape into a standing construction.",
+      "Change the base when a tall build falls over.",
+      "Give a finished creation a name and a story."
+    ]
+  },
+  "models": {
+    "title": "More than one thing to build",
+    "paragraphs": [
+      "Vehicles, cameras and small playgrounds are starting points. Ask what could change, then make the design your own."
+    ],
+    "images": {
+      "tank": {
+        "alt": "A tank-shaped vehicle made with rainbow waffle blocks",
+        "caption": "Imagine a vehicle."
+      },
+      "playground": {
+        "alt": "A pet playground made with SUPUZZ blocks",
+        "caption": "Build a little world."
+      },
+      "claw": {
+        "alt": "A mechanical claw built with waffle blocks",
+        "caption": "Explore a mechanism."
+      },
+      "camera": {
+        "alt": "A colorful block camera",
+        "caption": "Recreate something familiar."
+      }
+    }
+  },
+  "together": {
+    "title": "Ideas grow when we play together",
+    "paragraphs": [
+      "One person builds a base while another chooses colors. Children can take different roles and join at their own pace.",
+      "PLAY WITH ALL KIDS. We believe play is a universal language of discovery: a way to imagine, build and connect."
+    ]
+  },
+  "family": {
+    "alt": "A grandparent and grandchild building with SUPUZZ blocks",
+    "caption": "What shall we build next? Share ideas across generations."
+  },
+  "storage": {
+    "title": "Make cleanup the start of the next adventure",
+    "paragraphs": [
+      "Gather the pieces after play. Sorting by color can be part of tidying, and a photo can save a favorite creation before rebuilding. Storage cases and accessories vary by set; check the selected product."
+    ]
+  },
+  "choosing": {
+    "title": "At home or in the classroom",
+    "paragraphs": [
+      "Try a shared project such as a bridge, or allow time for free building first. For gifts and group activities, check the selected product’s age guidance, piece sizes, contents and instructions."
+    ]
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "What should we build first?",
+        "answer": "Try a small enclosure or a simple house, then change the height or colors."
+      },
+      {
+        "question": "Is a storage case included?",
+        "answer": "Some sets include a case. Check the contents of the version you choose."
+      },
+      {
+        "question": "Will these fit other brands?",
+        "answer": "Similar shapes do not guarantee matching connectors. Compatibility with other brands is not guaranteed."
+      },
+      {
+        "question": "Can schools order in quantity?",
+        "answer": "Yes. Tell us the setting and quantity through the education purchasing inquiry."
+      }
+    ]
+  },
+  "cta": {
+    "title": "What will you build next?",
+    "body": "Browse the sets, ask a product question or discuss education and group purchases.",
+    "productsLabel": "Explore products",
+    "contactLabel": "Ask a product question",
+    "procurementLabel": "Education and group purchasing"
+  }
+}

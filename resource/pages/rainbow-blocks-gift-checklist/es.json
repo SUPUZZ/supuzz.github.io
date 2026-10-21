@@ -1,0 +1,84 @@
+{
+  "homeLabel": "Inicio",
+  "blogLabel": "Blog",
+  "author": "Equipo editorial de SUPUZZ",
+  "publishedLabel": "Publicado el ",
+  "backLabel": "Volver al blog",
+  "title": "Antes de regalar bloques: cinco puntos para las familias",
+  "description": "Elige un regalo pensando en la familia: edad indicada, intereses, espacio de juego, almacenamiento y contenido real del conjunto.",
+  "shortTitle": "Lista para regalar bloques",
+  "categoryLabel": "Regalos y familia",
+  "imageAlt": "Parque de atracciones hecho con bloques arcoíris SUPUZZ",
+  "hero": {
+    "caption": "Regala tiempo para crear. La foto muestra una construcción de ejemplo."
+  },
+  "intro": "Un regalo de construcción debe encajar en la vida diaria y no solo en el momento de abrirlo. Mira más allá de la caja y del número de piezas.",
+  "sections": {
+    "checklist": {
+      "title": "Cinco comprobaciones antes de comprar",
+      "paragraphs": [
+        "Si puedes, pregunta a la familia o a quien cuida del niño."
+      ],
+      "items": [
+        "Edad: ¿el producto y sus instrucciones son adecuados?",
+        "Intereses: ¿conecta con sus vehículos, animales o colores favoritos?",
+        "Espacio: ¿hay sitio para desplegar las piezas?",
+        "Almacenamiento: ¿incluye estuche y hay dónde guardarlo?",
+        "Contenido: ¿se distinguen los ejemplos de las piezas y accesorios incluidos?"
+      ]
+    },
+    "storage": {
+      "title": "Recoger también forma parte del regalo",
+      "paragraphs": [
+        "Un lugar para reunir las piezas facilita volver a jugar. Comprueba el estuche y el espacio: el embalaje varía entre productos y versiones."
+      ],
+      "image": {
+        "alt": "Grúa y vehículos hechos con bloques",
+        "caption": "Los ejemplos ayudan a imaginar el juego favorito del destinatario."
+      }
+    },
+    "give": {
+      "title": "Añadir una invitación a construir juntos",
+      "paragraphs": [
+        "Vamos a hacer una casa para tu coche. Una invitación sencilla puede aportar más que un primer modelo perfecto. Siéntate al lado y deja espacio a sus ideas."
+      ]
+    },
+    "versions": {
+      "title": "El nivel no sustituye a la edad",
+      "paragraphs": [
+        "L1, L2 y L3 identifican versiones. Las colecciones difieren en contenido y edad indicada; consulta el producto en lugar de aplicar una única tabla."
+      ]
+    },
+    "group": {
+      "title": "Planificar regalos de temporada y para grupos",
+      "paragraphs": [
+        "Al consultar, indica cantidad, presupuesto y fechas preferidas. Confirma precio, existencias y entrega al comprar. Un pedido de regalos no recibe automáticamente un descuento educativo."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Puedo regalarlos por un segundo cumpleaños?",
+        "answer": "Revisa la edad y las piezas del producto concreto; los artículos de una marca pueden tener recomendaciones distintas."
+      },
+      {
+        "question": "¿Más piezas siempre es mejor?",
+        "answer": "No. Considera también tema, espacio y recogida."
+      },
+      {
+        "question": "¿Dónde consulto un regalo para un grupo?",
+        "answer": "Usa la consulta de regalos de temporada y para grupos e indica cantidad y ocasión."
+      }
+    ]
+  },
+  "related": {
+    "title": "Sigue descubriendo",
+    "links": {
+      "overview": "Conocer los bloques arcoíris",
+      "products": "Ver productos",
+      "inquiry": "Consultas sobre regalos de temporada y para grupos"
+    }
+  }
+}

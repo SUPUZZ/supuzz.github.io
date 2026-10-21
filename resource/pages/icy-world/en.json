@@ -1,0 +1,102 @@
+{
+  "homeLabel": "Home",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Editorial Team",
+  "publishedLabel": "Published ",
+  "backLabel": "Back to the blog",
+  "title": "Christmas Gifts for Kids: Choose an Icy World Building Set",
+  "description": "Choose a Christmas building gift by age, interests and space. Compare SUPUZZ Icy World L1, L2 and L3, with simple wrapping and family play ideas.",
+  "shortTitle": "Icy World gift guide",
+  "categoryLabel": "Gifts & family",
+  "imageAlt": "SUPUZZ Icy World animal figures and branching building pieces in a winter scene",
+  "intro": "A Christmas gift can start a story that lasts beyond December. If a child enjoys animals and building, an Icy World set offers a winter scene to rearrange together. Choose one suitable set rather than several similar boxes.",
+  "hero": {
+    "caption": "Icy World building pieces and animals; see the selected product page for the exact set contents."
+  },
+  "sections": {
+    "choose": {
+      "title": "Start with the child, then choose a set",
+      "paragraphs": [
+        "Check the exact package age guidance, the child’s interests and the space available for building and storage. L1, L2 and L3 are product versions, not a universal ability scale. Compare the contents shown for each version; a larger piece count is not automatically a better gift."
+      ]
+    },
+    "levelOne": {
+      "title": "Icy World · L1",
+      "paragraphs": [
+        "A 40-piece first snow garden, with a penguin ready to move in."
+      ],
+      "image": {
+        "alt": "Icy World · L1",
+        "caption": "Icy World building pieces and animals; see the selected product page for the exact set contents."
+      },
+      "links": {
+        "product": "View the set · Icy World · L1"
+      }
+    },
+    "levelTwo": {
+      "title": "Icy World · L2",
+      "paragraphs": [
+        "A 79-piece snow park with animal characters and a storage box."
+      ],
+      "image": {
+        "alt": "Icy World · L2",
+        "caption": "Icy World building pieces and animals; see the selected product page for the exact set contents."
+      },
+      "links": {
+        "product": "View the set · Icy World · L2"
+      }
+    },
+    "levelThree": {
+      "title": "Icy World · L3",
+      "paragraphs": [
+        "Snowy trees, Arctic characters and a winter world to rebuild."
+      ],
+      "image": {
+        "alt": "Icy World · L3",
+        "caption": "Icy World building pieces and animals; see the selected product page for the exact set contents."
+      },
+      "links": {
+        "product": "View the set · Icy World · L3"
+      }
+    },
+    "wrapping": {
+      "title": "Wrap a complete gift with a personal invitation",
+      "paragraphs": [
+        "Keep the original packaging, age label and instructions together. Reuse a gift bag and add a handwritten card: “Let’s build a winter home for the animals.” Holiday wrapping and decorations are your own additions; the sets are everyday building toys."
+      ]
+    },
+    "play": {
+      "title": "Make time for the first build",
+      "paragraphs": [
+        "Clear a flat surface, let the child choose a starting scene and take turns adding a path or meeting place. Invent a short story about a visitor in the snow. Stop or change the game when the child wants, then gather the pieces together. In January, turn the same pieces into a new adventure."
+      ]
+    },
+    "shopping": {
+      "title": "Check the gift before ordering",
+      "paragraphs": [
+        "Use the linked product pages to confirm the selected package, age label and current contents. Amazon.com availability, prices, delivery dates and shipping eligibility can change. For Canada, also check the currency, shipping and possible import charges for the recipient’s address."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Do I need all three sets?",
+        "answer": "No. Choose one version that fits the child and your budget. The story and time spent together matter more than collecting every level."
+      },
+      {
+        "question": "Are L1, L2 and L3 age groups?",
+        "answer": "No. They are not common age groups across all collections. Read the selected product’s age guidance and contents."
+      }
+    ]
+  },
+  "related": {
+    "title": "Keep exploring",
+    "links": {
+      "levels": "Compare L1, L2 and L3 sets",
+      "gifts": "Building toy gift checklist",
+      "inquiry": "Seasonal and group gift inquiries"
+    }
+  }
+}

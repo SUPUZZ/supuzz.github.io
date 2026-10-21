@@ -133,11 +133,18 @@ if (require.main === module) new OceanPlayBuilder().build();
 
 `templates/pages/document.cjs` 自动提供公共头尾组件、页面语言、canonical、双向 hreflang、社交分享标记和页面/文章结构化数据。内容模板不要重复输出文档头、公共头尾或 include；可通过 JS 模块复用内部渲染函数。复用已有页面模式和样式，文章标题区必须是 `div.article-header`。
 
-生成的 HTML 带来源注释，只修改源文件；Builder 和译文修改后重新运行构建命令，本地预览不会自动监听这些源文件并重新生成。生成器也兼容已有 `template` 配置指向 `templates/pages/*.cjs` 的函数模板；新页面优先使用 Builder 类。新增文章须沿用 `scripts/blog-card.js` 加入对应语言博客列表。删去一个页面或语言时，需要明确移除对应的旧生成 HTML，生成器不会自动删除文件。
+生成的 HTML 带来源注释，只修改源文件；Builder 和译文修改后重新运行构建命令，本地预览不会自动监听这些源文件并重新生成。生成器也兼容已有 `template` 配置指向 `templates/pages/*.cjs` 的函数模板；新页面优先使用 Builder 类。文章构建后，`scripts/build-article-blog.js` 会从同一份语言 JSON 同步各语言博客卡片的标题、摘要、封面、图片说明和发布日期，并补齐缺少的文章入口。卡片保留原有分类；新增入口默认使用积木分类。删去一个页面或语言时，需要明确移除对应的旧生成 HTML，生成器不会自动删除文件。
 
 只生成 `locales` 指定的语言；新多语言页面通常列出全部七种语言，单语言需求只列对应语言。指定译文缺失时会在写入前失败，不发布伪装成其他语言的英文页。英文文案更新时同步检查译文；AI 翻译应先确认并保存，构建不调用在线翻译。
 
 验证：运行 `npm run pages:test`、`npm run pages:build`，针对实际新增页面执行 Parcel 构建，检查公共组件展开，再运行 `git diff --check`。生成器会拒绝覆盖不带当前来源注释的旧页面；迁移旧页面应先核对并保存旧内容，再明确替换为生成输出。
+
+文章 `building-blocks-premium`、`icy-world`、`mix-play`、`waffle-blocks-stem-toddler`、`rainbow-blocks-gift-checklist`、`thanksgiving-gift`、`kids-chair`、`levels` 已全部迁入新框架，生成英语、西班牙语、日语、繁体中文、德语、葡萄牙语、法语共 56 个页面。每篇文章只维护一个 `builders/<Article>Builder.js`，`resource/pages/<id>/page.json` 保存共享图片、日期、链接与章节配置；同目录七份语言 JSON 保存各语言正文和图片说明。其余七篇复用 `builders/ArticleBuilder.js` 的文章布局及 `static/css/article-guide.css`，彩虹华夫积木详解保留独立的图片画廊布局。
+
+运行 `npm run pages:build` 会生成所有已迁移页面并同步七种语言的博客卡片；`npm start` 和生产构建都会先执行。也可直接运行对应 Builder，仅生成该篇的七种语言页面（例如 `npm run building-blocks-premium:build`）；需要同步博客时再运行 `npm run pages:build`。缺少译文会使构建失败，不使用英文兜底。旧 HTML 已由生成文件替换，后续只改 Builder、共享资料与语言 JSON。
+
+冰雪世界文章保留圣诞送礼主题，感恩节文章保留品牌故事。`christmas:build` 现在直接调用 `IcyWorldBuilder`，不再维护另一套文章布局；仍负责保留 42 个节日旧网址跳转和英文首页资料。现有网址和原始发布日期保留。
+
 
 ## 产品报价与 Google 富媒体结果
 

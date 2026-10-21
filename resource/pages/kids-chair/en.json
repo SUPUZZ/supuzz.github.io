@@ -1,0 +1,86 @@
+{
+  "homeLabel": "Home",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Editorial Team",
+  "publishedLabel": "Published ",
+  "backLabel": "Back to the blog",
+  "title": "A place to draw and read: choosing a SUPUZZ kids chair",
+  "description": "Meet the SUPUZZ pink kids chair and check the details that matter: the single-chair selling unit, dimensions, table fit and everyday placement.",
+  "shortTitle": "Choosing a kids chair",
+  "categoryLabel": "Product guide",
+  "imageAlt": "The SUPUZZ pink kids chair",
+  "hero": {
+    "caption": "One pink kids chair. Table, toys and accessories are not included."
+  },
+  "intro": "A personal place for drawing, reading and table play. Before choosing the SUPUZZ pink kids chair, consider the child’s seated position, the table and the space where it will be used.",
+  "sections": {
+    "size": {
+      "title": "Check dimensions and fit, not age alone",
+      "paragraphs": [
+        "Compare the product dimensions with the room and table. Overall height is different from seat height. Consider the child’s feet and position at the table; one chair cannot be assumed to fit every child and table."
+      ],
+      "image": {
+        "alt": "Side view of the SUPUZZ kids chair",
+        "caption": "Check the current product page for dimensions."
+      }
+    },
+    "single": {
+      "title": "This product is one chair",
+      "paragraphs": [
+        "The pink SUPUZZ kids chair is sold individually. Tables and play accessories shown in photos are not included. Check the product name and contents if you want a set."
+      ]
+    },
+    "place": {
+      "title": "Choose a place for the activity",
+      "paragraphs": [
+        "A drawing corner, a reading spot or a building table can help you decide where the chair belongs."
+      ],
+      "items": [
+        "Allow enough space to get in and out.",
+        "Follow the instructions for the floor and setup.",
+        "Supervise use and discourage standing on the chair or unstable sitting."
+      ],
+      "image": {
+        "alt": "A SUPUZZ chair used beside a children’s activity table",
+        "caption": "Use example. Table and toys are sold separately."
+      }
+    },
+    "care": {
+      "title": "Follow the product’s care instructions",
+      "paragraphs": [
+        "Check cleaning, storage and assembly guidance before use. Confirm suitable cleaners before treating marks. Stop using a damaged chair and contact support about the problem."
+      ]
+    },
+    "choose": {
+      "title": "Choose around your own home",
+      "paragraphs": [
+        "Compare the selling unit, specifications, dimensions and setting. Use current product information for load limits, certifications and seat measurements rather than assuming them from general descriptions."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Is a table included?",
+        "answer": "No. This product is one pink chair; a table, toys and accessories are not included."
+      },
+      {
+        "question": "Until what age can a child use it?",
+        "answer": "Age alone does not establish fit. Check the product conditions, the child’s size and the table combination."
+      },
+      {
+        "question": "Can schools or preschools order several chairs?",
+        "answer": "Yes. Share the quantity and setting through the education purchasing inquiry."
+      }
+    ]
+  },
+  "related": {
+    "title": "Keep exploring",
+    "links": {
+      "product": "View the pink kids chair",
+      "products": "Browse SUPUZZ products",
+      "education": "Education purchasing · 10% discount"
+    }
+  }
+}

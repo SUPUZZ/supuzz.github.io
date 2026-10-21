@@ -1,0 +1,91 @@
+{
+  "file": "article-levels.html",
+  "builder": "LevelsBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/article-guide.css"
+  ],
+  "scripts": [
+    "/js/article-pageview.js"
+  ],
+  "shared": {
+    "datePublished": "2025-11-20T00:00:00+00:00",
+    "dateModified": "2026-10-21T00:00:00+08:00",
+    "image": "/product-images/ice-series-levels.webp",
+    "imageWidth": 1000,
+    "imageHeight": 1000,
+    "sections": [
+      {
+        "key": "before"
+      },
+      {
+        "key": "levelOne",
+        "links": [
+          {
+            "key": "ice",
+            "href": "product-icy-world-l1.html"
+          },
+          {
+            "key": "ocean",
+            "href": "product-ocean-building-blocks-l1.html"
+          }
+        ]
+      },
+      {
+        "key": "levelTwo",
+        "links": [
+          {
+            "key": "ice",
+            "href": "product-icy-world-l2.html"
+          },
+          {
+            "key": "ocean",
+            "href": "product-coral-reef-l2.html"
+          }
+        ]
+      },
+      {
+        "key": "levelThree",
+        "links": [
+          {
+            "key": "ice",
+            "href": "product-icy-world-l3.html"
+          },
+          {
+            "key": "ocean",
+            "href": "product-coral-reef-l3.html"
+          }
+        ]
+      },
+      {
+        "key": "choose"
+      },
+      {
+        "key": "mix"
+      }
+    ],
+    "related": [
+      {
+        "key": "ice",
+        "href": "article-icy-world.html"
+      },
+      {
+        "key": "mix",
+        "href": "article-mix-play.html"
+      },
+      {
+        "key": "products",
+        "href": "index.html#products"
+      }
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "homeLabel": "Home",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Editorial Team",
+  "publishedLabel": "Published ",
+  "backLabel": "Back to the blog",
+  "title": "First STEM discoveries with waffle blocks: connect, test and rethink",
+  "description": "Simple waffle-block play ideas for young children: sorting colors, exploring balance, sharing observations and choosing a suitable set.",
+  "shortTitle": "Waffle blocks and STEM",
+  "categoryLabel": "STEM & play",
+  "imageAlt": "Vehicles and a crane built from SUPUZZ waffle blocks",
+  "hero": {
+    "caption": "Example builds. Photos do not show the complete contents of every set."
+  },
+  "intro": "Connect a piece, take it off and try again. Children can notice shapes and balance through hands-on play before they know the word STEM. Start with curiosity rather than a lesson plan.",
+  "sections": {
+    "first": {
+      "title": "Begin with a few pieces",
+      "paragraphs": [
+        "Make a small flat shape or enclosure. Give children time to find a connection and turn a piece around. A manageable starting point matters more than a complicated finished model."
+      ]
+    },
+    "experiments": {
+      "title": "Try one small experiment",
+      "paragraphs": [
+        "Add a question to what children are already building."
+      ],
+      "items": [
+        "Color: sort matching pieces or alternate two colors.",
+        "Balance: widen a base when a tall build falls over.",
+        "Space: use words such as above, below, beside and between.",
+        "Change: turn the same pieces into a wall, vehicle or creature."
+      ],
+      "image": {
+        "alt": "A windmill and playground built from waffle blocks",
+        "caption": "Let one arrangement lead to another idea."
+      }
+    },
+    "voice": {
+      "title": "Ask before offering the answer",
+      "paragraphs": [
+        "What might make it steadier? Is there room for the car? Think through a next step together. When something does not work, try a different connection."
+      ]
+    },
+    "open": {
+      "title": "Follow an example or invent your own",
+      "paragraphs": [
+        "Both guided builds and free construction have a place. Add names, destinations and characters to turn a finished model into pretend play."
+      ],
+      "image": {
+        "alt": "A waffle-block town with paths, towers and vehicles",
+        "caption": "Bring creations together as a shared story setting."
+      }
+    },
+    "choose": {
+      "title": "Choose the actual product, not just the category",
+      "paragraphs": [
+        "Check the selected set’s age guidance, piece sizes, warnings and contents. Cases and guides vary. Enjoy the activity at the child’s pace; it does not promise a particular developmental outcome."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Do adults need STEM expertise?",
+        "answer": "No. Ask what might happen, try it together and put the child’s observations into words."
+      },
+      {
+        "question": "Can children under three use these blocks?",
+        "answer": "Check the age guidance and instructions of the specific product. Not every set is suitable for children under three."
+      },
+      {
+        "question": "How long should a session last?",
+        "answer": "There is no target duration. Follow the child’s interest and take a break or change activities when needed."
+      }
+    ]
+  },
+  "related": {
+    "title": "Keep exploring",
+    "links": {
+      "overview": "Meet Rainbow Waffle Blocks",
+      "gift": "Building toy gift checklist",
+      "education": "Education purchasing · 10% discount"
+    }
+  }
+}

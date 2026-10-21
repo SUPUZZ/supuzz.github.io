@@ -1,0 +1,84 @@
+{
+  "homeLabel": "Home",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Editorial Team",
+  "publishedLabel": "Published ",
+  "backLabel": "Back to the blog",
+  "title": "Before you give building blocks: a five-point family checklist",
+  "description": "Choose a building toy gift around the child and family: check age guidance, interests, play space, storage and the actual set contents.",
+  "shortTitle": "Building toy gift checklist",
+  "categoryLabel": "Gifts & family",
+  "imageAlt": "A colorful amusement park built with SUPUZZ waffle blocks",
+  "hero": {
+    "caption": "Give the time to create. The photo shows an example build."
+  },
+  "intro": "A good building gift fits everyday life as well as the moment the box opens. Look beyond box size and piece count to the child’s interests and the family’s space.",
+  "sections": {
+    "checklist": {
+      "title": "Five things to check before ordering",
+      "paragraphs": [
+        "If possible, ask a parent or caregiver about these points."
+      ],
+      "items": [
+        "Age guidance: does the actual product match the child and its instructions?",
+        "Interests: does it connect with favorite vehicles, animals or color play?",
+        "Play space: is there room to spread out and build?",
+        "Storage: is a case included, and is there somewhere to keep it?",
+        "Contents: can you distinguish example photos from the pieces and accessories included?"
+      ]
+    },
+    "storage": {
+      "title": "Cleanup is part of the gift",
+      "paragraphs": [
+        "A place to gather the pieces makes the next play session easier to start. Check the case and storage space; packaging differs between products and versions."
+      ],
+      "image": {
+        "alt": "Crane and vehicle creations built from waffle blocks",
+        "caption": "Use examples to imagine the recipient’s favorite kind of play."
+      }
+    },
+    "give": {
+      "title": "Add an invitation to build together",
+      "paragraphs": [
+        "Let’s build a home for your car. A simple invitation can be more useful than a perfect first model. Sit alongside the child and leave room for their idea."
+      ]
+    },
+    "versions": {
+      "title": "A level name is not an age label",
+      "paragraphs": [
+        "L1, L2 and L3 identify versions. Contents and age guidance differ across collections, so check the selected product rather than applying one age chart to every set."
+      ]
+    },
+    "group": {
+      "title": "Plan seasonal and group gifts early",
+      "paragraphs": [
+        "Share your quantity, budget and preferred timing when asking about a group order. Confirm current price, stock and delivery when buying. Gift orders do not automatically receive an education discount."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Can I give blocks for a second birthday?",
+        "answer": "Check the specific product’s age guidance and pieces. Products from one brand can have different age recommendations."
+      },
+      {
+        "question": "Is the set with the most pieces always best?",
+        "answer": "No. Consider the theme, play space and cleanup as well as the number of pieces."
+      },
+      {
+        "question": "Where can I discuss a group gift order?",
+        "answer": "Use the seasonal and group gift inquiry below and tell us the quantity and occasion."
+      }
+    ]
+  },
+  "related": {
+    "title": "Keep exploring",
+    "links": {
+      "overview": "Meet Rainbow Waffle Blocks",
+      "products": "Browse products",
+      "inquiry": "Seasonal and group gift inquiries"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "file": "article-waffle-blocks-stem-toddler.html",
+  "builder": "WaffleBlocksStemToddlerBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/article-guide.css"
+  ],
+  "scripts": [
+    "/js/article-pageview.js"
+  ],
+  "shared": {
+    "datePublished": "2026-04-17T12:00:00+00:00",
+    "dateModified": "2026-10-21T00:00:00+08:00",
+    "image": "/product-images/waffle-blocks-mechanical.jpg",
+    "imageWidth": 2364,
+    "imageHeight": 1773,
+    "sections": [
+      {
+        "key": "first"
+      },
+      {
+        "key": "experiments",
+        "list": true,
+        "ordered": false,
+        "image": {
+          "src": "/product-images/waffle-blocks-amusement-park.jpg",
+          "width": 2364,
+          "height": 1773
+        }
+      },
+      {
+        "key": "voice"
+      },
+      {
+        "key": "open",
+        "image": {
+          "src": "/product-images/waffle-blocks-scene.jpg",
+          "width": 2364,
+          "height": 1773
+        }
+      },
+      {
+        "key": "choose"
+      }
+    ],
+    "related": [
+      {
+        "key": "overview",
+        "href": "article-building-blocks-premium.html"
+      },
+      {
+        "key": "gift",
+        "href": "article-rainbow-blocks-gift-checklist.html"
+      },
+      {
+        "key": "education",
+        "href": "procurement.html"
+      }
+    ]
+  }
+}

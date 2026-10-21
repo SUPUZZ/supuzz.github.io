@@ -1,0 +1,77 @@
+{
+  "homeLabel": "Startseite",
+  "blogLabel": "Blog",
+  "author": "SUPUZZ Redaktion",
+  "publishedLabel": "Veröffentlicht am ",
+  "backLabel": "Zurück zum Blog",
+  "title": "Dreißig Tage über den Ozean: ein Geschenk und eine Freundschaft",
+  "description": "Eine SUPUZZ Geschichte über Mark, seine Freundin Amara und einen Kindertisch: die Aufmerksamkeit hinter einem Geschenk und die Momente danach.",
+  "shortTitle": "Ein Thanksgiving-Geschenk",
+  "categoryLabel": "Unsere Geschichte",
+  "imageAlt": "Ein Mädchen malt an einem Kindertisch",
+  "hero": {
+    "caption": "Ein alltäglicher Malmoment. Illustrationsfoto zur Geschichte."
+  },
+  "intro": "Manche Geschenke tragen mehr, als in einen Karton passt. In einer früher von SUPUZZ geteilten Geschichte schickte Mark aus den USA seiner Freundin Amara und ihrer Tochter in Lagos, Nigeria, einen Kindertisch mit Stühlen. Auch die Zeit, die er zu warten bereit war, gehörte zu seiner Aufmerksamkeit.",
+  "sections": {
+    "everyday": {
+      "title": "An den Alltag einer Freundin denken",
+      "paragraphs": [
+        "Mark und Amara hatten anspruchsvolle Projekte und enge Termine gemeinsam gemeistert. Die Entfernung löschte diese Verbindung nicht. Ein Platz zum Malen und Spielen für ihre Tochter zeigte, dass er an die ganze Familie dachte."
+      ]
+    },
+    "contents": {
+      "title": "Ich warte. Sie ist mir wichtig.",
+      "paragraphs": [
+        "In der Geschichte waren die Möbel vorbestellt; Vorbereitung und internationaler Transport brauchten Zeit. Das Team erklärte Verzögerung und Alternativen. Mark wollte auf das für seine Freundin ausgesuchte Geschenk warten."
+      ]
+    },
+    "message": {
+      "title": "Ein Foto am einunddreißigsten Tag",
+      "paragraphs": [
+        "Nach einunddreißig Tagen kam die Nachricht mit einem Foto des Kindes beim Malen. Mark teilte es mit SUPUZZ. Es ging um mehr als Möbel: In einer vollen Saison hatte er die Familie nicht vergessen."
+      ],
+      "image": {
+        "alt": "Saisonale Geschenkverpackung als Illustration",
+        "caption": "Illustration; eine Geschenkverpackung ist damit nicht als enthalten angegeben."
+      }
+    },
+    "delivery": {
+      "title": "Ein Geschenk wird Teil des Alltags",
+      "paragraphs": [
+        "Malen, Lesen und gemeinsames Spielen folgen auf das Auspacken. An das Leben der beschenkten Person zu denken ist ein guter Anfang. Diese Geschichte handelt von Verbindung, nicht von Preis oder Größe."
+      ]
+    },
+    "together": {
+      "title": "Für heutige Geschenkentscheidungen",
+      "paragraphs": [
+        "Dies ist eine früher geteilte Geschichte. Prüfe beim Bestellen aktuelle Produkte, Inhalt, Lieferziele und Termine; die damalige Reise ist kein Lieferversprechen. Bei Möbeln sollten Maße und enthaltene Tische oder Stühle mit der Familie geklärt werden."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Häufige Fragen",
+    "items": [
+      {
+        "question": "Werden Tisch und Stühle immer zusammen verkauft?",
+        "answer": "Nein. Prüfe Verkaufseinheit und Inhalt des Produkts statt nur ein Wohnfoto."
+      },
+      {
+        "question": "Sind Lieferungen ins Ausland möglich?",
+        "answer": "Das hängt von Produkt und Ziel ab. Prüfe die Verkaufsseite oder frage unser Team."
+      },
+      {
+        "question": "Kann ich Geschenke für mehrere Familien anfragen?",
+        "answer": "Ja. Teile Mengen, Zielregionen und Wunschtermine mit."
+      }
+    ]
+  },
+  "related": {
+    "title": "Weiter entdecken",
+    "links": {
+      "chair": "Einen Kinderstuhl auswählen",
+      "gift": "Checkliste für Bausteingeschenke",
+      "inquiry": "Anfragen zu saisonalen Geschenken und Gruppenbestellungen"
+    }
+  }
+}

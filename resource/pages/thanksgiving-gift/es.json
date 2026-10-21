@@ -1,0 +1,77 @@
+{
+  "homeLabel": "Inicio",
+  "blogLabel": "Blog",
+  "author": "Equipo editorial de SUPUZZ",
+  "publishedLabel": "Publicado el ",
+  "backLabel": "Volver al blog",
+  "title": "Treinta días al otro lado del océano: un regalo y una amistad",
+  "description": "Una historia de SUPUZZ sobre Mark, su amiga Amara y una mesa infantil: el cariño detrás de un regalo y los momentos cotidianos que vienen después.",
+  "shortTitle": "Un regalo de Acción de Gracias",
+  "categoryLabel": "Nuestra historia",
+  "imageAlt": "Una niña disfruta dibujando en una mesa infantil",
+  "hero": {
+    "caption": "Un momento de dibujo cotidiano. Foto ilustrativa de la historia."
+  },
+  "intro": "Algunos regalos llevan más de lo que cabe en una caja. En una historia compartida por SUPUZZ, Mark, en Estados Unidos, envió una mesa y sillas infantiles a su amiga Amara y su hija en Lagos, Nigeria. El tiempo que decidió esperar también expresaba su cariño.",
+  "sections": {
+    "everyday": {
+      "title": "Pensar en la vida diaria de una amiga",
+      "paragraphs": [
+        "Mark y Amara habían compartido proyectos exigentes y plazos difíciles. La distancia no borró ese vínculo. Eligió un lugar donde la hija pequeña pudiera dibujar y jugar, pensando en toda la familia."
+      ]
+    },
+    "contents": {
+      "title": "Esperaré. Es importante para mí.",
+      "paragraphs": [
+        "En la historia, el mueble estaba en preventa y su preparación y transporte internacional llevarían tiempo. El equipo explicó el retraso y las alternativas. Mark prefirió esperar el regalo elegido para su amiga."
+      ]
+    },
+    "message": {
+      "title": "Una foto el día treinta y uno",
+      "paragraphs": [
+        "Tras treinta y un días llegó la noticia junto a una foto de la niña dibujando en la mesa. Mark la compartió con SUPUZZ. Lo importante iba más allá del mueble: había recordado a la familia durante toda aquella temporada."
+      ],
+      "image": {
+        "alt": "Envoltorio de regalo de temporada como ilustración",
+        "caption": "Envoltorio ilustrativo; no indica embalaje de regalo incluido."
+      }
+    },
+    "delivery": {
+      "title": "Un regalo entra en la vida cotidiana",
+      "paragraphs": [
+        "Dibujar, leer y jugar juntos son momentos que siguen al regalo. Pensar en la vida de quien lo recibe es un buen comienzo. Esta historia habla de conexión, no del tamaño o precio del paquete."
+      ]
+    },
+    "together": {
+      "title": "Para quien elige un regalo hoy",
+      "paragraphs": [
+        "Es una historia compartida anteriormente. Consulta productos, contenido, destinos y plazos actuales al comprar; un trayecto pasado no garantiza la entrega. Para muebles, confirma con la familia las dimensiones y si se incluyen mesa o sillas."
+      ]
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿La mesa y las sillas se venden siempre juntas?",
+        "answer": "No. Comprueba la unidad de venta y el contenido, no solo una foto de ambiente."
+      },
+      {
+        "question": "¿Se puede enviar al extranjero?",
+        "answer": "Depende del destino y el producto. Compruébalo en la página de venta o consulta al equipo."
+      },
+      {
+        "question": "¿Puedo consultar regalos para varias familias?",
+        "answer": "Sí. Indica cantidades, regiones de destino y fechas deseadas."
+      }
+    ]
+  },
+  "related": {
+    "title": "Sigue descubriendo",
+    "links": {
+      "chair": "Cómo elegir una silla infantil",
+      "gift": "Lista para regalar bloques",
+      "inquiry": "Consultas sobre regalos de temporada y para grupos"
+    }
+  }
+}
