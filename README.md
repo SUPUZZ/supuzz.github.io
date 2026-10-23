@@ -160,6 +160,10 @@ if (require.main === module) new OceanPlayBuilder().build();
 
 GitHub Pages 部署使用零秒 `meta refresh` 和指向新地址的 canonical；[Google 将零秒跳转识别为永久迁移](https://developers.google.com/search/docs/crawling-indexing/301-redirects#metarefresh)。保留可点击的新地址作为浏览器备用入口，不添加 `noindex`。Sitemap 只收录语言目录中的正式页面，不收录旧跳转网址。
 
+根目录入口（`/`、`/index.html`、`/contact.html` 和旧文章地址）同样不添加 `noindex`，跳转和 canonical 使用一致的固定英文正式地址，避免 cookie 或浏览器语言产生不同的迁移目标。`lang.html?from=...` 是语言选择工具页，继续保留 `noindex, follow`；它不需要作为搜索结果收录。
+
+运行 `npm run seo:check` 检查源文件，或在构建后运行 `npm run seo:check -- --dist` 检查发布产物。生产构建自动执行后者，检查所有旧网址的零秒跳转、canonical、目标可索引性和 sitemap，防止重新加入 `noindex` 或跳转到不存在的页面。Search Console 中旧网址转为“网页会自动重定向”属于正常结果，正式内容以语言目录中的规范网址为准。
+
 新增兼容网址时，先确认目标页面在线返回 200、canonical 正确且在 sitemap 中，再在 `static/` 添加对应 HTML 文件。发布后重新访问旧网址检查跳转，并在 Google Search Console 的 404 问题中点击“验证修复”；旧网址此后被列为“网页会自动重定向”属于正常结果。
 
 ## 许可证

@@ -15,7 +15,7 @@ for (const locale of locales) {
   fs.mkdirSync(path.join(root,'static',dir),{recursive:true});
   for(const [old,target] of Object.entries(retired)) {
     write(`static/${dir}/${old}`,`<!DOCTYPE html>
-<html lang="${locale.htmlLang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, follow"><link rel="canonical" href="https://supuzz.com/${dir}/${target}"><meta http-equiv="refresh" content="0;url=${target}"><title>SUPUZZ</title></head><body><p><a href="${target}">${escape(target===file?c.title:dir==='en'?'Halloween Toy Gifts for Kids: A Non-Candy Guide':require(`../resource/halloween-locales/${dir}.cjs`).articles[0].title)}</a></p></body></html>`);
+<html lang="${locale.htmlLang}"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="canonical" href="https://supuzz.com/${dir}/${target}"><meta http-equiv="refresh" content="0;url=${target}"><title>SUPUZZ</title></head><body><p><a href="${target}">${escape(target===file?c.title:dir==='en'?'Halloween Toy Gifts for Kids: A Non-Candy Guide':require(`../resource/halloween-locales/${dir}.cjs`).articles[0].title)}</a></p></body></html>`);
   }
 }
 const posts = require('../resource/home-posts-en.json');

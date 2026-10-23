@@ -19,7 +19,7 @@ for (const {directory:dir,htmlLang} of locales) {
     assert(!files.includes(old),`${dir}: retired source recreated: ${old}`);
     assert(!sitemap.includes(`/${dir}/${old}</loc>`),`${dir}: retired sitemap URL`);
     const redirect = read(`static/${dir}/${old}`);
-    assert(redirect.includes('noindex, follow'));
+    assert(!/\bnoindex\b/i.test(redirect), `${dir}/${old}: redirect must allow indexing signals`);
     assert(redirect.includes(`content="0;url=${target}"`));
     assert(redirect.includes(`href="https://supuzz.com/${dir}/${target}"`));
     if(process.argv.includes('--dist')) assert.equal(read(`dist/${dir}/${old}`),redirect,`${dir}: deployed redirect`);

@@ -4,55 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supuzz - Redirecting...</title>
-    <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://supuzz.com/en/index.html">
-    <script>
-        function getCookie(name) {
-            var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-            return match ? match[2] : null;
-        }
-
-        function setCookie(name, value, days) {
-            var d = new Date();
-            d.setTime(d.getTime() + (days || 365) * 24 * 60 * 60 * 1000);
-            document.cookie = name + '=' + value + ';path=/;expires=' + d.toUTCString();
-        }
-
-        // Check saved language first (from previous manual switch or auto-detect)
-        var savedLang = getCookie('lang_pref');
-        if (savedLang === 'es' || savedLang === 'ja' || savedLang === 'zh-Hant' || savedLang === 'de' || savedLang === 'pt' || savedLang === 'fr') {
-            window.location.replace('/' + savedLang + '/');
-        } else if (!savedLang) {
-            var supported = { es: true, ja: true, de: true, fr: true };
-            var langs = navigator.languages || [navigator.language || ''];
-            var detected = 'en';
-            for (var i = 0; i < langs.length; i++) {
-                var full = langs[i].toLowerCase();
-                if (full.indexOf('zh-tw') !== -1 || full.indexOf('zh-hk') !== -1 || full.indexOf('zh-hant') !== -1) {
-                    detected = 'zh-Hant'; break;
-                }
-                if (full.indexOf('de') !== -1) {
-                    detected = 'de'; break;
-                }
-                if (full.indexOf('fr') !== -1) {
-                    detected = 'fr'; break;
-                }
-                var code = full.substring(0, 2);
-                if (supported[code]) { detected = code; break; }
-            }
-            setCookie('lang_pref', detected, 365);
-            if (detected !== 'en') {
-                window.location.replace('/' + detected + '/');
-            } else {
-                window.location.replace('/en/');
-            }
-        } else {
-            window.location.replace('/en/');
-        }
-    </script>
-    <meta http-equiv="refresh" content="0;url=/en/">
+    <meta http-equiv="refresh" content="0;url=https://supuzz.com/en/index.html">
 </head>
 <body>
-    <p>Redirecting to <a href="/en/">English version</a>...</p>
+    <p>Redirecting to <a href="https://supuzz.com/en/index.html">English version</a>...</p>
 </body>
 </html>
