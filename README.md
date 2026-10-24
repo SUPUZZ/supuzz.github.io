@@ -160,7 +160,9 @@ if (require.main === module) new OceanPlayBuilder().build();
 
 GitHub Pages 部署使用零秒 `meta refresh` 和指向新地址的 canonical；[Google 将零秒跳转识别为永久迁移](https://developers.google.com/search/docs/crawling-indexing/301-redirects#metarefresh)。保留可点击的新地址作为浏览器备用入口，不添加 `noindex`。Sitemap 只收录语言目录中的正式页面，不收录旧跳转网址。
 
-根目录入口（`/`、`/index.html`、`/contact.html` 和旧文章地址）同样不添加 `noindex`，跳转和 canonical 使用一致的固定英文正式地址，避免 cookie 或浏览器语言产生不同的迁移目标。`lang.html?from=...` 是语言选择工具页，继续保留 `noindex, follow`；它不需要作为搜索结果收录。
+根首页 `/`、`/index.html` 直接展示完整英文首页，不再显示跳转提示或根据浏览器语言跳走。`scripts/build-root-homepage.js` 从 `en/index.html` 生成根入口，开发和生产构建自动执行；更新英文首页后可运行 `npm run homepage:root` 单独同步。生成的根文件保留公共头尾 include，使用 `<base href="/en/">` 确保导航、商品、文章、样式和模块引用与英文目录一致。canonical 保留 `https://supuzz.com/en/index.html`，统一同内容入口的搜索信号。
+
+`/contact.html` 和旧文章地址继续使用一致的固定英文跳转和 canonical，不添加 `noindex`。`lang.html?from=...` 是语言选择工具页，继续保留 `noindex, follow`；它不需要作为搜索结果收录。
 
 运行 `npm run seo:check` 检查源文件，或在构建后运行 `npm run seo:check -- --dist` 检查发布产物。生产构建自动执行后者，检查所有旧网址的零秒跳转、canonical、目标可索引性和 sitemap，防止重新加入 `noindex` 或跳转到不存在的页面。Search Console 中旧网址转为“网页会自动重定向”属于正常结果，正式内容以语言目录中的规范网址为准。
 

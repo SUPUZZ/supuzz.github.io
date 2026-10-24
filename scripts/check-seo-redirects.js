@@ -49,5 +49,11 @@ for (const directory of directories) {
 }
 
 assert(count > 0, 'Expected legacy redirects in the site');
+const home = nodesOf(path.join(base, 'index.html'));
+assert.equal(refreshes(home).length, 0, 'The root homepage must render directly');
+assert(!noindex(home), 'The root homepage must allow indexing');
+assert(home.some(node => node.tag === 'h1'), 'The root homepage must contain the English hero');
+assert(home.some(node => node.attrs?.id === 'products'), 'The root homepage must contain the product collection');
+assert(home.some(node => node.tag === 'base' && node.attrs?.href === '/en/'), 'Root navigation and assets must resolve to the English site');
 assert(noindex(nodesOf(path.join(base, 'lang.html'))), 'The language chooser should remain noindex');
 console.log(`PASS: ${count} ${built ? 'built' : 'source'} redirects allow crawling and point directly to indexable canonical pages in the sitemap.`);
