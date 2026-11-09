@@ -70,13 +70,13 @@ function generateLocale(locale) {
 
   function card(product, { showPurchase = true } = {}) {
     return `<article class="product-card" data-category="${product.category}" data-product-theme="${product.key}">
-      <a class="card-img" href="${pageName(product)}" aria-label="View details: ${escape(product.name)}">${img(productImages(product)[0], productImages(product)[0].alt, { card: true })}<span class="product-image-arrow" aria-hidden="true">↗</span></a>
+      <a class="card-img" href="${pageName(product)}" aria-label="View details: ${escape(product.name)}">${img(productImages(product)[0], productImages(product)[0].alt, { card: true })}</a>
       <div class="product-card-body">
         <p class="product-eyebrow">${escape(product.label)}</p>
         <h3><a href="${pageName(product)}">${escape(product.name)}</a></h3>
         <div class="product-card-facts">${product.facts.map(escape).join(' · ')}</div>
         <p class="product-card-copy">${escape(product.cardCopy || product.intro)}</p>
-        <div class="product-actions"><a href="${pageName(product)}" class="btn product-details-button" aria-label="View details: ${escape(product.name)}">View details <span aria-hidden="true">→</span></a>${showPurchase ? amazonButton(product) : ''}</div>
+        <div class="product-actions"><a href="${pageName(product)}" class="btn product-details-button" aria-label="View details: ${escape(product.name)}">View details</a>${showPurchase ? amazonButton(product) : ''}</div>
       </div>
     </article>`.replace(/[ \t]+$/gm, '');
   }

@@ -55,7 +55,7 @@ const cards = data.reviews.map(review => {
                         <p class="review-status${review.vine ? ' review-status-vine' : ''}">${status}</p>
                         </div>
                         <div class="review-product"><span class="review-product-caption"><span class="review-category">${categories[product.category]}</span><strong>${escape(product.name)}</strong></span></div>
-                        <a class="review-source" href="${escape(review.url)}" target="_blank" rel="noopener noreferrer">${escape(copy.source)} <span aria-hidden="true">↗</span></a>
+                        <a class="review-source" href="${escape(review.url)}" target="_blank" rel="noopener noreferrer">${escape(copy.source)}</a>
                     </div>
                 </article>`;
 });

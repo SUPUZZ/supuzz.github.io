@@ -133,7 +133,7 @@ if (require.main === module) new OceanPlayBuilder().build();
 
 `templates/pages/document.cjs` 自动提供公共头尾组件、页面语言、canonical、双向 hreflang、社交分享标记和页面/文章结构化数据。内容模板不要重复输出文档头、公共头尾或 include；可通过 JS 模块复用内部渲染函数。复用已有页面模式和样式，文章标题区必须是 `div.article-header`。
 
-生成的 HTML 带来源注释，只修改源文件；Builder 和译文修改后重新运行构建命令，本地预览不会自动监听这些源文件并重新生成。生成器也兼容已有 `template` 配置指向 `templates/pages/*.cjs` 的函数模板；新页面优先使用 Builder 类。文章构建后，`scripts/build-article-blog.js` 会从同一份语言 JSON 同步各语言博客卡片的标题、摘要、封面、图片说明和发布日期，并补齐缺少的文章入口。卡片保留原有分类；新增入口默认使用积木分类。删去一个页面或语言时，需要明确移除对应的旧生成 HTML，生成器不会自动删除文件。
+生成的 HTML 带来源注释，只修改源文件；Builder 和译文修改后重新运行构建命令，本地预览不会自动监听这些源文件并重新生成。生成器也兼容已有 `template` 配置指向 `templates/pages/*.cjs` 的函数模板；新页面优先使用 Builder 类。博客列表页由 `builders/BlogBuilder.js` 生成：已迁移文章的标题、摘要、封面、图片说明和发布日期直接读取 `resource/pages/*` 的语言 JSON；尚未迁移文章的卡片数据保存在 `resource/blog-legacy.json`；页面标题、导语和分类筛选标签在 `resource/pages/blog/`。旧的 `scripts/build-article-blog.js` 只为未迁移的旧博客页保留同步能力，生成的博客页会自动跳过。删去一个页面或语言时，需要明确移除对应的旧生成 HTML，生成器不会自动删除文件。
 
 只生成 `locales` 指定的语言；新多语言页面通常列出全部七种语言，单语言需求只列对应语言。指定译文缺失时会在写入前失败，不发布伪装成其他语言的英文页。英文文案更新时同步检查译文；AI 翻译应先确认并保存，构建不调用在线翻译。
 

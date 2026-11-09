@@ -1,0 +1,79 @@
+{
+  "homeLabel": "Inicio",
+  "blogLabel": "Blog",
+  "breadcrumbLabel": "Guia de regalos de dinosaurios",
+  "categoryLabel": "GUIA DE REGALOS",
+  "title": "Regalos de dinosaurios para ninos de 3 anos: bloques de jungla",
+  "description": "Buscas un regalo de dinosaurios para ninos de 3 anos o mas? Conoce los bloques de dinosaurios SUPUZZ de 99 piezas para cumpleanos, Navidad y otras fiestas.",
+  "imageAlt": "Bloques SUPUZZ de dinosaurios de jungla montados como un jardin de dinosaurios colorido",
+  "author": "Equipo SUPUZZ",
+  "readTime": "5 min de lectura",
+  "intro": [
+    "Un buen regalo de dinosaurios no solo emociona al abrirlo: invita a volver, reconstruir y crear una historia nueva. Para un pequeno amante de los dinosaurios de 3 anos o mas, un juego de construccion puede ser un regalo especial de cumpleanos, Navidad o fiesta.",
+    "El set de dinosaurios de jungla SUPUZZ aparece con 99 piezas: dinosaurios, plantas tropicales, flores y bases conectables. No obliga a seguir un unico modelo; permite crear un jardin de dinosaurios hoy y otra aventura prehistorica manana."
+  ],
+  "checklist": {
+    "title": "Que revisar antes de regalar dinosaurios",
+    "items": [
+      {
+        "label": "Juego de historias:",
+        "text": "las figuras y el escenario ayudan a inventar aventuras."
+      },
+      {
+        "label": "Juego repetido:",
+        "text": "las bases reorganizables hacen que cada construccion sea diferente."
+      },
+      {
+        "label": "Almacenamiento:",
+        "text": "la pagina indica una caja portatil en la version mejorada; confirma la seleccion."
+      },
+      {
+        "label": "Edad:",
+        "text": "el producto indica 3 anos o mas; sigue las instrucciones de seguridad."
+      }
+    ]
+  },
+  "world": {
+    "title": "Un regalo de cumpleanos o Navidad que se convierte en su propio mundo",
+    "paragraphs": [
+      "Los dinosaurios despiertan curiosidad de forma natural. Con arboles, flores y lugares para explorar, los ninos deciden donde vive cada figura y que ocurrira despues. Esa libertad hace que el regalo siga teniendo valor despues de la primera tarde."
+    ]
+  },
+  "gallery": [
+    {
+      "alt": "Set de construccion de dinosaurios para juego creativo"
+    },
+    {
+      "alt": "Bases reorganizables y accesorios de dinosaurios"
+    }
+  ],
+  "replay": {
+    "title": "Un regalo de bloques de dinosaurios para jugar una y otra vez",
+    "paragraphs": [
+      "La pagina del producto describe plastico duro y una caja de almacenamiento para la version mejorada. Comprueba en Amazon la version actual, el precio, la disponibilidad y el empaque antes de hacer el pedido."
+    ]
+  },
+  "amazon": {
+    "title": "Ver el set de dinosaurios de jungla",
+    "description": "Consulta la ficha actual de Amazon para ver la version elegida y los detalles completos.",
+    "button": "Comprar en Amazon"
+  },
+  "faq": {
+    "title": "Preguntas sobre regalos de dinosaurios",
+    "items": [
+      {
+        "question": "Es un buen regalo de cumpleanos o Navidad?",
+        "answer": "Las figuras, accesorios y bases reorganizables permiten jugar de muchas maneras. Confirma la version actual antes de comprar."
+      },
+      {
+        "question": "Para que edad es?",
+        "answer": "La pagina indica 3 anos o mas. Revisa la informacion de seguridad del empaque."
+      },
+      {
+        "question": "Incluye almacenamiento?",
+        "answer": "La version mejorada aparece con caja portatil; la basica usa empaque de caja de color."
+      }
+    ]
+  },
+  "disclosure": "Esta guia se basa en la pagina de Amazon enlazada arriba. Las especificaciones, precio, disponibilidad y empaque pueden cambiar; confirma la ficha actual antes de comprar."
+}

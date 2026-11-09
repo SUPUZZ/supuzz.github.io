@@ -1,0 +1,42 @@
+{
+  "file": "article-dinosaur-gift-guide.html",
+  "builder": "DinosaurGiftGuideBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/dinosaur-gift-guide.css"
+  ],
+  "scripts": [
+    "/js/article-pageview.js"
+  ],
+  "shared": {
+    "datePublished": "2026-08-11T00:00:00+00:00",
+    "dateModified": "2026-08-11T00:00:00+00:00",
+    "image": "/product-images/dinosaur-jungle-gift-christmas.webp",
+    "imageWidth": 1200,
+    "imageHeight": 675,
+    "gallery": [
+      {
+        "src": "/product-images/dinosaur-jungle-gift-building.webp",
+        "width": 679,
+        "height": 679
+      },
+      {
+        "src": "/product-images/dinosaur-jungle-gift-play.webp",
+        "width": 679,
+        "height": 679
+      }
+    ],
+    "amazon": {
+      "href": "https://www.amazon.com/dp/B0H6C64K2K?maas=maas_adg_77F5AD9FFADB9A29E2977FBDD9DFB1CD_afap_abs&ref_=aa_maas&tag=maas"
+    }
+  }
+}

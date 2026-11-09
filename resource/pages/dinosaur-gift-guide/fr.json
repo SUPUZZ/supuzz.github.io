@@ -1,0 +1,67 @@
+{
+  "homeLabel": "Accueil",
+  "blogLabel": "Blog",
+  "breadcrumbLabel": "Guide cadeau dinosaure",
+  "categoryLabel": "GUIDE CADEAU",
+  "title": "Cadeau dinosaure des 3 ans : blocs jungle",
+  "description": "Vous cherchez un cadeau dinosaure pour enfant des 3 ans ? Decouvrez les blocs SUPUZZ jungle de 99 pieces pour anniversaire, Noel et fetes.",
+  "imageAlt": "Blocs SUPUZZ de dinosaures jungle assembles en jardin colore",
+  "author": "Equipe SUPUZZ",
+  "readTime": "5 min de lecture",
+  "intro": [
+    "Un bon cadeau dinosaure ne fait pas plaisir seulement a l'ouverture. Il donne envie de reconstruire et d'inventer une nouvelle histoire. Pour un enfant fan de dinosaures des 3 ans, des blocs de construction sont une idee de cadeau pour anniversaire, Noel ou fete.",
+    "Le set SUPUZZ jungle dinosaure est presente avec 99 pieces : dinosaures, plantes tropicales, fleurs et bases connectables. Plutot qu'un modele fixe, il permet de creer un jardin de dinosaures aujourd'hui et une nouvelle aventure prehistorique demain."
+  ],
+  "checklist": {
+    "title": "Choisir un cadeau dinosaure",
+    "items": [
+      {
+        "label": "Histoires :",
+        "text": "figurines et decor invitent a inventer des aventures."
+      },
+      {
+        "label": "Jeu durable :",
+        "text": "les bases reorganisables renouvellent les scenes."
+      },
+      {
+        "label": "Rangement :",
+        "text": "la version amelioree est annoncee avec une boite portable."
+      },
+      {
+        "label": "Age :",
+        "text": "la page produit indique 3 ans et plus."
+      }
+    ]
+  },
+  "world": {
+    "title": "Un cadeau d'anniversaire ou de Noel pour creer son monde",
+    "paragraphs": [
+      "Avec dinosaures, arbres et fleurs, l'enfant choisit ou vit chaque personnage. Cette liberte rend le cadeau interessant bien apres la premiere apres-midi de jeu."
+    ]
+  },
+  "replay": {
+    "title": "Des blocs dinosaures pour jouer encore et encore",
+    "paragraphs": [
+      "Avant de commander, verifiez sur Amazon la version choisie, le prix, la disponibilite et l'emballage."
+    ]
+  },
+  "amazon": {
+    "title": "Voir les blocs dinosaures jungle",
+    "description": "Consultez la fiche Amazon actuelle pour tous les details.",
+    "button": "Voir sur Amazon"
+  },
+  "faq": {
+    "title": "Questions sur les cadeaux dinosaures",
+    "items": [
+      {
+        "question": "Est-ce un bon cadeau d'anniversaire ou de Noel ?",
+        "answer": "Les figurines, accessoires et bases reorganisables soutiennent de nombreux jeux imaginatifs."
+      },
+      {
+        "question": "Pour quel age ?",
+        "answer": "La page produit indique 3 ans et plus. Verifiez les consignes de securite."
+      }
+    ]
+  },
+  "disclosure": "Ce guide repose sur la page Amazon liee. Specifications, prix, stock et emballage peuvent changer."
+}

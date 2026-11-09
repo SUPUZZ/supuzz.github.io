@@ -1,0 +1,18 @@
+{
+  "documentTitle": "SUPUZZ | El Blog de SUPUZZ — Blog de Juguetes STEM y Muebles Infantiles",
+  "title": "El Blog de SUPUZZ",
+  "description": "Descubre consejos, historias y guías sobre juguetes de construcción abiertos, muebles ergonómicos infantiles y educación STEM. El Blog de SUPUZZ para padres y educadores.",
+  "intro": "Explora consejos, historias y guías sobre juguetes educativos, aprendizaje STEM y desarrollo infantil",
+  "listTitle": "Explorar artículos",
+  "filters": {
+    "all": "Todos",
+    "brand-story": "Historia de la marca",
+    "thanksgiving-giving": "Regalos de Acción de Gracias",
+    "halloween-gifts": "Regalos de Halloween",
+    "building-blocks": "Bloques de Construcción",
+    "kids-furniture": "Muebles Infantiles",
+    "stem-learning": "Aprendizaje STEM",
+    "parenting-tips": "Consejos para Padres"
+  },
+  "imageAlt": "Blog de SUPUZZ - Blog de juguetes STEM y muebles infantiles"
+}

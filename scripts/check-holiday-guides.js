@@ -7,14 +7,16 @@ const { locales } = require('./product-localization');
 const retired = require('../resource/retired-holiday-articles.json');
 const root = path.resolve(__dirname, '..');
 const flat = ns => ns.flatMap(n => typeof n === 'object' ? [n,...flat(n.content || [])] : []);
+const hasClass = (node,name) => (node.attrs?.class || '').split(/\s+/).includes(name);
+const text = node => (node.content || []).map(child => typeof child === 'string' ? child : text(child)).join('').trim();
 const read = f => fs.readFileSync(path.join(root,f),'utf8');
 const sitemap = read('static/sitemap.xml');
 for (const {directory:dir,htmlLang} of locales) {
   const files = fs.readdirSync(path.join(root,dir)).filter(f=>f.endsWith('.html'));
   assert.equal(files.filter(f=>f.includes('halloween')).length,1,`${dir}: one Halloween article`);
-  const cards = [...read(`${dir}/blog.html`).matchAll(/<include src="components\/blog-card\.html">([\s\S]*?)<\/include>/g)].map(m=>JSON.parse(m[1]));
-  assert.equal(cards.filter(c=>c.category==='halloween-gifts').length,1);
-  assert.equal(cards.filter(c=>c.href==='article-icy-world.html').length,1,`${dir}: one Christmas card`);
+  const cards = flat(parser(read(`${dir}/blog.html`))).filter(n=>hasClass(n,'blog-card'));
+  assert.equal(cards.filter(c=>c.attrs?.['data-category']==='halloween-gifts').length,1);
+  assert.equal(cards.filter(c=>c.attrs?.href==='article-icy-world.html').length,1,`${dir}: one Christmas card`);
   for (const [old,target] of Object.entries(retired)) {
     assert(!files.includes(old),`${dir}: retired source recreated: ${old}`);
     assert(!sitemap.includes(`/${dir}/${old}</loc>`),`${dir}: retired sitemap URL`);
@@ -47,7 +49,9 @@ for (const {directory:dir,htmlLang} of locales) {
   assert.equal(schema.image.url,'https://supuzz.com'+hero.attrs.src);
   for(const slug of ['icy-world-l1','icy-world-l2','icy-world-l3']) assert(nodes.some(n=>n.attrs?.href===`product-${slug}.html`));
   for(const n of nodes.filter(n=>n.tag==='img')) assert(fs.existsSync(path.join(root,'static',n.attrs.src)));
-  assert.equal(cards.find(c=>c.href==='article-icy-world.html').title,schema.headline);
+  const icyCard = cards.find(c=>c.attrs?.href==='article-icy-world.html');
+  const icyTitle = text(flat(icyCard.content || []).find(n=>hasClass(n,'blog-card-title')) || {});
+  assert.equal(icyTitle,schema.headline);
   assert.equal((sitemap.match(new RegExp(`https://supuzz.com/${dir}/article-icy-world\\.html`,'g'))||[]).length,1);
   if(process.argv.includes('--dist')) {
     const built=flat(parser(read('dist/'+file)));

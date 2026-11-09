@@ -21,10 +21,10 @@ const httpPaths = new Set(['/css/halloween-guides.css', '/sitemap.xml']);
 for (const locale of locales) {
   const dir = locale.directory, titles = new Set(), descriptions = new Set();
   const blog = nodes(read(`${dir}/blog.html`));
-  const blogCards = [...read(`${dir}/blog.html`).matchAll(/<include src="components\/blog-card\.html">([\s\S]*?)<\/include>/g)].map(match => JSON.parse(match[1]));
+  const blogCards = blog.filter(node => (node.attrs?.class || '').split(/\s+/).includes('blog-card'));
   const coverHashes = new Set();
   assert.equal(blog.filter(n => n.attrs?.['data-filter'] === 'halloween-gifts').length, 1, `${dir}: filter`);
-  assert.equal(blogCards.filter(card => card.category === 'halloween-gifts').length, 1, `${dir}: cards`);
+  assert.equal(blogCards.filter(card => card.attrs?.['data-category'] === 'halloween-gifts').length, 1, `${dir}: cards`);
   httpPaths.add(`/${dir}/blog.html`);
   for (const slug of slugs) {
     const file = `${dir}/article-${slug}.html`, html = read(file), n = nodes(html);
@@ -62,7 +62,7 @@ for (const locale of locales) {
     assert.equal(article.datePublished.slice(0, 10), n.find(x => x.tag === 'time').attrs.datetime);
     assert.equal(schemas.find(x => x['@type'] === 'BreadcrumbList').itemListElement.at(-1).item, publicUrl);
     assert.equal(sitemapUrls.filter(u => u === publicUrl).length, 1, `${file}: sitemap`);
-    assert.equal(blogCards.filter(card => card.href === `article-${slug}.html`).length, 1, `${file}: blog entry`);
+    assert.equal(blogCards.filter(card => card.attrs?.href === `article-${slug}.html`).length, 1, `${file}: blog entry`);
     const cover = halloweenHeroCover(dir, `article-${slug}.html`);
     const hero = n.find(x => (x.attrs?.class || '').split(/\s+/).includes('featured-img'));
     assert.equal(hero.attrs.src, cover.src, `${file}: article cover`);

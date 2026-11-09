@@ -1,0 +1,28 @@
+{
+  "file": "coral-reef-gift-kenya.html",
+  "builder": "CoralReefGiftKenyaBuilder.js",
+  "type": "article",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "shared": {
+    "datePublished": "2026-08-15T00:00:00+00:00",
+    "dateModified": "2026-11-09T00:00:00+00:00",
+    "image": "/product-images/coral-reef-gift-kenya-cover.webp",
+    "imageWidth": 1200,
+    "imageHeight": 675,
+    "amazonUrl": "https://www.amazon.com/dp/B0FHK6BW37?th=1",
+    "facts": [
+      { "key": "from", "icon": "flight_takeoff" },
+      { "key": "to", "icon": "location_on" },
+      { "key": "set", "icon": "deployed_code" },
+      { "key": "ages", "icon": "child_care" }
+    ]
+  }
+}

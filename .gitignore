@@ -21,3 +21,6 @@ pnpm-debug.log*
 Thumbs.db
 .idea/
 .vscode/
+
+# Local agent/tool state
+/.workbuddy/

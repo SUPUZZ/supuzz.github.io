@@ -2,7 +2,7 @@
 .halloween-guide .breadcrumb a { text-decoration: underline; }
 .halloween-guide .article-container { max-width: 860px; margin: auto; padding-bottom: 64px; }
 .halloween-guide .article-header { text-align: center; margin: 20px 0 32px; }
-.halloween-guide .tag { display: inline-block; color: var(--primary); background: var(--primary-container); padding: 6px 14px; border-radius: 999px; font-weight: 700; }
+.halloween-guide .tag { display: inline-block; color: var(--on-primary); background: var(--brand-yellow); padding: 6px 14px; border-radius: 999px; font-weight: 700; }
 .halloween-guide h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.18; margin: 20px 0; }
 .halloween-guide .meta, .halloween-guide figcaption { color: var(--text-sub); font-size: .9rem; }
 .halloween-guide .featured-img { display: block; width: 100%; height: auto; min-height: 0; max-height: none; aspect-ratio: 16 / 9; object-fit: cover; background: white; border-radius: 20px; }
@@ -15,8 +15,8 @@
 .halloween-guide .content li { margin-bottom: 8px; }
 .halloween-guide .content h2 { color: var(--text-main); font-size: 1.7rem; line-height: 1.35; margin: 36px 0 16px; scroll-margin-top: 100px; }
 .halloween-guide .content h3 { color: var(--text-main); font-size: 1.2rem; margin: 22px 0 10px; }
-.halloween-guide .content a { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; }
-.halloween-guide .quote-box, .halloween-guide .article-toc { background: #F8F5FF; border-radius: 16px; padding: 22px; margin: 24px 0; }
+.halloween-guide .content a { color: var(--text-main); text-decoration: underline; text-underline-offset: 3px; }
+.halloween-guide .quote-box, .halloween-guide .article-toc { background: var(--brand-tint); border-radius: 16px; padding: 22px; margin: 24px 0; }
 .halloween-guide .article-toc ol { margin: 8px 0 0; }
 .halloween-guide .article-toc { display: block; }
 .halloween-guide .product-picks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin: 24px 0; }
@@ -24,5 +24,5 @@
 .halloween-guide .product-pick img { display: block; width: 100%; height: 200px; object-fit: contain; }
 .halloween-guide .product-pick p { font-size: .98rem; }
 .halloween-guide .product-pick h3 { margin-top: 12px; }
-.halloween-guide a:focus-visible { outline: 3px solid var(--primary); outline-offset: 4px; }
+.halloween-guide a:focus-visible { outline: 3px solid var(--text-main); outline-offset: 4px; }
 @media (max-width: 600px) { .halloween-guide .product-picks { grid-template-columns: 1fr; } .halloween-guide .breadcrumb { padding-top: 90px; } }

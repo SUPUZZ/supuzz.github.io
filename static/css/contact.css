@@ -72,14 +72,14 @@
     padding: 12px 28px;
     border: none;
     border-radius: 8px;
-    background: #6750A4;
-    color: #fff;
+    background: var(--brand-yellow);
+    color: var(--on-primary);
     font: inherit;
     font-weight: 500;
     cursor: pointer;
 }
 
-.contact-page button:hover { background: #59448F; }
+.contact-page button:hover { background: var(--brand-yellow-dark); }
 
 .contact-page button:disabled {
     opacity: 0.65;
@@ -87,7 +87,7 @@
 }
 
 .contact-page :is(input, select, textarea, button, a):focus-visible {
-    outline: 2px solid #6750A4;
+    outline: 2px solid var(--text-main);
     outline-offset: 3px;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .contact-email a {
-    color: #6750A4;
+    color: var(--text-main);
     text-underline-offset: 3px;
     overflow-wrap: anywhere;
 }

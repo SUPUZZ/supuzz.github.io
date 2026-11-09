@@ -1,0 +1,114 @@
+{
+  "file": "blog.html",
+  "builder": "BlogBuilder.js",
+  "type": "page",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/blog-card.css",
+    "/css/blog-list.css"
+  ],
+  "scripts": [
+    "/js/blog.js"
+  ],
+  "shared": {
+    "image": "/product-images/main-open-end-play.webp",
+    "imageWidth": 1200,
+    "imageHeight": 675,
+    "filters": [
+      "all",
+      "brand-story",
+      "thanksgiving-giving",
+      "halloween-gifts",
+      "building-blocks",
+      "kids-furniture",
+      "stem-learning",
+      "parenting-tips"
+    ],
+    "posts": [
+      {
+        "href": "article-how-supuzz-designs-building-toys.html",
+        "category": "brand-story"
+      },
+      {
+        "href": "article-thanksgiving-toys-to-kenya.html",
+        "category": "thanksgiving-giving"
+      },
+      {
+        "href": "article-halloween-toy-gifts-for-kids.html",
+        "category": "halloween-gifts"
+      },
+      {
+        "href": "article-dinosaur-building-blocks-ocean-inspired.html",
+        "category": "building-blocks"
+      },
+      {
+        "href": "coral-reef-building-toy-play-ideas.html",
+        "category": "building-blocks"
+      },
+      {
+        "href": "toddler-chairs-for-table.html",
+        "category": "kids-furniture"
+      },
+      {
+        "href": "coral-reef-gift-kenya.html",
+        "category": "building-blocks"
+      },
+      {
+        "href": "article-dinosaur-gift-guide.html",
+        "category": "parenting-tips"
+      },
+      {
+        "href": "article-ocean-world-l2.html",
+        "category": "stem-learning"
+      },
+      {
+        "href": "article-building-blocks-premium.html",
+        "category": "building-blocks"
+      },
+      {
+        "href": "article-waffle-blocks-stem-toddler.html",
+        "category": "stem-learning"
+      },
+      {
+        "href": "article-rainbow-blocks-gift-checklist.html",
+        "category": "parenting-tips"
+      },
+      {
+        "href": "article-thanksgiving-gift.html",
+        "category": "parenting-tips"
+      },
+      {
+        "href": "article-kids-chair-gift.html",
+        "category": "kids-furniture"
+      },
+      {
+        "href": "article-kids-chair.html",
+        "category": "kids-furniture"
+      },
+      {
+        "href": "article-icy-world.html",
+        "category": "building-blocks"
+      },
+      {
+        "href": "article-mix-play.html",
+        "category": "stem-learning"
+      },
+      {
+        "href": "article-waffle-blocks-early-education.html",
+        "category": "building-blocks"
+      },
+      {
+        "href": "article-levels.html",
+        "category": "building-blocks"
+      }
+    ]
+  }
+}

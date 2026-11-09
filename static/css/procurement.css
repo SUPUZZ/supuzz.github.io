@@ -44,7 +44,7 @@ body > header + main.procurement-page {
 
 .procurement-scenario-link {
     display: inline-block;
-    color: var(--primary);
+    color: var(--text-main);
     text-decoration: underline;
     text-underline-offset: 4px;
     margin-top: 20px;
@@ -65,7 +65,7 @@ body > header + main.procurement-page {
 }
 
 .procurement-number {
-    color: var(--primary);
+    color: var(--text-main);
     font-size: 0.875rem;
     font-weight: 600;
 }
@@ -121,7 +121,7 @@ body > header + main.procurement-page {
 }
 
 .procurement-products {
-    color: var(--primary);
+    color: var(--text-main);
     text-decoration: underline;
     text-underline-offset: 4px;
 }

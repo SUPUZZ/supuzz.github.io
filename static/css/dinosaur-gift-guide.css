@@ -1,0 +1,30 @@
+/* Dinosaur gift guide article. Migrated from the legacy per-locale inline styles. */
+.dino-gift-guide .breadcrumb { padding: 100px 0 20px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; color: var(--text-sub); font-size: .9rem; }
+.dino-gift-guide .breadcrumb a:hover { color: var(--text-main); text-decoration: underline; }
+.dino-gift-guide .article-container { max-width: 820px; margin: 0 auto; padding-bottom: 72px; }
+.dino-gift-guide .article-header { margin: 20px 0 36px; text-align: center; }
+.dino-gift-guide .article-header h1 { color: var(--text-main); font-size: clamp(2rem, 5vw, 2.6rem); line-height: 1.25; }
+.dino-gift-guide .tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: var(--brand-yellow); color: var(--on-primary); font-size: .78rem; font-weight: 700; }
+.dino-gift-guide .meta, .dino-gift-guide .disclosure { color: #777; font-size: .94rem; }
+.dino-gift-guide .featured-img { display: block; width: min(100%, 679px); height: auto; margin: 0 auto 36px; border-radius: 20px; box-shadow: var(--shadow-sm); }
+.dino-gift-guide .content { color: var(--text-sub); font-size: 1.08rem; line-height: 1.85; }
+.dino-gift-guide .content p { margin: 0 0 22px; }
+.dino-gift-guide .content h2 { margin: 42px 0 16px; color: var(--text-main); }
+.dino-gift-guide .content h3 { margin: 24px 0 8px; color: var(--text-main); }
+.dino-gift-guide .gift-checklist, .dino-gift-guide .faq-section { margin: 30px 0; padding: 24px 28px; border-radius: 18px; background: #f7fbf4; }
+.dino-gift-guide .gift-checklist h2, .dino-gift-guide .faq-section h2 { margin-top: 0; }
+.dino-gift-guide .gift-checklist ol { padding-left: 22px; }
+.dino-gift-guide .gift-checklist li { margin-bottom: 10px; }
+.dino-gift-guide .faq-section { background: #FFF9E8; border-left: 4px solid var(--brand-yellow-dark); }
+.dino-gift-guide .inline-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 30px 0; }
+.dino-gift-guide .inline-gallery img { width: 100%; height: auto; border-radius: 16px; }
+.dino-gift-guide .inline-gallery figcaption { margin-top: 10px; color: var(--text-sub); font-size: .9rem; }
+.dino-gift-guide .amazon-card { margin: 38px 0; padding: 30px; border: 2px solid #d9e7d1; border-radius: 20px; background: #f5fbf2; text-align: center; }
+.dino-gift-guide .amazon-card h2 { margin-top: 0; }
+.dino-gift-guide .amazon-button { display: inline-flex; padding: 13px 24px; border-radius: 999px; background: var(--brand-yellow); color: var(--on-primary); font-weight: 700; text-decoration: none; }
+.dino-gift-guide .amazon-button:hover { filter: brightness(.95); }
+.dino-gift-guide .disclosure { margin-top: 30px; }
+@media (max-width: 640px) {
+    .dino-gift-guide .inline-gallery { grid-template-columns: 1fr; }
+    .dino-gift-guide .gift-checklist, .dino-gift-guide .faq-section { padding: 20px; }
+}

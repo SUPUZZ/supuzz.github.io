@@ -23,11 +23,11 @@ for (const locale of locales.filter(locale => locale.directory !== 'en')) {
                     <p class="home-eyebrow">${escape(h.eyebrow)}</p>
                     <h1>${escape(h.title)}<br><span>${escape(h.accent)}</span></h1>
                     <p class="hero-description">${escape(h.description)}</p>
-                    ${h.future ? `<a href="future.html" class="hero-future">${escape(h.future)} <span aria-hidden="true">↗</span></a>` : ''}
+                    ${h.future ? `<a href="future.html" class="hero-future">${escape(h.future)}</a>` : ''}
                 </div>
                 <figure class="hero-img">
                     <span class="hero-image-label">${escape(h.imageLabel)}</span>
-                    <img src="/product-images/supuzz-coral-reef-l3-main.webp" alt="${escape(h.imageAlt)}" fetchpriority="high" loading="eager" width="1200" height="1016">
+                    <img src="/product-images/supuzz-coral-reef-l3-hero.webp" alt="${escape(h.imageAlt)}" fetchpriority="high" loading="eager" width="1200" height="1016">
                     <figcaption><span>${escape(h.collection)}</span><strong>${escape(h.caption)}</strong><span class="hero-image-spark" aria-hidden="true">✳</span></figcaption>
                 </figure>
             </div>

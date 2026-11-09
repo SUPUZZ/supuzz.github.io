@@ -2,10 +2,15 @@
    1. CSS 变量与基础设置 (Variables & Base)
    ========================================= */
 :root {
-    --primary: #6750A4;
-    --on-primary: #FFFFFF;
-    --primary-container: #EADDFF;
-    --on-primary-container: #21005D;
+    /* Brand yellow: used for filled actions, tags, marks and accents site-wide.
+       Text stays dark; yellow is a surface colour, not a link colour. */
+    --brand-yellow: #FEDD00;
+    --brand-yellow-dark: #E6C500;
+    --brand-tint: #FFF7CC;
+    --primary: var(--brand-yellow);
+    --on-primary: #1C1B1F;
+    --primary-container: var(--brand-tint);
+    --on-primary-container: #3A3000;
     --secondary: #BF4638;
     --bg: #FFFBFE;
     --surface: #FFFFFF;
@@ -84,7 +89,7 @@ nav {
 .logo {
     font-size: 1.4rem;
     font-weight: 800;
-    color: #FEDD00;
+    color: var(--primary);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -183,7 +188,7 @@ nav {
 }
 
 .lang-option.active {
-    color: var(--primary);
+    color: var(--text-main);
     font-weight: 700;
 }
 
@@ -281,7 +286,7 @@ nav {
 
 .btn-white {
     background: #FFFFFF;
-    color: var(--primary);
+    color: var(--text-main);
     font-weight: 700;
     border: 1px solid #eee;
 }
@@ -484,7 +489,7 @@ footer {
 }
 
 .footer-col a:hover {
-    color: var(--primary);
+    color: var(--text-main);
 }
 
 /* 品牌列 LOGO (对应 footer-logo) */
@@ -524,14 +529,14 @@ footer {
 }
 
 .footer-socials a:hover {
-    color: var(--primary);
+    color: var(--text-main);
     background: var(--primary-container);
-    border-color: var(--primary);
+    border-color: var(--brand-yellow-dark);
     opacity: 1;
 }
 
 .footer-socials a:focus-visible {
-    outline: 3px solid var(--primary);
+    outline: 3px solid var(--text-main);
     outline-offset: 3px;
 }
 
@@ -657,7 +662,7 @@ footer {
     }
 
     .lang-option.active {
-        background-color: #f8f5ff;
+        background-color: var(--brand-tint);
     }
 
     .btn-nav-amazon {
@@ -752,7 +757,7 @@ footer {
 .badge {
     display: inline-block;
     background: var(--primary);
-    color: #fff;
+    color: var(--on-primary);
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 0.8rem;
@@ -799,14 +804,14 @@ footer {
 }
 
 .filter-btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
+    border-color: var(--brand-yellow);
+    color: var(--text-main);
 }
 
 .filter-btn.active {
-    background: var(--text-main);
-    color: #fff;
-    border-color: var(--text-main);
+    background: var(--brand-yellow);
+    color: var(--on-primary);
+    border-color: var(--brand-yellow);
 }
 
 /* 博客列表网格 */
@@ -954,7 +959,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin-bottom: 24px;
-    color: var(--primary);
+    color: var(--text-main);
 }
 
 .contact-card h3 {
@@ -1009,7 +1014,7 @@ footer {
 }
 
 .contact-info strong {
-    color: var(--primary);
+    color: var(--text-main);
     font-weight: 700;
 }
 
