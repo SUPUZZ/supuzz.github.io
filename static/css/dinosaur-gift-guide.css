@@ -6,7 +6,8 @@
 .dino-gift-guide .article-header h1 { color: var(--text-main); font-size: clamp(2rem, 5vw, 2.6rem); line-height: 1.25; }
 .dino-gift-guide .tag { display: inline-block; padding: 5px 12px; border-radius: 999px; background: var(--brand-yellow); color: var(--on-primary); font-size: .78rem; font-weight: 700; }
 .dino-gift-guide .meta, .dino-gift-guide .disclosure { color: #777; font-size: .94rem; }
-.dino-gift-guide .featured-img { display: block; width: min(100%, 679px); height: auto; margin: 0 auto 36px; border-radius: 20px; box-shadow: var(--shadow-sm); }
+/* The img carries .featured-img directly, so reset the legacy card min-height from style.css and keep the 16:9 hero ratio. */
+.dino-gift-guide .featured-img { display: block; width: min(100%, 679px); height: auto; min-height: 0; max-height: none; aspect-ratio: 16 / 9; object-fit: cover; margin: 0 auto 36px; border-radius: 20px; box-shadow: var(--shadow-sm); }
 .dino-gift-guide .content { color: var(--text-sub); font-size: 1.08rem; line-height: 1.85; }
 .dino-gift-guide .content p { margin: 0 0 22px; }
 .dino-gift-guide .content h2 { margin: 42px 0 16px; color: var(--text-main); }
