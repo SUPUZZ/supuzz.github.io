@@ -5,6 +5,7 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const sourceCatalog = require('../resource/products-en.json');
 const productOffers = require('../resource/product-offers.json');
+const productRatings = require('../resource/product-ratings.json');
 const offerTranslations = require('../resource/product-offer-locales.json');
 const { locales, localizedCatalog } = require('./product-localization');
 const localeArgument = process.argv.find(argument => argument.startsWith('--locale='));
@@ -42,8 +43,6 @@ function generateLocale(locale) {
   const jsonLd = (value) => `<script type="application/ld+json">${JSON.stringify(value, null, 2).replaceAll('<', '\\u003c')}</script>`;
   const pageName = (product) => `product-${product.slug}.html`;
   const pageUrl = (product) => `${site}/${locale.directory}/${pageName(product)}`;
-  const galleryName = (product) => `product-${product.slug}-gallery.html`;
-  const galleryUrl = (product) => `${site}/${locale.directory}/${galleryName(product)}`;
   const productImages = (product) => product.gallery
     ? product.gallery.map(([suffix, alt]) => {
       const image = images.find((item) => item.file === `/product-images/supuzz-${product.slug}-${suffix}.webp`);
@@ -133,6 +132,16 @@ function generateLocale(locale) {
     if (offer.asin !== product.asin || offer.url !== `https://www.amazon.com/dp/${product.asin}`) {
       throw new Error(`Offer does not match product: ${product.key}`);
     }
+    const rating = productRatings.products[product.key];
+    if (rating) {
+      if (rating.asin !== offer.asin || rating.url !== offer.url) {
+        throw new Error(`Rating source does not match offer: ${product.key}`);
+      }
+      if (!(rating.ratingValue >= 0 && rating.ratingValue <= 5) || !Number.isInteger(rating.ratingCount) || rating.ratingCount < 1) {
+        throw new Error(`Invalid rating: ${product.key}`);
+      }
+    }
+    const ratingCount = rating ? new Intl.NumberFormat(locale.htmlLang).format(rating.ratingCount) : '';
     const offerCopy = offerTranslations[locale.directory];
     const stock = offerCopy?.availability[offer.availability];
     if (!stock) throw new Error(`Missing offer translation: ${locale.directory}/${offer.availability}`);
@@ -140,10 +149,37 @@ function generateLocale(locale) {
       .format(new Date(`${productOffers.checkedAt}T00:00:00Z`));
     const price = new Intl.NumberFormat(locale.htmlLang, { style: 'currency', currency: offer.priceCurrency, currencyDisplay: 'code' }).format(Number(offer.price));
     const purchaseNote = `<strong>${escape(price)}</strong> · ${escape(stock)}<br>${escape(offerCopy.checked)} <time datetime="${escape(productOffers.checkedAt)}">${escape(offerDate)}</time>. ${escape(offerCopy.disclaimer)}`;
+    const aggregateRating = rating ? {
+      '@type': 'AggregateRating',
+      ratingValue: rating.ratingValue,
+      ratingCount: rating.ratingCount,
+      bestRating: productRatings.bestRating,
+      worstRating: productRatings.worstRating
+    } : null;
+    const productEntity = {
+      '@type': 'Product',
+      '@id': `${pageUrl(product)}#product`,
+      name: `SUPUZZ ${product.name}`,
+      description: product.description,
+      url: pageUrl(product),
+      image: photos.map((photo) => site + photo.file),
+      brand: { '@type': 'Brand', name: 'SUPUZZ' },
+      category: t(product.category === 'furniture' ? 'Kids Chairs' : 'Building Toys'),
+      ...(product.asin ? { identifier: { '@type': 'PropertyValue', propertyID: 'ASIN', value: product.asin }, sameAs: `https://www.amazon.com/dp/${product.asin}` } : {}),
+      ...(aggregateRating ? { aggregateRating } : {}),
+      offers: {
+        '@type': 'Offer',
+        url: offer.url,
+        price: Number(offer.price),
+        priceCurrency: offer.priceCurrency,
+        availability: offer.availability,
+        itemCondition: 'https://schema.org/NewCondition'
+      }
+    };
     const schema = {
       '@context': 'https://schema.org', '@graph': [
         { '@type': 'WebPage', '@id': pageUrl(product), url: pageUrl(product), name: product.title, description: product.description, inLanguage: locale.htmlLang, mainEntity: { '@id': `${pageUrl(product)}#product` } },
-        { '@type': 'Product', '@id': `${pageUrl(product)}#product`, name: `SUPUZZ ${product.name}`, description: product.description, url: pageUrl(product), image: photos.map((photo) => site + photo.file), brand: { '@type': 'Brand', name: 'SUPUZZ' }, category: t(product.category === 'furniture' ? 'Kids Chairs' : 'Building Toys'), ...(product.asin ? { identifier: { '@type': 'PropertyValue', propertyID: 'ASIN', value: product.asin }, sameAs: `https://www.amazon.com/dp/${product.asin}` } : {}), ...(offer ? { offers: { '@type': 'Offer', url: offer.url, price: offer.price, priceCurrency: offer.priceCurrency, availability: offer.availability } } : {}) },
+        productEntity,
         { '@type': 'BreadcrumbList', itemListElement: [
           { '@type': 'ListItem', position: 1, name: t('Home'), item: `${site}/${locale.directory}/index.html` },
           { '@type': 'ListItem', position: 2, name: t('Products'), item: `${site}/${locale.directory}/index.html#products` },
@@ -193,7 +229,7 @@ function generateLocale(locale) {
       <nav class="product-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="index.html#products">Products</a></li><li aria-current="page">${escape(product.name)}</li></ol></nav>
       <div class="product-overview">
         <div class="product-gallery" data-product-gallery>
-          <a class="product-gallery-main" href="${galleryName(product)}" aria-label="Open full-size product image">${img(photos[0], photos[0].alt, { main: true })}<span class="product-zoom-label" aria-hidden="true">View full image ↗</span></a>
+          <a class="product-gallery-main" href="${escape(`/gallery.html?product=${product.key}&lang=${locale.directory}`)}" aria-label="Open full-size product image">${img(photos[0], photos[0].alt, { main: true })}<span class="product-zoom-label" aria-hidden="true">View full image ↗</span></a>
           ${photos.length > 1 ? `<div class="product-thumbnails" aria-label="Product images">${photos.map((photo, index) => `<a href="${photo.file}" data-gallery-image aria-current="${index === 0}" aria-label="Show product image ${index + 1}"><img src="${photo.thumb}" alt="${escape(photo.alt)}" width="${photo.width}" height="${photo.height}" loading="lazy"></a>`).join('')}</div>` : ''}
           ${product.galleryNote ? `<p class="product-gallery-hint">${escape(product.galleryNote)}</p>` : product.category === 'furniture' ? '<p class="product-gallery-hint">Lifestyle photos include tables and accessories sold separately.</p>' : ''}
         </div>
@@ -207,6 +243,7 @@ function generateLocale(locale) {
           <ul class="product-highlights">${product.highlights.map((fact) => `<li>${escape(fact)}</li>`).join('')}</ul>
           <div class="product-actions">${amazonButton(product)}</div>
           <p class="product-purchase-note">${purchaseNote}</p>
+          ${rating ? `<p class="product-rating"><span class="product-rating-star" aria-hidden="true">★</span><strong>${escape(rating.ratingValue.toFixed(1))}</strong><span aria-hidden="true">·</span><a href="${escape(rating.url)}" target="_blank" rel="noopener noreferrer">${escape(ratingCount)} ${escape(t('ratings on Amazon'))}</a></p>` : ''}
         </div>
       </div>
       <nav class="product-detail-nav" aria-label="Product information"><a href="#description">Explore the product</a>${product.included ? '<a href="#in-the-box">What’s included</a>' : ''}<a href="#specifications">Specifications</a><a href="#questions">FAQs</a></nav>
@@ -222,93 +259,29 @@ function generateLocale(locale) {
   `;
   }
 
-  function galleryPage(product) {
-    const photos = productImages(product);
-    const title = `${product.name} — ${t('Product images')} | SUPUZZ`;
-    const galleryData = JSON.stringify({
-      photos: photos.map(photo => ({
-        file: photo.file, thumb: photo.thumb, width: photo.width, height: photo.height, alt: photo.alt
-      }))
-    }).replaceAll('<', '\\u003c');
-    return `<!DOCTYPE html>
-<html lang="${locale.htmlLang}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${escape(title)}</title>
-    <meta name="description" content="${escape(product.description)}">
-    <meta name="robots" content="noindex, follow">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SUPUZZ">
-    <meta property="og:locale" content="${locale.ogLocale}">
-    <meta property="og:url" content="${galleryUrl(product)}">
-    <meta property="og:title" content="${escape(title)}">
-    <meta property="og:description" content="${escape(product.description)}">
-    <meta property="og:image" content="${site}${photos[0].file}">
-    <meta property="og:image:width" content="${photos[0].width}">
-    <meta property="og:image:height" content="${photos[0].height}">
-    <meta property="og:image:alt" content="${escape(photos[0].alt)}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="${galleryUrl(product)}">
-    <meta name="twitter:title" content="${escape(title)}">
-    <meta name="twitter:description" content="${escape(product.description)}">
-    <meta name="twitter:image" content="${site}${photos[0].file}">
-    <meta name="twitter:image:alt" content="${escape(photos[0].alt)}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/product-gallery.css">
-    <link rel="icon" href="../images/favicon.ico">
-    <meta name="theme-color" content="#FEDD00">
-    <link rel="canonical" href="${galleryUrl(product)}">
-</head>
-<body class="product-gallery-page">
-    <include src="components/header.html"></include>
-    <main class="product-gallery container" data-gallery-viewer>
-      <div class="gallery-head">
-        <a class="gallery-back" href="${pageName(product)}"><span aria-hidden="true">←</span> ${escape(t('Back to product'))}</a>
-        <div class="gallery-heading">
-          <p class="gallery-eyebrow">${escape(t('Product images'))}</p>
-          <h1>${escape(product.name)}</h1>
-        </div>
-        <p class="gallery-count" data-gallery-count aria-live="polite">1 / ${photos.length}</p>
-      </div>
-      <section class="gallery-stage" data-gallery-stage aria-label="${escape(t('Product images'))}">
-        <button class="gallery-arrow prev" type="button" data-gallery-prev aria-label="${escape(t('Previous image'))}"><span aria-hidden="true">‹</span></button>
-        <figure class="gallery-frame" data-gallery-frame>
-          <img data-gallery-photo src="${photos[0].file}" alt="${escape(photos[0].alt)}" width="${photos[0].width}" height="${photos[0].height}" loading="eager" fetchpriority="high" decoding="async">
-        </figure>
-        <button class="gallery-arrow next" type="button" data-gallery-next aria-label="${escape(t('Next image'))}"><span aria-hidden="true">›</span></button>
-      </section>
-      <div class="gallery-tools">
-        <div class="gallery-zoom">
-          <button type="button" data-gallery-zoom-out aria-label="${escape(t('Zoom out'))}"><span aria-hidden="true">−</span></button>
-          <button type="button" data-gallery-zoom-reset aria-label="${escape(t('Reset zoom'))}"><span data-gallery-zoom-value>100%</span></button>
-          <button type="button" data-gallery-zoom-in aria-label="${escape(t('Zoom in'))}"><span aria-hidden="true">+</span></button>
-        </div>
-        <p class="gallery-hint">${escape(t('Swipe, use the arrow keys, pinch or double-tap to zoom.'))}</p>
-      </div>
-      <div class="gallery-thumbs" role="group" aria-label="${escape(t('Product images'))}">
-        ${photos.map((photo, index) => `<a class="gallery-thumb" data-gallery-thumb href="${photo.file}" aria-label="${escape(t('Show product image'))} ${index + 1}" aria-current="${index === 0}"><img src="${photo.thumb}" alt="" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async"></a>`).join('')}
-      </div>
-      ${product.galleryNote ? `<p class="gallery-note">${escape(product.galleryNote)}</p>` : product.category === 'furniture' ? `<p class="gallery-note">${escape(t('Lifestyle photos include tables and accessories sold separately.'))}</p>` : ''}
-    </main>
-    <include src="components/footer.html"></include>
-    <script type="application/json" data-gallery-photos>${galleryData}</script>
-    <script type="module" src="/js/product-gallery.js"></script>
-</body>
-</html>`;
-  }
-
   function alternates(filename) {
     return [...locales.map(item => `<link rel="alternate" hreflang="${item.directory}" href="${site}/${item.directory}/${filename}">`), `<link rel="alternate" hreflang="x-default" href="${site}/en/${filename}">`].join('\n  ');
   }
-  for (const product of availableCatalog) {
-    fs.writeFileSync(path.join(root, locale.directory, pageName(product)), localizeUi(productPage(product)).replace(/[ \t]+$/gm, ''));
-    fs.writeFileSync(path.join(root, locale.directory, galleryName(product)), galleryPage(product).replace(/[ \t]+$/gm, ''));
-  }
+  for (const product of availableCatalog) fs.writeFileSync(path.join(root, locale.directory, pageName(product)), localizeUi(productPage(product)).replace(/[ \t]+$/gm, ''));
+
+  const galleryData = {
+    lang: locale.directory,
+    htmlLang: locale.htmlLang,
+    ui: {
+      back: t('Back to product'),
+      images: t('Product images'),
+      show: t('Show product image')
+    },
+    products: Object.fromEntries(availableCatalog.map(product => [product.key, {
+      name: product.name,
+      page: `/${locale.directory}/${pageName(product)}`,
+      photos: productImages(product).map(photo => ({
+        file: photo.file, thumb: photo.thumb, width: photo.width, height: photo.height, alt: photo.alt
+      }))
+    }]))
+  };
+  fs.mkdirSync(path.join(root, 'static', 'data'), { recursive: true });
+  fs.writeFileSync(path.join(root, 'static', 'data', `product-galleries-${locale.directory}.json`), JSON.stringify(galleryData) + '\n');
 
   const collection = `<!-- Localized product collection: generated by scripts/build-products.js -->
       <section id="products" class="section product-collection" aria-labelledby="products-title">

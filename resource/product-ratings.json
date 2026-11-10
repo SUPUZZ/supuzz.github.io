@@ -1,0 +1,74 @@
+{
+  "source": "Amazon.com",
+  "checkedAt": "2026-11-10",
+  "bestRating": 5,
+  "worstRating": 1,
+  "products": {
+    "soft-blocks-l3": {
+      "asin": "B0GD6G6SBT",
+      "url": "https://www.amazon.com/dp/B0GD6G6SBT",
+      "ratingValue": 4.7,
+      "ratingCount": 27
+    },
+    "soft-blocks-l2": {
+      "asin": "B0GYQ19GG4",
+      "url": "https://www.amazon.com/dp/B0GYQ19GG4",
+      "ratingValue": 4.7,
+      "ratingCount": 27
+    },
+    "dinosaur-l2": {
+      "asin": "B0H6C64K2K",
+      "url": "https://www.amazon.com/dp/B0H6C64K2K",
+      "ratingValue": 5.0,
+      "ratingCount": 5
+    },
+    "dinosaur-l3": {
+      "asin": "B0H6C5SCCL",
+      "url": "https://www.amazon.com/dp/B0H6C5SCCL",
+      "ratingValue": 5.0,
+      "ratingCount": 2
+    },
+    "ocean-l1": {
+      "asin": "B0F5PNRWJ1",
+      "url": "https://www.amazon.com/dp/B0F5PNRWJ1",
+      "ratingValue": 4.3,
+      "ratingCount": 53
+    },
+    "ocean-l2": {
+      "asin": "B0FHK6BW37",
+      "url": "https://www.amazon.com/dp/B0FHK6BW37",
+      "ratingValue": 4.3,
+      "ratingCount": 53
+    },
+    "ocean-l3": {
+      "asin": "B0FHK6RHT9",
+      "url": "https://www.amazon.com/dp/B0FHK6RHT9",
+      "ratingValue": 4.3,
+      "ratingCount": 53
+    },
+    "ice-l1": {
+      "asin": "B0F5PPQ2T3",
+      "url": "https://www.amazon.com/dp/B0F5PPQ2T3",
+      "ratingValue": 4.3,
+      "ratingCount": 53
+    },
+    "ice-l2": {
+      "asin": "B0FHK5NP9T",
+      "url": "https://www.amazon.com/dp/B0FHK5NP9T",
+      "ratingValue": 4.3,
+      "ratingCount": 53
+    },
+    "ice-l3": {
+      "asin": "B0FHK8V6ZZ",
+      "url": "https://www.amazon.com/dp/B0FHK8V6ZZ",
+      "ratingValue": 4.3,
+      "ratingCount": 53
+    },
+    "kids-chair-pink": {
+      "asin": "B0CT9R3PRQ",
+      "url": "https://www.amazon.com/dp/B0CT9R3PRQ",
+      "ratingValue": 4.4,
+      "ratingCount": 22
+    }
+  }
+}

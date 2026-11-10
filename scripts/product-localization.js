@@ -16,8 +16,7 @@ const uiKeys = [
   'Lifestyle photos include tables and accessories sold separately.',
   'Table and accessories shown are sold separately.',
   'Mixed collection shown. Additional sets sold separately.', 'Kids Chairs', 'Building Toys',
-  'Back to product', 'Previous image', 'Next image', 'Zoom in', 'Zoom out', 'Reset zoom',
-  'Swipe, use the arrow keys, pinch or double-tap to zoom.'
+  'Back to product', 'ratings on Amazon'
 ];
 
 const locales = [{

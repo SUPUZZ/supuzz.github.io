@@ -68,6 +68,11 @@
 .product-summary .product-actions .amazon-button { width:100%; min-height:52px; font-size:.95rem; justify-content:space-between; padding-inline:22px; }
 .product-summary .product-actions { display:block; }
 .product-purchase-note { font-size:.7rem; text-align:center; color:var(--muted); margin-top:10px; }
+.product-rating { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:6px; margin-top:12px; color:var(--muted); font-size:.78rem; }
+.product-rating-star { color:#E6B100; font-size:1rem; line-height:1; }
+.product-rating strong { color:var(--ink); font-weight:600; }
+.product-rating a { text-decoration:underline; text-underline-offset:2px; }
+.product-rating a:hover { color:var(--ink); }
 .product-variants { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 22px; font-size:.75rem; }
 .product-variants > span { flex-basis:100%; font-weight:500; margin-bottom:3px; }
 .product-variants a { padding:8px 14px; border:1px solid var(--line); border-radius:5px; }

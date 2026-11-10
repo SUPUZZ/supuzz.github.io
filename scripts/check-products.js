@@ -5,10 +5,13 @@ const assert = require('assert/strict');
 const { locales } = require('./product-localization');
 const catalog = require('../resource/products-en.json').filter(p => !p.storeOnly);
 const productOffers = require('../resource/product-offers.json');
+const productRatings = require('../resource/product-ratings.json');
 const offerTranslations = require('../resource/product-offer-locales.json');
 const root = path.resolve(__dirname, '..');
 const sitemap = fs.readFileSync(path.join(root, 'static/sitemap.xml'), 'utf8');
 const built = process.argv.includes('--dist');
+assert.equal(productRatings.source, 'Amazon.com', 'ratings source');
+assert(/^\d{4}-\d{2}-\d{2}$/.test(productRatings.checkedAt), 'ratings verification date');
 const jsonLd = html => [...html.matchAll(/<script\b[^>]*type=["']?application\/ld\+json["']?[^>]*>([\s\S]*?)<\/script>/gi)].map(m => JSON.parse(m[1]));
 let checked = 0;
 
@@ -46,7 +49,19 @@ for (const locale of locales) {
       check(offer.asin === product.asin && offer.url === `https://www.amazon.com/dp/${product.asin}`, 'offer matches selected variant');
       check(/^\d+\.\d{2}$/.test(offer.price) && Number(offer.price) > 0 && offer.priceCurrency === 'USD', 'verified USD price');
       check(/^\d{4}-\d{2}-\d{2}$/.test(productOffers.checkedAt) && !Number.isNaN(Date.parse(productOffers.checkedAt)), 'offer verification date');
-      check(entity.offers?.['@type'] === 'Offer' && ['url', 'price', 'priceCurrency', 'availability'].every(key => entity.offers[key] === offer[key]), 'complete product offer schema');
+      check(entity.offers?.['@type'] === 'Offer' && entity.offers.url === offer.url && entity.offers.price === Number(offer.price) && entity.offers.priceCurrency === offer.priceCurrency && entity.offers.availability === offer.availability && entity.offers.itemCondition === 'https://schema.org/NewCondition', 'complete product offer schema');
+      const rating = productRatings.products[product.key];
+      if (rating) {
+        check(rating.asin === product.asin && rating.url === offer.url, 'Amazon rating matches product offer');
+        check(Number.isFinite(rating.ratingValue) && rating.ratingValue >= 0 && rating.ratingValue <= 5, 'valid Amazon rating value');
+        check(Number.isInteger(rating.ratingCount) && rating.ratingCount > 0, 'valid Amazon rating count');
+        check(entity.aggregateRating?.['@type'] === 'AggregateRating' && entity.aggregateRating.ratingValue === rating.ratingValue && entity.aggregateRating.ratingCount === rating.ratingCount && entity.aggregateRating.bestRating === productRatings.bestRating && entity.aggregateRating.worstRating === productRatings.worstRating, 'Amazon aggregate rating schema');
+        const ratingBlock = html.match(/<p class="product-rating">([\s\S]*?)<\/p>/)?.[0] || '';
+        const visibleCount = new Intl.NumberFormat(locale.htmlLang).format(rating.ratingCount);
+        check(ratingBlock.includes(rating.ratingValue.toFixed(1)) && ratingBlock.includes(visibleCount) && ratingBlock.includes(rating.url), 'visible Amazon rating with source link');
+      } else {
+        check(!entity.aggregateRating, 'no aggregateRating without a verified source');
+      }
       const note = html.match(/<p class="product-purchase-note">([\s\S]*?)<\/p>/)?.[1] || '';
       const price = new Intl.NumberFormat(locale.htmlLang, {style:'currency', currency:'USD', currencyDisplay:'code'}).format(Number(offer.price));
       const stock = offerTranslations[locale.directory]?.availability[offer.availability];
@@ -65,7 +80,7 @@ for (const locale of locales) {
       }
       if (locale.directory !== 'en') {
         const main = html.match(/<main[\s\S]*?<\/main>/)[0];
-        check(!/View details|Shop on Amazon|Choose your set|Product specifications|What’s included|years|pieces/.test(main), 'no untranslated product UI or units');
+        check(!/View details|Shop on Amazon|Choose your set|Product specifications|What’s included|ratings on Amazon|years|pieces/.test(main), 'no untranslated product UI or units');
       }
     } else {
       const section = html.match(/<section id="products"[\s\S]*?<\/section>/)[0];
@@ -96,30 +111,33 @@ for (const locale of locales) {
     checked++;
   }
 }
-// Every indexed product also has a noindex image viewer in each locale.
+// One shared image browser serves every product. Verify the container and
+// the generated language data instead of a separate page per product.
+const galleryHtml = fs.readFileSync(path.join(root, 'gallery.html'), 'utf8');
+assert(/<meta name="robots" content="noindex, follow">/.test(galleryHtml), 'gallery.html: noindex');
+assert(galleryHtml.includes('rel="canonical" href="https://supuzz.com/gallery.html"'), 'gallery.html: self canonical');
+assert(galleryHtml.includes('data-gallery-viewer') && !galleryHtml.includes('<include '), 'gallery.html: standalone viewer');
+if (built) {
+  const output = fs.readFileSync(path.join(root, 'dist', 'gallery.html'), 'utf8');
+  assert(output.includes('data-gallery-viewer') && !output.includes('<include '), 'dist/gallery.html: standalone viewer');
+}
 for (const locale of locales) {
+  const relative = `static/data/product-galleries-${locale.directory}.json`;
+  const data = JSON.parse(fs.readFileSync(path.join(root, relative), 'utf8'));
+  assert.equal(data.lang, locale.directory, `${relative}: language`);
+  assert.equal(data.htmlLang, locale.htmlLang, `${relative}: html language`);
   for (const product of catalog) {
-    const relative = `${locale.directory}/product-${product.slug}-gallery.html`;
-    const html = fs.readFileSync(path.join(root, relative), 'utf8');
-    const check = (condition, label) => assert(condition, `${relative}: ${label}`);
-    check(/<meta name="robots" content="noindex, follow">/.test(html), 'gallery stays out of the index');
-    check(html.includes(`rel="canonical" href="https://supuzz.com/${relative}"`), 'gallery self canonical');
-    check(html.includes(`class="gallery-back" href="product-${product.slug}.html"`), 'gallery returns to the product');
-    const payload = html.match(/<script type="application\/json" data-gallery-photos>([\s\S]*?)<\/script>/)?.[1];
-    check(payload, 'gallery image data');
-    const photos = JSON.parse(payload).photos;
-    check(photos.length === (product.gallery ? product.gallery.length : product.imageAlts.length), 'all product photos included');
-    for (const photo of photos) {
-      check(typeof photo.alt === 'string' && photo.alt.trim(), 'gallery photo alt text');
-      check(fs.existsSync(path.join(root, 'static', photo.file)) && fs.existsSync(path.join(root, 'static', photo.thumb)), `gallery image ${photo.file}`);
+    const entry = data.products[product.key];
+    assert(entry, `${relative}: ${product.key}`);
+    assert(typeof entry.name === 'string' && entry.name.trim(), `${relative}: ${product.key} name`);
+    assert(entry.page === `/${locale.directory}/product-${product.slug}.html`, `${relative}: ${product.key} product page`);
+    assert(entry.photos.length === (product.gallery ? product.gallery.length : product.imageAlts.length), `${relative}: ${product.key} photos`);
+    for (const photo of entry.photos) {
+      assert(typeof photo.alt === 'string' && photo.alt.trim(), `${relative}: ${product.key} alt`);
+      assert(fs.existsSync(path.join(root, 'static', photo.file)) && fs.existsSync(path.join(root, 'static', photo.thumb)), `${relative}: ${photo.file}`);
     }
-    if (built) {
-      const output = fs.readFileSync(path.join(root, 'dist', relative), 'utf8');
-      check(!output.includes('<include '), 'resolved gallery includes');
-      check((output.match(/<header[\s>]/g) || []).length === 1 && (output.match(/<footer[\s>]/g) || []).length === 1, 'gallery header and footer');
-    }
-    checked++;
   }
+  if (built) assert(fs.existsSync(path.join(root, 'dist', 'data', `product-galleries-${locale.directory}.json`)), `dist data: ${locale.directory}`);
 }
 // Catch incomplete Product markup in articles and other entry pages as well.
 // Ordinary editorial pages should keep their article schema, not a bare Product.
@@ -149,5 +167,5 @@ for (const directory of ['', 'static', ...locales.map(locale => locale.directory
     for (const data of jsonLd(fs.readFileSync(path.join(folder, filename), 'utf8'))) visit(data);
   }
 }
-console.log(`Audited ${productEntities} Product entities across site HTML: none missing offers, review or aggregateRating.`);
+console.log(`Audited ${productEntities} Product entities across site HTML: every Product has offers; ${Object.keys(productRatings.products).length} products include Amazon aggregate ratings.`);
 console.log(`Passed ${checked} localized pages: catalog, metadata, reciprocal language links, schemas, images and navigation${built ? ', plus compiled shells' : ''}.`);
