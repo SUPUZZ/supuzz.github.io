@@ -2,14 +2,15 @@
 document.querySelectorAll('[data-product-gallery]').forEach((gallery) => {
   const mainLink = gallery.querySelector('.product-gallery-main');
   const mainImage = mainLink.querySelector('img');
-  gallery.querySelectorAll('[data-gallery-image]').forEach((link) => {
+  const galleryPage = mainLink.getAttribute('href').split('#')[0];
+  gallery.querySelectorAll('[data-gallery-image]').forEach((link, index) => {
     link.addEventListener('click', (event) => {
       if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
       event.preventDefault();
       mainImage.src = link.href;
       mainImage.removeAttribute('srcset');
       mainImage.alt = link.querySelector('img').alt;
-      mainLink.href = link.href;
+      mainLink.href = `${galleryPage}#photo-${index + 1}`;
       gallery.querySelectorAll('[data-gallery-image]').forEach((item) => {
         item.setAttribute('aria-current', String(item === link));
       });

@@ -42,6 +42,8 @@ function generateLocale(locale) {
   const jsonLd = (value) => `<script type="application/ld+json">${JSON.stringify(value, null, 2).replaceAll('<', '\\u003c')}</script>`;
   const pageName = (product) => `product-${product.slug}.html`;
   const pageUrl = (product) => `${site}/${locale.directory}/${pageName(product)}`;
+  const galleryName = (product) => `product-${product.slug}-gallery.html`;
+  const galleryUrl = (product) => `${site}/${locale.directory}/${galleryName(product)}`;
   const productImages = (product) => product.gallery
     ? product.gallery.map(([suffix, alt]) => {
       const image = images.find((item) => item.file === `/product-images/supuzz-${product.slug}-${suffix}.webp`);
@@ -180,7 +182,7 @@ function generateLocale(locale) {
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/products-en.css">
     <link rel="icon" href="../images/favicon.ico">
-    <meta name="theme-color" content="#6750A4">
+    <meta name="theme-color" content="#FEDD00">
     ${jsonLd(schema)}
     <link rel="canonical" href="${pageUrl(product)}">
     ${alternates(pageName(product))}
@@ -191,7 +193,7 @@ function generateLocale(locale) {
       <nav class="product-breadcrumb" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="index.html#products">Products</a></li><li aria-current="page">${escape(product.name)}</li></ol></nav>
       <div class="product-overview">
         <div class="product-gallery" data-product-gallery>
-          <a class="product-gallery-main" href="${photos[0].file}" target="_blank" rel="noopener noreferrer" aria-label="Open full-size product image">${img(photos[0], photos[0].alt, { main: true })}<span class="product-zoom-label" aria-hidden="true">View full image ↗</span></a>
+          <a class="product-gallery-main" href="${galleryName(product)}" aria-label="Open full-size product image">${img(photos[0], photos[0].alt, { main: true })}<span class="product-zoom-label" aria-hidden="true">View full image ↗</span></a>
           ${photos.length > 1 ? `<div class="product-thumbnails" aria-label="Product images">${photos.map((photo, index) => `<a href="${photo.file}" data-gallery-image aria-current="${index === 0}" aria-label="Show product image ${index + 1}"><img src="${photo.thumb}" alt="${escape(photo.alt)}" width="${photo.width}" height="${photo.height}" loading="lazy"></a>`).join('')}</div>` : ''}
           ${product.galleryNote ? `<p class="product-gallery-hint">${escape(product.galleryNote)}</p>` : product.category === 'furniture' ? '<p class="product-gallery-hint">Lifestyle photos include tables and accessories sold separately.</p>' : ''}
         </div>
@@ -220,10 +222,93 @@ function generateLocale(locale) {
   `;
   }
 
+  function galleryPage(product) {
+    const photos = productImages(product);
+    const title = `${product.name} — ${t('Product images')} | SUPUZZ`;
+    const galleryData = JSON.stringify({
+      photos: photos.map(photo => ({
+        file: photo.file, thumb: photo.thumb, width: photo.width, height: photo.height, alt: photo.alt
+      }))
+    }).replaceAll('<', '\\u003c');
+    return `<!DOCTYPE html>
+<html lang="${locale.htmlLang}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escape(title)}</title>
+    <meta name="description" content="${escape(product.description)}">
+    <meta name="robots" content="noindex, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SUPUZZ">
+    <meta property="og:locale" content="${locale.ogLocale}">
+    <meta property="og:url" content="${galleryUrl(product)}">
+    <meta property="og:title" content="${escape(title)}">
+    <meta property="og:description" content="${escape(product.description)}">
+    <meta property="og:image" content="${site}${photos[0].file}">
+    <meta property="og:image:width" content="${photos[0].width}">
+    <meta property="og:image:height" content="${photos[0].height}">
+    <meta property="og:image:alt" content="${escape(photos[0].alt)}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="${galleryUrl(product)}">
+    <meta name="twitter:title" content="${escape(title)}">
+    <meta name="twitter:description" content="${escape(product.description)}">
+    <meta name="twitter:image" content="${site}${photos[0].file}">
+    <meta name="twitter:image:alt" content="${escape(photos[0].alt)}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/product-gallery.css">
+    <link rel="icon" href="../images/favicon.ico">
+    <meta name="theme-color" content="#FEDD00">
+    <link rel="canonical" href="${galleryUrl(product)}">
+</head>
+<body class="product-gallery-page">
+    <include src="components/header.html"></include>
+    <main class="product-gallery container" data-gallery-viewer>
+      <div class="gallery-head">
+        <a class="gallery-back" href="${pageName(product)}"><span aria-hidden="true">←</span> ${escape(t('Back to product'))}</a>
+        <div class="gallery-heading">
+          <p class="gallery-eyebrow">${escape(t('Product images'))}</p>
+          <h1>${escape(product.name)}</h1>
+        </div>
+        <p class="gallery-count" data-gallery-count aria-live="polite">1 / ${photos.length}</p>
+      </div>
+      <section class="gallery-stage" data-gallery-stage aria-label="${escape(t('Product images'))}">
+        <button class="gallery-arrow prev" type="button" data-gallery-prev aria-label="${escape(t('Previous image'))}"><span aria-hidden="true">‹</span></button>
+        <figure class="gallery-frame" data-gallery-frame>
+          <img data-gallery-photo src="${photos[0].file}" alt="${escape(photos[0].alt)}" width="${photos[0].width}" height="${photos[0].height}" loading="eager" fetchpriority="high" decoding="async">
+        </figure>
+        <button class="gallery-arrow next" type="button" data-gallery-next aria-label="${escape(t('Next image'))}"><span aria-hidden="true">›</span></button>
+      </section>
+      <div class="gallery-tools">
+        <div class="gallery-zoom">
+          <button type="button" data-gallery-zoom-out aria-label="${escape(t('Zoom out'))}"><span aria-hidden="true">−</span></button>
+          <button type="button" data-gallery-zoom-reset aria-label="${escape(t('Reset zoom'))}"><span data-gallery-zoom-value>100%</span></button>
+          <button type="button" data-gallery-zoom-in aria-label="${escape(t('Zoom in'))}"><span aria-hidden="true">+</span></button>
+        </div>
+        <p class="gallery-hint">${escape(t('Swipe, use the arrow keys, pinch or double-tap to zoom.'))}</p>
+      </div>
+      <div class="gallery-thumbs" role="group" aria-label="${escape(t('Product images'))}">
+        ${photos.map((photo, index) => `<a class="gallery-thumb" data-gallery-thumb href="${photo.file}" aria-label="${escape(t('Show product image'))} ${index + 1}" aria-current="${index === 0}"><img src="${photo.thumb}" alt="" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async"></a>`).join('')}
+      </div>
+      ${product.galleryNote ? `<p class="gallery-note">${escape(product.galleryNote)}</p>` : product.category === 'furniture' ? `<p class="gallery-note">${escape(t('Lifestyle photos include tables and accessories sold separately.'))}</p>` : ''}
+    </main>
+    <include src="components/footer.html"></include>
+    <script type="application/json" data-gallery-photos>${galleryData}</script>
+    <script type="module" src="/js/product-gallery.js"></script>
+</body>
+</html>`;
+  }
+
   function alternates(filename) {
     return [...locales.map(item => `<link rel="alternate" hreflang="${item.directory}" href="${site}/${item.directory}/${filename}">`), `<link rel="alternate" hreflang="x-default" href="${site}/en/${filename}">`].join('\n  ');
   }
-  for (const product of availableCatalog) fs.writeFileSync(path.join(root, locale.directory, pageName(product)), localizeUi(productPage(product)).replace(/[ \t]+$/gm, ''));
+  for (const product of availableCatalog) {
+    fs.writeFileSync(path.join(root, locale.directory, pageName(product)), localizeUi(productPage(product)).replace(/[ \t]+$/gm, ''));
+    fs.writeFileSync(path.join(root, locale.directory, galleryName(product)), galleryPage(product).replace(/[ \t]+$/gm, ''));
+  }
 
   const collection = `<!-- Localized product collection: generated by scripts/build-products.js -->
       <section id="products" class="section product-collection" aria-labelledby="products-title">

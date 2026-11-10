@@ -96,6 +96,31 @@ for (const locale of locales) {
     checked++;
   }
 }
+// Every indexed product also has a noindex image viewer in each locale.
+for (const locale of locales) {
+  for (const product of catalog) {
+    const relative = `${locale.directory}/product-${product.slug}-gallery.html`;
+    const html = fs.readFileSync(path.join(root, relative), 'utf8');
+    const check = (condition, label) => assert(condition, `${relative}: ${label}`);
+    check(/<meta name="robots" content="noindex, follow">/.test(html), 'gallery stays out of the index');
+    check(html.includes(`rel="canonical" href="https://supuzz.com/${relative}"`), 'gallery self canonical');
+    check(html.includes(`class="gallery-back" href="product-${product.slug}.html"`), 'gallery returns to the product');
+    const payload = html.match(/<script type="application\/json" data-gallery-photos>([\s\S]*?)<\/script>/)?.[1];
+    check(payload, 'gallery image data');
+    const photos = JSON.parse(payload).photos;
+    check(photos.length === (product.gallery ? product.gallery.length : product.imageAlts.length), 'all product photos included');
+    for (const photo of photos) {
+      check(typeof photo.alt === 'string' && photo.alt.trim(), 'gallery photo alt text');
+      check(fs.existsSync(path.join(root, 'static', photo.file)) && fs.existsSync(path.join(root, 'static', photo.thumb)), `gallery image ${photo.file}`);
+    }
+    if (built) {
+      const output = fs.readFileSync(path.join(root, 'dist', relative), 'utf8');
+      check(!output.includes('<include '), 'resolved gallery includes');
+      check((output.match(/<header[\s>]/g) || []).length === 1 && (output.match(/<footer[\s>]/g) || []).length === 1, 'gallery header and footer');
+    }
+    checked++;
+  }
+}
 // Catch incomplete Product markup in articles and other entry pages as well.
 // Ordinary editorial pages should keep their article schema, not a bare Product.
 let productEntities = 0;

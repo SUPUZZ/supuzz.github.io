@@ -19,7 +19,7 @@ class AboutBuilder {
             return values.map((_, index) => `<p>${text(`${section}.paragraphs.${index}`)}</p>`).join('\n');
         };
         const cards = [
-            { key: 'blocks', icon: 'extension', color: '#6750A4', border: '#6750A4' },
+            { key: 'blocks', icon: 'extension', color: '#8A6D00', border: '#8A6D00' },
             { key: 'furniture', icon: 'chair', color: '#B3861F', border: '#FEDD00' },
             { key: 'play', icon: 'psychology', color: '#005221', border: '#C4EED0' }
         ];
