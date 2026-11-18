@@ -47,6 +47,31 @@ document.addEventListener('visibilitychange', () => {
 });
 window.addEventListener('pagehide', reportDuration);
 
+function getPageLanguage() {
+  const path = window.location.pathname || '';
+  for (const dir of ['es', 'ja', 'zh-Hant', 'de', 'pt', 'fr']) {
+    if (path.indexOf('/' + dir + '/') !== -1) return dir;
+  }
+  return 'en';
+}
+
+// Campaign attribution for the newsletter: read explicit source first, then UTM.
+function readSubscriptionContext() {
+  const params = new URLSearchParams(window.location.search);
+  const utm = {
+    source: params.get('utm_source') || undefined,
+    medium: params.get('utm_medium') || undefined,
+    campaign: params.get('utm_campaign') || undefined,
+    content: params.get('utm_content') || undefined,
+    term: params.get('utm_term') || undefined,
+  };
+  for (const key of Object.keys(utm)) if (utm[key] === undefined) delete utm[key];
+  return {
+    urlSource: params.get('source') || undefined,
+    utm: Object.keys(utm).length ? utm : undefined,
+  };
+}
+
 export const apiService = {
   async feedback({ email, message, source, metadata } = {}) {
     try {
@@ -79,19 +104,27 @@ export const apiService = {
     }
   },
 
-  async subscribe(email) {
+  async subscribe(email, options = {}) {
     if (isLocal) return null;
     try {
+      const context = readSubscriptionContext();
+      const body = {
+        brandName: BRAND_NAME,
+        domain: DOMAIN,
+        email,
+        source: options.source || context.urlSource || (context.utm && context.utm.source) || 'website',
+        campaign: options.campaign || (context.utm && context.utm.campaign),
+        language: options.language || getPageLanguage(),
+      };
+      if (context.utm) body.utm = context.utm;
+      for (const key of Object.keys(body)) if (body[key] === undefined) delete body[key];
+
       const response = await fetch(`${API_BASE_URL}/api/subscribe`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          brandName: BRAND_NAME,
-          domain: DOMAIN,
-          email,
-        }),
+        body: JSON.stringify(body),
         credentials: 'omit',
       });
       
@@ -102,6 +135,36 @@ export const apiService = {
       return response.json();
     } catch (error) {
       console.warn('Failed to subscribe:', error);
+      throw error;
+    }
+  },
+
+  // Community co-creation: upload a build photo or submit a written article.
+  // `formData` is a FormData instance; do not set Content-Type so the browser
+  // can add the multipart boundary automatically.
+  async submitCommunity(formData) {
+    if (isLocal) return null;
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/community/submissions`, {
+        method: 'POST',
+        body: formData,
+        credentials: 'omit',
+      });
+
+      if (!response.ok) {
+        let message = 'Failed to submit';
+        try {
+          const data = await response.json();
+          if (data && (data.message || data.error)) message = data.message || data.error;
+        } catch (error) {
+          // Non-JSON error body; keep the generic message.
+        }
+        throw new Error(message);
+      }
+
+      return response.json();
+    } catch (error) {
+      console.warn('Failed to submit community content:', error);
       throw error;
     }
   },

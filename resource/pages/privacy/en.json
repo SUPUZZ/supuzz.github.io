@@ -1,0 +1,52 @@
+{
+  "title": "Privacy Policy",
+  "documentTitle": "Privacy Policy | SUPUZZ",
+  "description": "How SUPUZZ collects, uses and protects personal information on supuzz.com, including newsletter subscriptions, contact forms and anonymous analytics.",
+  "updated": "Effective date: November 18, 2026",
+  "contactLine": "Questions about this policy? Contact us at",
+  "sections": [
+    {
+      "heading": "Overview",
+      "paragraphs": [
+        "This policy explains what personal information SUPUZZ collects when you visit supuzz.com, how we use it, and the choices you have. SUPUZZ is a brand website for building toys and kids furniture; product purchases take place on Amazon.com and are governed by Amazon's own policies."
+      ]
+    },
+    {
+      "heading": "Information we collect",
+      "paragraphs": [
+        "When you subscribe to our newsletter, we collect your email address and the language of the page you subscribed from. When you send a message through the contact form, we collect the name, email address and details you provide.",
+        "We also collect anonymous usage data, such as pages visited, approximate time spent and a randomly generated visitor identifier, to understand how the site is used."
+      ]
+    },
+    {
+      "heading": "How we use information",
+      "paragraphs": [
+        "We use your email address to send the newsletter you requested, including play ideas, new-product news and special offers, and to respond to your inquiries. Anonymous usage data is used in aggregate to improve the website."
+      ]
+    },
+    {
+      "heading": "Cookies and local storage",
+      "paragraphs": [
+        "The site may store a small language-preference cookie and a visitor identifier in your browser's local storage. These help us keep the site in your preferred language and measure aggregate usage. They do not identify you personally."
+      ]
+    },
+    {
+      "heading": "Sharing",
+      "paragraphs": [
+        "We do not sell your personal information. We may share information with service providers who help us operate the website and deliver emails (for example, a newsletter platform), only as needed to provide those services. Links to Amazon.com are provided for purchases; information you provide to Amazon is subject to Amazon's privacy policy."
+      ]
+    },
+    {
+      "heading": "Your choices",
+      "paragraphs": [
+        "You can unsubscribe from the newsletter at any time using the link in any email we send. To access, correct or delete your information, or to ask a question, contact us using the address below."
+      ]
+    },
+    {
+      "heading": "Children",
+      "paragraphs": [
+        "This website is intended for adults, such as parents and educators. We do not knowingly collect personal information from children."
+      ]
+    }
+  ]
+}

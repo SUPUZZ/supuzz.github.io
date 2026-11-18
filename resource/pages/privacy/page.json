@@ -1,0 +1,10 @@
+{
+  "file": "privacy.html",
+  "builder": "PrivacyBuilder.js",
+  "type": "page",
+  "locales": ["en", "es", "ja", "zh-Hant", "de", "pt", "fr"],
+  "styles": ["/css/privacy.css"],
+  "shared": {
+    "email": "atmanpro@163.com"
+  }
+}

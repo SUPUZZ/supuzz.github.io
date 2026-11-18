@@ -1,0 +1,58 @@
+.privacy-page {
+    width: min(760px, calc(100% - 40px));
+    margin: calc(72px + clamp(40px, 5vw, 64px)) auto clamp(56px, 8vw, 96px);
+    color: var(--text-main);
+}
+
+.privacy-header {
+    margin-bottom: clamp(28px, 4vw, 40px);
+}
+
+.privacy-header h1 {
+    margin: 0 0 10px;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.privacy-updated {
+    margin: 0;
+    color: var(--text-sub);
+    font-size: 0.9rem;
+}
+
+.privacy-section {
+    margin-bottom: 28px;
+}
+
+.privacy-section h2 {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+}
+
+.privacy-section p {
+    margin: 0 0 12px;
+    color: var(--text-sub);
+    line-height: 1.7;
+}
+
+.privacy-section p:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-contact {
+    margin-top: 32px;
+    color: var(--text-sub);
+    line-height: 1.7;
+}
+
+.privacy-contact a {
+    color: var(--text-main);
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+.privacy-page a:focus-visible {
+    outline: 2px solid var(--text-main);
+    outline-offset: 3px;
+}

@@ -1,0 +1,65 @@
+{
+  "title": "Build with us",
+  "documentTitle": "Build with us | Upload Your Build & Share Ideas | SUPUZZ",
+  "description": "Join the SUPUZZ community: upload up to 5 photos of your build, write a play idea, or share a social link. Free to submit, reviewed before publishing.",
+  "eyebrow": "THE SUPUZZ COMMUNITY",
+  "intro": "Share whatever you've built — any theme, any idea. Upload photos, write about it, or link your social post.",
+  "imageAlt": "A parent and child building together with colorful SUPUZZ blocks",
+  "heroCaption": "Made for shared play.",
+  "heroCta": "Share your build",
+  "trust": {
+    "review": "Reviewed before publishing",
+    "free": "Free to submit"
+  },
+  "stepsTitle": "How it works",
+  "steps": [
+    { "title": "Share your build", "body": "Add up to 5 photos, write about it, or paste a social link." },
+    { "title": "We take a look", "body": "Our team reviews every submission before it goes public." },
+    { "title": "Get featured", "body": "Standout builds appear in our newsletter and social channels." }
+  ],
+  "submit": {
+    "tag": "SHARE YOUR BUILD",
+    "title": "Share your build",
+    "body": "Upload up to 5 photos, write a play idea or story, or share a link to your social post. We'll review it before publishing.",
+    "form": {
+      "titleLabel": "Title",
+      "titlePlaceholder": "What did you build?",
+      "bodyLabel": "Your story or play idea",
+      "bodyPlaceholder": "Tell us about it…",
+      "imageLabel": "Photos (optional)",
+      "imageHint": "Up to 5 images. JPG, PNG, WebP or GIF.",
+      "socialLabel": "Social media link (optional)",
+      "socialPlaceholder": "e.g. https://www.tiktok.com/@you/video/...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Your email",
+      "submit": "Submit my build",
+      "submitting": "Submitting…",
+      "note": "By submitting, you join the Play Club. No spam — unsubscribe anytime.",
+      "privacyLabel": "Privacy policy",
+      "success": "✓ Thanks! We'll review your submission and may feature it.",
+      "error": "Something went wrong. Please try again.",
+      "requiredTitle": "Please add a title.",
+      "requiredContent": "Add a description, a photo or a social link.",
+      "requiredEmail": "Please enter your email.",
+      "invalidImage": "Only JPG, PNG, WebP or GIF images are allowed.",
+      "maxImages": "You can upload up to 5 images.",
+      "imageCount": "{n} of 5 selected"
+    }
+  },
+  "faqTitle": "Questions",
+  "faq": [
+    { "q": "Is it free to submit?", "a": "Yes. Submitting your build is completely free and takes a minute." },
+    { "q": "Do I need an account?", "a": "No account needed. Just add your email so we can reach you about your submission." },
+    { "q": "What happens after I submit?", "a": "We review your build, then feature the best ones in our newsletter and on our social channels. Nothing is published without review." }
+  ],
+  "share": {
+    "title": "Share on social",
+    "body": "Tag #SUPUZZBuild on your favorite platform — we feature standout builds in our newsletter and on our social channels.",
+    "hashtag": "#SUPUZZBuild",
+    "fallback": "Prefer email? Use the contact form."
+  },
+  "links": {
+    "products": "Browse building sets",
+    "blog": "Explore play ideas"
+  }
+}

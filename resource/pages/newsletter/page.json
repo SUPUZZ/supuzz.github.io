@@ -1,0 +1,11 @@
+{
+  "file": "newsletter.html",
+  "builder": "NewsletterBuilder.js",
+  "type": "page",
+  "locales": ["en", "es", "ja", "zh-Hant", "de", "pt", "fr"],
+  "styles": ["/css/newsletter.css"],
+  "scripts": ["/js/newsletter.js"],
+  "shared": {
+    "logo": "/images/android-chrome-512x512.png"
+  }
+}

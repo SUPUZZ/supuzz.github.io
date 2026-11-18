@@ -1,0 +1,65 @@
+{
+  "title": "Baue mit uns",
+  "documentTitle": "Baue mit uns | Lade dein Bauwerk hoch & teile Ideen | SUPUZZ",
+  "description": "Tritt der SUPUZZ-Community bei: Lade bis zu 5 Fotos deines Bauwerks hoch, schreibe eine Spielidee oder teile einen Social-Media-Link. Kostenlos, vor Veröffentlichung geprüft.",
+  "eyebrow": "DIE SUPUZZ-COMMUNITY",
+  "intro": "Teile, was du gebaut hast — jedes Thema, jede Idee. Lade Fotos hoch, schreib darüber oder verlinke deinen Social-Post.",
+  "imageAlt": "Ein Elternteil und ein Kind bauen gemeinsam mit bunten SUPUZZ-Bausteinen",
+  "heroCaption": "Für gemeinsames Spielen gemacht.",
+  "heroCta": "Bauwerk teilen",
+  "trust": {
+    "review": "Vor Veröffentlichung geprüft",
+    "free": "Kostenlos einreichen"
+  },
+  "stepsTitle": "So funktioniert es",
+  "steps": [
+    { "title": "Bauwerk teilen", "body": "Füge bis zu 5 Fotos hinzu, schreib darüber oder füge einen Social-Link ein." },
+    { "title": "Wir prüfen es", "body": "Unser Team prüft jeden Beitrag vor der Veröffentlichung." },
+    { "title": "Vorgestellt werden", "body": "Besondere Bauwerke erscheinen in unserem Newsletter und auf unseren Kanälen." }
+  ],
+  "submit": {
+    "tag": "DEIN BAUWERK TEILEN",
+    "title": "Teile dein Bauwerk",
+    "body": "Lade bis zu 5 Fotos hoch, schreibe eine Spielidee oder Geschichte, oder teile den Link zu deinem Social-Post. Wir prüfen ihn vor der Veröffentlichung.",
+    "form": {
+      "titleLabel": "Titel",
+      "titlePlaceholder": "Was hast du gebaut?",
+      "bodyLabel": "Deine Geschichte oder Spielidee",
+      "bodyPlaceholder": "Erzähl uns davon…",
+      "imageLabel": "Fotos (optional)",
+      "imageHint": "Bis zu 5 Bilder. JPG, PNG, WebP oder GIF.",
+      "socialLabel": "Social-Media-Link (optional)",
+      "socialPlaceholder": "z. B. https://www.tiktok.com/@you/video/...",
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "Ihre E-Mail",
+      "submit": "Bauwerk einreichen",
+      "submitting": "Wird gesendet…",
+      "note": "Mit dem Einreichen trittst du dem Play Club bei. Kein Spam – jederzeit abbestellbar.",
+      "privacyLabel": "Datenschutzrichtlinie",
+      "success": "✓ Danke! Wir prüfen deinen Beitrag und stellen ihn vielleicht vor.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+      "requiredTitle": "Bitte gib einen Titel an.",
+      "requiredContent": "Füge eine Beschreibung, ein Foto oder einen Social-Link hinzu.",
+      "requiredEmail": "Bitte gib deine E-Mail-Adresse ein.",
+      "invalidImage": "Nur JPG-, PNG-, WebP- oder GIF-Bilder sind erlaubt.",
+      "maxImages": "Du kannst bis zu 5 Bilder hochladen.",
+      "imageCount": "{n} von 5 ausgewählt"
+    }
+  },
+  "faqTitle": "Fragen",
+  "faq": [
+    { "q": "Ist die Einreichung kostenlos?", "a": "Ja. Dein Bauwerk einzureichen ist völlig kostenlos und dauert eine Minute." },
+    { "q": "Brauche ich ein Konto?", "a": "Kein Konto nötig. Gib einfach deine E-Mail-Adresse an, damit wir dich zu deinem Beitrag erreichen können." },
+    { "q": "Was passiert nach dem Einreichen?", "a": "Wir prüfen dein Bauwerk und stellen die besten in unserem Newsletter und auf unseren Kanälen vor. Nichts wird ohne Prüfung veröffentlicht." }
+  ],
+  "share": {
+    "title": "Auf Social Media teilen",
+    "body": "Markiere #SUPUZZBuild auf deiner Lieblingsplattform – wir zeigen besondere Bauwerke in unserem Newsletter und auf unseren Kanälen.",
+    "hashtag": "#SUPUZZBuild",
+    "fallback": "Lieber per E-Mail? Nutze das Kontaktformular."
+  },
+  "links": {
+    "products": "Bausteine entdecken",
+    "blog": "Spielideen entdecken"
+  }
+}

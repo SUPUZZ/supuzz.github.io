@@ -22,6 +22,12 @@
 .article-guide .back-link { margin-top: 28px; }
 .article-guide a { color: var(--text-main); text-decoration: underline; text-underline-offset: 3px; }
 .article-guide a:focus-visible { outline: 3px solid var(--text-main); outline-offset: 4px; }
+.article-guide .newsletter-cta { margin-top: 40px; padding: 28px; border-radius: 16px; background: var(--brand-tint); text-align: center; }
+.article-guide .newsletter-cta-eyebrow { margin: 0 0 8px; color: var(--text-sub); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.article-guide .newsletter-cta h2 { margin: 0 0 10px; }
+.article-guide .newsletter-cta p { margin: 0 0 18px; }
+.article-guide .newsletter-cta-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; border-radius: 8px; background: var(--brand-yellow); color: var(--on-primary); text-decoration: none; font-weight: 600; }
+.article-guide .newsletter-cta-btn:hover { background: var(--brand-yellow-dark); }
 @media (max-width: 600px) {
     .article-guide .breadcrumb { padding-top: 90px; }
     .article-guide .link-box { padding: 20px; }

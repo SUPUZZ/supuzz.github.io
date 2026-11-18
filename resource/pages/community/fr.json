@@ -1,0 +1,65 @@
+{
+  "title": "Construisez avec nous",
+  "documentTitle": "Construisez avec nous | Envoyez votre création et partagez vos idées | SUPUZZ",
+  "description": "Rejoignez la communauté SUPUZZ : envoyez jusqu'à 5 photos de votre création, écrivez une idée de jeu ou partagez un lien vers vos réseaux sociaux. Gratuit, vérifié avant publication.",
+  "eyebrow": "LA COMMUNAUTÉ SUPUZZ",
+  "intro": "Partagez ce que vous avez construit — n'importe quel thème, n'importe quelle idée. Envoyez des photos, écrivez à ce sujet ou ajoutez le lien de votre publication.",
+  "imageAlt": "Un parent et un enfant construisent ensemble avec des blocs SUPUZZ colorés",
+  "heroCaption": "Pensé pour jouer ensemble.",
+  "heroCta": "Partager ma création",
+  "trust": {
+    "review": "Vérifié avant publication",
+    "free": "Envoi gratuit"
+  },
+  "stepsTitle": "Comment ça marche",
+  "steps": [
+    { "title": "Partagez votre création", "body": "Ajoutez jusqu'à 5 photos, écrivez à ce sujet ou collez un lien social." },
+    { "title": "Nous vérifions", "body": "Notre équipe examine chaque contribution avant publication." },
+    { "title": "Soyez mis en avant", "body": "Les plus belles créations apparaissent dans notre newsletter et sur nos réseaux." }
+  ],
+  "submit": {
+    "tag": "PARTAGEZ VOTRE CRÉATION",
+    "title": "Partagez votre création",
+    "body": "Envoyez jusqu'à 5 photos, écrivez une idée de jeu ou une histoire, ou partagez le lien de votre publication. Nous la vérifions avant publication.",
+    "form": {
+      "titleLabel": "Titre",
+      "titlePlaceholder": "Qu'avez-vous construit ?",
+      "bodyLabel": "Votre histoire ou idée de jeu",
+      "bodyPlaceholder": "Racontez-nous…",
+      "imageLabel": "Photos (facultatif)",
+      "imageHint": "Jusqu'à 5 images. JPG, PNG, WebP ou GIF.",
+      "socialLabel": "Lien vers vos réseaux (facultatif)",
+      "socialPlaceholder": "ex. https://www.tiktok.com/@you/video/...",
+      "emailLabel": "Email",
+      "emailPlaceholder": "Votre email",
+      "submit": "Envoyer ma création",
+      "submitting": "Envoi…",
+      "note": "En envoyant, vous rejoignez le Play Club. Pas de spam — désabonnement à tout moment.",
+      "privacyLabel": "politique de confidentialité",
+      "success": "✓ Merci ! Nous examinerons votre contribution et pourrons la mettre en avant.",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "requiredTitle": "Veuillez ajouter un titre.",
+      "requiredContent": "Ajoutez une description, une photo ou un lien social.",
+      "requiredEmail": "Veuillez saisir votre email.",
+      "invalidImage": "Seules les images JPG, PNG, WebP ou GIF sont autorisées.",
+      "maxImages": "Vous pouvez envoyer jusqu'à 5 images.",
+      "imageCount": "{n} sur 5 sélectionnées"
+    }
+  },
+  "faqTitle": "Questions",
+  "faq": [
+    { "q": "L'envoi est-il gratuit ?", "a": "Oui. Envoyer votre création est entièrement gratuit et prend une minute." },
+    { "q": "Faut-il un compte ?", "a": "Aucun compte nécessaire. Indiquez simplement votre email pour que nous puissions vous contacter au sujet de votre contribution." },
+    { "q": "Que se passe-t-il après l'envoi ?", "a": "Nous examinons votre création, puis mettons en avant les plus belles dans notre newsletter et sur nos réseaux. Rien n'est publié sans vérification." }
+  ],
+  "share": {
+    "title": "Partagez sur les réseaux",
+    "body": "Ajoutez le tag #SUPUZZBuild sur votre plateforme préférée — nous mettons en avant les plus belles créations dans notre newsletter et sur nos réseaux.",
+    "hashtag": "#SUPUZZBuild",
+    "fallback": "Vous préférez l'e-mail ? Utilisez le formulaire de contact."
+  },
+  "links": {
+    "products": "Découvrir les jeux de construction",
+    "blog": "Explorer les idées de jeu"
+  }
+}

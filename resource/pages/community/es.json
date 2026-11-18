@@ -1,0 +1,65 @@
+{
+  "title": "Construye con nosotros",
+  "documentTitle": "Construye con nosotros | Sube tu obra y comparte ideas | SUPUZZ",
+  "description": "Únete a la comunidad SUPUZZ: sube hasta 5 fotos de tu obra, escribe una idea de juego o comparte un enlace de redes sociales. Envío gratuito, revisado antes de publicar.",
+  "eyebrow": "LA COMUNIDAD SUPUZZ",
+  "intro": "Comparte lo que hayas construido — cualquier tema, cualquier idea. Sube fotos, cuéntanoslo o enlaza tu publicación social.",
+  "imageAlt": "Una madre y su hija construyen juntas con bloques SUPUZZ de colores",
+  "heroCaption": "Hecho para jugar juntos.",
+  "heroCta": "Comparte tu obra",
+  "trust": {
+    "review": "Revisado antes de publicar",
+    "free": "Envío gratuito"
+  },
+  "stepsTitle": "Cómo funciona",
+  "steps": [
+    { "title": "Comparte tu obra", "body": "Añade hasta 5 fotos, escribe sobre ello o pega un enlace social." },
+    { "title": "Lo revisamos", "body": "Nuestro equipo revisa cada envío antes de publicarlo." },
+    { "title": "Que te destaquen", "body": "Las mejores obras aparecen en nuestra newsletter y redes." }
+  ],
+  "submit": {
+    "tag": "COMPARTE TU OBRA",
+    "title": "Comparte tu obra",
+    "body": "Sube hasta 5 fotos, escribe una idea o historia de juego, o comparte el enlace a tu publicación social. La revisaremos antes de publicarla.",
+    "form": {
+      "titleLabel": "Título",
+      "titlePlaceholder": "¿Qué has construido?",
+      "bodyLabel": "Tu historia o idea de juego",
+      "bodyPlaceholder": "Cuéntanoslo…",
+      "imageLabel": "Fotos (opcional)",
+      "imageHint": "Hasta 5 imágenes. JPG, PNG, WebP o GIF.",
+      "socialLabel": "Enlace de redes sociales (opcional)",
+      "socialPlaceholder": "p. ej. https://www.tiktok.com/@tu/video/...",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Tu correo electrónico",
+      "submit": "Enviar mi obra",
+      "submitting": "Enviando…",
+      "note": "Al enviar, te unes al Play Club. Sin spam — date de baja cuando quieras.",
+      "privacyLabel": "política de privacidad",
+      "success": "✓ ¡Gracias! Revisaremos tu envío y podríamos destacarlo.",
+      "error": "Algo salió mal. Inténtalo de nuevo.",
+      "requiredTitle": "Añade un título.",
+      "requiredContent": "Añade una descripción, una foto o un enlace social.",
+      "requiredEmail": "Introduce tu correo electrónico.",
+      "invalidImage": "Solo se permiten imágenes JPG, PNG, WebP o GIF.",
+      "maxImages": "Puedes subir hasta 5 imágenes.",
+      "imageCount": "{n} de 5 seleccionadas"
+    }
+  },
+  "faqTitle": "Preguntas",
+  "faq": [
+    { "q": "¿Es gratis enviar?", "a": "Sí. Enviar tu obra es totalmente gratis y solo lleva un minuto." },
+    { "q": "¿Necesito una cuenta?", "a": "No hace falta cuenta. Solo añade tu correo para poder contactarte sobre tu envío." },
+    { "q": "¿Qué pasa después de enviar?", "a": "Revisamos tu obra y destacamos las mejores en nuestra newsletter y redes sociales. No publicamos nada sin revisión." }
+  ],
+  "share": {
+    "title": "Comparte en redes",
+    "body": "Etiqueta #SUPUZZBuild en tu plataforma favorita: destacamos las mejores obras en nuestra newsletter y en nuestras redes.",
+    "hashtag": "#SUPUZZBuild",
+    "fallback": "¿Prefieres el correo? Usa el formulario de contacto."
+  },
+  "links": {
+    "products": "Explorar sets de construcción",
+    "blog": "Descubrir ideas de juego"
+  }
+}

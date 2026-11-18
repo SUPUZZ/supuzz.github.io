@@ -54,6 +54,7 @@
                     <li><a href="blog.html" data-i18n="biz3">Play Ideas &amp; Guides</a></li>
                     <li><a href="contact.html" data-i18n="biz4">Customer Support</a></li>
                     <li><a href="procurement.html" data-i18n="biz5">Education &amp; Bulk Orders</a></li>
+                    <li><a href="community.html" data-i18n="biz6">Share Your Build</a></li>
                 </ul>
             </div>
 
@@ -69,9 +70,9 @@
 
             <!-- Newsletter -->
             <div class="footer-col">
-                <h4 style="color: var(--primary);" data-i18n="newsletter">Newsletter</h4>
-                <p style="margin-bottom: 12px; font-size: 0.875rem; color: #9CA3AF;" data-i18n="newsletterDesc">Subscribe for updates on new products and special offers.</p>
-                <div id="subscribe-container">
+                <h4 style="color: var(--primary);" data-i18n="newsletter">Join the Play Club</h4>
+                <p style="margin-bottom: 12px; font-size: 0.875rem; color: #9CA3AF;" data-i18n="newsletterDesc">Get 1 free play idea every week, plus a printable 30-idea building guide. No spam — unsubscribe anytime.</p>
+                <div id="subscribe-container" data-source="footer">
                     <input type="email" id="subscribe-email" placeholder="Your email" data-i18n-attr="placeholder|emailPlaceholder" required
                         style="width: 100%; padding: 10px 14px; border: 1px solid #CAC4D0; border-radius: 6px; font-size: 0.875rem; font-family: inherit; box-sizing: border-box; margin-bottom: 8px;">
                     <button id="subscribe-btn" type="button" data-i18n="subscribeBtn"
@@ -80,13 +81,14 @@
                     </button>
                     <p id="subscribe-success" style="display: none; margin-top: 8px; font-size: 0.75rem; color: #34D399;" data-i18n="subscribeSuccess">&#10003; Subscription successful!</p>
                     <p id="subscribe-error" style="display: none; margin-top: 8px; font-size: 0.75rem; color: #F87171;" data-i18n="subscribeError">Failed to subscribe. Please try again.</p>
+                    <p style="margin-top: 8px; font-size: 0.75rem; color: #9CA3AF;" data-i18n="newsletterNote">No spam. Unsubscribe anytime.</p>
                 </div>
             </div>
         </div>
 
         <!-- Copyright -->
         <div class="footer-copyright">
-            <span data-i18n="copyright">&copy; 2025 SUPUZZ Inc. All rights reserved.</span> | <a href="#" data-i18n="privacyPolicy">Privacy Policy</a>
+            <span data-i18n="copyright">&copy; 2025 SUPUZZ Inc. All rights reserved.</span> | <a href="privacy.html" data-i18n="privacyPolicy">Privacy Policy</a>
         </div>
     </div>
 
@@ -107,8 +109,10 @@
                 biz3: 'Play Ideas & Guides',
                 biz4: 'Customer Support',
                 biz5: 'Education & Bulk Orders',
-                newsletter: 'Newsletter',
-                newsletterDesc: 'Subscribe for updates on new products and special offers.',
+                biz6: 'Share Your Build',
+                newsletter: 'Join the Play Club',
+                newsletterDesc: 'Get 1 free play idea every week, plus a printable 30-idea building guide. No spam — unsubscribe anytime.',
+                newsletterNote: 'No spam. Unsubscribe anytime.',
                 emailPlaceholder: 'Your email',
                 subscribeBtn: 'Subscribe',
                 subscribing: 'Subscribing...',
@@ -136,8 +140,10 @@
                 biz3: 'Ideas de juego y guías',
                 biz4: 'Atención al cliente',
                 biz5: 'Compras educativas y al por mayor',
-                newsletter: 'Newsletter',
-                newsletterDesc: 'Suscr\u00edbete para recibir actualizaciones sobre nuevos productos y ofertas especiales.',
+                biz6: 'Comparte tu construcción',
+                newsletter: 'Únete al Play Club',
+                newsletterDesc: 'Recibe 1 idea de juego gratis cada semana, además de una guía imprimible con 30 ideas de construcción. Sin spam — date de baja cuando quieras.',
+                newsletterNote: 'Sin spam. Date de baja cuando quieras.',
                 emailPlaceholder: 'Tu correo electr\u00f3nico',
                 subscribeBtn: 'Suscribirse',
                 subscribing: 'Suscribiendo...',
@@ -165,8 +171,10 @@
                 biz3: '遊びのアイデア・ガイド',
                 biz4: 'カスタマーサポート',
                 biz5: '教育機関・大口購入',
-                newsletter: 'ニュースレター',
-                newsletterDesc: '新製品や特別オファーの最新情報を購読しましょう。',
+                biz6: '作品をシェア',
+                newsletter: 'Play Clubに参加',
+                newsletterDesc: '毎週1つの遊びアイデアと、印刷できる30の組み立てアイデアガイドをお届けします。迷惑メールは送りません。いつでも解除できます。',
+                newsletterNote: '迷惑メールは送りません。いつでも解除できます。',
                 emailPlaceholder: 'メールアドレス',
                 subscribeBtn: '購読する',
                 subscribing: '購読中...',
@@ -194,8 +202,10 @@
                 biz3: '玩法靈感與指南',
                 biz4: '客戶支援',
                 biz5: '教育與大量採購',
-                newsletter: '電子報',
-                newsletterDesc: '訂閱以獲取新產品和特別優惠的最新資訊。',
+                biz6: '分享你的作品',
+                newsletter: '加入 Play Club',
+                newsletterDesc: '每週一封免費玩法靈感，並附可列印的 30 個積木搭建點子指南。不發垃圾郵件，隨時可退訂。',
+                newsletterNote: '不發垃圾郵件，隨時可退訂。',
                 emailPlaceholder: '您的電子郵件',
                 subscribeBtn: '訂閱',
                 subscribing: '訂閱中...',
@@ -223,8 +233,10 @@
                 biz3: 'Spielideen & Anleitungen',
                 biz4: 'Kundenservice',
                 biz5: 'Bildungsbedarf & Großbestellungen',
-                newsletter: 'Newsletter',
-                newsletterDesc: 'Abonnieren Sie Updates über neue Produkte und Sonderangebote.',
+                biz6: 'Teile dein Bauwerk',
+                newsletter: 'Play Club beitreten',
+                newsletterDesc: 'Erhalte jede Woche eine kostenlose Spielidee und einen ausdruckbaren Leitfaden mit 30 Bauideen. Kein Spam – jederzeit abbestellbar.',
+                newsletterNote: 'Kein Spam. Jederzeit abbestellbar.',
                 emailPlaceholder: 'Ihre E-Mail',
                 subscribeBtn: 'Abonnieren',
                 subscribing: 'Abonniert...',
@@ -252,8 +264,10 @@
                 biz3: 'Ideias de brincadeiras e guias',
                 biz4: 'Atendimento ao cliente',
                 biz5: 'Compras educativas e em quantidade',
-                newsletter: 'Newsletter',
-                newsletterDesc: 'Inscreva-se para atualizações sobre novos produtos e ofertas especiais.',
+                biz6: 'Partilhe a sua construção',
+                newsletter: 'Junte-se ao Play Club',
+                newsletterDesc: 'Receba 1 ideia de brincadeira grátis por semana, mais um guia imprimível com 30 ideias de construção. Sem spam — cancele quando quiser.',
+                newsletterNote: 'Sem spam. Cancele quando quiser.',
                 emailPlaceholder: 'Seu e-mail',
                 subscribeBtn: 'Inscrever-se',
                 subscribing: 'Inscrevendo...',
@@ -281,8 +295,10 @@
                 biz3: 'Idées de jeu et guides',
                 biz4: 'Service client',
                 biz5: 'Achats éducatifs et commandes groupées',
-                newsletter: 'Newsletter',
-                newsletterDesc: 'Abonnez-vous pour recevoir des actualités sur les nouveaux produits et les offres spéciales.',
+                biz6: 'Partagez votre construction',
+                newsletter: 'Rejoindre le Play Club',
+                newsletterDesc: 'Recevez 1 idée de jeu gratuite par semaine et un guide imprimable de 30 idées de construction. Pas de spam — désabonnement à tout moment.',
+                newsletterNote: 'Pas de spam. Désabonnement à tout moment.',
                 emailPlaceholder: 'Votre email',
                 subscribeBtn: 'S\'abonner',
                 subscribing: 'Abonnement...',
@@ -419,13 +435,14 @@
                     return;
                 }
 
+                const originalLabel = subscribeBtn.textContent;
                 subscribeBtn.disabled = true;
                 subscribeBtn.textContent = texts.subscribing;
                 successMsg.style.display = 'none';
                 errorMsg.style.display = 'none';
 
                 try {
-                    await apiService.subscribe(email);
+                    await apiService.subscribe(email, { source: 'footer', language: lang });
                     successMsg.style.display = 'block';
                     emailInput.value = '';
                 } catch (error) {
@@ -433,7 +450,7 @@
                     console.error('Subscription failed:', error);
                 } finally {
                     subscribeBtn.disabled = false;
-                    subscribeBtn.textContent = texts.subscribeBtn;
+                    subscribeBtn.textContent = originalLabel;
                 }
             });
 
@@ -445,4 +462,5 @@
         });
         })();
     </script>
+    <script type="module" src="/js/newsletter-popup.js"></script>
 </footer>

@@ -1,0 +1,28 @@
+{
+  "title": "加入 Play Club",
+  "documentTitle": "加入 Play Club | 免費玩法靈感與搭建指南 | SUPUZZ",
+  "description": "每週一封免費玩法靈感，並附可列印的 30 個積木搭建點子指南。加入 SUPUZZ Play Club，獲得搭建挑戰、新品消息與會員限定優惠。",
+  "eyebrow": "SUPUZZ PLAY CLUB",
+  "headline": "每週一封免費玩法靈感。",
+  "subhead": "訂閱即可獲得可列印的 30 個搭建點子指南、每週玩法靈感，以及新產品搶先通知。每週僅一封，不發垃圾郵件。",
+  "benefitsLabel": "你將獲得",
+  "benefits": [
+    { "title": "可列印的 30 個點子指南", "body": "即時下載，今天就能開始搭建。" },
+    { "title": "每週玩法靈感", "body": "親子一起玩、遠離螢幕的搭建挑戰與小技巧。" },
+    { "title": "搶先通知", "body": "新品消息與會員限定優惠。" }
+  ],
+  "socialProof": "加入一起搭建、一起玩樂的家庭與教育者。",
+  "form": {
+    "label": "電子郵件",
+    "placeholder": "您的電子郵件",
+    "submit": "免費領取指南",
+    "note": "不發垃圾郵件，隨時可退訂。",
+    "privacyLabel": "隱私政策"
+  },
+  "messages": {
+    "required": "請輸入您的電子郵件地址。",
+    "submitting": "傳送中…",
+    "success": "✓ 請查看收件匣確認訂閱。",
+    "error": "發生錯誤，請再試一次。"
+  }
+}

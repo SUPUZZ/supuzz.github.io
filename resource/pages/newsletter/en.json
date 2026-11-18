@@ -1,0 +1,28 @@
+{
+  "title": "Join the Play Club",
+  "documentTitle": "Join the Play Club | Free Play Ideas & Building Guide | SUPUZZ",
+  "description": "Get one free play idea every week plus a printable 30-idea building guide. Join the SUPUZZ Play Club for build challenges, new-product news and subscriber-only offers.",
+  "eyebrow": "THE SUPUZZ PLAY CLUB",
+  "headline": "1 free play idea, every week.",
+  "subhead": "Join for a printable 30-idea building guide, weekly play ideas and first access to new products. One email a week — no spam.",
+  "benefitsLabel": "What you get",
+  "benefits": [
+    { "title": "Printable 30-idea guide", "body": "An instant download to get building today." },
+    { "title": "Weekly play ideas", "body": "Build challenges and tips for shared, screen-free play." },
+    { "title": "First access", "body": "New-product news and subscriber-only offers." }
+  ],
+  "socialProof": "Join families and educators who build and play together.",
+  "form": {
+    "label": "Email",
+    "placeholder": "Your email",
+    "submit": "Get my free guide",
+    "note": "No spam. Unsubscribe anytime.",
+    "privacyLabel": "Privacy policy"
+  },
+  "messages": {
+    "required": "Please enter your email address.",
+    "submitting": "Sending…",
+    "success": "✓ Check your inbox to confirm your subscription.",
+    "error": "Something went wrong. Please try again."
+  }
+}

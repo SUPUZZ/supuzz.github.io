@@ -1,0 +1,28 @@
+{
+  "title": "Rejoindre le Play Club",
+  "documentTitle": "Rejoindre le Play Club | Idées de jeu et guide gratuits | SUPUZZ",
+  "description": "Recevez une idée de jeu gratuite par semaine et un guide imprimable de 30 idées de construction. Rejoignez le Play Club SUPUZZ pour des défis, des nouveautés et des offres exclusives.",
+  "eyebrow": "LE PLAY CLUB SUPUZZ",
+  "headline": "1 idée de jeu gratuite chaque semaine.",
+  "subhead": "Rejoignez-nous pour recevoir un guide imprimable de 30 idées de construction, des idées de jeu hebdomadaires et un accès anticipé aux nouveautés. Un e-mail par semaine — pas de spam.",
+  "benefitsLabel": "Vos avantages",
+  "benefits": [
+    { "title": "Guide imprimable de 30 idées", "body": "Téléchargement immédiat pour construire dès aujourd'hui." },
+    { "title": "Idées de jeu hebdomadaires", "body": "Défis de construction et conseils pour jouer ensemble, sans écran." },
+    { "title": "Accès anticipé", "body": "Nouveautés et offres réservées aux abonnés." }
+  ],
+  "socialProof": "Rejoignez des familles et des éducateurs qui construisent et jouent ensemble.",
+  "form": {
+    "label": "Email",
+    "placeholder": "Votre email",
+    "submit": "Recevoir mon guide gratuit",
+    "note": "Pas de spam. Désabonnement à tout moment.",
+    "privacyLabel": "politique de confidentialité"
+  },
+  "messages": {
+    "required": "Veuillez saisir votre adresse email.",
+    "submitting": "Envoi…",
+    "success": "✓ Vérifiez votre boîte de réception pour confirmer.",
+    "error": "Une erreur est survenue. Veuillez réessayer."
+  }
+}

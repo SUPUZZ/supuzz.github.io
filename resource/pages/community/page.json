@@ -1,0 +1,13 @@
+{
+  "file": "community.html",
+  "builder": "CommunityBuilder.js",
+  "type": "page",
+  "locales": ["en", "es", "ja", "zh-Hant", "de", "pt", "fr"],
+  "styles": ["/css/community.css"],
+  "scripts": ["/js/community.js"],
+  "shared": {
+    "image": "/product-images/journal/supuzz-brand-story-family-building-cover.webp",
+    "imageWidth": 1200,
+    "imageHeight": 675
+  }
+}

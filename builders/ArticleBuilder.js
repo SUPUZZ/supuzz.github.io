@@ -1,4 +1,5 @@
 const path = require('node:path');
+const { renderCta } = require('./newsletter-cta');
 
 // Article-specific Builders share layout; facts and translated copy stay in page resources.
 class ArticleBuilder {
@@ -46,6 +47,7 @@ class ArticleBuilder {
             </section>`;
         }).join('\n');
         const date = new Intl.DateTimeFormat(locale.htmlLang, { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(shared.datePublished));
+        const newsletterCta = renderCta(locale.directory, escape, this.pageId ? `article-${this.pageId}` : 'article');
         return `
 <main class="container article-guide">
     <div class="breadcrumb"><a href="index.html">${text('homeLabel')}</a> / <a href="blog.html">${text('blogLabel')}</a> / <span aria-current="page">${text('shortTitle')}</span></div>
@@ -67,6 +69,7 @@ class ArticleBuilder {
                 <h2 id="related-title">${text('related.title')}</h2>
                 ${links(shared.related, 'related.links')}
             </aside>
+            ${newsletterCta}
             <p class="back-link"><a href="blog.html">${text('backLabel')}</a></p>
         </div>
     </article>

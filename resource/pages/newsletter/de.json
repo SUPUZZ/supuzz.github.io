@@ -1,0 +1,28 @@
+{
+  "title": "Play Club beitreten",
+  "documentTitle": "Play Club beitreten | Kostenlose Spielideen & Bauanleitung | SUPUZZ",
+  "description": "Erhalte jede Woche eine kostenlose Spielidee und einen ausdruckbaren Leitfaden mit 30 Bauideen. Tritt dem SUPUZZ Play Club bei für Bau-Herausforderungen, Neuheiten und exklusive Angebote.",
+  "eyebrow": "DER SUPUZZ PLAY CLUB",
+  "headline": "Jede Woche eine kostenlose Spielidee.",
+  "subhead": "Erhalte einen ausdruckbaren Leitfaden mit 30 Bauideen, wöchentliche Spielideen und frühzeitigen Zugang zu Neuheiten. Eine E-Mail pro Woche – kein Spam.",
+  "benefitsLabel": "Deine Vorteile",
+  "benefits": [
+    { "title": "Ausdruckbarer 30-Ideen-Leitfaden", "body": "Sofortiger Download, um noch heute loszubauen." },
+    { "title": "Wöchentliche Spielideen", "body": "Bau-Herausforderungen und Tipps für gemeinsames, bildschirmfreies Spielen." },
+    { "title": "Frühzeitiger Zugang", "body": "Neuheiten und Angebote nur für Abonnenten." }
+  ],
+  "socialProof": "Werde Teil von Familien und Pädagog:innen, die gemeinsam bauen und spielen.",
+  "form": {
+    "label": "E-Mail",
+    "placeholder": "Ihre E-Mail",
+    "submit": "Kostenlosen Leitfaden erhalten",
+    "note": "Kein Spam. Jederzeit abbestellbar.",
+    "privacyLabel": "Datenschutzrichtlinie"
+  },
+  "messages": {
+    "required": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+    "submitting": "Wird gesendet…",
+    "success": "✓ Bitte prüfen Sie Ihren Posteingang zur Bestätigung.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+  }
+}

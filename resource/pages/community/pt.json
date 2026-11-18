@@ -1,0 +1,65 @@
+{
+  "title": "Construa connosco",
+  "documentTitle": "Construa connosco | Envie a sua obra e partilhe ideias | SUPUZZ",
+  "description": "Junte-se à comunidade SUPUZZ: envie até 5 fotos da sua obra, escreva uma ideia de brincadeira ou partilhe uma ligação de redes sociais. Grátis, revisto antes de publicar.",
+  "eyebrow": "A COMUNIDADE SUPUZZ",
+  "intro": "Partilhe o que construiu — qualquer tema, qualquer ideia. Envie fotos, escreva sobre isso ou ligue a sua publicação social.",
+  "imageAlt": "Um adulto e uma criança a construir juntos com blocos SUPUZZ coloridos",
+  "heroCaption": "Feito para brincar juntos.",
+  "heroCta": "Partilhe a sua obra",
+  "trust": {
+    "review": "Revisto antes de publicar",
+    "free": "Envio gratuito"
+  },
+  "stepsTitle": "Como funciona",
+  "steps": [
+    { "title": "Partilhe a sua obra", "body": "Adicione até 5 fotos, escreva sobre isso ou cole uma ligação social." },
+    { "title": "Vamos analisar", "body": "A nossa equipa analisa cada submissão antes de a tornar pública." },
+    { "title": "Seja destacado", "body": "As melhores obras aparecem na nossa newsletter e redes sociais." }
+  ],
+  "submit": {
+    "tag": "PARTILHE A SUA OBRA",
+    "title": "Partilhe a sua obra",
+    "body": "Envie até 5 fotos, escreva uma ideia ou história de brincadeira, ou partilhe a ligação da sua publicação social. Vamos analisá-la antes de publicar.",
+    "form": {
+      "titleLabel": "Título",
+      "titlePlaceholder": "O que construiu?",
+      "bodyLabel": "A sua história ou ideia de brincadeira",
+      "bodyPlaceholder": "Conte-nos…",
+      "imageLabel": "Fotos (opcional)",
+      "imageHint": "Até 5 imagens. JPG, PNG, WebP ou GIF.",
+      "socialLabel": "Ligação de redes sociais (opcional)",
+      "socialPlaceholder": "ex.: https://www.tiktok.com/@you/video/...",
+      "emailLabel": "E-mail",
+      "emailPlaceholder": "Seu e-mail",
+      "submit": "Enviar a minha obra",
+      "submitting": "A enviar…",
+      "note": "Ao enviar, junta-se ao Play Club. Sem spam — cancele quando quiser.",
+      "privacyLabel": "política de privacidade",
+      "success": "✓ Obrigado! Vamos analisar a sua submissão e poderemos destacá-la.",
+      "error": "Algo correu mal. Tente novamente.",
+      "requiredTitle": "Adicione um título.",
+      "requiredContent": "Adicione uma descrição, uma foto ou uma ligação social.",
+      "requiredEmail": "Introduza o seu e-mail.",
+      "invalidImage": "Apenas imagens JPG, PNG, WebP ou GIF são permitidas.",
+      "maxImages": "Pode enviar até 5 imagens.",
+      "imageCount": "{n} de 5 selecionadas"
+    }
+  },
+  "faqTitle": "Perguntas",
+  "faq": [
+    { "q": "Enviar é gratuito?", "a": "Sim. Enviar a sua obra é totalmente gratuito e demora um minuto." },
+    { "q": "Preciso de uma conta?", "a": "Não é necessária conta. Basta indicar o seu e-mail para podermos contactá-lo sobre a submissão." },
+    { "q": "O que acontece depois de enviar?", "a": "Analisamos a sua obra e destacamos as melhores na nossa newsletter e redes sociais. Nada é publicado sem revisão." }
+  ],
+  "share": {
+    "title": "Partilhe nas redes",
+    "body": "Marque #SUPUZZBuild na sua plataforma favorita — destacamos as melhores obras na nossa newsletter e nas nossas redes.",
+    "hashtag": "#SUPUZZBuild",
+    "fallback": "Prefere e-mail? Use o formulário de contacto."
+  },
+  "links": {
+    "products": "Explorar conjuntos",
+    "blog": "Descobrir ideias de brincadeira"
+  }
+}

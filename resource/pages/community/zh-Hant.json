@@ -1,0 +1,65 @@
+{
+  "title": "一起來搭建",
+  "documentTitle": "一起來搭建 | 上傳作品與分享想法 | SUPUZZ",
+  "description": "加入 SUPUZZ 社群：上傳最多 5 張作品照片、撰寫玩法想法，或分享社群貼文連結。免費投稿，發布前會先審核。",
+  "eyebrow": "SUPUZZ 社群",
+  "intro": "分享你搭建的任何作品——主題不限、想法自由。上傳照片、寫下想法，或貼上你的社群貼文連結。",
+  "imageAlt": "家長與孩子一起用繽紛 SUPUZZ 積木搭建",
+  "heroCaption": "為了一起玩。",
+  "heroCta": "分享你的作品",
+  "trust": {
+    "review": "發布前審核",
+    "free": "免費投稿"
+  },
+  "stepsTitle": "如何運作",
+  "steps": [
+    { "title": "分享你的作品", "body": "新增最多 5 張照片、寫下想法，或貼上社群連結。" },
+    { "title": "我們會審核", "body": "所有投稿在公開前都會由團隊審核。" },
+    { "title": "獲得精選", "body": "出色作品會在電子報與社群頻道中展示。" }
+  ],
+  "submit": {
+    "tag": "分享你的作品",
+    "title": "分享你的作品",
+    "body": "上傳最多 5 張照片、撰寫一則玩法想法或故事，或分享你的社群貼文連結。我們會在發布前審核。",
+    "form": {
+      "titleLabel": "標題",
+      "titlePlaceholder": "你搭建了什麼？",
+      "bodyLabel": "你的故事或玩法想法",
+      "bodyPlaceholder": "和我們說說…",
+      "imageLabel": "照片（選填）",
+      "imageHint": "最多 5 張。JPG、PNG、WebP 或 GIF。",
+      "socialLabel": "社群連結（選填）",
+      "socialPlaceholder": "例如 https://www.tiktok.com/@you/video/...",
+      "emailLabel": "電子郵件",
+      "emailPlaceholder": "您的電子郵件",
+      "submit": "提交我的作品",
+      "submitting": "提交中…",
+      "note": "提交即加入 Play Club。不發垃圾郵件，隨時可退訂。",
+      "privacyLabel": "隱私政策",
+      "success": "✓ 謝謝！我們會審核你的投稿，並可能精選展示。",
+      "error": "發生錯誤，請再試一次。",
+      "requiredTitle": "請輸入標題。",
+      "requiredContent": "請新增描述、照片或社群連結。",
+      "requiredEmail": "請輸入電子郵件地址。",
+      "invalidImage": "僅支援 JPG、PNG、WebP 或 GIF 圖片。",
+      "maxImages": "最多可上傳 5 張圖片。",
+      "imageCount": "已選擇 {n} / 5"
+    }
+  },
+  "faqTitle": "常見問題",
+  "faq": [
+    { "q": "投稿要付費嗎？", "a": "不用。投稿完全免費，大約一分鐘即可完成。" },
+    { "q": "需要註冊帳號嗎？", "a": "不需要帳號。只要留下電子郵件，方便我們就投稿事宜與你聯繫。" },
+    { "q": "投稿之後會怎樣？", "a": "我們會審核你的作品，並在電子報與社群頻道精選展示。未經審核不會公開。" }
+  ],
+  "share": {
+    "title": "在社群分享",
+    "body": "在你喜歡的平台標記 #SUPUZZBuild——我們會在電子報和社群頻道精選出色作品。",
+    "hashtag": "#SUPUZZBuild",
+    "fallback": "偏好使用電子郵件？請使用聯絡表單。"
+  },
+  "links": {
+    "products": "瀏覽積木系列",
+    "blog": "探索玩法靈感"
+  }
+}

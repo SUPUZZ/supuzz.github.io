@@ -211,6 +211,8 @@ test('seven migrated guides generate all 49 locale pages and reject incomplete t
   fs.mkdirSync(path.join(root, 'resource/pages'), { recursive: true });
   fs.mkdirSync(path.join(root, 'builders'), { recursive: true });
   fs.copyFileSync(path.join(projectRoot, 'builders/ArticleBuilder.js'), path.join(root, 'builders/ArticleBuilder.js'));
+  fs.copyFileSync(path.join(projectRoot, 'builders/newsletter-cta.js'), path.join(root, 'builders/newsletter-cta.js'));
+  fs.copyFileSync(path.join(projectRoot, 'resource/newsletter-cta-locales.json'), path.join(root, 'resource/newsletter-cta-locales.json'));
   for (const id of ids) {
     fs.cpSync(path.join(projectRoot, 'resource/pages', id), path.join(root, 'resource/pages', id), { recursive: true });
     const definition = JSON.parse(fs.readFileSync(path.join(root, 'resource/pages', id, 'page.json'), 'utf8'));
