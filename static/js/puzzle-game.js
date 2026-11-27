@@ -387,6 +387,11 @@
 
   // Immersive mode puts only the game on screen: the stage fills the viewport and
   // the page behind it cannot scroll, which is what makes dragging work on phones.
+  // The system back gesture inside the fullscreen game should close the game
+  // layer and stay on Puzzle Online, not walk back to whatever page came before.
+  // One history entry is pushed when fullscreen opens and consumed when it closes.
+  let ignoreNextPop = false;
+
   function setImmersive(on) {
     if (on === document.body.classList.contains('pz-immersive')) return;
     document.body.classList.toggle('pz-immersive', on);
@@ -395,10 +400,28 @@
       button.setAttribute('aria-pressed', on ? 'true' : 'false');
       button.textContent = t(on ? 'game.exitFullscreen' : 'game.fullscreen');
     }
+    if (on) {
+      try {
+        history.pushState({ pzImmersive: true }, '');
+      } catch (error) {
+        // History is not essential to playing; ignore private-mode failures.
+      }
+    } else if (history.state && history.state.pzImmersive) {
+      ignoreNextPop = true;
+      history.back();
+    }
     if (gameActive) {
       requestAnimationFrame(() => requestAnimationFrame(fitLayer));
     }
   }
+
+  window.addEventListener('popstate', () => {
+    if (ignoreNextPop) {
+      ignoreNextPop = false;
+      return;
+    }
+    if (document.body.classList.contains('pz-immersive')) setImmersive(false);
+  });
 
   function setHudCollapsed(collapsed) {
     const hud = $('pzHud');
