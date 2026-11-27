@@ -1,0 +1,152 @@
+{
+  "title": "Puzzle Online : jardin de neige, créatures marines et récif de corail",
+  "homeLabel": "Accueil",
+  "documentTitle": "Puzzle Online – Puzzle jardin de neige, mer et récif | SUPUZZ",
+  "description": "Jouez gratuitement à Puzzle Online : reconstituez des images de jardin de neige, créatures marines, jardin d’hiver et récif de corail avec 9 à 49 pièces.",
+  "imageAlt": "Puzzle Online SUPUZZ avec des images de récif de corail et de jardin de neige",
+  "eyebrow": "Jeux SUPUZZ",
+  "intro": "Choisissez une image de nos mondes de jeu, décidez du nombre de pièces et faites glisser chaque pièce à sa place. Jardins de neige, créatures marines, scènes de jardin d'hiver et jouets de récif de corail réunis dans un puzzle à jouer dans le navigateur, sans rien télécharger.",
+  "badges": [
+    "Gratuit",
+    "Sans téléchargement",
+    "Téléphone et tablette"
+  ],
+  "playLabel": "Jouer au puzzle",
+  "howToLabel": "Comment jouer",
+  "setup": {
+    "heading": "Choisissez votre image",
+    "subheading": "Chaque image provient d'un set de construction SUPUZZ. Les nouvelles collections apparaissent ici dès que notre équipe les ajoute.",
+    "loading": "Chargement des images…",
+    "fallbackNote": "Affichage de nos images intégrées. Les collections en ligne apparaîtront ici automatiquement.",
+    "uploadLabel": "Utiliser ma photo",
+    "uploadNote": "Votre photo reste dans ce navigateur et n'est jamais envoyée.",
+    "difficultyLabel": "Difficulté",
+    "pieces": "{n} pièces",
+    "start": "Commencer le puzzle",
+    "empty": "Aucune image disponible pour le moment. Réessayez plus tard.",
+    "yourPhotoTitle": "Votre photo",
+    "uploadFailed": "Impossible d'ouvrir cette photo. Choisissez une image JPG, PNG ou WebP.",
+    "chooseThis": "Choisir cette image : {alt}"
+  },
+  "game": {
+    "hudTitle": "Puzzle Online",
+    "time": "Temps",
+    "moves": "Coups",
+    "groups": "Groupes restants",
+    "hint": "Modèle",
+    "shuffle": "Mélanger",
+    "back": "Changer d'image",
+    "cutting": "Découpe en {n}×{n} · {total} pièces…",
+    "cutDone": "Découpé en {total} pièces. Mélange…",
+    "shuffling": "Mélange…",
+    "dragTip": "Faites glisser les pièces pour reconstituer l'image",
+    "skip": "Passer l'animation",
+    "winTitle": "Puzzle terminé !",
+    "winDetail": "Temps {time} · {moves} coups · {n}×{n} · {total} pièces",
+    "again": "Rejouer",
+    "another": "Choisir une autre image",
+    "imageError": "Impossible de charger cette image. Choisissez-en une autre."
+  },
+  "howTo": {
+    "heading": "Comment jouer à Puzzle Online",
+    "intro": "Les règles sont simples, et il n'y a pas de chrono à battre sauf si vous le souhaitez.",
+    "steps": [
+      {
+        "title": "Choisir une image",
+        "body": "Choisissez une image de jardin de neige, de créatures marines, de jardin d'hiver ou de récif de corail. Vous pouvez aussi utiliser une photo de votre appareil."
+      },
+      {
+        "title": "Choisir la difficulté",
+        "body": "Commencez avec 9 pièces, puis passez à 16, 25, 36 ou 49. Les plus jeunes commencent souvent par la grille 3×3."
+      },
+      {
+        "title": "Faire glisser les pièces",
+        "body": "Faites glisser une pièce près de sa voisine. Quand les bords correspondent, les pièces s'emboîtent et se déplacent en un seul groupe."
+      },
+      {
+        "title": "Terminer l'image",
+        "body": "Continuez à réunir les groupes jusqu'à retrouver l'image entière. Le temps, les coups et les groupes restants s'affichent au-dessus du plateau."
+      }
+    ]
+  },
+  "collections": {
+    "heading": "Des collections inspirées des jouets SUPUZZ",
+    "intro": "Les images de Puzzle Online viennent des mondes que les enfants construisent avec SUPUZZ. Chaque collection renvoie au jouet qui l'a inspirée.",
+    "cards": {
+      "snow": {
+        "title": "Set jardin de neige",
+        "body": "Pingouins, ours polaires et briques enneigées composent une image d'hiver paisible. Si votre enfant aime un set jardin de neige ou un set jardin d'hiver, commencez par la grille 3×3 ou 4×4 et nommez les animaux au fil des pièces.",
+        "alt": "Set jardin de neige avec un pingouin et des animaux arctiques",
+        "link": "Découvrir Icy World"
+      },
+      "coral": {
+        "title": "Jouets créatures marines pour enfants",
+        "body": "Coraux ramifiés, poissons colorés et bases bleues transforment le plateau en récif. Ces jouets créatures marines pour enfants conviennent aux puzzles 4×4 et 5×5, où couleur et forme donnent des indices clairs — et les jouets de récif de corail rendent la scène facile à commenter.",
+        "alt": "Jouets de récif de corail avec des créatures marines colorées",
+        "link": "Découvrir Coral Reef"
+      },
+      "dino": {
+        "title": "Dinosaur Jungle",
+        "body": "Grands arbres, figurines de dinosaures et pièces colorées donnent une image plus riche en détails. Essayez 5×5 ou 6×6 pour un défi plus long.",
+        "alt": "Set Dinosaur Jungle avec arbres et dinosaures",
+        "link": "Découvrir Dinosaur Jungle"
+      },
+      "rainbow": {
+        "title": "Rainbow Waffle Blocks",
+        "body": "Blocs gaufrés lumineux, robots et véhicules forment une image ludique pour ceux qui aiment les formes libres. Les couleurs vives en font un bon premier puzzle 4×4.",
+        "alt": "Blocs gaufrés arc-en-ciel avec un robot coloré",
+        "link": "Découvrir Rainbow Blocks"
+      }
+    }
+  },
+  "why": {
+    "heading": "Un temps d'écran qui développe aussi des compétences",
+    "paragraphs": [
+      "Les puzzles demandent de comparer les couleurs, les formes et les détails des bords. C'est le même raisonnement visuel que celui utilisé pour trier des blocs par taille ou trouver la pièce qui termine une construction.",
+      "Faire glisser des pièces sur un téléphone ou une tablette exerce aussi le contrôle des doigts et la coordination œil-main. Une partie peut être courte : le puzzle fait une bonne pause de cinq minutes.",
+      "Les images lancent la conversation. Nommez les animaux du jardin de neige, comptez les créatures du récif ou décrivez les couleurs des blocs arc-en-ciel pendant que vous jouez ensemble."
+    ],
+    "cardTitle": "De 9 à 49 pièces",
+    "cardNote": "Commencez par 9 pièces pour les plus jeunes, ou montez à 49 pour un défi plus long."
+  },
+  "faq": {
+    "heading": "Questions sur Puzzle Online",
+    "items": [
+      {
+        "q": "Puzzle Online est-il gratuit ?",
+        "a": "Oui. Tous les puzzles de cette page sont gratuits, sans inscription, sans téléchargement et sans achats intégrés."
+      },
+      {
+        "q": "Faut-il installer une application ?",
+        "a": "Non. Puzzle Online fonctionne dans un navigateur moderne sur téléphone, tablette, ordinateur portable ou de bureau."
+      },
+      {
+        "q": "Combien de pièces puis-je choisir ?",
+        "a": "Vous pouvez jouer en 3×3 (9 pièces), 4×4 (16), 5×5 (25), 6×6 (36) ou 7×7 (49). La difficulté ne change que le nombre de pièces : vous pouvez donc refaire la même image en plus difficile."
+      },
+      {
+        "q": "Puis-je utiliser ma propre photo ?",
+        "a": "Oui. Choisissez « Utiliser ma photo » dans le sélecteur d'images. L'image est traitée dans votre navigateur et n'est jamais envoyée à nos serveurs."
+      },
+      {
+        "q": "Les images viennent-elles des sets SUPUZZ ?",
+        "a": "Oui. Les collections s'inspirent des sets jardin de neige, récif de corail, dinosaures et blocs arc-en-ciel SUPUZZ. Suivez les liens sous chaque collection pour voir le jouet correspondant."
+      },
+      {
+        "q": "Le puzzle fonctionne-t-il sur téléphone ?",
+        "a": "Oui. Faites glisser les pièces avec un doigt. Sur petit écran, nous conseillons de commencer avec 9 ou 16 pièces."
+      },
+      {
+        "q": "Que sont les sets jardin de neige et jardin d'hiver ?",
+        "a": "Ce sont des sets de construction SUPUZZ avec des briques enneigées, des arbres et des figurines d'animaux arctiques. Les enfants empilent et connectent les pièces pour créer une petite scène d'hiver, puis la démontent et recommencent."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Sortez le puzzle de l'écran",
+    "body": "Si votre enfant aime reconstituer le jardin de neige ou le récif, le set de construction correspondant lui permet de créer la scène avec ses mains. Les sets SUPUZZ utilisent des pièces épaisses et colorées, faciles à connecter pour de petits doigts.",
+    "shop": "Acheter les jouets SUPUZZ sur Amazon",
+    "garden": "Jouer à SUPUZZ Garden",
+    "gardenNote": "Un autre jeu SUPUZZ gratuit : construisez et faites grandir votre propre monde de jardin."
+  }
+}

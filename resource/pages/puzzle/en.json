@@ -1,0 +1,152 @@
+{
+  "title": "Puzzle Online: Snow Garden, Sea Creatures & Coral Reef Pictures",
+  "homeLabel": "Home",
+  "documentTitle": "Puzzle Online – Snow Garden, Sea Creatures & Coral Reef Jigsaw | SUPUZZ",
+  "description": "Play SUPUZZ Puzzle Online free: piece together snow garden, sea creatures, winter garden and coral reef pictures with 9 to 49 pieces. No download.",
+  "imageAlt": "SUPUZZ Puzzle Online with coral reef and snow garden building set pictures",
+  "eyebrow": "SUPUZZ Games",
+  "intro": "Pick a picture from our toy worlds, choose how many pieces you want, and drag every piece back into place. Snow garden stacking sets, sea creatures, winter garden scenes and coral reef toys — all in one browser puzzle, with nothing to download.",
+  "badges": [
+    "Free to play",
+    "No download",
+    "Works on phones and tablets"
+  ],
+  "playLabel": "Play the puzzle",
+  "howToLabel": "How to play",
+  "setup": {
+    "heading": "Choose your puzzle picture",
+    "subheading": "Every picture comes from a SUPUZZ building set. New collections appear here as our team adds them.",
+    "loading": "Loading puzzle pictures…",
+    "fallbackNote": "Showing our built-in pictures. Online collections appear here automatically.",
+    "uploadLabel": "Use my own photo",
+    "uploadNote": "Your photo stays in this browser and is never uploaded.",
+    "difficultyLabel": "Difficulty",
+    "pieces": "{n} pieces",
+    "start": "Start puzzle",
+    "empty": "No pictures available right now. Please try again later.",
+    "yourPhotoTitle": "Your photo",
+    "uploadFailed": "That photo could not be opened. Please choose a JPG, PNG or WebP image.",
+    "chooseThis": "Choose this picture: {alt}"
+  },
+  "game": {
+    "hudTitle": "Puzzle Online",
+    "time": "Time",
+    "moves": "Moves",
+    "groups": "Groups left",
+    "hint": "Reference",
+    "shuffle": "Reshuffle",
+    "back": "Change picture",
+    "cutting": "Cutting into {n}×{n} · {total} pieces…",
+    "cutDone": "Cut into {total} pieces. Shuffling…",
+    "shuffling": "Shuffling…",
+    "dragTip": "Drag pieces together to rebuild the picture",
+    "skip": "Skip animation",
+    "winTitle": "Puzzle complete!",
+    "winDetail": "Time {time} · {moves} moves · {n}×{n} · {total} pieces",
+    "again": "Play again",
+    "another": "Choose another picture",
+    "imageError": "That picture could not be loaded. Please choose another one."
+  },
+  "howTo": {
+    "heading": "How to play Puzzle Online",
+    "intro": "The rules are simple, and there is no timer to beat unless you want one.",
+    "steps": [
+      {
+        "title": "Pick a picture",
+        "body": "Choose a snow garden, sea creatures, winter garden or coral reef picture. You can also use a photo from your own device."
+      },
+      {
+        "title": "Choose the difficulty",
+        "body": "Start with 9 pieces, then work up to 16, 25, 36 or 49. Younger builders usually begin with the 3×3 grid."
+      },
+      {
+        "title": "Drag the pieces",
+        "body": "Drag a piece next to its neighbour. When the edges match, the pieces snap together and move as one group."
+      },
+      {
+        "title": "Finish the picture",
+        "body": "Keep joining groups until the whole picture is back. The timer, move counter and remaining group count are shown above the board."
+      }
+    ]
+  },
+  "collections": {
+    "heading": "Puzzle collections built around SUPUZZ toys",
+    "intro": "The pictures in Puzzle Online are taken from the worlds children build with SUPUZZ. Each collection links to the toy that inspired it.",
+    "cards": {
+      "snow": {
+        "title": "Snow Garden Stacking Toy",
+        "body": "Penguins, polar bears and snow-covered bricks make a calm, wintry picture to rebuild. If your child likes a snow garden stacking toy or a winter garden stacking set toy, start with the 3×3 or 4×4 grid and name the animals as you place each piece.",
+        "alt": "Snow garden stacking toy with a penguin and Arctic animal figures",
+        "link": "Explore Icy World"
+      },
+      "coral": {
+        "title": "Sea Creatures Toys for Kids",
+        "body": "Branching coral, bright fish and blue bases turn the board into a reef. These sea creatures toys for kids suit the 4×4 and 5×5 puzzles, where colour and shape give clear clues — and coral reef toys make the scene easy to talk about.",
+        "alt": "Coral reef toys with colorful sea creatures for kids",
+        "link": "Explore Coral Reef"
+      },
+      "dino": {
+        "title": "Dinosaur Jungle",
+        "body": "Tall trees, dinosaur figures and colourful connecting pieces make a busier picture with plenty of detail to match. Try 5×5 or 6×6 when you want a longer challenge.",
+        "alt": "Dinosaur Jungle building set with trees and dinosaur figures",
+        "link": "Explore Dinosaur Jungle"
+      },
+      "rainbow": {
+        "title": "Rainbow Waffle Blocks",
+        "body": "Bright waffle blocks, robots and rolling vehicles create a playful picture for builders who like open-ended shapes. The strong colour blocks are a good first 4×4 puzzle.",
+        "alt": "Rainbow waffle building blocks with a colorful robot build",
+        "link": "Explore Rainbow Blocks"
+      }
+    }
+  },
+  "why": {
+    "heading": "A screen-time activity that still builds skills",
+    "paragraphs": [
+      "Picture puzzles ask children to match colour, shape and edge details. That is the same kind of visual thinking they use when they sort blocks by size or find the piece that completes a build.",
+      "Dragging pieces on a phone or tablet also practises finger control and hand-eye coordination. Because a round can be short, the puzzle works well as a five-minute break between other activities.",
+      "The pictures double as conversation starters. Name the animals in the snow garden, count the sea creatures in the reef, or describe the colours in the rainbow blocks while you play together."
+    ],
+    "cardTitle": "9 to 49 pieces",
+    "cardNote": "Start with 9 pieces for younger builders, or go up to 49 when you want a longer challenge."
+  },
+  "faq": {
+    "heading": "Puzzle Online questions",
+    "items": [
+      {
+        "q": "Is Puzzle Online free to play?",
+        "a": "Yes. Every puzzle on this page is free, with no sign-up, no download and no in-game purchases."
+      },
+      {
+        "q": "Do I need to install an app?",
+        "a": "No. Puzzle Online runs in a modern web browser on a phone, tablet, laptop or desktop computer."
+      },
+      {
+        "q": "How many pieces can I choose?",
+        "a": "You can play 3×3 (9 pieces), 4×4 (16), 5×5 (25), 6×6 (36) or 7×7 (49). Difficulty only changes the number of pieces, so you can replay the same picture at a harder level."
+      },
+      {
+        "q": "Can I use my own photo?",
+        "a": "Yes. Choose “Use my own photo” in the picture picker. The image is processed in your browser and is never uploaded to our servers."
+      },
+      {
+        "q": "Are the pictures from SUPUZZ building sets?",
+        "a": "Yes. The collections are based on SUPUZZ snow garden, coral reef, dinosaur and rainbow building sets. Follow the links under each collection to see the matching toy."
+      },
+      {
+        "q": "Does the puzzle work on a phone?",
+        "a": "Yes. Drag pieces with one finger. On a small screen we suggest starting with 9 or 16 pieces."
+      },
+      {
+        "q": "What are snow garden and winter garden stacking toys?",
+        "a": "They are SUPUZZ building sets with snowy bricks, trees and Arctic animal figures. The snow garden stacking toy and winter garden stacking set toy pictures in Puzzle Online use the same world, so children can rebuild the scene in their hands."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Take the puzzle off the screen",
+    "body": "If your child enjoys rebuilding the snow garden or coral reef, the matching building set lets them create the scene in their hands. SUPUZZ sets use chunky, colourful pieces that are easy for small fingers to connect.",
+    "shop": "Shop SUPUZZ building toys on Amazon",
+    "garden": "Play SUPUZZ Garden",
+    "gardenNote": "Another free SUPUZZ game: build and grow your own garden world."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "file": "puzzle.html",
+  "builder": "PuzzleBuilder.js",
+  "type": "page",
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/puzzle.css"
+  ],
+  "scripts": [
+    "/js/puzzle-game.js"
+  ],
+  "shared": {
+    "apiBase": "https://api.supuzz.cn",
+    "gardenUrl": "https://game.supuzz.cn/play/",
+    "amazonStoreUrl": "https://www.amazon.com/stores/Supuzz/page/F8F78FC5-0171-41C7-93DF-ABE20C958710?maas=maas_adg_9F48B7189EDFBD67E9439619752165B8_afap_abs&ref_=aa_maas&tag=maas",
+    "image": "/product-images/supuzz-coral-reef-l3-main.webp",
+    "imageWidth": 1200,
+    "imageHeight": 1016,
+    "heroImages": [
+      "/product-images/supuzz-icy-world-l3-main.webp",
+      "/product-images/supuzz-coral-reef-l3-main.webp",
+      "/product-images/supuzz-dinosaur-jungle-l3-main.webp"
+    ],
+    "cardImages": {
+      "snow": "/product-images/snow-garden-puzzle-main.webp",
+      "coral": "/product-images/supuzz-coral-reef-l2-main.webp",
+      "dino": "/product-images/supuzz-dinosaur-jungle-l2-main.webp",
+      "rainbow": "/product-images/supuzz-waffle-building-blocks-128-main.webp"
+    },
+    "productLinks": {
+      "snow": "product-icy-world-l1.html",
+      "coral": "product-coral-reef-l2.html",
+      "dino": "product-dinosaur-jungle-l1.html",
+      "rainbow": "product-waffle-building-blocks-128.html"
+    },
+    "relatedArticles": {
+      "snow": "article-icy-world.html",
+      "coral": "article-ocean-world-l2.html"
+    }
+  }
+}

@@ -127,6 +127,12 @@ if (require.main === module) new OceanPlayBuilder().build();
 
 “关于我们”采用同样方式：`builders/AboutBuilder.js` 维护共用布局，`resource/pages/about/page.json` 保存品牌标语、图片和联系入口等共享资料，同目录七份语言 JSON 保存品牌介绍、理念、产品类别和联系文案。品牌理念以用户提供的“PLAY WITH ALL KIDS.”及其正文为准，英文标语统一保留，各语言分别维护译文。运行 `npm run about:build`（或 `node builders/AboutBuilder.js`）生成七种语言的 `about.html`；`npm start` 和生产构建也会自动生成。`static/css/about.css` 共用页面样式，`static/js/about.js` 共用浏览统计逻辑。
 
+### Puzzle Online 游戏页
+
+Games 菜单下的 `Puzzle Online` 指向各语言的 `puzzle.html`。页面由 `builders/PuzzleBuilder.js` 生成，`resource/pages/puzzle/` 保存七种语言的文案、产品链接和游戏集合说明；运行 `npm run puzzle:build` 仅重新生成这七个页面。游戏本身在 `static/js/puzzle-game.js`，样式在 `static/css/puzzle.css`，沿用品牌浅色、黄色主按钮和 Outfit 字体。
+
+拼图图片集合由后台 `https://api.supuzz.cn/admin/puzzle` 管理（见 `feedback-server/API.md`）：管理员可创建集合、上传图片或填写站内路径/图片地址、调整顺序和 alt 文本。前台通过 `GET /api/puzzle/collections` 读取启用内容；接口不可用或集合为空时，页面自动回退到内置的四组产品图，保证游戏始终可玩。页面包含 How to play、产品主题集合、FAQ 以及 `VideoGame`、`FAQPage`、`BreadcrumbList` 结构化数据，标题与正文覆盖 snow garden stacking toy、sea creatures toys for kids、winter garden stacking set toy、coral reef toys 等关键词；sitemap 由 `seo:prepare` 自动加入七种语言地址。
+
 普通页面可设置 `schemaType: "ContactPage"` 或 `"AboutPage"`（默认 `WebPage`），译文可通过 `documentTitle` 保留完整的搜索标题。Builder 可提供 `structuredData(context)` 方法，返回附加结构化数据对象数组；例如联系页面的 Organization 和联系邮箱。页面运行时需要的提示也须从译文生成，嵌入 JSON 时将 `<` 转为 `\\u003c`，由共用 JS 读取，避免七份重复交互代码。
 
 教育与大量采购入口位于公共页脚，链接到各语言的 `procurement.html`。`builders/ProcurementBuilder.js` 和 `resource/pages/procurement/` 共用一份布局，覆盖美国学前班、Pre-K、托育机构、节日及团体赠礼场景；运行 `npm run procurement:build` 可重新生成。教育采购享 10% 折扣，优惠配置统一保存于 `resource/education-offer.json`，由采购页和联系表单共用。教育询价通过 `?topic=education` 预选独立主题，礼品询价通过 `?topic=gifts`；不另设重复表单。沿用现有反馈接口，在正文首行加入 `【教育采购｜10%折扣｜EDUCATION_10】` 或 `【节日礼品采购｜GIFT_PROCUREMENT】`，后台直接查看反馈文本即可区分，无须调整接口。标识按提交时的当前主题生成，切换到普通咨询不会保留教育优惠。节日礼品和普通大单不自动附加教育折扣。采购单、报价及供应商文件需求须由团队确认，不在页面中承诺账期、免税资格、送达时效或教育认证。

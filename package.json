@@ -8,6 +8,7 @@
     "pages:build": "node scripts/build-pages.js",
     "contact:build": "node builders/ContactBuilder.js",
     "about:build": "node builders/AboutBuilder.js",
+    "puzzle:build": "node builders/PuzzleBuilder.js",
     "procurement:build": "node builders/ProcurementBuilder.js",
     "newsletter:build": "node builders/NewsletterBuilder.js",
     "privacy:build": "node builders/PrivacyBuilder.js",

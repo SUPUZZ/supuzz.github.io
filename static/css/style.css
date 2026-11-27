@@ -203,6 +203,98 @@ nav {
     color: var(--text-sub);
 }
 
+/* Games dropdown */
+.nav-games {
+    position: relative;
+}
+
+.nav-games-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+    border: 0;
+    background: none;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-sub);
+    cursor: pointer;
+}
+
+.nav-games-toggle .nav-games-arrow {
+    font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.nav-games:hover .nav-games-arrow,
+.nav-games.open .nav-games-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-games-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translate(-50%, 6px);
+    min-width: 250px;
+    margin: 0;
+    padding: 8px;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(28, 27, 31, 0.14);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+    z-index: 1002;
+}
+
+.nav-games:hover .nav-games-menu,
+.nav-games:focus-within .nav-games-menu,
+.nav-games.open .nav-games-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.nav-games-menu a {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+}
+
+.nav-games-menu a:hover,
+.nav-games-menu a:focus-visible {
+    background: var(--primary-container);
+}
+
+.nav-games-icon {
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.nav-games-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav-games-label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.nav-games-desc {
+    font-size: 0.76rem;
+    line-height: 1.4;
+    color: var(--text-sub);
+}
+
 /* 导航栏里的亚马逊按钮特殊样式 */
 .btn-nav-amazon {
     background-color: #FFD814;
@@ -565,6 +657,29 @@ footer {
     text-decoration: none;
 }
 
+
+/* Keep the seven-item navigation on one line on smaller laptops. */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a:not(.btn-nav-amazon),
+    .nav-games-toggle {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 769px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
 /* =========================================
    8. 移动端适配 (Media Queries)
    ========================================= */
@@ -612,6 +727,66 @@ footer {
         font-size: 1.25rem;
         border-bottom: 1px solid #f0f0f0;
         text-align: center;
+    }
+
+    .nav-games {
+        width: 100%;
+    }
+
+    .nav-games-toggle {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 0;
+        font-size: 1.25rem;
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 0;
+    }
+
+    .nav-games-menu {
+        position: static;
+        display: none;
+        min-width: 0;
+        margin: 0;
+        padding: 6px 0 10px;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-games.open .nav-games-menu {
+        display: block;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-games-menu {
+        width: 100%;
+    }
+
+    .nav-games:hover .nav-games-menu,
+    .nav-games:focus-within .nav-games-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-games-menu a {
+        justify-content: center;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-games-copy {
+        align-items: center;
+    }
+
+    .nav-games-desc {
+        font-size: 0.82rem;
     }
 
     .lang-switch-item {

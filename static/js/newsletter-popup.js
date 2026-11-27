@@ -103,7 +103,8 @@ function isSuppressed() {
 
 function isSubscribePage() {
     const path = window.location.pathname || '';
-    return /(^|\/)(newsletter|privacy)\.html$/.test(path);
+    // Puzzle Online is a full-screen game: a popup mid-puzzle would interrupt play.
+    return /(^|\/)(newsletter|privacy|puzzle)\.html$/.test(path);
 }
 
 let shown = false;

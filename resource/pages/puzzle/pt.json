@@ -1,0 +1,152 @@
+{
+  "title": "Puzzle Online: jardim de neve, criaturas marinhas e recife de coral",
+  "homeLabel": "Início",
+  "documentTitle": "Puzzle Online – Quebra-cabeça de neve, mar e recife | SUPUZZ",
+  "description": "Jogue o Puzzle Online da SUPUZZ grátis: monte imagens de jardim de neve, criaturas marinhas, jardim de inverno e recife de coral com 9 a 49 peças.",
+  "imageAlt": "Puzzle Online da SUPUZZ com imagens de recife de coral e jardim de neve",
+  "eyebrow": "Jogos SUPUZZ",
+  "intro": "Escolha uma imagem dos nossos mundos de brinquedo, defina quantas peças quer e arraste cada peça de volta ao lugar. Conjuntos de jardim de neve, criaturas marinhas, cenas de jardim de inverno e brinquedos de recife de coral em um quebra-cabeça no navegador, sem baixar nada.",
+  "badges": [
+    "Grátis para jogar",
+    "Sem download",
+    "Funciona em celular e tablet"
+  ],
+  "playLabel": "Jogar o quebra-cabeça",
+  "howToLabel": "Como jogar",
+  "setup": {
+    "heading": "Escolha a imagem do quebra-cabeça",
+    "subheading": "Cada imagem vem de um conjunto de montar SUPUZZ. Novas coleções aparecem aqui quando a equipe as adiciona.",
+    "loading": "Carregando imagens…",
+    "fallbackNote": "Mostrando nossas imagens internas. As coleções online aparecem aqui automaticamente.",
+    "uploadLabel": "Usar minha foto",
+    "uploadNote": "Sua foto fica neste navegador e nunca é enviada.",
+    "difficultyLabel": "Dificuldade",
+    "pieces": "{n} peças",
+    "start": "Começar",
+    "empty": "Nenhuma imagem disponível agora. Tente novamente mais tarde.",
+    "yourPhotoTitle": "Sua foto",
+    "uploadFailed": "Não foi possível abrir essa foto. Escolha uma imagem JPG, PNG ou WebP.",
+    "chooseThis": "Escolher esta imagem: {alt}"
+  },
+  "game": {
+    "hudTitle": "Puzzle Online",
+    "time": "Tempo",
+    "moves": "Jogadas",
+    "groups": "Grupos restantes",
+    "hint": "Referência",
+    "shuffle": "Embaralhar",
+    "back": "Trocar imagem",
+    "cutting": "Cortando em {n}×{n} · {total} peças…",
+    "cutDone": "Cortado em {total} peças. Embaralhando…",
+    "shuffling": "Embaralhando…",
+    "dragTip": "Arraste as peças para reconstruir a imagem",
+    "skip": "Pular animação",
+    "winTitle": "Quebra-cabeça completo!",
+    "winDetail": "Tempo {time} · {moves} jogadas · {n}×{n} · {total} peças",
+    "again": "Jogar de novo",
+    "another": "Escolher outra imagem",
+    "imageError": "Não foi possível carregar essa imagem. Escolha outra."
+  },
+  "howTo": {
+    "heading": "Como jogar o Puzzle Online",
+    "intro": "As regras são simples, e não há cronômetro para vencer, a menos que você queira.",
+    "steps": [
+      {
+        "title": "Escolha uma imagem",
+        "body": "Escolha uma imagem de jardim de neve, criaturas marinhas, jardim de inverno ou recife de coral. Você também pode usar uma foto do seu dispositivo."
+      },
+      {
+        "title": "Escolha a dificuldade",
+        "body": "Comece com 9 peças e avance para 16, 25, 36 ou 49. Crianças menores costumam começar com a grade 3×3."
+      },
+      {
+        "title": "Arraste as peças",
+        "body": "Arraste uma peça para perto da vizinha. Quando as bordas combinam, as peças se encaixam e se movem como um grupo."
+      },
+      {
+        "title": "Complete a imagem",
+        "body": "Continue unindo grupos até a imagem inteira voltar. Tempo, jogadas e grupos restantes aparecem acima do tabuleiro."
+      }
+    ]
+  },
+  "collections": {
+    "heading": "Coleções inspiradas nos brinquedos SUPUZZ",
+    "intro": "As imagens do Puzzle Online vêm dos mundos que as crianças montam com SUPUZZ. Cada coleção leva ao brinquedo que a inspirou.",
+    "cards": {
+      "snow": {
+        "title": "Conjunto de jardim de neve",
+        "body": "Pinguins, ursos-polares e blocos cobertos de neve formam uma imagem tranquila de inverno. Se a criança gosta de um conjunto de jardim de neve ou de um conjunto de jardim de inverno, comece pela grade 3×3 ou 4×4 e nomeie os animais enquanto coloca as peças.",
+        "alt": "Conjunto de jardim de neve com pinguim e animais do Ártico",
+        "link": "Conhecer Icy World"
+      },
+      "coral": {
+        "title": "Brinquedos de criaturas marinhas",
+        "body": "Corais ramificados, peixes coloridos e bases azuis transformam o tabuleiro em um recife. Estes brinquedos de criaturas marinhas para crianças combinam com os quebra-cabeças 4×4 e 5×5, em que cor e forma dão pistas claras — e os brinquedos de recife de coral deixam a cena fácil de comentar.",
+        "alt": "Brinquedos de recife de coral com criaturas marinhas coloridas",
+        "link": "Conhecer Coral Reef"
+      },
+      "dino": {
+        "title": "Dinosaur Jungle",
+        "body": "Árvores altas, figuras de dinossauros e peças coloridas criam uma imagem mais cheia de detalhes. Experimente 5×5 ou 6×6 para um desafio maior.",
+        "alt": "Conjunto Dinosaur Jungle com árvores e dinossauros",
+        "link": "Conhecer Dinosaur Jungle"
+      },
+      "rainbow": {
+        "title": "Rainbow Waffle Blocks",
+        "body": "Blocos waffle vibrantes, robôs e veículos criam uma imagem divertida para quem gosta de formas livres. As cores fortes fazem dele um bom primeiro quebra-cabeça 4×4.",
+        "alt": "Blocos waffle arco-íris com um robô colorido",
+        "link": "Conhecer Rainbow Blocks"
+      }
+    }
+  },
+  "why": {
+    "heading": "Tempo de tela que também desenvolve habilidades",
+    "paragraphs": [
+      "Quebra-cabeças pedem comparação de cor, forma e detalhes das bordas. É o mesmo tipo de raciocínio visual usado para separar blocos por tamanho ou encontrar a peça que completa uma montagem.",
+      "Arrastar peças no celular ou tablet também treina o controle dos dedos e a coordenação entre olhos e mãos. Como uma rodada pode ser curta, o quebra-cabeça funciona bem como pausa de cinco minutos.",
+      "As imagens rendem conversa. Nomeie os animais do jardim de neve, conte as criaturas do recife ou descreva as cores dos blocos arco-íris enquanto brincam juntos."
+    ],
+    "cardTitle": "De 9 a 49 peças",
+    "cardNote": "Comece com 9 peças para os menores ou chegue a 49 quando quiser um desafio maior."
+  },
+  "faq": {
+    "heading": "Perguntas sobre o Puzzle Online",
+    "items": [
+      {
+        "q": "O Puzzle Online é grátis?",
+        "a": "Sim. Todos os quebra-cabeças desta página são gratuitos, sem cadastro, download ou compras dentro do jogo."
+      },
+      {
+        "q": "Preciso instalar um app?",
+        "a": "Não. O Puzzle Online funciona em um navegador moderno no celular, tablet, notebook ou computador."
+      },
+      {
+        "q": "Quantas peças posso escolher?",
+        "a": "Você pode jogar 3×3 (9 peças), 4×4 (16), 5×5 (25), 6×6 (36) ou 7×7 (49). A dificuldade muda apenas o número de peças, então dá para repetir a mesma imagem em um nível mais difícil."
+      },
+      {
+        "q": "Posso usar minha própria foto?",
+        "a": "Sim. Escolha “Usar minha foto” no seletor de imagens. A imagem é processada no seu navegador e nunca é enviada aos nossos servidores."
+      },
+      {
+        "q": "As imagens são de conjuntos SUPUZZ?",
+        "a": "Sim. As coleções são baseadas nos conjuntos de jardim de neve, recife de coral, dinossauros e blocos arco-íris da SUPUZZ. Siga os links de cada coleção para ver o brinquedo correspondente."
+      },
+      {
+        "q": "Funciona no celular?",
+        "a": "Sim. Arraste as peças com um dedo. Em telas pequenas, recomendamos começar com 9 ou 16 peças."
+      },
+      {
+        "q": "O que são conjuntos de jardim de neve e jardim de inverno?",
+        "a": "São conjuntos de montar SUPUZZ com blocos de neve, árvores e figuras de animais do Ártico. As crianças empilham e conectam as peças para criar uma pequena cena de inverno e depois desmontam para montar de novo."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Leve o quebra-cabeça para fora da tela",
+    "body": "Se a criança gosta de remontar o jardim de neve ou o recife, o conjunto de montar correspondente permite criar a cena com as mãos. Os conjuntos SUPUZZ usam peças grandes e coloridas, fáceis de conectar com dedos pequenos.",
+    "shop": "Comprar brinquedos SUPUZZ na Amazon",
+    "garden": "Jogar SUPUZZ Garden",
+    "gardenNote": "Outro jogo grátis da SUPUZZ: construa e cuide do seu próprio mundo de jardim."
+  }
+}

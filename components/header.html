@@ -34,6 +34,32 @@
                 <li><a href="index.html" data-i18n="home">Home</a></li>
                 <li><a href="blog.html" data-i18n="journal">Blog</a></li>
                 <li><a href="index.html#products" data-i18n="products">Products</a></li>
+                <li class="nav-games" id="navGames">
+                    <button type="button" class="nav-games-toggle" id="navGamesBtn" aria-expanded="false" aria-controls="navGamesMenu" data-i18n-attr="aria-label|gamesMenu">
+                        <span data-i18n="games">Games</span>
+                        <span class="material-symbols-rounded nav-games-arrow" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="nav-games-menu" id="navGamesMenu">
+                        <li>
+                            <a href="puzzle.html">
+                                <span class="nav-games-icon" aria-hidden="true">🧩</span>
+                                <span class="nav-games-copy">
+                                    <span class="nav-games-label" data-i18n="puzzleOnline">Puzzle Online</span>
+                                    <span class="nav-games-desc" data-i18n="puzzleOnlineDesc">Drag-and-drop picture puzzle</span>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://game.supuzz.cn/play/" target="_blank" rel="noopener">
+                                <span class="nav-games-icon" aria-hidden="true">🌱</span>
+                                <span class="nav-games-copy">
+                                    <span class="nav-games-label" data-i18n="supuzzGarden">SUPUZZ Garden</span>
+                                    <span class="nav-games-desc" data-i18n="supuzzGardenDesc">Build a shared garden world</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
                 <li><a href="community.html" data-i18n="community">Community</a></li>
                 <li><a href="about.html" data-i18n="about">About Us</a></li>
                 <li><a href="contact.html" data-i18n="contact">Contact</a></li>
@@ -56,6 +82,12 @@
                     home: 'Home',
                     journal: 'Blog',
                     products: 'Products',
+                    games: 'Games',
+                    gamesMenu: 'Games menu',
+                    puzzleOnline: 'Puzzle Online',
+                    puzzleOnlineDesc: 'Drag-and-drop picture puzzle',
+                    supuzzGarden: 'SUPUZZ Garden',
+                    supuzzGardenDesc: 'Build a shared garden world',
                     community: 'Community',
                     about: 'About Us',
                     contact: 'Contact',
@@ -68,6 +100,12 @@
                     home: 'Inicio',
                     journal: 'Blog',
                     products: 'Productos',
+                    games: 'Juegos',
+                    gamesMenu: 'Menú de juegos',
+                    puzzleOnline: 'Puzzle Online',
+                    puzzleOnlineDesc: 'Rompecabezas de arrastrar y soltar',
+                    supuzzGarden: 'SUPUZZ Garden',
+                    supuzzGardenDesc: 'Construye un mundo de jardín compartido',
                     community: 'Comunidad',
                     about: 'Sobre Nosotros',
                     contact: 'Contacto',
@@ -80,6 +118,12 @@
                     home: 'ホーム',
                     journal: 'ブログ',
                     products: '製品',
+                    games: 'ゲーム',
+                    gamesMenu: 'ゲームメニュー',
+                    puzzleOnline: 'Puzzle Online',
+                    puzzleOnlineDesc: 'ドラッグ＆ドロップの絵合わせパズル',
+                    supuzzGarden: 'SUPUZZ Garden',
+                    supuzzGardenDesc: 'みんなで庭の世界をつくる',
                     community: 'コミュニティ',
                     about: '会社概要',
                     contact: 'お問い合わせ',
@@ -92,6 +136,12 @@
                     home: '首頁',
                     journal: '部落格',
                     products: '產品',
+                    games: '遊戲',
+                    gamesMenu: '遊戲選單',
+                    puzzleOnline: 'Puzzle Online',
+                    puzzleOnlineDesc: '拖曳拼圖遊戲',
+                    supuzzGarden: 'SUPUZZ Garden',
+                    supuzzGardenDesc: '一起建造田園世界',
                     community: '社群',
                     about: '關於我們',
                     contact: '聯絡我們',
@@ -104,6 +154,12 @@
                     home: 'Startseite',
                     journal: 'Blog',
                     products: 'Produkte',
+                    games: 'Spiele',
+                    gamesMenu: 'Spielemenü',
+                    puzzleOnline: 'Puzzle Online',
+                    puzzleOnlineDesc: 'Ziehen-und-Ablegen-Puzzle',
+                    supuzzGarden: 'SUPUZZ Garden',
+                    supuzzGardenDesc: 'Eine gemeinsame Gartenwelt bauen',
                     community: 'Community',
                     about: 'Über uns',
                     contact: 'Kontakt',
@@ -116,6 +172,12 @@
                     home: 'Início',
                     journal: 'Blog',
                     products: 'Produtos',
+                    games: 'Jogos',
+                    gamesMenu: 'Menu de jogos',
+                    puzzleOnline: 'Puzzle Online',
+                    puzzleOnlineDesc: 'Quebra-cabeça de arrastar e soltar',
+                    supuzzGarden: 'SUPUZZ Garden',
+                    supuzzGardenDesc: 'Construa um mundo de jardim compartilhado',
                     community: 'Comunidade',
                     about: 'Sobre nós',
                     contact: 'Contato',
@@ -128,6 +190,12 @@
                     home: 'Accueil',
                     journal: 'Blog',
                     products: 'Produits',
+                    games: 'Jeux',
+                    gamesMenu: 'Menu des jeux',
+                    puzzleOnline: 'Puzzle Online',
+                    puzzleOnlineDesc: 'Puzzle à glisser-déposer',
+                    supuzzGarden: 'SUPUZZ Garden',
+                    supuzzGardenDesc: 'Construire un monde de jardin partagé',
                     community: 'Communauté',
                     about: 'À propos',
                     contact: 'Contact',
@@ -261,6 +329,30 @@
                 var langLink = document.getElementById('langSwitchLink');
                 if (langLink) {
                     langLink.href = '/lang.html?from=' + encodeURIComponent(getCurrentPagePath());
+                }
+
+                var gamesBtn = document.getElementById('navGamesBtn');
+                var gamesItem = document.getElementById('navGames');
+
+                function closeGames() {
+                    if (!gamesItem || !gamesBtn) return;
+                    gamesItem.classList.remove('open');
+                    gamesBtn.setAttribute('aria-expanded', 'false');
+                }
+
+                if (gamesBtn && gamesItem) {
+                    gamesBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var open = gamesItem.classList.toggle('open');
+                        gamesBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    });
+                    document.addEventListener('click', function(e) {
+                        if (!gamesItem.contains(e.target)) closeGames();
+                    });
+                    document.addEventListener('keydown', function(e) {
+                        if (e.key === 'Escape') closeGames();
+                    });
                 }
 
                 var menuBtn = document.getElementById('menuBtn');

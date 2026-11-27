@@ -1,0 +1,152 @@
+{
+  "title": "Puzzle Online: Schneegarten, Meerestiere & Korallenriff",
+  "homeLabel": "Startseite",
+  "documentTitle": "Puzzle Online – Schneegarten, Meerestiere & Korallenriff-Puzzle | SUPUZZ",
+  "description": "Spiele SUPUZZ Puzzle Online kostenlos im Browser: Schneegarten, Meerestiere, Wintergarten und Korallenriff aus 9 bis 49 Teilen zusammensetzen.",
+  "imageAlt": "SUPUZZ Puzzle Online mit Korallenriff- und Schneegarten-Bildern",
+  "eyebrow": "SUPUZZ Spiele",
+  "intro": "Wähle ein Bild aus unseren Spielwelten, entscheide dich für die Teilezahl und ziehe jedes Teil an seinen Platz. Schneegarten-Bausets, Meerestiere, Wintergartenszenen und Korallenriff-Spielzeug in einem Browser-Puzzle – ganz ohne Download.",
+  "badges": [
+    "Kostenlos",
+    "Ohne Download",
+    "Für Handy und Tablet"
+  ],
+  "playLabel": "Puzzle starten",
+  "howToLabel": "So wird gespielt",
+  "setup": {
+    "heading": "Wähle dein Puzzle-Bild",
+    "subheading": "Jedes Bild stammt aus einem SUPUZZ-Bauset. Neue Sammlungen erscheinen hier, sobald unser Team sie hinzufügt.",
+    "loading": "Puzzle-Bilder werden geladen…",
+    "fallbackNote": "Unsere eingebauten Bilder werden angezeigt. Online-Sammlungen erscheinen hier automatisch.",
+    "uploadLabel": "Eigenes Foto verwenden",
+    "uploadNote": "Dein Foto bleibt in diesem Browser und wird nie hochgeladen.",
+    "difficultyLabel": "Schwierigkeit",
+    "pieces": "{n} Teile",
+    "start": "Puzzle starten",
+    "empty": "Gerade sind keine Bilder verfügbar. Bitte später erneut versuchen.",
+    "yourPhotoTitle": "Dein Foto",
+    "uploadFailed": "Dieses Foto konnte nicht geöffnet werden. Bitte ein JPG-, PNG- oder WebP-Bild wählen.",
+    "chooseThis": "Dieses Bild wählen: {alt}"
+  },
+  "game": {
+    "hudTitle": "Puzzle Online",
+    "time": "Zeit",
+    "moves": "Züge",
+    "groups": "Gruppen übrig",
+    "hint": "Vorlage",
+    "shuffle": "Neu mischen",
+    "back": "Bild wechseln",
+    "cutting": "Wird in {n}×{n} · {total} Teile geschnitten…",
+    "cutDone": "In {total} Teile geschnitten. Wird gemischt…",
+    "shuffling": "Wird gemischt…",
+    "dragTip": "Ziehe die Teile zusammen, um das Bild zu vervollständigen",
+    "skip": "Animation überspringen",
+    "winTitle": "Puzzle fertig!",
+    "winDetail": "Zeit {time} · {moves} Züge · {n}×{n} · {total} Teile",
+    "again": "Noch einmal",
+    "another": "Anderes Bild wählen",
+    "imageError": "Dieses Bild konnte nicht geladen werden. Bitte ein anderes wählen."
+  },
+  "howTo": {
+    "heading": "So spielst du Puzzle Online",
+    "intro": "Die Regeln sind einfach, und du musst keine Zeit schlagen, wenn du nicht möchtest.",
+    "steps": [
+      {
+        "title": "Bild aussuchen",
+        "body": "Wähle ein Schneegarten-, Meerestier-, Wintergarten- oder Korallenriff-Bild. Du kannst auch ein Foto von deinem Gerät verwenden."
+      },
+      {
+        "title": "Schwierigkeit wählen",
+        "body": "Beginne mit 9 Teilen und steigere dich auf 16, 25, 36 oder 49. Jüngere Kinder starten meist mit dem 3×3-Raster."
+      },
+      {
+        "title": "Teile ziehen",
+        "body": "Ziehe ein Teil neben sein Nachbarteil. Wenn die Kanten passen, rasten die Teile ein und bewegen sich als Gruppe."
+      },
+      {
+        "title": "Bild vollenden",
+        "body": "Verbinde Gruppen, bis das ganze Bild wieder da ist. Zeit, Züge und restliche Gruppen stehen über dem Spielfeld."
+      }
+    ]
+  },
+  "collections": {
+    "heading": "Puzzle-Sammlungen rund um SUPUZZ-Spielzeug",
+    "intro": "Die Bilder in Puzzle Online stammen aus den Welten, die Kinder mit SUPUZZ bauen. Jede Sammlung verlinkt das Spielzeug, das sie inspiriert hat.",
+    "cards": {
+      "snow": {
+        "title": "Schneegarten-Bauset",
+        "body": "Pinguine, Eisbären und schneebedeckte Bausteine ergeben ein ruhiges Winterbild. Wenn dein Kind ein Schneegarten-Bauset oder ein Wintergarten-Set mag, beginne mit 3×3 oder 4×4 und benenne die Tiere, während ihr die Teile setzt.",
+        "alt": "Schneegarten-Bauset mit Pinguin und arktischen Tieren",
+        "link": "Icy World entdecken"
+      },
+      "coral": {
+        "title": "Meerestier-Spielzeug für Kinder",
+        "body": "Verzweigte Korallen, bunte Fische und blaue Böden machen das Spielfeld zum Riff. Dieses Meerestier-Spielzeug für Kinder passt zu 4×4 und 5×5, wo Farbe und Form klare Hinweise geben – und Korallenriff-Spielzeug macht die Szene leicht zum Besprechen.",
+        "alt": "Korallenriff-Spielzeug mit bunten Meerestieren für Kinder",
+        "link": "Coral Reef entdecken"
+      },
+      "dino": {
+        "title": "Dinosaur Jungle",
+        "body": "Hohe Bäume, Dinosaurierfiguren und bunte Verbindungsteile ergeben ein lebendigeres Bild mit vielen Details. Probiere 5×5 oder 6×6 für eine längere Herausforderung.",
+        "alt": "Dinosaur-Jungle-Bauset mit Bäumen und Dinosauriern",
+        "link": "Dinosaur Jungle entdecken"
+      },
+      "rainbow": {
+        "title": "Rainbow Waffle Blocks",
+        "body": "Leuchtende Waffelbausteine, Roboter und Fahrzeuge ergeben ein verspieltes Bild für alle, die freie Formen mögen. Die kräftigen Farben machen es zu einem guten ersten 4×4-Puzzle.",
+        "alt": "Regenbogen-Waffelbausteine mit einem bunten Roboter",
+        "link": "Rainbow Blocks entdecken"
+      }
+    }
+  },
+  "why": {
+    "heading": "Bildschirmzeit, die trotzdem Fähigkeiten fördert",
+    "paragraphs": [
+      "Bildpuzzles verlangen den Vergleich von Farbe, Form und Kantendetails. Das ist dieselbe visuelle Denkweise, die Kinder beim Sortieren von Bausteinen nach Größe oder beim Suchen des passenden Teils nutzen.",
+      "Das Ziehen von Teilen auf Handy oder Tablet übt außerdem Fingerkontrolle und Auge-Hand-Koordination. Eine Runde kann kurz sein und passt gut als Fünf-Minuten-Pause.",
+      "Die Bilder regen Gespräche an. Benennt die Tiere im Schneegarten, zählt die Meerestiere im Riff oder beschreibt die Farben der Regenbogenbausteine, während ihr zusammen spielt."
+    ],
+    "cardTitle": "9 bis 49 Teile",
+    "cardNote": "Für jüngere Kinder mit 9 Teilen beginnen, für eine längere Aufgabe bis 49 Teile steigern."
+  },
+  "faq": {
+    "heading": "Fragen zu Puzzle Online",
+    "items": [
+      {
+        "q": "Ist Puzzle Online kostenlos?",
+        "a": "Ja. Alle Puzzles auf dieser Seite sind kostenlos, ohne Anmeldung, Download oder In-Game-Käufe."
+      },
+      {
+        "q": "Brauche ich eine App?",
+        "a": "Nein. Puzzle Online läuft in einem modernen Browser auf Handy, Tablet, Laptop oder Desktop."
+      },
+      {
+        "q": "Wie viele Teile kann ich wählen?",
+        "a": "Du kannst 3×3 (9 Teile), 4×4 (16), 5×5 (25), 6×6 (36) oder 7×7 (49) spielen. Die Schwierigkeit ändert nur die Teilezahl, sodass du dasselbe Bild schwerer wiederholen kannst."
+      },
+      {
+        "q": "Kann ich mein eigenes Foto verwenden?",
+        "a": "Ja. Wähle „Eigenes Foto verwenden“ in der Bildauswahl. Das Bild wird in deinem Browser verarbeitet und nie auf unsere Server hochgeladen."
+      },
+      {
+        "q": "Stammen die Bilder aus SUPUZZ-Bausets?",
+        "a": "Ja. Die Sammlungen basieren auf SUPUZZ-Schneegarten-, Korallenriff-, Dinosaurier- und Regenbogen-Bausets. Über die Links unter jeder Sammlung siehst du das passende Spielzeug."
+      },
+      {
+        "q": "Funktioniert das Puzzle am Handy?",
+        "a": "Ja. Ziehe die Teile mit einem Finger. Auf kleinen Bildschirmen empfehlen wir 9 oder 16 Teile zum Start."
+      },
+      {
+        "q": "Was sind Schneegarten- und Wintergarten-Bausets?",
+        "a": "Das sind SUPUZZ-Bausets mit Schneebausteinen, Bäumen und arktischen Tierfiguren. Kinder stapeln und verbinden die Teile zu einer kleinen Winterlandschaft und bauen sie danach neu auf."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Das Puzzle vom Bildschirm holen",
+    "body": "Wenn dein Kind den Schneegarten oder das Korallenriff gern nachpuzzelt, kann es die Szene mit dem passenden Bauset in die Hand nehmen. SUPUZZ-Sets nutzen große, bunte Teile, die auch kleine Finger leicht verbinden.",
+    "shop": "SUPUZZ-Spielzeug bei Amazon kaufen",
+    "garden": "SUPUZZ Garden spielen",
+    "gardenNote": "Ein weiteres kostenloses SUPUZZ-Spiel: Baue und pflege deine eigene Gartenwelt."
+  }
+}
