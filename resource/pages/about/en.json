@@ -1,37 +1,201 @@
 {
   "title": "About SUPUZZ",
-  "documentTitle": "About SUPUZZ | PLAY WITH ALL KIDS.",
-  "description": "PLAY WITH ALL KIDS. SUPUZZ believes play is the universal language of discovery. We create products that bring all kids together to imagine, build, and connect.",
-  "imageAlt": "A child smiling outdoors",
-  "intro": "SUPUZZ creates building toys and kids furniture for shared play.",
-  "offerings": {
-    "title": "What We Offer",
-    "paragraphs": [],
-    "cards": {
-      "blocks": {
-        "title": "Building Blocks",
-        "body": "Waffle-style interlocking building blocks with locking storage cases, designed for progressive learning and sensory play for ages 2–8."
+  "documentTitle": "About SUPUZZ | Building Toys, Kids Furniture & Play",
+  "description": "Meet SUPUZZ: an independent brand creating building toys, kids furniture and playful experiences that bring all kids together to imagine, build and connect.",
+  "imageAlt": "A child laughing while playing outdoors",
+  "homeLabel": "Home",
+  "hero": {
+    "eyebrow": "About SUPUZZ",
+    "title": "PLAY WITH ALL KIDS.",
+    "subtitle": "Play is the universal language of discovery.",
+    "lead": "We believe play is the universal language of discovery. That's why we create products that bring all kids together to imagine, build, and connect. Because the greatest adventures begin when we play together.",
+    "primaryCta": "Explore Our Toys",
+    "secondaryCta": "Play Online",
+    "facts": [
+      "Open-ended building toys",
+      "Kids furniture",
+      "Made for all kids"
+    ],
+    "imageCaption": "Every great adventure begins with a moment of play."
+  },
+  "story": {
+    "eyebrow": "Our Story",
+    "title": "A few building pieces can become a whole world.",
+    "paragraphs": [
+      "At SUPUZZ, we believe play has the power to bring kids together.",
+      "A few building pieces can become a garden, an ocean, a dinosaur world, or something no one has imagined before. A simple idea can turn into a shared adventure. And when kids play together, they create more than things—they create moments, connections, and memories.",
+      "That's why we create toys and playful experiences that invite kids to imagine, build, explore, and connect.",
+      "We want to make play more than an activity. We want it to be a way for kids to discover the world, express their ideas, and enjoy the magic of creating something together."
+    ],
+    "quote": "Imagine together. Build together. Discover together."
+  },
+  "belief": {
+    "eyebrow": "Our Belief",
+    "title": "Play brings us together.",
+    "intro": "Play is a universal language. It doesn't need a perfect plan, the same ideas, or the same way of doing things. It begins with curiosity, grows through imagination, and becomes even more meaningful when shared.",
+    "points": [
+      {
+        "title": "It begins with curiosity.",
+        "body": "A new piece, a new color, a new question—play starts with wanting to find out what happens next."
       },
-      "furniture": {
-        "title": "Kids Furniture",
-        "body": "Ergonomic toddler chairs and kids table & chair sets — sturdy, safe, and sized for growing children ages 1–4."
+      {
+        "title": "It grows through imagination.",
+        "body": "A garden, an underwater world, a dinosaur habitat: kids take a simple idea and give it a place to live."
       },
-      "play": {
-        "title": "Open-Ended Play",
-        "body": "Theme sets like Funny Snow World, Icy World, Ocean World, Rotating Forest — mixable and detachable, letting kids build without limits."
+      {
+        "title": "It matters most when shared.",
+        "body": "When kids build together, they share ideas, try new things, and connect with one another."
       }
+    ],
+    "outro": "Whether kids are building a colorful garden, exploring an underwater world, creating a dinosaur habitat, or inventing something entirely new, play gives them opportunities to share ideas, try new things, and connect. At SUPUZZ, we believe the joy of play belongs to all kids."
+  },
+  "mission": {
+    "eyebrow": "Our Mission",
+    "title": "Explore New Life.",
+    "paragraphs": [
+      "Explore New Life is our mission.",
+      "We believe every day brings new opportunities to explore, create, and discover. Through playful products and imaginative experiences, we hope to inspire kids to see new possibilities in the world around them."
+    ],
+    "steps": [
+      "A new piece can spark a new idea.",
+      "A new idea can create a new world.",
+      "And a world becomes even more exciting when we explore it together."
+    ]
+  },
+  "products": {
+    "eyebrow": "What We Make",
+    "title": "Made for imagination. Made for togetherness.",
+    "intro": "From a first rainbow stack to a full coral reef, our building toys and kids furniture are designed to be mixed, rebuilt, and shared—again and again.",
+    "items": [
+      {
+        "key": "building",
+        "title": "Building Toys",
+        "body": "Our building toys invite kids to connect pieces, explore shapes, experiment with ideas, and create their own worlds. From flowers and gardens to coral reefs, dinosaurs, forests, and imaginative structures, every creation can become the beginning of a new adventure."
+      },
+      {
+        "key": "ocean",
+        "title": "Ocean World",
+        "body": "Dive into colorful underwater adventures. Build coral reefs, create ocean scenes, and imagine worlds where marine creatures explore, hide, and play."
+      },
+      {
+        "key": "ice",
+        "title": "Ice World",
+        "body": "Create snowy landscapes, icy gardens, and imaginative winter worlds. Explore shapes, colors, and new combinations together."
+      },
+      {
+        "key": "forest",
+        "title": "Forest & Dinosaur Worlds",
+        "body": "Bring dinosaurs, plants, animals, and jungle-inspired elements together. Build habitats, create adventures, and invent stories of your own."
+      },
+      {
+        "key": "rainbow",
+        "title": "Rainbow & Waffle Building Blocks",
+        "body": "Connect, stack, and build in countless creative ways. Start with a simple idea and turn it into something bigger—together."
+      },
+      {
+        "key": "furniture",
+        "title": "Kids Furniture",
+        "body": "We also create kids furniture that gives little explorers a place to play, build, draw, read, and share everyday moments."
+      }
+    ],
+    "cta": "Explore Our Toys"
+  },
+  "ways": {
+    "eyebrow": "More Ways to Play",
+    "title": "More ways to play together.",
+    "open": {
+      "title": "Open-Ended Play",
+      "paragraphs": [
+        "We believe the best play leaves room for imagination. Our building toys encourage kids to create their own designs, rebuild in new ways, combine ideas, and explore different possibilities.",
+        "There is no single right way to play. One child may build a flower garden. Another may create an ocean world. Together, they may build something completely unexpected."
+      ],
+      "emphasis": "That's the beauty of imagination.",
+      "cta": "Discover Play Ideas",
+      "imageAlt": "Two children building together with colorful SUPUZZ blocks"
+    },
+    "digital": {
+      "title": "Digital Play",
+      "paragraphs": [
+        "Play doesn't stop when the building pieces are put away. Through SUPUZZ online interactive jigsaw puzzles, kids and families can explore colorful creative worlds in a different way.",
+        "Put the pieces together, enjoy a little challenge, and discover the joy of play online. From hands-on building to digital puzzles, we believe there are many ways to imagine, explore, and enjoy playful moments."
+      ],
+      "imageAlt": "SUPUZZ online jigsaw puzzle showing a snow garden scene",
+      "cta": "Play SUPUZZ Online Puzzles"
     }
   },
-  "cta": {
-    "title": "Large Orders & Business Enquiries",
-    "body": "Alongside individual purchases, we support larger orders of SUPUZZ-branded products for retailers, organisations and other business customers. Contact us to discuss products, quantities and delivery requirements.",
-    "label": "Contact Us Today"
-  },
-  "philosophy": {
+  "community": {
+    "eyebrow": "Community",
+    "title": "Share the joy of creating.",
     "paragraphs": [
-      "We believe that play is the universal language of discovery.",
-      "That's why we create products that bring all kids together to imagine, build, and connect.",
-      "Because the greatest adventures begin when we play together."
+      "Every creation tells a story. We love seeing kids turn ideas into colorful gardens, underwater worlds, dinosaurs, structures, and unexpected designs.",
+      "When creativity is shared, inspiration grows. We invite families and creators to explore ideas, share their creations, and discover what others have imagined with SUPUZZ.",
+      "Because a great idea can inspire another great idea—and playing together makes the adventure even better."
+    ],
+    "imageAlt": "A family building together with SUPUZZ building toys",
+    "cta": "Explore the SUPUZZ Community"
+  },
+  "brand": {
+    "eyebrow": "Our Brand",
+    "title": "Explore. Create. Connect.",
+    "values": [
+      {
+        "title": "Explore",
+        "body": "New pieces, new worlds, and new possibilities in the world around us."
+      },
+      {
+        "title": "Create",
+        "body": "Open-ended toys that leave room for every idea a child brings."
+      },
+      {
+        "title": "Connect",
+        "body": "Play that brings kids, families, and friends together."
+      }
+    ],
+    "paragraphs": [
+      "We are an independent brand creating building toys, kids furniture, and playful experiences for everyday discovery.",
+      "We care about thoughtful product design, meaningful play experiences, clear product information, and listening to families. We continue to explore new ideas and ways to make play more creative, enjoyable, and connected.",
+      "Our journey is still growing, and we believe the best adventures are the ones we share."
     ]
+  },
+  "partners": {
+    "title": "Large Orders & Business Enquiries",
+    "body": "Alongside individual purchases, we support larger orders of SUPUZZ-branded products for retailers, organisations, schools, and other business customers. Contact us to discuss products, quantities, and delivery requirements.",
+    "primaryCta": "Contact Us Today",
+    "secondaryCta": "Education & Bulk Orders"
+  },
+  "faq": {
+    "eyebrow": "Good to Know",
+    "title": "Questions families often ask.",
+    "items": [
+      {
+        "q": "What does SUPUZZ make?",
+        "a": "SUPUZZ creates building toys, kids furniture, and playful experiences. The range includes rainbow and waffle building blocks, Ocean World coral reef sets, Ice World sets, Forest & Dinosaur World sets, and kids tables and chairs."
+      },
+      {
+        "q": "What ages are SUPUZZ toys designed for?",
+        "a": "Each product lists its own age recommendation. Waffle building blocks are designed for ages 2–8, many themed building sets are recommended for ages 3 and up, and our kids furniture is sized for children ages 1–4."
+      },
+      {
+        "q": "Are SUPUZZ building toys open-ended?",
+        "a": "Yes. The pieces are designed to connect, stack, mix, and rebuild. Kids can follow a themed idea or invent their own world, and sets can be combined for bigger builds."
+      },
+      {
+        "q": "Where can I buy SUPUZZ toys?",
+        "a": "You can browse the full range on the SUPUZZ website and shop through our Amazon store. For bulk orders, schools, and retail enquiries, contact us directly."
+      },
+      {
+        "q": "Does SUPUZZ offer digital play?",
+        "a": "Yes. SUPUZZ Puzzle Online is a free browser puzzle that turns our toy worlds into jigsaw pictures, with no download required."
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "SUPUZZ",
+    "title": "The greatest adventures begin when we play together.",
+    "body": "Discover colorful worlds. Create something new. Connect through play.",
+    "primaryCta": "Explore Our Toys",
+    "secondaryCta": "Play Online",
+    "tertiaryCta": "Discover Play Ideas",
+    "signature": "PLAY WITH ALL KIDS."
   }
 }

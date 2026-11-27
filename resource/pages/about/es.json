@@ -1,39 +1,201 @@
 {
   "title": "Sobre SUPUZZ",
-  "documentTitle": "Sobre SUPUZZ | PLAY WITH ALL KIDS.",
-  "description": "PLAY WITH ALL KIDS. SUPUZZ cree que el juego es el lenguaje universal del descubrimiento. Creamos productos que reúnen a todos los niños para imaginar, construir y conectar.",
-  "imageAlt": "Un niño sonriendo al aire libre",
-  "intro": "SUPUZZ crea juguetes de construcción y muebles infantiles para jugar juntos.",
-  "offerings": {
-    "title": "Qué Ofrecemos",
-    "paragraphs": [
-      "Nuestras colecciones están pensadas para el juego y la vida cotidiana en familia. Descubre nuestros tres pilares:"
+  "documentTitle": "Sobre SUPUZZ | Juguetes de construcción y muebles infantiles",
+  "description": "Conoce SUPUZZ: una marca independiente de juguetes de construcción, muebles infantiles y juego que reúne a todos los niños para imaginar, construir y conectar.",
+  "imageAlt": "Un niño riendo mientras juega al aire libre",
+  "homeLabel": "Inicio",
+  "hero": {
+    "eyebrow": "Sobre SUPUZZ",
+    "title": "PLAY WITH ALL KIDS.",
+    "subtitle": "El juego es el lenguaje universal del descubrimiento.",
+    "lead": "Creemos que el juego es el lenguaje universal del descubrimiento. Por eso creamos productos que reúnen a todos los niños para imaginar, construir y conectar. Porque las mejores aventuras empiezan cuando jugamos juntos.",
+    "primaryCta": "Explora nuestros juguetes",
+    "secondaryCta": "Juega online",
+    "facts": [
+      "Juguetes de construcción para juego abierto",
+      "Muebles infantiles",
+      "Pensados para todos los niños"
     ],
-    "cards": {
-      "blocks": {
-        "title": "Bloques de Construcción",
-        "body": "Sets interlocking estilo waffle, serie Icy World, Ocean World y Bosque Giratorio. Juego abierto y creativo para edades 2-8."
+    "imageCaption": "Toda gran aventura empieza con un momento de juego."
+  },
+  "story": {
+    "eyebrow": "Nuestra historia",
+    "title": "Unas cuantas piezas de construcción pueden convertirse en un mundo entero.",
+    "paragraphs": [
+      "En SUPUZZ creemos que el juego tiene el poder de unir a los niños.",
+      "Unas cuantas piezas de construcción pueden convertirse en un jardín, un océano, un mundo de dinosaurios o en algo que nadie había imaginado antes. Una idea sencilla puede transformarse en una aventura compartida. Y cuando los niños juegan juntos, crean mucho más que cosas: crean momentos, conexiones y recuerdos.",
+      "Por eso creamos juguetes y experiencias de juego que invitan a los niños a imaginar, construir, explorar y conectar.",
+      "Queremos que jugar sea más que una actividad. Queremos que sea una forma de descubrir el mundo, expresar sus ideas y disfrutar de la magia de crear algo juntos."
+    ],
+    "quote": "Imaginar juntos. Construir juntos. Descubrir juntos."
+  },
+  "belief": {
+    "eyebrow": "Nuestra convicción",
+    "title": "El juego nos une.",
+    "intro": "El juego es un lenguaje universal. No necesita un plan perfecto, las mismas ideas ni la misma forma de hacer las cosas. Nace de la curiosidad, crece con la imaginación y se vuelve aún más valioso cuando se comparte.",
+    "points": [
+      {
+        "title": "Empieza con la curiosidad.",
+        "body": "Una pieza nueva, un color nuevo, una pregunta nueva: jugar empieza con las ganas de descubrir qué pasa después."
       },
-      "furniture": {
-        "title": "Muebles Infantiles",
-        "body": "Sillas y mesas ergonómicas y resistentes para niños pequeños. Sin respaldo tambaleante, dimensiones optimizadas para edades 1-4."
+      {
+        "title": "Crece con la imaginación.",
+        "body": "Un jardín, un mundo submarino, un hábitat de dinosaurios: los niños toman una idea sencilla y le dan un lugar donde vivir."
       },
-      "play": {
-        "title": "Juego Abierto y STEM",
-        "body": "Juguetes que combinan diversión y aprendizaje. Bloques separables y sistemas que permiten combinar series entre sí."
+      {
+        "title": "Importa más cuando se comparte.",
+        "body": "Cuando los niños construyen juntos, comparten ideas, prueban cosas nuevas y conectan entre ellos."
       }
+    ],
+    "outro": "Ya sea que los niños construyan un jardín lleno de color, exploren un mundo submarino, creen un hábitat de dinosaurios o inventen algo completamente nuevo, el juego les da oportunidades de compartir ideas, probar cosas nuevas y conectar. En SUPUZZ creemos que la alegría de jugar pertenece a todos los niños."
+  },
+  "mission": {
+    "eyebrow": "Nuestra misión",
+    "title": "Explorar nueva vida.",
+    "paragraphs": [
+      "Explorar nueva vida es nuestra misión.",
+      "Creemos que cada día trae nuevas oportunidades para explorar, crear y descubrir. Con productos que invitan a jugar y experiencias llenas de imaginación, queremos inspirar a los niños a ver nuevas posibilidades en el mundo que los rodea."
+    ],
+    "steps": [
+      "Una pieza nueva puede encender una idea nueva.",
+      "Una idea nueva puede crear un mundo nuevo.",
+      "Y un mundo se vuelve aún más emocionante cuando lo exploramos juntos."
+    ]
+  },
+  "products": {
+    "eyebrow": "Lo que creamos",
+    "title": "Hecho para imaginar. Hecho para compartir.",
+    "intro": "Desde una primera torre arcoíris hasta un arrecife de coral completo, nuestros juguetes de construcción y muebles infantiles están diseñados para combinarse, reconstruirse y compartirse, una y otra vez.",
+    "items": [
+      {
+        "key": "building",
+        "title": "Juguetes de construcción",
+        "body": "Nuestros juguetes de construcción invitan a los niños a conectar piezas, explorar formas, experimentar con ideas y crear sus propios mundos. Desde flores y jardines hasta arrecifes de coral, dinosaurios, bosques y estructuras imaginativas, cada creación puede ser el comienzo de una nueva aventura."
+      },
+      {
+        "key": "ocean",
+        "title": "Mundo Oceánico",
+        "body": "Sumérgete en aventuras submarinas llenas de color. Construye arrecifes de coral, crea escenas oceánicas e imagina mundos donde las criaturas marinas exploran, se esconden y juegan."
+      },
+      {
+        "key": "ice",
+        "title": "Mundo de Hielo",
+        "body": "Crea paisajes nevados, jardines helados y mundos invernales llenos de imaginación. Explora formas, colores y nuevas combinaciones juntos."
+      },
+      {
+        "key": "forest",
+        "title": "Bosque y Dinosaurios",
+        "body": "Reúne dinosaurios, plantas, animales y elementos inspirados en la selva. Construye hábitats, crea aventuras e inventa historias propias."
+      },
+      {
+        "key": "rainbow",
+        "title": "Bloques waffle arcoíris",
+        "body": "Conecta, apila y construye de innumerables formas creativas. Empieza con una idea sencilla y conviértela en algo más grande, juntos."
+      },
+      {
+        "key": "furniture",
+        "title": "Muebles infantiles",
+        "body": "También creamos muebles infantiles que dan a los pequeños exploradores un lugar donde jugar, construir, dibujar, leer y compartir los momentos del día a día."
+      }
+    ],
+    "cta": "Explora nuestros juguetes"
+  },
+  "ways": {
+    "eyebrow": "Más formas de jugar",
+    "title": "Más formas de jugar juntos.",
+    "open": {
+      "title": "Juego abierto",
+      "paragraphs": [
+        "Creemos que el mejor juego deja espacio para la imaginación. Nuestros juguetes de construcción animan a los niños a crear sus propios diseños, reconstruir de formas nuevas, combinar ideas y explorar posibilidades distintas.",
+        "No hay una única forma correcta de jugar. Un niño puede construir un jardín de flores. Otro puede crear un mundo oceánico. Juntos, puede que construyan algo completamente inesperado."
+      ],
+      "emphasis": "Esa es la belleza de la imaginación.",
+      "cta": "Descubre ideas de juego",
+      "imageAlt": "Dos niños construyendo juntos con bloques de colores SUPUZZ"
+    },
+    "digital": {
+      "title": "Juego digital",
+      "paragraphs": [
+        "El juego no termina cuando se guardan las piezas de construcción. Con los rompecabezas interactivos online de SUPUZZ, los niños y las familias pueden explorar coloridos mundos creativos de otra manera.",
+        "Une las piezas, disfruta de un pequeño reto y descubre la alegría de jugar online. De la construcción con las manos a los rompecabezas digitales, creemos que hay muchas formas de imaginar, explorar y disfrutar de momentos de juego."
+      ],
+      "imageAlt": "Rompecabezas online de SUPUZZ con una escena de jardín nevado",
+      "cta": "Juega a los rompecabezas online de SUPUZZ"
     }
   },
-  "cta": {
-    "title": "Pedidos de gran volumen y consultas comerciales",
-    "body": "Además de las compras individuales, admitimos pedidos de mayor volumen de productos de la marca SUPUZZ para tiendas, organizaciones y otros clientes empresariales. Contáctanos para hablar de productos, cantidades y necesidades de entrega.",
-    "label": "Contacta con Nosotros"
-  },
-  "philosophy": {
+  "community": {
+    "eyebrow": "Comunidad",
+    "title": "Comparte la alegría de crear.",
     "paragraphs": [
-      "Creemos que el juego es el lenguaje universal del descubrimiento.",
-      "Por eso creamos productos que reúnen a todos los niños para imaginar, construir y conectar.",
-      "Porque las mejores aventuras comienzan cuando jugamos juntos."
+      "Cada creación cuenta una historia. Nos encanta ver a los niños convertir sus ideas en jardines llenos de color, mundos submarinos, dinosaurios, estructuras y diseños inesperados.",
+      "Cuando la creatividad se comparte, la inspiración crece. Invitamos a las familias y a los creadores a explorar ideas, compartir sus creaciones y descubrir lo que otros han imaginado con SUPUZZ.",
+      "Porque una gran idea puede inspirar otra gran idea, y jugar juntos hace que la aventura sea todavía mejor."
+    ],
+    "imageAlt": "Una familia construyendo junta con juguetes de construcción SUPUZZ",
+    "cta": "Explora la comunidad SUPUZZ"
+  },
+  "brand": {
+    "eyebrow": "Nuestra marca",
+    "title": "Explora. Crea. Conecta.",
+    "values": [
+      {
+        "title": "Explora",
+        "body": "Piezas nuevas, mundos nuevos y nuevas posibilidades en el mundo que nos rodea."
+      },
+      {
+        "title": "Crea",
+        "body": "Juguetes de juego abierto que dejan espacio para cada idea que trae un niño."
+      },
+      {
+        "title": "Conecta",
+        "body": "Un juego que une a niños, familias y amigos."
+      }
+    ],
+    "paragraphs": [
+      "Somos una marca independiente que crea juguetes de construcción, muebles infantiles y experiencias de juego para el descubrimiento de cada día.",
+      "Nos importa el diseño cuidado de los productos, las experiencias de juego con sentido, la información clara y escuchar a las familias. Seguimos explorando nuevas ideas y formas de hacer que jugar sea más creativo, agradable y conectado.",
+      "Nuestro camino sigue creciendo, y creemos que las mejores aventuras son las que compartimos."
     ]
+  },
+  "partners": {
+    "title": "Pedidos grandes y consultas comerciales",
+    "body": "Además de las compras individuales, atendemos pedidos de mayor volumen de productos de la marca SUPUZZ para tiendas, organizaciones, escuelas y otros clientes empresariales. Contáctanos para hablar de productos, cantidades y necesidades de entrega.",
+    "primaryCta": "Contacta con nosotros",
+    "secondaryCta": "Educación y pedidos al por mayor"
+  },
+  "faq": {
+    "eyebrow": "Bueno saberlo",
+    "title": "Preguntas que suelen hacer las familias.",
+    "items": [
+      {
+        "q": "¿Qué fabrica SUPUZZ?",
+        "a": "SUPUZZ crea juguetes de construcción, muebles infantiles y experiencias de juego. La gama incluye bloques de construcción waffle arcoíris, sets de arrecife de coral, sets de Mundo de Hielo, sets de Bosque y Dinosaurios, y mesas y sillas infantiles."
+      },
+      {
+        "q": "¿Para qué edades están pensados los juguetes de SUPUZZ?",
+        "a": "Cada producto indica su propia recomendación de edad. Los bloques waffle están pensados para edades de 2 a 8 años, muchos sets temáticos se recomiendan a partir de 3 años y nuestros muebles infantiles están dimensionados para niños de 1 a 4 años."
+      },
+      {
+        "q": "¿Los juguetes de construcción de SUPUZZ son de juego abierto?",
+        "a": "Sí. Las piezas están diseñadas para conectarse, apilarse, mezclarse y reconstruirse. Los niños pueden seguir una idea temática o inventar su propio mundo, y los sets se pueden combinar para construcciones más grandes."
+      },
+      {
+        "q": "¿Dónde puedo comprar los juguetes de SUPUZZ?",
+        "a": "Puedes ver toda la gama en el sitio web de SUPUZZ y comprar en nuestra tienda de Amazon. Para pedidos al por mayor, escuelas y consultas de tiendas, contáctanos directamente."
+      },
+      {
+        "q": "¿SUPUZZ ofrece juego digital?",
+        "a": "Sí. SUPUZZ Puzzle Online es un rompecabezas gratuito en el navegador que convierte los mundos de nuestros juguetes en imágenes de rompecabezas, sin necesidad de descargar nada."
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "SUPUZZ",
+    "title": "Las mejores aventuras empiezan cuando jugamos juntos.",
+    "body": "Descubre mundos llenos de color. Crea algo nuevo. Conecta a través del juego.",
+    "primaryCta": "Explora nuestros juguetes",
+    "secondaryCta": "Juega online",
+    "tertiaryCta": "Descubre ideas de juego",
+    "signature": "PLAY WITH ALL KIDS."
   }
 }

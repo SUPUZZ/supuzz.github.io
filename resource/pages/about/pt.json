@@ -1,37 +1,201 @@
 {
   "title": "Sobre a SUPUZZ",
-  "documentTitle": "Sobre a SUPUZZ | PLAY WITH ALL KIDS.",
-  "description": "PLAY WITH ALL KIDS. A SUPUZZ acredita que brincar é a linguagem universal da descoberta. Criamos produtos que reúnem todas as crianças para imaginar, construir e se conectar.",
-  "imageAlt": "Uma criança sorrindo ao ar livre",
-  "intro": "A SUPUZZ cria brinquedos de construção e móveis infantis para brincar juntos.",
-  "offerings": {
-    "title": "O Que Oferecemos",
-    "paragraphs": [],
-    "cards": {
-      "blocks": {
-        "title": "Blocos de Construção",
-        "body": "Blocos de construção interconectáveis estilo waffle com cases de armazenamento com travamento, projetados para aprendizado progressivo e brincadeira sensorial para idades 2–8."
+  "documentTitle": "Sobre a SUPUZZ | Brinquedos de construção e móveis infantis",
+  "description": "Conheça a SUPUZZ, marca independente de brinquedos de construção, móveis infantis e brincadeiras que unem as crianças para imaginar, construir e se conectar.",
+  "imageAlt": "Uma criança rindo enquanto brinca ao ar livre",
+  "homeLabel": "Início",
+  "hero": {
+    "eyebrow": "Sobre a SUPUZZ",
+    "title": "PLAY WITH ALL KIDS.",
+    "subtitle": "Brincar é a linguagem universal da descoberta.",
+    "lead": "Acreditamos que brincar é a linguagem universal da descoberta. Por isso criamos produtos que reúnem todas as crianças para imaginar, construir e se conectar. Porque as maiores aventuras começam quando brincamos juntos.",
+    "primaryCta": "Explore Nossos Brinquedos",
+    "secondaryCta": "Jogue Online",
+    "facts": [
+      "Brinquedos de construção livres",
+      "Móveis infantis",
+      "Feitos para todas as crianças"
+    ],
+    "imageCaption": "Toda grande aventura começa com um momento de brincadeira."
+  },
+  "story": {
+    "eyebrow": "Nossa História",
+    "title": "Poucas peças de construção podem se transformar em um mundo inteiro.",
+    "paragraphs": [
+      "Na SUPUZZ, acreditamos que brincar tem o poder de unir as crianças.",
+      "Poucas peças de construção podem virar um jardim, um oceano, um mundo de dinossauros ou algo que ninguém imaginou antes. Uma ideia simples pode se tornar uma aventura compartilhada. E, quando as crianças brincam juntas, elas criam mais do que coisas: criam momentos, conexões e memórias.",
+      "É por isso que criamos brinquedos e experiências de brincadeira que convidam as crianças a imaginar, construir, explorar e se conectar.",
+      "Queremos que brincar seja mais do que uma atividade. Queremos que seja um jeito de as crianças descobrirem o mundo, expressarem suas ideias e sentirem a magia de criar algo juntas."
+    ],
+    "quote": "Imaginar juntos. Construir juntos. Descobrir juntos."
+  },
+  "belief": {
+    "eyebrow": "No Que Acreditamos",
+    "title": "Brincar nos une.",
+    "intro": "Brincar é uma linguagem universal. Não precisa de um plano perfeito, das mesmas ideias nem do mesmo jeito de fazer as coisas. Começa com a curiosidade, cresce com a imaginação e fica ainda mais significativo quando é compartilhado.",
+    "points": [
+      {
+        "title": "Tudo começa com a curiosidade.",
+        "body": "Uma peça nova, uma cor nova, uma pergunta nova: brincar começa com a vontade de descobrir o que acontece depois."
       },
-      "furniture": {
-        "title": "Móveis Infantis",
-        "body": "Cadeiras ergonômicas para toddlers e conjuntos de mesa & cadeiras — robustos, seguros e dimensionados para crianças em crescimento de 1–4 anos."
+      {
+        "title": "Cresce com a imaginação.",
+        "body": "Um jardim, um mundo submarino, um habitat de dinossauros: as crianças pegam uma ideia simples e dão um lugar para ela viver."
       },
-      "play": {
-        "title": "Brincadeira Aberta",
-        "body": "Conjuntos temáticos como Funny Snow World, Icy World, Ocean World, Rotating Forest — mixáveis e destacáveis, deixando as crianças construírem sem limites."
+      {
+        "title": "Faz mais diferença quando é compartilhado.",
+        "body": "Quando as crianças constroem juntas, elas compartilham ideias, experimentam coisas novas e se conectam umas com as outras."
       }
+    ],
+    "outro": "Se as crianças estão construindo um jardim colorido, explorando um mundo submarino, criando um habitat de dinossauros ou inventando algo totalmente novo, brincar lhes dá oportunidades de compartilhar ideias, experimentar coisas novas e se conectar. Na SUPUZZ, acreditamos que a alegria de brincar pertence a todas as crianças."
+  },
+  "mission": {
+    "eyebrow": "Nossa Missão",
+    "title": "Explore New Life.",
+    "paragraphs": [
+      "Explore New Life é a nossa missão.",
+      "Acreditamos que cada dia traz novas oportunidades de explorar, criar e descobrir. Com produtos lúdicos e experiências cheias de imaginação, esperamos inspirar as crianças a ver novas possibilidades no mundo ao seu redor."
+    ],
+    "steps": [
+      "Uma peça nova pode acender uma ideia nova.",
+      "Uma ideia nova pode criar um mundo novo.",
+      "E um mundo fica ainda mais emocionante quando o exploramos juntos."
+    ]
+  },
+  "products": {
+    "eyebrow": "O Que Criamos",
+    "title": "Feitos para a imaginação. Feitos para estarmos juntos.",
+    "intro": "De um primeiro empilhamento arco-íris a um recife de coral completo, nossos brinquedos de construção e móveis infantis foram criados para serem misturados, reconstruídos e compartilhados — de novo e de novo.",
+    "items": [
+      {
+        "key": "building",
+        "title": "Brinquedos de Construção",
+        "body": "Nossos brinquedos de construção convidam as crianças a conectar peças, explorar formas, experimentar ideias e criar seus próprios mundos. De flores e jardins a recifes de coral, dinossauros, florestas e estruturas cheias de imaginação, cada criação pode ser o começo de uma nova aventura."
+      },
+      {
+        "key": "ocean",
+        "title": "Mundo do Oceano",
+        "body": "Mergulhe em aventuras submarinas coloridas. Construa recifes de coral, crie cenas do oceano e imagine mundos onde criaturas marinhas exploram, se escondem e brincam."
+      },
+      {
+        "key": "ice",
+        "title": "Mundo de Gelo",
+        "body": "Crie paisagens nevadas, jardins gelados e mundos de inverno cheios de imaginação. Explore formas, cores e novas combinações — juntos."
+      },
+      {
+        "key": "forest",
+        "title": "Mundos da Floresta e dos Dinossauros",
+        "body": "Reúna dinossauros, plantas, animais e elementos inspirados na selva. Construa habitats, crie aventuras e invente histórias só suas."
+      },
+      {
+        "key": "rainbow",
+        "title": "Blocos de Montar Arco-Íris e Waffle",
+        "body": "Conecte, empilhe e construa de incontáveis maneiras criativas. Comece com uma ideia simples e transforme-a em algo maior — juntos."
+      },
+      {
+        "key": "furniture",
+        "title": "Móveis Infantis",
+        "body": "Também criamos móveis infantis que dão aos pequenos exploradores um lugar para brincar, construir, desenhar, ler e compartilhar os momentos do dia a dia."
+      }
+    ],
+    "cta": "Explore Nossos Brinquedos"
+  },
+  "ways": {
+    "eyebrow": "Mais Formas de Brincar",
+    "title": "Mais jeitos de brincar juntos.",
+    "open": {
+      "title": "Brincadeira livre",
+      "paragraphs": [
+        "Acreditamos que a melhor brincadeira deixa espaço para a imaginação. Nossos brinquedos de construção incentivam as crianças a criar seus próprios projetos, reconstruir de jeitos novos, combinar ideias e explorar possibilidades diferentes.",
+        "Não existe um único jeito certo de brincar. Uma criança pode construir um jardim de flores. Outra pode criar um mundo oceano. Juntas, elas podem construir algo completamente inesperado."
+      ],
+      "emphasis": "É essa a beleza da imaginação.",
+      "cta": "Descubra Ideias de Brincadeira",
+      "imageAlt": "Duas crianças construindo juntas com blocos coloridos SUPUZZ"
+    },
+    "digital": {
+      "title": "Brincadeira Digital",
+      "paragraphs": [
+        "A brincadeira não termina quando as peças são guardadas. Com os quebra-cabeças interativos online da SUPUZZ, crianças e famílias podem explorar mundos criativos e coloridos de um jeito diferente.",
+        "Junte as peças, curta um pequeno desafio e descubra a alegria de brincar online. Da construção com as mãos aos quebra-cabeças digitais, acreditamos que existem muitas formas de imaginar, explorar e aproveitar momentos de brincadeira."
+      ],
+      "imageAlt": "Quebra-cabeça online da SUPUZZ com uma cena de jardim de neve",
+      "cta": "Jogue os Quebra-Cabeças Online da SUPUZZ"
     }
   },
-  "cta": {
-    "title": "Pedidos de grande volume e consultas comerciais",
-    "body": "Além das compras individuais, atendemos pedidos de maior volume de produtos da marca SUPUZZ para lojas, organizações e outros clientes empresariais. Entre em contato para conversar sobre produtos, quantidades e necessidades de entrega.",
-    "label": "Contate-nos Hoje"
-  },
-  "philosophy": {
+  "community": {
+    "eyebrow": "Comunidade",
+    "title": "Compartilhe a alegria de criar.",
     "paragraphs": [
-      "Acreditamos que brincar é a linguagem universal da descoberta.",
-      "Por isso, criamos produtos que reúnem todas as crianças para imaginar, construir e se conectar.",
-      "Porque as maiores aventuras começam quando brincamos juntos."
+      "Cada criação conta uma história. Adoramos ver as crianças transformando ideias em jardins coloridos, mundos submarinos, dinossauros, estruturas e projetos inesperados.",
+      "Quando a criatividade é compartilhada, a inspiração cresce. Convidamos famílias e criadores a explorar ideias, compartilhar suas criações e descobrir o que outras pessoas imaginaram com a SUPUZZ.",
+      "Porque uma grande ideia pode inspirar outra grande ideia — e brincar juntos deixa a aventura ainda melhor."
+    ],
+    "imageAlt": "Uma família construindo junto com os brinquedos de construção SUPUZZ",
+    "cta": "Explore a Comunidade SUPUZZ"
+  },
+  "brand": {
+    "eyebrow": "Nossa Marca",
+    "title": "Explore. Crie. Conecte-se.",
+    "values": [
+      {
+        "title": "Explore",
+        "body": "Peças novas, mundos novos e novas possibilidades no mundo ao nosso redor."
+      },
+      {
+        "title": "Crie",
+        "body": "Brinquedos livres que deixam espaço para cada ideia que uma criança traz."
+      },
+      {
+        "title": "Conecte-se",
+        "body": "Brincadeiras que aproximam crianças, famílias e amigos."
+      }
+    ],
+    "paragraphs": [
+      "Somos uma marca independente que cria brinquedos de construção, móveis infantis e experiências de brincadeira para a descoberta de todos os dias.",
+      "Nos importamos com o design cuidadoso dos produtos, com experiências de brincadeira com significado, com informações claras e com ouvir as famílias. Continuamos explorando novas ideias e formas de tornar a brincadeira mais criativa, prazerosa e conectada.",
+      "Nossa jornada ainda está crescendo, e acreditamos que as melhores aventuras são as que compartilhamos."
     ]
+  },
+  "partners": {
+    "title": "Pedidos de grande volume e consultas comerciais",
+    "body": "Além das compras individuais, atendemos pedidos de maior volume de produtos da marca SUPUZZ para lojas, organizações, escolas e outros clientes empresariais. Entre em contato para conversar sobre produtos, quantidades e necessidades de entrega.",
+    "primaryCta": "Fale com a gente hoje",
+    "secondaryCta": "Compras educativas e em quantidade"
+  },
+  "faq": {
+    "eyebrow": "Bom saber",
+    "title": "Perguntas que as famílias costumam fazer.",
+    "items": [
+      {
+        "q": "O que a SUPUZZ faz?",
+        "a": "A SUPUZZ cria brinquedos de construção, móveis infantis e experiências de brincadeira. A linha inclui blocos arco-íris e blocos waffle, conjuntos de recife de coral do Mundo do Oceano, conjuntos do Mundo de Gelo, conjuntos dos Mundos da Floresta e dos Dinossauros, além de mesas e cadeiras infantis."
+      },
+      {
+        "q": "Para quais idades os brinquedos da SUPUZZ são indicados?",
+        "a": "Cada produto informa sua própria recomendação de idade. Os blocos waffle são indicados para crianças de 2–8 anos, muitos conjuntos temáticos são recomendados para 3 anos ou mais, e nossos móveis infantis são dimensionados para crianças de 1–4 anos."
+      },
+      {
+        "q": "Os brinquedos de construção da SUPUZZ são abertos?",
+        "a": "Sim. As peças foram projetadas para conectar, empilhar, misturar e reconstruir. As crianças podem seguir uma ideia temática ou inventar seu próprio mundo, e os conjuntos podem ser combinados para construções maiores."
+      },
+      {
+        "q": "Onde posso comprar os brinquedos da SUPUZZ?",
+        "a": "Você pode conhecer a linha completa no site da SUPUZZ e comprar pela nossa loja na Amazon. Para pedidos em quantidade, escolas e consultas de lojistas, fale com a gente diretamente."
+      },
+      {
+        "q": "A SUPUZZ oferece brincadeira digital?",
+        "a": "Sim. O SUPUZZ Puzzle Online é um quebra-cabeça gratuito que roda no navegador e transforma os mundos dos nossos brinquedos em imagens de quebra-cabeça, sem precisar baixar nada."
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "SUPUZZ",
+    "title": "As maiores aventuras começam quando brincamos juntos.",
+    "body": "Descubra mundos coloridos. Crie algo novo. Conecte-se pela brincadeira.",
+    "primaryCta": "Explore Nossos Brinquedos",
+    "secondaryCta": "Jogue Online",
+    "tertiaryCta": "Descubra Ideias de Brincadeira",
+    "signature": "PLAY WITH ALL KIDS."
   }
 }

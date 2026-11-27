@@ -319,7 +319,7 @@ test('AboutBuilder preserves locale content and rejects incomplete sections befo
   }
   const englishPath = path.join(root, 'resource/pages/about/en.json');
   const english = JSON.parse(fs.readFileSync(englishPath, 'utf8'));
-  english.philosophy.paragraphs.push('An extra localized paragraph <with markup>');
+  english.story.paragraphs.push('An extra localized paragraph <with markup>');
   fs.writeFileSync(englishPath, JSON.stringify(english));
   builder.build();
   const before = fs.readFileSync(path.join(root, 'en/about.html'), 'utf8');
@@ -328,8 +328,8 @@ test('AboutBuilder preserves locale content and rejects incomplete sections befo
   fs.writeFileSync(englishPath, JSON.stringify(english));
   const frenchPath = path.join(root, 'resource/pages/about/fr.json');
   const french = JSON.parse(fs.readFileSync(frenchPath, 'utf8'));
-  french.philosophy.paragraphs = [];
+  french.story.paragraphs = [];
   fs.writeFileSync(frenchPath, JSON.stringify(french));
-  assert.throws(() => builder.build(), /Missing about philosophy paragraphs/);
+  assert.throws(() => builder.build(), /Missing about story paragraphs/);
   assert.equal(fs.readFileSync(path.join(root, 'en/about.html'), 'utf8'), before);
 });

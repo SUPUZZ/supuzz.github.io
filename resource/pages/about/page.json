@@ -3,17 +3,62 @@
   "builder": "AboutBuilder.js",
   "type": "page",
   "schemaType": "AboutPage",
-  "locales": ["en", "es", "ja", "zh-Hant", "de", "pt", "fr"],
-  "styles": ["/css/about.css"],
-  "scripts": ["/js/about.js"],
+  "locales": [
+    "en",
+    "es",
+    "ja",
+    "zh-Hant",
+    "de",
+    "pt",
+    "fr"
+  ],
+  "styles": [
+    "/css/about.css"
+  ],
+  "scripts": [
+    "/js/about.js"
+  ],
   "shared": {
     "slogan": "PLAY WITH ALL KIDS.",
     "image": "/about-images/supuzz-minimal-story.webp",
     "imageWidth": 2969,
     "imageHeight": 2226,
+    "imageSrcset": "/about-images/supuzz-minimal-story-800.webp 800w, /about-images/supuzz-minimal-story-1400.webp 1400w, /about-images/supuzz-minimal-story.webp 2969w",
+    "images": {
+      "open": {
+        "src": "/product-images/banner-desktop-siblings-blocks.webp",
+        "width": 1464,
+        "height": 600
+      },
+      "puzzle": {
+        "src": "/product-images/snow-garden-puzzle-main.webp",
+        "width": 1400,
+        "height": 1050
+      },
+      "community": {
+        "src": "/product-images/journal/supuzz-brand-story-family-building-cover.webp",
+        "width": 1200,
+        "height": 675
+      }
+    },
     "logo": "/images/android-chrome-512x512.png",
+    "productsUrl": "index.html#products",
+    "puzzleUrl": "puzzle.html",
+    "communityUrl": "community.html",
+    "blogUrl": "blog.html",
     "contactUrl": "contact.html",
+    "procurementUrl": "procurement.html",
     "addressCountry": "CN",
-    "sameAs": ["https://twitter.com/SupuzzBrand"]
+    "sameAs": [
+      "https://x.com/SupuzzBrand",
+      "https://www.tiktok.com/@supuzz_us",
+      "https://www.reddit.com/r/SUPUZZ/",
+      "https://www.youtube.com/@supuzz-studio"
+    ],
+    "preloadImage": {
+      "href": "/about-images/supuzz-minimal-story-800.webp",
+      "imagesrcset": "/about-images/supuzz-minimal-story-800.webp 800w, /about-images/supuzz-minimal-story-1400.webp 1400w, /about-images/supuzz-minimal-story.webp 2969w",
+      "imagesizes": "(max-width: 900px) 92vw, 520px"
+    }
   }
 }

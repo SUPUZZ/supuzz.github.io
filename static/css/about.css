@@ -1,3 +1,9 @@
+/* =========================================
+   About page
+   Keeps the original light, rounded SUPUZZ
+   look and adds long-form brand sections.
+   ========================================= */
+
 .about-page {
     padding-top: 72px;
 }
@@ -6,131 +12,764 @@ body > header + main.about-page {
     margin-top: 0;
 }
 
-.about-hero {
-    padding: clamp(50px, 8vw, 90px) 0 clamp(30px, 5vw, 50px);
-    text-align: center;
-}
-
-.about-hero h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 16px;
-}
-
-.about-hero p {
-    max-width: 720px;
-    margin: 0 auto;
-    font-size: 1.05rem;
-    line-height: 1.6;
-}
-
-.about-section {
-    padding: clamp(30px, 5vw, 60px) 0;
-}
-
-.about-page h2 {
-    font-size: 1.75rem;
-    margin-bottom: 16px;
+.about-page :focus-visible {
+    outline: 3px solid var(--text-main);
+    outline-offset: 3px;
 }
 
 .about-page p {
-    color: #49454F;
+    color: var(--text-sub);
 }
 
-.about-copy {
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
+.about-eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8A6D00;
 }
 
-.about-copy p {
-    font-size: 1rem;
-    line-height: 1.75;
+.about-breadcrumb {
     margin-bottom: 14px;
+    color: #8A6D00;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
 }
 
-.about-copy p:last-child {
+.about-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about-breadcrumb li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-breadcrumb li + li::before {
+    content: "/";
+    color: #BEB7A3;
+}
+
+.about-breadcrumb a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.about-breadcrumb a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.about-page h1,
+.about-page h2,
+.about-page h3 {
+    color: var(--text-main);
+}
+
+/* Hero
+   ========================================= */
+
+.about-hero {
+    display: grid;
+    grid-template-columns: 1.04fr 0.96fr;
+    gap: clamp(32px, 5vw, 56px);
+    align-items: center;
+    padding: clamp(44px, 6vw, 84px) 0 clamp(36px, 5vw, 64px);
+}
+
+.about-hero h1 {
+    margin: 0;
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+    font-weight: 800;
+}
+
+.about-hero-subtitle {
+    margin-top: 18px;
+    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+    line-height: 1.35;
+    font-weight: 600;
+    color: var(--text-main) !important;
+}
+
+.about-hero-lead {
+    max-width: 560px;
+    margin-top: 16px;
+    font-size: 1.03rem;
+    line-height: 1.75;
+}
+
+.about-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.about-actions--center {
+    justify-content: center;
+}
+
+.about-page .btn {
+    height: 48px;
+    padding: 0 24px;
+    font-size: 0.95rem;
+}
+
+.about-page .btn .material-symbols-rounded {
+    font-size: 19px;
+}
+
+.about-btn-primary {
+    background: var(--brand-yellow);
+    color: var(--on-primary);
+}
+
+.about-btn-primary:hover {
+    background: var(--brand-yellow-dark);
+}
+
+.about-btn-secondary {
+    background: var(--surface);
+    border: 1px solid #E3E1DA;
+    color: var(--text-main);
+}
+
+.about-btn-secondary:hover {
+    background: #FAFAF7;
+}
+
+.about-btn-dark {
+    background: var(--text-main);
+    color: #FFFFFF;
+}
+
+.about-btn-dark:hover {
+    background: #000000;
+}
+
+.about-btn-white {
+    background: #FFFFFF;
+    color: var(--text-main);
+}
+
+.about-btn-white:hover {
+    background: #F6F4EC;
+}
+
+.about-textlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #5A4A00;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+
+.about-textlink .material-symbols-rounded {
+    font-size: 19px;
+}
+
+.about-textlink:hover {
+    opacity: 0.72;
+}
+
+.about-textlink--dark {
+    color: var(--text-main);
+}
+
+.about-hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 26px;
+    padding: 0;
+    list-style: none;
+}
+
+.about-hero-facts li {
+    padding: 6px 12px;
+    border: 1px solid #ECE8DA;
+    border-radius: 999px;
+    background: #FFFDF4;
+    font-size: 0.78rem;
+    color: #6B6455;
+}
+
+.about-hero-figure {
+    margin: 0;
+}
+
+.about-hero-figure img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 20px;
+    background: #F5F5F5;
+}
+
+.about-hero-figure figcaption {
+    margin-top: 12px;
+    font-size: 0.78rem;
+    color: #8A6D00;
+}
+
+/* Shared section rhythm
+   ========================================= */
+
+.about-section {
+    padding: clamp(38px, 5.5vw, 66px) 0;
+}
+
+.about-section-head {
+    max-width: 780px;
+}
+
+.about-section-head--center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-page h2 {
+    font-size: clamp(1.7rem, 3.6vw, 2.4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
     margin-bottom: 0;
 }
 
-.about-philosophy {
-    display: grid;
-    gap: 30px;
-}
-
-.about-philosophy img {
-    max-width: 800px;
-    margin: 0 auto;
-    border-radius: 12px;
-    background: #f5f5f5;
-}
-
-.about-philosophy .about-copy p:last-child {
-    color: #1C1B1F;
-    font-weight: 600;
-}
-
-.about-offerings {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.about-offerings > h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.about-offerings > p {
-    margin-bottom: 24px;
+.about-lead {
+    margin-top: 14px;
+    font-size: 1.04rem;
     line-height: 1.75;
 }
 
-.about-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
-    gap: 24px;
-}
-
-.about-card {
-    min-width: 0;
-    background: #fff;
-    border-radius: 12px;
-    padding: 28px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    border-top: 4px solid;
-}
-
-.about-card > .material-symbols-rounded {
-    font-size: 40px;
-}
-
-.about-card h3 {
-    font-size: 1.25rem;
-    margin: 12px 0 10px;
-}
-
-.about-card p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.about-cta {
-    padding: clamp(40px, 6vw, 70px) 0 clamp(50px, 8vw, 90px);
+.about-section-action {
+    margin-top: 30px;
     text-align: center;
 }
 
-.about-cta h2 {
-    font-size: clamp(1.5rem, 4vw, 2.25rem);
+/* Our Story
+   ========================================= */
+
+.about-story-copy {
+    max-width: 780px;
+    margin: 30px auto 0;
 }
 
-.about-cta p {
-    margin-bottom: 24px;
+.about-story-copy p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    line-height: 1.85;
 }
 
-.about-cta .btn {
-    display: inline-flex;
+.about-story-copy p:last-of-type {
+    margin-bottom: 0;
+}
+
+.about-pullquote {
+    margin: 30px 0 0;
+    padding: 20px 0 20px 24px;
+    border-left: 4px solid var(--brand-yellow);
+}
+
+.about-pullquote p {
+    margin: 0;
+    font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Our Belief
+   ========================================= */
+
+.about-belief {
+    margin: clamp(16px, 3vw, 32px) 0;
+}
+
+.about-belief-inner {
+    padding: clamp(28px, 4.5vw, 56px);
+    border-radius: 24px;
+    background: #FFF9E0;
+}
+
+.about-belief .about-lead {
+    max-width: 760px;
+}
+
+.about-principles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.about-principle {
+    padding: 24px;
+    border-radius: 16px;
+    background: var(--surface);
+    box-shadow: 0 2px 8px rgba(28, 27, 31, 0.04);
+}
+
+.about-principle-index {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #B08A00;
+}
+
+.about-principle h3 {
+    margin-bottom: 8px;
+    font-size: 1.08rem;
+    line-height: 1.35;
+}
+
+.about-principle p {
+    font-size: 0.93rem;
+    line-height: 1.65;
+}
+
+.about-belief-outro {
+    max-width: 840px;
+    margin-top: 28px;
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+/* Our Mission
+   ========================================= */
+
+.about-mission-grid {
+    display: grid;
+    grid-template-columns: 0.78fr 1.22fr;
+    gap: clamp(28px, 5vw, 56px);
+    align-items: start;
+}
+
+.about-mission-grid .about-section-head {
+    position: sticky;
+    top: 100px;
+}
+
+.about-mission-body > p {
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.about-mission-steps {
+    margin: 28px 0 0;
+    padding: 0;
+    border-top: 1px solid #E8E4D6;
+    list-style: none;
+    counter-reset: about-step;
+}
+
+.about-mission-steps li {
+    position: relative;
+    padding: 18px 0 18px 46px;
+    border-bottom: 1px solid #E8E4D6;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text-main);
+    counter-increment: about-step;
+}
+
+.about-mission-steps li::before {
+    content: "0" counter(about-step);
+    position: absolute;
+    left: 0;
+    top: 19px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #A08A2E;
+}
+
+/* What we make
+   ========================================= */
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 20px;
+    margin-top: 34px;
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 26px;
+    border-top: 4px solid;
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.about-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.about-card > .material-symbols-rounded {
+    font-size: 38px;
+}
+
+.about-card h3 {
+    margin: 12px 0 10px;
+    font-size: 1.18rem;
+    line-height: 1.35;
+}
+
+.about-card p {
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+/* More ways to play
+   ========================================= */
+
+.about-way-grid {
+    display: grid;
+    grid-template-columns: 1.04fr 0.96fr;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.about-way {
+    padding: clamp(24px, 3.4vw, 36px);
+    border-radius: 22px;
+    border: 1px solid #F0EDE2;
+    background: var(--surface);
+}
+
+.about-way--open {
+    background: #FBF7EA;
+    border-color: #F0E7C6;
+}
+
+.about-way h3 {
+    margin-bottom: 14px;
+    font-size: 1.35rem;
+}
+
+.about-way p {
+    margin-bottom: 14px;
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+.about-way p:last-child {
+    margin-bottom: 0;
+}
+
+.about-way img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: #F5F5F5;
+}
+
+.about-way--digital .about-textlink {
+    margin-top: 18px;
+}
+
+.about-way--open .about-textlink {
+    margin-top: 20px;
+}
+
+.about-way-emphasis {
+    margin-top: 18px;
+    font-size: 1.08rem !important;
+    font-weight: 600;
+    color: var(--text-main) !important;
+}
+
+/* Community
+   ========================================= */
+
+.about-community-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(28px, 4.5vw, 52px);
     align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 14px 32px;
-    max-width: 100%;
+}
+
+.about-community-grid > img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 20px;
+    background: #F5F5F5;
+}
+
+.about-community-copy h2 {
+    margin-bottom: 16px;
+}
+
+.about-community-copy p {
+    margin-bottom: 14px;
+    font-size: 0.98rem;
+    line-height: 1.8;
+}
+
+.about-community-copy .btn {
+    margin-top: 12px;
+}
+
+/* Brand statement
+   ========================================= */
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 960px;
+    margin: 34px auto 0;
+}
+
+.about-value {
+    padding-top: 18px;
+    border-top: 3px solid var(--brand-yellow);
+}
+
+.about-value h3 {
+    margin-bottom: 8px;
+    font-size: 1.25rem;
+}
+
+.about-value p {
+    font-size: 0.94rem;
+    line-height: 1.65;
+}
+
+.about-brand-copy {
+    max-width: 760px;
+    margin: 34px auto 0;
+    text-align: center;
+}
+
+.about-brand-copy p {
+    margin-bottom: 14px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.about-brand-copy p:last-child {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Business enquiries
+   ========================================= */
+
+.about-partners-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: clamp(24px, 4vw, 40px);
+    border: 1px solid #F0E7C6;
+    border-radius: 22px;
+    background: #FFF7CC;
+}
+
+.about-partners-copy {
+    max-width: 700px;
+}
+
+.about-partners-copy h2 {
+    margin-bottom: 10px;
+    font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+}
+
+.about-partners-copy p {
+    font-size: 0.96rem;
+    line-height: 1.7;
+}
+
+.about-partners-card .about-actions {
+    flex-shrink: 0;
+    margin-top: 0;
+}
+
+/* FAQ
+   ========================================= */
+
+.about-faq-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 40px;
+    margin-top: 30px;
+}
+
+.about-faq-item {
+    padding-top: 16px;
+    border-top: 1px solid #E8E4D6;
+}
+
+.about-faq-item h3 {
+    margin-bottom: 8px;
+    font-size: 1.03rem;
+    line-height: 1.4;
+}
+
+.about-faq-item p {
+    font-size: 0.93rem;
+    line-height: 1.7;
+}
+
+/* Final call to action
+   ========================================= */
+
+.about-final {
+    margin: clamp(24px, 4vw, 44px) 0 clamp(40px, 6vw, 72px);
+    padding: clamp(34px, 5.5vw, 64px) clamp(22px, 4vw, 48px);
+    border-radius: 26px;
+    background: var(--brand-yellow);
+    text-align: center;
+}
+
+.about-final .about-eyebrow {
+    color: #6B5300;
+}
+
+.about-final h2 {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.12;
+}
+
+.about-final-body {
+    max-width: 620px;
+    margin: 16px auto 0;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: #3A3000 !important;
+}
+
+.about-final .about-actions {
+    margin-top: 28px;
+}
+
+.about-final-signature {
+    margin-top: 26px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #3A3000 !important;
+}
+
+/* Responsive
+   ========================================= */
+
+@media (max-width: 1024px) {
+    .about-hero {
+        gap: 32px;
+    }
+
+    .about-community-grid {
+        align-items: start;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+        padding-top: clamp(32px, 6vw, 56px);
+    }
+
+    .about-hero-figure {
+        max-width: 640px;
+    }
+
+    .about-principles {
+        grid-template-columns: 1fr;
+    }
+
+    .about-mission-grid,
+    .about-way-grid,
+    .about-community-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-mission-grid .about-section-head {
+        position: static;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-partners-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-faq-list {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero h1 {
+        font-size: clamp(2.4rem, 11vw, 3rem);
+    }
+
+    .about-actions .btn {
+        flex: 1 1 100%;
+    }
+
+    .about-actions--center .btn {
+        flex: 0 1 auto;
+    }
+
+    .about-pullquote {
+        padding-left: 18px;
+    }
+
+    .about-belief-inner {
+        border-radius: 18px;
+    }
+
+    .about-card {
+        padding: 22px;
+    }
+
+    .about-way {
+        padding: 24px 20px;
+    }
+
+    .about-partners-card .about-textlink {
+        margin-left: 0;
+    }
 }

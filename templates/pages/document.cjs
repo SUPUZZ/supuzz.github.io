@@ -3,6 +3,7 @@ module.exports = function document({ definition, locale, content, body, url, alt
   const shared = definition.shared || {};
   const article = definition.type === 'article';
   const image = shared.image;
+  const preload = shared.preloadImage;
   const title = content.documentTitle || `${content.title} | SUPUZZ`;
   const schema = article ? {
     '@context': 'https://schema.org', '@type': 'BlogPosting',
@@ -50,6 +51,7 @@ ${image ? `    <meta property="og:image" content="https://supuzz.com${escape(ima
     <meta property="og:image:alt" content="${escape(content.imageAlt)}">
     <meta name="twitter:image" content="https://supuzz.com${escape(image)}">
     <meta name="twitter:image:alt" content="${escape(content.imageAlt)}">` : ''}
+${preload && preload.href ? `    <link rel="preload" as="image" href="${escape(preload.href)}"${preload.imagesrcset ? ` imagesrcset="${escape(preload.imagesrcset)}" imagesizes="${escape(preload.imagesizes || '100vw')}"` : ''} fetchpriority="high">` : ''}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet">

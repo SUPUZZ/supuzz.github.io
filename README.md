@@ -125,7 +125,7 @@ if (require.main === module) new OceanPlayBuilder().build();
 
 修改 Contact 源文件后运行 `npm run contact:build`（或 `node builders/ContactBuilder.js`），即可仅生成七种语言的 Contact 页面；也可通过 `new ContactBuilder().build()` 调用。`npm run pages:build` 则生成所有已配置页面。
 
-“关于我们”采用同样方式：`builders/AboutBuilder.js` 维护共用布局，`resource/pages/about/page.json` 保存品牌标语、图片和联系入口等共享资料，同目录七份语言 JSON 保存品牌介绍、理念、产品类别和联系文案。品牌理念以用户提供的“PLAY WITH ALL KIDS.”及其正文为准，英文标语统一保留，各语言分别维护译文。运行 `npm run about:build`（或 `node builders/AboutBuilder.js`）生成七种语言的 `about.html`；`npm start` 和生产构建也会自动生成。`static/css/about.css` 共用页面样式，`static/js/about.js` 共用浏览统计逻辑。
+“关于我们”采用同样方式：`builders/AboutBuilder.js` 维护共用布局，包含首屏标语、品牌故事、信念、使命、六大产品线、开放式与数字玩法、社区、品牌价值观、大客户询盘、FAQ 和结尾行动区；`resource/pages/about/page.json` 保存品牌标语、响应式首屏图片、产品/Puzzle/社区/博客/联系/教育采购入口等共享资料，同目录七份语言 JSON 保存各段文案。品牌理念以用户提供的“PLAY WITH ALL KIDS.”及其正文为准，英文标语统一保留，各语言分别维护译文。页面自动输出 AboutPage、Organization、BreadcrumbList 与 FAQPage 结构化数据，并保留 canonical、hreflang、图片 `srcset` 和描述性内链。运行 `npm run about:build`（或 `node builders/AboutBuilder.js`）生成七种语言的 `about.html`；`npm start` 和生产构建也会自动生成。`static/css/about.css` 共用页面样式，`static/js/about.js` 共用浏览统计逻辑。
 
 ### Puzzle Online 游戏页
 

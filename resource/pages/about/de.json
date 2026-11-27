@@ -1,37 +1,201 @@
 {
   "title": "Über SUPUZZ",
-  "documentTitle": "Über SUPUZZ | PLAY WITH ALL KIDS.",
-  "description": "PLAY WITH ALL KIDS. SUPUZZ glaubt, dass Spielen die universelle Sprache des Entdeckens ist. Unsere Produkte bringen alle Kinder zusammen, um gemeinsam zu träumen, zu bauen und sich zu verbinden.",
-  "imageAlt": "Ein Kind lächelt im Freien",
-  "intro": "SUPUZZ entwickelt Bauspielzeug und Kindermöbel für gemeinsames Spielen.",
-  "offerings": {
-    "title": "Was wir bieten",
-    "paragraphs": [],
-    "cards": {
-      "blocks": {
-        "title": "Bausteine",
-        "body": "Waffel-Style Verbinderbausteine mit abschließbaren Aufbewahrungskoffern, designed für progressives Lernen und sensorisches Spielen für 2–8 Jährige."
+  "documentTitle": "Über SUPUZZ | Bauspielzeug, Kindermöbel & Spiel",
+  "description": "SUPUZZ ist eine unabhängige Marke für Bauspielzeug, Kindermöbel und Spielerlebnisse, die alle Kinder zusammenbringen – zum Träumen, Bauen und Verbinden.",
+  "imageAlt": "Ein Kind lacht beim Spielen im Freien",
+  "homeLabel": "Startseite",
+  "hero": {
+    "eyebrow": "Über SUPUZZ",
+    "title": "PLAY WITH ALL KIDS.",
+    "subtitle": "Spielen ist die universelle Sprache der Entdeckung.",
+    "lead": "Wir glauben, dass Spielen die universelle Sprache der Entdeckung ist. Deshalb entwickeln wir Produkte, die alle Kinder zusammenbringen – zum Träumen, Bauen und Verbinden. Denn die größten Abenteuer beginnen, wenn wir gemeinsam spielen.",
+    "primaryCta": "Unsere Spielsachen entdecken",
+    "secondaryCta": "Online spielen",
+    "facts": [
+      "Offenes Bauspielzeug",
+      "Kindermöbel",
+      "Für alle Kinder gemacht"
+    ],
+    "imageCaption": "Jedes große Abenteuer beginnt mit einem Moment des Spielens."
+  },
+  "story": {
+    "eyebrow": "Unsere Geschichte",
+    "title": "Ein paar Bausteine können eine ganze Welt werden.",
+    "paragraphs": [
+      "Bei SUPUZZ glauben wir, dass Spielen die Kraft hat, Kinder zusammenzubringen.",
+      "Ein paar Bausteine können ein Garten werden, ein Ozean, eine Dinosaurierwelt – oder etwas, das sich noch niemand vorgestellt hat. Aus einer einfachen Idee kann ein gemeinsames Abenteuer werden. Und wenn Kinder zusammen spielen, entstehen mehr als Dinge: Momente, Verbindungen und Erinnerungen.",
+      "Deshalb entwickeln wir Spielzeug und Spielerlebnisse, die Kinder einladen, sich etwas vorzustellen, zu bauen, zu entdecken und sich zu verbinden.",
+      "Wir möchten, dass Spielen mehr ist als eine Beschäftigung. Wir möchten, dass es für Kinder ein Weg ist, die Welt zu entdecken, ihre Ideen auszudrücken und die Magie zu erleben, gemeinsam etwas zu erschaffen."
+    ],
+    "quote": "Gemeinsam träumen. Gemeinsam bauen. Gemeinsam entdecken."
+  },
+  "belief": {
+    "eyebrow": "Woran wir glauben",
+    "title": "Spielen bringt uns zusammen.",
+    "intro": "Spielen ist eine universelle Sprache. Es braucht keinen perfekten Plan, keine gleichen Ideen und keine gleiche Art, Dinge anzugehen. Es beginnt mit Neugier, wächst durch Fantasie und wird noch bedeutungsvoller, wenn man es teilt.",
+    "points": [
+      {
+        "title": "Es beginnt mit Neugier.",
+        "body": "Ein neues Teil, eine neue Farbe, eine neue Frage – Spielen beginnt mit der Lust herauszufinden, was als Nächstes passiert."
       },
-      "furniture": {
-        "title": "Kinder möbel",
-        "body": "Ergonomische Kleinkindstühle und Kinder tisch & Stühle Sets — robust, sicher und dimensioniert für wachsende Kinder von 1–4 Jahren."
+      {
+        "title": "Es wächst durch Fantasie.",
+        "body": "Ein Garten, eine Unterwasserwelt, ein Lebensraum für Dinosaurier: Kinder nehmen eine einfache Idee und geben ihr einen Ort zum Leben."
       },
-      "play": {
-        "title": "Offenes Spielen",
-        "body": "Themen-Sets wie Funny Snow World, Icy World, Ocean World, Rotating Forest — kombinierbar und abnehmbar, lassen Kinder ohne Grenzen bauen."
+      {
+        "title": "Es zählt am meisten, wenn man es teilt.",
+        "body": "Wenn Kinder zusammen bauen, teilen sie Ideen, probieren Neues aus und kommen miteinander in Kontakt."
       }
+    ],
+    "outro": "Ob Kinder einen bunten Garten bauen, eine Unterwasserwelt erkunden, einen Lebensraum für Dinosaurier gestalten oder etwas völlig Neues erfinden: Spielen gibt ihnen die Möglichkeit, Ideen zu teilen, Neues auszuprobieren und sich zu verbinden. Bei SUPUZZ glauben wir, dass die Freude am Spielen allen Kindern gehört."
+  },
+  "mission": {
+    "eyebrow": "Unsere Mission",
+    "title": "Neues Leben entdecken.",
+    "paragraphs": [
+      "„Neues Leben entdecken“ – das ist unsere Mission.",
+      "Wir glauben, dass jeder Tag neue Möglichkeiten zum Entdecken, Gestalten und Erkunden bringt. Mit spielerischen Produkten und fantasievollen Erlebnissen möchten wir Kinder inspirieren, neue Möglichkeiten in ihrer Umgebung zu sehen."
+    ],
+    "steps": [
+      "Ein neues Teil kann eine neue Idee entfachen.",
+      "Eine neue Idee kann eine neue Welt erschaffen.",
+      "Und eine Welt wird noch aufregender, wenn wir sie gemeinsam entdecken."
+    ]
+  },
+  "products": {
+    "eyebrow": "Was wir machen",
+    "title": "Gemacht für Fantasie. Gemacht für Gemeinsamkeit.",
+    "intro": "Vom ersten Regenbogen-Stapel bis zum ganzen Korallenriff: Unsere Bauspielzeuge und Kindermöbel sind dafür gemacht, kombiniert, umgebaut und geteilt zu werden – immer wieder.",
+    "items": [
+      {
+        "key": "building",
+        "title": "Bauspielzeug",
+        "body": "Unsere Bauspielzeuge laden Kinder ein, Teile zu verbinden, Formen zu erkunden, mit Ideen zu experimentieren und ihre eigenen Welten zu erschaffen. Ob Blumen und Gärten, Korallenriffe, Dinosaurier, Wälder oder fantasievolle Bauwerke – jede Kreation kann der Anfang eines neuen Abenteuers sein."
+      },
+      {
+        "key": "ocean",
+        "title": "Ozeanwelt",
+        "body": "Tauchen Sie ein in bunte Unterwasserabenteuer. Bauen Sie Korallenriffe, gestalten Sie Ozeanszenen und stellen Sie sich Welten vor, in denen Meerestiere erkunden, sich verstecken und spielen."
+      },
+      {
+        "key": "ice",
+        "title": "Eiswelt",
+        "body": "Gestalten Sie verschneite Landschaften, eisige Gärten und fantasievolle Winterwelten. Entdecken Sie gemeinsam Formen, Farben und neue Kombinationen."
+      },
+      {
+        "key": "forest",
+        "title": "Wald- und Dinosaurierwelten",
+        "body": "Bringen Sie Dinosaurier, Pflanzen, Tiere und Dschungel-Elemente zusammen. Bauen Sie Lebensräume, erfinden Sie Abenteuer und erzählen Sie Ihre eigenen Geschichten."
+      },
+      {
+        "key": "rainbow",
+        "title": "Regenbogen- & Waffel-Bausteine",
+        "body": "Verbinden, stapeln und bauen Sie auf unzählige kreative Arten. Beginnen Sie mit einer einfachen Idee und machen Sie gemeinsam etwas Größeres daraus."
+      },
+      {
+        "key": "furniture",
+        "title": "Kindermöbel",
+        "body": "Wir gestalten auch Kindermöbel, die kleinen Entdeckerinnen und Entdeckern einen Platz zum Spielen, Bauen, Malen, Lesen und für gemeinsame Alltagsmomente geben."
+      }
+    ],
+    "cta": "Unsere Spielsachen entdecken"
+  },
+  "ways": {
+    "eyebrow": "Mehr Wege zum Spielen",
+    "title": "Mehr Wege, gemeinsam zu spielen.",
+    "open": {
+      "title": "Offenes Spielen",
+      "paragraphs": [
+        "Wir glauben, dass das beste Spielen der Fantasie Raum lässt. Unsere Bauspielzeuge ermutigen Kinder, eigene Entwürfe zu gestalten, neu umzubauen, Ideen zu kombinieren und verschiedene Möglichkeiten zu erkunden.",
+        "Es gibt nicht den einen richtigen Weg zu spielen. Ein Kind baut vielleicht einen Blumengarten. Ein anderes erschafft eine Ozeanwelt. Gemeinsam bauen sie vielleicht etwas völlig Unerwartetes."
+      ],
+      "emphasis": "Das ist die Schönheit der Fantasie.",
+      "cta": "Spielideen entdecken",
+      "imageAlt": "Zwei Kinder bauen gemeinsam mit bunten SUPUZZ-Bausteinen"
+    },
+    "digital": {
+      "title": "Digitales Spielen",
+      "paragraphs": [
+        "Das Spielen hört nicht auf, wenn die Bausteine weggeräumt sind. Mit den interaktiven SUPUZZ Online-Puzzles können Kinder und Familien bunte, kreative Welten auf eine andere Art entdecken.",
+        "Setzen Sie die Teile zusammen, freuen Sie sich über eine kleine Herausforderung und entdecken Sie die Freude am Spielen online. Vom Bauen mit den eigenen Händen bis zum digitalen Puzzle – wir glauben, dass es viele Wege gibt, sich etwas vorzustellen, zu entdecken und spielerische Momente zu genießen."
+      ],
+      "imageAlt": "SUPUZZ Online-Puzzle mit einer Schneegarten-Szene",
+      "cta": "SUPUZZ Online-Puzzles spielen"
     }
   },
-  "cta": {
-    "title": "Größere Bestellungen und Geschäftsanfragen",
-    "body": "Neben Einzelkäufen unterstützen wir größere Bestellungen von SUPUZZ-Markenprodukten für Händler, Einrichtungen und andere Geschäftskunden. Kontaktieren Sie uns, um Produkte, Mengen und Lieferanforderungen zu besprechen.",
-    "label": "Kontaktieren Sie uns"
-  },
-  "philosophy": {
+  "community": {
+    "eyebrow": "Community",
+    "title": "Teilen Sie die Freude am Gestalten.",
     "paragraphs": [
-      "Wir glauben, dass Spielen die universelle Sprache des Entdeckens ist.",
-      "Deshalb entwickeln wir Produkte, die alle Kinder zusammenbringen, um gemeinsam ihrer Fantasie freien Lauf zu lassen, zu bauen und Verbindungen zu knüpfen.",
-      "Denn die größten Abenteuer beginnen, wenn wir gemeinsam spielen."
+      "Jede Kreation erzählt eine Geschichte. Wir lieben es zu sehen, wie Kinder Ideen in bunte Gärten, Unterwasserwelten, Dinosaurier, Bauwerke und unerwartete Entwürfe verwandeln.",
+      "Wenn Kreativität geteilt wird, wächst die Inspiration. Wir laden Familien und Kreative ein, Ideen zu entdecken, ihre Bauwerke zu teilen und zu sehen, was andere sich mit SUPUZZ vorgestellt haben.",
+      "Denn eine großartige Idee kann die nächste großartige Idee inspirieren – und gemeinsam zu spielen macht das Abenteuer noch schöner."
+    ],
+    "imageAlt": "Eine Familie baut gemeinsam mit SUPUZZ-Bausteinen",
+    "cta": "Die SUPUZZ-Community entdecken"
+  },
+  "brand": {
+    "eyebrow": "Unsere Marke",
+    "title": "Entdecken. Gestalten. Verbinden.",
+    "values": [
+      {
+        "title": "Entdecken",
+        "body": "Neue Teile, neue Welten und neue Möglichkeiten in der Welt um uns herum."
+      },
+      {
+        "title": "Gestalten",
+        "body": "Offenes Spielzeug, das jeder Idee Raum lässt, die ein Kind mitbringt."
+      },
+      {
+        "title": "Verbinden",
+        "body": "Spielen, das Kinder, Familien und Freunde zusammenbringt."
+      }
+    ],
+    "paragraphs": [
+      "Wir sind eine unabhängige Marke und entwickeln Bauspielzeug, Kindermöbel und Spielerlebnisse für den Alltag voller Entdeckungen.",
+      "Uns liegen durchdachtes Produktdesign, sinnvolle Spielerlebnisse, klare Produktinformationen und ein offenes Ohr für Familien am Herzen. Wir erkunden weiterhin neue Ideen und Wege, das Spielen noch kreativer, schöner und verbundener zu machen.",
+      "Unsere Reise wächst weiter, und wir glauben: Die besten Abenteuer sind die, die wir teilen."
     ]
+  },
+  "partners": {
+    "title": "Größere Bestellungen und Geschäftsanfragen",
+    "body": "Neben Einzelkäufen unterstützen wir größere Bestellungen von SUPUZZ-Produkten für Händler, Einrichtungen, Schulen und weitere Geschäftskunden. Kontaktieren Sie uns, um Produkte, Mengen und Lieferanforderungen zu besprechen.",
+    "primaryCta": "Jetzt Kontakt aufnehmen",
+    "secondaryCta": "Bildung & Großbestellungen"
+  },
+  "faq": {
+    "eyebrow": "Gut zu wissen",
+    "title": "Fragen, die Familien oft stellen.",
+    "items": [
+      {
+        "q": "Was stellt SUPUZZ her?",
+        "a": "SUPUZZ entwickelt Bauspielzeug, Kindermöbel und Spielerlebnisse. Die Auswahl umfasst Regenbogen- und Waffel-Bausteine, Korallenriff-Sets, Eiswelt-Sets, Wald- und Dinosaurier-Sets sowie Kindertische und -stühle."
+      },
+      {
+        "q": "Für welches Alter sind SUPUZZ-Spielzeuge gedacht?",
+        "a": "Jedes Produkt nennt eine eigene Altersempfehlung. Waffel-Bausteine sind für Kinder von 2–8 Jahren konzipiert, viele Themen-Sets werden ab 3 Jahren empfohlen, und unsere Kindermöbel sind auf Kinder von 1–4 Jahren abgestimmt."
+      },
+      {
+        "q": "Kann man mit SUPUZZ-Bausteinen frei bauen?",
+        "a": "Ja. Die Teile lassen sich verbinden, stapeln, mischen und immer wieder neu aufbauen. Kinder können einer Themenidee folgen oder ihre eigene Welt erfinden, und Sets lassen sich für größere Bauwerke kombinieren."
+      },
+      {
+        "q": "Wo kann ich SUPUZZ-Spielzeug kaufen?",
+        "a": "Die gesamte Auswahl finden Sie auf der SUPUZZ-Website, und in unserem Amazon-Shop können Sie direkt einkaufen. Für Großbestellungen, Schulen und Händleranfragen wenden Sie sich bitte direkt an uns."
+      },
+      {
+        "q": "Gibt es bei SUPUZZ auch digitales Spielen?",
+        "a": "Ja. SUPUZZ Puzzle Online ist ein kostenloses Puzzle für den Browser, das unsere Spielwelten in Puzzlebilder verwandelt – ganz ohne Download."
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "SUPUZZ",
+    "title": "Die größten Abenteuer beginnen, wenn wir gemeinsam spielen.",
+    "body": "Entdecken Sie bunte Welten. Erschaffen Sie etwas Neues. Verbinden Sie sich im Spiel.",
+    "primaryCta": "Unsere Spielsachen entdecken",
+    "secondaryCta": "Online spielen",
+    "tertiaryCta": "Spielideen entdecken",
+    "signature": "PLAY WITH ALL KIDS."
   }
 }

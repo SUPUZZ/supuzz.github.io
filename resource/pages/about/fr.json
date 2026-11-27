@@ -1,37 +1,201 @@
 {
   "title": "À propos de SUPUZZ",
-  "documentTitle": "À propos de SUPUZZ | PLAY WITH ALL KIDS.",
-  "description": "PLAY WITH ALL KIDS. SUPUZZ croit que le jeu est le langage universel de la découverte. Nos produits réunissent tous les enfants pour imaginer, construire et créer des liens.",
-  "imageAlt": "Un enfant souriant en plein air",
-  "intro": "SUPUZZ crée des jeux de construction et des meubles pour enfants pour jouer ensemble.",
-  "offerings": {
-    "title": "Ce que nous proposons",
-    "paragraphs": [],
-    "cards": {
-      "blocks": {
-        "title": "Blocs de Construction",
-        "body": "Blocs de construction à clipser en forme de gaufrette avec étuis de rangement verrouillables, conçus pour l'apprentissage progressif et le jeu sensoriel pour les 2–8 ans."
+  "documentTitle": "À propos de SUPUZZ | Jeux de construction & meubles",
+  "description": "SUPUZZ, marque indépendante : jeux de construction, meubles pour enfants et expériences de jeu pour imaginer, construire et créer des liens ensemble.",
+  "imageAlt": "Un enfant qui rit en jouant dehors",
+  "homeLabel": "Accueil",
+  "hero": {
+    "eyebrow": "À propos de SUPUZZ",
+    "title": "PLAY WITH ALL KIDS.",
+    "subtitle": "Le jeu est le langage universel de la découverte.",
+    "lead": "Nous croyons que le jeu est le langage universel de la découverte. C’est pourquoi nous créons des produits qui réunissent tous les enfants pour imaginer, construire et créer des liens. Parce que les plus grandes aventures commencent quand nous jouons ensemble.",
+    "primaryCta": "Découvrir nos jouets",
+    "secondaryCta": "Jouer en ligne",
+    "facts": [
+      "Jeux de construction libres",
+      "Meubles pour enfants",
+      "Pensés pour tous les enfants"
+    ],
+    "imageCaption": "Chaque grande aventure commence par un moment de jeu."
+  },
+  "story": {
+    "eyebrow": "Notre histoire",
+    "title": "Quelques pièces de construction peuvent devenir un monde entier.",
+    "paragraphs": [
+      "Chez SUPUZZ, nous croyons que le jeu a le pouvoir de réunir les enfants.",
+      "Quelques pièces de construction peuvent devenir un jardin, un océan, un monde de dinosaures ou quelque chose que personne n’a encore imaginé. Une idée simple peut se transformer en aventure partagée. Et quand les enfants jouent ensemble, ils créent bien plus que des objets : ils créent des moments, des liens et des souvenirs.",
+      "C’est pourquoi nous créons des jouets et des expériences de jeu qui invitent les enfants à imaginer, construire, explorer et créer des liens.",
+      "Nous voulons que le jeu soit plus qu’une activité. Nous voulons qu’il permette aux enfants de découvrir le monde, d’exprimer leurs idées et de savourer la magie de créer quelque chose ensemble."
+    ],
+    "quote": "Imaginer ensemble. Construire ensemble. Découvrir ensemble."
+  },
+  "belief": {
+    "eyebrow": "Notre conviction",
+    "title": "Le jeu nous rassemble.",
+    "intro": "Le jeu est un langage universel. Il n’a besoin ni d’un plan parfait, ni des mêmes idées, ni d’une même façon de faire. Il commence par la curiosité, grandit grâce à l’imagination et prend encore plus de sens lorsqu’il est partagé.",
+    "points": [
+      {
+        "title": "Tout commence par la curiosité.",
+        "body": "Une nouvelle pièce, une nouvelle couleur, une nouvelle question : le jeu naît de l’envie de découvrir ce qui va se passer ensuite."
       },
-      "furniture": {
-        "title": "Meubles pour Enfants",
-        "body": "Chaises ergonomiques pour tout-petits et ensembles de table & chaises pour enfants — robustes, sûrs et dimensionnés pour les enfants en croissance de 1–4 ans."
+      {
+        "title": "Il grandit grâce à l’imagination.",
+        "body": "Un jardin, un monde sous-marin, un habitat de dinosaures : les enfants s’emparent d’une idée simple et lui donnent un endroit où exister."
       },
-      "play": {
-        "title": "Jeu Ouvert",
-        "body": "Ensembles thématiques comme Funny Snow World, Icy World, Ocean World, Rotating Forest — combinables et détachables, permettant aux enfants de construire sans limites."
+      {
+        "title": "Il prend tout son sens quand il est partagé.",
+        "body": "Quand les enfants construisent ensemble, ils échangent des idées, essaient de nouvelles choses et créent des liens les uns avec les autres."
       }
+    ],
+    "outro": "Que les enfants construisent un jardin coloré, explorent un monde sous-marin, créent un habitat de dinosaures ou inventent quelque chose d’entièrement nouveau, le jeu leur offre des occasions de partager des idées, d’essayer de nouvelles choses et de créer des liens. Chez SUPUZZ, nous croyons que la joie de jouer appartient à tous les enfants."
+  },
+  "mission": {
+    "eyebrow": "Notre mission",
+    "title": "Explorer une nouvelle vie.",
+    "paragraphs": [
+      "Explorer une nouvelle vie, c’est notre mission.",
+      "Nous croyons que chaque jour apporte de nouvelles occasions d’explorer, de créer et de découvrir. À travers des produits ludiques et des expériences pleines d’imagination, nous espérons inspirer les enfants à voir de nouvelles possibilités dans le monde qui les entoure."
+    ],
+    "steps": [
+      "Une nouvelle pièce peut faire naître une nouvelle idée.",
+      "Une nouvelle idée peut créer un nouveau monde.",
+      "Et un monde devient encore plus passionnant quand on l’explore ensemble."
+    ]
+  },
+  "products": {
+    "eyebrow": "Ce que nous créons",
+    "title": "Conçus pour l’imagination. Conçus pour être ensemble.",
+    "intro": "Du premier empilement de blocs arc-en-ciel à un récif corallien complet, nos jeux de construction et nos meubles pour enfants sont pensés pour être mélangés, reconstruits et partagés, encore et encore.",
+    "items": [
+      {
+        "key": "building",
+        "title": "Jeux de construction",
+        "body": "Nos jeux de construction invitent les enfants à assembler des pièces, à explorer les formes, à expérimenter des idées et à créer leurs propres mondes. Des fleurs et des jardins aux récifs coralliens, en passant par les dinosaures, les forêts et les structures les plus imaginatives, chaque création peut devenir le début d’une nouvelle aventure."
+      },
+      {
+        "key": "ocean",
+        "title": "Monde océanique",
+        "body": "Plongez dans des aventures sous-marines hautes en couleur. Construisez des récifs coralliens, composez des scènes océaniques et imaginez des mondes où les créatures marines explorent, se cachent et jouent."
+      },
+      {
+        "key": "ice",
+        "title": "Monde de glace",
+        "body": "Créez des paysages enneigés, des jardins de glace et des mondes d’hiver pleins d’imagination. Explorez ensemble les formes, les couleurs et de nouvelles combinaisons."
+      },
+      {
+        "key": "forest",
+        "title": "Mondes forêt et dinosaures",
+        "body": "Réunissez dinosaures, plantes, animaux et éléments inspirés de la jungle. Construisez des habitats, inventez des aventures et écrivez vos propres histoires."
+      },
+      {
+        "key": "rainbow",
+        "title": "Blocs de construction Rainbow & Waffle",
+        "body": "Assemblez, empilez et construisez d’innombrables façons créatives. Partez d’une idée simple et transformez-la en quelque chose de plus grand, ensemble."
+      },
+      {
+        "key": "furniture",
+        "title": "Meubles pour enfants",
+        "body": "Nous créons aussi des meubles pour enfants qui offrent aux petits explorateurs un endroit pour jouer, construire, dessiner, lire et partager les moments du quotidien."
+      }
+    ],
+    "cta": "Découvrir nos jouets"
+  },
+  "ways": {
+    "eyebrow": "Plus de façons de jouer",
+    "title": "Plus de façons de jouer ensemble.",
+    "open": {
+      "title": "Le jeu libre",
+      "paragraphs": [
+        "Nous croyons que le meilleur jeu laisse de la place à l’imagination. Nos jeux de construction encouragent les enfants à créer leurs propres modèles, à reconstruire autrement, à combiner des idées et à explorer différentes possibilités.",
+        "Il n’y a pas une seule bonne façon de jouer. Un enfant peut construire un jardin fleuri. Un autre peut créer un monde océanique. Ensemble, ils peuvent bâtir quelque chose de totalement inattendu."
+      ],
+      "emphasis": "C’est toute la beauté de l’imagination.",
+      "cta": "Découvrir des idées de jeu",
+      "imageAlt": "Deux enfants construisant ensemble avec des blocs SUPUZZ colorés"
+    },
+    "digital": {
+      "title": "Le jeu numérique",
+      "paragraphs": [
+        "Le jeu ne s’arrête pas quand les pièces sont rangées. Avec les puzzles interactifs en ligne SUPUZZ, les enfants et les familles explorent autrement des mondes créatifs et colorés.",
+        "Assemblez les pièces, savourez un petit défi et découvrez le plaisir de jouer en ligne. De la construction à la main aux puzzles numériques, nous croyons qu’il existe mille façons d’imaginer, d’explorer et de partager des moments de jeu."
+      ],
+      "imageAlt": "Puzzle en ligne SUPUZZ représentant un jardin enneigé",
+      "cta": "Jouer aux puzzles SUPUZZ en ligne"
     }
   },
-  "cta": {
-    "title": "Commandes en volume et demandes professionnelles",
-    "body": "En plus des achats individuels, nous accompagnons les commandes en volume de produits de la marque SUPUZZ pour les détaillants, les organisations et les autres clients professionnels. Contactez-nous pour discuter des produits, des quantités et de la livraison.",
-    "label": "Contactez-nous"
-  },
-  "philosophy": {
+  "community": {
+    "eyebrow": "Communauté",
+    "title": "Partager la joie de créer.",
     "paragraphs": [
-      "Nous croyons que le jeu est le langage universel de la découverte.",
-      "C’est pourquoi nous créons des produits qui réunissent tous les enfants pour imaginer, construire et créer des liens.",
-      "Parce que les plus grandes aventures commencent quand nous jouons ensemble."
+      "Chaque création raconte une histoire. Nous adorons voir les enfants transformer leurs idées en jardins colorés, en mondes sous-marins, en dinosaures, en structures et en créations inattendues.",
+      "Quand la créativité se partage, l’inspiration grandit. Nous invitons les familles et les créateurs à explorer des idées, à partager leurs créations et à découvrir ce que d’autres ont imaginé avec SUPUZZ.",
+      "Parce qu’une grande idée peut en inspirer une autre, et que jouer ensemble rend l’aventure encore plus belle."
+    ],
+    "imageAlt": "Une famille construisant ensemble avec des jeux de construction SUPUZZ",
+    "cta": "Explorer la communauté SUPUZZ"
+  },
+  "brand": {
+    "eyebrow": "Notre marque",
+    "title": "Explorer. Créer. Connecter.",
+    "values": [
+      {
+        "title": "Explorer",
+        "body": "De nouvelles pièces, de nouveaux mondes et de nouvelles possibilités dans le monde qui nous entoure."
+      },
+      {
+        "title": "Créer",
+        "body": "Des jeux libres qui laissent de la place à chaque idée qu’un enfant apporte."
+      },
+      {
+        "title": "Connecter",
+        "body": "Un jeu qui réunit les enfants, les familles et les amis."
+      }
+    ],
+    "paragraphs": [
+      "Nous sommes une marque indépendante qui crée des jeux de construction, des meubles pour enfants et des expériences de jeu pour découvrir le monde au quotidien.",
+      "Nous tenons à une conception réfléchie des produits, à des expériences de jeu qui ont du sens, à une information produit claire et à l’écoute des familles. Nous continuons d’explorer de nouvelles idées et de nouvelles façons de rendre le jeu plus créatif, plus joyeux et plus fédérateur.",
+      "Notre aventure continue de s’écrire, et nous croyons que les plus belles aventures sont celles que l’on partage."
     ]
+  },
+  "partners": {
+    "title": "Grandes commandes et demandes professionnelles",
+    "body": "En plus des achats individuels, nous accompagnons les commandes plus importantes de produits de la marque SUPUZZ pour les détaillants, les organisations, les écoles et les autres clients professionnels. Contactez-nous pour discuter des produits, des quantités et des conditions de livraison.",
+    "primaryCta": "Contactez-nous dès aujourd’hui",
+    "secondaryCta": "Éducation et commandes en volume"
+  },
+  "faq": {
+    "eyebrow": "Bon à savoir",
+    "title": "Les questions que les familles nous posent souvent.",
+    "items": [
+      {
+        "q": "Que crée SUPUZZ ?",
+        "a": "SUPUZZ crée des jeux de construction, des meubles pour enfants et des expériences de jeu. La gamme comprend des blocs de construction Rainbow et Waffle, des sets de récif corallien, des sets Monde de glace, des sets Mondes forêt et dinosaures, ainsi que des tables et des chaises pour enfants."
+      },
+      {
+        "q": "À quels âges s’adressent les jouets SUPUZZ ?",
+        "a": "Chaque produit indique son propre âge recommandé. Les blocs gaufrés sont conçus pour les enfants de 2 à 8 ans, de nombreux sets thématiques sont recommandés à partir de 3 ans, et nos meubles pour enfants sont dimensionnés pour les enfants de 1 à 4 ans."
+      },
+      {
+        "q": "Les jeux de construction SUPUZZ laissent-ils libre cours à l’imagination ?",
+        "a": "Oui. Les pièces sont conçues pour s’assembler, s’empiler, se mélanger et se reconstruire. Les enfants peuvent suivre un thème ou inventer leur propre monde, et les sets se combinent pour de plus grandes constructions."
+      },
+      {
+        "q": "Où acheter les jouets SUPUZZ ?",
+        "a": "Vous pouvez parcourir toute la gamme sur le site SUPUZZ et acheter via notre boutique Amazon. Pour les commandes en volume, les écoles et les demandes des détaillants, contactez-nous directement."
+      },
+      {
+        "q": "SUPUZZ propose-t-il aussi du jeu numérique ?",
+        "a": "Oui. SUPUZZ Puzzle Online est un puzzle gratuit dans le navigateur qui transforme nos mondes de jeu en images à assembler, sans rien télécharger."
+      }
+    ]
+  },
+  "final": {
+    "eyebrow": "SUPUZZ",
+    "title": "Les plus grandes aventures commencent quand on joue ensemble.",
+    "body": "Découvrez des mondes colorés. Créez quelque chose de nouveau. Tissez des liens par le jeu.",
+    "primaryCta": "Découvrir nos jouets",
+    "secondaryCta": "Jouer en ligne",
+    "tertiaryCta": "Découvrir des idées de jeu",
+    "signature": "PLAY WITH ALL KIDS."
   }
 }
