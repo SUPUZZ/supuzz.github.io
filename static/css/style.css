@@ -260,21 +260,14 @@ nav {
 }
 
 .nav-games-menu a {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 10px 12px;
+    display: block;
+    padding: 11px 14px;
     border-radius: 10px;
 }
 
 .nav-games-menu a:hover,
 .nav-games-menu a:focus-visible {
     background: var(--primary-container);
-}
-
-.nav-games-icon {
-    font-size: 1.1rem;
-    line-height: 1.4;
 }
 
 .nav-games-copy {
@@ -776,7 +769,6 @@ footer {
     }
 
     .nav-games-menu a {
-        justify-content: center;
         padding: 10px 0;
         text-align: center;
     }
