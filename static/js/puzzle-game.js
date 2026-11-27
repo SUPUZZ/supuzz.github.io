@@ -220,22 +220,41 @@
   }
 
   async function loadCollections() {
-    renderCollections(FALLBACK_COLLECTIONS);
+    // Do not paint the built-in pictures first: the admin collections are the
+    // real list, and swapping the grid a moment later looked like the wrong
+    // collection data flashing by. Keep the loading placeholder until the
+    // request settles (or times out) instead.
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 6000);
+    let list = [];
     try {
-      const response = await fetch(`${API_BASE}/api/puzzle/collections`, { cache: 'no-store', headers: { Accept: 'application/json' } });
+      const response = await fetch(`${API_BASE}/api/puzzle/collections`, {
+        cache: 'no-store',
+        headers: { Accept: 'application/json' },
+        signal: controller.signal
+      });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const list = normalizeCollections(await response.json());
-      if (gameActive) return;
-      if (selectedImage && selectedImage.collectionId === 'user-photo') return;
-      if (list.length) {
-        renderCollections(list);
-        showSourceNote('');
-      } else {
-        showSourceNote(t('setup.fallbackNote'));
-      }
+      list = normalizeCollections(await response.json());
     } catch (error) {
-      showSourceNote(t('setup.fallbackNote'));
+      list = [];
+    } finally {
+      clearTimeout(timeout);
     }
+
+    if (gameActive) return;
+    if (!list.length) {
+      renderCollections(FALLBACK_COLLECTIONS);
+      showSourceNote(t('setup.fallbackNote'));
+      return;
+    }
+    if (selectedImage && selectedImage.collectionId === 'user-photo') {
+      // A photo was picked while the request was in flight: keep it selected but
+      // refresh the library so the next upload still lists the real collections.
+      collections = list;
+      return;
+    }
+    renderCollections(list);
+    showSourceNote('');
   }
 
   // ================= Load a picture =================
