@@ -54,8 +54,49 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry_1.outputs.page_url || steps.deployment_retry_2.outputs.page_url || steps.deployment_retry_3.outputs.page_url }}
     steps:
+      # 工件索引有秒级延迟：upload 完成到 deploy 查询之间会出现"工件不存在"的假失败。
+      # 见 https://github.com/actions/deploy-pages/issues/451 。只重试部署，绝不重新上传
+      # （再传一次会让下一次查询报 Multiple artifacts named "github-pages"）。
+      # 上游修复 actions/deploy-pages#455 发布后可删掉这些重试。
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Wait 5s before retrying the deploy
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 5
+
+      - name: Deploy to GitHub Pages (retry 1)
+        id: deployment_retry_1
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Wait 20s before retrying the deploy
+        if: steps.deployment_retry_1.outcome == 'failure'
+        run: sleep 20
+
+      - name: Deploy to GitHub Pages (retry 2)
+        id: deployment_retry_2
+        if: steps.deployment_retry_1.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Wait 60s before retrying the deploy
+        if: steps.deployment_retry_2.outcome == 'failure'
+        run: sleep 60
+
+      - name: Deploy to GitHub Pages (retry 3)
+        id: deployment_retry_3
+        if: steps.deployment_retry_2.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Fail when every deploy attempt failed
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry_1.outcome == 'failure' && steps.deployment_retry_2.outcome == 'failure' && steps.deployment_retry_3.outcome == 'failure'
+        run: |
+          echo "::error::GitHub Pages deploy failed on all 4 attempts (artifact listing race, see actions/deploy-pages#451)."
+          exit 1
