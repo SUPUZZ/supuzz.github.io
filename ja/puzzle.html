@@ -114,6 +114,10 @@
                                 パズル開始
                                 <span class="material-symbols-rounded" aria-hidden="true">play_arrow</span>
                             </button>
+                            <button type="button" class="pz-btn pz-btn-ghost pz-start-full" id="pzStartFull" disabled>
+                                <span class="material-symbols-rounded" aria-hidden="true">fullscreen</span>
+                                全画面で遊ぶ
+                            </button>
                         </div>
                         <p class="pz-upload-note">写真はこのブラウザ内だけで処理され、アップロードされません。</p>
                         <p class="pz-error" id="pzError" role="alert" hidden></p>
@@ -131,6 +135,7 @@
                         <div class="pz-hud-actions">
                             <button type="button" id="pzHint">見本</button>
                             <button type="button" id="pzShuffle">シャッフル</button>
+                            <button type="button" id="pzFull" aria-pressed="false">全画面</button>
                             <button type="button" id="pzBack">絵を変える</button>
                         </div>
                     </div>
@@ -144,14 +149,23 @@
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">
+                                <button type="button" class="pz-win-close" id="pzWinClose" aria-label="完成した絵を見る">
+                                    <span class="pz-win-close-x" aria-hidden="true">&times;</span>
+                                </button>
                                 <p class="pz-win-emoji" aria-hidden="true">🎉</p>
                                 <h2 id="pzWinTitle">パズル完成！</h2>
                                 <p id="pzWinDetail"></p>
                                 <div class="pz-win-actions">
-                                    <button type="button" class="pz-btn pz-btn-primary" id="pzAgain">もう一度</button>
+                                    <button type="button" class="pz-btn pz-btn-primary" id="pzView">完成した絵を見る</button>
+                                    <button type="button" class="pz-btn pz-btn-ghost" id="pzAgain">もう一度</button>
                                     <button type="button" class="pz-btn pz-btn-ghost" id="pzAnother">別の絵を選ぶ</button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="pz-done" id="pzDone" hidden>
+                            <span class="pz-done-text" id="pzDoneText"></span>
+                            <button type="button" class="pz-done-btn" id="pzDoneAgain">もう一度</button>
+                            <button type="button" class="pz-done-btn is-ghost" id="pzDoneAnother">別の絵を選ぶ</button>
                         </div>
                     </div>
                 </div>
@@ -308,7 +322,7 @@
         </div>
     </section>
 </main>
-<script type="application/json" id="pzMessages">{"setup":{"heading":"絵を選んでください","subheading":"絵はすべてSUPUZZの組み立ておもちゃから生まれました。新しいコレクションはここに追加されます。","loading":"絵を読み込んでいます…","fallbackNote":"内蔵の絵を表示しています。オンラインのコレクションは自動でここに表示されます。","uploadLabel":"自分の写真を使う","uploadNote":"写真はこのブラウザ内だけで処理され、アップロードされません。","difficultyLabel":"難易度","pieces":"{n}ピース","start":"パズル開始","empty":"現在表示できる絵がありません。しばらくしてからもう一度お試しください。","yourPhotoTitle":"自分の写真","uploadFailed":"この写真を開けませんでした。JPG・PNG・WebPの画像を選んでください。","chooseThis":"この絵を選ぶ：{alt}"},"game":{"hudTitle":"Puzzle Online","time":"時間","moves":"手数","groups":"残りグループ","hint":"見本","shuffle":"シャッフル","back":"絵を変える","cutting":"{n}×{n}・全{total}ピースに切っています…","cutDone":"{total}ピースに切り分けました。シャッフルします…","shuffling":"シャッフル中…","dragTip":"ピースをドラッグして絵を完成させましょう","skip":"アニメーションを飛ばす","memorizeCount":"絵を覚えましょう · {n}秒","memorizeGo":"準備できた","winTitle":"パズル完成！","winDetail":"時間 {time} · {moves}手 · {n}×{n}・全{total}ピース","again":"もう一度","another":"別の絵を選ぶ","imageError":"この絵を読み込めませんでした。別の絵を選んでください。"}}</script>
+<script type="application/json" id="pzMessages">{"setup":{"heading":"絵を選んでください","subheading":"絵はすべてSUPUZZの組み立ておもちゃから生まれました。新しいコレクションはここに追加されます。","loading":"絵を読み込んでいます…","fallbackNote":"内蔵の絵を表示しています。オンラインのコレクションは自動でここに表示されます。","uploadLabel":"自分の写真を使う","uploadNote":"写真はこのブラウザ内だけで処理され、アップロードされません。","difficultyLabel":"難易度","pieces":"{n}ピース","start":"パズル開始","fullscreen":"全画面で遊ぶ","empty":"現在表示できる絵がありません。しばらくしてからもう一度お試しください。","yourPhotoTitle":"自分の写真","uploadFailed":"この写真を開けませんでした。JPG・PNG・WebPの画像を選んでください。","chooseThis":"この絵を選ぶ：{alt}"},"game":{"hudTitle":"Puzzle Online","time":"時間","moves":"手数","groups":"残りグループ","hint":"見本","shuffle":"シャッフル","back":"絵を変える","cutting":"{n}×{n}・全{total}ピースに切っています…","cutDone":"{total}ピースに切り分けました。シャッフルします…","shuffling":"シャッフル中…","dragTip":"ピースをドラッグして絵を完成させましょう","skip":"アニメーションを飛ばす","memorizeCount":"絵を覚えましょう · {n}秒","memorizeGo":"準備できた","viewResult":"完成した絵を見る","fullscreen":"全画面","exitFullscreen":"全画面を終了","winTitle":"パズル完成！","winDetail":"時間 {time} · {moves}手 · {n}×{n}・全{total}ピース","again":"もう一度","another":"別の絵を選ぶ","imageError":"この絵を読み込めませんでした。別の絵を選んでください。"}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/puzzle-game.js"></script>

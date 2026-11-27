@@ -204,8 +204,7 @@
       selectedButton.classList.add('is-selected');
       selectedButton.setAttribute('aria-pressed', 'true');
     }
-    const startButton = $('pzStart');
-    if (startButton) startButton.disabled = false;
+    setStartButtonsDisabled(false);
     if ($('pzError')) $('pzError').hidden = true;
   }
 
@@ -356,12 +355,38 @@
   let won = false;
   let gameActive = false;
 
-  function startGame() {
+  function setStartButtonsDisabled(disabled) {
+    ['pzStart', 'pzStartFull'].forEach(id => {
+      const button = $(id);
+      if (button) button.disabled = disabled;
+    });
+  }
+
+  function isNarrowScreen() {
+    return window.matchMedia('(max-width: 768px)').matches;
+  }
+
+  // Immersive mode puts only the game on screen: the stage fills the viewport and
+  // the page behind it cannot scroll, which is what makes dragging work on phones.
+  function setImmersive(on) {
+    if (on === document.body.classList.contains('pz-immersive')) return;
+    document.body.classList.toggle('pz-immersive', on);
+    const button = $('pzFull');
+    if (button) {
+      button.setAttribute('aria-pressed', on ? 'true' : 'false');
+      button.textContent = t(on ? 'game.exitFullscreen' : 'game.fullscreen');
+    }
+    if (gameActive) {
+      requestAnimationFrame(() => requestAnimationFrame(fitLayer));
+    }
+  }
+
+  function startGame(options = {}) {
     if (!selectedImage || starting) return;
     starting = true;
-    const startButton = $('pzStart');
-    if (startButton) startButton.disabled = true;
+    setStartButtonsDisabled(true);
     showError('');
+    if (options.immersive) setImmersive(true);
     loadPictureCanvas(selectedImage.url).then(canvas => {
       srcCanvas = canvas;
       enterStage();
@@ -369,7 +394,7 @@
       showError(t('game.imageError'));
     }).finally(() => {
       starting = false;
-      if (!gameActive && startButton && selectedImage) startButton.disabled = false;
+      if (!gameActive && selectedImage) setStartButtonsDisabled(false);
     });
   }
 
@@ -378,6 +403,7 @@
     setupPanel.hidden = true;
     stage.hidden = false;
     app.classList.add('is-playing');
+    if (isNarrowScreen()) setImmersive(true);
     $('pzRef').src = resolveUrl(selectedImage.url);
     $('pzRef').alt = selectedImage.alt || '';
     $('pzRefWrap').classList.remove('hide');
@@ -445,7 +471,11 @@
     layer.style.top = '0px';
     viewScale = 1;
 
-    const target = Math.min(Math.floor(Math.min(LAYER_W * 0.82, LAYER_H * 0.8)), 680);
+    const immersive = document.body.classList.contains('pz-immersive');
+    const widthFactor = immersive ? 0.9 : 0.82;
+    const heightFactor = immersive ? 0.84 : 0.8;
+    const maxBoard = immersive ? 860 : 680;
+    const target = Math.min(Math.floor(Math.min(LAYER_W * widthFactor, LAYER_H * heightFactor)), maxBoard);
     P = Math.max(26, Math.floor(target / N));
     full = P * N;
     MARGIN = Math.max(6, Math.round(P * 0.26));
@@ -581,6 +611,7 @@
     $('pzMoves').textContent = '0';
     $('pzGroups').textContent = N * N;
     $('pzWin').classList.remove('show');
+    $('pzDone').hidden = true;
   }
 
   function layoutCorrect() {
@@ -994,6 +1025,27 @@
     }, 380);
   }
 
+  // Dismiss the celebration so the finished picture can be admired, and keep a
+  // small bar with "Play again" / "Choose another picture" within reach.
+  function showResult() {
+    $('pzWin').classList.remove('show');
+    $('pzDoneText').textContent = t('game.winDetail', {
+      time: formatTime(seconds),
+      moves: steps,
+      n: N,
+      total: N * N
+    });
+    $('pzDone').hidden = false;
+    $('pzDoneAgain').focus({ preventScroll: true });
+  }
+
+  function restartRound() {
+    $('pzWin').classList.remove('show');
+    $('pzDone').hidden = true;
+    resetRoundState();
+    shuffleAnimation();
+  }
+
   function confetti() {
     const colors = ['#FEDD00', '#BF4638', '#46E3B7', '#6C8CFF', '#B28CFF'];
     for (let index = 0; index < 90; index += 1) {
@@ -1089,6 +1141,8 @@
     $('pzSkip').classList.remove('show');
     $('pzTip').style.opacity = '0';
     $('pzWin').classList.remove('show');
+    $('pzDone').hidden = true;
+    setImmersive(false);
     $('pzRefWrap').classList.remove('hide');
     $('pzStart').focus({ preventScroll: true });
     layer.querySelectorAll('.pz-piece').forEach(element => element.remove());
@@ -1096,25 +1150,39 @@
     groups = [];
     LAYER_W = 0;
     LAYER_H = 0;
-    const startButton = $('pzStart');
-    if (startButton) startButton.disabled = !selectedImage;
+    setStartButtonsDisabled(!selectedImage);
     showError('');
   }
 
-  $('pzStart').addEventListener('click', startGame);
+  $('pzStart').addEventListener('click', () => startGame());
+  $('pzStartFull').addEventListener('click', () => startGame({ immersive: true }));
   $('pzBack').addEventListener('click', leaveStage);
   $('pzAnother').addEventListener('click', leaveStage);
+  $('pzDoneAnother').addEventListener('click', leaveStage);
+  $('pzView').addEventListener('click', showResult);
+  $('pzWinClose').addEventListener('click', showResult);
+  $('pzWin').addEventListener('click', event => {
+    if (event.target === $('pzWin')) showResult();
+  });
+  $('pzFull').addEventListener('click', () => {
+    setImmersive(!document.body.classList.contains('pz-immersive'));
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    if ($('pzWin').classList.contains('show')) {
+      showResult();
+      return;
+    }
+    if (document.body.classList.contains('pz-immersive')) setImmersive(false);
+  });
   $('pzHint').addEventListener('click', () => $('pzRefWrap').classList.toggle('hide'));
   $('pzShuffle').addEventListener('click', () => {
     if (animating) skipIntro();
     resetRoundState();
     shuffleAnimation();
   });
-  $('pzAgain').addEventListener('click', () => {
-    $('pzWin').classList.remove('show');
-    resetRoundState();
-    shuffleAnimation();
-  });
+  $('pzAgain').addEventListener('click', restartRound);
+  $('pzDoneAgain').addEventListener('click', restartRound);
   $('pzSkip').addEventListener('click', () => {
     if (memoryActive) {
       endMemory();

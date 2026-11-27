@@ -94,6 +94,10 @@ class PuzzleBuilder {
                                 ${text('setup.start')}
                                 <span class="material-symbols-rounded" aria-hidden="true">play_arrow</span>
                             </button>
+                            <button type="button" class="pz-btn pz-btn-ghost pz-start-full" id="pzStartFull" disabled>
+                                <span class="material-symbols-rounded" aria-hidden="true">fullscreen</span>
+                                ${text('setup.fullscreen')}
+                            </button>
                         </div>
                         <p class="pz-upload-note">${text('setup.uploadNote')}</p>
                         <p class="pz-error" id="pzError" role="alert" hidden></p>
@@ -111,6 +115,7 @@ class PuzzleBuilder {
                         <div class="pz-hud-actions">
                             <button type="button" id="pzHint">${text('game.hint')}</button>
                             <button type="button" id="pzShuffle">${text('game.shuffle')}</button>
+                            <button type="button" id="pzFull" aria-pressed="false">${text('game.fullscreen')}</button>
                             <button type="button" id="pzBack">${text('game.back')}</button>
                         </div>
                     </div>
@@ -124,14 +129,23 @@ class PuzzleBuilder {
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">
+                                <button type="button" class="pz-win-close" id="pzWinClose" aria-label="${text('game.viewResult')}">
+                                    <span class="pz-win-close-x" aria-hidden="true">&times;</span>
+                                </button>
                                 <p class="pz-win-emoji" aria-hidden="true">🎉</p>
                                 <h2 id="pzWinTitle">${text('game.winTitle')}</h2>
                                 <p id="pzWinDetail"></p>
                                 <div class="pz-win-actions">
-                                    <button type="button" class="pz-btn pz-btn-primary" id="pzAgain">${text('game.again')}</button>
+                                    <button type="button" class="pz-btn pz-btn-primary" id="pzView">${text('game.viewResult')}</button>
+                                    <button type="button" class="pz-btn pz-btn-ghost" id="pzAgain">${text('game.again')}</button>
                                     <button type="button" class="pz-btn pz-btn-ghost" id="pzAnother">${text('game.another')}</button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="pz-done" id="pzDone" hidden>
+                            <span class="pz-done-text" id="pzDoneText"></span>
+                            <button type="button" class="pz-done-btn" id="pzDoneAgain">${text('game.again')}</button>
+                            <button type="button" class="pz-done-btn is-ghost" id="pzDoneAnother">${text('game.another')}</button>
                         </div>
                     </div>
                 </div>

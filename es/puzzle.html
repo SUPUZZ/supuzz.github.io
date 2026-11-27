@@ -114,6 +114,10 @@
                                 Empezar
                                 <span class="material-symbols-rounded" aria-hidden="true">play_arrow</span>
                             </button>
+                            <button type="button" class="pz-btn pz-btn-ghost pz-start-full" id="pzStartFull" disabled>
+                                <span class="material-symbols-rounded" aria-hidden="true">fullscreen</span>
+                                Jugar en pantalla completa
+                            </button>
                         </div>
                         <p class="pz-upload-note">Tu foto se queda en este navegador y nunca se sube.</p>
                         <p class="pz-error" id="pzError" role="alert" hidden></p>
@@ -131,6 +135,7 @@
                         <div class="pz-hud-actions">
                             <button type="button" id="pzHint">Referencia</button>
                             <button type="button" id="pzShuffle">Mezclar</button>
+                            <button type="button" id="pzFull" aria-pressed="false">Pantalla completa</button>
                             <button type="button" id="pzBack">Cambiar imagen</button>
                         </div>
                     </div>
@@ -144,14 +149,23 @@
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">
+                                <button type="button" class="pz-win-close" id="pzWinClose" aria-label="Ver la imagen terminada">
+                                    <span class="pz-win-close-x" aria-hidden="true">&times;</span>
+                                </button>
                                 <p class="pz-win-emoji" aria-hidden="true">🎉</p>
                                 <h2 id="pzWinTitle">¡Rompecabezas completado!</h2>
                                 <p id="pzWinDetail"></p>
                                 <div class="pz-win-actions">
-                                    <button type="button" class="pz-btn pz-btn-primary" id="pzAgain">Jugar otra vez</button>
+                                    <button type="button" class="pz-btn pz-btn-primary" id="pzView">Ver la imagen terminada</button>
+                                    <button type="button" class="pz-btn pz-btn-ghost" id="pzAgain">Jugar otra vez</button>
                                     <button type="button" class="pz-btn pz-btn-ghost" id="pzAnother">Elegir otra imagen</button>
                                 </div>
                             </div>
+                        </div>
+                        <div class="pz-done" id="pzDone" hidden>
+                            <span class="pz-done-text" id="pzDoneText"></span>
+                            <button type="button" class="pz-done-btn" id="pzDoneAgain">Jugar otra vez</button>
+                            <button type="button" class="pz-done-btn is-ghost" id="pzDoneAnother">Elegir otra imagen</button>
                         </div>
                     </div>
                 </div>
@@ -308,7 +322,7 @@
         </div>
     </section>
 </main>
-<script type="application/json" id="pzMessages">{"setup":{"heading":"Elige tu imagen","subheading":"Cada imagen proviene de un set de construcción SUPUZZ. Nuestro equipo añade nuevas colecciones aquí.","loading":"Cargando imágenes…","fallbackNote":"Mostrando nuestras imágenes incluidas. Las colecciones en línea aparecerán aquí automáticamente.","uploadLabel":"Usar mi foto","uploadNote":"Tu foto se queda en este navegador y nunca se sube.","difficultyLabel":"Dificultad","pieces":"{n} piezas","start":"Empezar","empty":"Ahora no hay imágenes disponibles. Vuelve a intentarlo más tarde.","yourPhotoTitle":"Tu foto","uploadFailed":"No se pudo abrir esa foto. Elige una imagen JPG, PNG o WebP.","chooseThis":"Elegir esta imagen: {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Tiempo","moves":"Movimientos","groups":"Grupos","hint":"Referencia","shuffle":"Mezclar","back":"Cambiar imagen","cutting":"Cortando en {n}×{n} · {total} piezas…","cutDone":"Cortado en {total} piezas. Mezclando…","shuffling":"Mezclando…","dragTip":"Arrastra las piezas para reconstruir la imagen","skip":"Saltar animación","memorizeCount":"Memoriza la imagen · {n} s","memorizeGo":"Ya la tengo","winTitle":"¡Rompecabezas completado!","winDetail":"Tiempo {time} · {moves} movimientos · {n}×{n} · {total} piezas","again":"Jugar otra vez","another":"Elegir otra imagen","imageError":"No se pudo cargar esa imagen. Elige otra."}}</script>
+<script type="application/json" id="pzMessages">{"setup":{"heading":"Elige tu imagen","subheading":"Cada imagen proviene de un set de construcción SUPUZZ. Nuestro equipo añade nuevas colecciones aquí.","loading":"Cargando imágenes…","fallbackNote":"Mostrando nuestras imágenes incluidas. Las colecciones en línea aparecerán aquí automáticamente.","uploadLabel":"Usar mi foto","uploadNote":"Tu foto se queda en este navegador y nunca se sube.","difficultyLabel":"Dificultad","pieces":"{n} piezas","start":"Empezar","fullscreen":"Jugar en pantalla completa","empty":"Ahora no hay imágenes disponibles. Vuelve a intentarlo más tarde.","yourPhotoTitle":"Tu foto","uploadFailed":"No se pudo abrir esa foto. Elige una imagen JPG, PNG o WebP.","chooseThis":"Elegir esta imagen: {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Tiempo","moves":"Movimientos","groups":"Grupos","hint":"Referencia","shuffle":"Mezclar","back":"Cambiar imagen","cutting":"Cortando en {n}×{n} · {total} piezas…","cutDone":"Cortado en {total} piezas. Mezclando…","shuffling":"Mezclando…","dragTip":"Arrastra las piezas para reconstruir la imagen","skip":"Saltar animación","memorizeCount":"Memoriza la imagen · {n} s","memorizeGo":"Ya la tengo","viewResult":"Ver la imagen terminada","fullscreen":"Pantalla completa","exitFullscreen":"Salir de pantalla completa","winTitle":"¡Rompecabezas completado!","winDetail":"Tiempo {time} · {moves} movimientos · {n}×{n} · {total} piezas","again":"Jugar otra vez","another":"Elegir otra imagen","imageError":"No se pudo cargar esa imagen. Elige otra."}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/puzzle-game.js"></script>

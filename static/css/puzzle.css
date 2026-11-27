@@ -101,6 +101,12 @@
     border-color: var(--pz-yellow-dark);
 }
 
+.pz-btn:disabled,
+.pz-btn-ghost:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
 .pz-btn-dark {
     background: var(--pz-yellow);
     color: var(--pz-ink);
@@ -501,6 +507,11 @@
     min-width: 190px;
 }
 
+.pz-start-full {
+    padding: 0 18px;
+    font-size: 0.88rem;
+}
+
 .pz-upload-note {
     margin: 0;
     flex-basis: 100%;
@@ -520,6 +531,42 @@
 /* ---------- Stage ---------- */
 .pz-stage {
     background: #fff;
+}
+
+/* Immersive play: only the game on screen, page scrolling locked. */
+body.pz-immersive {
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+body.pz-immersive .pz-play {
+    padding: 0;
+}
+
+body.pz-immersive .pz-app {
+    position: fixed;
+    inset: 0;
+    z-index: 1300;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: #fff;
+}
+
+body.pz-immersive .pz-stage {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+}
+
+body.pz-immersive .pz-workspace {
+    flex: 1;
+    height: auto;
+    min-height: 0;
 }
 
 .pz-hud {
@@ -769,12 +816,95 @@
 }
 
 .pz-win-card {
+    position: relative;
     width: min(430px, 100%);
     padding: 30px 28px;
     border-radius: 22px;
     background: #fff;
     text-align: center;
     box-shadow: 0 30px 80px rgba(28, 27, 31, 0.35);
+}
+
+.pz-win-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--pz-muted);
+    cursor: pointer;
+}
+
+.pz-win-close:hover {
+    background: var(--pz-tint);
+    color: var(--pz-ink);
+}
+
+.pz-win-close-x {
+    font-size: 1.7rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+/* Slim bar that stays after the celebration is dismissed. */
+.pz-done {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    z-index: 460;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: calc(100% - 28px);
+    padding: 8px 10px 8px 16px;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 30px rgba(28, 27, 31, 0.22);
+}
+
+.pz-done[hidden] {
+    display: none;
+}
+
+.pz-done-text {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--pz-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pz-done-btn {
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--pz-yellow);
+    color: var(--pz-ink);
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.pz-done-btn.is-ghost {
+    background: transparent;
+    border: 1px solid var(--pz-line);
+}
+
+@media (hover: hover) {
+    .pz-done-btn:hover {
+        filter: brightness(0.97);
+    }
 }
 
 .pz-win-emoji {
@@ -1177,6 +1307,11 @@
         width: 100%;
     }
 
+    .pz-start-full {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
     .pz-hud {
         gap: 8px;
         padding: 8px 10px;
@@ -1195,6 +1330,24 @@
     .pz-hud-actions button {
         flex: 1;
         padding: 6px 4px;
+    }
+
+    body.pz-immersive .pz-hud-actions button {
+        flex: 1 1 calc(50% - 4px);
+        padding: 9px 6px;
+    }
+
+    .pz-done {
+        flex-wrap: wrap;
+        justify-content: center;
+        bottom: 12px;
+        padding: 10px 12px;
+    }
+
+    .pz-done-text {
+        flex: 1 1 100%;
+        text-align: center;
+        white-space: normal;
     }
 
     .pz-workspace {
