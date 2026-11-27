@@ -41,6 +41,8 @@
     "shuffling": "Mezclando…",
     "dragTip": "Arrastra las piezas para reconstruir la imagen",
     "skip": "Saltar animación",
+    "memorizeCount": "Memoriza la imagen · {n} s",
+    "memorizeGo": "Ya la tengo",
     "winTitle": "¡Rompecabezas completado!",
     "winDetail": "Tiempo {time} · {moves} movimientos · {n}×{n} · {total} piezas",
     "again": "Jugar otra vez",

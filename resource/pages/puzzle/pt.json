@@ -41,6 +41,8 @@
     "shuffling": "Embaralhando…",
     "dragTip": "Arraste as peças para reconstruir a imagem",
     "skip": "Pular animação",
+    "memorizeCount": "Memorize a imagem · {n} s",
+    "memorizeGo": "Já memorizei",
     "winTitle": "Quebra-cabeça completo!",
     "winDetail": "Tempo {time} · {moves} jogadas · {n}×{n} · {total} peças",
     "again": "Jogar de novo",

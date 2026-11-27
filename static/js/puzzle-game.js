@@ -252,11 +252,14 @@
           return;
         }
         const side = Math.min(width, height);
+        // Keep as many source pixels as the picture actually has (never upscale
+        // beyond ~1800px, which covers a 680px board on a 2x screen).
+        const resolution = Math.max(600, Math.min(1800, Math.round(side)));
         const canvas = document.createElement('canvas');
-        canvas.width = canvas.height = 900;
+        canvas.width = canvas.height = resolution;
         const context = canvas.getContext('2d');
         context.imageSmoothingQuality = 'high';
-        context.drawImage(img, (width - side) / 2, (height - side) / 2, side, side, 0, 0, 900, 900);
+        context.drawImage(img, (width - side) / 2, (height - side) / 2, side, side, 0, 0, resolution, resolution);
         resolve(canvas);
       };
       img.onerror = () => reject(new Error('image failed'));
@@ -328,6 +331,13 @@
   let OX = 0;
   let OY = 0;
   let viewScale = 1;
+  // Pieces are rasterised at the device pixel ratio, otherwise every tile is
+  // upscaled by the browser on retina screens and looks soft.
+  let DPR = 1;
+  const MEMORY_SECONDS = 5;
+  let memoryActive = false;
+  let memoryTimer = 0;
+  let memoryResolve = null;
 
   let edgeSigns = null;
   let picture = null;
@@ -442,6 +452,15 @@
     SIZE = P + MARGIN * 2;
     OX = Math.round((LAYER_W - full) / 2);
     OY = Math.round((LAYER_H - full) / 2);
+    // Render at up to the screen's pixel ratio, but never above the detail the
+    // source picture can actually provide (small uploads stay at 1x).
+    const nativeScale = srcCanvas ? srcCanvas.width / (full + MARGIN * 2) : 2;
+    DPR = Math.max(1, Math.min(window.devicePixelRatio || 1, 3, Math.round(nativeScale)));
+
+    // Canvas space works in device pixels; layout stays in CSS pixels.
+    const PPX = P * DPR;
+    const MPX = MARGIN * DPR;
+    const FPX = full * DPR;
 
     layer.querySelectorAll('.pz-piece').forEach(element => element.remove());
     pieces = [];
@@ -453,41 +472,41 @@
     hint.style.width = full + 'px';
     hint.style.height = full + 'px';
     const hintCanvas = hint.querySelector('canvas');
-    hintCanvas.width = full;
-    hintCanvas.height = full;
+    hintCanvas.width = FPX;
+    hintCanvas.height = FPX;
     const hintContext = hintCanvas.getContext('2d');
     hintContext.strokeStyle = 'rgba(28,27,31,.10)';
-    hintContext.lineWidth = 1;
+    hintContext.lineWidth = DPR;
     for (let index = 1; index < N; index += 1) {
       hintContext.beginPath();
-      hintContext.moveTo(index * P, 0);
-      hintContext.lineTo(index * P, full);
+      hintContext.moveTo(index * PPX, 0);
+      hintContext.lineTo(index * PPX, FPX);
       hintContext.stroke();
       hintContext.beginPath();
-      hintContext.moveTo(0, index * P);
-      hintContext.lineTo(full, index * P);
+      hintContext.moveTo(0, index * PPX);
+      hintContext.lineTo(FPX, index * PPX);
       hintContext.stroke();
     }
 
     const tmp = document.createElement('canvas');
-    tmp.width = tmp.height = full;
+    tmp.width = tmp.height = FPX;
     const tmpContext = tmp.getContext('2d');
     tmpContext.imageSmoothingQuality = 'high';
-    tmpContext.drawImage(srcCanvas, 0, 0, 900, 900, 0, 0, full, full);
+    tmpContext.drawImage(srcCanvas, 0, 0, srcCanvas.width, srcCanvas.height, 0, 0, FPX, FPX);
 
-    const padded = full + MARGIN * 2;
+    const padded = FPX + MPX * 2;
     picture = document.createElement('canvas');
     picture.width = picture.height = padded;
     const pictureContext = picture.getContext('2d');
-    pictureContext.drawImage(tmp, 0, 0, full, 1, MARGIN, 0, full, MARGIN);
-    pictureContext.drawImage(tmp, 0, full - 1, full, 1, MARGIN, MARGIN + full, full, MARGIN);
-    pictureContext.drawImage(tmp, 0, 0, 1, full, 0, MARGIN, MARGIN, full);
-    pictureContext.drawImage(tmp, full - 1, 0, 1, full, MARGIN + full, MARGIN, MARGIN, full);
-    pictureContext.drawImage(tmp, 0, 0, 1, 1, 0, 0, MARGIN, MARGIN);
-    pictureContext.drawImage(tmp, full - 1, 0, 1, 1, MARGIN + full, 0, MARGIN, MARGIN);
-    pictureContext.drawImage(tmp, 0, full - 1, 1, 1, 0, MARGIN + full, MARGIN, MARGIN);
-    pictureContext.drawImage(tmp, full - 1, full - 1, 1, 1, MARGIN + full, MARGIN + full, MARGIN, MARGIN);
-    pictureContext.drawImage(tmp, MARGIN, MARGIN);
+    pictureContext.drawImage(tmp, 0, 0, FPX, 1, MPX, 0, FPX, MPX);
+    pictureContext.drawImage(tmp, 0, FPX - 1, FPX, 1, MPX, MPX + FPX, FPX, MPX);
+    pictureContext.drawImage(tmp, 0, 0, 1, FPX, 0, MPX, MPX, FPX);
+    pictureContext.drawImage(tmp, FPX - 1, 0, 1, FPX, MPX + FPX, MPX, MPX, FPX);
+    pictureContext.drawImage(tmp, 0, 0, 1, 1, 0, 0, MPX, MPX);
+    pictureContext.drawImage(tmp, FPX - 1, 0, 1, 1, MPX + FPX, 0, MPX, MPX);
+    pictureContext.drawImage(tmp, 0, FPX - 1, 1, 1, 0, MPX + FPX, MPX, MPX);
+    pictureContext.drawImage(tmp, FPX - 1, FPX - 1, 1, 1, MPX + FPX, MPX + FPX, MPX, MPX);
+    pictureContext.drawImage(tmp, MPX, MPX);
 
     const verticalEdges = [];
     const horizontalEdges = [];
@@ -527,18 +546,20 @@
 
   function renderPiece(column, row, top, right, bottom, left) {
     const canvas = document.createElement('canvas');
-    canvas.width = canvas.height = SIZE;
+    canvas.width = canvas.height = Math.round(SIZE * DPR);
+    canvas.style.width = SIZE + 'px';
+    canvas.style.height = SIZE + 'px';
     const context = canvas.getContext('2d');
     const path = new Path2D();
-    piecePath(path, P, MARGIN, top, right, bottom, left);
+    piecePath(path, P * DPR, MARGIN * DPR, top, right, bottom, left);
     context.save();
     context.strokeStyle = '#000';
-    context.lineWidth = 2;
+    context.lineWidth = 2 * DPR;
     context.lineJoin = 'round';
     context.stroke(path);
     context.fill(path);
     context.globalCompositeOperation = 'source-in';
-    context.drawImage(picture, -column * P, -row * P);
+    context.drawImage(picture, -column * P * DPR, -row * P * DPR);
     context.restore();
     return canvas;
   }
@@ -576,17 +597,49 @@
     piece.el.style.top = Math.round(piece.y - MARGIN) + 'px';
   }
 
-  // ================= Intro: cut lines then shuffle =================
-  function runIntro() {
+  // ================= Intro: memorise, cut lines, then shuffle =================
+  // The complete picture is held on screen before it is cut, so the player has a
+  // chance to remember it instead of watching it disappear in a fast animation.
+  function showMemoryPhase(seconds) {
+    return new Promise(resolve => {
+      const tip = $('pzTip');
+      const skip = $('pzSkip');
+      memoryActive = true;
+      memoryResolve = resolve;
+      let remaining = seconds;
+      tip.classList.add('memory');
+      tip.style.opacity = '1';
+      skip.textContent = t('game.memorizeGo');
+      skip.classList.add('show');
+      const tick = () => {
+        if (!memoryActive) return;
+        if (remaining <= 0) {
+          endMemory();
+          return;
+        }
+        tip.textContent = t('game.memorizeCount', { n: remaining });
+        remaining -= 1;
+        memoryTimer = setTimeout(tick, 1000);
+      };
+      tick();
+    });
+  }
+
+  function endMemory() {
+    if (!memoryActive) return;
+    memoryActive = false;
+    clearTimeout(memoryTimer);
+    $('pzTip').classList.remove('memory');
+    const resolve = memoryResolve;
+    memoryResolve = null;
+    if (resolve) resolve();
+  }
+
+  async function runIntro() {
     cancelAnimationFrame(introRAF);
     cancelAnimationFrame(shuffleRAF);
     clearTimeout(introTimer);
     animating = true;
-
-    if (REDUCE_MOTION) {
-      skipIntro();
-      return;
-    }
 
     const cutStage = $('pzCutStage');
     const tip = $('pzTip');
@@ -598,30 +651,43 @@
     cutStage.style.height = full + 'px';
     cutStage.style.display = 'block';
     tip.style.opacity = '1';
-    tip.textContent = t('game.cutting', { n: N, total: N * N });
     skip.classList.add('show');
 
     const cutPicture = $('pzCutPic');
     const cutGrid = $('pzCutGrid');
-    cutPicture.width = cutGrid.width = Math.ceil(full);
-    cutPicture.height = cutGrid.height = Math.ceil(full);
-    cutPicture.getContext('2d').drawImage(picture, -MARGIN, -MARGIN);
+    const cutSize = Math.round(full * DPR);
+    cutPicture.width = cutGrid.width = cutSize;
+    cutPicture.height = cutGrid.height = cutSize;
+    cutPicture.style.width = cutPicture.style.height = full + 'px';
+    cutGrid.style.width = cutGrid.style.height = full + 'px';
+    cutPicture.getContext('2d').drawImage(picture, -MARGIN * DPR, -MARGIN * DPR);
     const gridContext = cutGrid.getContext('2d');
 
+    await showMemoryPhase(MEMORY_SECONDS);
+    if (!gameActive || !animating) return;
+    skip.textContent = t('game.skip');
+
+    if (REDUCE_MOTION) {
+      skipIntro();
+      return;
+    }
+
+    tip.textContent = t('game.cutting', { n: N, total: N * N });
+
     const lines = [];
-    for (let column = 1; column < N; column += 1) lines.push({ vertical: true, at: column * P });
-    for (let row = 1; row < N; row += 1) lines.push({ vertical: false, at: row * P });
+    for (let column = 1; column < N; column += 1) lines.push({ vertical: true, at: column * P * DPR });
+    for (let row = 1; row < N; row += 1) lines.push({ vertical: false, at: row * P * DPR });
 
     const duration = 900;
     const startedAt = performance.now();
 
     function frame(now) {
       const progress = Math.min(1, (now - startedAt) / duration);
-      gridContext.clearRect(0, 0, full, full);
+      gridContext.clearRect(0, 0, cutSize, cutSize);
       gridContext.strokeStyle = 'rgba(28,27,31,.9)';
-      gridContext.lineWidth = Math.max(2, full / 260);
+      gridContext.lineWidth = Math.max(2, full / 260) * DPR;
       gridContext.shadowColor = 'rgba(254,221,0,.95)';
-      gridContext.shadowBlur = 10;
+      gridContext.shadowBlur = 10 * DPR;
       lines.forEach((line, index) => {
         const start = (index / lines.length) * 0.62;
         const lineProgress = Math.max(0, Math.min(1, (progress - start) / 0.38));
@@ -629,10 +695,10 @@
         gridContext.beginPath();
         if (line.vertical) {
           gridContext.moveTo(line.at, 0);
-          gridContext.lineTo(line.at, full * lineProgress);
+          gridContext.lineTo(line.at, cutSize * lineProgress);
         } else {
           gridContext.moveTo(0, line.at);
-          gridContext.lineTo(full * lineProgress, line.at);
+          gridContext.lineTo(cutSize * lineProgress, line.at);
         }
         gridContext.stroke();
       });
@@ -749,6 +815,8 @@
   }
 
   function skipIntro() {
+    endMemory();
+    $('pzSkip').textContent = t('game.skip');
     if (!animating) return;
     cancelAnimationFrame(introRAF);
     cancelAnimationFrame(shuffleRAF);
@@ -1010,6 +1078,7 @@
     cancelAnimationFrame(introRAF);
     cancelAnimationFrame(shuffleRAF);
     clearTimeout(introTimer);
+    endMemory();
     stopTimer();
     animating = false;
     gameActive = false;
@@ -1046,7 +1115,13 @@
     resetRoundState();
     shuffleAnimation();
   });
-  $('pzSkip').addEventListener('click', skipIntro);
+  $('pzSkip').addEventListener('click', () => {
+    if (memoryActive) {
+      endMemory();
+      return;
+    }
+    skipIntro();
+  });
 
   // ================= Boot =================
   bindDifficulty();

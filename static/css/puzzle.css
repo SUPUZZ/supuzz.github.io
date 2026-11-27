@@ -685,6 +685,27 @@
     transition: opacity 0.3s;
 }
 
+/* Memory phase: hold the uncut picture for a few seconds before cutting. */
+.pz-tip.memory {
+    padding: 11px 22px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    box-shadow: 0 10px 26px rgba(28, 27, 31, 0.24);
+    animation: pz-memory-pulse 1s ease-in-out infinite;
+}
+
+@keyframes pz-memory-pulse {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pz-tip.memory {
+        animation: none;
+    }
+}
+
 .pz-skip {
     position: absolute;
     left: 50%;

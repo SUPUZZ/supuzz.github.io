@@ -37,6 +37,8 @@
     "shuffling": "正在打亂…",
     "dragTip": "拖曳拼圖片，把圖拼回來",
     "skip": "跳過動畫",
+    "memorizeCount": "記住這張圖 · 剩 {n} 秒",
+    "memorizeGo": "我記住了",
     "winTitle": "拼圖完成！",
     "winDetail": "時間 {time} · {moves} 步 · {n}×{n}，共 {total} 片",
     "again": "再玩一次",

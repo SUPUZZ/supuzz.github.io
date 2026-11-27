@@ -41,6 +41,8 @@
     "shuffling": "Shuffling…",
     "dragTip": "Drag pieces together to rebuild the picture",
     "skip": "Skip animation",
+    "memorizeCount": "Remember the picture · {n}s",
+    "memorizeGo": "I'm ready",
     "winTitle": "Puzzle complete!",
     "winDetail": "Time {time} · {moves} moves · {n}×{n} · {total} pieces",
     "again": "Play again",

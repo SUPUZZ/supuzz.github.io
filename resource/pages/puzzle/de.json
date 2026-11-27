@@ -41,6 +41,8 @@
     "shuffling": "Wird gemischt…",
     "dragTip": "Ziehe die Teile zusammen, um das Bild zu vervollständigen",
     "skip": "Animation überspringen",
+    "memorizeCount": "Bild einprägen · {n} s",
+    "memorizeGo": "Ich bin bereit",
     "winTitle": "Puzzle fertig!",
     "winDetail": "Zeit {time} · {moves} Züge · {n}×{n} · {total} Teile",
     "again": "Noch einmal",

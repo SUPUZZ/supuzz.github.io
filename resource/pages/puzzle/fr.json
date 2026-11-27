@@ -41,6 +41,8 @@
     "shuffling": "Mélange…",
     "dragTip": "Faites glisser les pièces pour reconstituer l'image",
     "skip": "Passer l'animation",
+    "memorizeCount": "Mémorisez l'image · {n} s",
+    "memorizeGo": "J'ai mémorisé",
     "winTitle": "Puzzle terminé !",
     "winDetail": "Temps {time} · {moves} coups · {n}×{n} · {total} pièces",
     "again": "Rejouer",
