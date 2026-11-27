@@ -125,16 +125,18 @@
                 </div>
 
                 <div class="pz-stage" id="pzStage" hidden>
-                    <div class="pz-hud">
+                    <div class="pz-hud" id="pzHud">
                         <span class="pz-hud-title"><span aria-hidden="true">🧩</span> Puzzle Online</span>
                         <div class="pz-stats">
                             <span>Zeit <b id="pzTime">00:00</b></span>
                             <span>Züge <b id="pzMoves">0</b></span>
                             <span>Gruppen übrig <b id="pzGroups">-</b></span>
                         </div>
-                        <div class="pz-hud-actions">
+                        <button type="button" class="pz-hud-toggle" id="pzHudToggle" aria-expanded="true" aria-controls="pzHudActions" aria-label="Spielsteuerung">
+                            <span class="pz-hud-chevron" aria-hidden="true">&#9652;</span>
+                        </button>
+                        <div class="pz-hud-actions" id="pzHudActions">
                             <button type="button" id="pzHint">Vorlage</button>
-                            <button type="button" id="pzShuffle">Neu mischen</button>
                             <button type="button" id="pzFull" aria-pressed="false">Vollbild</button>
                             <button type="button" id="pzBack">Bild wechseln</button>
                         </div>
@@ -146,6 +148,10 @@
                         </div>
                         <div class="pz-tip" id="pzTip" role="status" aria-live="polite"></div>
                         <button type="button" class="pz-skip" id="pzSkip">Animation überspringen</button>
+                        <div class="pz-fab-group" id="pzShuffleGroup" role="group" aria-label="Misch-Layout">
+                            <button type="button" class="pz-fab" id="pzShuffleSpread" data-mode="spread" aria-pressed="true">Verteilen</button>
+                            <button type="button" class="pz-fab" id="pzShufflePile" data-mode="pile" aria-pressed="false">Stapeln</button>
+                        </div>
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">
@@ -322,7 +328,7 @@
         </div>
     </section>
 </main>
-<script type="application/json" id="pzMessages">{"setup":{"heading":"Wähle dein Puzzle-Bild","subheading":"Jedes Bild stammt aus einem SUPUZZ-Bauset. Neue Sammlungen erscheinen hier, sobald unser Team sie hinzufügt.","loading":"Puzzle-Bilder werden geladen…","fallbackNote":"Unsere eingebauten Bilder werden angezeigt. Online-Sammlungen erscheinen hier automatisch.","uploadLabel":"Eigenes Foto verwenden","uploadNote":"Dein Foto bleibt in diesem Browser und wird nie hochgeladen.","difficultyLabel":"Schwierigkeit","pieces":"{n} Teile","start":"Puzzle starten","fullscreen":"Im Vollbild spielen","empty":"Gerade sind keine Bilder verfügbar. Bitte später erneut versuchen.","yourPhotoTitle":"Dein Foto","uploadFailed":"Dieses Foto konnte nicht geöffnet werden. Bitte ein JPG-, PNG- oder WebP-Bild wählen.","chooseThis":"Dieses Bild wählen: {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Zeit","moves":"Züge","groups":"Gruppen übrig","hint":"Vorlage","shuffle":"Neu mischen","back":"Bild wechseln","cutting":"Wird in {n}×{n} · {total} Teile geschnitten…","cutDone":"In {total} Teile geschnitten. Wird gemischt…","shuffling":"Wird gemischt…","dragTip":"Ziehe die Teile zusammen, um das Bild zu vervollständigen","skip":"Animation überspringen","memorizeCount":"Bild einprägen · {n} s","memorizeGo":"Ich bin bereit","viewResult":"Fertiges Bild ansehen","fullscreen":"Vollbild","exitFullscreen":"Vollbild beenden","winTitle":"Puzzle fertig!","winDetail":"Zeit {time} · {moves} Züge · {n}×{n} · {total} Teile","again":"Noch einmal","another":"Anderes Bild wählen","imageError":"Dieses Bild konnte nicht geladen werden. Bitte ein anderes wählen."}}</script>
+<script type="application/json" id="pzMessages">{"setup":{"heading":"Wähle dein Puzzle-Bild","subheading":"Jedes Bild stammt aus einem SUPUZZ-Bauset. Neue Sammlungen erscheinen hier, sobald unser Team sie hinzufügt.","loading":"Puzzle-Bilder werden geladen…","fallbackNote":"Unsere eingebauten Bilder werden angezeigt. Online-Sammlungen erscheinen hier automatisch.","uploadLabel":"Eigenes Foto verwenden","uploadNote":"Dein Foto bleibt in diesem Browser und wird nie hochgeladen.","difficultyLabel":"Schwierigkeit","pieces":"{n} Teile","start":"Puzzle starten","fullscreen":"Im Vollbild spielen","empty":"Gerade sind keine Bilder verfügbar. Bitte später erneut versuchen.","yourPhotoTitle":"Dein Foto","uploadFailed":"Dieses Foto konnte nicht geöffnet werden. Bitte ein JPG-, PNG- oder WebP-Bild wählen.","chooseThis":"Dieses Bild wählen: {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Zeit","moves":"Züge","groups":"Gruppen übrig","hint":"Vorlage","shuffle":"Neu mischen","back":"Bild wechseln","cutting":"Wird in {n}×{n} · {total} Teile geschnitten…","cutDone":"In {total} Teile geschnitten. Wird gemischt…","shuffling":"Wird gemischt…","dragTip":"Ziehe die Teile zusammen, um das Bild zu vervollständigen","skip":"Animation überspringen","memorizeCount":"Bild einprägen · {n} s","memorizeGo":"Ich bin bereit","viewResult":"Fertiges Bild ansehen","fullscreen":"Vollbild","exitFullscreen":"Vollbild beenden","controls":"Spielsteuerung","shuffleGroup":"Misch-Layout","spread":"Verteilen","pile":"Stapeln","winTitle":"Puzzle fertig!","winDetail":"Zeit {time} · {moves} Züge · {n}×{n} · {total} Teile","again":"Noch einmal","another":"Anderes Bild wählen","imageError":"Dieses Bild konnte nicht geladen werden. Bitte ein anderes wählen."}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/puzzle-game.js"></script>

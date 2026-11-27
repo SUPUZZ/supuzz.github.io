@@ -125,16 +125,18 @@
                 </div>
 
                 <div class="pz-stage" id="pzStage" hidden>
-                    <div class="pz-hud">
+                    <div class="pz-hud" id="pzHud">
                         <span class="pz-hud-title"><span aria-hidden="true">🧩</span> Puzzle Online</span>
                         <div class="pz-stats">
                             <span>Tiempo <b id="pzTime">00:00</b></span>
                             <span>Movimientos <b id="pzMoves">0</b></span>
                             <span>Grupos <b id="pzGroups">-</b></span>
                         </div>
-                        <div class="pz-hud-actions">
+                        <button type="button" class="pz-hud-toggle" id="pzHudToggle" aria-expanded="true" aria-controls="pzHudActions" aria-label="Controles del juego">
+                            <span class="pz-hud-chevron" aria-hidden="true">&#9652;</span>
+                        </button>
+                        <div class="pz-hud-actions" id="pzHudActions">
                             <button type="button" id="pzHint">Referencia</button>
-                            <button type="button" id="pzShuffle">Mezclar</button>
                             <button type="button" id="pzFull" aria-pressed="false">Pantalla completa</button>
                             <button type="button" id="pzBack">Cambiar imagen</button>
                         </div>
@@ -146,6 +148,10 @@
                         </div>
                         <div class="pz-tip" id="pzTip" role="status" aria-live="polite"></div>
                         <button type="button" class="pz-skip" id="pzSkip">Saltar animación</button>
+                        <div class="pz-fab-group" id="pzShuffleGroup" role="group" aria-label="Forma de mezclar">
+                            <button type="button" class="pz-fab" id="pzShuffleSpread" data-mode="spread" aria-pressed="true">Dispersar</button>
+                            <button type="button" class="pz-fab" id="pzShufflePile" data-mode="pile" aria-pressed="false">Amontonar</button>
+                        </div>
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">
@@ -322,7 +328,7 @@
         </div>
     </section>
 </main>
-<script type="application/json" id="pzMessages">{"setup":{"heading":"Elige tu imagen","subheading":"Cada imagen proviene de un set de construcción SUPUZZ. Nuestro equipo añade nuevas colecciones aquí.","loading":"Cargando imágenes…","fallbackNote":"Mostrando nuestras imágenes incluidas. Las colecciones en línea aparecerán aquí automáticamente.","uploadLabel":"Usar mi foto","uploadNote":"Tu foto se queda en este navegador y nunca se sube.","difficultyLabel":"Dificultad","pieces":"{n} piezas","start":"Empezar","fullscreen":"Jugar en pantalla completa","empty":"Ahora no hay imágenes disponibles. Vuelve a intentarlo más tarde.","yourPhotoTitle":"Tu foto","uploadFailed":"No se pudo abrir esa foto. Elige una imagen JPG, PNG o WebP.","chooseThis":"Elegir esta imagen: {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Tiempo","moves":"Movimientos","groups":"Grupos","hint":"Referencia","shuffle":"Mezclar","back":"Cambiar imagen","cutting":"Cortando en {n}×{n} · {total} piezas…","cutDone":"Cortado en {total} piezas. Mezclando…","shuffling":"Mezclando…","dragTip":"Arrastra las piezas para reconstruir la imagen","skip":"Saltar animación","memorizeCount":"Memoriza la imagen · {n} s","memorizeGo":"Ya la tengo","viewResult":"Ver la imagen terminada","fullscreen":"Pantalla completa","exitFullscreen":"Salir de pantalla completa","winTitle":"¡Rompecabezas completado!","winDetail":"Tiempo {time} · {moves} movimientos · {n}×{n} · {total} piezas","again":"Jugar otra vez","another":"Elegir otra imagen","imageError":"No se pudo cargar esa imagen. Elige otra."}}</script>
+<script type="application/json" id="pzMessages">{"setup":{"heading":"Elige tu imagen","subheading":"Cada imagen proviene de un set de construcción SUPUZZ. Nuestro equipo añade nuevas colecciones aquí.","loading":"Cargando imágenes…","fallbackNote":"Mostrando nuestras imágenes incluidas. Las colecciones en línea aparecerán aquí automáticamente.","uploadLabel":"Usar mi foto","uploadNote":"Tu foto se queda en este navegador y nunca se sube.","difficultyLabel":"Dificultad","pieces":"{n} piezas","start":"Empezar","fullscreen":"Jugar en pantalla completa","empty":"Ahora no hay imágenes disponibles. Vuelve a intentarlo más tarde.","yourPhotoTitle":"Tu foto","uploadFailed":"No se pudo abrir esa foto. Elige una imagen JPG, PNG o WebP.","chooseThis":"Elegir esta imagen: {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Tiempo","moves":"Movimientos","groups":"Grupos","hint":"Referencia","shuffle":"Mezclar","back":"Cambiar imagen","cutting":"Cortando en {n}×{n} · {total} piezas…","cutDone":"Cortado en {total} piezas. Mezclando…","shuffling":"Mezclando…","dragTip":"Arrastra las piezas para reconstruir la imagen","skip":"Saltar animación","memorizeCount":"Memoriza la imagen · {n} s","memorizeGo":"Ya la tengo","viewResult":"Ver la imagen terminada","fullscreen":"Pantalla completa","exitFullscreen":"Salir de pantalla completa","controls":"Controles del juego","shuffleGroup":"Forma de mezclar","spread":"Dispersar","pile":"Amontonar","winTitle":"¡Rompecabezas completado!","winDetail":"Tiempo {time} · {moves} movimientos · {n}×{n} · {total} piezas","again":"Jugar otra vez","another":"Elegir otra imagen","imageError":"No se pudo cargar esa imagen. Elige otra."}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/puzzle-game.js"></script>

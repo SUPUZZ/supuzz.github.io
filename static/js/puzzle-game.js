@@ -337,6 +337,9 @@
   let memoryActive = false;
   let memoryTimer = 0;
   let memoryResolve = null;
+  // Two shuffle layouts: pieces tiled over the whole board area, or heaped into
+  // the bottom-left corner so the board stays clear.
+  let layoutMode = 'spread';
 
   let edgeSigns = null;
   let picture = null;
@@ -381,6 +384,19 @@
     }
   }
 
+  function setHudCollapsed(collapsed) {
+    const hud = $('pzHud');
+    const toggle = $('pzHudToggle');
+    if (!hud || !toggle) return;
+    hud.classList.toggle('is-collapsed', collapsed);
+    toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    const chevron = toggle.querySelector('.pz-hud-chevron');
+    if (chevron) chevron.textContent = collapsed ? '\u25BE' : '\u25B4';
+    if (gameActive) {
+      requestAnimationFrame(() => requestAnimationFrame(fitLayer));
+    }
+  }
+
   function startGame(options = {}) {
     if (!selectedImage || starting) return;
     starting = true;
@@ -403,7 +419,10 @@
     setupPanel.hidden = true;
     stage.hidden = false;
     app.classList.add('is-playing');
-    if (isNarrowScreen()) setImmersive(true);
+    if (isNarrowScreen()) {
+      setImmersive(true);
+      setHudCollapsed(true);
+    }
     $('pzRef').src = resolveUrl(selectedImage.url);
     $('pzRef').alt = selectedImage.alt || '';
     $('pzRefWrap').classList.remove('hide');
@@ -457,6 +476,13 @@
     path.closePath();
   }
 
+  // Sit the board a little above the middle so the bottom edge (shuffle button,
+  // reference thumbnail, result bar) has room.
+  function verticalOffset(layerHeight, boardSize) {
+    const factor = document.body.classList.contains('pz-immersive') ? 0.4 : 0.45;
+    return Math.round((layerHeight - boardSize) * factor);
+  }
+
   function buildBoard() {
     N = difficulty;
     const rect = workspace.getBoundingClientRect();
@@ -481,7 +507,7 @@
     MARGIN = Math.max(6, Math.round(P * 0.26));
     SIZE = P + MARGIN * 2;
     OX = Math.round((LAYER_W - full) / 2);
-    OY = Math.round((LAYER_H - full) / 2);
+    OY = verticalOffset(LAYER_H, full);
     // Render at up to the screen's pixel ratio, but never above the detail the
     // source picture can actually provide (small uploads stay at 1x).
     const nativeScale = srcCanvas ? srcCanvas.width / (full + MARGIN * 2) : 2;
@@ -685,6 +711,8 @@
     tip.style.opacity = '1';
     skip.classList.add('show');
 
+    $('pzShuffleGroup').hidden = true;
+
     const cutPicture = $('pzCutPic');
     const cutGrid = $('pzCutGrid');
     const cutSize = Math.round(full * DPR);
@@ -780,10 +808,43 @@
     }));
   }
 
-  function shuffleAnimation() {
+  function syncLayoutButtons() {
+    const buttons = [$('pzShuffleSpread'), $('pzShufflePile')];
+    buttons.forEach(button => {
+      if (!button) return;
+      button.setAttribute('aria-pressed', button.dataset.mode === layoutMode ? 'true' : 'false');
+    });
+  }
+
+  function reshuffle(mode) {
+    if (animating) skipIntro();
+    resetRoundState();
+    shuffleAnimation(mode);
+  }
+
+  function pileTargets() {
+    const spread = Math.min(P * 0.5, 72);
+    const baseX = 14 + MARGIN;
+    // Keep the heap above the spread / pile buttons in the bottom-left corner.
+    const baseY = LAYER_H - 104 - P - MARGIN;
+    return pieces.map(() => {
+      const x = baseX + Math.random() * spread;
+      const y = baseY - Math.random() * spread * 0.9;
+      return {
+        x: Math.round(Math.max(MARGIN + 4, Math.min(LAYER_W - P - MARGIN - 4, x))),
+        y: Math.round(Math.max(MARGIN + 4, Math.min(LAYER_H - P - MARGIN - 4, y)))
+      };
+    });
+  }
+
+  function shuffleAnimation(mode = layoutMode) {
+    layoutMode = mode === 'pile' ? 'pile' : 'spread';
+    syncLayoutButtons();
+
     cancelAnimationFrame(shuffleRAF);
     animating = true;
-    const targets = scatterTargets();
+    const piled = layoutMode === 'pile';
+    const targets = piled ? pileTargets() : scatterTargets();
     const animations = pieces.map((piece, index) => ({
       piece,
       fromX: piece.x,
@@ -791,7 +852,7 @@
       toX: targets[index].x,
       toY: targets[index].y,
       delay: Math.random() * 220,
-      rotation: (Math.random() - 0.5) * 40,
+      rotation: (Math.random() - 0.5) * (piled ? 14 : 40),
       z: 10 + Math.floor(Math.random() * 40)
     }));
     const duration = REDUCE_MOTION ? 0 : 780;
@@ -810,7 +871,8 @@
         animation.piece.x = animation.fromX + (animation.toX - animation.fromX) * eased;
         animation.piece.y = animation.fromY + (animation.toY - animation.fromY) * eased;
         animation.piece.el.style.zIndex = animation.z;
-        animation.piece.el.style.transform = `rotate(${animation.rotation * swing}deg) scale(${1 - 0.1 * swing})`;
+        const settle = piled ? animation.rotation * eased : 0;
+        animation.piece.el.style.transform = `rotate(${settle + (piled ? 0 : animation.rotation) * swing}deg) scale(${1 - 0.1 * swing})`;
         place(animation.piece);
       });
       if (!done) {
@@ -820,7 +882,7 @@
       animations.forEach(animation => {
         animation.piece.x = animation.toX;
         animation.piece.y = animation.toY;
-        animation.piece.el.style.transform = '';
+        animation.piece.el.style.transform = piled ? `rotate(${animation.rotation.toFixed(1)}deg)` : '';
         place(animation.piece);
       });
       finishIntro();
@@ -830,6 +892,7 @@
       animations.forEach(animation => {
         animation.piece.x = animation.toX;
         animation.piece.y = animation.toY;
+        if (piled) animation.piece.el.style.transform = `rotate(${animation.rotation.toFixed(1)}deg)`;
         place(animation.piece);
       });
       finishIntro();
@@ -840,6 +903,7 @@
 
   function finishIntro() {
     animating = false;
+    $('pzShuffleGroup').hidden = false;
     $('pzSkip').classList.remove('show');
     const tip = $('pzTip');
     tip.textContent = t('game.dragTip');
@@ -876,7 +940,10 @@
       const group = groups[piece.grp];
       group.forEach(item => { item.el.style.zIndex = ++zTop; });
       const moving = [...group];
-      moving.forEach(item => item.el.classList.add('dragging'));
+      moving.forEach(item => {
+        item.el.classList.add('dragging');
+        item.el.style.transform = '';
+      });
       piece.el.setPointerCapture(event.pointerId);
 
       let lastX = event.clientX;
@@ -930,6 +997,7 @@
     group.forEach(item => {
       item.x = baseX + (item.column - base.column) * P;
       item.y = baseY + (item.row - base.row) * P;
+      item.el.style.transform = '';
       place(item);
     });
   }
@@ -1092,7 +1160,7 @@
     if (width === LAYER_W && height === LAYER_H) return;
 
     const nextOX = Math.round((width - full) / 2);
-    const nextOY = Math.round((height - full) / 2);
+    const nextOY = verticalOffset(height, full);
     const deltaX = nextOX - OX;
     const deltaY = nextOY - OY;
     LAYER_W = width;
@@ -1147,6 +1215,7 @@
     $('pzDone').hidden = true;
     app.classList.remove('is-done');
     setImmersive(false);
+    setHudCollapsed(false);
     $('pzRefWrap').classList.remove('hide');
     $('pzStart').focus({ preventScroll: true });
     layer.querySelectorAll('.pz-piece').forEach(element => element.remove());
@@ -1168,6 +1237,9 @@
   $('pzWin').addEventListener('click', event => {
     if (event.target === $('pzWin')) showResult();
   });
+  $('pzHudToggle').addEventListener('click', () => {
+    setHudCollapsed(!$('pzHud').classList.contains('is-collapsed'));
+  });
   $('pzFull').addEventListener('click', () => {
     setImmersive(!document.body.classList.contains('pz-immersive'));
   });
@@ -1180,11 +1252,8 @@
     if (document.body.classList.contains('pz-immersive')) setImmersive(false);
   });
   $('pzHint').addEventListener('click', () => $('pzRefWrap').classList.toggle('hide'));
-  $('pzShuffle').addEventListener('click', () => {
-    if (animating) skipIntro();
-    resetRoundState();
-    shuffleAnimation();
-  });
+  $('pzShuffleSpread').addEventListener('click', () => reshuffle('spread'));
+  $('pzShufflePile').addEventListener('click', () => reshuffle('pile'));
   $('pzAgain').addEventListener('click', restartRound);
   $('pzDoneAgain').addEventListener('click', restartRound);
   $('pzSkip').addEventListener('click', () => {
