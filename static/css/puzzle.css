@@ -623,8 +623,8 @@ body.pz-immersive .pz-workspace {
     display: none;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     margin-left: auto;
     padding: 0;
     border: 1px solid var(--pz-line);
@@ -635,8 +635,21 @@ body.pz-immersive .pz-workspace {
 }
 
 .pz-hud-chevron {
-    font-size: 14px;
-    line-height: 1;
+    width: 18px;
+    height: 18px;
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+}
+
+.pz-hud.is-collapsed .pz-hud-chevron {
+    transform: rotate(0deg);
+}
+
+@media (hover: hover) {
+    .pz-hud-toggle:hover {
+        background: var(--pz-tint);
+        border-color: var(--pz-yellow-dark);
+    }
 }
 
 /* Shuffle tucked into the bottom-left corner of the board. */
@@ -1406,15 +1419,17 @@ body.pz-immersive .pz-workspace {
 
     .pz-hud {
         position: relative;
-        padding-right: 48px;
+        min-height: 54px;
+        padding-right: 56px;
     }
 
     .pz-hud-toggle {
         position: absolute;
-        top: 8px;
+        top: 50%;
         right: 10px;
         display: inline-flex;
         margin-left: 0;
+        transform: translateY(-50%);
     }
 
     .pz-hud.is-collapsed .pz-hud-actions {

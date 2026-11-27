@@ -390,8 +390,6 @@
     if (!hud || !toggle) return;
     hud.classList.toggle('is-collapsed', collapsed);
     toggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
-    const chevron = toggle.querySelector('.pz-hud-chevron');
-    if (chevron) chevron.textContent = collapsed ? '\u25BE' : '\u25B4';
     if (gameActive) {
       requestAnimationFrame(() => requestAnimationFrame(fitLayer));
     }
