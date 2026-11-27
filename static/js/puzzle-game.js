@@ -284,6 +284,34 @@
     showSourceNote('');
   }
 
+  // ================= Load a picture =================
+  function loadPictureCanvas(url) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.decoding = 'async';
+      img.onload = () => {
+        const width = img.naturalWidth || img.width;
+        const height = img.naturalHeight || img.height;
+        if (!width || !height) {
+          reject(new Error('empty image'));
+          return;
+        }
+        const side = Math.min(width, height);
+        // Keep as many source pixels as the picture actually has (never upscale
+        // beyond ~1800px, which covers a 680px board on a 2x screen).
+        const resolution = Math.max(600, Math.min(1800, Math.round(side)));
+        const canvas = document.createElement('canvas');
+        canvas.width = canvas.height = resolution;
+        const context = canvas.getContext('2d');
+        context.imageSmoothingQuality = 'high';
+        context.drawImage(img, (width - side) / 2, (height - side) / 2, side, side, 0, 0, resolution, resolution);
+        resolve(canvas);
+      };
+      img.onerror = () => reject(new Error('image failed'));
+      img.src = resolveUrl(url);
+    });
+  }
+
   // ================= Upload a photo =================
   function bindUpload() {
     const uploadButton = $('pzUploadBtn');
