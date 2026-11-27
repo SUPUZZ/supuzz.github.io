@@ -34,50 +34,20 @@
 
   // Built-in collections: same themes as the backend seed, using pictures that
   // already ship with the site. Replaced automatically by the admin collections.
+  // Fixed copy of the collections currently configured in the admin backend
+  // (GET api.supuzz.cn/api/puzzle/collections). Used only when the API is
+  // unreachable and nothing is cached yet. Keep in sync with the backend.
   const FALLBACK_COLLECTIONS = [
     {
       id: 'fallback-snow',
       title: 'Snow Garden & Winter Garden',
-      description: 'Snow garden stacking toy and winter garden stacking set scenes.',
+      description: 'Snow garden stacking toy and winter garden stacking set scenes with penguins, Arctic animals and icy bricks.',
       images: [
-        { id: 'snow-0', url: '/product-images/snow-garden-puzzle-main.webp', alt: 'Snow garden stacking toy with penguins, a snowman and Arctic animals' },
-        { id: 'snow-1', url: '/product-images/supuzz-icy-world-l2-main.webp', alt: 'Snow garden stacking toy with a penguin and Arctic animals' },
-        { id: 'snow-2', url: '/product-images/supuzz-icy-world-l3-main.webp', alt: 'Winter garden stacking set toy built from icy building blocks' },
-        { id: 'snow-3', url: '/product-images/funny-snow-world-kids-playing.webp', alt: 'Children playing with a snow garden stacking toy' },
-        { id: 'snow-4', url: '/product-images/supuzz-icy-world-l1-main.webp', alt: 'Small snow garden stacking toy starter set' }
-      ]
-    },
-    {
-      id: 'fallback-coral',
-      title: 'Coral Reef & Sea Creatures',
-      description: 'Coral reef toys and sea creatures toys for kids.',
-      images: [
-        { id: 'coral-1', url: '/product-images/supuzz-coral-reef-l3-main.webp', alt: 'Coral reef toys with colorful sea creatures for kids' },
-        { id: 'coral-2', url: '/product-images/supuzz-coral-reef-l2-main.webp', alt: 'Coral reef building toy with a set of sea creatures' },
-        { id: 'coral-3', url: '/product-images/supuzz-ocean-building-blocks-l1-set.webp', alt: 'Sea creatures toys for kids with coral reef pieces' },
-        { id: 'coral-4', url: '/product-images/ocean-world-l2-04.webp', alt: 'Underwater coral reef scene built from stacking toys' }
-      ]
-    },
-    {
-      id: 'fallback-dino',
-      title: 'Dinosaur Jungle',
-      description: 'Dinosaur Jungle building sets with trees and dinosaur figures.',
-      images: [
-        { id: 'dino-1', url: '/product-images/supuzz-dinosaur-jungle-l3-main.webp', alt: 'Dinosaur Jungle building set with trees and dinosaur figures' },
-        { id: 'dino-2', url: '/product-images/supuzz-dinosaur-jungle-l2-main.webp', alt: 'Dinosaur jungle toy with colorful stacking blocks' },
-        { id: 'dino-3', url: '/product-images/supuzz-dinosaur-jungle-l1-main.webp', alt: 'Small dinosaur building set for young builders' },
-        { id: 'dino-4', url: '/product-images/supuzz-dinosaur-jungle-l3-play.webp', alt: 'Dinosaur figures in a jungle built from blocks' }
-      ]
-    },
-    {
-      id: 'fallback-rainbow',
-      title: 'Rainbow Waffle Blocks',
-      description: 'Rainbow waffle blocks in bright colors — robots, vehicles and open-ended shapes.',
-      images: [
-        { id: 'rainbow-1', url: '/product-images/supuzz-waffle-building-blocks-128-main.webp', alt: 'Rainbow waffle building blocks with a colorful robot build' },
-        { id: 'rainbow-2', url: '/product-images/supuzz-waffle-building-blocks-80-main.webp', alt: 'Rainbow waffle blocks set in bright colors' },
-        { id: 'rainbow-3', url: '/product-images/supuzz-waffle-building-blocks-128-amazon-3.webp', alt: 'Robot and vehicle made from rainbow building blocks' },
-        { id: 'rainbow-4', url: '/product-images/supuzz-waffle-building-blocks-80-play.webp', alt: 'Vehicles built from interlocking rainbow waffle blocks' }
+        {
+          id: 'snow-0',
+          url: '/product-images/snow-garden-puzzle-main.webp',
+          alt: 'Snow garden stacking toy with penguins, a snowman and Arctic animals'
+        }
       ]
     }
   ];
@@ -104,9 +74,22 @@
     showError.timer = setTimeout(() => { box.hidden = true; }, 6000);
   }
 
+  // Stable hash used when an older backend does not send a version yet, so the
+  // "same data -> no re-render" rule still works during a rollout.
+  function contentVersion(list) {
+    const text = JSON.stringify(list);
+    let hash = 0x811c9dc5;
+    for (let index = 0; index < text.length; index += 1) {
+      hash ^= text.charCodeAt(index);
+      hash = Math.imul(hash, 0x01000193);
+    }
+    return 'h' + (hash >>> 0).toString(16);
+  }
+
   function normalizeCollections(payload) {
-    if (!payload || !Array.isArray(payload.collections)) return [];
-    return payload.collections.map(collection => {
+    if (!payload || !Array.isArray(payload.collections)) return { version: '', collections: [] };
+    const version = typeof payload.version === 'string' ? payload.version : '';
+    const collections = payload.collections.map(collection => {
       const images = Array.isArray(collection.images) ? collection.images : [];
       return {
         id: String(collection.id || collection.title || Math.random()),
@@ -121,6 +104,7 @@
           }))
       };
     }).filter(collection => collection.title && collection.images.length);
+    return { version: version || contentVersion(collections), collections };
   }
 
   function renderCollections(list, { keepSelection = false } = {}) {
@@ -219,14 +203,42 @@
     }
   }
 
+  // The site caches the last collection list together with the backend version.
+  // Same version -> keep the rendered grid untouched (no flicker, no image reloads);
+  // new version -> replace it. The cache also lets repeat visitors skip the wait.
+  const COLLECTIONS_CACHE_KEY = 'pz.collections.v1';
+
+  function readCollectionsCache() {
+    try {
+      const raw = localStorage.getItem(COLLECTIONS_CACHE_KEY);
+      if (!raw) return null;
+      const parsed = JSON.parse(raw);
+      if (!parsed || typeof parsed.version !== 'string' || !Array.isArray(parsed.collections)) return null;
+      return parsed.collections.length ? parsed : null;
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function writeCollectionsCache(version, list) {
+    try {
+      localStorage.setItem(COLLECTIONS_CACHE_KEY, JSON.stringify({ version: version || '', collections: list }));
+    } catch (error) {
+      // Storage may be full or disabled; caching is optional.
+    }
+  }
+
   async function loadCollections() {
-    // Do not paint the built-in pictures first: the admin collections are the
-    // real list, and swapping the grid a moment later looked like the wrong
-    // collection data flashing by. Keep the loading placeholder until the
-    // request settles (or times out) instead.
+    const cached = readCollectionsCache();
+    let renderedVersion = '';
+    if (cached) {
+      renderCollections(cached.collections);
+      renderedVersion = cached.version;
+    }
+
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 6000);
-    let list = [];
+    let payload = null;
     try {
       const response = await fetch(`${API_BASE}/api/puzzle/collections`, {
         cache: 'no-store',
@@ -234,55 +246,42 @@
         signal: controller.signal
       });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      list = normalizeCollections(await response.json());
+      payload = normalizeCollections(await response.json());
     } catch (error) {
-      list = [];
+      payload = null;
     } finally {
       clearTimeout(timeout);
     }
 
     if (gameActive) return;
-    if (!list.length) {
-      renderCollections(FALLBACK_COLLECTIONS);
-      showSourceNote(t('setup.fallbackNote'));
+
+    if (!payload || !payload.collections.length) {
+      // Nothing usable from the backend: keep the cached copy if we have one,
+      // otherwise fall back to the built-in snapshot.
+      if (!renderedVersion) {
+        renderCollections(FALLBACK_COLLECTIONS);
+        showSourceNote(t('setup.fallbackNote'));
+      }
       return;
     }
+
+    const version = payload.version || '';
+    if (renderedVersion && version && version === renderedVersion) {
+      // Backend data did not change: leave the already rendered grid alone.
+      return;
+    }
+
     if (selectedImage && selectedImage.collectionId === 'user-photo') {
       // A photo was picked while the request was in flight: keep it selected but
       // refresh the library so the next upload still lists the real collections.
-      collections = list;
+      collections = payload.collections;
+      writeCollectionsCache(version, payload.collections);
       return;
     }
-    renderCollections(list);
-    showSourceNote('');
-  }
 
-  // ================= Load a picture =================
-  function loadPictureCanvas(url) {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.decoding = 'async';
-      img.onload = () => {
-        const width = img.naturalWidth || img.width;
-        const height = img.naturalHeight || img.height;
-        if (!width || !height) {
-          reject(new Error('empty image'));
-          return;
-        }
-        const side = Math.min(width, height);
-        // Keep as many source pixels as the picture actually has (never upscale
-        // beyond ~1800px, which covers a 680px board on a 2x screen).
-        const resolution = Math.max(600, Math.min(1800, Math.round(side)));
-        const canvas = document.createElement('canvas');
-        canvas.width = canvas.height = resolution;
-        const context = canvas.getContext('2d');
-        context.imageSmoothingQuality = 'high';
-        context.drawImage(img, (width - side) / 2, (height - side) / 2, side, side, 0, 0, resolution, resolution);
-        resolve(canvas);
-      };
-      img.onerror = () => reject(new Error('image failed'));
-      img.src = resolveUrl(url);
-    });
+    renderCollections(payload.collections, { keepSelection: true });
+    writeCollectionsCache(version, payload.collections);
+    showSourceNote('');
   }
 
   // ================= Upload a photo =================
