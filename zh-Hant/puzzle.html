@@ -139,6 +139,7 @@
                         </button>
                         <div class="pz-hud-actions" id="pzHudActions">
                             <button type="button" id="pzHint">參考圖</button>
+                            <button type="button" id="pzShuffle">重新打亂</button>
                             <button type="button" id="pzFull" aria-pressed="false">全螢幕</button>
                             <button type="button" id="pzBack">更換圖片</button>
                         </div>
@@ -150,10 +151,9 @@
                         </div>
                         <div class="pz-tip" id="pzTip" role="status" aria-live="polite"></div>
                         <button type="button" class="pz-skip" id="pzSkip">跳過動畫</button>
-                        <div class="pz-fab-group" id="pzShuffleGroup" role="group" aria-label="打亂方式">
-                            <button type="button" class="pz-fab" id="pzShuffleSpread" data-mode="spread" aria-pressed="true">散開</button>
-                            <button type="button" class="pz-fab" id="pzShufflePile" data-mode="pile" aria-pressed="false">堆疊</button>
-                        </div>
+                        <button type="button" class="pz-fab" id="pzGather" aria-label="堆疊">
+                            <span class="pz-fab-label">堆疊</span>
+                        </button>
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">
@@ -330,7 +330,7 @@
         </div>
     </section>
 </main>
-<script type="application/json" id="pzMessages">{"setup":{"heading":"選擇拼圖圖片","subheading":"每張圖都來自 SUPUZZ 積木盒組。團隊新增的系列會自動出現在這裡。","loading":"正在載入拼圖圖片…","fallbackNote":"目前顯示內建圖片，線上系列會自動出現在這裡。","uploadLabel":"使用我的照片","uploadNote":"照片只留在這個瀏覽器，不會上傳。","difficultyLabel":"難度","pieces":"{n} 片","start":"開始拼圖","fullscreen":"全螢幕遊玩","empty":"目前沒有可用的圖片，請稍後再試。","yourPhotoTitle":"我的照片","uploadFailed":"無法開啟這張照片，請選擇 JPG、PNG 或 WebP 圖片。","chooseThis":"選擇這張圖片：{alt}"},"game":{"hudTitle":"Puzzle Online","time":"時間","moves":"步數","groups":"剩餘組數","hint":"參考圖","shuffle":"重新打亂","back":"更換圖片","cutting":"正在切成 {n}×{n}，共 {total} 片…","cutDone":"已切成 {total} 片，正在打亂…","shuffling":"正在打亂…","dragTip":"拖曳拼圖片，把圖拼回來","skip":"跳過動畫","memorizeCount":"記住這張圖 · 剩 {n} 秒","memorizeGo":"我記住了","viewResult":"看看拼好的圖","fullscreen":"全螢幕","exitFullscreen":"結束全螢幕","controls":"遊戲操作","shuffleGroup":"打亂方式","spread":"散開","pile":"堆疊","winTitle":"拼圖完成！","winDetail":"時間 {time} · {moves} 步 · {n}×{n}，共 {total} 片","again":"再玩一次","another":"選擇另一張圖片","imageError":"無法載入這張圖片，請換一張。"}}</script>
+<script type="application/json" id="pzMessages">{"setup":{"heading":"選擇拼圖圖片","subheading":"每張圖都來自 SUPUZZ 積木盒組。團隊新增的系列會自動出現在這裡。","loading":"正在載入拼圖圖片…","fallbackNote":"目前顯示內建圖片，線上系列會自動出現在這裡。","uploadLabel":"使用我的照片","uploadNote":"照片只留在這個瀏覽器，不會上傳。","difficultyLabel":"難度","pieces":"{n} 片","start":"開始拼圖","fullscreen":"全螢幕遊玩","empty":"目前沒有可用的圖片，請稍後再試。","yourPhotoTitle":"我的照片","uploadFailed":"無法開啟這張照片，請選擇 JPG、PNG 或 WebP 圖片。","chooseThis":"選擇這張圖片：{alt}"},"game":{"hudTitle":"Puzzle Online","time":"時間","moves":"步數","groups":"剩餘組數","hint":"參考圖","shuffle":"重新打亂","back":"更換圖片","cutting":"正在切成 {n}×{n}，共 {total} 片…","cutDone":"已切成 {total} 片，正在打亂…","shuffling":"正在打亂…","dragTip":"拖曳拼圖片，把圖拼回來","skip":"跳過動畫","memorizeCount":"記住這張圖 · 剩 {n} 秒","memorizeGo":"我記住了","viewResult":"看看拼好的圖","fullscreen":"全螢幕","exitFullscreen":"結束全螢幕","controls":"遊戲操作","pile":"堆疊","winTitle":"拼圖完成！","winDetail":"時間 {time} · {moves} 步 · {n}×{n}，共 {total} 片","again":"再玩一次","another":"選擇另一張圖片","imageError":"無法載入這張圖片，請換一張。"}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/puzzle-game.js"></script>

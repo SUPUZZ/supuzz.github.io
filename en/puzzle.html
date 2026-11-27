@@ -139,6 +139,7 @@
                         </button>
                         <div class="pz-hud-actions" id="pzHudActions">
                             <button type="button" id="pzHint">Reference</button>
+                            <button type="button" id="pzShuffle">Reshuffle</button>
                             <button type="button" id="pzFull" aria-pressed="false">Fullscreen</button>
                             <button type="button" id="pzBack">Change picture</button>
                         </div>
@@ -150,10 +151,9 @@
                         </div>
                         <div class="pz-tip" id="pzTip" role="status" aria-live="polite"></div>
                         <button type="button" class="pz-skip" id="pzSkip">Skip animation</button>
-                        <div class="pz-fab-group" id="pzShuffleGroup" role="group" aria-label="Shuffle layout">
-                            <button type="button" class="pz-fab" id="pzShuffleSpread" data-mode="spread" aria-pressed="true">Spread</button>
-                            <button type="button" class="pz-fab" id="pzShufflePile" data-mode="pile" aria-pressed="false">Pile up</button>
-                        </div>
+                        <button type="button" class="pz-fab" id="pzGather" aria-label="Pile up">
+                            <span class="pz-fab-label">Pile up</span>
+                        </button>
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">
@@ -330,7 +330,7 @@
         </div>
     </section>
 </main>
-<script type="application/json" id="pzMessages">{"setup":{"heading":"Choose your puzzle picture","subheading":"Every picture comes from a SUPUZZ building set. New collections appear here as our team adds them.","loading":"Loading puzzle pictures…","fallbackNote":"Showing our built-in pictures. Online collections appear here automatically.","uploadLabel":"Use my own photo","uploadNote":"Your photo stays in this browser and is never uploaded.","difficultyLabel":"Difficulty","pieces":"{n} pieces","start":"Start puzzle","fullscreen":"Play in fullscreen","empty":"No pictures available right now. Please try again later.","yourPhotoTitle":"Your photo","uploadFailed":"That photo could not be opened. Please choose a JPG, PNG or WebP image.","chooseThis":"Choose this picture: {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Time","moves":"Moves","groups":"Groups left","hint":"Reference","shuffle":"Reshuffle","back":"Change picture","cutting":"Cutting into {n}×{n} · {total} pieces…","cutDone":"Cut into {total} pieces. Shuffling…","shuffling":"Shuffling…","dragTip":"Drag pieces together to rebuild the picture","skip":"Skip animation","memorizeCount":"Remember the picture · {n}s","memorizeGo":"I'm ready","viewResult":"View the finished picture","fullscreen":"Fullscreen","exitFullscreen":"Exit fullscreen","controls":"Game controls","shuffleGroup":"Shuffle layout","spread":"Spread","pile":"Pile up","winTitle":"Puzzle complete!","winDetail":"Time {time} · {moves} moves · {n}×{n} · {total} pieces","again":"Play again","another":"Choose another picture","imageError":"That picture could not be loaded. Please choose another one."}}</script>
+<script type="application/json" id="pzMessages">{"setup":{"heading":"Choose your puzzle picture","subheading":"Every picture comes from a SUPUZZ building set. New collections appear here as our team adds them.","loading":"Loading puzzle pictures…","fallbackNote":"Showing our built-in pictures. Online collections appear here automatically.","uploadLabel":"Use my own photo","uploadNote":"Your photo stays in this browser and is never uploaded.","difficultyLabel":"Difficulty","pieces":"{n} pieces","start":"Start puzzle","fullscreen":"Play in fullscreen","empty":"No pictures available right now. Please try again later.","yourPhotoTitle":"Your photo","uploadFailed":"That photo could not be opened. Please choose a JPG, PNG or WebP image.","chooseThis":"Choose this picture: {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Time","moves":"Moves","groups":"Groups left","hint":"Reference","shuffle":"Reshuffle","back":"Change picture","cutting":"Cutting into {n}×{n} · {total} pieces…","cutDone":"Cut into {total} pieces. Shuffling…","shuffling":"Shuffling…","dragTip":"Drag pieces together to rebuild the picture","skip":"Skip animation","memorizeCount":"Remember the picture · {n}s","memorizeGo":"I'm ready","viewResult":"View the finished picture","fullscreen":"Fullscreen","exitFullscreen":"Exit fullscreen","controls":"Game controls","pile":"Pile up","winTitle":"Puzzle complete!","winDetail":"Time {time} · {moves} moves · {n}×{n} · {total} pieces","again":"Play again","another":"Choose another picture","imageError":"That picture could not be loaded. Please choose another one."}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/puzzle-game.js"></script>

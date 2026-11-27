@@ -48,8 +48,6 @@
     "fullscreen": "Vollbild",
     "exitFullscreen": "Vollbild beenden",
     "controls": "Spielsteuerung",
-    "shuffleGroup": "Misch-Layout",
-    "spread": "Verteilen",
     "pile": "Stapeln",
     "winTitle": "Puzzle fertig!",
     "winDetail": "Zeit {time} · {moves} Züge · {n}×{n} · {total} Teile",

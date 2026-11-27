@@ -48,8 +48,6 @@
     "fullscreen": "Fullscreen",
     "exitFullscreen": "Exit fullscreen",
     "controls": "Game controls",
-    "shuffleGroup": "Shuffle layout",
-    "spread": "Spread",
     "pile": "Pile up",
     "winTitle": "Puzzle complete!",
     "winDetail": "Time {time} · {moves} moves · {n}×{n} · {total} pieces",

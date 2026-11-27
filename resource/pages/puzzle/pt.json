@@ -48,8 +48,6 @@
     "fullscreen": "Ecrã inteiro",
     "exitFullscreen": "Sair do ecrã inteiro",
     "controls": "Controlos do jogo",
-    "shuffleGroup": "Modo de baralhar",
-    "spread": "Espalhar",
     "pile": "Empilhar",
     "winTitle": "Quebra-cabeça completo!",
     "winDetail": "Tempo {time} · {moves} jogadas · {n}×{n} · {total} peças",

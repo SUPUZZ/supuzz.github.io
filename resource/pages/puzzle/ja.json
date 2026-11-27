@@ -44,8 +44,6 @@
     "fullscreen": "全画面",
     "exitFullscreen": "全画面を終了",
     "controls": "ゲーム操作",
-    "shuffleGroup": "シャッフルの配置",
-    "spread": "広げる",
     "pile": "積み上げ",
     "winTitle": "パズル完成！",
     "winDetail": "時間 {time} · {moves}手 · {n}×{n}・全{total}ピース",

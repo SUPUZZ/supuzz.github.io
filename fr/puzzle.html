@@ -139,6 +139,7 @@
                         </button>
                         <div class="pz-hud-actions" id="pzHudActions">
                             <button type="button" id="pzHint">Modèle</button>
+                            <button type="button" id="pzShuffle">Mélanger</button>
                             <button type="button" id="pzFull" aria-pressed="false">Plein écran</button>
                             <button type="button" id="pzBack">Changer d&#39;image</button>
                         </div>
@@ -150,10 +151,9 @@
                         </div>
                         <div class="pz-tip" id="pzTip" role="status" aria-live="polite"></div>
                         <button type="button" class="pz-skip" id="pzSkip">Passer l&#39;animation</button>
-                        <div class="pz-fab-group" id="pzShuffleGroup" role="group" aria-label="Disposition du mélange">
-                            <button type="button" class="pz-fab" id="pzShuffleSpread" data-mode="spread" aria-pressed="true">Étaler</button>
-                            <button type="button" class="pz-fab" id="pzShufflePile" data-mode="pile" aria-pressed="false">Empiler</button>
-                        </div>
+                        <button type="button" class="pz-fab" id="pzGather" aria-label="Empiler">
+                            <span class="pz-fab-label">Empiler</span>
+                        </button>
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">
@@ -330,7 +330,7 @@
         </div>
     </section>
 </main>
-<script type="application/json" id="pzMessages">{"setup":{"heading":"Choisissez votre image","subheading":"Chaque image provient d'un set de construction SUPUZZ. Les nouvelles collections apparaissent ici dès que notre équipe les ajoute.","loading":"Chargement des images…","fallbackNote":"Affichage de nos images intégrées. Les collections en ligne apparaîtront ici automatiquement.","uploadLabel":"Utiliser ma photo","uploadNote":"Votre photo reste dans ce navigateur et n'est jamais envoyée.","difficultyLabel":"Difficulté","pieces":"{n} pièces","start":"Commencer le puzzle","fullscreen":"Jouer en plein écran","empty":"Aucune image disponible pour le moment. Réessayez plus tard.","yourPhotoTitle":"Votre photo","uploadFailed":"Impossible d'ouvrir cette photo. Choisissez une image JPG, PNG ou WebP.","chooseThis":"Choisir cette image : {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Temps","moves":"Coups","groups":"Groupes restants","hint":"Modèle","shuffle":"Mélanger","back":"Changer d'image","cutting":"Découpe en {n}×{n} · {total} pièces…","cutDone":"Découpé en {total} pièces. Mélange…","shuffling":"Mélange…","dragTip":"Faites glisser les pièces pour reconstituer l'image","skip":"Passer l'animation","memorizeCount":"Mémorisez l'image · {n} s","memorizeGo":"J'ai mémorisé","viewResult":"Voir l'image terminée","fullscreen":"Plein écran","exitFullscreen":"Quitter le plein écran","controls":"Commandes du jeu","shuffleGroup":"Disposition du mélange","spread":"Étaler","pile":"Empiler","winTitle":"Puzzle terminé !","winDetail":"Temps {time} · {moves} coups · {n}×{n} · {total} pièces","again":"Rejouer","another":"Choisir une autre image","imageError":"Impossible de charger cette image. Choisissez-en une autre."}}</script>
+<script type="application/json" id="pzMessages">{"setup":{"heading":"Choisissez votre image","subheading":"Chaque image provient d'un set de construction SUPUZZ. Les nouvelles collections apparaissent ici dès que notre équipe les ajoute.","loading":"Chargement des images…","fallbackNote":"Affichage de nos images intégrées. Les collections en ligne apparaîtront ici automatiquement.","uploadLabel":"Utiliser ma photo","uploadNote":"Votre photo reste dans ce navigateur et n'est jamais envoyée.","difficultyLabel":"Difficulté","pieces":"{n} pièces","start":"Commencer le puzzle","fullscreen":"Jouer en plein écran","empty":"Aucune image disponible pour le moment. Réessayez plus tard.","yourPhotoTitle":"Votre photo","uploadFailed":"Impossible d'ouvrir cette photo. Choisissez une image JPG, PNG ou WebP.","chooseThis":"Choisir cette image : {alt}"},"game":{"hudTitle":"Puzzle Online","time":"Temps","moves":"Coups","groups":"Groupes restants","hint":"Modèle","shuffle":"Mélanger","back":"Changer d'image","cutting":"Découpe en {n}×{n} · {total} pièces…","cutDone":"Découpé en {total} pièces. Mélange…","shuffling":"Mélange…","dragTip":"Faites glisser les pièces pour reconstituer l'image","skip":"Passer l'animation","memorizeCount":"Mémorisez l'image · {n} s","memorizeGo":"J'ai mémorisé","viewResult":"Voir l'image terminée","fullscreen":"Plein écran","exitFullscreen":"Quitter le plein écran","controls":"Commandes du jeu","pile":"Empiler","winTitle":"Puzzle terminé !","winDetail":"Temps {time} · {moves} coups · {n}×{n} · {total} pièces","again":"Rejouer","another":"Choisir une autre image","imageError":"Impossible de charger cette image. Choisissez-en une autre."}}</script>
 
     <include src="components/footer.html"></include>
     <script type="module" src="/js/puzzle-game.js"></script>

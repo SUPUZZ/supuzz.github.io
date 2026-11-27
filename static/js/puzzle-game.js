@@ -337,9 +337,6 @@
   let memoryActive = false;
   let memoryTimer = 0;
   let memoryResolve = null;
-  // Two shuffle layouts: pieces tiled over the whole board area, or heaped into
-  // the bottom-left corner so the board stays clear.
-  let layoutMode = 'spread';
 
   let edgeSigns = null;
   let picture = null;
@@ -709,7 +706,7 @@
     tip.style.opacity = '1';
     skip.classList.add('show');
 
-    $('pzShuffleGroup').hidden = true;
+    $('pzGather').hidden = true;
 
     const cutPicture = $('pzCutPic');
     const cutGrid = $('pzCutGrid');
@@ -806,26 +803,14 @@
     }));
   }
 
-  function syncLayoutButtons() {
-    const buttons = [$('pzShuffleSpread'), $('pzShufflePile')];
-    buttons.forEach(button => {
-      if (!button) return;
-      button.setAttribute('aria-pressed', button.dataset.mode === layoutMode ? 'true' : 'false');
-    });
-  }
-
-  function reshuffle(mode) {
-    if (animating) skipIntro();
-    resetRoundState();
-    shuffleAnimation(mode);
-  }
-
-  function pileTargets() {
+  // Spread: a full reshuffle - every piece is pulled out of its group and
+  // scattered across the whole area again (same as a fresh round, timer resets).
+  function pileTargets(count) {
     const spread = Math.min(P * 0.5, 72);
     const baseX = 14 + MARGIN;
-    // Keep the heap above the spread / pile buttons in the bottom-left corner.
+    // Keep the heap above the pile tool in the bottom-left corner.
     const baseY = LAYER_H - 104 - P - MARGIN;
-    return pieces.map(() => {
+    return Array.from({ length: count }, () => {
       const x = baseX + Math.random() * spread;
       const y = baseY - Math.random() * spread * 0.9;
       return {
@@ -835,14 +820,10 @@
     });
   }
 
-  function shuffleAnimation(mode = layoutMode) {
-    layoutMode = mode === 'pile' ? 'pile' : 'spread';
-    syncLayoutButtons();
-
+  function shuffleAnimation() {
     cancelAnimationFrame(shuffleRAF);
     animating = true;
-    const piled = layoutMode === 'pile';
-    const targets = piled ? pileTargets() : scatterTargets();
+    const targets = scatterTargets();
     const animations = pieces.map((piece, index) => ({
       piece,
       fromX: piece.x,
@@ -850,7 +831,7 @@
       toX: targets[index].x,
       toY: targets[index].y,
       delay: Math.random() * 220,
-      rotation: (Math.random() - 0.5) * (piled ? 14 : 40),
+      rotation: (Math.random() - 0.5) * 40,
       z: 10 + Math.floor(Math.random() * 40)
     }));
     const duration = REDUCE_MOTION ? 0 : 780;
@@ -869,8 +850,7 @@
         animation.piece.x = animation.fromX + (animation.toX - animation.fromX) * eased;
         animation.piece.y = animation.fromY + (animation.toY - animation.fromY) * eased;
         animation.piece.el.style.zIndex = animation.z;
-        const settle = piled ? animation.rotation * eased : 0;
-        animation.piece.el.style.transform = `rotate(${settle + (piled ? 0 : animation.rotation) * swing}deg) scale(${1 - 0.1 * swing})`;
+        animation.piece.el.style.transform = `rotate(${animation.rotation * swing}deg) scale(${1 - 0.1 * swing})`;
         place(animation.piece);
       });
       if (!done) {
@@ -880,7 +860,7 @@
       animations.forEach(animation => {
         animation.piece.x = animation.toX;
         animation.piece.y = animation.toY;
-        animation.piece.el.style.transform = piled ? `rotate(${animation.rotation.toFixed(1)}deg)` : '';
+        animation.piece.el.style.transform = '';
         place(animation.piece);
       });
       finishIntro();
@@ -890,7 +870,6 @@
       animations.forEach(animation => {
         animation.piece.x = animation.toX;
         animation.piece.y = animation.toY;
-        if (piled) animation.piece.el.style.transform = `rotate(${animation.rotation.toFixed(1)}deg)`;
         place(animation.piece);
       });
       finishIntro();
@@ -899,9 +878,72 @@
     shuffleRAF = requestAnimationFrame(frame);
   }
 
+  // Pile up: a tidy tool, not a reshuffle. Only loose single pieces are collected
+  // into the bottom-left heap; anything already joined together stays where it is.
+  function gatherLoosePieces() {
+    if (animating || won) return;
+    const loose = pieces.filter(piece => groups[piece.grp] && groups[piece.grp].size === 1);
+    if (!loose.length) return;
+    // Keep assembled units in front of the heap so it never hides finished work.
+    groups.forEach(group => {
+      if (group && group.size > 1) group.forEach(piece => { piece.el.style.zIndex = 200; });
+    });
+    cancelAnimationFrame(shuffleRAF);
+    animating = true;
+    const targets = pileTargets(loose.length);
+    const list = loose.map((piece, index) => ({
+      piece,
+      fromX: piece.x,
+      fromY: piece.y,
+      toX: targets[index].x,
+      toY: targets[index].y,
+      delay: Math.random() * 160,
+      rotation: (Math.random() - 0.5) * 14,
+      z: 10 + Math.floor(Math.random() * 40)
+    }));
+    const duration = REDUCE_MOTION ? 0 : 620;
+    const startedAt = performance.now();
+
+    function settle() {
+      list.forEach(item => {
+        item.piece.x = item.toX;
+        item.piece.y = item.toY;
+        item.piece.el.style.transform = `rotate(${item.rotation.toFixed(1)}deg)`;
+        place(item.piece);
+      });
+      animating = false;
+    }
+
+    function frame(now) {
+      const elapsed = now - startedAt;
+      let done = true;
+      list.forEach(item => {
+        const progress = Math.max(0, Math.min(1, (elapsed - item.delay) / duration));
+        if (progress < 1) done = false;
+        const eased = 1 - Math.pow(1 - progress, 3);
+        item.piece.x = item.fromX + (item.toX - item.fromX) * eased;
+        item.piece.y = item.fromY + (item.toY - item.fromY) * eased;
+        item.piece.el.style.zIndex = item.z;
+        item.piece.el.style.transform = `rotate(${(item.rotation * eased).toFixed(1)}deg)`;
+        place(item.piece);
+      });
+      if (!done) {
+        shuffleRAF = requestAnimationFrame(frame);
+        return;
+      }
+      settle();
+    }
+
+    if (REDUCE_MOTION) {
+      settle();
+      return;
+    }
+    shuffleRAF = requestAnimationFrame(frame);
+  }
+
   function finishIntro() {
     animating = false;
-    $('pzShuffleGroup').hidden = false;
+    $('pzGather').hidden = false;
     $('pzSkip').classList.remove('show');
     const tip = $('pzTip');
     tip.textContent = t('game.dragTip');
@@ -1250,8 +1292,12 @@
     if (document.body.classList.contains('pz-immersive')) setImmersive(false);
   });
   $('pzHint').addEventListener('click', () => $('pzRefWrap').classList.toggle('hide'));
-  $('pzShuffleSpread').addEventListener('click', () => reshuffle('spread'));
-  $('pzShufflePile').addEventListener('click', () => reshuffle('pile'));
+  $('pzShuffle').addEventListener('click', () => {
+    if (animating) skipIntro();
+    resetRoundState();
+    shuffleAnimation();
+  });
+  $('pzGather').addEventListener('click', gatherLoosePieces);
   $('pzAgain').addEventListener('click', restartRound);
   $('pzDoneAgain').addEventListener('click', restartRound);
   $('pzSkip').addEventListener('click', () => {

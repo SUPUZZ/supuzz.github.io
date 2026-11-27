@@ -48,8 +48,6 @@
     "fullscreen": "Pantalla completa",
     "exitFullscreen": "Salir de pantalla completa",
     "controls": "Controles del juego",
-    "shuffleGroup": "Forma de mezclar",
-    "spread": "Dispersar",
     "pile": "Amontonar",
     "winTitle": "¡Rompecabezas completado!",
     "winDetail": "Tiempo {time} · {moves} movimientos · {n}×{n} · {total} piezas",

@@ -653,24 +653,11 @@ body.pz-immersive .pz-workspace {
 }
 
 /* Shuffle tucked into the bottom-left corner of the board. */
-.pz-fab-group {
+.pz-fab {
     position: absolute;
     left: 14px;
     bottom: 14px;
     z-index: 450;
-    display: flex;
-    gap: 8px;
-}
-
-.pz-fab-group[hidden] {
-    display: none;
-}
-
-.pz-app.is-done .pz-fab-group {
-    display: none;
-}
-
-.pz-fab {
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -686,17 +673,17 @@ body.pz-immersive .pz-workspace {
     cursor: pointer;
 }
 
-.pz-fab[aria-pressed="true"] {
-    background: var(--pz-yellow);
+.pz-fab[hidden] {
+    display: none;
+}
+
+.pz-app.is-done .pz-fab {
+    display: none;
 }
 
 @media (hover: hover) {
     .pz-fab:hover {
         background: #fff;
-    }
-
-    .pz-fab[aria-pressed="true"]:hover {
-        background: #FFE63D;
     }
 }
 
@@ -1445,13 +1432,9 @@ body.pz-immersive .pz-workspace {
         padding: 9px 6px;
     }
 
-    .pz-fab-group {
+    .pz-fab {
         left: 12px;
         bottom: 12px;
-        gap: 6px;
-    }
-
-    .pz-fab {
         padding: 9px 12px;
     }
 

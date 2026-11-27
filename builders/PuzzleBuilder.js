@@ -119,6 +119,7 @@ class PuzzleBuilder {
                         </button>
                         <div class="pz-hud-actions" id="pzHudActions">
                             <button type="button" id="pzHint">${text('game.hint')}</button>
+                            <button type="button" id="pzShuffle">${text('game.shuffle')}</button>
                             <button type="button" id="pzFull" aria-pressed="false">${text('game.fullscreen')}</button>
                             <button type="button" id="pzBack">${text('game.back')}</button>
                         </div>
@@ -130,10 +131,9 @@ class PuzzleBuilder {
                         </div>
                         <div class="pz-tip" id="pzTip" role="status" aria-live="polite"></div>
                         <button type="button" class="pz-skip" id="pzSkip">${text('game.skip')}</button>
-                        <div class="pz-fab-group" id="pzShuffleGroup" role="group" aria-label="${text('game.shuffleGroup')}">
-                            <button type="button" class="pz-fab" id="pzShuffleSpread" data-mode="spread" aria-pressed="true">${text('game.spread')}</button>
-                            <button type="button" class="pz-fab" id="pzShufflePile" data-mode="pile" aria-pressed="false">${text('game.pile')}</button>
-                        </div>
+                        <button type="button" class="pz-fab" id="pzGather" aria-label="${text('game.pile')}">
+                            <span class="pz-fab-label">${text('game.pile')}</span>
+                        </button>
                         <div class="pz-ref" id="pzRefWrap"><img id="pzRef" alt=""></div>
                         <div class="pz-win" id="pzWin" role="dialog" aria-modal="true" aria-labelledby="pzWinTitle">
                             <div class="pz-win-card">

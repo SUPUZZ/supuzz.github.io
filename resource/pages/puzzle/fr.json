@@ -48,8 +48,6 @@
     "fullscreen": "Plein écran",
     "exitFullscreen": "Quitter le plein écran",
     "controls": "Commandes du jeu",
-    "shuffleGroup": "Disposition du mélange",
-    "spread": "Étaler",
     "pile": "Empiler",
     "winTitle": "Puzzle terminé !",
     "winDetail": "Temps {time} · {moves} coups · {n}×{n} · {total} pièces",

@@ -44,8 +44,6 @@
     "fullscreen": "全螢幕",
     "exitFullscreen": "結束全螢幕",
     "controls": "遊戲操作",
-    "shuffleGroup": "打亂方式",
-    "spread": "散開",
     "pile": "堆疊",
     "winTitle": "拼圖完成！",
     "winDetail": "時間 {time} · {moves} 步 · {n}×{n}，共 {total} 片",
