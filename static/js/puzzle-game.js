@@ -612,6 +612,7 @@
     $('pzGroups').textContent = N * N;
     $('pzWin').classList.remove('show');
     $('pzDone').hidden = true;
+    app.classList.remove('is-done');
   }
 
   function layoutCorrect() {
@@ -869,7 +870,7 @@
   // ================= Drag, snap, merge =================
   function bindDrag(piece) {
     piece.el.addEventListener('pointerdown', event => {
-      if (animating) return;
+      if (animating || won) return;
       event.preventDefault();
       startTimer();
       const group = groups[piece.grp];
@@ -1036,12 +1037,14 @@
       total: N * N
     });
     $('pzDone').hidden = false;
+    app.classList.add('is-done');
     $('pzDoneAgain').focus({ preventScroll: true });
   }
 
   function restartRound() {
     $('pzWin').classList.remove('show');
     $('pzDone').hidden = true;
+    app.classList.remove('is-done');
     resetRoundState();
     shuffleAnimation();
   }
@@ -1142,6 +1145,7 @@
     $('pzTip').style.opacity = '0';
     $('pzWin').classList.remove('show');
     $('pzDone').hidden = true;
+    app.classList.remove('is-done');
     setImmersive(false);
     $('pzRefWrap').classList.remove('hide');
     $('pzStart').focus({ preventScroll: true });

@@ -793,6 +793,10 @@ body.pz-immersive .pz-workspace {
     display: none;
 }
 
+.pz-app.is-done .pz-ref {
+    display: none;
+}
+
 .pz-ref img {
     width: 100%;
     height: 100%;
@@ -1338,16 +1342,31 @@ body.pz-immersive .pz-workspace {
     }
 
     .pz-done {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        max-width: none;
         flex-wrap: wrap;
         justify-content: center;
-        bottom: 12px;
-        padding: 10px 12px;
+        gap: 8px;
+        padding: 12px;
+        transform: none;
+        border-radius: 16px;
     }
 
     .pz-done-text {
         flex: 1 1 100%;
         text-align: center;
-        white-space: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .pz-done-btn {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 10px 8px;
+        font-size: 0.78rem;
     }
 
     .pz-workspace {
