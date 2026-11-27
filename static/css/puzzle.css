@@ -1135,8 +1135,8 @@ body.pz-immersive .pz-workspace {
     display: flex;
     align-items: center;
     justify-content: center;
-    aspect-ratio: 1.42;
-    padding: 28px;
+    aspect-ratio: 1.35;
+    padding: 26px;
     background: var(--pz-card-stage, #F6F5EC);
     overflow: hidden;
 }
