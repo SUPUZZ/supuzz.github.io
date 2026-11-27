@@ -1129,11 +1129,39 @@ body.pz-immersive .pz-workspace {
     }
 }
 
-.pz-card > img {
+/* Same picture treatment as the product cards on the home page: a padded,
+   tinted stage with the whole photo contained instead of cropped. */
+.pz-card-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1.42;
+    padding: 28px;
+    background: var(--pz-card-stage, #F6F5EC);
+    overflow: hidden;
+}
+
+.pz-card-media img {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    background: var(--pz-board);
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.pz-card[data-theme="snow"] {
+    --pz-card-stage: #EDF2F5;
+}
+
+.pz-card[data-theme="coral"] {
+    --pz-card-stage: #EDF4EE;
+}
+
+.pz-card[data-theme="dino"] {
+    --pz-card-stage: #F0F2E6;
+}
+
+.pz-card[data-theme="rainbow"] {
+    --pz-card-stage: #F8F1E4;
 }
 
 .pz-card-body {

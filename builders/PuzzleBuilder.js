@@ -186,8 +186,8 @@ class PuzzleBuilder {
                 <p>${text('collections.intro')}</p>
             </div>
             <div class="pz-cards">
-                ${cards.map(card => `<article class="pz-card">
-                    <img src="${card.image}" alt="${card.alt}" loading="lazy">
+                ${cards.map(card => `<article class="pz-card" data-theme="${card.key}">
+                    <div class="pz-card-media"><img src="${card.image}" alt="${card.alt}" loading="lazy" decoding="async"></div>
                     <div class="pz-card-body">
                         <h3>${card.title}</h3>
                         <p>${card.body}</p>
